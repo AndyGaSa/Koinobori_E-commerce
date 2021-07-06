@@ -190,10 +190,7 @@ function continuePlaying(endG){
         return false;
     }
     else{
-        if(confirm(`BINGO\n\n¿Quieres seguir jugando?`))
-            return true;
-        else
-            return false;
+        return confirm(`BINGO\n\n¿Quieres seguir jugando?`);
     }
 }
 
