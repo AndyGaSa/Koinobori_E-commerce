@@ -1,0 +1,330 @@
+/*--General variables--*/
+
+:root {
+    --color-principal: #39AEE6;
+    --color-blanco: #fff;
+    --color-secundario_rojo: #E65064;
+    --color-secundario_verde: #57E647;
+    --color-secundario_amarillo: #ffff00;
+}
+
+body {
+    height: 100%;
+    background-color: var(--color-principal);
+}
+
+h1 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 6rem;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-blanco);
+}
+
+h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 3.6rem;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-blanco);
+}
+
+h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-blanco);
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-blanco);
+}
+
+::placeholder {
+    color: var(--color-blanco);
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+}
+
+.seccion {
+    display: none;
+    margin: 0 auto;
+    max-width: 80rem;
+    text-align: justify;
+    justify-content: center;
+}
+
+.seccionActual {
+    display: block;
+}
+
+.cuadroTexto {
+    border: solid var(--color-blanco);
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    text-align: center;
+}
+
+
+/*--Pregame--*/
+
+.cuadroTiempo {
+    width: 5rem;
+}
+
+.noHayTiempo {
+    color: var(--color-blanco);
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+/*--Game--*/
+
+.rosco {
+    margin: 0 auto 2rem;
+    position: relative;
+    width: 27rem;
+    height: 27rem;
+    border-radius: 50%;
+}
+
+.letra {
+    margin: 0.1rem 0.1rem;
+    color: var(--color-blanco);
+    height: 1.5rem;
+    line-height: 1.3rem;
+    width: 1.5rem;
+    background-color: var(--color-principal);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    border: solid var(--color-blanco);
+}
+
+.preguntas {
+    display: flex;
+    flex-direction: column;
+}
+
+.preguntaActual {
+    background-color: var(--color-secundario_amarillo);
+    color: #000;
+}
+
+.acierto {
+    background-color: var(--color-secundario_verde);
+}
+
+.error {
+    background-color: var(--color-secundario_rojo);
+}
+
+.alerta {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    top: 50%;
+    left: 30%;
+    right: 30%;
+    background-color: unset;
+    color: var(--color-blanco);
+    height: unset;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.definicion {
+    margin: 1rem auto 0;
+    width: 30;
+    font-size: 1.2rem;
+    border: solid var(--color-blanco);
+    padding: 0 1rem;
+    border-radius: 50rem;
+    color: var(--color-blanco);
+}
+
+.respuesta {
+    margin: 1rem auto;
+    width: 20rem;
+}
+
+.indicadores {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.contadorAciertos {
+    height: 3rem;
+    width: 3rem;
+    margin-left: -2rem;
+    text-align: center;
+    background-color: var(--color-secundario_verde);
+    color: var(--color-blanco);
+    font-size: 1.8rem;
+    padding: 1rem;
+    border: solid var(--color-blanco);
+    border-radius: 50%;
+}
+
+.tiempo {
+    height: 3.6rem;
+    width: 3.6rem;
+    color: var(--color-blanco);
+    background-color: var(--color-principal);
+    border-radius: 50%;
+    font-size: 2rem;
+    padding: 2rem;
+    border: solid var(--color-blanco);
+    z-index: 1;
+}
+
+.botones {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.boton {
+    width: 10rem;
+    align-self: center;
+    border: solid var(--color-blanco);
+    border-radius: 10px;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.marco {
+    max-width: 20rem;
+    margin: 0 auto 2rem;
+    border: solid var(--color-blanco);
+    border-radius: 10px;
+    color: var(--color-blanco);
+}
+
+.degNº90 {
+    transform: rotate(-90deg) translate(12em) rotate(90deg);
+}
+
+.degNº76_67 {
+    transform: rotate(-76.67deg) translate(12em) rotate(76.67deg);
+}
+
+.degNº63_34 {
+    transform: rotate(-63.34deg) translate(12em) rotate(63.34deg);
+}
+
+.degNº50_01 {
+    transform: rotate(-50.01deg) translate(12em) rotate(50.01deg);
+}
+
+.degNº36_68 {
+    transform: rotate(-36.68deg) translate(12em) rotate(36.68deg);
+}
+
+.degNº23_35 {
+    transform: rotate(-23.35deg) translate(12em) rotate(23.35deg);
+}
+
+.degNº10_02 {
+    transform: rotate(-10.02deg) translate(12em) rotate(10.02deg);
+}
+
+.degNº3_31 {
+    transform: rotate(3.31deg) translate(12em) rotate(-3.31deg);
+}
+
+.degNº16_64 {
+    transform: rotate(16.64deg) translate(12em) rotate(-16.64deg);
+}
+
+.degNº29_97 {
+    transform: rotate(29.97deg) translate(12em) rotate(-29.97deg);
+}
+
+.degNº43_3 {
+    transform: rotate(43.3deg) translate(12em) rotate(-43.3deg);
+}
+
+.degNº56_63 {
+    transform: rotate(56.63deg) translate(12em) rotate(-56.63deg);
+}
+
+.degNº69_96 {
+    transform: rotate(69.96deg) translate(12em) rotate(-69.96deg);
+}
+
+.degNº83_29 {
+    transform: rotate(83.29deg) translate(12em) rotate(-83.29deg);
+}
+
+.degNº96_62 {
+    transform: rotate(96.62deg) translate(12em) rotate(-96.62deg);
+}
+
+.degNº109_95 {
+    transform: rotate(109.95deg) translate(12em) rotate(-109.95deg);
+}
+
+.degNº123_28 {
+    transform: rotate(123.28deg) translate(12em) rotate(-123.28deg);
+}
+
+.degNº136_61 {
+    transform: rotate(136.61deg) translate(12em) rotate(-136.61deg);
+}
+
+.degNº149_94 {
+    transform: rotate(149.94deg) translate(12em) rotate(-149.94deg);
+}
+
+.degNº163_27 {
+    transform: rotate(163.27deg) translate(12em) rotate(-163.27deg);
+}
+
+.degNº176_6 {
+    transform: rotate(176.6deg) translate(12em) rotate(-176.6deg);
+}
+
+.degNº189_93 {
+    transform: rotate(189.93deg) translate(12em) rotate(-189.93deg);
+}
+
+.degNº203_26 {
+    transform: rotate(203.26deg) translate(12em) rotate(-203.26deg);
+}
+
+.degNº216_59 {
+    transform: rotate(216.59deg) translate(12em) rotate(-216.59deg);
+}
+
+.degNº229_92 {
+    transform: rotate(229.92deg) translate(12em) rotate(-229.92deg);
+}
+
+.degNº243_25 {
+    transform: rotate(243.25deg) translate(12em) rotate(-243.25deg);
+}
+
+.degNº256_58 {
+    transform: rotate(256.58deg) translate(12em) rotate(-256.58deg);
+}
