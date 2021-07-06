@@ -149,8 +149,8 @@ function sortPrintRanking(){
     playersList.sort(function (a,b) {
         return b.points - a.points
     });
-     for(let i = 0; i < playersList.length; i++) {
-         console.log('El jugador ' + playersList[i].name + ' tiene una puntuación de: ' + playersList[i].points);
+     for(let player of playersList) {
+         console.log('El jugador ' + playersList[player].name + ' tiene una puntuación de: ' + playersList[player].points);
      };
 };
 
