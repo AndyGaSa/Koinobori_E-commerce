@@ -124,12 +124,12 @@
      }
      let idToRemove = parseInt(prompt('Type the id of the flight to remove')); //Se solicita el id del vuelo a eliminar
      // Se recorre el array mediante un for para localizar el vuelo a eliminar
-     for (let i in flights) {
-         if (idToRemove === flights[i].id) { //Si el id indicado coincide con el id de un vuelo  se elimina usando filter()
+     for (let j in flights) {
+         if (idToRemove === flights[j].id) { //Si el id indicado coincide con el id de un vuelo  se elimina usando filter()
              flights = flights.filter(flight => flight.id !== idToRemove);
          }
          console.log('Current flights list: ')
-         for (let i in flights) {
+         for (let j in flights) {
              if (!flights[i].scale) {
                  console.log(`Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
                      `does not make stopovers`)
