@@ -346,10 +346,10 @@ async function mostrarResultado() { //Función asíncrona para mostrar los resul
 function nuevaPartida() { //Función para jugar de nuevo
     const intro = document.querySelector('.presentacion') //Elementos html que usa la función
     const resultados = document.querySelector('.resultado');
-    const tiempo = document.querySelector('#cuadroTiempo');
+    const cuadroTiempo = document.querySelector('#cuadroTiempo');
     const contadorAciertos = document.querySelector('.contadorAciertos');
     let reloj = document.querySelector('.tiempo');
-    tiempo.value = "";
+    cuadroTiempo.value = "";
 
     limpiarTexto() //Se restablecen las variables necesarias para empezar de nuevo
     questions = [];
