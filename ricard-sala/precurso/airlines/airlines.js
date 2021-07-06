@@ -16,8 +16,9 @@ flights = [
 let identificacion = prompt(`porfavor introduzca su nombre`);
  alert(`Encantado de conocerle ${identificacion} bienvenido a skylab Airlines estos son nuestros vuelos disponibles para hoy`);
 {
-  for (let i = 0; i < flights.length; i++) { //saludo y presentacion de vuelos.
-        if (flights[i].scale===true) { 
+  for (let value of flights) { //saludo y presentacion de vuelos.
+      value+=1;
+        if (value===true) { 
           escalasVuelos = `el vuelo hace escalas`;
          } else {
           escalasVuelos = `el vuelo no hace escalas`;
@@ -26,9 +27,9 @@ let identificacion = prompt(`porfavor introduzca su nombre`);
     }
        function mediaCosteVuelos() { //coste medio vuelos.
            let mediaCoste = 0;
-           for (let i = 0; i < flights.length; i++) {
-               
-             mediaCoste = mediaCoste + flights[i].cost;  
+           for (let value of flights){
+               value+=1;
+              mediaCoste = mediaCoste + value; 
            }
            
            mediaCoste= mediaCoste / (flights.length-1);
@@ -38,9 +39,9 @@ let identificacion = prompt(`porfavor introduzca su nombre`);
     
          debugger;
       function ultimos5()  { //ultimos vuelos del dia
-          for (let i = 0; i < flights.length; i++) {
-
-              if (i>=6){
+          for (let value of flights) {
+            value+=1;
+              if (value>=6){
               console.log(`los ultimos cinco vuelos disponibles para hoy son: ${flights[i].from} destino a ${flights[i].to}`);
              
           }
@@ -49,15 +50,4 @@ let identificacion = prompt(`porfavor introduzca su nombre`);
   
       }    
       ultimos5();
-    }    
-
-
-
-
-
-
-
-
-
-
-
+    }  
