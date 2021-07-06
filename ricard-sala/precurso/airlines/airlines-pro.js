@@ -17,22 +17,22 @@ alert(
   `Encantado de conocerle ${identificacion} bienvenido a skylab Airlines estos son nuestros vuelos disponibles para hoy`
 );
 {
-  for (let i = 0; i < flights.length; i++) {
+  for (let flight of flights) {
     //saludo y presentacion de vuelos.
-    if (flights[i].scale === true) {
+    if (flight.scale === true) {
       escalasVuelos = `el vuelo hace escalas`;
     } else {
       escalasVuelos = `el vuelo no hace escalas`;
     }
     console.log(
-      `el vuelo destino ${flights[i].to} procedente de ${flights[i].from} tiene un valor de ${flights[i].cost}€ y ${escalasVuelos}`
+      `el vuelo destino ${flight.to} procedente de ${flight.from} tiene un valor de ${flight.cost}€ y ${escalasVuelos}`
     );
   }
   function mediaCosteVuelos() {
     //coste medio vuelos.
     let mediaCoste = 0;
-    for (let i = 0; i < flights.length; i++) {
-      mediaCoste = mediaCoste + flights[i].cost;
+    for (let flight of flights) {
+      mediaCoste = mediaCoste + flight.cost;
     }
 
     mediaCoste = mediaCoste / (flights.length - 1);
@@ -44,10 +44,10 @@ alert(
 
   function ultimos5() {
     //ultimos vuelos del dia
-    for (let i = 0; i < flights.length; i++) {
-      if (i >= 6) {
+    for (let flight of flights) {
+      if (flight >= 6) {
         console.log(
-          `los ultimos cinco vuelos disponibles para hoy son: ${flights[i].from} destino a ${flights[i].to}`
+          `los ultimos cinco vuelos disponibles para hoy son: ${flight.from} destino a ${flight.to}`
         );
       }
     }
@@ -70,37 +70,37 @@ alert(
           let igualPresupuesto = [];
           presupuesto = prompt(`Que presupuesto tienes ${identificacion}?`);
           if (presupuesto != null) {
-            for (let i = 0; i < flights.length; i++) {
-              if (flights[i].cost < presupuesto) {
-                menorPresupuesto.push(flights[i]);
-              } else if (flights[i].cost == presupuesto) {
-                igualPresupuesto.push(flights[i]);
+            for (let flight of flights) {
+              if (flight.cost < presupuesto) {
+                menorPresupuesto.push(flight);
+              } else if (flight.cost == presupuesto) {
+                igualPresupuesto.push(flight);
               } else {
-                mayorPresupuesto.push(flights[i]);
+                mayorPresupuesto.push(flight);
               }
             }
             console.log(
               `Los vuelos con un coste menor a ${presupuesto} euros, son:`
             );
-            for (let j = 0; j < menorPresupuesto.length; j++) {
+            for (let presupuestoMasBajo of menorPresupuesto) {
               console.log(
-                `El vuelo ${menorPresupuesto[j].id} con origen ${menorPresupuesto[j].to}, y destino : ${menorPresupuesto[j].from} tiene un coste de ${menorPresupuesto[j].cost} € .`
+                `El vuelo ${presupuestoMasBajo.id} con origen ${presupuestoMasBajo.to}, y destino : ${presupuestoMasBajo.from} tiene un coste de ${presupuestoMasBajo.cost} € .`
               );
             }
             console.log(
               `Los vuelos con un coste igual a ${presupuesto} euros, son:`
             );
-            for (let j = 0; j < igualPresupuesto.length; j++) {
+            for (let mismoPresupuesto of igualPresupuesto) {
               console.log(
-                `El vuelo ${igualPresupuesto[j].id} con origen ${igualPresupuesto[j].to}, y destino : ${igualPresupuesto[j].from} tiene un coste de ${igualPresupuesto[j].cost} € .`
+                `El vuelo ${mismoPresupuesto.id} con origen ${mismoPresupuesto.to}, y destino : ${mismoPresupuesto.from} tiene un coste de ${mismoPresupuesto.cost} € .`
               );
             }
             console.log(
               `Los vuelos con un coste mayor a ${presupuesto} euros, son:`
             );
-            for (let j = 0; j < mayorPresupuesto.length; j++) {
+            for (let presupuestoSobrado of mayorPresupuesto) {
               console.log(
-                `El vuelo ${mayorPresupuesto[j].id} con origen ${mayorPresupuesto[j].to}, y destino : ${mayorPresupuesto[j].from} tiene un coste de ${mayorPresupuesto[j].cost} € .`
+                `El vuelo ${presupuestoSobrado.id} con origen ${presupuestoSobrado.to}, y destino : ${presupuestoSobrado.from} tiene un coste de ${presupuestoSobrado.cost} € .`
               );
             }
             comprarVuelo();
@@ -111,7 +111,7 @@ alert(
         function comprarVuelo() {
           var id = prompt(`Por favor, indique el id de vuelo`);
 
-          if (flights[id]) {
+          if (flight) {
             alert(`Gracias por su compra, el vuelo con ID ${id} fue comprado`);
           } else {
             alert(`Id no valido, vuelva a intentarlo.`);
@@ -159,8 +159,8 @@ alert(
           }
           function deleteFlight(id) {
             flights.splice(id, 1);
-            for (let i = id; i < flights.length; i++) {
-              flights[i].id = flights[i].id - 1;
+            for (let fligt of flights) {
+              flight.id = flight.id - 1;
             }
           }
         }
