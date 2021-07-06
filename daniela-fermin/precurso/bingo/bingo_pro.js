@@ -33,8 +33,8 @@ function sortPrintRanking(){
     });
      for(let i = 0; i < playersList.length; i++) {
          console.log('El jugador ' + playersList[i].name + ' tiene una puntuación de: ' + playersList[i].points);
-     };
-};
+     }
+}
 
 
 function askUserName (){
@@ -148,24 +148,24 @@ function divideInLines() {
                 line1.push(bingoCard[i].number);
             } else {
                 line1.push('X');
-            };
+            }
         } else if(i < 10) {
             if(bingoCard[i].matched === false) {
                 line2.push(bingoCard[i].number);
             } else {
                 line2.push('X');      
-            }; 
+            } 
         } else {
             if(bingoCard[i].matched === false) {
                 line3.push(bingoCard[i].number);
             } else {
                 line3.push('X');        
-            };
+            }
         }
 
     }
 
-};
+}
 
 function showCard() {
     console.log('\t\n' + line1.join('   |   ') + '\n');
@@ -198,11 +198,11 @@ function createCard(){
                 for(let i = 0; i < bingoCard.length; i++) {
                     if(typeof bingoCard[i].number === 'number') {
                         bingoCard[i].number = 'randomNumber';
-                    };
-                };
+                    }
+                }
             createCard();
         break;
-    };
+    }
 }
 
 
@@ -243,7 +243,7 @@ function compareNumbers() {
               bingoCard[j].matched = true;
             } 
     
-        };
+        }
 
 }
 
@@ -309,7 +309,7 @@ function isItMatched () {
     line1Complete = line1.every(isMatched);
     line2Complete = line2.every(isMatched);
     line3Complete = line3.every(isMatched);
-};
+}
 
 function checkForLine () {
     if (line === false){
@@ -318,7 +318,7 @@ function checkForLine () {
             line = true;
         }
     }
-};
+}
 
 function checkForBingo () {
     if (bingoWinner === false) {
@@ -327,7 +327,7 @@ function checkForBingo () {
             bingoWinner = true; 
         }
     }
-};
+}
 
 function theScore(){
     console.log('Has ganado! te mostraremos las reglas de puntucion y como has quedado en el ranking')
@@ -336,7 +336,7 @@ function theScore(){
     addToRanking(userName,turns);
     sortPrintRanking();
     goAgain();
-};
+}
 
 
 function score(turns){
@@ -356,22 +356,22 @@ function score(turns){
         return 15;
     } else if(turns === 100){
         return 0;
-    };
-};
+    }
+}
 
 function addToRanking(userName, turns) {
     let points = score(turns);
     for(let i = 0; i < playersList.length; i++) {
         if(playersList[i].name === userName) {
             playersList[i].points = points;
-        };
-    };
-};
+        }
+    }
+}
 
 function pointSystem(){
     console.log ("REGLAS DEL JUEGO" +'\n'+ "Si haces Bingo antes de los 30 turnos tendras 180 puntos, mientras mas turnos menos puntos tendras. si pasas de los 100 turnos no recibiras puntos"
     );
-};
+}
 
 function goAgain(){
     let playAgain = prompt("¿Quieres volver a jugar? Escriba S o N");
@@ -393,4 +393,4 @@ function goAgain(){
             goAgain();
             break;
     }
-};
+}
