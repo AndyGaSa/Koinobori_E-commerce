@@ -82,20 +82,8 @@ window.onload = () => {
         }
 
         if( userInput !== true ) alert( 'Operacion completada' )
-        console.clear();
-        console.log( `
-        Porfavor ${ user.nombre } escriba una de las siguientes opciones:
 
-        01 - Ver Vuelos
-        02 - Ver Coste medio
-        03 - Ver Escalas
-        04 - Ver ultimos vuelos
-        05 - Ver todo
-        ${ user.admin ? `06 - Crear vuelo
-        07 - Eliminar vuelo` : `06 - Buscar vuelo` }
-        08 - Cambiar Usuario
-        09 - Salir
-      ` )
+        mostrarMenu( user )
 
         userInput = adquisicionDatos( `
             Porfavor ${ user.nombre } escriba una de las siguientes opciones:
@@ -437,4 +425,27 @@ buscarVuelo = ( buscarCoste = '' ) => {
 comprarVuelo = ( id ) => {
     return  flights.find( flight => flight.id === id && flight.activo === true ) ? 'Gracias por su compra, vuelva pronto.' : 'El vuelo indicado no existe';
  
+}
+
+/**
+ * Limpiamos la consola y mostramos el menu de nuevo
+ * @param { Object } user
+ */
+const mostrarMenu = ( user ) => {
+    let opciones = user.admin ? `06 - Crear vuelo
+    07 - Eliminar vuelo` : `06 - Buscar vuelo`
+
+    console.clear();
+    console.log( `
+    Porfavor ${ user.nombre } escriba una de las siguientes opciones:
+
+    01 - Ver Vuelos
+    02 - Ver Coste medio
+    03 - Ver Escalas
+    04 - Ver ultimos vuelos
+    05 - Ver todo
+    ${ opciones }
+    08 - Cambiar Usuario
+    09 - Salir
+  ` )
 }
