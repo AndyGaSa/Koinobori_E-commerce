@@ -175,10 +175,11 @@ function showCard() {
 
 function theGame(){
     createCard();
-    while(bingoWinner === false){
+    if (bingoWinner === false){
         nextTurn();
+    } else {
+        theScore()
     }
-theScore()
 }
 function createCard(){
     line1 = [];
