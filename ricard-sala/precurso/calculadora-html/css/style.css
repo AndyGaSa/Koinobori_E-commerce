@@ -35,6 +35,7 @@ body{
 }
 .display>span{
     color: rgb(0, 255, 255);
+    font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
     font-family: mi fuente;
     filter: blur(.2px);
 }
