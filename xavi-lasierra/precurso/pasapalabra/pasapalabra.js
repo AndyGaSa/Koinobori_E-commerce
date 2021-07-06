@@ -65,9 +65,9 @@ function pasapalabra(){
     let round = 1;
     score = 0;
     do{
-        let endGame = newTurn(String.fromCharCode(asciiLetter).toString(), round);
+        let closeGame = newTurn(String.fromCharCode(asciiLetter).toString(), round);
 
-        if(endGame)
+        if(closeGame)
             break;
         
         //Calcula siguiente letra
