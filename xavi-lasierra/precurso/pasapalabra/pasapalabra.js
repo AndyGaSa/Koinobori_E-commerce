@@ -106,16 +106,17 @@ function newTurn(currentLetter, round){
     let failedLetters = `Letras falladas: `;
     let dueLetters = `Letras sin responder: `;
     let x = 0;
-    for(let i=0; i<currentGameQuestions.length; i++){
-        if(currentGameQuestions[i].status === 1)
+    for(let value of currentGameQuestions){
+        if(value.status === 1)
             correctLetters += `${allLetters.splice(x,1)}, `;
-        else if(currentGameQuestions[i].status === 2)
+        else if(value.status === 2)
             failedLetters += `${allLetters.splice(x,1)}, `;
         else
             x++;
     }
-    for(let i=0; i<allLetters.length; i++){
-        dueLetters +=  `${allLetters[i]}, `;
+    
+    for (let value of allLetters){
+        dueLetters +=  `${value}, `;
     }
     console.log(`PROGRESO:\n\n${correctLetters}\n${failedLetters}\n${dueLetters}`);
     
