@@ -96,7 +96,7 @@
          }
          flights.push(newFlight); // Se añade el nuevo vuelo al arreglo 
          console.log('Current flights list: ') //Se muestra la nueva lista de vuelos
-         for (let i = 0; i < flights.length; i++) {
+         for (let i in flights) {
              if (!flights[i].scale) {
                  console.log(`Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
                      `does not make stopovers`)
@@ -111,7 +111,7 @@
 
  function removeFlight() {
      console.log('Current flights') //Se muestran los vuelos existentes
-     for (let i = 0; i < flights.length; i++) {
+     for (let i in flights) {
          if (!flights[i].scale) {
              console.log(`Flight id: ${flights[i].id}. Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
                  `does not make stopovers`)
@@ -123,12 +123,12 @@
      }
      let idToRemove = parseInt(prompt('Type the id of the flight to remove')); //Se solicita el id del vuelo a eliminar
      // Se recorre el array mediante un for para localizar el vuelo a eliminar
-     for (let i = 0; i < flights.length; i++) {
+     for (let i in flights) {
          if (idToRemove === flights[i].id) { //Si el id indicado coincide con el id de un vuelo  se elimina usando filter()
              flights = flights.filter(flight => flight.id !== idToRemove);
          }
          console.log('Current flights list: ')
-         for (let i = 0; i < flights.length; i++) {
+         for (let i in flights) {
              if (!flights[i].scale) {
                  console.log(`Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
                      `does not make stopovers`)
@@ -195,7 +195,7 @@
 
      if (availableFlights.length > 0) { //En caso de que haya algún resultado disponible se le muestran al usuario y si solicita el id del vuelo a comprar
          console.log('Flights available: ')
-         for (let i = 0; i < availableFlights.length; i++) {
+         for (let i in flights) {
              if (!availableFlights[i].scale) {
                  console.log(`Flight id: ${availableFlights[i].id}. Flight from ${availableFlights[i].from} to ${availableFlights[i].to}. This flight has a cost of ${availableFlights[i].cost}€ and ` +
                      `does not make stopovers`)
