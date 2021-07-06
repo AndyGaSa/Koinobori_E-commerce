@@ -1,5 +1,5 @@
 
-flights = [
+let flights = [
   { id: 0, to: "Bilbao", from: "Barcelona", cost: 1600, scale: false },
   { id: 1, to: "New York", from: "Barcelona", cost: 700, scale: false },
   { id: 2, to: "Los Angeles", from: "Madrid", cost: 1100, scale: true },
@@ -19,7 +19,7 @@ let identificacion = prompt(`porfavor introduzca su nombre`);
   for (let flight of flights) { //saludo y presentacion de vuelos.
       
         if (flight && flight != "0") { 
-          escalasVuelos = `el vuelo hace escalas`;
+          let escalasVuelos = `el vuelo hace escalas`;
          } else {
           escalasVuelos = `el vuelo no hace escalas`;
          }
