@@ -1,24 +1,23 @@
 var flights = [
+    { id: 0, to: 'Bilbao', from: 'Barcelona', cost: 1600, scale: false },
 
-    { id: 00, to: 'Bilbao', from: 'Barcelona', cost: 1600, scale: false },
+    { id: 1, to: 'New York', from: 'Barcelona', cost: 700, scale: false },
 
-    { id: 01, to: 'New York', from: 'Barcelona', cost: 700, scale: false },
+    { id: 2, to: 'Los Angeles', from: 'Madrid', cost: 1100, scale: true },
 
-    { id: 02, to: 'Los Angeles', from: 'Madrid', cost: 1100, scale: true },
+    { id: 3, to: 'Paris', from: 'Barcelona', cost: 210, scale: false },
 
-    { id: 03, to: 'Paris', from: 'Barcelona', cost: 210, scale: false },
+    { id: 4, to: 'Roma', from: 'Barcelona', cost: 150, scale: false },
 
-    { id: 04, to: 'Roma', from: 'Barcelona', cost: 150, scale: false },
+    { id: 5, to: 'London', from: 'Madrid', cost: 200, scale: false },
 
-    { id: 05, to: 'London', from: 'Madrid', cost: 200, scale: false },
+    { id: 6, to: 'Madrid', from: 'Barcelona', cost: 90, scale: false },
 
-    { id: 06, to: 'Madrid', from: 'Barcelona', cost: 90, scale: false },
+    { id: 7, to: 'Tokyo', from: 'Madrid', cost: 1500, scale: true },
 
-    { id: 07, to: 'Tokyo', from: 'Madrid', cost: 1500, scale: true },
+    { id: 8, to: 'Shangai', from: 'Barcelona', cost: 800, scale: true },
 
-    { id: 08, to: 'Shangai', from: 'Barcelona', cost: 800, scale: true },
-
-    { id: 09, to: 'Sydney', from: 'Barcelona', cost: 150, scale: true },
+    { id: 9, to: 'Sydney', from: 'Barcelona', cost: 150, scale: true },
 
     { id: 10, to: 'Tel-Aviv', from: 'Madrid', cost: 150, scale: false } ];
 
@@ -26,17 +25,17 @@ var flights = [
 function searchAirlines(){
     let name=prompt("Please, enter your username:");
     alert(name + ", wellcome to the Skylab Airlines!");
-    showFlights(flights);
-    costeMedio(flights);
-    escalasFlight(flights);
-    ultimosDestinos(flights);
+    showFlights();
+    costeMedio();
+    escalasFlight();
+    ultimosDestinos();
     userProfile();
 }
 
 function showFlights(){
-    let result;
+    
     console.log("********** VUELOS***********")
-    for(let i =0; i<flights.length; i++){
+    for(let i of flights){
         
         if(flights[i].scale){ 
             console.log("El vuelo "+ flights[i].id +" con origen " + flights[i].to +", y destino : "+ flights[i].from +" tiene un coste de "+ flights[i].cost
@@ -55,7 +54,7 @@ function costeMedio(){
     let promedio;
     let totalCost=0;
     let totalFlights;
-    for(let i=0;i<flights.length; i++){
+    for(let i in flights){
         totalCost += Number(flights[i].cost);
         totalFlights = flights.length;
         promedio = (totalCost/totalFlights).toFixed(3);
@@ -66,7 +65,7 @@ function costeMedio(){
 
 function escalasFlight(){
     let numEscalas=0;
-    for(let i=0;i<flights.length; i++){
+    for(let i in flights){
         if(flights[i].scale){
             numEscalas+=Number(flights[i].scale);
         }
@@ -76,7 +75,7 @@ function escalasFlight(){
 
 function ultimosDestinos(){
     console.log("Los ultimos destinos del día son: ");
-    for(let i=0; i < flights.length; i++){
+    for(let i in flights){
         if( flights[i].id >= 6 ){
             console.log(flights[i].to);
         }
@@ -128,7 +127,7 @@ function createFlight(){
     f.from=prompt("Por favor, introduzca la ciudad de salida :");
     f.cost= prompt("Por favor, introduzca el precio del vuelo:");
     f.scale = prompt("Por favor, indique si hay escala: s/n");
-        if(f.scale!=="s"){ f.scale= false };
+        if(f.scale!=="s"){ f.scale= false }
     if(flights.length === 15){
         alert("Lo Sentimos, solo puede haber un máximo de 15 vuelos");
         questionDelete();
@@ -136,7 +135,7 @@ function createFlight(){
     }else{
         flights.push(f);
         alert("El vuelo se ha creado correctamente.");
-        showFlights(flights);
+        showFlights()
         questionCreate();
     }
 }
@@ -165,7 +164,7 @@ function questionDelete(){
 
 function deleteFlight(id){
     flights.splice(id,1);
-    for(let i= id; i<flights.length; i++){
+    for(let i in flights){
         flights[i].id = flights[i].id-1;
     }
     
@@ -177,7 +176,7 @@ function classifyFlight(){
     let greaterPrice=[];
     var price = prompt("Indique la cantidad para realizar la busqueda de billetes:");
     if(price!=null){
-        for(let i=0; i < flights.length; i++){
+        for(let i in flights){
             if(flights[i].cost < price){
                 lowerPrice.push(flights[i]);
                 
@@ -191,19 +190,19 @@ function classifyFlight(){
             }
         }
         console.log(" Los vuelos con un coste menor a " + price+" euros, son:");
-        for(let j=0; j<lowerPrice.length; j++){
+        for(let j in lowerPrice){
                 console.log("El vuelo "+ lowerPrice[j].id +" con origen " + lowerPrice[j].to +", y destino : "+ lowerPrice[j].from +" tiene un coste de "+ lowerPrice[j].cost
                 +" € .");
             
         }
         console.log(" Los vuelos con un coste igual a " + price+" euros, son:");
-        for(let j=0; j<equalPrice.length; j++){
+        for(let j in lowerPrice){
                 console.log("El vuelo "+ equalPrice[j].id +" con origen " + equalPrice[j].to +", y destino : "+ equalPrice[j].from +" tiene un coste de "+ equalPrice[j].cost
                 +" € .");
             
         }
         console.log(" Los vuelos con un coste mayor a " + price+" euros, son:");
-        for(let j=0; j<greaterPrice.length; j++){
+        for(let j of lowerPrice){
                 console.log("El vuelo "+ greaterPrice[j].id +" con origen " + greaterPrice[j].to +", y destino : "+ greaterPrice[j].from +" tiene un coste de "+ greaterPrice[j].cost
                 +" € .");
         }
@@ -230,6 +229,3 @@ function buyFlight(){
 
 
 
-        
-
-console.log(searchAirlines());
