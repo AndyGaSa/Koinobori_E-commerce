@@ -255,7 +255,7 @@ login = () => {
  * @param { Array } vuelosParaMostrar 
  * @returns { * }
  */
-verVuelos = ( vuelosParaMostrar = flights ) => {
+const verVuelos = ( vuelosParaMostrar = flights ) => {
     if( !user.admin ) {
         vuelosParaMostrar.forEach( flight => {
             if( flight.activo ) console.log( `El vuelo con id ${ flight.id } y origen en: ${ flight.from }, y destino: ${ flight.to } tiene un coste de ${ flight.cost }€ y ${ flight.scale ? 'realiza' : 'no realiza ninguna' } escala.` )
