@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Calculadora HTML</title>
+      <meta content="text/html; charset=utf-8" />
+      <script src="https://kit.fontawesome.com/833ce51803.js" crossorigin="anonymous"></script>
+      <script src="introCalculadora.js"></script>
+      <style>
+     
+      table, th, td {        
+        font-family: Helvetica, sans-serif;
+        border-radius: 5px;              
+      }
+
+      table {
+        top: 100px;
+        margin: auto;      
+      }
+
+      td {
+        width: 25%;
+        text-align: center;
+        font-size: 24px;                                    
+      }
+      
+      .simbolos {
+        background-color: orange;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        border-style: none;       
+        width: 75px;
+        height: 50px;               
+      }
+
+      .numeros {
+        background-color: grey;
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        width: 75px;
+        height: 50px;                               
+      }
+
+      .dobles {
+          width: 155px;
+      }      
+  
+      th {
+        max-width: 300px;
+        text-align: right;
+        vertical-align: bottom;
+        font-size: 55px;
+        background-color: lightblue;
+        height: 100px;        
+      }
+
+         
+      </style>
+    <body>
+        <div>
+            <form action="#" name="calculadora" id="calculadora"></form>
+            <table>
+            <tr>
+              <th colspan="4" id="result">0</th>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="button" onclick="borrar()" class="numeros dobles">AC</button></td>
+              <td><button type="button" onclick="retrocede()" class="numeros"><i class="fas fa-undo-alt"></i></button></td>
+              <td><button type="button" onclick="operacion('/')" class="simbolos">/</button></td>        
+            </tr>
+            <tr>
+              <td><button type="button" onclick="numero('7')" class="numeros">7</button></td>
+              <td><button type="button" onclick="numero('8')" class="numeros">8</button></td>
+              <td><button type="button" onclick="numero('9')" class="numeros">9</button></td>
+              <td><button type="button" onclick="operacion('*')" class="simbolos">*</button></td>      
+            </tr>
+            <tr>
+              <td><button type="button" onclick="numero('4')" class="numeros">4</button></td>
+              <td><button type="button" onclick="numero('5')" class="numeros">5</button></td>
+              <td><button type="button" onclick="numero('6')" class="numeros">6</button></td>
+              <td><button type="button" onclick="operacion('-')" class="simbolos">-</button></td>
+            </tr>
+            <tr>
+              <td><button type="button" onclick="numero('1')" class="numeros">1</button></td>
+              <td><button type="button" onclick="numero('2')" class="numeros">2</button></td>
+              <td><button type="button" onclick="numero('3')" class="numeros">3</button></td>
+              <td><button type="button" onclick="operacion('+')" class="simbolos">+</button></td>  
+            </tr>
+            <tr>
+              <td colspan="2"><button type="button" onclick="numero('0')" class="numeros dobles">0</button></td>
+              <td><button type="button" onclick="numero('.')" class="numeros">,</button></td>
+              <td><button type="button" onclick="solucionar()" class="simbolos">=</button></td>          
+            </tr>
+          </table>
+        </div>    
+    </body>
+</html>

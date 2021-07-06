@@ -1,0 +1,508 @@
+h1 {
+  filter: blur(4px);
+  font-family: Arial,sans-serif; 
+  color: darkgrey;
+  font-size: 100px;
+  text-align: center;
+}
+#game {
+  margin: 50px auto;
+  width: 1000px;
+  position: relative;
+}
+body {
+  background: rgb(255, 212, 178);
+  background: linear-gradient(353deg, #8a8a8a 0%, #ffffff 50%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.restart {
+  font-weight: bold;
+  font-size: 18px;
+  color: #881c23;
+  position: absolute;
+  transform: translate(-400px, 500px);
+  background-color: #ff5964;
+  border-radius: 120px;
+  border: inset 10px #dc2e39;
+  width: 120px;
+  height: 120px;
+}
+.vsCPU {
+  font-weight: bold;
+  font-size: 18px;
+  color: #881c23;
+  position: absolute;
+  transform: translate(5vw, 400px);
+  background-color: #ff5964;
+  border-radius: 120px;
+  border: inset 10px #dc2e39;
+  width: 120px;
+  height: 120px;
+}
+.twoPlayers {
+  font-weight: bold;
+  font-size: 18px;
+  color: #881c23;
+  position: absolute;
+  transform: translate(5vw, 200px);
+  background-color: #ff5964;
+  border-radius: 120px;
+  border: inset 10px #dc2e39;
+  width: 120px;
+  height: 120px;
+}
+
+.buttonsGroup {
+  transform: translate(3px, 1px);
+  position: absolute;
+  width: 1000px;
+}
+.buttons {
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . .";
+}
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 100px;
+  border: inset 7px transparent;
+  width: 79px;
+  height: 79px;
+}
+.buttonOff {
+  background-color: transparent;
+  border-radius: 100px;
+  border: inset 7px transparent;
+  width: 79px;
+  height: 79px;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #398ab9;
+  border-radius: 100px;
+  border: inset 7px #0e426d;
+  width: 79px;
+  height: 79px;
+}
+
+.gameBoard {
+  transform: translate(-22px, -10px);
+  position: absolute;
+  width: 1000px;
+}
+.board {
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . .";
+}
+.boardPart {
+  background-color: #39618c;
+  width: 145px;
+  height: 120px;
+  margin: -2px -2px;
+  -webkit-mask-image: radial-gradient(circle, transparent 49%, white 50%);
+}
+
+.chipsGroup {
+  position: absolute;
+  width: 1000px;
+}
+.chips {
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . .";
+}
+.chip {
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+.gameBoardBack {
+  transform: translate(-15px, -15px);
+  position: absolute;
+  width: 1000px;
+}
+.boardBack {
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . .";
+}
+.boardPartBack {
+  background-color: #284563;
+  width: 145px;
+  height: 120px;
+  margin: -2px -2px;
+  -webkit-mask-image: radial-gradient(circle, transparent 49%, white 50%);
+}
+
+.borderTop {
+  border-top: 5px solid #294563;
+}
+.borderRadRight {
+  border-top-right-radius: 60px;
+}
+.borderRadLeft {
+  border-top-left-radius: 60px;
+}
+
+#shadow {
+  filter: blur(4px);
+  background: linear-gradient(
+    3deg,
+    rgba(70, 70, 70, 1) 0%,
+    rgba(121, 121, 121, 0) 100%
+  );
+  position: absolute;
+  transform: translate(50px, 390px) skew(-25deg);
+  width: 1000px;
+  height: 300px;
+}
+
+/*hovers*/
+
+.restart:hover,
+.vsCPU:hover,
+.twoPlayers:hover {
+  cursor: pointer;
+  background-color: #b31a24;
+  color: #5a1318;
+}
+
+/*Animations*/
+
+.blurOn {
+  position: absolute;
+  transform: translate(-0px, -500px);
+  font-size: 300px;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 250px 0px;
+  color: rgba(255, 89, 100, 0);
+  animation: blurOn 1s normal forwards;
+}
+.blurOff {
+  position: absolute;
+  transform: translate(-0px, -500px);
+  font-size: 300px;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 250px 0px;
+  color: rgba(255, 89, 100, 0);
+  animation: blurOff 1s normal forwards;
+}
+#youWin {
+  position: absolute;
+  transform: translate(-0px, -500px);
+  font-size: 300px;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  padding: 250px 0px;
+  animation: winAnimation 3s 1 normal forwards;
+  color: rgba(255, 227, 31, 0);
+}
+#gameMode {
+  font-size: 80px;
+  margin: 50px auto;
+  text-align: center;
+  width: 700px;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  font-weight: bold;
+  color: #364350;
+  line-height: 70px;
+}
+#youLose {
+  position: absolute;
+  transform: translate(-0px, -500px);
+  font-size: 300px;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  padding: 250px 0px;
+  animation: loseAnimation 3s 1 normal forwards;
+  color: rgba(255, 89, 100, 0);
+}
+.CChip {
+  background-color: #ff5964;
+  border-radius: 50px;
+  border: inset 10px #dc2e39;
+  width: 80px;
+  height: 80px;
+  animation: show 0.5s linear;
+}
+
+.winnerChip {
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0)
+  );
+  background-size: 400% 400%;
+  animation: winnerChip 2s ease infinite;
+}
+.PChip {
+  background-color: #fee84b;
+  border-radius: 100px;
+  border: inset 10px #ffd143;
+  width: 80px;
+  height: 80px;
+  animation: show 0.5s linear;
+}
+.fakeCChip {
+  background-color: #ff5964;
+  border-radius: 50px;
+  border: inset 10px rgb(255, 89, 100, 0.3);
+  width: 80px;
+  height: 80px;
+}
+.fakePChip {
+  background-color: #fee84b;
+  border-radius: 100px;
+  border: inset 10px rgb(255, 209, 67, 0.3);
+  width: 80px;
+  height: 80px;
+}
+.fall2P {
+  animation: twoP 0.6s linear;
+}
+.fallRestart {
+  animation: restartAnimation 0.6s linear;
+}
+.fallCPU {
+  animation: CPU 0.7s linear;
+}
+.displaceLeft2P {
+  animation: displace2P 0.6s ease-in forwards;
+}
+.displaceLeftCPU {
+  animation: displaceCPU 0.6s ease-in forwards;
+}
+.displaceLeftRestart {
+  animation: displaceRestart 0.6s ease-in forwards;
+}
+.displaceRight2P {
+  animation: displace2PRight 0.6s ease-in forwards;
+}
+.displaceRightCPU {
+  animation: displaceCPURight 0.6s ease-in forwards;
+}
+.displaceRightRestart {
+  animation: displaceRestartRight 0.6s ease-in forwards;
+}
+@keyframes displace2P {
+  0% {
+    transform: translate(5vw, 200px);
+  }
+  100% {
+    transform: translate(-400px, 200px);
+  }
+}
+@keyframes displaceCPU {
+  0% {
+    transform: translate(5vw, 400px);
+  }
+  100% {
+    transform: translate(-400px, 400px);
+  }
+}
+@keyframes displaceRestart {
+  0% {
+    transform: translate(5vw, 300px);
+  }
+  100% {
+    transform: translate(-400px, 300px);
+  }
+}
+@keyframes displace2PRight {
+  0% {
+    transform: translate(-400px, 200px);
+  }
+  100% {
+    transform: translate(5vw, 200px);
+  }
+}
+@keyframes displaceCPURight {
+  0% {
+    transform: translate(-400px, 400px);
+  }
+  100% {
+    transform: translate(5vw, 400px);
+  }
+}
+@keyframes displaceRestartRight {
+  0% {
+    transform: translate(-400px, 300px);
+  }
+  100% {
+    transform: translate(5vw, 300px);
+  }
+}
+@keyframes winAnimation {
+  0% {
+    backdrop-filter: blur(0px);
+    color: rgba(255, 227, 31, 0);
+  }
+
+  100% {
+    backdrop-filter: blur(6px);
+    color: rgba(255, 162, 0, 1);
+  }
+}
+@keyframes loseAnimation {
+  0% {
+    backdrop-filter: blur(0px);
+    color: rgba(255, 162, 0, 0);
+  }
+
+  100% {
+    backdrop-filter: blur(6px);
+    color: rgba(136, 28, 35, 1);
+  }
+}
+@keyframes blurOn {
+  0% {
+    backdrop-filter: blur(0px);
+    color: rgba(255, 162, 0, 0);
+  }
+
+  100% {
+    backdrop-filter: blur(6px);
+    color: rgba(136, 28, 35, 1);
+  }
+}
+@keyframes blurOff {
+  0% {
+    backdrop-filter: blur(6px);
+    color: rgba(136, 28, 35, 1);
+  }
+  99% {
+    z-index: 0;
+  }
+  100% {
+    backdrop-filter: blur(0px);
+    color: rgba(255, 162, 0, 0);
+    z-index: -1;
+  }
+}
+@keyframes twoP {
+  0% {
+    transform: translate(5vw, -1600px);
+  }
+  70% {
+    transform: translate(5vw, 200px);
+  }
+  80% {
+    transform: translate(5vw, 160px);
+  }
+  90% {
+    transform: translate(5vw, 200px);
+  }
+  95% {
+    transform: translate(5vw, 190px);
+  }
+  100% {
+    transform: translate(5vw, 200px);
+  }
+}
+@keyframes CPU {
+  0% {
+    transform: translate(5vw, -1400px);
+  }
+  70% {
+    transform: translate(5vw, 400px);
+  }
+  80% {
+    transform: translate(5vw, 360px);
+  }
+  90% {
+    transform: translate(5vw, 400px);
+  }
+  95% {
+    transform: translate(5vw, 390px);
+  }
+  100% {
+    transform: translate(5vw, 400px);
+  }
+}
+@keyframes winnerChip {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes show {
+  0% {
+    transform: translateY(-1200px);
+  }
+  70% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(-40px);
+  }
+  90% {
+    transform: translateY(0px);
+  }
+  95% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(-0px);
+  }
+}

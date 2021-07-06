@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='es'>
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculator HTML by Lola Rufino</title>
+    <link rel='stylesheet' href='index.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Main container -->
+    <div id='mainContainer'>
+        <!-- Sub containers -->
+        <!-- Display Screen -->
+        <div id='display'>0</div>
+        <!-- Buttons -->
+        <div class='buttonsContainer'>
+            <!-- First line-->
+            <div class='firstLine'>
+                <button class='otherButton' id='ac'>AC</button>
+                <button class='otherButton' id='delete'>←</button>
+                <button class='operationsButton' id='divition' onclick='operation("/")'>/</button>
+            </div>
+            <!-- Second line-->
+            <div class='secondLine'>
+                <button class='otherButton' onclick='input("7")'>7</button>
+                <button class='otherButton' onclick='input("8")'>8</button>
+                <button class='otherButton' onclick='input("9")'>9</button>
+                <button class='operationsButton' id='multiplication' onclick='operation("x")'>x</button>
+            </div>
+            <!-- Third line-->
+            <div class='thirdLine'>
+                <button class='otherButton' onclick='input("4")'>4</button>
+                <button class='otherButton' onclick='input("5")'>5</button>
+                <button class='otherButton' onclick='input("6")'>6</button>
+                <button class='operationsButton' id='rest' onclick='operation("-")'>-</button>
+            </div>
+            <!-- Fourth line-->
+            <div class='fourthLine'>
+                <button class='otherButton' onclick='input("1")'>1</button>
+                <button class='otherButton' onclick='input("2")'>2</button>
+                <button class='otherButton' onclick='input("3")'>3</button>
+                <button class='operationsButton' id='sum' onclick='operation("+")'>+</button>
+            </div>
+            <!-- Fifth line-->
+            <div class='fifthLine'>
+                <button class='otherButton' onclick='input("0")'>0</button>
+                <button class='otherButton' id='decimal' onclick='input(",")'>,</button>
+                <button class='operationsButton' id='result' onclick='operation("=")'>=</button>
+            </div>
+        </div>
+    </div>
+    <!-- Link to JavaScript file-->
+    <script src='./index.js'></script>
+</body>
+
+</html>
