@@ -17,6 +17,16 @@
  const lastDepartures = [];
  let person;
  let user; //Tipo de usuario para las opciones avanzadas
+ class flight {
+     constructor(id, to, from, cost, scale) {
+         this.id = flights[flights.length - 1].id + 1;
+         this.to = prompt('Please, set the flight\'s destination: ');
+         this.from = prompt('Please, set the flight\'s origin: ');
+         this.cost = parseFloat(prompt('Please, set the flight\'s cost: '));
+         this.scale = prompt('Does the flight make stopovers? (yes/no)')
+     }
+ }
+
  function greetings() { //Función inicial para el saludo
      person = prompt('Hi! What\'s your name?'); //Se pregunta el nombre del usuario vía prompt
      alert(`Welcome, ${person}. Let me know if I can assist you.`) //Se le da la bienvenida mediante un alert
@@ -65,69 +75,70 @@
          option = parseInt(prompt('Select an option: \n 1 for add a flight, 2 for delete a flight, Cancel for exit'));
          switch (option) {
              case 1: //Añadir vuelos:
-                 if (flights.length < 15) { // con un condicional se evita que el usuario añada más de 15 vuelos
-                     let newFlight = {}; // Se crea un objeto nuevo
-                     newFlight.id = flights[flights.length - 1].id + 1; // Se van añadiendo los atributos del objeto mediante prompts
-                     newFlight.to = prompt('Please, set the flight\'s destination: ');
-                     newFlight.from = prompt('Please, set the flight\'s origin: ');
-                     newFlight.cost = parseFloat(prompt('Please, set the flight\'s cost: '));
-                     let scale = prompt('Does the flight make stopovers? (yes/no)');
-                     newFlight.scale = scale.toLowerCase() === 'yes' ? true : false;
-                     flights.push(newFlight); // Se añade el nuevo vuelo al arreglo 
-
-                     console.log('Current flights list: ') //Se muestra la nueva lista de vuelos
-                     for (let i = 0; i < flights.length; i++) {
-                         if (!flights[i].scale) {
-                             console.log(`Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
-                                 `does not make stopovers`)
-                         } else {
-                             console.log(`Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
-                                 `makes stopovers`)
-                             flightsWithStopover++;
-                         }
-                     }
-
-                 } else { alert('You can\'t add more flights for today') }
-                 /* En caso de que hayan 15 vuelos 
-                                    se indica que se ha llegado al límite*/
+                 addFlight();
                  break;
 
              case 2: // Eliminar vuelos:
-                 console.log('Current flights') //Se muestran los vuelos existentes
-                 for (let i = 0; i < flights.length; i++) {
-                     if (!flights[i].scale) {
-                         console.log(`Flight id: ${flights[i].id}. Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
-                             `does not make stopovers`)
-                     } else {
-                         console.log(`Flight id: ${flights[i].id}. Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
-                             `makes stopovers`)
-                         flightsWithStopover++;
-                     }
-                 }
-
-                 let idToRemove = parseInt(prompt('Type the id of the flight to remove')); //Se solicita el id del vuelo a eliminar
-                 // Se recorre el array mediante un for para localizar el vuelo a eliminar
-                 for (let i = 0; i < flights.length; i++) {
-                     if (idToRemove === flights[i].id) { //Si el id indicado coincide con el id de un vuelo  se elimina usando filter()
-                         flights = flights.filter(flight => flight.id !== idToRemove);
-                     }
-                     console.log('Current flights list: ')
-                     for (let i = 0; i < flights.length; i++) {
-                         if (!flights[i].scale) {
-                             console.log(`Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
-                                 `does not make stopovers`)
-                         } else {
-                             console.log(`Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
-                                 `makes stopovers`)
-                             flightsWithStopover++;
-                         }
-                     }
-                 }
-
+                 removeFlight();
              default:
                  break;
          }
      } while (option === 1 || option === 2); //Si el usuario no elige añadir o elimiar vuelos finaliza el programa
+ }
+
+ function addFlight() {
+     if (flights.length < 15) { // con un condicional se evita que el usuario añada más de 15 vuelos
+         let newFlight = new flight();
+         if (newFlight.scale.toLocaleLowerCase() === 'yes') {
+             newFlight.scale = true;
+         } else {
+             newFlight.scale = false;
+         }
+         flights.push(newFlight); // Se añade el nuevo vuelo al arreglo 
+         console.log('Current flights list: ') //Se muestra la nueva lista de vuelos
+         for (let i = 0; i < flights.length; i++) {
+             if (!flights[i].scale) {
+                 console.log(`Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
+                     `does not make stopovers`)
+             } else {
+                 console.log(`Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
+                     `makes stopovers`)
+                 flightsWithStopover++;
+             }
+         }
+     } else { alert('You can\'t add more flights for today') } // En caso de que hayan 15 vuelos se indica que se ha llegado al límite
+ }
+
+ function removeFlight() {
+     console.log('Current flights') //Se muestran los vuelos existentes
+     for (let i = 0; i < flights.length; i++) {
+         if (!flights[i].scale) {
+             console.log(`Flight id: ${flights[i].id}. Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
+                 `does not make stopovers`)
+         } else {
+             console.log(`Flight id: ${flights[i].id}. Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
+                 `makes stopovers`)
+             flightsWithStopover++;
+         }
+     }
+     let idToRemove = parseInt(prompt('Type the id of the flight to remove')); //Se solicita el id del vuelo a eliminar
+     // Se recorre el array mediante un for para localizar el vuelo a eliminar
+     for (let i = 0; i < flights.length; i++) {
+         if (idToRemove === flights[i].id) { //Si el id indicado coincide con el id de un vuelo  se elimina usando filter()
+             flights = flights.filter(flight => flight.id !== idToRemove);
+         }
+         console.log('Current flights list: ')
+         for (let i = 0; i < flights.length; i++) {
+             if (!flights[i].scale) {
+                 console.log(`Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
+                     `does not make stopovers`)
+             } else {
+                 console.log(`Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
+                     `makes stopovers`)
+                 flightsWithStopover++;
+             }
+         }
+     }
  }
 
  function regularUser() { //Función para usuario 
