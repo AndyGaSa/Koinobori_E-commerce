@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tittle></tittle>
+        <link rel="stylesheet" href="index.css">
+        <meta charset="utf-8">
+        <script src="script.js" defer></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+    <body>
+        </div>
+            <div id= "container-menu">
+                <div id="play_menu">
+                    <p id="menu-tittle">Women in Science</p>
+                    <button id="new_game" class="button_menu" onclick="userNamePanel()">Nueva Partida</button><br>
+                    <button id="instructions" class="button_menu" onclick="showInstructions()">Instrucciones</button><br>
+                    <button id="best_players" class="button_menu" onclick="classification()">Clasificación</button><br>
+                    <div id="name_registro">
+                        <input id="user_name" type="text" placeholder="Introduce tu nombre">
+                        <button id="ok_name" class="ok_button_name">OK</button>
+                    </div>
+                </div>
+            </div>
+            <div id= "container-best-players">
+                <div id="best_players">
+                    <p id="best_players_list_tittle">Clasificación general</p>
+                    <div id="best_players_list">
+                        <ol id="players_list"></ol>
+                    </div>
+                    <button id="stop" class="button_return">Menú principal</button>
+                </div>
+            </div>
+            <div id= "container-instructions">
+                <div id="instructions">
+                    <p id="instrutcions-tittle">Instrucciones</p>
+                    <p id="descrption-instructions">
+                        La mayoría de respuestas de este pasapalabra están compuestas por más de una palabra. Para jugar puedes utilizar los botones en patalla usando el ratón o bien puedes usar:<br>
+                        <br>Enter para validar una respuesta.<br>
+                        <br>Flecha derecha para pasar de palabra sin perder puntos.<br>
+                        <br>Usa ESC si quieres salir de juego.<br>
+                        <br>El juego terminará cuando hayas completado todo el rosco, siempre y cuando el tiempo no se haya acabado.
+                        Dispondrás de 4 minutos para responder a todas las preguntas.
+                    </p>
+                        
+                    <button id="stop" class="button_return">Menú principal</button>
+                </div>
+            </div>
+            <div id= "pasapalabra" class = "pasapalabra">
+                <h1>pasapalabra</h1>
+                
+                <div class = 'rosco-letras'>
+                    <button data-letra id= 'a'class= 'result'>a</button>
+                    <button data-letra id='b'>b</button>
+                    <button data-letra id ='c'>c</button>
+                    <button data-letra id ='d'>d</button>
+                    <button data-letra id= 'e'>e</button>
+                    <button data-letra id='f'>f</button>
+                    <button data-letra id='g'>g</button>
+                    <button data-letra id='h'>h</button>
+                    <button data-letra id='i'>i</button>
+                    <button data-letra id='j'>j</button>
+                    <button data-letra id='k'>k</button>
+                    <button data-letra id='l'>l</button>
+                    <button data-letra id='m'>m</button>
+                    <button data-letra id='n'>n</button>
+                    <button data-letra id='ñ'>ñ</button>
+                    <button data-letra id='o'>o</button>
+                    <button data-letra id='p'>p</button>
+                    <button data-letra id='q'>q</button>
+                    <button data-letra id='r'>r</button>
+                    <button data-letra id='s'>s</button>
+                    <button data-letra id='t'>t</button>
+                    <button data-letra id='u'>u</button>
+                    <button data-letra id='v'>v</button>
+                    <button data-letra id='w'>w</button>
+                    <button data-letra id='x'>x</button>
+                    <button data-letra id='y'>y</button>
+                    <button data-letra id='z'>z</button>
+                </div>
+            </div>   
+            <div id= "crono" >
+                <svg id="base-timer_svg" class= "base-timer-svg" viewbox=" 0 0 100 100">
+                    <circle id="base-timer_circle" cx="50" cy="50" r="45"/>
+                    <path id="color-timer"
+                    d="
+                    M 50, 50
+                    m -45, 0
+                    a 45,45 0 1,0 90,0
+                    a 45,45 0 1,0 -90,0
+                    " 
+                    ></path>
+                </svg>
+                <span id= 'timer_display'></span>
+            </div>
+            <div id= "user_button">
+                <p id="game_question">question</p> 
+                <input autofocus id="answer" type="text" placeholder="Escribe aquí tu respuesta...">
+                <button id="enter">ok</button>
+                <button id="pasa">pasapalabra</button>
+                <button id="end">end</button>
+            </div>
+            <div id = "contadores">
+                <p id="correct" class="result_panel">0</p>
+                <p id="incorrect" class="result_panel">0</p>
+            </div>
+            <div id="inicio">
+                <button id="start">Jugar</button>
+            </div>
+        </div>
+    </body>
+</html>
