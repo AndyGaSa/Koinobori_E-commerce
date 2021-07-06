@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+    background-color: rgb(233, 240, 239);
+}
+
+.calculator {  /*This class define the properties of the parent div, and declared the grid areas.*/
+    width: 70vw;
+    display: grid;
+    grid-template-areas:
+        "screen screen screen screen"
+        "allClear positiveNegative clear opDivide"
+        "numSeven numEight numNine opMultiply"
+        "numFour numFive numSix opRest"
+        "numOne numTwo numThree opSum"
+        "numZero numZero dot signEqual";
+    border: black 0.3vw solid;
+    margin:auto; 
+}
+
+#principalScreen { /*This class define the properties of the screen area.*/
+    grid-area: screen;
+    background-color: rgb(54, 52, 52);
+    margin: 1vw;
+    padding-right: 5vw;
+    font-size: 10vh;
+    text-align: right;
+    color: white;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button { /*This class define the properties of all the buttons.*/
+    border: black 0.3vw solid;
+    margin: 0.3vw;
+    border-radius: 4%;
+    height: 10vh;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7vh;
+}
+
+button:hover { /*This class define the properties of the buttons on hover.*/
+    color: gray;
+    opacity: 0.8;
+}
+
+.forAllNumberButtons { /*This class define the background-color of all nummber buttons.*/
+    background-color: rgb(201, 198, 198);
+}
+/*The following identifiers define the area of ​​the grid occupied by each button and its background colors.*/
+#buttonAllClear {
+    grid-area: allClear;
+    background-color: rgb(212, 200, 182);
+}
+
+#buttonPositiveNegative {
+    grid-area: positiveNegative;
+    background-color: rgb(212, 200, 182);
+}
+#buttonClear {
+    grid-area: clear;
+    background-color: rgb(212, 200, 182);
+}
+
+#buttonOpDivide {
+    grid-area: opDivide;
+    background-color: rgb(241, 182, 70);
+}
+
+#buttonOpMultiply{
+    grid-area: opMultiply;
+    background-color: rgb(241, 182, 70);
+}
+
+#buttonOpRest{
+    grid-area: opRest;
+    background-color: rgb(241, 182, 70);
+}
+
+#buttonOpSum {
+    grid-area: opSum;
+    background-color: rgb(241, 182, 70);
+}
+
+#buttonSignEqual {
+    grid-area: signEqual;
+    background-color: rgb(241, 182, 70);
+}
+
+#buttonDot {
+    grid-area: dot;
+}
+
+#buttonNumZero {
+    grid-area: numZero;
+}
+
+#buttonNumOne {
+    grid-area: numOne;
+}
+
+#buttonNumTwo {
+    grid-area: numTwo;
+}
+
+#buttonNumThree {
+    grid-area: numThree;
+}
+
+#buttonNumFour {
+    grid-area: numFour;
+}
+
+#buttonNumFive {
+    grid-area: numFive;
+}
+
+#buttonNumSix {
+    grid-area: numSix;
+}
+
+#buttonNumSeven {
+    grid-area: numSeven;
+}
+
+#buttonNumEight {
+    grid-area: numEight;
+}
+
+#buttonNumNine {
+    grid-area: numNine;
+}

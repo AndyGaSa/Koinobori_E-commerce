@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator-index.css" href="https://fonts.gstatic.com"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/74da354caa.js" crossorigin="anonymous"></script>
+    <title>myCalculator-HTML</title>
+</head>
+
+<body>
+    <main>
+        <section class="calculator">
+            <div id="principalScreen">0</div> <!--The screen start with the number zero-->
+            <button id="buttonAllClear" onclick="allClear()">  <!--This onclick button invokes the function to clear the screen.-->
+                AC
+            </button>
+            <button id="buttonPositiveNegative" onclick="changeTheSign()"> <!--This onclick button invokes the function to change the sign.-->
+                +/-
+            </button>
+            <button id="buttonClear" onclick="deleteLastDigit()"> <!--This onclick button invokes the function to remove the last digit of the display number.-->
+                <i class="fas fa-redo-alt"></i>
+            </button>
+            <button id="buttonOpDivide" onclick="runOperation('divide')"> <!--This onclick button invokes the function to divide operation.-->
+                /
+            </button>
+            <button id="buttonOpMultiply" onclick="runOperation('multiply')"> <!--This onclick button invokes the function to multiply operation.-->
+                x
+            </button>
+            <button id="buttonOpRest" onclick="runOperation('rest')"> <!--This onclick button invokes the function to rest operation.-->
+                -
+            </button>
+            <button id="buttonOpSum" onclick="runOperation('sum')"> <!--This onclick button invokes the function to sum operation.-->
+                +
+            </button>
+            <button id="buttonSignEqual" onclick="runEqualSign()"> <!--This onclick button invokes the function to get the result of the last operation.-->
+                =
+            </button>
+            <button id="buttonNumSeven" class="forAllNumberButtons" onclick="buttonNumberPressed(7)"> <!--All onclick number buttons invoke the function to "print" the number pressed on the screen.-->
+                7
+            </button>
+            <button id="buttonNumEight" class="forAllNumberButtons" onclick="buttonNumberPressed(8)">
+                8
+            </button>
+            <button id="buttonNumNine" class="forAllNumberButtons" onclick="buttonNumberPressed(9)">
+                9
+            </button>
+            <button id="buttonNumFour" class="forAllNumberButtons" onclick="buttonNumberPressed(4)">
+                4
+            </button>
+            <button id="buttonNumFive" class="forAllNumberButtons" onclick="buttonNumberPressed(5)">
+                5
+            </button>
+            <button id="buttonNumSix" class="forAllNumberButtons" onclick="buttonNumberPressed(6)">
+                6
+            </button>
+            <button id="buttonNumOne" class="forAllNumberButtons" onclick="buttonNumberPressed(1)">
+                1
+            </button>
+            <button id="buttonNumTwo" class="forAllNumberButtons" onclick="buttonNumberPressed(2)">
+                2
+            </button>
+            <button id="buttonNumThree" class="forAllNumberButtons" onclick="buttonNumberPressed(3)">
+                3
+            </button>
+            <button id="buttonDot" class="forAllNumberButtons" onclick="dotPressed()"> <!--This onclick button invokes the function to allow a dot in the number.-->
+                .
+            </button>
+            <button id="buttonNumZero" class="forAllNumberButtons" onclick="buttonNumberPressed(0)">
+                0
+            </button>
+
+
+
+        </section>
+    </main>
+
+    <script src="calculator-index.js"></script>
+</body>
+
+
+
+
+
+</html>
+
