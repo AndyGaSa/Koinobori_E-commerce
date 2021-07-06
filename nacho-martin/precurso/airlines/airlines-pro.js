@@ -89,7 +89,7 @@
 
  function addFlight() {
      if (flights.length < 15) { // con un condicional se evita que el usuario añada más de 15 vuelos
-         let newFlight = new flight();
+         let newFlight = new Flight();
          if (newFlight.scale.toLocaleLowerCase() === 'yes') {
              newFlight.scale = true;
          } else {
@@ -129,7 +129,7 @@
              flights = flights.filter(flight => flight.id !== idToRemove);
          }
          console.log('Current flights list: ')
-         for (let j in flights) {
+         for (let i in flights) {
              if (!flights[i].scale) {
                  console.log(`Flight from ${flights[i].from} to ${flights[i].to}. This flight has a cost of ${flights[i].cost}€ and ` +
                      `does not make stopovers`)
