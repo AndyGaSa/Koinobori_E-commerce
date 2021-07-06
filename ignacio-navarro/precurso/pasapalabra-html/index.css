@@ -1,0 +1,338 @@
+body {
+  background: rgb(0, 147, 218);
+  background: radial-gradient(
+    circle,
+    rgba(0, 147, 218, 1) 0%,
+    rgba(36, 60, 190, 1) 100%
+  );
+}
+
+#respuesta {
+  background: linear-gradient(#057ffc, #0057b0);
+  outline: none;
+  position: absolute;
+  border: solid 2px white;
+  border-radius: 40px;
+  line-height: 80px;
+  text-align: center;
+  margin: auto;
+  width: 600px;
+  height: 80px;
+  font-size: 30px;
+      font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: white;
+
+  text-shadow: 2px 2px 10px black;
+  transform: translate(250px, 1150px);
+}
+
+#pasapalabra {
+  background: linear-gradient(#057ffc, #0057b0);
+  position: absolute;
+  border: solid 2px white;
+  border-radius: 40px;
+  line-height: 80px;
+  text-align: center;
+  margin: auto;
+  width: 300px;
+  height: 80px;
+  font-size: 30px;
+      font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: white;
+
+  text-shadow: 2px 2px 10px black;
+  transform: translate(400px, 1050px);
+}
+#pasapalabra:hover {
+  background: linear-gradient(#045ab1, #00366b);
+}
+
+.rightAnswer {
+  position: absolute;
+  margin: auto;
+  width: 1000px;
+  height: 1000px;
+  font-size: 200px;
+      font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  text-align: center;
+  padding-top: 300px;
+  transform: translate(50px, 40px);
+  animation: rightAnswer 2s 1 normal forwards;
+  color: rgba(255, 227, 31, 0);
+}
+@keyframes rightAnswer {
+  0% {
+    backdrop-filter: blur(0px);
+    color: rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    backdrop-filter: blur(6px);
+    color: rgb(255, 255, 255);
+  }
+  100% {
+    backdrop-filter: blur(0px);
+    color: rgba(255, 255, 255, 0);
+  }
+}
+
+#exit {
+  background: linear-gradient(#057ffc, #0057b0);
+  position: absolute;
+  border: solid 2px white;
+  border-radius: 150px;
+  line-height: 80px;
+  text-align: center;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  font-size: 30px;
+      font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: white;
+
+  text-shadow: 2px 2px 10px black;
+  transform: translate(1100px, 1000px);
+}
+#exit:hover {
+  background: linear-gradient(#045ab1, #00366b);
+}
+
+.letra {
+  background: linear-gradient(#057ffc, #0057b0);
+  position: absolute;
+  border: solid 2px white;
+  border-radius: 100px;
+  line-height: 80px;
+  text-align: center;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  font-size: 60px;
+      font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.letra-fallo {
+  background: linear-gradient(#e40942, #d4001b);
+  position: absolute;
+  border: solid 2px white;
+  border-radius: 100px;
+  line-height: 80px;
+  text-align: center;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  font-size: 60px;
+      font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+.letra-acierto {
+  background: linear-gradient(#00b143, #03cb41);
+  position: absolute;
+  border: solid 2px white;
+  border-radius: 100px;
+  line-height: 80px;
+  text-align: center;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  font-size: 60px;
+      font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+.rosco {
+  transform: scale(0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -350px;
+  margin-left: -250px;
+  width: 100px;
+  height: 100px;
+}
+
+/*#letras{
+  transform: scale(0.5);
+  position: absolute;
+  padding:50px 30%;
+}*/
+
+#circuloCentral {
+  background: linear-gradient(#057ffc, #0057b0);
+  position: absolute;
+  border: solid 2px white;
+  border-radius: 600px;
+  line-height: 80px;
+  text-align: center;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  font-size: 30px;
+      font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+  transform: translate(250px, 240px);
+}
+#pregunta {
+  position: absolute;
+  text-align: center;
+  font-size: 40px;
+      font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+  transform: translate(200px, 360px);
+  margin: 80px;
+  width: 550px;
+}
+
+#userName {
+  position: absolute;
+  text-align: center;
+  font-size: 70px;
+      font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+  transform: translate(200px, 240px);
+  margin: 80px;
+  width: 550px;
+}
+
+#a {
+  transform: translate(500px, 71px);
+}
+#b {
+  transform: translate(599px, 83px);
+}
+#c {
+  transform: translate(693px, 117px);
+}
+#d {
+  transform: translate(776px, 171px);
+}
+#e {
+  transform: translate(844px, 244px);
+}
+#f {
+  transform: translate(894px, 330px);
+}
+#g {
+  transform: translate(922px, 425px);
+}
+#h {
+  transform: translate(928px, 525px);
+}
+#i {
+  transform: translate(911px, 623px);
+}
+#j {
+  transform: translate(871px, 714px);
+}
+#k {
+  transform: translate(812px, 794px);
+}
+#l {
+  transform: translate(736px, 858px);
+}
+#m {
+  transform: translate(647px, 903px);
+}
+#n {
+  transform: translate(550px, 926px);
+}
+#ny {
+  transform: translate(450px, 926px);
+}
+#o {
+  transform: translate(353px, 903px);
+}
+#p {
+  transform: translate(264px, 858px);
+}
+#q {
+  transform: translate(188px, 794px);
+}
+#r {
+  transform: translate(128px, 714px);
+}
+#s {
+  transform: translate(89px, 623px);
+}
+#t {
+  transform: translate(71px, 525px);
+}
+#u {
+  transform: translate(77px, 425px);
+}
+#v {
+  transform: translate(106px, 330px);
+}
+#w {
+  transform: translate(156px, 244px);
+}
+#x {
+  transform: translate(221px, 174px);
+}
+#y {
+  transform: translate(307px, 117px);
+}
+#z {
+  transform: translate(401px, 82.6px);
+}
+#time {
+  transform: translate(-250px, 1000px);
+  position: absolute;
+  border: 20px solid white;
+  border-radius: 200px;
+  line-height: 150px;
+  text-align: center;
+  margin: auto;
+  width: 160px;
+  height: 160px;
+  font-size: 80px;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+.wordsCount {
+  background: linear-gradient(#00b143, #03cb41);
+  transform: translate(-60px, 1050px);
+  position: absolute;
+  border: solid 2px white;
+  border-radius: 100px;
+  line-height: 80px;
+  text-align: center;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+.failureCount {
+  background: linear-gradient(#e40942, #d4001b);
+  transform: translate(-80px, 1120px);
+  position: absolute;
+  border: solid 2px white;
+  border-radius: 100px;
+  line-height: 80px;
+  text-align: center;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
