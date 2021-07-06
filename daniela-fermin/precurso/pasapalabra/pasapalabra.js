@@ -251,9 +251,9 @@ function goAgain(){
     switch (playAgain.toLowerCase()) {
         case "s":
             wheel = [];
-            let correct = 0
-            let incorrect = 0
-            let played = 0
+            correct = 0
+            incorrect = 0
+            played = 0
             pasapalabra();
             break;
         case "n":
