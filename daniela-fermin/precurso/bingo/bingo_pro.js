@@ -229,11 +229,11 @@ function nextTurn() {
                 turns = 0;
                 sortPrintRanking();
                 break;
-        };
+        }
     } else {
         alert('Ganaste!');    
-    };
-};
+    }
+}
 
 
 function compareNumbers() {
