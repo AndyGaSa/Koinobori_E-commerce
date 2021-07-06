@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pasapalabra</title>
+        <meta content="text/html; charset=utf-8" />
+    </head>
+    
+    <body>
+        <script> // PASAPALABRA       
+        
+        const todasLasPreguntas = [
+            [{letra: 'a', status: 0, respuesta: 'aladin', pregunta: 'Con la A: El que se encontro la lampara magica.'},
+            {letra: 'b', status: 0, respuesta: 'bambi', pregunta:'Con la B: El ciervo mas famoso de Disney.' },
+            {letra: 'c', status: 0, respuesta: 'caperucita', pregunta:'Con la C: De apellido Roja y su abuelita era un lobo.' },
+            {letra: 'd', status: 0, respuesta: 'disney', pregunta:'Con la D: Apellido del inventor de Mickey Mouse.' },
+            {letra: 'e', status: 0, respuesta: 'elefante', pregunta:'Con la E: Que animal era Dumbo?' },
+            {letra: 'f', status: 0, respuesta: 'filemon', pregunta:'Con la F: El compañero de Mortadelo?' },
+            {letra: 'g', status: 0, respuesta: 'goliat', pregunta:'Con la G: Contra quien lucho David?' },
+            {letra: 'h', status: 0, respuesta: 'heidi', pregunta:'Con la H: Cual fue la niña de los Alpes que vivia con su abuelo y tenia un amigo llamado Pedro?' },
+            {letra: 'i', status: 0, respuesta: 'invaders', pregunta:'Con la I: Uno de los primeros videojeugos matamarcianos mas importantes de la historia: Space... ' },
+            {letra: 'j', status: 0, respuesta: 'jackie', pregunta:'Con la J: Hermano de Nuca y uno de los oseznos que vivian felices en la montaña Tallac.' },
+            {letra: 'k', status: 0, respuesta: 'koala', pregunta:'Con la K: Que animal era Mofli?' },
+            {letra: 'l', status: 0, respuesta: 'lisa', pregunta:'Con la L: Como se llama la hermana de Bart Simpson?' },
+            {letra: 'm', status: 0, respuesta: 'millhouse', pregunta:'Con la M: Amigo de Bart Simpson.' },
+            {letra: 'n', status: 0, respuesta: 'nemo', pregunta:'Con la N: Un pez payaso muy famoso.' },
+            {letra: 'o', status: 0, respuesta: 'obelix', pregunta:'Con la O: De pequeño se cayo en una marmita con una pocion magica.' },
+            {letra: 'p', status: 0, respuesta: 'popeye', pregunta:'Con la P: Le encantaban las espinacas.' },
+            {letra: 'q', status: 0, respuesta: 'quasimodo', pregunta:'Con la Q: Niño jorobado que habitaba en la Catedral de Notre Dame, tocando las campanas.' },
+            {letra: 'r', status: 0, respuesta: 'rapunzel', pregunta:'Con la R: Tubo que utilizar su largo pelo para que el principe subiera a la torre donde estaba encerrada para salvarla.' },
+            {letra: 's', status: 0, respuesta: 'shrek', pregunta:'Con la S: El ogro que tenia un asno como amigo.' },
+            {letra: 't', status: 0, respuesta: 'tornasol', pregunta:'Con la T: Es un profesor creado por Hergé y que sale en una serie donde aparece un perro llamado Milu.' },
+            {letra: 'u', status: 0, respuesta: 'ulises', pregunta:'Con la U: Odiseo o ... ' },
+            {letra: 'v', status: 0, respuesta: 'vicky', pregunta:'Con la V: Era un niño vikingo de nombre...?' },
+            {letra: 'w', status: 0, respuesta: 'wendy', pregunta:'Con la W: La niña que encuentra la sombra de Peter Pan.' },
+            {letra: 'x', status: 0, respuesta: 'x-men', pregunta:'Con la X: Serie animada de superheroes.' },
+            {letra: 'y', status: 0, respuesta: 'yoda', pregunta:'Con la Y: El maestro de la Guerra de las Galaxias.' },
+            {letra: 'z', status: 0, respuesta: 'zanaorias', pregunta:'Con la Z: En plural, lo que le gusta a Bugs Bunny.' },
+            ],
+            [{letra: 'a', status: 0, respuesta: 'arnold', pregunta:'Con la A: Actor con apellido impronunciable que protagonizo Terminator.' },
+            {letra: 'b', status: 0, respuesta: 'bruce', pregunta:'Con la B: Nombre del cantante de la cancion: BORN IN THE U.S.A.' },
+            {letra: 'c', status: 0, respuesta: 'celia', pregunta:'Con la C: Nombre de la inventora de la SALSA y de origen cubana.' },
+            {letra: 'd', status: 0, respuesta: 'dj', pregunta:'Con la D: Tiesto, Ghetta, Hardwell, Afrojack... que son?' },
+            {letra: 'e', status: 0, respuesta: 'elvis', pregunta:'Con la E: El Rey del Rock and Roll.' },
+            {letra: 'f', status: 0, respuesta: 'freddie', pregunta:'Con la F: Nombre artistico de Farrokh Bulsara.' },
+            {letra: 'g', status: 0, respuesta: 'gigi', pregunta:'Con la G: Dj italiano de apellido D´Agostino.' },
+            {letra: 'h', status: 0, respuesta: 'haddaway', pregunta:'Con la H: Cantante de musica dance de los temas: What Is Love - Life - Fly Away.' },
+            {letra: 'i', status: 0, respuesta: 'it', pregunta:'Con la I: Adaptación cinematográfica de la conocida novela de Stephen King "Eso".' },
+            {letra: 'j', status: 0, respuesta: 'janet', pregunta:'Con la J: La hermana pequeña de los Jackson.' },
+            {letra: 'k', status: 0, respuesta: 'kaoma', pregunta:'Con la K: Grupo que invento la LAMBADA.' },
+            {letra: 'l', status: 0, respuesta: 'laurel', pregunta:'Con la L: Como se llamaba el GORDO del duo humoristico y que iba acompañado de Hardy?' },
+            {letra: 'm', status: 0, respuesta: 'matrix', pregunta:'Con la M: Pelicula donde un grupo de rebeldes del mundo real liderados por Morfeo, rescata al hacker Neo.' },
+            {letra: 'n', status: 0, respuesta: 'nirvana', pregunta:'Con la N: Banda de grunge donde los budistas encuentran su estado de liberacion.' },
+            {letra: 'o', status: 0, respuesta: 'oscar', pregunta:'Con la O: Premio anual concedido por la Academia de las Artes y las Ciencias Cinematográficas.' },
+            {letra: 'p', status: 0, respuesta: 'pitbull', pregunta:'Con la P: Cantante latino con nombre de perro.' },
+            {letra: 'q', status: 0, respuesta: 'quentin', pregunta:'Con la Q: Tarantino, de nombre...' },
+            {letra: 'r', status: 0, respuesta: 'rem', pregunta:'Con la R: Grupo de la cancion PERDIENDO MI RELIGION.' },
+            {letra: 's', status: 0, respuesta: 'salvador', pregunta:'Con la S: El nombre de Dali. ' },
+            {letra: 't', status: 0, respuesta: 'transformer', pregunta:'Con la T: Que es un DECEPTICON?' },
+            {letra: 'u', status: 0, respuesta: 'ub40', pregunta:'Con la U: Grupo inglés de música pop reggae y dub, autores del tema: Can´t help falling in love.' },
+            {letra: 'v', status: 0, respuesta: 'vivaldi', pregunta:'Con la V: Se le considera uno de los más grandes compositores barrocos, era apodado ´Il prete rosso´ «El cura rojo» por ser sacerdote y pelirrojo.' },
+            {letra: 'w', status: 0, respuesta: 'wham', pregunta:'Con la W: Duo britanico de pop, creado en 1981 por George Michael y Andrew Ridgeley.' },
+            {letra: 'x', status: 0, respuesta: 'xilofono', pregunta:'Con la X: Instrumento musical de percusion.' },
+            {letra: 'y', status: 0, respuesta: 'yellow', pregunta:'Con la Y: Color del submarino de los Beatles.' },
+            {letra: 'z', status: 0, respuesta: 'zambomba', pregunta:'Con la Z: Instrumento musical de fricción tambien conocido como RUNCHO.' },
+            ],
+            [{letra: 'a', status: 0, respuesta: 'atari', pregunta:'Con la A: Empresa pionera en los juegos de arcade, las consolas de videojuegos domésticos y las computadoras domésticas.' },
+            {letra: 'b', status: 0, respuesta: 'bitcoin', pregunta:'Con la B: Criptomoneda.' },
+            {letra: 'c', status: 0, respuesta: 'cpu', pregunta:'Con la C: Siglas de la Unidad Central de Procesamiento.' },
+            {letra: 'd', status: 0, respuesta: 'donkey', pregunta:'Con la D: Como se llama el mono de Nintendo?' },
+            {letra: 'e', status: 0, respuesta: 'ethernet', pregunta:'Con la E: Es un estándar de redes de área local para computadoras.' },
+            {letra: 'f', status: 0, respuesta: 'floppy', pregunta:'Con la F: Como se denominaban ateriormente en en ingles los disquetes:... disk.' },
+            {letra: 'g', status: 0, respuesta: '5g', pregunta:'Contiene la G: Reciente tecnoligia inalambrica.' },
+            {letra: 'h', status: 0, respuesta: 'html', pregunta:'Con la H: Lenguaje para programacion web.' },
+            {letra: 'i', status: 0, respuesta: 'internet', pregunta:'Con la I: Conjunto descentralizado de redes de comunicación interconectadas que utilizan la familia de protocolos TCP/IP.' },
+            {letra: 'j', status: 0, respuesta: 'joystick', pregunta:'Con la J: Periférico de entrada que consiste en una palanca que gira sobre una base e informa su ángulo o dirección al dispositivo que está controlando.' },
+            {letra: 'k', status: 0, respuesta: 'kirby', pregunta:'Con la K: Como se llamaba el abogado que defendio a Nintendo por usar el nombre Donkey Kong y al ganar le homenajearon poniendo su nombre a un vidiojeugo? ' },
+            {letra: 'l', status: 0, respuesta: 'luigi', pregunta:'Con la L: Hermano menor de Mario Bros.' },
+            {letra: 'm', status: 0, respuesta: 'mario', pregunta:'Con la M: Fontanero ítalo-estadounidense.' },
+            {letra: 'n', status: 0, respuesta: 'nintendo', pregunta:'Con la N: Empresa que su origen se remonta a 1889 fundada por el artesano Fusajirō Yamauchio​ con el objetivo de producir y comercializar naipes Hanafuda.' },
+            {letra: 'o', status: 0, respuesta: 'overclocking', pregunta:'Con la O: Es la practica que pretende alcanzar una mayor frecuencia de reloj para un componente electrónico.' },
+            {letra: 'p', status: 0, respuesta: 'pacman', pregunta:'Con la P: Se tenia que comer todas las bolitas de la pantalla y encontrar la salida del nivel, intentando que no le pillasen los fantasmas.' },
+            {letra: 'q', status: 0, respuesta: 'qwerty', pregunta:'Con la Q: Distribucion mas comun de las letras del teclado.' },
+            {letra: 'r', status: 0, respuesta: 'raid', pregunta:'Con la R: Siglas en ingles de matriz redundante de discos independientes.' },
+            {letra: 's', status: 0, respuesta: 'sonic', pregunta:'Con la S: El erizo de Sega.' },
+            {letra: 't', status: 0, respuesta: 'tetris', pregunta:'Con la T: El juego creado por Alekséi Pázhitnov en 1984.' },
+            {letra: 'u', status: 0, respuesta: 'usb', pregunta:'Con la U: Siglas del bus universal en serie.' },
+            {letra: 'v', status: 0, respuesta: 'vhs', pregunta:'Con la V: Sistema doméstico de grabación y reproducción analógica de video.' },
+            {letra: 'w', status: 0, respuesta: 'wifi', pregunta:'Con la W: Tecnología que permite la interconexión inalámbrica de dispositivos electrónicos.' },
+            {letra: 'x', status: 0, respuesta: 'xbox', pregunta:'Con la X: Consola de juegos desarrollada y propiedad de Microsoft.' },
+            {letra: 'y', status: 0, respuesta: 'yoshi', pregunta:'Con la Y: Dinosaurio híbrido antropomórfico perteneciente a la franquicia de Super Mario.' },
+            {letra: 'z', status: 0, respuesta: 'zelda', pregunta:'Con la Z: Juego desarrollado por Nintendo que describe las heroicas aventuras del joven guerrero Link.' },]
+        ];
+
+        const temas = ['DIBUJOS ANIMADOS', 'MUSICA Y CINE', 'INFORMATICA Y CONSOLAS'];        
+        
+        let puntos;
+        let h = 0;      // Con esta variable controlamos el grupo de preguntas para que cada vez que se juega el tema sea diferente. 
+        const ranking = [];
+        const letrasAcertadas = [];
+        const letrasError = [];
+        var yourName;
+
+        introNombre();
+
+        function introNombre() {
+            yourName = prompt('Bienvenido a PASAPALABRA!' + '\n' + 'Cual es tu nombre?');
+            if (yourName === null) {
+                salirPasapalabra(1);
+            } else {
+                console.log('Bienvenido ' + yourName +'!');
+                console.log('\n\nEMPEZAMOS CON LA PRIMERA LETRA!!\n\nRecuerda que si quieres dejar la letra pendienta de contestar escribe PASAPALABRA y si quires terminar la partida, END.\n\n');
+                console.log('El tema es: ' + temas[h] + '\n\n');
+                pasapalabra();                                
+            }                  
+        }
+        
+        function statusReset(){     // Con esta funcion ponemos los contadores a 0 para el siguiente participante.
+            let g;              // Variable que gestiona el objeto grupo de preguntas para resetear el STATUS.
+            let i;              // Variable que gestiona la pregunta de cada grupo para resetear el STATUS.            
+            for (g = 0; g < todasLasPreguntas.length; g++) {
+                for (i = 0; i < todasLasPreguntas[g].length; i++){
+                    todasLasPreguntas[g][i].status = 0;
+                }
+            };            
+            if (h === 3){     // Aquí vamos saltando el grupo de preguntas.
+                h = 0;
+            };
+            letrasAcertadas.splice(0);
+            letrasError.splice(0);
+            z = 0;
+            w = 0;
+            introNombre(); 
+        }
+           
+                
+        function pasapalabra() {               
+            let y;                            
+            let tuRespuesta;            
+            do {           
+                for (y = 0; y < todasLasPreguntas[h].length; y++){      // y cuenta la pregunta que toca.
+                    if (todasLasPreguntas[h][y].status < 2) {           
+                        console.log(todasLasPreguntas[h][y].pregunta);
+                        tuRespuesta = prompt('Cual és su respuesta?');
+                        if (tuRespuesta === null) {
+                            return salirPasapalabra(3);                            
+                        } else {  
+                            tuRespuesta = tuRespuesta.toLowerCase();
+                            if (tuRespuesta === todasLasPreguntas[h][y].respuesta) {
+                                todasLasPreguntas[h][y].status = 3;    // respuesta correcta y STATUS pasa a 3.
+                                console.log('CORRECTA!!!\n\n');                                                                                  
+                                letrasAcertadas.push(todasLasPreguntas[h][y].letra);                                       
+                            } else if (tuRespuesta === 'end') {         // END si el usuario quiera finalizar el juego.
+                                salirPasapalabra(1);
+                            } else if (tuRespuesta === 'pasapalabra') {     // PASAPALABRA si el usuario quiere saltar la letra y dejarla para la siguiente ronda.
+                                console.log('PASAPALABRA\n\n');                           
+                                todasLasPreguntas[h][y].status = todasLasPreguntas[h][y].status + 1;  // Status passa a 1.
+                            } else {
+                                console.log('NO ES CORRECTO.\n\nLa respuesta es: ' + todasLasPreguntas[h][y].respuesta +'\n\nPasamos a la siguiente letra!\n\n');       // respuesta incorrecta y STATUS pasa a 4.
+                                todasLasPreguntas[h][y].status = 4;    
+                                letrasError.push(todasLasPreguntas[h][y].letra);
+                            }                                                                        
+                        }        
+                    
+                    }
+                } 
+            } while (y < todasLasPreguntas[h].length);
+            for (y = 0; y < todasLasPreguntas[h].length; y++){
+                if (todasLasPreguntas[h][y].status < 2) {           
+                    console.log(todasLasPreguntas[h][y].pregunta);
+                    tuRespuesta = prompt('Cual és su respuesta?');
+                    if (tuRespuesta === null) {
+                        salirPasapalabra(3);                                    
+                        break; 
+                    } else {  
+                        tuRespuesta = tuRespuesta.toLowerCase();
+                        if (tuRespuesta === todasLasPreguntas[h][y].respuesta) {
+                            todasLasPreguntas[h][y].status = 3;    
+                            console.log('CORRECTA!!!\n\n');                                                                        
+                            letrasAcertadas.push(todasLasPreguntas[h][y].letra);                                       
+                        } else if (tuRespuesta === 'end') {         
+                            return salirPasapalabra(1);
+                        } else if (tuRespuesta === 'pasapalabra') {     // El usuario solo tiene 1 oportunidad de PASAPALABRA.
+                            console.log('PASAPALABRA\n\n');
+                            console.log('HA PERDIDO TODAS LAS OPCIONES DE RESPONDER ESTA PREGUNTA!!\n\n');
+                            console.log('La respuesta es: ' + todasLasPreguntas[h][y].respuesta +'\n\nPasamos a la siguiente letra pendiente de responder!\n\n');                           
+                            todasLasPreguntas[h][y].status = 4;
+                            letrasError.push(todasLasPreguntas[h][y].letra);                                 
+                        } else {
+                            console.log('NO ES CORRECTO.\n\nLa respuesta es: ' + todasLasPreguntas[h][y].respuesta +'\n\nPasamos a la siguiente letra!\n\n');      
+                            todasLasPreguntas[h][y].status = 4;    
+                            letrasError.push(todasLasPreguntas[h][y].letra);
+                        }                                                                        
+                    }                            
+                } 
+            };
+
+            salirPasapalabra(2);               
+                             
+        }   
+
+
+        function resultados() {
+            console.log('Letras ACERTADAS:\n' + letrasAcertadas + '\nTOTAL: ' + letrasAcertadas.length + '\n\n');
+            console.log('Letras FALLADAS:\n' + letrasError + '\nTOTAL: ' + letrasError.length + '\n\n');            
+            rankingTotal();
+    
+        }                                 
+
+        function rankingTotal() {
+            let j;
+            ranking.sort(function (a, b) {
+                if (a.puntos > b.puntos) {
+                    return -1;
+                }
+                if (a.puntos < b.puntos) {
+                    return 1;
+                }
+                return 0;
+                });
+            console.log('Este es el ranquing de puntos de todos los participantes:');
+            for (j = 0; j < ranking.length; j++) {
+                console.log(ranking[j]);
+                }
+        }
+                                           
+        function salirPasapalabra(y) {
+            let p = letrasAcertadas.length;
+            if (y === 1) {              // Salir del programa cuando el usuario ha escrito END.
+                console.log('\n\nHa salido de PASAPALABRA. Estos son sus resultados:\n');
+                resultados();
+                salirPasapalabra(3);
+            } else if (y === 2) {               // El usuario ha finalizado todas las preguntas.                
+                ranking.push({nombre: yourName, puntos: p});                
+                console.log('\n\nHa finalizado todas las letras. Estos son sus resultados:\n');
+                resultados();
+                salirPasapalabra(4);                                
+            } else if (y === 3) {
+                console.log('BYE!!');                
+            } else if (y === 4) {       // Pide si quiere jugar de nuevo.
+                var nuevaPartida = prompt('Quiere jugar otra partida?\nYES o NO.');
+                if (nuevaPartida === null) {
+                   salirPasapalabra(3);             
+                } else {
+                    nuevaPartida = nuevaPartida.toLowerCase();
+                    if (nuevaPartida === 'yes') {                        
+                        h++;
+                        statusReset();                        
+                    } else {
+                        salirPasapalabra(3);                                      
+                    }
+                }        
+            }
+        }
+                   
+        </script>
+    </body>
+</html>

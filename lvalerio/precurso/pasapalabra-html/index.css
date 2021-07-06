@@ -1,0 +1,128 @@
+/* 2021 - LLuc Valério */
+
+/* Browser Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri, sans-serif;
+}
+
+/* Pasapalabra - HTML Styles */
+header {
+    text-align: center;
+    padding: 2% 0%; 
+}
+
+nav {
+    padding: 2% 0% 0% 0%;
+}
+
+header button {
+    display: inline-block;
+    margin: 0% 2%;
+    font-size: 140%;
+}
+
+button {
+    width: 20%;
+    background-color: #555555;
+    cursor: pointer;
+    border-radius: 5%;
+    padding: 5px;
+    color: #fff;
+}
+
+.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+main {
+    display: flex;
+    height: 80vh;
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+}
+
+#circum {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    /* top: 0%; */
+    left: 32.5%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.letters {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3f77f0;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#question {
+    text-align: center;
+    width: 70%;
+}
+
+#answer {
+    text-align: center;
+    width: 40%;
+}
+
+#ranking {
+    visibility: hidden;
+    position: absolute;
+    top: 2%;
+    left: 30%;
+    margin: 0 auto;
+    width: 40%;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+th {
+    background-color: #555555;
+    color: #fff;
+}
+
+tr:first-child {
+    background-color: #4CAF50;
+}
+
+tr:last-child {
+    background-color: #f44336;
+}
+
+th, td {
+    width: 30%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+    caption-side: bottom;
+}
+
+footer {
+    margin-bottom: .5em;
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+    position: fixed;
+    right: 0;
+    bottom: 1%;
+    left: 0;
+}

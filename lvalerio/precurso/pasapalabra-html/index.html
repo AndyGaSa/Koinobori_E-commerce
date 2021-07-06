@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasapalabra - HTML</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Pasapalabra HTML</h1>
+        <nav>
+            <button id="rankButton" name="rankButton" type="button" onclick="showRanking()">Ver Ranking</button>
+            <button id="startButton" name="startButton" type="button" onclick="newUser()">Nueva Partida</button>
+            <button id="abortButton" name="abortButton" type="button" onclick="abortGame()">Finalizar Partida</button>
+        </nav>
+    </header>
+    <main id="main">
+        <section id="circum">
+            <div id="lett1" class="letters">A</div>
+            <div id="lett2" class="letters">B</div>
+            <div id="lett3" class="letters">C</div>
+            <div id="lett4" class="letters">D</div>
+            <div id="lett5" class="letters">E</div>
+            <div id="lett6" class="letters">F</div>
+            <div id="lett7" class="letters">G</div>
+            <div id="lett8" class="letters">H</div>
+            <div id="lett9" class="letters">I</div>
+            <div id="lett10" class="letters">J</div>
+            <div id="lett11" class="letters">K</div>
+            <div id="lett12" class="letters">L</div>
+            <div id="lett13" class="letters">M</div>
+            <div id="lett14" class="letters">N</div>
+            <div id="lett15" class="letters">Ñ</div>
+            <div id="lett16" class="letters">O</div>
+            <div id="lett17" class="letters">P</div>
+            <div id="lett18" class="letters">Q</div>
+            <div id="lett19" class="letters">R</div>
+            <div id="lett20" class="letters">S</div>
+            <div id="lett21" class="letters">T</div>
+            <div id="lett22" class="letters">U</div>
+            <div id="lett23" class="letters">V</div>
+            <div id="lett24" class="letters">W</div>
+            <div id="lett25" class="letters">X</div>
+            <div id="lett26" class="letters">Y</div>
+            <div id="lett27" class="letters">Z</div>
+            <div id="question"></div>
+            <div id="timer"></div>
+            <input type="text" name="answer" id="answer" placeholder="Anónimo">
+            <button id="nameButton" name="nameButton" type="button" onclick="prepareGame()">Empezar!</button>
+            <div id="rightAnswer"></div>
+        </section>
+        <section id="ranking">
+            <table id="rankTable">
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>2021 &copy; Lluc Valério</p>
+    </footer>
+</body>
+
+</html>
