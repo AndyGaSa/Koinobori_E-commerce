@@ -1,0 +1,594 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*:focus{
+    outline: none;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+/*Colores fondo de pantalla*/
+body{
+    background-color: rgb(220, 220, 220);
+    transition: background-color 0.5s;
+}
+.red-win {
+    background-color: rgb(220, 180, 180);
+}
+.yellow-win {
+    background-color: rgb(220, 220, 180);
+}
+
+/*Centrado y deshabilitado*/
+.center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0;
+}
+
+/*Botones*/
+.normal-button {
+    width: 100px;
+    height: 40px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px -4px rgb(100, 100, 100);
+}
+.normal-button:hover{
+    font-size: 20px;
+}
+.normal-button:active{
+    box-shadow: none;
+    font-size: 18px;
+    background-color: rgb(228, 228, 228);
+    transform: translateY(-4px) scale(0.95);
+}
+
+.small-button {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 50px;
+    height: 35px;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px -4px rgb(100, 100, 100);
+    transition: opacity 0.5s;
+}
+.small-button:hover{
+    font-size: 19px;
+}
+.small-button:active{
+    box-shadow: none;
+    font-size: 18px;
+    background-color: rgb(192, 192, 192);
+    transform: translateY(-4px) scale(0.95);
+}
+
+/*top bar*/
+#up-bar {
+    position: relative;
+    height: 40px;
+    overflow: hidden;
+    min-width: 800px;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+#author {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+/*Todo lo demás*/
+#all {
+    min-height: 680px;
+    min-width: 1000px;
+    position: relative;
+}
+
+/*Home screen*/
+#main {
+    position: relative;
+    top: 0px;
+    text-align: center;
+    min-width: 800px;
+    height: 525px;
+    width: 100%;
+    transition: transform 1s,
+                opacity 1s;
+}
+/*Cuando el juego esta activo desaparece home screen*/
+.game-on {
+    transform: translateY(-500px);
+    pointer-events: none;
+    opacity: 0;
+}
+#title{
+    top: 15px;
+    width: 620px;
+    height: 180px;
+    background-color: black;
+    border-radius: 90px;
+    box-shadow: 0px 0px 10px black;
+}
+h1 {
+    width: 590px;
+    height: 150px;
+    font-size: 100px;
+    line-height: 150px;
+    font-weight: bold;
+    color: white;
+    margin: 9px 9px;
+    border: 6px solid white;
+    border-radius: 81px;
+}
+#title-token1 {
+    position: absolute;
+    right: -40px;
+    bottom: 0px;
+    transform: scale(0.8);
+}
+#title-token2 {
+    position: absolute;
+    right: 0px;
+    bottom: -40px;
+    transform: scale(0.8);
+}
+
+/*Selección de jugadores*/
+#game-selection-border {
+    margin-top: 20px;
+    height: auto;
+    width: 410px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px black;
+}
+#game-selection {
+    padding: 5px;
+    margin: 4px 4px;
+    height: auto;
+    width: 380px;
+    border-radius: 50px;
+    border: 6px solid black;
+}
+h2{
+    font-size: 22px;
+}
+
+#line{
+    height: 125px;
+    width: 2px;
+    background-color: grey;
+}
+
+#player-type-selector {
+    height: 200px;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Switch*/
+.switch {
+    position: relative;
+    top: -8px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 4px;
+    left: 8px;
+    right: 8px;
+    bottom: 4px;
+    transition: 0.4s;
+    border-radius: 34px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 18px;
+}
+.red-switch {
+    background-color: rgb(200, 0, 0);
+}
+.yellow-switch {
+    background-color: rgb(200, 209, 0);
+}
+.slider:before {
+position: absolute;
+content: "J";
+height: 18px;
+width: 18px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: grey;
+}
+input:checked + .slider:before {
+transform: translateX(18px);
+content: "M";
+}
+
+/*Input user-name*/
+.input-box {
+    position: relative;
+    top: 0px;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: opacity 0.25s;
+}
+
+/*Si el jugador es cpu*/
+.cpu-text {
+    position: relative;
+    top: -25px;
+    transition: opacity 0.25s;
+    font-size: 16px;
+    color: rgb(82, 82, 82);
+}
+#pvp {
+    position: relative;
+    top: -10px;
+    font-size: 14px;
+}
+
+/*Tablero*/
+#board-container {
+    bottom: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    min-width: 800px;
+    min-height: 720px;
+    transform: translate(-50%, 0%) scale(0.9);
+    transition: transform 1s;
+}
+#board {
+    position: relative;
+    width: 711px;
+    height: 720px;
+}
+/*Si el juego no esta activo*/
+.game-off {
+    transform: translate(-50%, 285px) scale(0.18) !important;
+    pointer-events: none;
+}
+/*Si el juego ha acabado*/
+.game-win {
+    transform: translate(-25%, 0%) scale(0.7) !important;
+}
+/*Inicio del juego marca de quien es el turno inicial*/
+#game-starting-border{
+    top: 200px;
+    margin-top: 20px;
+    height: auto;
+    width: 370px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px black;
+    z-index: 3;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+#game-starting {
+    font-size: 30px;
+    text-align: center;
+    padding: 5px;
+    margin: 4px 4px;
+    height: auto;
+    width: 340px;
+    border-radius: 50px;
+    border: 6px solid black;
+}
+
+/*Contenedor de las columnas*/
+#grid {
+    z-index: 2;
+    position: absolute;
+    top: 85px;
+    margin: 0;
+    padding: none;
+    width: 699px;
+    height: 599px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    border: 6px solid darkblue;
+    border-radius: 1%;
+}
+/*Columnas contienen los slots*/
+.column {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    margin: 0;
+    width: 100px;
+    height: 700px;
+}
+/*slots*/
+.slot {
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, transparent 35px, darkblue 37px, rgb(19, 121, 255) 38px, rgb(89, 89, 255) 42px, darkblue 44px, rgb(12, 0, 182) 45px, rgb(12, 0, 182)) center/100px;
+}
+/*slots con fichas*/
+.slot-red {
+    background: radial-gradient(circle,  red 30px, darkred 36px,  darkblue 37px, rgb(19, 121, 255) 38px, rgb(89, 89, 255) 42px, darkblue 44px, rgb(12, 0, 182) 45px, rgb(12, 0, 182)) center/100px;
+}
+.slot-yellow {
+    background: radial-gradient(circle,  yellow 30px, rgb(214, 164, 0) 36px, darkblue 37px, rgb(19, 121, 255) 38px, rgb(89, 89, 255) 42px, darkblue 44px, rgb(12, 0, 182) 45px, rgb(12, 0, 182)) center/100px;
+}
+.slot-red-win {
+    background: radial-gradient(circle,  red 30px, darkred 36px,  darkorange 37px, gold 38px, gold 42px, darkorange 44px, rgb(12, 0, 182) 45px, rgb(12, 0, 182)) center/100px;
+}
+.slot-yellow-win {
+    background: radial-gradient(circle,  yellow 30px, rgb(214, 164, 0) 36px, darkorange 37px, gold 38px, gold 42px, darkorange 44px, rgb(12, 0, 182) 45px, rgb(12, 0, 182)) center/100px;
+}
+
+/*efecto 3d del tablero*/
+#d-effect {
+    z-index: 0;
+    position: absolute;
+    top: 75px;
+    margin: 0;
+    padding: none;
+    width: 699px;
+    height: 597px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border: 6px solid rgb(0, 0, 90);
+    border-radius: 1%;
+}
+.slotB {
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, transparent 33px, rgb(0, 0, 60) 37px, rgb(0, 0, 60) 40px, rgb(0, 0, 60) 45px, rgb(0, 0, 60)) center/100px;
+    border-radius: 1%;
+}
+
+/*pie del tablero*/
+#foot{
+    z-index: 3;
+    position: absolute;
+    bottom: 0px;
+    border-bottom: 30px solid rgb(0, 0, 100);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-radius: 10px;
+    left: -50px;
+    height: 0px;
+    width: 710px;
+}
+/*Suelo*/
+#floor {
+    position: absolute;
+    bottom: -50px;
+    left: -100px;
+    width: 900px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(199, 199, 199, 0.75);
+    box-shadow: -2px -2px 10px rgb(199, 199, 199);
+    z-index: -1;
+}
+
+/*Fila que contiene las fichas*/
+#token-row {
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    margin: 0px 6px;
+    padding: none;
+    width: 699px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*fichas*/
+.token-choose {
+    margin: 0;
+    width: 100px;
+    height: 100px;
+}
+.active-red{
+    background: radial-gradient(circle, red 30px, darkred 36px, red 37px, red 42px, transparent 44px, transparent) center/100px;
+}
+.active-yellow{
+    background: radial-gradient(circle, yellow 30px, rgb(214, 164, 0) 36px, yellow 37px, yellow 42px, transparent 44px, transparent) center/100px;
+}
+
+/*Contenedor de timer, turno, botones salir reiniciar*/
+#hud {
+    position: relative;
+    min-width: 950px;
+    height: 400px;
+    top: 325px;
+    transition: opacity 0.5s;
+}
+/*Timer y contador de turnos*/
+#timer-turn-border {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: auto;
+    width: 200px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px black;
+}
+#timer-turn {
+    padding: 5px;
+    margin: 4px 4px;
+    height: auto;
+    width: 170px;
+    border-radius: 30px;
+    border: 6px solid black;
+    text-align: center;
+}
+#timer {
+    font-size: 35px;
+    font-weight: bold;
+}
+#turn{
+    font-size: 20px;
+}
+
+/*Quien le toca tirar*/
+#token-turn-border {
+    position: absolute;
+    right: 0px;
+    bottom: 100px;
+    margin-top: 20px;
+    height: auto;
+    width: 200px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px black;
+}
+#token-turn {
+    padding: 5px;
+    margin: 4px 4px;
+    height: auto;
+    width: 170px;
+    border-radius: 30px;
+    border: 6px solid black;
+    text-align: center;
+}
+#who-turn {
+    font-size: 18px;
+    margin: 5px 0px;
+    font-weight: bold;
+}
+
+/*Boton salida reinicio*/
+#exit-button {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+#reset-button {
+    position: absolute;
+    bottom: 50px;
+    right: 0px;
+}
+#reset-button:active,
+#exit-button:active{
+    background-color: rgb(192, 192, 192);
+}
+
+/*pop-up para informacion salir reiniciar*/
+#pop-up{
+    position: relative;
+    overflow: hidden;
+    top: -720px;
+    min-height: 720px;
+    height: 100%;
+    min-width: 800px;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.25s;
+}
+#pop-up-in-border{
+    top: 200px;
+    margin-top: 20px;
+    height: auto;
+    width: 370px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px black;
+    z-index: 3;
+    transition: opacity 0.5s;
+}
+#pop-up-in {
+    font-size: 30px;
+    text-align: center;
+    padding: 5px;
+    margin: 4px 4px;
+    height: auto;
+    width: 340px;
+    border-radius: 50px;
+    border: 6px solid black;
+}
+h4{
+    font-size: 30px;
+}
+p{
+    font-size: 20px;
+}
+
+/*Contedor de resumen final de juego*/
+#end-game-hud {
+    position: absolute;
+    top: 50px;
+    left: -600px;
+    width: 500px;
+    height: 700px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px black;
+    transition: opacity 0.5s;
+}
+#end-game {
+    text-align: center;
+    padding: 8px 4px;
+    margin: 4px 4px;
+    height: 662px;
+    width: 470px;
+    border-radius: 50px;
+    border: 6px solid black;
+}
+#who-won {
+    margin-top: 20px;
+    font-size: 35px;
+}
+#win-info {
+    margin-top: 55px;
+    font-size: 25px;
+}
+#win-home-button,
+#win-play-button {
+    margin: 30px;
+    position: relative;
+    top: 80px;
+}

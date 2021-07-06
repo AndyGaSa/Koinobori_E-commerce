@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bingo</title>
+        <meta content="text/html; charset=utf-8" />
+    </head>
+    
+    <body>
+        <script> // BINGO PRO       
+        let yourName;
+        const ranking = [];       
+        let puntos;
+        const bolas = 49;  // Variable donde le indicamos el numero total de bolas que hay en el bombo.
+        let z; 
+        let carton = []; 
+        let listadoNumeros = []; // ARRAY para almacenar los numero aleatorios que salen para configurar el carton e ir comparandolos para que no se repitan.
+        let numerosBombo = [];  // ARRAY para ir almacenando los numeros del bombo que ya han salido y poderlos comparar para que no se repitan.
+        let numeroBola;     // El numero aleatorio que sale del bombo y que se compara con el array anterior.
+        let lineas = [[], [], []]; // ARRAY para contabilizar los numeros que tenemos tachados en cada linea. 
+        let linea;  //Es el contador de lineas completadas.
+           
+
+        introNombre();
+
+        function introNombre() {
+            yourName = prompt('Bienvenido al BINGO!' + '\n' + 'Introduzca su nombre por favor:');
+            if (yourName === null) {
+                salirBingo(1);
+            } else {
+                console.log('Bienvenido ' + yourName +'!\n\nVan a salir 50 Bolas del Bombo.\n\nLe informamos que cuantos mas turnos necesite para comnpletar su carton menos puntos va a recibir.\n\nCuando complete la PRIMERA LINEA se le van a dar 10 PUNTOS EXTRA.');                
+                console.log('\n\nEMPEZAMOS EL JUEGO!!');
+                console.log('\nESTOS SON SUS NUMEROS:\n');
+                z = 0;
+                linea = 0;
+                lineas = [[0], [0], [0]];
+                numerosBombo = [];
+                listadoNumeros = [];
+                genCarton();               
+            }                
+        };        
+          
+        function genCarton() {                 
+            carton = [[], [], []];            
+            for (let e = 0; e < 3; e++) {
+                if (e < 3) { 
+                    for (let i = 0; i <= 4; i++) {                    
+                        var newNumber = Math.floor((Math.random() * 50) + 1);  // Aqui elegimos el numero limite para generar los numero aleatorios para el carton.
+                        if (listadoNumeros.includes(newNumber)){
+                            i--;
+                        } else {                      
+                            listadoNumeros.push(newNumber);                                              
+                            carton[e].push({number: newNumber});
+                        }        
+                    };
+                }    
+                console.log(carton[e][0].number, carton[e][1].number, carton[e][2].number, carton[e][3].number, carton[e][4].number); 
+            }
+            cambioCarton();
+        };                    
+
+        function cambioCarton() {            
+            let newCarton = prompt('Le gustan estos numeros?\nDiga YES o pulse ACEPTAR para empezar la partida.\nDiga NO para generar otro carton.\nO seleccione CANCELAR para salir.');
+            if (newCarton === null) {
+                salirBingo(1);           
+            } else {
+                newCarton = newCarton.toLowerCase();
+                if (newCarton !== 'yes' && newCarton !== 'no') {
+                   return mensajeError();
+                } else if (newCarton === 'yes' || newCarton === "") {
+                    console.log('EMPEZAMOS EL JUEGO!\nESTE ES EL PRIMER NUMERO:');                         
+                    sacarNumero();                                                
+                } else if (newCarton === 'no') {
+                    listadoNumeros.splice(0);
+                    carton.splice();
+                    console.log('ESTOS SON LOS NUEVOS NUMEROS:')
+                    genCarton();                
+                } else {
+                    salirBingo(1);
+                }
+            }                       
+        }; 
+        
+        function mensajeError () {
+            console.log('LO SENTIMOS, NO ENTENDEMOS SU RESPUESTA!');
+            return cambioCarton();
+        }
+                           
+        function sacarNumero() {
+            if (linea !== 3) {                
+                if (z <= bolas) {
+                    numeroBola = Math.floor((Math.random() * 50) + 1);
+                    if (numerosBombo.includes(numeroBola)) {
+                        sacarNumero();                            
+                    } else {                      
+                        numerosBombo.push(numeroBola);
+                        console.log(numeroBola);                            
+                        z++;
+                        compararNumeros();                     
+                    }    
+                } else {
+                    salirBingo(2);    
+                }
+            } else { return; }     
+        };              
+
+        function compararNumeros() {                                           
+            for (let j = 0; j < carton.length; j++) {   // J se posiciona en el array que representa cada liena del carton.
+                if (linea !== 3) { 
+                for (let p = 0; p < 5; p++) {           // P se posiciona en el numero dentro de la linea.
+                    if (carton[j][p].number === numeroBola) {
+                        carton[j][p].number.toString;
+                        carton[j][p].number = "X";
+                        lineas[j]++;                                                                                                
+                        if (lineas[j] === 5) {      // Preguntamos si los 5 numeros de la linea estan marcados.
+                            linea = linea + 1;      // Sumamos una linia completada.                         
+                            if (linea === 1) {
+                                console.log('LINEAAAA!!! Obtiene 10 PUNTOS EXTRA!');
+                                return imprimeCarton();                                                                                
+                            } else if (linea === 3) {   // Aqui preguntamos si las 3 lienas estan completadas.      
+                                console.log('BINGOOOOOO!!!!');                                                                   
+                                return salirBingo(3);                                                                                                                                                                                  
+                            }                   
+                        } else { 
+                            return imprimeCarton();
+                        }
+                    }
+                }
+                } else {return}                    
+            }            
+            return siguienteTurno();                                   
+        };               
+
+        function imprimeCarton() {
+            console.log('Su carton:');
+            for (let m = 0; m < carton.length; m++) {
+                console.log(carton[m][0].number, carton[m][1].number, carton[m][2].number, carton[m][3].number, carton[m][4].number);
+            }
+            siguienteTurno();                            
+        };
+                
+        function siguienteTurno() {            
+            if (linea === 3) {
+                return salirBingo(1);  
+            } else {
+                let confirmacion = confirm("Quiere sacar la siguiente bola?")                                                          
+                if (confirmacion === true) {
+                    return sacarNumero();                        
+                } else {
+                    return salirBingo(1);
+                }                                                                 
+            }  
+        };                          
+        
+        function rankingTotal() {            
+            ranking.sort(function (a, b) {
+                if (a.puntuacion > b.puntuacion) {
+                    return -1;
+                }
+                if (a.puntuacion < b.puntuacion) {
+                    return 1;
+                }
+                return 0;
+                });
+            console.log('Este es el ranquing de puntos de todos los participantes:');
+            for (let h = 0; h < ranking.length; h++) {
+                console.log(ranking[h]);
+            };
+            
+        };                
+        
+        function salirBingo(y) {            
+            if (y === 1) {                                               
+                console.log('Ha salido del Bingo. BYE!');                                          
+            } else if (y === 2) {
+                puntos = z - bolas;
+                console.log('Han finalizado los turnos! Compruebe su puntuación.');
+                ranking.push({nombre: yourName, puntuacion: puntos});
+                rankingTotal();
+                salirBingo(4);                
+            } else if (y === 3) {
+                puntos = bolas - z + 10;
+                console.log('FELICIDADES HAS HECHO BINGO ' + yourName + '!!\n\nHas conseguido ' + puntos + ' puntos!\n\n');
+                ranking.push({nombre: yourName, puntuacion: puntos});
+                rankingTotal();
+                salirBingo(4);
+            } else if (y === 4) {                
+                let nuevaPartida = prompt('Quiere jugar otra partida?\nYES (o presione Aceptar) o NO (o presione Cacelar).');
+                if (nuevaPartida === null) {
+                    return salirBingo(1); 
+                } else {
+                    nuevaPartida = nuevaPartida.toLowerCase();
+                    if (nuevaPartida === 'yes' || nuevaPartida === "") {
+                        return kjfadfsaintroNombre();
+                    } else if (nuevaPartida === 'no' || nuevaPartida === null) {
+                        return salirBingo(1);                                      
+                    }
+                }            
+            } else {
+                return salirBingo(1);
+            }                           
+        };                   
+        </script>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+/* 2021 - LLuc Valério */
+/* Browser Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri, sans-serif;
+}
+
+/* Calculator - HTML Styles */
+
+header {
+    text-align: center;
+    position: fixed;
+    right: 0;
+    top: 3%;
+    left: 0;
+  }
+
+section {
+    position: fixed;
+    right: 0;
+    top: 15%;
+    left: 0;
+    width: 40%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: #9c9c9c;     */
+    background-color: #2b3244;    
+}
+
+.double, .operation, .number, .top {
+    display: flex;
+    /* height: auto; */
+    /* height: 16.6%; */
+}
+
+.double, .operation, .number {
+    align-items:center;
+    font-size: 150%;
+    color: #000;
+    cursor: pointer;
+    border: 1px solid #9c9c9c;
+}
+
+.operation, .number {
+    justify-content: center;
+    width: 25%;
+}
+
+.double, .number {
+    background-color: #dddddd;    
+}
+
+.top {
+    background-color: #2b3244;
+    color: #fff;    
+    width: 100%;
+    align-items:flex-end;
+    justify-content: flex-end;
+    border: 1px solid #2b3244;
+    padding: 0 5% 1% 5%;
+}
+
+/* #historic {
+    height: 10%;
+} */
+
+#displayCell {
+    font-size: 600%;
+    /* height: 60%; */
+}
+
+.double {
+    justify-content: left;
+    padding: 0 0 0 12%;
+    width: 50%;
+}
+
+.operation {
+    background-color: #f08e33;
+}
+
+.double:active, .number:active, .operation:active {
+    opacity: 0.5;
+    background-color: rgb(236, 215, 26);
+}
+
+.double:hover, .number:hover, .operation:hover {
+    opacity: 0.5;
+}
+
+footer {
+    margin-bottom: .5em;
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+    position: fixed;
+    right: 0;
+    bottom: 1%;
+    left: 0;
+  }

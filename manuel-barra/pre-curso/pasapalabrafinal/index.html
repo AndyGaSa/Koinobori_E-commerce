@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="./pasapalabrasss.js" defer></script>
+    <title>pasapalabra</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="header_box" class="header_box">
+            <h1 id="h1-title" class="h1-title">
+                Pasapalabra <span class="h1-title">Hip-Hop edition</span>
+            </h1>
+        </header>
+        <main id="main_box" class="main_box">
+            <section id="section_circle" class="section_circle">
+                <div id="circle_box" class="circle_box">
+                    <ul id="circle_list" class="circle_list">
+                        <li id="A" class="item-list A">A</li>
+                        <li id="B" class="item-list B">B</li>
+                        <li id="C" class="item-list C">C</li>
+                        <li id="D" class="item-list">D</li>
+                        <li id="E" class="item-list">E</li>
+                        <li id="F" class="item-list">F</li>
+                        <li id="G" class="item-list">G</li>
+                        <li id="H" class="item-list">H</li>
+                        <li id="I" class="item-list">I</li>
+                        <li id="J" class="item-list">G</li>
+                        <li id="K" class="item-list">K</li>
+                        <li id="L" class="item-list">L</li>
+                        <li id="M" class="item-list">M</li>
+                        <li id="N" class="item-list">N</li>
+                        <li id="O" class="item-list">O</li>
+                        <li id="P" class="item-list">P</li>
+                        <li id="Q" class="item-list">Q</li>
+                        <li id="R" class="item-list">R</li>
+                        <li id="S" class="item-list">S</li>
+                        <li id="T" class="item-list">T</li>
+                        <li id="U" class="item-list">U</li>
+                        <li id="V" class="item-list">V</li>
+                        <li id="W" class="item-list">W</li>
+                        <li id="X" class="item-list">X</li>
+                        <li id="Y" class="item-list">Y</li>
+                        <li id="Z" class="item-list">Z</li>
+                    </ul>
+                    <img src="./abeja.png" alt="abeja" class="greatBee" id='bee'>
+                    <div id='the_letter' class="the_letter">
+                        <p class="big-letter-texto">
+                            Con la letra
+                        </p>
+                        <p id='big_letter_item' class="big_letter_item">A</p>
+                    </div>
+                </div>
+            </section>
+            <section id='section_controls' class="section_controls">
+                <a id="close-x" href="#" class="close_x 2x"><span class="material-icons-outlined">close</span></a>
+                <div id="start_game" class="start_game">
+                    <p class="text_inicio">
+                        Esta es la edición Hip-Hop de Pasapalabra, en este juego encontraras muchas de las canciones preferidas de la epoca dorada del Hip-Hop.
+                    </p>
+                    <p class="text_inicio">
+                        Deberas indicar ¿a quien pertece la canción?, que muestra el enunciado.
+                    </p>
+                    <p class="text_inicio">
+                        Esta lista de canciones responde a un gusto personal y no pretende más que recordar algunas las canciones favoritas de antaño.
+                    </p>
+                    Ingresa tu Tag antes de iniciar
+                    <form action="" id="formStart">
+                        <input type="text" id="nameText" class="input_Name_class" placeholder="TAG" autocomplete='off'>
+                        <input class="boton_malb" type="submit" id="submitButton" value="Iniciar Partida">
+                    </form>
+
+
+                </div>
+                <div id='pasapalabra_game' class="pasapalabra_game">
+                    <p class="ask" id='ask'></p>
+                    <p class="comentario"></p>
+
+                    <form action="#" id="formGame">
+                        <input id="user-answer" class="user-answer input_Name_class" type="text" placeholder="Introduce tu respuesta" autocomplete='off' />
+                        <input id="send" class="btn boton_malb" href="#" value="Responder" type="submit">
+                        <input id="pasapalabra" class="btn boton_malb" href="#" type="button" value="Pasapalabra">
+                    </form>
+
+
+
+
+                    <div id="timer_points_fails" class="timer_points_fails">
+                        <div id="timer_points" class="timer_points">
+                            <p id="timer" class="timer">180</p>
+                            <p id="points" class="points">0</p>
+                        </div>
+                        <div id="fails_box" class="fails_box">
+                            <p id="fails" class="fails">Palabras falladas: <span class="fails_words" id="fails_words">0</span></p>
+                            <p class="remaining">Palabras restantes: <span class="rest_words" id="remaining">26</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="resume_game" class="resume_game">
+                    <p id="end_title" class="end_title">Felicitaciones has terminado el Juego</p>
+                    <p id="results" class="results">Has conseguido <span id="points_result">40</span>puntos</p>
+                    <p id="results-text" class="results">¡El Hip-Hop sigue vivo!</p>
+                    <a id="try_again" class="try_again" href="">Jugar de nuevo</a>
+                </div>
+            </section>
+
+        </main>
+        <footer id="footer-box" class="footer-box">
+            <h3 id="h3-title">
+                por MALB para Skylab Academy
+            </h3>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Pro Skylab</title>
+</head>
+<body>
+
+    <h1><input id="titulo" type="button" value="Calculadora SkyLab" onclick="changeColor()"></h1>
+
+    <div class="calculadora">
+        <input id="screen-result" type="text" value=" ">
+        <input class="btn" id="AC" type="button" value="AC" onclick="clean()">
+        <input class="btn" type="button" value="R" onclick="R()">
+        <input class="btn op" type="button" value="/" onclick="getOp(this)">
+        <input class="btn" type="button" value="7" onclick="getNumber(this)">
+        <input class="btn" type="button" value="8" onclick="getNumber(this)">
+        <input class="btn" type="button" value="9" onclick="getNumber(this)">
+        <input class="btn op" type="button" value="*" onclick="getOp(this)">
+        <input class="btn" type="button" value="4" onclick="getNumber(this)">
+        <input class="btn" type="button" value="5" onclick="getNumber(this)">
+        <input class="btn" type="button" value="6" onclick="getNumber(this)">
+        <input class="btn op" type="button" value="-" onclick="getOp(this)">
+        <input class="btn" type="button" value="1" onclick="getNumber(this)">
+        <input class="btn" type="button" value="2" onclick="getNumber(this)">
+        <input class="btn" type="button" value="3" onclick="getNumber(this)">
+        <input class="btn op" type="button" value="+" onclick="getOp(this)">
+        <input class="btn" id="cero" type="button" value="0" onclick="getNumber(this)">
+        <input class="btn" type="button" value="." onclick="getOp(this)">
+        <input class="btn op" type="button" value="=" onclick="calculate()">
+    </div>
+    
+    <script src="calculadora.js"></script>
+</body>
+</html>

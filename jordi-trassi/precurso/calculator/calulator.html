@@ -1,0 +1,73 @@
+// CALCULATOR 
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculadora</title>
+        <meta content="text/html; charset=utf-8" />
+    </head>
+    
+    <body>
+        <script>        
+            console.log('\n' + 'Bienvenido a la Calculadora!' + '\n');
+
+            var num1;
+            var num2;
+            var resultados = [];
+
+            function introN1() {
+                num1 = prompt('Introduce el primer número:');
+                num1 = parseFloat(num1);
+                    if (isNaN (num1)) {
+                        console.log('VALOR INCORRECTO, Adios!');
+                    } else {
+                        introN2();
+                    }
+            }
+            
+            function introN2() {
+                num2 = prompt('Introduce el segundo número:')
+                num2 = parseFloat(num2);
+                if (isNaN (num2)) {
+                    raizQ(num1);
+                } else {
+                    calculadora(num1, num2);
+                    }
+
+            }
+   
+            function calculadora(num1, num2) {
+                let suma = num1 + num2;
+                resultados.push('Suma: ' + suma);
+                console.log('\n' + 'La suma es: ' + suma);
+    
+                let resta = num1 - num2;
+                resultados.push('Resta: ' + resta);
+                console.log('\n' + 'La resta es: ' + resta);
+
+                let multi = num1 * num2;
+                resultados.push('Multiplicacion: ' + multi);
+                console.log('\n' + 'La multiplicación es: ' + multi);
+    
+                let divi = num1 / num2;
+                divi = divi.toFixed(3);
+                resultados.push('Division: ' + divi);
+                console.log('\n' + 'La división es: ' + divi + '\n');
+    
+            }
+
+            function raizQ(num1) {
+                let raiz = Math.sqrt(num1);
+                raiz = raiz.toFixed(3);
+                console.log('\n' + 'La raiz cuadrada es: ' + raiz + '\n');
+                resultados.push('La raiz cuadrada es: ' + raiz);
+                
+            }
+
+            introN1();
+            console.log(resultados);
+
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="bloque-principal">
+        <div class="titulo">Pasapalabra</div>
+        <div class="bloque-letras">
+            <span class="letra" id="a">A</span>
+            <span class="letra" id="b">B</span>
+            <span class="letra" id="c">C</span>
+            <span class="letra" id="d">D</span>
+            <span class="letra" id="e">E</span>
+            <span class="letra" id="f">F</span>
+            <span class="letra" id="g">G</span>
+            <span class="letra" id="h">H</span>
+            <span class="letra" id="i">I</span>
+            <span class="letra" id="j">J</span>
+            <span class="letra" id="k">K</span>
+            <span class="letra" id="l">L</span>
+            <span class="letra" id="m">M</span>
+            <span class="letra" id="n">N</span>
+            <span class="letra" id="ñ">Ñ</span>
+            <span class="letra" id="o">O</span>
+            <span class="letra" id="p">P</span>
+            <span class="letra" id="q">Q</span>
+            <span class="letra" id="r">R</span>
+            <span class="letra" id="s">S</span>
+            <span class="letra" id="t">T</span>
+            <span class="letra" id="u">U</span>
+            <span class="letra" id="v">V</span>
+            <span class="letra" id="w">W</span>
+            <span class="letra" id="x">X</span>
+            <span class="letra" id="y">Y</span>
+            <span class="letra" id="z">Z</span>
+        </div>
+        <div class="bloque-preguntas">
+            <div class="pregunta"></div>
+            <div class="resumenAciertos"></div>
+            <div id="contdown">Cuenta Atras: 600</div>
+            <div class="botones-usuario">
+                <form class="respuesta">
+                    <input id="respuestaUser" type="text" placeholder="Escrive tu respuesta">
+                    <input id="OK" type="button" value="OK" onclick="checkAnswer()">
+                    <input id="pasa" type="button" value="PASAPALABRA" onclick="nextWord()">
+                    <input id="stop" type="button" value="STOP" onclick="stopa()">
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="game.js"></script>
+</body>
+</html>

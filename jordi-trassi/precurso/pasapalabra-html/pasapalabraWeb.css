@@ -1,0 +1,208 @@
+header {
+  background-color: white;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  text-shadow: 3px 2px 3px rgb(155, 152, 152);
+}
+
+body {
+  background-color: rgb(72, 156, 212);
+  text-align: center;
+  font-family: Helvetica, sans-serif;  
+}
+
+#principal {    /* div que engloba toda la parte central: rosco, presentacion, nombre, pregunta y crono*/
+  height: 550px; 
+  width: 100%;
+  margin: 0 auto; 
+}
+
+#rosco {    /*div del rosco de letras*/
+  width: 55%;
+  float: left;
+  padding: 5px;  
+}
+
+#rosco2 {   /* div global al lado del rosco*/
+  width: 35%;
+  float: left;
+  padding: 5px;
+}
+
+#texto {    /* Texto inicial de presentacion */  
+  float: left;
+  color: white;
+  padding: 5px;
+  visibility: visible;   /* primero visualizamos el texto de presentacion con el boton para empezar la partida */
+}
+
+#preguntas {
+  width: 100%;
+  float: left;
+  color: white;
+  padding: 5px;
+  margin-top: 25px;
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 7px 4px 5px rgb(56, 55, 55);
+  visibility: hidden;  /* Cuando empieza la partida escondemos el div TEXTO y mostramos del div PREGUNTAS*/
+}
+
+#aviso {
+  width: 100%;
+  float: left;
+  color: rgb(243, 8, 8);
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 3px 2px 3px rgb(56, 55, 55);
+  visibility: hidden;  /* Mostramos el div aviso cuando es la ultima ronda de preguntas*/
+}
+
+#finPartida {
+  width: 100%;
+  float: left;
+  color: rgb(243, 8, 8);
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
+  text-shadow: 7px 4px 5px rgb(56, 55, 55);
+  font-size: 70px;
+  display: none;  /* Mostramos el div aviso cuando es la ultima ronda de preguntas*/
+}
+
+
+.play {               /*Boton para empezar la partida*/
+  font-family: Helvetica, sans-serif;
+  font-size: 25px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.play:hover {       /* Accion del mouse cuando pasamos por encima de los botones */
+  background-color:  rgb(72, 156, 212);
+  color: white;
+  cursor: pointer;
+}
+
+#azul {     /*aquí dejamos el rosco AZUL de fondo y luego ponemos el rojo o verde encima*/
+  z-index: -1;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+}
+
+.verde {      /*clase para las letras en verde */
+  z-index: 1;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  visibility: hidden; /*las letras en verde estan ocultas*/  
+}
+
+.roja {      /*clase para las letras en rojo */
+  z-index: 1;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  visibility: hidden; /*las letras en rojo estan ocultas y aparecen cuando el participante falla o no constesta la pregunta */  
+}
+
+#crono {
+  z-index: 1;  
+  font-size: 90px;
+  font-family: Helvetica, sans-serif;  
+  top: 125px;
+  left: -110px;
+  visibility: hidden;  
+}
+
+#nombre {         /* nombre del participante */
+  width: 100%;
+  background-color: white;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: black;  
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  float: left;  
+  padding: 5px;
+  visibility: hidden;
+  color:rgb(136, 10, 10);
+  font-size: 40px; 
+}
+
+#controles {      /* div con los controles para el participante */
+  width: 99%;
+  background-color: white;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  visibility: hidden;         /*aqui escondemos el div con los controles para el concursante*/
+  float: left;
+}
+
+#respuesta {         /* input donde el participante introduce la respuesta */
+  font-family: Helvetica, sans-serif;
+  font-size: 25px;
+  width: 300px;
+  height: 35px;  
+}
+
+#crono {          /* Crono que aparece en el centro del rosco cuando empieza el juego */
+  color: white;
+  margin-top: 210px;
+  margin-left: 330px;
+  position: fixed;
+  visibility: hidden;
+}
+
+#ranquing {
+  width: 99%;
+  margin-top: 20px;
+  background-color: white;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  visibility: visible;         
+  float: left;
+}
+
+#puntuacion h2 {
+  display: inline;
+}
+
+#acertadas {
+  color: green;
+  margin-right: 30px;
+}
+
+#falladas {
+  color: red;
+}
+
+#listado {
+  background-color: white;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  text-shadow: 3px 2px 3px rgb(155, 152, 152);
+}
+
+#listadoJugadores {
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 30px;
+  color:rgb(56, 55, 55);
+}
+
