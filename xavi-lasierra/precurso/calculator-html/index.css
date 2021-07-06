@@ -1,0 +1,93 @@
+* {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+body{
+    background-color: rgb(208, 212, 212);
+}
+
+div {
+    text-align: center;
+}
+
+table {
+    text-align: center;
+    margin: auto;
+    border: 3px solid rgb(71, 71, 71);
+    border-radius:6px;
+    border-collapse:separate;
+    border-spacing: 0;
+    box-shadow: 4px 4px 2px grey;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+}
+
+.resultBox {
+    background-color: darkslategrey;
+    color: white;
+}
+
+.number {
+    background-color: rgb(199, 199, 199);
+    color: rgb(15, 14, 14);
+    border: 1px solid rgb(177, 177, 177);
+}
+
+.number:hover {
+    background-color: rgb(136, 136, 136);
+    font-size: 26px;
+}
+
+.number:active {
+    background-color: rgb(90, 90, 90);
+    font-size: 23px;
+}
+
+.symbol {
+    background-color: orange;
+    color: white;
+    border: 1px solid rgb(216, 141, 3);
+}
+
+.symbol:hover{
+    background-color: rgb(207, 135, 2);
+    font-size: 26px;
+}
+
+.symbol:active{
+    background-color: rgb(161, 105, 0);
+    font-size: 23px;
+}
+
+#calculator{
+    padding-top: 50px;
+}
+
+#operation {
+    height: 25px; 
+    font-size: 10px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#error {
+    height: 10px;
+    font-size: 8px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#result {
+    font-size: 35px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#ac,
+#n0{
+    padding-right: 50px;
+}
