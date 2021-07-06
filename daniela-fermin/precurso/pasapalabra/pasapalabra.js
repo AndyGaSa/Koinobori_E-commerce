@@ -200,11 +200,6 @@ do {
             printranking()
             played = 28
             break
-        } else {
-            alert('¡Incorrecto! La respuesta correcta es: ' + wheel[i].answer)
-            wheel[i].status = 2
-            incorrect++
-            played++
         }
 
     }
