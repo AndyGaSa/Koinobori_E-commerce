@@ -1,0 +1,369 @@
+/**
+**  PASAPALABRA HTML 
+**  Estilos Css
+**
+**
+**/
+
+
+/*------> Estilos Generales <-------*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-image: url('HIPHOP.webp');
+    background-size: 100%;
+    background-color: rgba(10, 10, 10, 0.938);
+    background-blend-mode: screen, lighten, saturation;
+}
+
+#wrapper {
+    height: 100vh;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.89);
+}
+
+
+/*---------> HEADER <--------*/
+
+.header_box {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(219, 219, 28, 0.932);
+}
+
+
+/*----------> Main <-------*/
+
+.pasapalabra_game,
+.resume_game {
+    display: none;
+}
+
+
+/*------->  circle  <--------*/
+
+.main_box {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 75%;
+}
+
+.section_circle {
+    flex-basis: 50%;
+}
+
+.section_controls {
+    flex-basis: 50%;
+    color: darkblue;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.greatBee {
+    position: absolute;
+    bottom: 35%;
+    left: 16%;
+    width: 20em;
+}
+
+.circle_list {
+    height: 35em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-list {
+    position: absolute;
+    border: 3px solid rgba(180, 12, 158, 0.856);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F7BC0D;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.item-list:nth-child(1) {
+    transform: rotate(0deg) translateY(-15em) rotate(0deg);
+}
+
+.item-list:nth-child(2) {
+    transform: rotate(13.85deg) translateY(-15em) rotate(-13.85deg);
+}
+
+.item-list:nth-child(3) {
+    transform: rotate(27.7deg) translateY(-15em) rotate(-27.7deg);
+}
+
+.item-list:nth-child(4) {
+    transform: rotate(41.55deg) translateY(-15em) rotate(-41.55deg);
+}
+
+.item-list:nth-child(5) {
+    transform: rotate(54.4deg) translateY(-15em) rotate(-54.4deg);
+}
+
+.item-list:nth-child(6) {
+    transform: rotate(69.25deg) translateY(-15em) rotate(-69.25deg);
+}
+
+.item-list:nth-child(7) {
+    transform: rotate(83.1deg) translateY(-15em) rotate(-83.1deg);
+}
+
+.item-list:nth-child(8) {
+    transform: rotate(96.85deg) translateY(-15em) rotate(-96.85deg);
+}
+
+.item-list:nth-child(9) {
+    transform: rotate(110.7deg) translateY(-15em) rotate(-110.7deg);
+}
+
+.item-list:nth-child(10) {
+    transform: rotate(124.55deg) translateY(-15em) rotate(-124.55deg);
+}
+
+.item-list:nth-child(11) {
+    transform: rotate(138.4deg) translateY(-15em) rotate(-138.4deg);
+}
+
+.item-list:nth-child(12) {
+    transform: rotate(152.25deg) translateY(-15em) rotate(-152.25deg);
+}
+
+.item-list:nth-child(13) {
+    transform: rotate(166.1deg) translateY(-15em) rotate(-166.1deg);
+}
+
+.item-list:nth-child(14) {
+    transform: rotate(179.95deg) translateY(-15em) rotate(-179.95deg);
+}
+
+.item-list:nth-child(15) {
+    transform: rotate(193.8deg) translateY(-15em) rotate(-193.8deg);
+}
+
+.item-list:nth-child(16) {
+    transform: rotate(207.65deg) translateY(-15em) rotate(-207.65deg);
+}
+
+.item-list:nth-child(17) {
+    transform: rotate(221.5deg) translateY(-15em) rotate(-221.5deg);
+}
+
+.item-list:nth-child(18) {
+    transform: rotate(235.35deg) translateY(-15em) rotate(-235.35deg);
+}
+
+.item-list:nth-child(19) {
+    transform: rotate(249.2deg) translateY(-15em) rotate(-249.2deg);
+}
+
+.item-list:nth-child(20) {
+    transform: rotate(263.5deg) translateY(-15em) rotate(-263.5deg);
+}
+
+.item-list:nth-child(21) {
+    transform: rotate(276.9deg) translateY(-15em) rotate(-276.9deg);
+}
+
+.item-list:nth-child(22) {
+    transform: rotate(290.75deg) translateY(-15em) rotate(-290.75deg);
+}
+
+.item-list:nth-child(23) {
+    transform: rotate(304.6deg) translateY(-15em) rotate(-304.6deg);
+}
+
+.item-list:nth-child(24) {
+    transform: rotate(318.45deg) translateY(-15em) rotate(-318.45deg);
+}
+
+.item-list:nth-child(25) {
+    transform: rotate(332.3deg) translateY(-15em) rotate(-332.3deg);
+}
+
+.item-list:nth-child(26) {
+    transform: rotate(346.15deg) translateY(-15em) rotate(-346.15deg);
+}
+
+.the_letter {
+    position: absolute;
+    top: 30%;
+    left: 21%;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-letter-texto {
+    color: rgba(219, 219, 28, 0.932);
+    font-size: 1.7em;
+}
+
+.big_letter_item {
+    color: rgba(219, 219, 28, 0.932);
+    font-size: 12.7em;
+}
+
+
+/*--------> Inicio <-----------*/
+
+.close_x {
+    position: absolute;
+    right: 8%;
+    top: 12%;
+    height: 50px;
+    width: 50px;
+    color: #F7BC0D;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.start_game,
+.pasapalabra_game,
+.resume_game {
+    background-color: rgba(206, 11, 224, 0.027);
+    color: rgb(218, 168, 32);
+    width: 27em;
+    height: 25em;
+    padding: 2em 2em;
+    border: 3px solid rgb(211, 47, 226);
+    border-radius: 25px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.start_game {
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+.start_game:nth-child() {
+    font-size: 1em;
+}
+
+.text_inicio {
+    font-size: 0.8em;
+    display: flex;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+/*--------> Botones <--------*/
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.input_Name_class {
+    background-color: indigo;
+    padding: 0.5em 0.8em;
+    margin: 1em;
+    border: 2px solid yellow;
+    border-radius: 7px;
+    color: yellow;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.boton_malb {
+    padding: 0.5em 1em;
+    border-radius: 9px;
+    border: 2px solid purple;
+    background-color: rgba(219, 219, 28, 0.932);
+    color: purple;
+    font-size: 0.8em;
+    margin-left: 1%;
+    margin-bottom: 10%;
+    text-align: center;
+    width: 250px;
+}
+
+.boton_malb:hover {
+    border: 2px solid rgba(219, 219, 28, 0.932);
+    background-color: purple;
+    color: rgba(219, 219, 28, 0.932);
+}
+
+
+/*------------> Juego y preguntas <-----------*/
+
+.pasapalabra_game {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ask {
+    padding: 10% 10% 2% 10%;
+}
+
+.timer_points_fails {
+    display: flex;
+    position: relative;
+    top: 10%;
+    right: 40%;
+}
+
+.timer,
+.points {
+    background-color: rgba(219, 219, 28, 0.932);
+    height: 5em;
+    width: 5em;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: purple;
+    border: 3px solid purple;
+}
+
+.points {
+    position: relative;
+    bottom: 7em;
+    left: 3em;
+    height: 4em;
+    width: 4em;
+}
+
+.fails_box {
+    position: relative;
+    left: 100%;
+    bottom: 0%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+}
+
+
+/*------------> Footer <----------*/
+
+.footer-box {
+    color: rgb(218, 168, 32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: auto;
+}

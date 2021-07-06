@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calculatorpro.css" />
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header class="header-box">
+            <h1 class="title-h1">The Calculator Html</h1>
+        </header>
+        <main class="main-box">
+            <section class="section-box">
+                <div class="calculator-box">
+                    <p id="result-box" class="result-box">
+                        <span id="numero-anterior" class="numerosDigi resultado-anterior"></span>
+                        <span id="numero-actual" class="numerosDigi resultado-despues">0</span>
+                    </p>
+                    <button class="numero uno" onclick="inputsNumeros(1)">1</button>
+                    <button class="numero dos" onclick="inputsNumeros(2)">2</button>
+                    <button class="numero tres" onclick="inputsNumeros(3)">3</button>
+                    <button class="numero cuatro" onclick="inputsNumeros(4)">4</button>
+                    <button class="numero cinco" onclick="inputsNumeros(5)">5</button>
+                    <button class="numero seis" onclick="inputsNumeros(6)">6</button>
+                    <button class="numero siete" onclick="inputsNumeros(7)">7</button>
+                    <button class="numero ocho" onclick="inputsNumeros(8)">8</button>
+                    <button class="numero nueve" onclick="inputsNumeros(9)">9</button>
+                    <button class="numero cero" onclick="inputsNumeros(0)">0</button>
+                    <button class="multiplicar naranja operador" onclick="operador('*')">X</button>
+                    <button class="dividir naranja operador" onclick="operador('/')">÷</button>
+                    <button class="restar naranja operador" onclick="operador('-')">-</button>
+                    <button class="sumar naranja operador" onclick="operador('+')">+</button>
+                    <button class="rest naranja" onclick="mostrarResultado('=')">=</button>
+                    <button class="volver" onclick="inputsNumeros('b')">«</button>
+                    <button class="ac" onclick="actualizar('ac')">AC</button>
+                    <button class="coma" onclick="punto('p')">,</button>
+                </div>
+            </section>
+        </main>
+        <footer class="footer-box">
+            <h2 class="title-h2">Pre-curse Skylab</h2>
+        </footer>
+    </div>
+    <script src="calculatorPro.js"></script>
+</body>
+
+</html>
