@@ -157,10 +157,8 @@
              availableFlights = flights.filter(flight => flight.cost < price)
              if (availableFlights.length === 0) {
                  newSearch = prompt('No match found. Do you want to start a new search? (yes/no)')
-                 if (newSearch) {
-                     if (newSearch.toLowerCase() === 'yes') {
-                         regularUser();
-                     }
+                 if (newSearch && newSearch.toLowerCase() === 'yes') {
+                     regularUser();
                  }
              }
              break;
@@ -169,10 +167,8 @@
              availableFlights = flights.filter(flight => flight.cost === price)
              if (availableFlights.length === 0) {
                  newSearch = prompt('No match found. Do you want to start a new search? (yes/no)')
-                 if (newSearch) {
-                     if (newSearch.toLowerCase() === 'yes') {
-                         regularUser();
-                     }
+                 if (newSearch && newSearch.toLowerCase() === 'yes') {
+                     regularUser();
                  }
              }
              break;
@@ -181,10 +177,8 @@
              availableFlights = flights.filter(flight => flight.cost > price)
              if (availableFlights.length === 0) {
                  newSearch = prompt('No match found. Do you want to start a new search? (yes/no)')
-                 if (newSearch) {
-                     if (newSearch.toLowerCase() === 'yes') {
-                         regularUser();
-                     }
+                 if (newSearch && newSearch.toLowerCase() === 'yes') {
+                     regularUser();
                  }
              }
              break;
