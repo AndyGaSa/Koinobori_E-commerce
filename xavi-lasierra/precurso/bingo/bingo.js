@@ -102,7 +102,7 @@ function createCarton(){
     const randNum = [];
     while(randNum.length < 15){
         let num = Math.ceil(Math.random() * 90);
-        if(!randNum.find(x => x === num))
+        if(!randNum.find(value => value === num))
             randNum.push(num);
     }
     randNum.sort(function(a,b){return a - b});
@@ -126,7 +126,7 @@ function newTurn(){
     //Comprueba si esta en el carton y si hay lo cambia por X
     //Comprueba si hay linea/bingo
     let found = false;
-    let bingo = true;
+    let bingoWin = true;
     let linea = false;
     for(let i=0; i<3; i++){
         let auxLinea = true;
@@ -137,7 +137,7 @@ function newTurn(){
             }
             if(carton[i][j] !== "X"){
                 auxLinea = false;
-                bingo = false;
+                bingoWin = false;
             }
         }
         if(auxLinea)
@@ -153,7 +153,7 @@ function newTurn(){
             alreadyLinea = true;
             console.log(`\n¡LINEA!`);
         }
-        else if(bingo){
+        else if(bingoWin){
             console.log(`\n¡BINGO!`);
             return true;
         }
