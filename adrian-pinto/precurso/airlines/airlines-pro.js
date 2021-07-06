@@ -85,19 +85,7 @@ window.onload = () => {
 
         mostrarMenu( user )
 
-        userInput = adquisicionDatos( `
-            Porfavor ${ user.nombre } escriba una de las siguientes opciones:
-
-            01 - Ver Vuelos
-            02 - Ver Coste medio
-            03 - Ver Escalas
-            04 - Ver ultimos vuelos
-            05 - Ver todo
-            ${ user.admin ? `06 - Crear vuelo
-            07 - Eliminar vuelo` : `06 - Buscar vuelo` }
-            08 - Cambiar Usuario
-            09 - Salir
-        `, 'dato' );
+        userInput = mostrarModal( user )
 
     } while ( !( userInput === null || userInput === 'salir' || userInput === '09' ) );
     console.clear();
@@ -448,4 +436,29 @@ const mostrarMenu = ( user ) => {
     08 - Cambiar Usuario
     09 - Salir
   ` )
+}
+
+/**
+ * Muestra una ventana modal con las opciones del menu y retorna el input del usuario
+ * @param { Object } user 
+ * @returns { String }
+ */
+const mostrarModal = ( user ) => {
+    let opciones = user.admin ? `06 - Crear vuelo
+    07 - Eliminar vuelo` : `06 - Buscar vuelo`
+
+    let userInput = adquisicionDatos( `
+    Porfavor ${ user.nombre } escriba una de las siguientes opciones:
+
+    01 - Ver Vuelos
+    02 - Ver Coste medio
+    03 - Ver Escalas
+    04 - Ver ultimos vuelos
+    05 - Ver todo
+    ${ opciones }
+    08 - Cambiar Usuario
+    09 - Salir
+`, 'dato' );
+
+    return userInput
 }
