@@ -1,0 +1,508 @@
+/*----- GENERAL STYLES ----- */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #a0d8fd;
+  }
+
+header{
+    font-family: 'Lobster', Georgia, serif;
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px  #0094ff, 3px 3px 3px white;
+}
+
+main{   
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    cursor: pointer;
+}
+
+/*----- MAIN GAME CONTAINER STYLES ----- */
+#pasapalabra-container{
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/*----- DEFINITION AND INFO STYLES ----- */
+#definition{
+    display: flex;
+    flex-direction: column;
+}
+
+#display{
+    padding-top: 23px;
+    margin: 0 auto;
+    margin-top: 77px;
+    height: 273px;
+    width: 400px;
+    border: 2px solid #0094ff;
+    border-style: dotted dotted dotted hidden;
+    border-radius: 0px 20px 20px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(148, 147, 147);
+    font-size: 15px;
+}
+
+#play-header{
+    margin: 0 auto;
+    width: 400px;
+    height: 40px;
+    text-shadow: 2px 2px 2px  white, 3px 3px 3px #4eb2fa;
+    font-family: 'Lobster', Georgia, serif;
+    color: #4eb2fa;
+    font-size: 25px;
+    letter-spacing: 1px;
+    position: absolute;
+    margin-top: 29px;
+    text-align: center;
+}
+
+#usernickname{
+    margin: 0 auto;
+    width: 200px;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 2px 2px 3px  #0094ff;
+    border: 4px solid white;
+    border-style: hidden hidden dashed hidden;
+    outline: none;
+}
+
+#start-button{
+    margin: 0 auto;
+    height: 35px;
+    width: 110px;
+    border-radius: 6px;
+    color: white;
+    text-shadow: 2px 2px 3px  #ffaa00;
+    font-family: 'Lobster', Georgia, serif;
+    font-size: 20px;
+    border: 1px solid #ffaa00;
+    background: rgb(250,225,85);
+    background: radial-gradient(circle, rgba(250,225,85,1) 0%, rgba(255,170,0,1) 100%);
+}
+
+#start-button:hover, #next-button:hover, #re-game-button:hover{
+    background: rgb(252, 236, 149);
+    background: radial-gradient(circle, rgb(250, 231, 126) 0%, rgb(250, 186, 58) 100%);
+}
+
+#instructions{
+    color: white;
+    text-shadow: 2px 2px 3px  #c644ca;
+    font-size: 19px;
+    font-family: 'Lobster', Georgia, serif;
+}
+
+#next-button{
+    height: 35px;
+    width: 165px;
+    border-radius: 6px;
+    color: white;
+    text-shadow: 2px 2px 3px  #ffaa00;
+    font-family: 'Lobster', Georgia, serif;
+    font-size: 20px;
+    border: 1px solid #ffaa00;
+    background: rgb(250,225,85);
+    background: radial-gradient(circle, rgba(250,225,85,1) 0%, rgba(255,170,0,1) 100%);
+    position: absolute;
+    margin-top: 315px;
+    margin-left: 120px;
+}
+
+#re-game-button{
+    height: 35px;
+    width: 134px;
+    border-radius: 6px;
+    color: white;
+    text-shadow: 2px 2px 3px  #ffaa00;
+    font-family: 'Lobster', Georgia, serif;
+    font-size: 20px;
+    border: 1px solid #ffaa00;
+    background: rgb(250,225,85);
+    background: radial-gradient(circle, rgba(250,225,85,1) 0%, rgba(255,170,0,1) 100%);
+    position: absolute;
+    margin-top: 327px;
+    margin-left: 133px;
+}
+
+#image-check, #image-delete{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-top: 215px;
+    margin-left: 178px;
+}
+
+#image-over{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    margin-top: 240px;
+    margin-left: 158px;
+}
+
+#image-gratz{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    margin-top: 229px;
+    margin-left: 158px;
+}
+
+::placeholder{
+color: white;
+text-align: center;
+font-size: 16px;
+text-shadow: 2px 2px 3px  #0094ff;
+}
+
+#swear{
+    width: 35px;
+    height: 27px;
+    margin-left: 10px;
+}
+
+/*----- LETTERS' CONTAINER STYLES ----- */
+.letter{
+    margin: 0 auto;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #0080db;
+    background: #0094ff;
+    color: white;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    text-shadow: 1px 1px 2px rgb(104, 104, 104);
+    line-height: 28px;
+}
+
+#letters-container{
+    margin-top: 199px;
+    width: 250px;
+    height: 199px;
+}
+
+#a{
+    transform: rotate(-90deg) translate(195px) rotate(90deg);
+}
+
+#b{
+    transform: rotate(-76.7deg) translate(195px) rotate(76.7deg);
+}
+
+#c{
+    transform: rotate(-63.4deg) translate(195px) rotate(63.4deg);
+}
+
+#d{
+    transform: rotate(-50.1deg) translate(195px) rotate(50.1deg);
+}
+
+#e{
+    transform: rotate(-36.8deg) translate(195px) rotate(36.8deg);
+}
+
+#f{
+    transform: rotate(-23.5deg) translate(195px) rotate(23.5deg);
+}
+
+#g{
+    transform: rotate(-10.2deg) translate(195px) rotate(10.2deg);
+}
+
+#h{
+    transform: rotate(3.1deg) translate(195px) rotate(-3.1deg);
+}
+
+#i{
+    transform: rotate(16.4deg) translate(195px) rotate(-16.4deg);
+}
+
+#j{
+    transform: rotate(29.7deg) translate(195px) rotate(-29.7deg);
+}
+
+#k{
+    transform: rotate(43deg) translate(195px) rotate(-43deg);
+}
+
+#l{
+    transform: rotate(56.3deg) translate(195px) rotate(-56.3deg);
+}
+
+#m{
+    transform: rotate(69.6deg) translate(195px) rotate(-69.6deg);
+}
+
+#n{
+    transform: rotate(82.9deg) translate(195px) rotate(-82.9deg);
+}
+
+#ñ{
+    transform: rotate(96.2deg) translate(195px) rotate(-96.2deg);
+}
+
+#o{
+    transform: rotate(109.5deg) translate(195px) rotate(-109.5deg);
+}
+
+#p{
+    transform: rotate(122.8deg) translate(195px) rotate(-122.8deg);
+}
+
+#q{
+    transform: rotate(136.1deg) translate(195px) rotate(-136.1deg);
+}
+
+#r{
+    transform: rotate(149.4deg) translate(195px) rotate(-149.4deg);
+}
+
+#s{
+    transform: rotate(162.7deg) translate(195px) rotate(-162.7deg);
+}
+
+#t{
+    transform: rotate(176deg) translate(195px) rotate(-176deg);
+}
+
+#u{
+    transform: rotate(189.3deg) translate(195px) rotate(-189.3deg);
+}
+
+#v{
+    transform: rotate(202.6deg) translate(195px) rotate(-202.6deg);
+}
+
+#w{
+    transform: rotate(215.9deg) translate(195px) rotate(-215.9deg);
+}
+
+#x{
+    transform: rotate(229.2deg) translate(195px) rotate(-229.2deg);
+}
+
+#y{
+    transform: rotate(242.5deg) translate(195px) rotate(-242.5deg);
+}
+
+#z{
+    transform: rotate(-103.3deg) translate(195px) rotate(103.3deg);
+}
+
+/*----- INPUT CONTAINER STYLES ----- */
+#input-container{
+    margin: 0 auto;
+    height: 200px;
+    width: 213px;
+    display: flex;
+    flex-direction: column;
+    margin-left: -90px;
+    margin-top: -60px;
+    position: absolute;
+}
+
+#input-container :first-child{
+    margin: 0 auto;
+    width: 200px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 2px 2px 3px  #0094ff;
+    border: 4px solid white;
+    border-style: hidden hidden dashed hidden;
+    outline: none;
+}
+
+#input-container :nth-child(2){
+    margin: 0 auto;
+    height: 43px;
+    width: 150px;
+    border-radius: 6px;
+    color: white;
+    text-shadow: 2px 2px 3px  #0094ff;
+    font-family: 'Lobster', Georgia, serif;
+    font-size: 25px;
+    border: 1px solid #0094ff;
+    background: rgb(135,205,255);
+    background: radial-gradient(circle, rgba(135,205,255,1) 0%, rgba(0,148,255,1) 100%);
+    margin-top: 30px;
+}
+
+#pasapalabra-button:hover{
+    background: rgb(189, 223, 248);
+    background: radial-gradient(circle, rgb(156, 212, 252) 0%, rgb(38, 162, 250) 100%);
+}
+
+#think{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 60px;
+    height: 60px;
+}
+
+/*----- COUNTERS STYLES ----- */
+#counters-info{
+    margin: 0 auto;
+    height: 25px;
+    width: 600px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Lobster', Georgia, serif;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(104, 104, 104);
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+#counters-container{
+    margin: 0 auto;
+    height: 30px;
+    width: 600px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 1px;
+    padding-bottom: 50px;
+    line-height: 35px;
+}
+
+#counters-container div{
+    height: 35px;
+    width: 75px;
+    border-radius: 6px;
+    padding-top: 4px;
+}
+
+#time{
+    text-shadow: 2px 2px 3px  #0094ff;
+}
+
+#rights{
+    text-shadow: 2px 2px 3px  #0aca44;
+}
+
+#fails{
+    text-shadow: 2px 2px 3px  #ff0000;
+}
+
+#counters-container :first-child{
+    border: 1px solid #0094ff;
+    text-shadow: 2px 2px 3px  #0094ff;
+    background: rgb(135,205,255);
+    background: radial-gradient(circle, rgba(135,205,255,1) 0%, rgba(0,148,255,1) 100%);
+}
+
+#counters-container :nth-child(2){
+    border: 1px solid #0aca44;
+    background: rgb(128,255,166);
+    background: radial-gradient(circle, rgba(128,255,166,1) 0%, rgba(10,202,68,1) 100%);
+}
+
+#counters-container :last-child{
+    border: 1px solid #ff0000;
+    background: rgb(255,120,120);
+    background: radial-gradient(circle, rgba(255,120,120,1) 0%, rgba(255,0,0,1) 100%);
+
+}
+
+/*----- FOOTER AND RANKING STYLES ----- */
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.ranking{
+    margin: 0 auto;
+    width: 200px;
+    font-family: 'Lobster', Georgia, serif;
+    text-align: center;
+    color:white;
+    letter-spacing: 2px;
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #0094ff;
+    border-style: hidden dashed hidden dashed;
+}
+
+.ranking h5{
+    text-shadow: 2px 2px 3px  #0094ff;
+    padding-bottom: 15px;
+}
+
+.ranking table{
+    margin: 0 auto;
+}
+
+.ranking th{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: left;
+    text-shadow: 2px 2px 3px  #0094ff;
+    font-size: 15px;
+    letter-spacing: 0px;
+    border: 1px solid white;
+    border-style: dashed hidden dashed hidden;
+    background-color: #4eb2fa;
+    border-radius: 5px;
+    padding: 2px 2px 2px 2px;
+}
+
+.ranking td{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: left;
+    text-shadow: 1px 1px 2px rgb(148, 147, 147);
+    font-size: 15px;
+    letter-spacing: 0px;
+    padding-left: 10px;
+}
+
+
+.ranking img{
+    width: 20px;
+    height: 20px;
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+#exit-button{
+    margin: 0 auto;
+    width: 110px;
+    border: 1px solid rgb(253, 73, 73);
+    border-radius: 6px;
+    background: rgb(255,120,120);
+    background: radial-gradient(circle, rgba(255,120,120,1) 0%, rgba(255,0,0,1) 100%);
+    color: white;
+    font-size: 15px;
+    font-family: 'Lobster', Georgia, serif;
+    margin-bottom: 30px;
+}
+
+#exit-button:hover{
+    background: rgb(255, 137, 137);
+    background: radial-gradient(circle, rgb(250, 142, 142) 0%, rgb(250, 31, 31) 100%);
+}
