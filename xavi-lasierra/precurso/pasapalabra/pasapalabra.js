@@ -87,15 +87,7 @@ function pasapalabra(){
 }
 
 function newTurn(currentLetter, round){
-    //Añade a currentGameQuestions 1 pregunta de la lista de la letra que toca
-    if(round === 1){
-        let aux = [];
-        for(let i=0; i<allQuestions.length; i++){
-            if(allQuestions[i].letter === currentLetter)
-                aux.push(i);
-        }    
-        currentGameQuestions.push(allQuestions[aux[Math.round(Math.random() * (aux.length - 1))]]);
-    }
+    addQuestion(currentLetter, round);
     
     console.clear();
     console.log(`PASAPALABRA\n\n`);
@@ -162,6 +154,18 @@ function newTurn(currentLetter, round){
     }
 
     return false;
+}
+
+function addQuestion(currentLetter, round){
+        //Añade a currentGameQuestions 1 pregunta de la lista de la letra que toca
+        if(round === 1){
+            let aux = [];
+            for(let i=0; i<allQuestions.length; i++){
+                if(allQuestions[i].letter === currentLetter)
+                    aux.push(i);
+            }    
+            currentGameQuestions.push(allQuestions[aux[Math.round(Math.random() * (aux.length - 1))]]);
+        }
 }
 
 function endGame(won){
