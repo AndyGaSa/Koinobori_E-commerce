@@ -17,7 +17,7 @@
  const lastDepartures = [];
  let person;
  let user; //Tipo de usuario para las opciones avanzadas
- class flight {
+ class Flight {
      constructor(id, to, from, cost, scale) {
          this.id = flights[flights.length - 1].id + 1;
          this.to = prompt('Please, set the flight\'s destination: ');
