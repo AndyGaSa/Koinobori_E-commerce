@@ -237,8 +237,8 @@ function updatePoints(){
     for(let i = 0; i < playersList.length; i++) {
         if(playersList[i].name === userName) {
             playersList[i].points = points;
-        };
-    };
+        }
+    }
     sortPrintRanking()
 }
 
@@ -265,4 +265,4 @@ function goAgain(){
             goAgain();
             break;
     }
-};
+}
