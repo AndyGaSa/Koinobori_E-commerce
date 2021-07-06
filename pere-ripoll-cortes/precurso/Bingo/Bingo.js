@@ -185,7 +185,7 @@ function numberoBombo(params) {
   let nuevoValor;
   do {
     nuevoValor = parseInt((Math.random()*100).toFixed(0));
-    for(let i = 0; i < valoresUsadosBombo.length; i++){
+    for(let i of valoresUsadosBombo){
       if(nuevoValor === valoresUsadosBombo[i]){
         nuevoValor = parseInt((Math.random()*100).toFixed(0));
         i = 0;
