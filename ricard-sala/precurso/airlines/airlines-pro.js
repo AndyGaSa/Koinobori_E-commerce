@@ -55,7 +55,7 @@ alert(
   ultimos5();
 
   function administradorUsuario() {
-    adminUser = prompt(
+     let adminUser = prompt(
       `${identificacion} Después de ver toda la información disponible para hoy skylabairlines le gustaria saber si es usted: "usuario" o "administrador"`
     );
     if (adminUser !== "administrador" && adminUser !== "usuario") {
@@ -68,7 +68,7 @@ alert(
           let menorPresupuesto = [];
           let mayorPresupuesto = [];
           let igualPresupuesto = [];
-          presupuesto = prompt(`Que presupuesto tienes ${identificacion}?`);
+          let presupuesto = prompt(`Que presupuesto tienes ${identificacion}?`);
           if (presupuesto != null) {
             for (let flight of flights) {
               if (flight.cost < presupuesto) {
@@ -122,7 +122,7 @@ alert(
         break;
       case "administrador":
         function administrador() {
-          crearElimninar = prompt(`desea crear o eliminar vuelos?`);
+          let crearElimninar = prompt(`desea crear o eliminar vuelos?`);
           if (flights.length >= 15) {
             alert(`no se pueden crear mas vuelos para el dia de hoy`);
             console.log(flights);
@@ -160,7 +160,7 @@ alert(
           function deleteFlight(id) {
             flights.splice(id, 1);
             for (let fligt of flights) {
-              flight.id = flight.id - 1;
+              flight.id -= 1;
             }
           }
         }
