@@ -18,7 +18,7 @@ let identificacion = prompt(`porfavor introduzca su nombre`);
 {
   for (let flight of flights) { //saludo y presentacion de vuelos.
       
-        if (flight==true) { 
+        if (flight && flight != "0") { 
           escalasVuelos = `el vuelo hace escalas`;
          } else {
           escalasVuelos = `el vuelo no hace escalas`;
