@@ -39,7 +39,7 @@ function flightsAssistant() { //Declaración de la función
         //Con otro condicional se almacenan los destinos de los últimos 5 vuelos
         if (flights[i].id >= 06) {
             lastDepartures.push(flights[i].to);
-        };
+        }
     }
     let averageCost = totalFlightsCost / flights.length; //Cálculo del coste medio de los vuelos
     //Por último, se imprimen los datos por consola
