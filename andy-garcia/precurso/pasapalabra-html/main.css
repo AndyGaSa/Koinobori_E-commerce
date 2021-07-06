@@ -1,0 +1,157 @@
+@import "https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+
+
+*{
+  font-family: 'Goldman', cursive;
+
+}
+body {
+ 
+  background-image: url('tren.gif') ;
+  background-size: cover;
+}
+
+a {
+  font-size: 3.20vh;
+  text-decoration: none;
+  outline: 0;
+}
+/* CODIGO ROSCO */
+.circle,
+.ring {
+  height: 60vh;
+  position: absolute;
+  width: 60vh;
+  
+}
+
+.circle {
+  margin: 0 auto;
+  margin-top: 21vh;
+  margin-left: 5vh;
+}
+
+.ring {
+  background-color: rgba(255,142,203,0.5);
+  border-radius: 50%;
+  opacity: 0;
+
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  -webkit-transform: scale(0.1) rotate(-270deg);
+  -moz-transform: scale(0.1) rotate(-270deg);
+  -transform: scale(0.1) rotate(-270deg);
+
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.open .ring {
+  opacity: 1;
+  
+  -webkit-transform: scale(1) rotate(0);
+  -moz-transform: scale(1) rotate(0);
+  transform: scale(1) rotate(0);
+}
+
+.center {
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  bottom: 0;
+  color: white;
+  height: 80px;
+  left: 0;
+  line-height: 80px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 80px;
+  
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.open .center {
+  border-color: #aaaaaa;
+}
+
+.menuItem {
+  border-radius: 50%;
+  color: #eeeeee;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -20px;
+  margin-top: -20px;
+  position: absolute;
+  text-align: center;
+  width: 40px;
+}
+/* CODIGO ROSCO */
+.containerDerecho{
+  color: #F5F5F5;
+  text-shadow: -.2625rem -.2625rem 0 #6BFFFF, .2625rem .2625rem 0 #ff71ce;
+}
+.pregunta{
+    height: auto;
+    position: absolute;
+    width: auto;
+    left:42.5% ;
+    top: 20%;
+    margin-right: 2%;
+    font-size: 4.35vh;
+    text-align: center;
+    
+}
+
+.respuesta{
+    height: auto;
+    position: absolute;
+    width: auto;
+    left:56% ;
+    top:52.5%;
+    font-size: 4vh;
+    margin-top: 4vh;
+    
+}
+.inputResp{
+    height: 10vh;
+    width: 50vh;
+    font-size: xx-large;
+    text-align: center;
+    
+    
+}
+.submit{
+  height: 7vh;
+  width: 30vh;
+  font-size: xx-large;
+  margin-left: 20%;
+}
+.timer{
+  height: 4vh;
+  width: 15vh;
+  font-size: medium;
+ margin-left: 35%;
+}
+.aciertos{
+  height: 4vh;
+  width: 15vh;
+  font-size: medium;
+  position: absolute;
+ margin-left: 20%;
+}
+.fallos{
+  height: 4vh;
+  width: 15vh;
+  font-size: medium;
+  margin-left: 49%;
+}

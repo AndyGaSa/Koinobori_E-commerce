@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./calculator.css">
+    <script type="text/javascript" src="calculator.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+       <div id="pantalla">0</div>
+       <button id="borrar" onclick="reset()">AC</button>
+       <button id="corregir"></button>
+       <button id="dividir" onclick="divi()">/</button>
+       <button id="siete" onclick="concatenar('7')">7</button>
+       <button id="ocho" onclick="concatenar('8')">8</button>
+       <button id="nueve" onclick="concatenar('9')">9</button>
+       <button id="multi" onclick="multi()">X</button>
+       <button id="cuatro" onclick="concatenar('4')">4</button>
+       <button id="cinco" onclick="concatenar('5')">5</button>
+       <button id="seis" onclick="concatenar('6')">6</button>
+       <button id="resta" onclick="resta()">-</button>
+       <button id="uno" onclick="concatenar('1')">1</button>
+       <button id="dos" onclick="concatenar('2')">2</button>
+       <button id="tres" onclick="concatenar('3')">3</button>
+       <button id="suma" onclick="suma()">+</button>
+       <button id="cero" onclick="concatenar('0')">0</button>
+       <button id="coma" onclick="coma()">,</button>
+       <button id="igual" onclick="igual()">=</button>
+    </div>
+    
+</body>
+</html>

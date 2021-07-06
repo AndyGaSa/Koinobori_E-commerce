@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-size: clamp(1.5rem, 8vw - 2rem, 3rem);
+    padding: 0;
+}
+@font-face {
+    font-family: mi fuente;
+    src: local(Calculator);
+  }
+body{  
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(173, 173, 173);
+}
+.container{
+    position: fixed;
+        background-color: rgba(110, 110, 110, 0.815);
+        height: 11em;
+        display: grid;
+        align-items: center;
+}
+.display{
+    position:relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: .3em;
+    width: 100%;
+    height: 1.5em;
+    background-color: rgb(1, 8, 51);
+}
+.display>span{
+    color: rgb(0, 255, 255);
+    font-family: mi fuente;
+    filter: blur(.2px);
+}
+.btn{
+    
+    height: 1.5em;
+    width: 1.5em;
+    margin: .04em;  
+    color: whitesmoke;
+    border-radius: 10px;
+    background-color: rgba(179, 0, 30, 0.842);
+    border-bottom-style:unset;
+    box-shadow: 2px 2px 0 rgba(250, 1, 1, 0.918) inset ,
+    1px 3px 0 rgb(58, 1, 1);
+}  
+.btn-num{   
+    color: whitesmoke;
+    border-radius: 10px;
+    background-color: rgb(58, 57, 57);  
+    box-shadow: 2px 1px 0 rgba(248, 248, 248, 0.89) inset,
+    1px 2px 0 rgba(0, 0, 0, 0.842);
+}
+.btn-doble{
+    height: 1.5em;
+    width: 3.3em;
+}
