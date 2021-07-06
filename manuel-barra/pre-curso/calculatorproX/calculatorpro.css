@@ -1,0 +1,177 @@
+/**
+** CALCULATOR PRO CSS
+**
+** 
+**/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(198deg, rgba(2, 0, 36, 1) 0%, rgba(57, 57, 131, 1) 49%, rgba(0, 212, 255, 1) 100%);
+}
+
+@font-face {
+    font-family: DS-Digital;
+    src: url(/pasapalabrafinal/DS-DIGI.TTF);
+}
+
+.numerosDigi {
+    font-family: DS-Digital;
+}
+
+.header-box {
+    display: flex;
+}
+
+.title-h1 {
+    margin-top: 10%;
+    font-size: 40px;
+}
+
+.title-h1,
+.title-h2 {
+    font-family: 'Courier New', Courier, monospace;
+    color: burlywood;
+}
+
+.main-box {
+    display: flex;
+}
+
+.section-box {
+    background-color: rgb(88, 88, 88);
+    height: 50vh;
+    width: 35vh;
+    border: rgba(34, 34, 34, 0.856) solid 1px;
+    border-radius: 1%;
+}
+
+button {
+    font-size: 16px;
+}
+
+.calculator-box {
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.64);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.64);
+    height: 100%;
+    display: grid;
+    font-size: 20px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 15% 15% 15% 15% 15%;
+    grid-template-areas: 'resultado resultado resultado resultado' 'ac ac volver dividir' 'numero7 numero8 numero9 multiplicar' 'numero4 numero5 numero6 restar' 'numero1 numero2 numero3 sumar' 'numero0 numero0 coma rest';
+}
+
+.result-box {
+    background-color: black;
+    grid-area: resultado;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: self-end;
+}
+
+.resultado-anterior {
+    color: blanchedalmond;
+    grid-area: anterior;
+    font-size: 25px;
+    padding-right: 10px;
+}
+
+.resultado-despues {
+    grid-area: despues;
+    color: blanchedalmond;
+    font-size: 45px;
+    padding-right: 10px;
+}
+
+.ac {
+    grid-area: ac;
+}
+
+.volver {
+    grid-area: volver;
+}
+
+.dividir {
+    grid-area: dividir;
+}
+
+.siete {
+    grid-area: numero7;
+}
+
+.ocho {
+    grid-area: numero8;
+}
+
+.nueve {
+    grid-area: numero9;
+}
+
+.cuatro {
+    grid-area: numero4;
+}
+
+.cinco {
+    grid-area: numero5;
+}
+
+.seis {
+    grid-area: numero6;
+}
+
+.tres {
+    grid-area: numero3;
+}
+
+.dos {
+    grid-area: numero2;
+}
+
+.uno {
+    grid-area: numero1;
+}
+
+.cero {
+    grid-area: numero0;
+}
+
+.multiplicar {
+    grid-area: multiplicar;
+}
+
+.sumar {
+    grid-area: sumar;
+}
+
+.restar {
+    grid-area: restar;
+}
+
+.rest {
+    grid-area: rest;
+}
+
+.coma {
+    grid-area: coma;
+}
+
+.naranja {
+    background-color: rgb(255, 145, 0);
+    font-size: 18px;
+}
+
+.footer-box {
+    display: flex;
+}

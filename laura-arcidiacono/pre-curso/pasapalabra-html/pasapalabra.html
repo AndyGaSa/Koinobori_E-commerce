@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pasapalabra.css" href="https://fonts.gstatic.com" <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=News+Cycle&display=swap" rel="stylesheet">
+    <script src="pasapalabra-dom.js" defer></script>
+    <title>myPasapalabra-HTML</title>
+
+</head>
+
+<body>
+    <main>
+        <section id="totalContainer">
+            <section id="instructionsContainer">
+                <h2>PASAPALABRA</h2>
+                <h3> REGLAS DEL JUEGO </h3>
+                <ul>
+                    <li>Deberás escribir la palabra que coresponde a la definición que verás en pantalla. Cada palabra
+                        corresponde a una de las letras del alfabeto.</li>
+                    <li>El programa no hace distinción por mayusculas ni minusculas. En tus respuestas NO debes usar
+                        acentos.</li>
+                    <li>Si presionas el boton "RESPONDER" o la tecla "Enter", podrás ver si tu respuesta
+                        fue correcta. Cada acierto suma un punto.</li>
+                    <li>Si presionas el boton "PASAPALABRA" o la tecla "Control", pasarás a
+                        la siguiente palabra sin perder ni sumar puntos y al dar la vuelta al rosco, volverás a tener la
+                        oportunidad de responder por esa palabra.</li>
+                    <li>Dispones de 115 segundos para responder.</li>
+                    <li>Si presionas el boton "SALIR DEL JUEGO" o la tecla "Esc" en cualquier momento del juego, verás
+                        tu puntaje de respuestas acertadas y saldrás del juego.</li>
+                    <li>Escribe tu nombre y presiona "JUGAR" para empezar la partida!</li>
+                </ul>
+                <form id="placeToTheName">
+                    <label for="name" class="playerName">Escribe aquí tu nombre:</label> <br>
+                    <input type="text" id="name" name="name" class="playerAnswer">
+                </form>
+                <button class="playButton" onclick="playToStartButton()"> JUGAR </button>
+            </section>
+
+            <section class="container" id="theGame">
+                <div class="lettersRoscoContainer">
+                    <div>
+                        <div class="letterCircle" id="a"> A </div>
+                        <div class="letterCircle" id="b"> B </div>
+                        <div class="letterCircle" id="c"> C </div>
+                        <div class="letterCircle" id="d"> D </div>
+                        <div class="letterCircle" id="e"> E </div>
+                        <div class="letterCircle" id="f"> F </div>
+                        <div class="letterCircle" id="g"> G </div>
+                        <div class="letterCircle" id="h"> H </div>
+                        <div class="letterCircle" id="i"> I </div>
+                        <div class="letterCircle" id="j"> J </div>
+                        <div class="letterCircle" id="k"> K </div>
+                        <div class="letterCircle" id="l"> L </div>
+                        <div class="letterCircle" id="m"> M </div>
+                        <div class="letterCircle" id="n"> N </div>
+                        <div class="letterCircle" id="ñ"> Ñ </div>
+                        <div class="letterCircle" id="o"> O </div>
+                        <div class="letterCircle" id="p"> P </div>
+                        <div class="letterCircle" id="q"> Q </div>
+                        <div class="letterCircle" id="r"> R </div>
+                        <div class="letterCircle" id="s"> S </div>
+                        <div class="letterCircle" id="t"> T </div>
+                        <div class="letterCircle" id="u"> U </div>
+                        <div class="letterCircle" id="v"> V </div>
+                        <div class="letterCircle" id="w"> W </div>
+                        <div class="letterCircle" id="x"> X </div>
+                        <div class="letterCircle" id="y"> Y </div>
+                        <div class="letterCircle" id="z"> Z </div>
+                    </div>
+                    <div id="showResultToThePlayer"> ¡JUGUEMOS! </div>
+                </div>
+
+
+                <div class="definitionPlace">
+                    <div class="definitionSpace" id="showQuestion">SIGUIENTE DEFINICIÓN</div>
+                    <br>
+                    <form id="toThePlayerAnswer">
+                        <label for="myAnswer" class="playerName">Escribe aquí tu respuesta:</label>
+                        <input type="text" id="myAnswer" class="playerAnswer">
+                    </form>
+                </div>
+
+                <div class="playerActions">
+                    <button id="pasapalabraButton" onclick="pasapalabraButtonPressed()"> PASAPALABRA </button>
+                    <button id="okButton" onclick="playerResponseButton()"> RESPONDER </button>
+                    <button id="endThisGameButton" onclick="pleaseExitTheGameButton()""> SALIR DEL JUEGO </button>
+            </div>
+
+
+            <form class=" controlsContainer">
+                        <label for="timer" class="playerName">Tiempo Restante:</label>
+                        <div id="timer"> Seg. </div>
+                        <label for="pointsSuccess" class="playerName">Aciertos:</label>
+                        <div id="pointsSuccess">0</div>
+                        <label for="pointsWrongAnswer" class="playerName">Errores:</label>
+                        <div id="pointsWrongAnswer">0</div>
+                        </form>
+
+            </section>
+
+            <section id="containerOptionsOfEndGame">
+                <div id="endGameLikeWinner">
+                    <h2>Win!</h2>
+                    <h3></h3>
+                    <div id="rankingWinner"></div>
+                    <button id="playAgain">Nuevo Juego</button>
+                </div>
+                <div id="gameOver">
+                    <h2>Esta es tu posición en el ranking del PASAPALABRA:</h2>
+                    <div id="rankingLooser">Ranking Looser</div> <br>
+                    <button id="playAgain">Nuevo Juego</button>
+                </div>
+                <div id="exitTheGamePlease">
+                    <h3>¿Deseas abandonar el juego?</h3>
+                    <button class="exit" onclick="exitNow()">Salir del juego.</button>
+                    <button class=" stai" onclick="pleaseContinue()">Continuar jugando.</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+</body>

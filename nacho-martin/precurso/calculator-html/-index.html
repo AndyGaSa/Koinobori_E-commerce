@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="-index.css">
+
+
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <p>Presiona las teclas para realizar operaciones. Utiliza el botón 'Del' para borrar y el botón 'AC' para reiniciar la calculadora.</p>
+    <div class="calculadora">
+        <p class="screen"></p>
+        <button id="uno" onclick="addDigits('1')">1</button>
+        <button id="dos" onclick="addDigits('2')">2</button>
+        <button id="tres" onclick="addDigits('3')">3</button>
+        <button id="mas" onclick="sumar()">+</button>
+        <button id="cuatro" onclick="addDigits('4')">4</button>
+        <button id="cinco" onclick="addDigits('5')">5</button>
+        <button id="seis" onclick="addDigits('6')">6</button>
+        <button id="menos" onclick="restar()">-</button>
+        <button id="siete" onclick="addDigits('7')">7</button>
+        <button id="ocho" onclick="addDigits('8')">8</button>
+        <button id="nueve" onclick="addDigits('9')">9</button>
+        <button id="por" onclick="multiplicar()">*</button>
+        <button id="punto" onclick="addPoint()">.</button>
+        <button id="cero" onclick="addDigits('0')">0</button>
+        <button id="igual" onclick="igual()">=</button>
+        <button id="entre" onclick="dividir()">/</button>
+        <button id="borrar" onclick="borrar()">Del</button>
+        <button id="AC" onclick="AC()">AC</button>
+    </div>
+
+</body>
+
+<script src="-index.js"></script>
+
+</html>

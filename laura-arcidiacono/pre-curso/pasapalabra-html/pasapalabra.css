@@ -1,0 +1,403 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background: #b1c5d4;
+    
+}
+.totalContainer {
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+
+#instructionsContainer {
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding-left: 3em;
+    padding-right: 3em;
+    font-family: 'News Cycle', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+li {
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+
+button {
+    border: black 0.3vh solid;
+    margin: 0.3vw;
+    padding: 3vh;
+    border-radius: 6%;
+    height: 10vh;
+    opacity: 1;
+    cursor: pointer;
+    font-size: 2vh;
+    color: white;
+}
+
+.playerName {
+    font-family: 'News Cycle', sans-serif;
+    font-size: 1.5em;
+    justify-content: center;
+}
+
+.playButton {
+    grid-area: instrustions;
+    justify-content: center;
+    align-items: center;
+    background-color: #686573;
+    font-size: 2em;
+}
+.container {
+    width: auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "roscoArea definitionArea"
+        "roscoArea playerActionsArea"
+        "roscoArea controlsArea";
+    margin: auto;
+    font-family: 'News Cycle', sans-serif;
+    visibility: hidden;
+}
+.lettersRoscoContainer {
+    grid-area: roscoArea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+}
+
+.letterCircle {
+    position: absolute;
+    margin-top: 4em;
+    padding: 0.8em;
+    background-color: #b1c5d4;
+    border: #b1c5d4 0.1em solid;
+    border-radius: 50%;
+    font-size: 1em;
+    box-shadow: inset 0 0 1em 0.66em #71879a;
+}
+
+#a {
+    transform: rotate(-90deg) translate(15em) rotate(90deg);
+}
+
+#b {
+    transform: rotate(-76.7deg) translate(15em) rotate(76.7deg);
+}
+
+#c {
+    transform: rotate(-63.4deg) translate(15em) rotate(63.4deg);
+}
+
+#d {
+    transform: rotate(-50.1deg) translate(15em) rotate(50.1deg);
+}
+
+#e {
+    transform: rotate(-36.8deg) translate(15em) rotate(36.8deg);
+}
+
+#f {
+    transform: rotate(-23.5deg) translate(15em) rotate(23.5deg);
+}
+
+#g {
+    transform: rotate(-10.2deg) translate(15em) rotate(10.2deg);
+}
+
+#h {
+    transform: rotate(3.1deg) translate(15em) rotate(-3.1deg);
+}
+
+#i {
+    transform: rotate(16.4deg) translate(15em) rotate(-16.4deg);
+}
+
+#j {
+    transform: rotate(29.7deg) translate(15em) rotate(-29.7deg);
+}
+
+#k {
+    transform: rotate(43deg) translate(15em) rotate(-43deg);
+}
+
+#l {
+    transform: rotate(56.3deg) translate(15em) rotate(-56.3deg);
+}
+
+#m {
+    transform: rotate(69.6deg) translate(15em) rotate(-69.6deg);
+}
+
+#n {
+    transform: rotate(82.9deg) translate(15em) rotate(-82.9deg);
+}
+
+#ñ {
+    transform: rotate(96.2deg) translate(15em) rotate(-96.2deg);
+}
+
+#o {
+    transform: rotate(109.5deg) translate(15em) rotate(-109.5deg);
+}
+
+#p {
+    transform: rotate(122.8deg) translate(15em) rotate(-122.8deg);
+}
+
+#q {
+    transform: rotate(136.1deg) translate(15em) rotate(-136.1deg);
+}
+
+#r {
+    transform: rotate(149.4deg) translate(15em) rotate(-149.4deg);
+}
+
+#s {
+    transform: rotate(162.7deg) translate(15em) rotate(-162.7deg);
+}
+
+#t {
+    transform: rotate(176deg) translate(15em) rotate(-176deg);
+}
+
+#u {
+    transform: rotate(189.3deg) translate(15em) rotate(-189.3deg);
+}
+
+#v {
+    transform: rotate(202.6deg) translate(15em) rotate(-202.6deg);
+}
+
+#w {
+    transform: rotate(215.9deg) translate(15em) rotate(-215.9deg);
+}
+
+#x {
+    transform: rotate(229.2deg) translate(15em) rotate(-229.2deg);
+}
+
+#y {
+    transform: rotate(242.5deg) translate(15em) rotate(-242.5deg);
+}
+
+#z {
+    transform: rotate(-103.3deg) translate(15em) rotate(103.3deg);
+}
+
+#showResultToThePlayer {
+    grid-area: roscoArea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'News Cycle', sans-serif;
+    font-size: 1.5em;
+    padding: 0.5em;
+    border: black 0.3vh solid;
+    background-color: #d8b9aa;
+    width: 20vw;
+    height: 15vh;
+    position: absolute;
+    margin-top: 8em;
+    margin-left: 2em;
+    
+} 
+
+.definitionPlace {
+    grid-area: definitionArea;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin-top: 5em;
+}
+
+.definitionSpace {
+    background-color: #d8b9aa;
+    font-family: 'News Cycle', sans-serif;
+    font-size: 1.3em;
+    padding: 0.5em;
+    border: black 0.3vh solid;
+    width: 50vw;
+    height: 15vh;
+
+}
+
+.playerAnswer {
+    font-family: 'News Cycle', sans-serif;
+    font-size: 2em;
+    padding: 0.1em;
+    border: black 0.3vh solid;
+    margin-top: 1em;
+}
+
+.playerActions {
+    grid-area: playerActionsArea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin-top: 1em;
+}
+
+#pasapalabraButton {
+    background-color: #686573;
+    margin-top: 1em;
+}
+
+#okButton {
+    background-color: #686573;
+    margin-top: 1em;
+}
+
+#endThisGameButton {
+    background-color: #686573;
+    margin-top: 1em;
+}
+
+.controlsContainer {
+    grid-area: controlsArea;
+    display: flex;
+    align-items: center;
+    width: auto;
+    justify-content:space-evenly;
+    margin-top: 1em;
+}
+
+#timer {
+    grid-area: controlsArea;
+    display: flex;
+    border: black 0.3vh solid;
+    width: 3vw;
+    height: 3vh;
+    padding: 3vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    /*TODO retomar timer despues*/
+    background-color: #19c107;
+}
+
+
+#pointsSuccess {
+    grid-area: controlsArea;
+    display: flex;
+    background-color: #d8b9aa;
+    border: black 0.3vh solid;
+    width: 3vw;
+    height: 3vh;
+    padding: 3vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+#pointsWrongAnswer {
+    grid-area: controlsArea;
+    display: flex;
+    background-color: #d8b9aa;
+    border: black 0.3vh solid;
+    width: 3vw;
+    height: 3vh;
+    padding: 3vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+#containerOptionsOfEndGame {
+    font-family: 'News Cycle', sans-serif;
+    visibility: hidden;
+
+}
+#exitTheGamePlease {
+    margin-top: 10em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #686573;
+}
+.exit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8744c;
+    width: 11em;
+    height: 2.5em;
+    font-size: 1.5em;
+}
+.stai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #48dd6d;
+    width: 11em;
+    height: 2.5em;
+    font-size: 1.5em;
+}
+
+#endGameLikeWinner {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(10, 187, 63);
+    font-family: 'News Cycle', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    visibility: hidden;
+    margin-top:-6.5em;
+}
+#gameOver {
+    text-align: center;
+    background-image: url("gameOverRight.png");
+    background-position: 0% 100%;
+}
+#rankingLooser {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: 'News Cycle', sans-serif;
+    font-size: 1.5em;
+    color: black;
+    justify-content: center;
+    text-align: center;
+}
+#playAgain {
+    justify-content: center;
+    align-items: center;
+    background-color: #686573;
+    font-size: 1.5em;
+}
+#imgTropy{
+    width: 100%;
+    height: auto;
+
+}
+#imgGameOver {
+    background-image: src="gameover.png";
+    width: 100%;
+    height: auto;
+
+}
