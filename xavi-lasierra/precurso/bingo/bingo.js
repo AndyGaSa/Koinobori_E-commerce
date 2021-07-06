@@ -144,6 +144,15 @@ function newTurn(){
             linea = true;
     }
 
+    return printResults(num, found, linea, bingoWin);
+}
+
+function getRandomNumber(){
+    let aux = Math.round(Math.random() * (randNumers.length - 1));
+    return Number(randNumers.splice(aux,1));
+}
+
+function printResults(num, found, linea, bingoWin){
     //Imprime los resultados
     console.clear();
     console.log(`BINGO\n\nTurno: ${turns.toString()} - Número: ${num.toString()}!`);
@@ -163,11 +172,6 @@ function newTurn(){
     else
         console.log(`\nNada.`);
     return false;
-}
-
-function getRandomNumber(){
-    let aux = Math.round(Math.random() * (randNumers.length - 1));
-    return Number(randNumers.splice(aux,1));
 }
 
 function continuePlaying(endG){
