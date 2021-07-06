@@ -151,8 +151,8 @@ function sortPrintRanking(){
     });
      for(let player of playersList) {
          console.log('El jugador ' + playersList[player].name + ' tiene una puntuación de: ' + playersList[player].points);
-     };
-};
+     }
+}
 
 function chooseQuestionOfLetter(letter){
 
