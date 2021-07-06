@@ -80,6 +80,7 @@
 
              case 2: // Eliminar vuelos:
                  removeFlight();
+                 break;
              default:
                  break;
          }
