@@ -185,9 +185,9 @@ function createCard(){
     line1 = [];
     line2 = [];
     line3 = [];
-    const newCard = createFirstCard();
-    const lines = divideInLines();
-    const theCard = showCard();
+    createFirstCard();
+    divideInLines();
+    showCard();
     alert('Estos son tus números:');
     let start = confirm('Presiona Ok si te gusta tu carton o dale cancelar si prefieres otro carton');
     switch(start) {
