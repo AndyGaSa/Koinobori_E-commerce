@@ -36,7 +36,7 @@ function lastFlights(){
 }
 
 
-
+//comentario para ayudar commit test
 
 function numberOfScales(){
     let numOfScales=0;
