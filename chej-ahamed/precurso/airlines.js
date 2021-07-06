@@ -38,6 +38,7 @@ function lastFlights(){
 
 //comentario para ayudar commit test
 
+
 function numberOfScales(){
     let numOfScales=0;
     for(let i=0;i<flights.length;i++){
