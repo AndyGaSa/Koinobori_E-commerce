@@ -114,17 +114,13 @@ function newTurn(currentLetter, round){
         else
             x++;
     }
-    
+
     for (let value of allLetters){
         dueLetters +=  `${value}, `;
     }
     console.log(`PROGRESO:\n\n${correctLetters}\n${failedLetters}\n${dueLetters}`);
     
     let currentObject = currentGameQuestions.find(({letter}) => letter === currentLetter);
-    /*
-    //Imprime la pregunta
-    console.log(`PREGUNTA:\n\n${currentObject.question}`);
-    */
     
     //Pide respuesta
     let answer;
