@@ -193,7 +193,7 @@ const user = {
  * @param { * } 
  * @returns { * } 
  */
-addActivo = () => {
+const addActivo = () => {
     flights.forEach( flight => flight.activo = true )
 
 }
@@ -203,7 +203,7 @@ addActivo = () => {
  * @param { * }
  * @returns { * }
  */
-login = () => {
+const login = () => {
     user.nombre = adquisicionDatos( 'Dinos tu nombre porfavor' );
     user.admin = adquisicionDatos( 'Introduce si eres Admin o User' ) === 'admin' ? true : false;
 
@@ -215,7 +215,7 @@ login = () => {
  * @param { String } tipo 
  * @returns { String || null }
  */
- adquisicionDatos = ( mensaje, tipo ) => {
+ const adquisicionDatos = ( mensaje, tipo ) => {
     let expresion = new RegExp ( tipo === 'dato' ? /^[A-Za-zñáéíóú<>=,0-9\s]+$/g : tipo === 'num' ? /^[0-9]+$/ : /^([A-Za-zñáéíóú]+[\s]*)+$/);
     let input = prompt( mensaje );
 
@@ -231,7 +231,7 @@ login = () => {
  * @param { Array } vuelosParaMostrar 
  * @returns { * }
  */
-verVuelos = ( vuelosParaMostrar = flights ) => {
+const verVuelos = ( vuelosParaMostrar = flights ) => {
     if( !user.admin ) {
         vuelosParaMostrar.forEach( flight => {
             if( flight.activo ) console.log( `El vuelo con id ${ flight.id } y origen en: ${ flight.from }, y destino: ${ flight.to } tiene un coste de ${ flight.cost }€ y ${ flight.scale ? 'realiza' : 'no realiza ninguna' } escala.` )
@@ -248,7 +248,7 @@ verVuelos = ( vuelosParaMostrar = flights ) => {
  * @param { * }
  * @returns { * }
  */
-verCosteMedio = () => {
+const verCosteMedio = () => {
     let coste = 0;
     flights.forEach( flight => {
         if( flight.activo ) coste += flight.cost;
@@ -263,7 +263,7 @@ verCosteMedio = () => {
  * @param { * }
  * @returns { * }
  */
-verEscalas = () => {
+const verEscalas = () => {
     let escalas = 0;
     let activos = 0;
 
@@ -281,7 +281,7 @@ verEscalas = () => {
  * @param { * }
  * @returns { * }
  */
-verUltimosVuelos = () => {
+const verUltimosVuelos = () => {
     let vuelosActivos = flights.filter( flight => flight.activo === true );
     let ultimosVuelos = vuelosActivos.slice( vuelosActivos.length -5, vuelosActivos.length);
     
@@ -295,7 +295,7 @@ verUltimosVuelos = () => {
  * @param { * }
  * @returns { * }
  */
-crearVuelo = () => {
+const crearVuelo = () => {
     let vuelosActivos = 0;
     let userInput = [ 'Porfavor introduce el nombre del origen.', 'Porfavor introduce el nombre del destino.', 'Porfavor introduce el coste del vuelo. ( Solo digitos )', 'El vueo tiene escalas? ( True | False )' ];
 
@@ -339,7 +339,7 @@ crearVuelo = () => {
  * @param { Number } userInput
  * @returns { Number }
  */
-eliminarVuelo = ( userInput = '' ) => {
+const eliminarVuelo = ( userInput = '' ) => {
     let vueloParaMarcar = '';
 
     console.table( flights )
@@ -354,7 +354,7 @@ eliminarVuelo = ( userInput = '' ) => {
  * Busca los vuelos que cumplan con los parametros de busqueda que el usuario a introducido
  * @param { Array } buscarCoste [ operador ][ Coste ]
 */
-buscarVuelo = ( buscarCoste = '' ) => {
+const buscarVuelo = ( buscarCoste = '' ) => {
     let resultado = new Array;
     let operador = new String;
     let userInput = new Number;
@@ -410,7 +410,7 @@ buscarVuelo = ( buscarCoste = '' ) => {
  * @param { Number } id
  * @returns { String } 
  */
-comprarVuelo = ( id ) => {
+const comprarVuelo = ( id ) => {
     return  flights.find( flight => flight.id === id && flight.activo === true ) ? 'Gracias por su compra, vuelva pronto.' : 'El vuelo indicado no existe';
  
 }
