@@ -239,7 +239,7 @@ function nextTurn() {
 function compareNumbers() {
         let ball = randomPickedNumber;
           for(let j = 0; j < bingoCard.length; j++) {
-             if(bingoCard[j].number === ball) {
+             if(bingoCard[j].number == ball) {
               bingoCard[j].matched = true;
             } 
     
