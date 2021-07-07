@@ -5,10 +5,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.test{
-    background-color: red;
-}
-
 .header {
     position: static;
     width: 100%;
@@ -59,12 +55,12 @@
 
 .small-title2 {
     font-size: 0.8vw;
-    margin: 0 0 0 1.5vw;
+    margin: 1vw 0 0 1.5vw;
 }
 
 .text0 {
     font-size: 0.8vw;
-    margin: 0 0 1.5vw 2vw;
+    margin: 0 0 0 2vw;
 }
 
 .hability-flex {
