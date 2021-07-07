@@ -4,7 +4,7 @@ function calculatorPro() {
 
     do {
         newNumber = prompt('Enter a number or press cancel to stop');
-        isANumber = parseFloat(newNumber); // Se convierte en integer el string que pasa el usuario.
+        let isANumber = parseFloat(newNumber); // Se convierte en integer el string que pasa el usuario.
         if (!isANumber) { // En caso de que los datos introducidos no sean números se informa al usuario.
 
             console.log('Not a number');
