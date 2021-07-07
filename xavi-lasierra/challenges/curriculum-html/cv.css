@@ -70,11 +70,34 @@
     margin-bottom: 5px;
 }
 
+.text1 {
+    text-align: left;
+    font-size: 1vw;
+    color: white;
+    margin: 20px 0.6vw;
+}
+
 .hide {
     position: absolute;
     z-index: -100;
     width: 0px;
     height: 0;
+}
+
+.info-list {
+    list-style-type: none;
+    font-size: 1.1vw;
+    font-weight: bold;
+    color: white;
+}
+
+.info-list li{
+    margin: 15px 0;
+}
+
+.whiteIcon {
+    color: white;
+    margin-right: 0.6vw;
 }
 
 .footer {
