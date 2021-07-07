@@ -148,8 +148,8 @@ function costOrder(money, values = []) {
 
 function priceUp(money, values = []) {
   let moreThan = [];
-  for (i = 0; i < values.length; i++) {
-    let flight = values[i];
+
+  for (let flight of values) {
     if (flight.cost > money) {
       moreThan.push(
         `vuelo desde ${flight.from} a ${flight.to} que vale ${flight.cost} con ID ${flight.id}`
