@@ -224,7 +224,7 @@ function puntosUser() {
 
 function ranking() {
   // pasaremos los datos y puntuaciones de nuestro usuario y lo comparamos con el ranking
-  player1 = {
+  let player1 = {
     nombre: user,
     puntos: puntosPartida,
     intentos: puntosRonda,
