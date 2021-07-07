@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: static;
+    width: 100%;
+    height: 50px;
+    background-color: orange;
+}
+
+.cv-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    background-color: green;
+
+}
+
+.center-info {
+    width: 60vw;
+    background-color: red;
+}
+
+.side-info {
+    width: 16vw;
+    margin: 0 2vw;
+    background-color: blue;
+}
+
+.curriculum-photo {
+    border-radius: 50%;
+    width: 14vw;
+    height: 14vw;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: orange;
+}
