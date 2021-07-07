@@ -7,6 +7,7 @@ let resultado = 0;
 let visor = (pantalla.textContent = "Sky lab");
 let arrayOperadores = [];
 let decimalesSiNO = false;
+let arrayValues = [];
 
 let buttonC = document.getElementById("btn-C");
 buttonC.addEventListener("click", (event) => {
