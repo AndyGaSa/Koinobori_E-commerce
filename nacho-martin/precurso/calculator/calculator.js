@@ -28,7 +28,7 @@ function secondNumber() { //Esta función solicita el 2o número
 
 function operator(num1, num2) { //Función para obtener los resultados
     if (!num2) { //Si el usuario solo introduce un número se realizará la raíz cuadrada.
-        squareRoot = Math.sqrt(num1); // Redondeamos la raíz cuadrada de num1 * 1000 para eliminar los decimales y lo dividimos entre 1000 para fijar en 3 el máximo de decimales.
+        let squareRoot = Math.sqrt(num1); // Redondeamos la raíz cuadrada de num1 * 1000 para eliminar los decimales y lo dividimos entre 1000 para fijar en 3 el máximo de decimales.
         squareRoot = decimales(squareRoot);
         console.log(`The square root of the number is ${squareRoot}`);
     } else { // Si los argumentos son 2 números, se almacenan los resultados de las cuatro operaciones en un array y se le indican al usuario de forma legible

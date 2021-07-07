@@ -1,12 +1,12 @@
-function calculatorPro() {
-    let newNumber;
-    let numberList = [];
+let newNumber;
+let numberList = [];
+let isANumber;
 
+function askNumber() {
     do {
         newNumber = prompt('Enter a number or press cancel to stop');
         isANumber = parseFloat(newNumber); // Se convierte en integer el string que pasa el usuario.
         if (!isANumber) { // En caso de que los datos introducidos no sean números se informa al usuario.
-
             console.log('Not a number');
         } else {
             numberList.push(isANumber) // Almacenamos el número (ya como integer) en el array }
@@ -14,9 +14,12 @@ function calculatorPro() {
         }
     } while (newNumber !== null && isANumber) // Si el usuario presiona cancelar o introduce un dato no númerico se dejan de solicitar datos
     if (numberList[numberList.length - 1] === null || !numberList[numberList.length - 1]) { // Si el usuario presiona cancelar o escribe algo que no sea un número, el ultimo objeto sera nulo o NaN, por lo que lo quitamos del arreglo.
-        var popped = numberList.pop();
+        numberList.pop();
     }
+}
 
+function calculatorPro() {
+    askNumber();
     switch (numberList.length) { //En función de la cantidad de números en el arreglo se realizara una operación diferente.
         case 0: //Si no hay números se le indica al usuario que introduzca al menos un número.
             console.log('Introduce at least 1 number');
@@ -49,6 +52,7 @@ function calculatorPro() {
     let newOp = prompt('Do another operation? y/n'); //Se le solicita al usuario si quiere realizar otra operación
 
     if (newOp === 'y') {
+        numberList = [];
         calculatorPro(); //En caso de que el usuario indica que si se llama de forma recursiva a la función calculatorPro
     } else {
         console.log('Bye!') //En caso de que indique que no, se finaliza la ejecución del programa

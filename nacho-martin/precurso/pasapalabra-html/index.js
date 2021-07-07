@@ -59,9 +59,9 @@ const ranking = [
 
 //Primera sección: Esta sección corresponde al pre-juego. En ella se presenta el mismo y se solicita al usuario los datos para empezar
 function establecerDatos() { //Función para establecer el tiempo de partida
-    const temporizador = document.querySelector('#cuadroTiempo')
+    const cuadroTiempo = document.querySelector('#cuadroTiempo')
     const usuario = document.querySelector('#cuadroNombre')
-    temporizador.addEventListener('input', (e) => { // Se va validando la cantidad de segundos que escribe el jugador
+    cuadroTiempo.addEventListener('input', (e) => { // Se va validando la cantidad de segundos que escribe el jugador
         tiempo = parseInt(e.target.value); //Se pasan a números los segundos y se establece el valor de tiempo 
     })
     usuario.addEventListener('input', (e) => { //Se guarda el nombre del jugador
@@ -346,10 +346,10 @@ async function mostrarResultado() { //Función asíncrona para mostrar los resul
 function nuevaPartida() { //Función para jugar de nuevo
     const intro = document.querySelector('.presentacion') //Elementos html que usa la función
     const resultados = document.querySelector('.resultado');
-    const tiempo = document.querySelector('#cuadroTiempo');
+    const cuadroTiempo = document.querySelector('#cuadroTiempo');
     const contadorAciertos = document.querySelector('.contadorAciertos');
     let reloj = document.querySelector('.tiempo');
-    tiempo.value = "";
+    cuadroTiempo.value = "";
 
     limpiarTexto() //Se restablecen las variables necesarias para empezar de nuevo
     questions = [];
