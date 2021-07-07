@@ -16,6 +16,10 @@ body {
     min-height: 100%;
 }
 
+main {
+    display: flex;
+}
+
 h1 {
     font-size: 32px;
 }
@@ -44,6 +48,8 @@ p {
 nav {
     display: flex;
     justify-content: space-between;
+    margin: 0 30px;
+    padding: 5px;
 }
 
 a {
@@ -65,6 +71,11 @@ article {
     flex-direction: column;
 }
 
+li {
+    width: fit-content;
+    margin: 0 auto;
+}
+
 aside {
     display: flex;
     flex-direction: column;
@@ -72,4 +83,8 @@ aside {
 
 footer {
     margin-bottom: 0;
+}
+
+.hidden {
+    display: none;
 }
