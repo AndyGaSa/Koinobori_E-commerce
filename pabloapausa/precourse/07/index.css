@@ -1,0 +1,74 @@
+*, *::before, *::after {
+	padding: 0;
+	margin: 0;
+	color: rgb(240, 240, 240);
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+button {
+	border: 0;
+}
+
+.calculator {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: grid; 
+	grid: repeat(6, 47px) / repeat(4, 57px);
+	gap: 1px;
+}
+
+.rectangle {
+	position: absolute;
+	z-index: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 233px;
+	height: 289px;
+	background-color:rgb(80, 80, 80);
+	border-radius: 10px;
+}
+
+.output {
+	grid-column: 1 / -1;
+	background-color: rgb(80, 80, 80);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	font-size: 1.5em;
+	margin: auto; 
+}
+
+.main {
+	background-color: rgb(100, 100, 100);
+	font-size: 1.25em;
+}
+
+.number {
+	background-color: rgb(120, 120, 120);
+	font-size: 1.5em;
+}
+
+.operator, .equals {
+	background-color: rgb(100, 120, 80);
+	font-size: 1.5em;
+}
+
+.number:active, .main:active {
+	filter: brightness(120%);
+}
+
+.operator:active, .equals:active {
+	opacity: 0.80;
+}
+
+#cero {
+	grid-column: span 3; 
+	border-bottom-left-radius: 10px;
+}
+
+.equals {
+	border-bottom-right-radius: 10px;
+}
