@@ -97,7 +97,7 @@ function airlines() {
     let contEscalas = 0;
     let suma = 0;
     let UltimosVuelos = [];
-    for (i = 0; i <= 10; i++) {
+    for (let i = 0; i <= 10; i++) {
 
         if (flights[i].scale === false) {
             escala = 'no realiza ninguna escala.';
@@ -114,7 +114,7 @@ function airlines() {
         }
 
     }
-    avg = suma / 11;
+    let avg = suma / 11;
     let DestinosToString = JSON.stringify(UltimosVuelos);
     console.log('El precio medio de los vuelos es de ' + avg + '$');
     console.log(contEscalas + ' vuelos tienen escalas.');
@@ -122,4 +122,4 @@ function airlines() {
     return Username;
 }
 
-const Username = airlines();
+const username = airlines();
