@@ -3,7 +3,7 @@ var numberList= [];
 
 function calculatorPro() {
    
-    valueResp = prompt('Introduzca un número o presione a cancelar');
+    let valueResp = prompt('Introduzca un número o presione a cancelar');
      {
         if(isNaN(valueResp)){
             intentar();
@@ -87,9 +87,9 @@ function calculator() {
     }
 
 function despedida() {
-    let despedida;
-    despedida = prompt('¿Desea volver a realizar otra operación? y/n'); {
-        if(despedida === "y" || despedida === "Y"){
+    let despedidas;
+    despedidas = prompt('¿Desea volver a realizar otra operación? y/n'); {
+        if(despedidas === "y" || despedidas === "Y"){
             console.clear();
             calculatorPro();
 
