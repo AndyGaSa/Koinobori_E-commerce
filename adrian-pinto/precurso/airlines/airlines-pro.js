@@ -358,9 +358,9 @@ const eliminarVuelo = () => {
  * @param { Array } buscarCoste [ operador ][ Coste ]
 */
 const buscarVuelo = ( buscarCoste = '' ) => {
-    let resultado = new Array;
-    let operador = new String;
-    let userInput = new Number;
+    let resultado = [];
+    let operador = '';
+    let userInput = 0;
 
     if( Number.isInteger( buscarCoste ) ) { 
         return buscarCoste;
