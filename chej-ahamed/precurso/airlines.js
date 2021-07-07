@@ -80,12 +80,13 @@ function flightList(){
 }
 function user(){
     let user= prompt(`${clientName} Please input if you are an Admin or User`);
-    if(user===null){
+    if (user === null) {
         alert("Not valid input")
-    }else if(user.toUpperCase()==="ADMIN")
+    } else if (user.toUpperCase() === "ADMIN") {
         if(flights.length>=15){
             alert("No more flights can be added!");
-        }else (flights.length<15){
+        } else (flights.length < 15)
+        {
             let addFlight=prompt.toUpperCase(("Please input Y is you wish to add a flight!"));
             if (addFlight==="Y"){
                 let idNumber=parseFloat(prompt("Please input the ID number of the flight"));
@@ -116,7 +117,8 @@ function user(){
 
         }
 
-    }else (user.toUpperCase()==="USER"){
+    } else (user.toUpperCase() === "USER")
+    {
         console.log("test");
     }
 
