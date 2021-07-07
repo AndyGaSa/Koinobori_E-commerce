@@ -309,12 +309,11 @@ const crearVuelo = () => {
             this.activo = true;
         }
 
-    };
+    }
 
     flights.forEach( flight => flight.activo ? vuelosActivos++ : vuelosActivos )
     if( vuelosActivos > 15 ) {
         alert ( 'No pueden haber mas de 15 vuelos activos.' )
-        return;
 
     } else {
         for( message in userInput ) {
