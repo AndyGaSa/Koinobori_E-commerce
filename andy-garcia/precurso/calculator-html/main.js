@@ -107,7 +107,6 @@ function getInputValue() {
   printValue(input);
 }
 let Gif = document.getElementById('start');
-Gif.addEventListener("click", Start());
 
 function Start(){
   var calculadora = document.getElementById('calc_body');
