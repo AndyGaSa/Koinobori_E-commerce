@@ -216,8 +216,11 @@ const login = () => {
  * @returns { String || null }
  */
  const adquisicionDatos = ( mensaje, tipo ) => {
-    let expresion = new RegExp ( tipo === 'dato' ? /^[A-Za-zñáéíóú<>=,0-9\s]+$/g : tipo === 'num' ? /^[0-9]+$/ : /^([A-Za-zñáéíóú]+[\s]*)+$/);
+    let expresion;
     let input = prompt( mensaje );
+    let evalChain = selectipo( tipo ); 
+
+    expresion = new RegExp( evalChain )
 
     if( input === null ) return null
     if( expresion.test( input ) ) return input === null ? null : input.toLocaleLowerCase().replace(/\s+/g, '');
@@ -461,4 +464,21 @@ const mostrarModal = ( user ) => {
 `, 'dato' );
 
     return userInput
+}
+
+/**
+ * Nos retorna un expreg dependiendo del tipo indicado
+ * @param { String } tipo 
+ * @returns { String }
+ */
+const selectipo = ( tipo ) => {
+    let types = {
+        'dato': /^[A-Za-zñáéíóú<>=,0-9\s]+$/g,
+        'num': /^[0-9]+$/,
+        'default': /^([A-Za-zñáéíóú]+[\s]*)+$/
+    };
+    return types[tipo] || types['default']
+    
+    
+    
 }
