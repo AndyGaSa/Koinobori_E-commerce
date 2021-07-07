@@ -1,4 +1,4 @@
-//Flight list
+//Flight listisisisisisis
 let flights = [
 
     { id: 00, to: 'Bilbao', from: 'Barcelona', cost: 1600, scale: false },
