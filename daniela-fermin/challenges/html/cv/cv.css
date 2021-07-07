@@ -1,0 +1,25 @@
+header{
+    background-color: black;
+    color:blanchedalmond;
+
+}
+
+address {
+    font-family: Arial, Helvetica, sans-serif;
+    align-content: flex-end;
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 36px;
+
+}
+
+h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 28px;
+}
+
+ul{
+    font-family: Arial, Helvetica, sans-serif;
+}
