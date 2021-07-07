@@ -43,7 +43,8 @@ p {
     height: 1vh;
     text-align: center;
     cursor: pointer;
-    justify-self:center
+    justify-self:center;
+    
 }
 
 ul {
@@ -78,7 +79,7 @@ a {
 }
 
 a:hover {
-    color: gray;
+    color: rgb(21, 78, 116);
     opacity: 0.5;
 }
 
