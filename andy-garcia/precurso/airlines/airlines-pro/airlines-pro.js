@@ -97,10 +97,10 @@ function admin() {
     let cost;
     let scale;
     let decisionUser = true;
-    while (decisionUser != false) {
+    while (decisionUser) {
         decisionUser = confirm('Quieres añadir otro vuelo? Cancela si quieres parar');
         if (id < 16) {
-            if (decisionUser != false) {
+            if (decisionUser) {
                 id++;
                 to = prompt('Introduce la destinacion del nuevo vuelo');
                 from = prompt('Introduce el punto de salida del nuevo vuelo');
@@ -120,9 +120,9 @@ function admin() {
     }
     let borrarVuelo = true;
     let idVuelo;
-    while (borrarVuelo != false) {
+    while (borrarVuelo) {
         borrarVuelo = confirm('Quieres eliminar algun vuelo? ');
-        if (borrarVuelo != false) {
+        if (borrarVuelo) {
             idVuelo = Number(prompt('Dime el id del vuelo que quieres borrar:'));
             flights = flights.filter(function (flights) {
                 return flights.id !== idVuelo;

@@ -61,7 +61,7 @@ function calculator(parametro1, parametro2){
             multiplicar(parametro1, parametro2),
             dividir(parametro1, parametro2)
         ];
-        for(i=0; i<resultado.length; i++){
+        for(let i=0; i<resultado.length; i++){
             console.log(resultado[i]);
         }
     }
