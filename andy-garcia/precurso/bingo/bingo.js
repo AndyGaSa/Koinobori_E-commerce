@@ -19,16 +19,7 @@ function Bingo(username) {
         score: 20
     };
 
-    function compare(Ranking) {
-        if (Ranking.score < Ranking.score) {
-            return -1;
-        }
-        if (Ranking.score > Ranking.score) {
-            return 1;
-        }
-        return 0;
-    }
-    Ranking.sort(compare);
+  
     console.table(Ranking);
     let Carton = {};
     Carton = GenerarCarton();
