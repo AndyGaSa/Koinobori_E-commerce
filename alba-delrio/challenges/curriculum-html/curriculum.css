@@ -11,7 +11,7 @@ body{
 header{
     background-color: #ADDCCA;
     width: 100%;
-    height: 100vh;  
+    height: auto;  
 }
 
 #navegation-menu{
@@ -22,7 +22,7 @@ header{
     align-items: flex-end;
 }
 #menu-options{
-    visibility:hidden;
+    visibility:visible;
     margin:100px,0px,0px,0px;
     font-size:40px;
     display: flex;
@@ -80,4 +80,25 @@ img{
   height: auto;
   margin: 0;
   padding: 0;
+}
+#experience-education{
+    background-color:#F7F8F3;
+    width:100%;
+    height: auto;
+
+}
+h2{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    color:#FF6F5E;
+    
+
+}
+.article{
+    margin: 20px;
+    text-align: justify;
+}
+#tittle-job{
+    color:#ADDCCA;
 }
