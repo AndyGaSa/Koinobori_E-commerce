@@ -166,7 +166,6 @@ function gcarton() {
             for (let j = 0; j < valoresUsados.length; j++) {
               if(generarValor === valoresUsados[j] || generarValor === 0){
                 generarValor = parseInt((Math.random()*100).toFixed(0));
-                j = 0;
               }
             }
             valoresUsados.push(generarValor);
@@ -188,7 +187,6 @@ function numberoBombo(params) {
     for(let i = 0; i < valoresUsadosBombo.length; i++){
       if(nuevoValor === valoresUsadosBombo[i]){
         nuevoValor = parseInt((Math.random()*100).toFixed(0));
-        i = 0;
       }
     }
     check = true;

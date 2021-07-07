@@ -1,14 +1,14 @@
 let flights = [
-  { id: 00, to: 'Bilbao', from: 'Barcelona', cost: 1600, scale: false },
-  { id: 01, to: 'New York', from: 'Barcelona', cost: 700, scale: false },
-  { id: 02, to: 'Los Angeles', from: 'Madrid', cost: 1100, scale: true },
-  { id: 03, to: 'Paris', from: 'Barcelona', cost: 210, scale: false },
-  { id: 04, to: 'Roma', from: 'Barcelona', cost: 150, scale: false },
-  { id: 05, to: 'London', from: 'Madrid', cost: 200, scale: false },
-  { id: 06, to: 'Madrid', from: 'Barcelona', cost: 90, scale: false },
-  { id: 07, to: 'Tokyo', from: 'Madrid', cost: 1500, scale: true },
-  { id: 08, to: 'Shangai', from: 'Barcelona', cost: 800, scale: true },
-  { id: 09, to: 'Sydney', from: 'Barcelona', cost: 150, scale: true },
+  { id: 0, to: 'Bilbao', from: 'Barcelona', cost: 1600, scale: false },
+  { id: 1, to: 'New York', from: 'Barcelona', cost: 700, scale: false },
+  { id: 2, to: 'Los Angeles', from: 'Madrid', cost: 1100, scale: true },
+  { id: 3, to: 'Paris', from: 'Barcelona', cost: 210, scale: false },
+  { id: 4, to: 'Roma', from: 'Barcelona', cost: 150, scale: false },
+  { id: 5, to: 'London', from: 'Madrid', cost: 200, scale: false },
+  { id: 6, to: 'Madrid', from: 'Barcelona', cost: 90, scale: false },
+  { id: 7, to: 'Tokyo', from: 'Madrid', cost: 1500, scale: true },
+  { id: 8, to: 'Shangai', from: 'Barcelona', cost: 800, scale: true },
+  { id: 9, to: 'Sydney', from: 'Barcelona', cost: 150, scale: true },
   { id: 10, to: 'Tel-Aviv', from: 'Madrid', cost: 150, scale: false } ];
 
   start();
@@ -16,23 +16,18 @@ let flights = [
   function start(){
     let costeMedio;
     let realizanEscala = 0;
-    let arr = [];
     //first request username:
     let yourname = prompt("Type your name: ");
     console.log("Welcome " + yourname);
 
     for (let r = 0; r < flights.length; r++) {
       console.log("El vuelo con origen " + flights[r].from + " y destino " + flights[r].to + "tiene un coste de " + flights[r].cost + "€ y " + (flights[r].scale ? "se" : "no se") + " realizan escalas");
-      costeMedio =+ flights[r].cost;
-      flights[r].scale ? realizanEscala++ : realizanEscala;
-      flights[r].id >= flights.length-5 ? arr.push(flights[r].to) : null;
+      costeMedio += flights[r].cost;
+      
     }
     console.log("El coste medio es: " + (costeMedio/flights.length).toFixed(2) + "€");
     console.log("Realizan escala: " + realizanEscala + " vuelos");
     console.log("El destino de los ultimos 5 vuelos de hoy son:")
-    arr.forEach(element => {
-      console.log(element);
-    });
 
     // Ejecutamos la función login para pedir al usuario si es 'Admin' o 'User'.
     login();
@@ -176,13 +171,14 @@ let flights = [
    //Es verifica que el valor sigui correcte i que estigui present en el Array.
    do {
     if(typeof price == 'number'){
-      for(let i = 0; i < flights.length; i++){
-       if(flights[i].cost == price){
-         vuelos.push(flights[i]);
+      for(let i of flights){
+       if(i.cost == price){
+         vuelos.push(i);
        }
       }
     }else{
       alert("Valor incorrecto!");
+      check1 = true;
     }
    } while (!check1);
 
