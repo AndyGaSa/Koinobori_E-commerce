@@ -173,7 +173,7 @@ function numerosBombo() {
     numeroDelBombo = Math.floor(Math.random() * 90) + 1;
     if (!listaNumerosBombo.includes(numeroDelBombo)) {
       listaNumerosBombo.push(numeroDelBombo);
-      preguntaTurno = confirm(
+      let preguntaTurno = confirm(
         //preguntamos a cada numero si se quiere seguir de ser asi se comparan los numeros con nuestra bingoCard
         `${user} salio el numero ${numeroDelBombo}, seguimos para bingo?`
       );
