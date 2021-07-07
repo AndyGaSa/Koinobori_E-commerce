@@ -1,0 +1,135 @@
+body {
+    font-family: 'Cantarell', sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 13vh;
+}
+
+h2 {
+    font-size: 7vh;
+    ;
+}
+
+.nav-link {
+    width: 100%;
+    position: sticky;
+    margin: 0px;
+    top: 0px;
+    font-size: 2vw;
+    height: 1vh;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.ul-header {
+    background-color: rgb(150, 58, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 15px 30px;
+}
+li {
+    align-items: center;
+    justify-items: center;
+}
+li a {
+    text-decoration: none;
+    margin-right: 25px;
+    color: white;
+    font-size: 3vh;
+}
+
+a {
+    opacity: 1;
+}
+
+a:hover {
+    color: gray;
+    opacity: 0.5;
+}
+
+#bigContainer {
+    display: grid;
+    grid-template-areas: "foto expeeriencia", "otrosDatos experiencia";
+}
+
+#myPhoto {
+    background-color: blue;
+    grid-area: foto;
+}
+
+img {
+    border-radius: 50%;
+    width: 20vw;
+    height: auto;
+}
+
+#leftColumn {
+    background-color: blueviolet;
+    grid-area: otrosDatos;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: 40vw;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
+}
+
+#contactMe {
+    background-color: brown;
+}
+
+#aptitudes {
+    background-color: burlywood;
+}
+
+#references {
+    background-color: cadetblue;
+}
+
+#rightColumn {
+    background-color: chartreuse;
+    grid-area: experiencia;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
+}
+
+#workExperience {
+    background-color: chocolate;
+    /* -ms-flex-order: 0;
+    order: 0;
+    flex: 0 1 auto;
+    flex: 0 1 auto;
+    align-self: auto;
+    text-align: auto;*/
+}
+
+}
+
+#academicStudies {
+    background-color: coral;
+
+}
+
+#technicalKnowledge {
+    background-color: cornflowerblue;
+
+}
+
+#webs {
+    background-color: crimson;
+}
