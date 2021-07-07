@@ -1,4 +1,5 @@
 
+let escalasVuelos=undefined;
 let flights = [
   { id: 0, to: "Bilbao", from: "Barcelona", cost: 1600, scale: false },
   { id: 1, to: "New York", from: "Barcelona", cost: 700, scale: false },
