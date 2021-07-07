@@ -151,8 +151,8 @@ function pasapalabra() {
     function showTheDefinition(questionForThisLetter) {
         let answerOfThePlayer = window.prompt(questionForThisLetter);
         if (answerOfThePlayer !== null) {
-            answerOfThePlayer.trim();
-            answerOfThePlayer.toLowerCase();
+            answerOfThePlayer = answerOfThePlayer.trim();
+            answerOfThePlayer = answerOfThePlayer.toLowerCase();
         }
         return answerOfThePlayer
     };
