@@ -4,3 +4,10 @@
     box-sizing: border-box;
 }
 
+header {
+    background-color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+    color:burlywood;
+    padding-top: 100px;
+    text-align: center;
+}
