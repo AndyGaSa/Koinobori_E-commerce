@@ -8,7 +8,7 @@ let visor = (pantalla.textContent = "Sky lab");
 let arrayOperadores = [];
 let decimalesSiNO = false;
 let arrayValues = [];
-
+let deleteOnlyOne =[];
 let buttonC = document.getElementById("btn-C");
 buttonC.addEventListener("click", (event) => {
   borradoCompleto(event);
@@ -31,7 +31,7 @@ buttonBackOne.addEventListener("click", (event) => {
   deleteOne(event);
 });
 function deleteOne(event) {
-    deleteOnlyOne = event.target.innerHTML;
+   let deleteOnlyOne = event.target.innerHTML;
     currentValueArray = currentValueArray.slice(0, currentValueArray.length - 1);
     currentValueNumber = currentValueArray.flat().join("");
     pantalla.textContent = currentValueNumber;
