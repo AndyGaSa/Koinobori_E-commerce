@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header {
@@ -23,6 +23,7 @@
 
 .center-info {
     width: 50vw;
+    margin: 20px 0;
     background-color: grey;
 }
 
@@ -56,7 +57,7 @@
 
 .name {
     text-align: center;
-    font-size: 1.7vw;
+    font-size: 2vw;
     color: white;
     font-weight: 700;
     margin: 20px 0;
@@ -66,6 +67,14 @@
     text-align: center;
     font-size: 1.6vw;
     color: white;
+    margin-bottom: 5px;
+}
+
+.hide {
+    position: absolute;
+    z-index: -100;
+    width: 0px;
+    height: 0;
 }
 
 .footer {
