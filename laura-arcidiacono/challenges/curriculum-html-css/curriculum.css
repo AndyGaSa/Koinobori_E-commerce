@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+}
 body {
     font-family: 'Cantarell', sans-serif;
 }
@@ -8,14 +14,27 @@ header {
 
 h1 {
     font-size: 13vh;
+    text-align: center;
 }
 
 h2 {
     font-size: 7vh;
-    ;
+    text-align: center;
+}
+h3 {
+    font-size: 4vh;
+    text-align: center;
+}
+h5 {
+    display: none;
+}
+p {
+    text-align: justify;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
 }
 
-.nav-link {
+#nav-link {
     width: 100%;
     position: sticky;
     margin: 0px;
@@ -23,29 +42,35 @@ h2 {
     font-size: 2vw;
     height: 1vh;
     text-align: center;
+    cursor: pointer;
+    justify-self:center
 }
 
 ul {
     list-style-type: none;
+    justify-self:center
 }
 
 .ul-header {
-    background-color: rgb(150, 58, 255);
+    background-color: cadetblue;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 15px 30px;
+    padding: 0px 30px;
+    justify-self:center
 }
 li {
     align-items: center;
     justify-items: center;
+    justify-self:center
 }
 li a {
     text-decoration: none;
     margin-right: 25px;
     color: white;
     font-size: 3vh;
+    justify-self:center
 }
 
 a {
@@ -59,77 +84,89 @@ a:hover {
 
 #bigContainer {
     display: grid;
-    grid-template-areas: "foto expeeriencia", "otrosDatos experiencia";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "foto experiencia", "otrosDatos experiencia";
 }
-
+section {
+    display: block;
+}
 #myPhoto {
     background-color: blue;
     grid-area: foto;
 }
 
 img {
+    display: flex;
     border-radius: 50%;
     width: 20vw;
     height: auto;
+
 }
 
 #leftColumn {
-    background-color: blueviolet;
-    grid-area: otrosDatos;
+
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    flex-basis: 40vw;
-    justify-content: space-around;
-    align-items: center;
-    align-content: flex-start;
+    align-items:center;
+    justify-content: space-between;
+    padding: 4vh;
+    text-align: center;
 }
 
 #contactMe {
     background-color: brown;
+    width: 30vw;
+    padding: 2vh;
+    justify-self:center
 }
 
 #aptitudes {
-    background-color: burlywood;
+
+    width: 30vw;
+    padding: 2vh;
+    justify-self:center
 }
 
 #references {
     background-color: cadetblue;
+    width: 30vw;
+    padding: 2vh;
 }
 
 #rightColumn {
-    background-color: chartreuse;
-    grid-area: experiencia;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     align-content: flex-start;
+    justify-self:center;
+    text-align: center;
 }
 
 #workExperience {
-    background-color: chocolate;
-    /* -ms-flex-order: 0;
-    order: 0;
-    flex: 0 1 auto;
-    flex: 0 1 auto;
-    align-self: auto;
-    text-align: auto;*/
-}
-
+    justify-self:center;
+    width: 100%;
+    padding: 2vh;
 }
 
 #academicStudies {
-    background-color: coral;
-
+    justify-self:center;
+    width: 100%;
+    padding: 2vh;
 }
 
 #technicalKnowledge {
-    background-color: cornflowerblue;
-
+    justify-self:center;
+    width: 100%;
+    padding: 2vh;
 }
 
 #webs {
-    background-color: crimson;
+    background-color: brown;
+    text-align: center;
+    justify-self:center
+    height: 5vh;
 }
