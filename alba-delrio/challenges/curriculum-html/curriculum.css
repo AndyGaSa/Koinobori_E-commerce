@@ -4,3 +4,80 @@
     box-sizing: border-box;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+body{
+    
+}
+
+header{
+    background-color: #ADDCCA;
+    width: 100%;
+    height: 100vh;  
+}
+
+#navegation-menu{
+    margin:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    align-items: flex-end;
+}
+#menu-options{
+    visibility:hidden;
+    margin:100px,0px,0px,0px;
+    font-size:40px;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: center;
+    background-color:#F7F8F3;
+    opacity:.5;
+}
+#menu-options>li{
+    margin:5px;
+    list-style:none;
+
+}
+#name{
+    color:#2C3D63;
+    font-size:30px;
+}
+#position{
+    color:#FF6F5E;
+    display:flex;
+    flex-direction: column;
+    justify-content:right;
+    align-items: right;
+}
+#about-me{
+    width:100%;
+    height:100vh;
+    background-color:#2C3D63;
+}
+#personal-details{
+    margin: 30px;
+    list-style:none;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+#personal-details> li{
+    margin:10px;
+}
+#field-tittle{
+    color:#FF6F5E;
+    margin: 20px;
+}
+#field-content,#presentation{
+    color: #ADDCCA;
+}
+#presentation{
+    margin:50px;
+    text-align: justify;
+}
+img{
+  width: 20%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
