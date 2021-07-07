@@ -334,7 +334,7 @@ function pasapalabra() {
     }
     //Here the program start to run
     let finalUserName = sayHi();
-    let startToPlay = welcome(finalUserName);
+    welcome(finalUserName);
     if (startToPlay === null) {
         sayGoodBye(finalUserName);
     } else {
