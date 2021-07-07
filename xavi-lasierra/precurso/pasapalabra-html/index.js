@@ -407,8 +407,8 @@ function playAgain(home){
 
     //Reset valores rosco
     let x = document.getElementById('rosco').childNodes;
-    for(let i=0; i<x.length; i++){
-        x[i].className = 'normal-circle';
+    for (let circleLetter of x){
+        circleLetter.className = 'normal-circle';
     }
     currentGameQuestions.forEach(function (ob) {
         ob.status = 0;
