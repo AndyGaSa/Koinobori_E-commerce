@@ -4,14 +4,12 @@
     box-sizing: border-box;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-body{
-    
-}
+
 
 header{
     background-color: #ADDCCA;
     width: 100%;
-    height: auto;  
+    height: 100vh;  
 }
 
 #navegation-menu{
@@ -39,7 +37,7 @@ header{
 }
 #name{
     color:#2C3D63;
-    font-size:30px;
+    font-size:50px;
 }
 #position{
     color:#FF6F5E;
@@ -47,6 +45,7 @@ header{
     flex-direction: column;
     justify-content:right;
     align-items: right;
+    font-size: larger;
 }
 #about-me{
     width:100%;
@@ -84,7 +83,7 @@ img{
 #experience-education{
     background-color:#F7F8F3;
     width:100%;
-    height: auto;
+    height:100vh;
 
 }
 h2{
@@ -96,9 +95,46 @@ h2{
 
 }
 .article{
-    margin: 20px;
+    
     text-align: justify;
 }
-#tittle-job{
+.tittle-job{
     color:#ADDCCA;
+}
+#skills-knowledge{
+    background-color:#ADDCCA;
+    width:100%;
+    height:50vh;
+    padding:20px;
+}
+#contact{
+    background-color:#2C3D63;
+}
+footer{
+    background-color:#2C3D63;
+    display: flex;
+    justify-content:center;
+    color:#ADDCCA;
+}
+.container{
+    display:flex;
+}
+.box{
+    flex:1;
+    margin:0 8px;
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+}
+.box>h3{
+    color:#2C3D63;
+    margin:10px;
+}
+.content{
+    flex:1;
+}
+.content>li{
+    list-style: none;
+    color:#F7F8F3;
+    margin:10px;
 }
