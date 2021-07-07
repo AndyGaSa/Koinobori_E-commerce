@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+strong{
+    color: rgb(37, 151, 37);
+}
+
+.imagen-perfil{
+    height: 100px;
+    width: 100px;
+}
+.aboutme{
+    justify-content:end;
+    margin: 15px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: stretch;
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: 30px;
+    margin-left: 30px;
+} 
+.container-barra-lateral{
+    order: 1;
+    flex: 1 2 auto;
+    align-self:stretch;
+    margin-right: 30px;
+    background-color: rgb(25, 49, 25);
+    color: oldlace;
+}
+.cuerpo{
+    order: 2;
+    flex: 1 2 auto;
+    align-self: flex-start;
+}
+header{
+    align-content: center;
+    align-items: flex-start;
+    margin:15px;
+}
+.barra-progress{
+    color: olivedrab;
+}
