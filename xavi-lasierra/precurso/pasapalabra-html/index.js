@@ -299,7 +299,7 @@ function calculateNextTurn(){
             asciiLetter++;
     }while(gameRound != 1 && currentGameQuestions.find(({letter}) => letter === String.fromCharCode(asciiLetter)).status !== 0);
 
-    newTurn(String.fromCharCode(asciiLetter).toString(), gameRound);
+    newTurn(String.fromCharCode(asciiLetter).toString());
 
     document.getElementById('answer-correction').classList.add('disabled');
     document.getElementById('game').classList.remove('disabled');
@@ -351,9 +351,7 @@ function endGame(endType) {
 //Mira si entra al ranking
 function rankingIn(){
     let inRank = false;
-    if(goods > ranking[9].good)
-        inRank = true;
-    else if((goods === ranking[9].good && bads < ranking[9].bad) || (goods === ranking[9].good && bads === ranking[9].bad && gameTime >= ranking[9].time))
+    if((goods > ranking[9].good) || (goods === ranking[9].good && bads < ranking[9].bad) || (goods === ranking[9].good && bads === ranking[9].bad && gameTime >= ranking[9].time))
         inRank = true;
     
     //Si entra en el ranking
