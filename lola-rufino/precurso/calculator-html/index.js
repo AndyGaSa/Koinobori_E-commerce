@@ -156,7 +156,7 @@ function operationInProcess() {
             currentResult = divi(currentResult, newNumber);
             break;
         case 5:
-            currentResult = currentResult;
+            this.currentResult = currentResult;
             break;
         default:
             console.log('Error');

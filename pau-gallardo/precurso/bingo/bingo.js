@@ -47,7 +47,7 @@ function BingoCard(userName){
     this.score = 0;                                             //Score
 
     this.update = function(num){                                //Checks if the number is in the bingo card, checks if the player has line or has won, uptates the score
-        for (let i = 0; i < this.card.length; i++){
+        for (let i in this.card.length){
             let index = this.card[i].indexOf(num);
             if (index !== -1){
                 this.card[i][index] = "X";

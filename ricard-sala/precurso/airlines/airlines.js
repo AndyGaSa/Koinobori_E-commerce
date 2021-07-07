@@ -16,32 +16,33 @@ flights = [
 let identificacion = prompt(`porfavor introduzca su nombre`);
  alert(`Encantado de conocerle ${identificacion} bienvenido a skylab Airlines estos son nuestros vuelos disponibles para hoy`);
 {
-  for (let i = 0; i < flights.length; i++) { //saludo y presentacion de vuelos.
-        if (flights[i].scale===true) { 
+  for (let flight of flights) { //saludo y presentacion de vuelos.
+      
+        if (flight===true) { 
           escalasVuelos = `el vuelo hace escalas`;
          } else {
           escalasVuelos = `el vuelo no hace escalas`;
          }
-         console.log(`el vuelo destino ${flights[i].to} procedente de ${flights[i].from} tiene un valor de ${flights[i].cost}€ y ${escalasVuelos}`);
+         console.log(`el vuelo destino ${flight.to} procedente de ${flight.from} tiene un valor de ${flight.cost}€ y ${escalasVuelos}`);
     }
        function mediaCosteVuelos() { //coste medio vuelos.
            let mediaCoste = 0;
-           for (let i = 0; i < flights.length; i++) {
+           for (let flight of flights){
                
-             mediaCoste = mediaCoste + flights[i].cost;  
+              mediaCoste = mediaCoste + flight.cost; 
            }
            
-           mediaCoste= mediaCoste / (flights.length-1);
+           mediaCoste= mediaCoste / (mediaCoste-1);
            return mediaCoste;
         }
          console.log(`el coste medio de los vuelos de hoy es de: ${mediaCosteVuelos()}€`);
     
-         debugger;
+         
       function ultimos5()  { //ultimos vuelos del dia
-          for (let i = 0; i < flights.length; i++) {
-
-              if (i>=6){
-              console.log(`los ultimos cinco vuelos disponibles para hoy son: ${flights[i].from} destino a ${flights[i].to}`);
+          for (let flight of flights) {
+            
+              if (flight>=6){
+              console.log(`los ultimos cinco vuelos disponibles para hoy son: ${flight.from} destino a ${flight.to}`);
              
           }
          
@@ -49,15 +50,4 @@ let identificacion = prompt(`porfavor introduzca su nombre`);
   
       }    
       ultimos5();
-    }    
-
-
-
-
-
-
-
-
-
-
-
+    }  

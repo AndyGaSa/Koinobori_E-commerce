@@ -4,7 +4,6 @@ function calculatorPro() {
     let newNumber;
     let numberList = [];
     let results = [];
-    let operadores = ["+", "-", "*", "/"];
     let square, resultSum, resultRest, resultMult, resultDiv;
   
     do {
@@ -15,15 +14,15 @@ function calculatorPro() {
     let valor1 = parseInt(numberList[0]);
     let valor2 = parseInt(numberList[1]);
 
-    if(isNaN(valor1) && isNaN(valor2) == false){
+    if(isNaN(valor1) && !isNaN(valor2)){
       square = Math.sqrt(valor2);
       return console.log(square);
 
-    }else if(isNaN(valor1) == false && isNaN(valor2)){
+    }else if(!isNaN(valor1) && isNaN(valor2)){
       square = Math.sqrt(valor1);
       return console.log(square);
 
-    }else if(isNaN(valor1) == false && isNaN(valor2) == false){
+    }else if(!isNaN(valor1) && !isNaN(valor2)){
       resultSum = valor1 + valor2;
       resultRest = valor1 - valor2;
       resultMult = valor1 * valor2;

@@ -163,10 +163,9 @@ function gcarton() {
         for (const col in carton[fila]) {
           generarValor = parseInt((Math.random()*100).toFixed(0));
           do {
-            for (let j = 0; j < valoresUsados.length; j++) {
+            for (let j of valoresUsados) {
               if(generarValor === valoresUsados[j] || generarValor === 0){
                 generarValor = parseInt((Math.random()*100).toFixed(0));
-                j = 0;
               }
             }
             valoresUsados.push(generarValor);
@@ -185,10 +184,9 @@ function numberoBombo(params) {
   let nuevoValor;
   do {
     nuevoValor = parseInt((Math.random()*100).toFixed(0));
-    for(let i = 0; i < valoresUsadosBombo.length; i++){
+    for(let i of valoresUsadosBombo){
       if(nuevoValor === valoresUsadosBombo[i]){
         nuevoValor = parseInt((Math.random()*100).toFixed(0));
-        i = 0;
       }
     }
     check = true;

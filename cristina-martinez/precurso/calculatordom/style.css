@@ -1,0 +1,62 @@
+
+body{
+   
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.calculator{
+
+    border-style: solid;
+    background-color: violet;
+    height: 27em;
+    width: 14.5em;
+    display: grid;
+    align-items: center ;
+
+}
+.row{
+    display: flex;
+    justify-content: center;
+    
+}
+
+button{
+   padding: 1em;
+    height: 4em;
+    width: 4em;
+    margin: .1em;
+    background-color: tomato;
+    border-radius: 10%;
+}
+.colum2{
+    width: 8em;
+}
+
+.numeros{
+color:black;
+}
+button, .otro{
+    background-color: rgb(190, 190, 250);
+}
+.display{
+  position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 8em;
+    width: 14.5em;
+    background-color: rgb(218, 226, 228);
+    flex-direction: column;
+    word-break: break-all;
+    align-items: flex-end;
+}
+#valorActual {
+    font-size: 2em;
+}
+#valorAnterior{
+    font-size: 3.3em;
+}

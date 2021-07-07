@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="pasa.css">
+  <title>Pasapalabra</title>
+    </head>
+</head>
+<body>
+    <div class="top-container">
+        <h1 class="header">PASAPALABRA</h1>
+
+    </div>
+
+
+    <div class="middle-container">
+        <div class='column'>
+
+            <div class='left-container'>
+                <ul class="wheel">
+		           <li id='a' class="item">A</li>
+		           <li id='b' class="item">B</li>
+		           <li id='c' class="item">C</li>
+		           <li id='d' class="item">D</li>
+		           <li id='e' class="item">E</li>
+		           <li id='f' class="item">F</li>
+		           <li id='g' class="item">G</li>
+		           <li id='h' class="item">H</li>
+		           <li id='i' class="item">I</li>
+		           <li id='j' class="item">J</li>
+                   <li id='k' class="item">K</li>
+		           <li id='l' class="item">L</li>
+		           <li id='m' class="item">M</li>
+		           <li id='n' class="item">N</li>
+				   <li id='Ñ' class="item">Ñ</li>
+		           <li id='o' class="item">O</li>
+		           <li id='p' class="item">P</li>
+		           <li id='q' class="item">Q</li>
+		           <li id='r' class="item">R</li>
+		           <li id='s' class="item">S</li>
+		           <li id='t' class="item">T</li>
+		           <li id='u' class="item">U</li>
+		           <li id='v' class="item">V</li>
+		           <li id='w' class="item">W</li>
+		           <li id='x' class="item">X</li>
+                   <li id='y' class="item">Y</li>
+		           <li id='z' class="item">Z</li>
+		        </ul>
+
+                <div class="counter">
+                    <h1 id="time"></h1>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="column">
+
+             <div class='right-container'>
+                <div class="row">
+                    <div class='instructions'>
+                        <p>Se mostraran unas definiciones por pantalla y el usuario deberá responder con la palabra a la que corresponden. El usuario tiene la opción de decir Pasapalabra y dejar esa definición para mas adelante.</p>
+                        <p>El programa es sensible a las acentuación, asi que se debe introducir la palabra sin tilde.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class='answer'>
+                        <form class="write-answer" action="" method="get">
+                            <input id='user-answer' type="text" name='user-answer' value='Escribe tu respuesta'>
+                        </form>
+                        <button type="submit" form="write-answer" value="Submit">Go!</button>
+
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class='buttons'>
+                        <button id='start-game' type="button">Start</button>
+                        <button id='pass' type="button" hidden>Pasapalabra</button>
+
+                    </div>
+    
+                    <div  class='score' hidden>
+    
+                    </div>
+                </div>
+                
+
+                
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class='bottom-container'>
+        <div id="concept">
+        </div>
+        <div class='Incorrect'>
+            <p id >Incorrecto</p>
+            <p id='no-good' hidden>la respuesta correcta es</p>
+        </div>
+        <div class="correct" >
+            <p id='right-answer' hidden>La respuesta es correcta</p>
+        </div>
+
+    </div>
+
+
+    <script src="pasa.js"></script>
+
+</body>
