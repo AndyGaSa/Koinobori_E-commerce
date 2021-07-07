@@ -339,7 +339,8 @@ const crearVuelo = () => {
  * @param { Number } userInput
  * @returns { Number }
  */
-const eliminarVuelo = ( userInput = '' ) => {
+const eliminarVuelo = () => {
+    let userInput = '';
     let vueloParaMarcar = '';
 
     console.table( flights )
