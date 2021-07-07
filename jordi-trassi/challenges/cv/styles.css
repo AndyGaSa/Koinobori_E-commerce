@@ -8,6 +8,21 @@ header {
     background-color: bisque;
     font-family: Arial, Helvetica, sans-serif;
     color:burlywood;
+    font-size: 30px;
     padding-top: 100px;
     text-align: center;
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+
+}
+
+aside {
+    background-color: burlywood;
+}
+
+img {
+    size: 300px;
 }
