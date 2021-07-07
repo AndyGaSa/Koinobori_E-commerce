@@ -66,7 +66,7 @@ function usuario() {
     bingo();
   } else {
    let confirmBye = confirm(`seguro que desea salir?`);
-    if ((confirmBye = true)) {
+    if (confirmBye = true) {
       alert(
         `gracias vuelve cuando tengas ganas de jugar TROLL REVIENTA JUEGOS`
       );
