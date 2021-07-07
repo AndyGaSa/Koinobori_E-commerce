@@ -83,9 +83,9 @@ window.onload = () => {
 
         if( userInput !== true ) alert( 'Operacion completada' )
 
-        mostrarMenu( user )
+        mostrarMenu(  )
 
-        userInput = mostrarModal( user )
+        userInput = mostrarModal(  )
 
     } while ( !( userInput === null || userInput === 'salir' || userInput === '09' ) );
     console.clear();
@@ -422,7 +422,7 @@ const comprarVuelo = ( id ) => {
  * Limpiamos la consola y mostramos el menu de nuevo
  * @param { Object } user
  */
-const mostrarMenu = ( user ) => {
+const mostrarMenu = (  ) => {
     let opciones = user.admin ? `06 - Crear vuelo
     07 - Eliminar vuelo` : `06 - Buscar vuelo`
 
@@ -446,7 +446,7 @@ const mostrarMenu = ( user ) => {
  * @param { Object } user 
  * @returns { String }
  */
-const mostrarModal = ( user ) => {
+const mostrarModal = (  ) => {
     let opciones = user.admin ? `06 - Crear vuelo
     07 - Eliminar vuelo` : `06 - Buscar vuelo`
 
