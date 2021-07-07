@@ -13,7 +13,7 @@ buttonC.addEventListener("click", (event) => {
   borradoCompleto(event);
 });
 function borradoCompleto(event) {
-    borrar = event.target.innerHTML;
+   let borrar = event.target.innerHTML;
 
     arrayValues = [];
     currentValueArray = [];
