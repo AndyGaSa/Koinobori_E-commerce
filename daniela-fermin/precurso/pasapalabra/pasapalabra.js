@@ -149,10 +149,10 @@ function sortPrintRanking(){
     playersList.sort(function (a,b) {
         return b.points - a.points
     });
-     for(let i = 0; i < playersList.length; i++) {
-         console.log('El jugador ' + playersList[i].name + ' tiene una puntuación de: ' + playersList[i].points);
-     };
-};
+     for(let player of playersList) {
+         console.log('El jugador ' + playersList[player].name + ' tiene una puntuación de: ' + playersList[player].points);
+     }
+}
 
 function chooseQuestionOfLetter(letter){
 
@@ -200,11 +200,6 @@ do {
             printranking()
             played = 28
             break
-        } else {
-            alert('¡Incorrecto! La respuesta correcta es: ' + wheel[i].answer)
-            wheel[i].status = 2
-            incorrect++
-            played++
         }
 
     }
@@ -242,8 +237,8 @@ function updatePoints(){
     for(let i = 0; i < playersList.length; i++) {
         if(playersList[i].name === userName) {
             playersList[i].points = points;
-        };
-    };
+        }
+    }
     sortPrintRanking()
 }
 
@@ -256,9 +251,9 @@ function goAgain(){
     switch (playAgain.toLowerCase()) {
         case "s":
             wheel = [];
-            let correct = 0
-            let incorrect = 0
-            let played = 0
+            correct = 0
+            incorrect = 0
+            played = 0
             pasapalabra();
             break;
         case "n":
@@ -270,4 +265,4 @@ function goAgain(){
             goAgain();
             break;
     }
-};
+}
