@@ -65,14 +65,14 @@ function usuario() {
   if (typeof user === "string") {
     bingo();
   } else {
-   let confirmBye = confirm(`seguro que desea salir?`);
-    if (confirmBye = true) {
+    if ( confirm(`seguro que desea salir?`) ) {
       alert(
         `gracias vuelve cuando tengas ganas de jugar TROLL REVIENTA JUEGOS`
       );
     } else {
       usuario();
-      console.log(`suerte in da live`)
+      console.log(`suerte in da live`);
+    
     }
   }
 }
