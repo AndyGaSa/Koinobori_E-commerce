@@ -90,12 +90,12 @@ function createCard() { //Función para crear el cartón:
     for (let i = 0; i < 3; i++) { //Dos loops anidados recorren las posiciones del cartón para almacenar los nº a jugar
         for (let j = 0; j < 5; j++) {
             function newNumber() { //Función para generar los nº 
-                let number = Math.round(Math.random() * 99) + 1; // Se obtiene un nº aleatorio entre el 1 y el 100
-                if (gotIt.includes(number)) { //Si ese nº ya ha salido, se obtiene un nº nuevo
+                let numberLocal = Math.round(Math.random() * 99) + 1; // Se obtiene un nº aleatorio entre el 1 y el 100
+                if (gotIt.includes(numberLocal)) { //Si ese nº ya ha salido, se obtiene un nº nuevo
                     newNumber();
                 } else {
-                    card[i][j] = number; //Si no ha salido, se almacena en la posición actual del cartón
-                    gotIt.push(number); //Se incluye el nº en gotIt para evitar que vuelva a salir
+                    card[i][j] = numberLocal; //Si no ha salido, se almacena en la posición actual del cartón
+                    gotIt.push(numberLocal); //Se incluye el nº en gotIt para evitar que vuelva a salir
                 }
             }
 
