@@ -353,9 +353,7 @@ function rankingIn(){
     let inRank = false;
     if(goods > ranking[9].good)
         inRank = true;
-    else if(goods === ranking[9].good && bads < ranking[9].bad)
-        inRank = true;
-    else if(goods === ranking[9].good && bads === ranking[9].bad && gameTime >= ranking[9].time)
+    else if((goods === ranking[9].good && bads < ranking[9].bad) || (goods === ranking[9].good && bads === ranking[9].bad && gameTime >= ranking[9].time))
         inRank = true;
     
     //Si entra en el ranking
