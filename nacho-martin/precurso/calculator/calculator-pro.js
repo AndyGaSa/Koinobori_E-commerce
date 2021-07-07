@@ -14,7 +14,7 @@ function calculatorPro() {
         }
     } while (newNumber !== null && isANumber) // Si el usuario presiona cancelar o introduce un dato no númerico se dejan de solicitar datos
     if (numberList[numberList.length - 1] === null || !numberList[numberList.length - 1]) { // Si el usuario presiona cancelar o escribe algo que no sea un número, el ultimo objeto sera nulo o NaN, por lo que lo quitamos del arreglo.
-        var popped = numberList.pop();
+        numberList.pop();
     }
 
     switch (numberList.length) { //En función de la cantidad de números en el arreglo se realizara una operación diferente.
