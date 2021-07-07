@@ -190,13 +190,12 @@ let questions = [
     }
 ]
 
-
+let Aciertos = 0;
+let Fallos = -1;
 function pasapalabra() {
-    let Abecedario = 27;
+    
     let Respuesta = '';
-    let Aciertos = 0;
-    let Fallos = -1;
-    for (i = 0; i < Abecedario; i++) {
+    for (let i = 0; i < 27; i++) {
         if (Respuesta != 'end') {
             Respuesta = prompt(questions[i].question);
             if (Respuesta != null) {
@@ -204,12 +203,9 @@ function pasapalabra() {
             }
             if (Respuesta != 'pasapalabra') {
                 if (Respuesta === questions[i].answer) {
-                    console.log('¡Correcto! ¡Has ganado un punto!');
-                    Aciertos++;
-                    questions[i].status = 1;
+                    Acierto();
                 } else {
-                    Fallos++;
-                    console.log('MEEEEEC. Palabra incorrecta... \nLa respuesta correcta era: ' + questions[i].answer + '.')
+                    Fallo(i);
                 }
                 console.log(Respuesta);
             } else {
@@ -217,10 +213,20 @@ function pasapalabra() {
             }
         }
     }
+    End(Respuesta);
+}
+
+function Acierto(){
+    console.log('¡Correcto! ¡Has ganado un punto!');
+    Aciertos++;
+}
+function Fallo(val){
+    Fallos++;
+    console.log('MEEEEEC. Palabra incorrecta... \nLa respuesta correcta era: ' + questions[val].answer + '.')
+}
+function End(Respuesta){
     if (Respuesta === 'end') {
         console.log('Has acertado ' + Aciertos + ' palabra/s y has fallado ' + Fallos + ' palabra/s. Vuelve pronto')
     }else{console.log('Has acertado ' + Aciertos + ' palabra/s y has fallado ' + Fallos + ' palabra/s. Espero que te haya gustado')}
-
 }
-
 pasapalabra();
