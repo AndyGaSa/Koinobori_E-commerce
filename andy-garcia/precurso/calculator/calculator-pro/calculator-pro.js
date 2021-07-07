@@ -37,35 +37,34 @@ function calculatorPro() {
     }
 
     let resultados = [];
-    const NumsLength = Nums.length;
 
-    if (NumsLength === 1) {
+    if (Nums.length === 1) {
         console.log('La raiz quadrada de ' + parametrosUser + ' es ' + Math.sqrt(parametrosUser));
     } else {
 
         let suma = Nums[0];
-        for (x = 1; x < NumsLength; x++) {
+        for (let x = 1; x < Nums.length; x++) {
             suma = suma + Nums[x];
         }
         resultados.push(suma);
         resultados[0] = Decimales(resultados[0]);
 
         let resta = Nums[0];
-        for (x = 1; x < NumsLength; x++) {
+        for (let x = 1; x < Nums.length; x++) {
             resta = resta - Nums[x];
         }
         resultados.push(resta);
         resultados[1] = Decimales(resultados[1]);
 
         let multiplicar = Nums[0];
-        for (x = 1; x < NumsLength; x++) {
+        for (let x = 1; x < Nums.length; x++) {
             multiplicar = multiplicar * Nums[x];
         }
         resultados.push(multiplicar);
         resultados[2] = Decimales(resultados[2]);
 
         let dividir = Nums[0];
-        for (x = 1; x < NumsLength; x++) {
+        for (let x = 1; x < Nums.length; x++) {
             dividir = dividir / Nums[x];
         }
         resultados.push(dividir);
