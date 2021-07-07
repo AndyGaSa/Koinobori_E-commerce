@@ -1,4 +1,6 @@
 // Variables
+let newNumber;
+let currentResult;
 let numberList = [];
 let displayScreen = document.getElementById('display');
 
@@ -23,7 +25,7 @@ our calculator doesn't accept more*/
         } else {
             numberList.push(num);
             displayScreen.innerHTML = numberList.join('');
-            let newNumber = numberList.join('');
+            newNumber = numberList.join('');
         }
     }else {
         num = parseFloat(num);
@@ -37,7 +39,7 @@ our calculator doesn't accept more*/
 //AC button. Delete everything in display screen
 function saveAndShow() {
     numberList = [];
-    let currentResult = 0;
+    currentResult = 0;
     newNumber = 0;
     currentOperation = 0;
     displayScreen = document.getElementById('display');
@@ -118,20 +120,20 @@ function operation(operator) {
 }
 
 // Operations
-function sum(currentResult, newNumber) {
-    return currentResult + newNumber;
+function sum(resultCurrent, numberNew) {
+    return resultCurrent +numberNew;
 }
 
-function rest(currentResult, newNumber) {
-    return currentResult - newNumber;
+function rest(resultCurrent, numberNew) {
+    return resultCurrent - numberNew;
 }
 
-function multi(currentResult, newNumber) {
-    return currentResult * newNumber;
+function multi(resultCurrent, numberNew) {
+    return resultCurrent * numberNew;
 }
 
-function divi(currentResult, newNumber) {
-    return currentResult / newNumber;
+function divi(resultCurrent, numberNew) {
+    return resultCurrent / numberNew;
 }
 
 // Operations in process
