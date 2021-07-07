@@ -46,7 +46,6 @@ button, .otro{
   position: relative;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
     height: 8em;
     width: 14.5em;
     background-color: rgb(218, 226, 228);
