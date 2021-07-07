@@ -1,9 +1,9 @@
 // Variables
-let num;
+//let num;
 let numberList = [];
 let displayScreen = document.getElementById('display');
-let newNumber;
-let currentResult;
+//let newNumber;
+//let currentResult;
 
 /*Variable of currentOperation goes from 0 to 5
 0: not operation waiting
