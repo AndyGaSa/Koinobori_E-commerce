@@ -49,7 +49,7 @@ let goods;
 let bads;
 let gameTime;
 let asciiLetter;
-let round;
+let gameRound;
 let isGameEnded;
 let scene = 0;
 let userName;
@@ -158,7 +158,7 @@ function startGame(){
     //Resetea las variables
     currentGameQuestions = [];
     asciiLetter = 97;
-    round = 1;
+    gameRound = 1;
     goods = 0;
     bads = 0;
 
@@ -182,13 +182,13 @@ function startGame(){
     
     //Llama la funcion newTurn con la variable asciiLetter que es la letra que toca en orden alfabético en código ACII
     document.getElementById('game').classList.remove('disabled');
-    newTurn(String.fromCharCode(asciiLetter).toString(), round);
+    newTurn(String.fromCharCode(asciiLetter).toString());
 }
 
 //Pasada por valor la letra que toca y en que ronda esta
-function newTurn(currentLetter, round){
+function newTurn(currentLetter){
     //Añade a currentGameQuestions 1 pregunta de la lista de la letra que toca
-    if(round === 1){
+    if(gameRound === 1){
         let aux = [];
         for(let i=0; i<allQuestions.length; i++){
             if(allQuestions[i].letter === currentLetter)
@@ -293,13 +293,13 @@ function calculateNextTurn(){
             asciiLetter = 111;
         else if(asciiLetter === 122){
             asciiLetter = 97;
-            round++;
+            gameRound++;
         }
         else
             asciiLetter++;
-    }while(round != 1 && currentGameQuestions.find(({letter}) => letter === String.fromCharCode(asciiLetter)).status !== 0);
+    }while(gameRound != 1 && currentGameQuestions.find(({letter}) => letter === String.fromCharCode(asciiLetter)).status !== 0);
 
-    newTurn(String.fromCharCode(asciiLetter).toString(), round);
+    newTurn(String.fromCharCode(asciiLetter).toString(), gameRound);
 
     document.getElementById('answer-correction').classList.add('disabled');
     document.getElementById('game').classList.remove('disabled');
