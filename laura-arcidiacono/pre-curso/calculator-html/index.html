@@ -22,7 +22,8 @@
                 +/-
             </button>
             <button id="buttonClear" onclick="deleteLastDigit()"> <!--This onclick button invokes the function to remove the last digit of the display number.-->
-                <i class="fas fa-redo-alt"></i>
+                <i class="fas fa-redo-alt"></i> <!--SonarQube: Rule: the <b> and <i> tags shall never be used-----Exceptions
+                    This rule is relaxed in case of icon fonts usage.-->
             </button>
             <button id="buttonOpDivide" onclick="runOperation('divide')"> <!--This onclick button invokes the function to divide operation.-->
                 /
