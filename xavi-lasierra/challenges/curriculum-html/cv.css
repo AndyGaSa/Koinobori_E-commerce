@@ -65,7 +65,10 @@
 
 .hability-flex {
     display: flex;
-    justify-content: space-around;
+}
+
+.hability-flex * {
+    margin: 0 2vw 0 1vw;
 }
 
 .side-info {
