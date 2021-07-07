@@ -107,7 +107,11 @@ function askQuestion() { //Función para realizar las perguntas
 function round() { //Función para ejecutar las rondas
     do {
         askQuestion(); //Se llama a la función de las preguntas
-        position < 26 ? position++ : position = 0; //Se actualiza la posición del rosco
+        if (position < 26) { //Se actualiza la posición del rosco
+            position++;
+        } else {
+            position = 0
+        }
     } while (!endGame && questions.some(question => question.status === 0));
     /*Se realiza la función mientras haya preguntas 
        sin contestar y el usuario no indique que desea finalizar*/

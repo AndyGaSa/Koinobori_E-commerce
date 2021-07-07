@@ -17,7 +17,7 @@
             respuesta para comprobar si has acertado (o también puedes pulasr la tecla 'Enter'). Si no sabes la palabra y deseas dejarla para más tarde, pulsa el botón de Pasapalabra. </p>
         <p>Recuerda que tienes un tiempo límite para resolver el rosco al completo. Para empezar, escribe tu nombre y la cantidad de segundos con los que quieres empezar la partida. Cuando estés listo, presiona el botón de jugar. ¡Ánimo!</p>
 
-        <nav class="botones">
+        <nav class="botones" aria-label="presentacionNav">
             <input type="text" class="cuadroTiempo cuadroTexto" id="cuadroNombre" placeholder="Tu nombre" autocomplete='off'>
             <input type="text" class="cuadroTiempo cuadroTexto" id="cuadroTiempo" placeholder="segundos" autocomplete='off'>
             <input type="button" class="boton" value="Jugar" id="jugar" onclick="empezarPartida()">
@@ -64,7 +64,7 @@
                 <div class="preguntas">
                     <p class="definicion"></p>
                     <input type="text" class="respuesta cuadroTexto" id="cuadroRespuesta" autocomplete='off'>
-                    <nav class="botones">
+                    <nav class="botones" aria-label="juegoNav">
                         <input class="boton" type="submit" value="Enviar respuesta" id="responder" onclick="ronda()">
                         <input class="boton" type="submit" value="Pasapalabra" onclick="pasapalabra()">
                     </nav>

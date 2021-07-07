@@ -22,7 +22,7 @@ function flightsAssistant() { //Declaración de la función
     const lastDepartures = [];
     // Se muestran por consola los vuelos progrmados
     console.log(`These are the flights scheduled for today:`)
-    for (let i = 0; i < flights.length; i++) { //A traves de un for se recorren los distintos vuelos del array
+    for (let i in flights) { //A traves de un for se recorren los distintos vuelos del array
         totalFlightsCost += flights[i].cost; //Se suman los precios de los vuelos para calcular el coste medio
 
         /*Con ayuda de un condicional se distinguen los vuelos con escalas de los que no hacen escalas,
@@ -39,7 +39,7 @@ function flightsAssistant() { //Declaración de la función
         //Con otro condicional se almacenan los destinos de los últimos 5 vuelos
         if (flights[i].id >= 06) {
             lastDepartures.push(flights[i].to);
-        };
+        }
     }
     let averageCost = totalFlightsCost / flights.length; //Cálculo del coste medio de los vuelos
     //Por último, se imprimen los datos por consola
