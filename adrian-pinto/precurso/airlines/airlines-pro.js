@@ -450,7 +450,7 @@ const mostrarModal = (  ) => {
     let opciones = user.admin ? `06 - Crear vuelo
     07 - Eliminar vuelo` : `06 - Buscar vuelo`
 
-    let userInput = adquisicionDatos( `
+    return adquisicionDatos( `
     Porfavor ${ user.nombre } escriba una de las siguientes opciones:
 
     01 - Ver Vuelos
@@ -463,7 +463,6 @@ const mostrarModal = (  ) => {
     09 - Salir
 `, 'dato' );
 
-    return userInput
 }
 
 /**
