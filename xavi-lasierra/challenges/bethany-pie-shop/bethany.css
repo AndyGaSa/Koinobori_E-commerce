@@ -207,25 +207,18 @@
     }
     
     .navigation-title {
-        font-size: 4vw;
-        text-align: center;
-        margin-bottom: 2vw;
+        font-size: 1.6em;
+        margin-bottom: 1em;
     }
     
     .bottom-navigation-list {
-        list-style-type: none;
-        font-size: 4vw;
-        color:white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 50vw;
+        font-size: 1.2em;
+        height: 14em;
     }
     
     .bottom-navigation-list li{
-        background-color: #CF4522;
-        padding:2vw;
-        width: 40vw;
+        padding: 0.6em;
+        width: 14em;
     }
     
     .article-container {
