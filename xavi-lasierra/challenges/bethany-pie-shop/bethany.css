@@ -6,7 +6,7 @@
 }
 
 .page-header {
-    height: 50px;
+    height: 4em;
     background-color: #A593C2;
     display: flex;
     justify-content: space-around;
@@ -14,8 +14,12 @@
 }
 
 .pie-logo {
-    height: 12vw;
-    width: 12vw;
+    height: 3.2em;
+    width: 3.2em;
+}
+
+.navigation-hide {
+    display: none;
 }
 
 .top-navigation-list{
@@ -23,9 +27,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 45vw;
+    width: 13em;
     color: white;
-    font-size: 3.5vw;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
@@ -35,7 +39,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 330vw;
+    height: 340vw;
 }
 
 .bethany-pie-shop-logo {
@@ -45,13 +49,26 @@
 
 .navigation-title {
     font-size: 4vw;
+    text-align: center;
     margin-bottom: 2vw;
 }
 
 .bottom-navigation-list {
     list-style-type: none;
     font-size: 4vw;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50vw;
 }
+
+.bottom-navigation-list li{
+    background-color: #CF4522;
+    padding:2vw;
+    width: 40vw;
+}
+
 .article-container {
     display: flex;
     flex-direction: column;
@@ -79,7 +96,8 @@
 
 .history-title {
     width: 80vw;
-    font-size: 6.5vw;
+    font-size: 6vw;
+    margin-bottom: 2vw;
 }
 
 .history-text {
@@ -104,17 +122,40 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .promotions-title {
     font-size: 4.5vw;
+    align-self:baseline;
 }
 
 .cake-title {
     font-size: 3.2vw;
+    align-self:baseline;
 }
 
 .cake-image {
     width: 70vw;
     height:40vw;
 }
+
+.page-footer {
+    background-image: url("https://i.ibb.co/W567m6P/pattern.png");
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-text {
+    font-size: 3.7vw;
+    text-align: center;
+}
+
+.copyright-text {
+    font-size: 3vw;
+    text-align: center; 
+}
+
