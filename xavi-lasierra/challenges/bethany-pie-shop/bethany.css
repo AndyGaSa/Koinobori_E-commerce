@@ -4,3 +4,28 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.page-header {
+    height: 50px;
+    background-color: #A593C2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pie-logo {
+    height: 45px;
+    width: 45px;
+}
+
+
+.top-navigation-list{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45vw;
+    color: white;
+    font-size: 3.5vw;
+    font-weight: bold;
+}
