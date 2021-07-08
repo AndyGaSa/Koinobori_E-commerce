@@ -13,3 +13,13 @@ p {
     color: white;
     padding: 5px;
 }
+/* MediaQueries always on bottom of css.
+First the "normal" rules and at the end
+of the stylesheet cascade the mediaqueries
+rules for manage browser resize.  */
+@media screen and (min-width: 780px) {
+    p {
+        color: green;
+    }
+    
+}
