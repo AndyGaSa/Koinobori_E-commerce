@@ -1,15 +1,16 @@
 //click functions
 let numCells = document.getElementsByClassName('number');
-for (let i = 0; i < numCells.length; i++) {
-    numCells[i].addEventListener("click", function(e){
-        addNumber(numCells[i].id);
-      });
+for (let cell of numCells){
+    cell.addEventListener("click", function() {
+        addNumber(cell.id);
+    });
 }
+
 let simCells = document.getElementsByClassName('symbol');
-for (let i = 0; i < simCells.length; i++) {
-    simCells[i].addEventListener("click", function(e){
-        symbol(simCells[i].id);
-      });
+for (let cell of simCells){
+    cell.addEventListener("click", function(){
+        symbol(cell.id);
+    });
 }
 
 //variables
