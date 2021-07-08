@@ -9,8 +9,11 @@
 header{
     background-color: #ADDCCA;
     width: 100%;
-    height: 100vh;  
+    height: 100vh;
+    padding:20px;
+    
 }
+
 
 #navegation-menu{
     margin:10px;
@@ -20,7 +23,7 @@ header{
     align-items: flex-end;
 }
 #menu-options{
-    visibility:visible;
+    visibility:hidden;
     margin:100px,0px,0px,0px;
     font-size:40px;
     display: flex;
@@ -47,10 +50,16 @@ header{
     align-items: right;
     font-size: larger;
 }
+#socialNetworkbuttons{
+    list-style:none;
+    margin:10px;
+
+}
 #about-me{
     width:100%;
     height:100vh;
     background-color:#2C3D63;
+    
 }
 #personal-details{
     margin: 30px;
@@ -77,14 +86,22 @@ header{
 img{
   width: 20%;
   height: auto;
-  margin: 0;
-  padding: 0;
+
 }
 #experience-education{
     background-color:#F7F8F3;
     width:100%;
-    height:100vh;
-
+    height:auto;
+    padding:30px;
+}
+#experience-education> .articles{
+    text-align: justify;
+    margin:20px;
+    
+}
+.job-description, .studies-description{
+    margin:20px;
+    color:#2C3D63;
 }
 h2{
     display:flex;
@@ -94,28 +111,19 @@ h2{
     
 
 }
-.article{
-    
-    text-align: justify;
-}
-.tittle-job{
+
+.job-tittle, .studies-tittle{
     color:#ADDCCA;
 }
+
 #skills-knowledge{
     background-color:#ADDCCA;
     width:100%;
     height:50vh;
     padding:20px;
 }
-#contact{
-    background-color:#2C3D63;
-}
-footer{
-    background-color:#2C3D63;
-    display: flex;
-    justify-content:center;
-    color:#ADDCCA;
-}
+
+
 .container{
     display:flex;
 }
@@ -138,3 +146,30 @@ footer{
     color:#F7F8F3;
     margin:10px;
 }
+#contact{
+    width: 100%;
+    height:70vh;
+    background-color:#2C3D63;
+    padding: 20px;
+    
+}
+#contact>h2{
+    margin-bottom: 60px;
+}
+h4{
+    color:#FF6F5E;
+}
+.contac-list> li{
+    list-style: none;
+    margin: 25px;
+}
+.contac-list> li>span{
+    color:#ADDCCA
+}
+footer{
+    background-color:#2C3D63;
+    display: flex;
+    justify-content:center;
+    color:#ADDCCA;
+}
+

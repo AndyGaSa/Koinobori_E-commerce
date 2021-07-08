@@ -3,13 +3,15 @@
 <head>
     <title>Curriculum vitae</title>
     <link rel="stylesheet" href="curriculum.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script scr= "curriculum.js"></script>
 </head>
 <body>
-    <header>
-        <strong id='name'>Alba del Rio Castellvi</strong>
-        <span id='position'>Full Stack developper</span>
+    <header class="container__header">
         <nav id='navegation-menu'>
-            <button>Menu</button>
+            <button id='menu-button'><i class="fas fa-align-justify"></i></button>
+            
         </nav>
         <ul id= 'menu-options'>
             <li>About me</li>
@@ -17,18 +19,23 @@
             <li>Skills & knowledge</li>
             <li>Contact</li>
         </ul>
+        <strong id='name'>Alba del Rio Castellvi</strong>
+        <span id='position'>Full Stack developper</span>
+        
         <ul id='socialNetworkbuttons'>
             <li id='linkedin'>
-                <a href=#></a>
+                <button>
+                    
+                </button>
             </li>
             <li id='github'>
-                <a href=#></a>
+                <button><a href=#></a></button>
             </li>
         </ul>
         
 
     </header>
-    <main>
+    <main class="container__main">
         <section id='about-me'>
             <figure id='image'>
                 <img src=profile.jpg></img>
@@ -51,37 +58,37 @@
         </section>
         <section id='experience-education'>
             <h2>EXPERIENCE & EDUCATION</h2>
-            <article class='article' id='last-job'>
-                <h3 class='job-tittle'>Job tittle 1</h3>
-                <h4 class='job-subtittle'>SUBTITTLE</h4>
-                <span class='period-dates'>2018-NOW</span>
-                <p class='job-description'>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </aricle>
-            <article class='article' id='before-last'>
-                <h3 class='studies-tittle'>Bootcamp Full Stack Developer</h3>
-                <h4 class='studies-university'>SKYLAB</h4>
-                <span class='period-dates'>2021-NOW</span>
-                <p class='studies-description'>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
-                </p>
-            </article>
-            <article class='article'>
-                <h3 class='job-tittle'>Job tittle 2</h3>
-                <h4 class='job-subtittle'>SUBTITTLE</h4>
-                <span class='period-dates'>2015-20017</span>
-                <p class='job-description'>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
-                </p>
-            </article>
-            <article class='article'>
-                <h3 class='studies-tittle'>Studies tittle 1</h3>
-                <h4 class='studies-university'>UNIVERSITY OF LIVE</h4>
-                <span class='period-dates'>2002-2006</span>
-                <p class='studies-description'>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
-                </p>
-            </article>
+            <div class='container2'></div>
+                <article class='article' id='last-job'>
+                    <h3 class='job-tittle'>Job tittle 1</h3>
+                    <h4 class='job-subtittle'>SUBTITTLE</h4>
+                    <span class='period-dates'>2018-NOW</span>
+                    <p class='job-description'>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                </aricle>
+                <article class='article' id='before-last'>
+                    <h3 class='studies-tittle'>Bootcamp Full Stack Developer</h3>
+                    <h4 class='studies-university'>SKYLAB</h4>
+                    <span class='period-dates'>2021-NOW</span>
+                    <p class='studies-description'>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                </article>
+                <article class='article'>
+                    <h3 class='job-tittle'>Job tittle 2</h3>
+                    <h4 class='job-subtittle'>SUBTITTLE</h4>
+                    <span class='period-dates'>2015-20017</span>
+                    <p class='job-description'>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                </article>
+                <article class='article'>
+                    <h3 class='studies-tittle'>Studies tittle 1</h3>
+                    <h4 class='studies-university'>UNIVERSITY OF LIVE</h4>
+                    <span class='period-dates'>2002-2006</span>
+                    <p class='studies-description'>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
+                    </p>
+                </article>
+            </div>
         </section>
         <section id= 'skills-knowledge'>
             <h2>SKILLS & KNOWLEDGE</h2>
@@ -114,7 +121,7 @@
         </section>
         <section id= 'contact'>
             <h2>CONTACT</h2>
-            <ul>
+            <ul class='contac-list'>
                 <li>
                     <h4>ADDRESS</h4>
                     <span> Salou, 18, Barcelona</span>
@@ -134,7 +141,7 @@
             </ul>
         </section>
     </main>
-    <footer>
+    <footer class="container__footer">
         <span>SkyLab 2021, Alba del Rio</span>
     </footer>
 </body>
