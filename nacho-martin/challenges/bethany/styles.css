@@ -1,0 +1,65 @@
+body {
+    background-image: url(/images/images/pattern.png);
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+    background-color: #A593C2;
+}
+
+main {
+    text-align: center;
+}
+
+main p {
+    margin: 10px;
+}
+
+figure {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+}
+
+.header-image {
+    height: 20px;
+}
+
+.header-navigator {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.main-logo {
+    margin: 20px auto;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-image {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.promotions {
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: start;
+}
