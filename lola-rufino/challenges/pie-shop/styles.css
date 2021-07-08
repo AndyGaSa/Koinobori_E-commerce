@@ -26,7 +26,7 @@ main, footer{
 
 aside p{
     text-align: left;
-    padding-left: 35px;
+    padding-left: 50px;
     line-height: 50px;
     width: 150px;
     margin: 5px;
@@ -117,3 +117,44 @@ footer{
     margin-left: 40px;
     margin-top: 20px;
 }
+
+@media screen and (min-width: 944px){
+    .main-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .upper-navigation{
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 60px;
+        background-color: #a593c2;
+        align-items: center;
+    }
+    footer{
+        text-align: left;
+        padding-left: 20%;
+    }
+    #weekly-promotions{
+        margin-top:20px;
+        background-color: transparent;
+        border-radius: 5%;
+        padding: 2%;
+        box-shadow: none;
+    }
+    #big-logo{
+        margin-top: 20px;
+    }
+    aside p{
+        width: 200px;
+    }
+    #main-image{
+        width: 600px;
+        height: 295px;
+        margin-left: 30px;
+    }
+    #welcome-header {
+        font-size: 40px;
+    }
+   }
