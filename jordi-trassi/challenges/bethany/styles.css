@@ -73,3 +73,10 @@ h1 {
 #infofoto1 {
     padding-top: 10px;
 }
+
+article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10%;
+    box-shadow: 2px 2px lightgrey;
+}
