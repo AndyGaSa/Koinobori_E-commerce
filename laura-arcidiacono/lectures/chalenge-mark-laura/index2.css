@@ -1,14 +1,14 @@
-.main-container {
+.big-container {
     display: flex;
     flex-direction: column;
     background-color: white;
 }
 
-.second-container-lorem {
+.main-container{
     background-color: white;
 }
 
-.third-container {
+.footer-container {
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -50,7 +50,7 @@
     border-bottom: 100px solid lightgray;
 }
 
-.first-container {
+.main-container {
     display: flex;
     flex-direction: row;
 }
