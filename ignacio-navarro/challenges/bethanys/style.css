@@ -12,7 +12,6 @@ body{
 .main-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 20px;
 }
 
@@ -27,21 +26,33 @@ body{
     text-decoration: none;
     margin: 5px;
 }
-.sell-buttons{
+.sell-buttons-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-
+.aside-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .header-logo{
     width: 50px;
 }
-button{
+.sell-button{
     padding: 7px;
     border: none;
     width: 34vw;
     margin: 1px;
     background-color: #da4536;
     color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.main-content-divisor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-logo{
@@ -82,3 +93,11 @@ h2, h3, h4, h5{
 figcaption{
     font-size: 0.7em;
 }
+
+@media screen and (min-width: 600px) {
+    .main-container{
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    }
+  }
