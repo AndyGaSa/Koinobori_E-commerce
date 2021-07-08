@@ -1,0 +1,25 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.upper-navigation{
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #a593c2;
+    align-items: center;
+}
+
+.upper-navigation-menu{
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+}
+
+main{
+    background-image: url("https://i.ibb.co/dgg415M/pattern.png"); 
+}
