@@ -98,3 +98,30 @@ h4 {
 .promotions-image {
     width: 100%;
 }
+
+@media screen and (min-width: 600px) {
+    main {
+        display: flex;
+        justify-content: space-around;
+    }
+    header {
+        justify-content: left;
+        padding: 10px 20px;
+    }
+    footer {
+        text-align: unset;
+    }
+    .main-logo {
+        justify-content: unset;
+    }
+    .desktop-container {
+        margin: 0 30px;
+        max-width: 60%;
+    }
+    .header-navigator {
+        justify-content: unset;
+    }
+    .header-link {
+        margin: 0 10px;
+    }
+}
