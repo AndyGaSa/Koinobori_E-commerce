@@ -1,0 +1,32 @@
+* {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Sans-serif';
+    text-align: justify;
+    width: 500px;
+}
+
+header {
+    background-color: blue;
+}
+
+#description {
+    font-weight: bold;
+}
+
+h1 {
+    color: #fff;
+    font-size: 50px;
+}
+
+h1, h2, h3 {
+    font-size: 16px;
+
+}
+
+h2 {
+    color: blue;
+}
+
+footer {
+    color: blue;
+    font-weight: bold;
+}
