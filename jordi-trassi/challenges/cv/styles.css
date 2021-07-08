@@ -20,9 +20,11 @@ main {
 }
 
 aside {
+    
     background-color: burlywood;
 }
 
-img {
-    size: 300px;
+figure {
+    margin-top: -50px;
+    margin-left: 50px;
 }
