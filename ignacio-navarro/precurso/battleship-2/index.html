@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="main-container">
+  <div id="balls"></div>
+  <div id="top-part">
+    <div id="clear-board"class="menu-buttons">CLEAR BOARD</div>
+    <div id="radar-container">
+      <div id="radar-outside"></div>
+      <div id="radar-background"></div>
+      <div id="radar-grid"></div>
+      <div id="radar-inner-lines"></div>
+      <div id="radar-scan"></div> 
+        <div class="dot dot1"></div> 
+        <div class="dot dot2"></div>
+        <div class="dot dot3"></div>
+        <div class="dot dot4"></div>
+        <div class="dot dot5"></div>
+        <div class="dot dot6"></div>
+        <div class="dot dot7"></div>
+        <div class="dot dot8"></div>
+        <div class="dot dot9"></div>
+    </div>
+    <div id="all-ready" class="menu-buttons">ALL READY</div>
+  </div>
+  <div class="silouetes">
+    <div id="battleship-silouetteP1"></div>
+    <div id="battleship-silouetteP2"></div>
+  </div>
+  <div id="bottom-part">
+    <div class="user-grid-background ";>
+      <div class="boats-here">DRAG HERE <br>
+        YOUR BOATS</div>
+      <div class="user-grid" id="dropzone";></div>
+    </div>
+    <div class="menu" id='boats-menu'>
+      <div class="boat carrier-container  shadow" 
+      id="carrier" draggable="true"
+    >
+      <div class="carrier" id="carrier-body">   
+          <div class="carrier-part carrier-base p1color"></div>
+          <div class="carrier-part shadow">
+          <div class="carrier-part carrier-platform p1color"></div>
+          <div class="carrier-lines1"></div>
+          <div class="carrier-lines2"></div>
+          <div class="carrier-lines3"></div>
+      </div>
+      </div>
+      </div>
+      <div class="boat battleship-container shadow" id="battleship"draggable="true">
+      <div class="battleship" id="battleship-body">
+          <div class="battleship-part battleship-base p1color shadow"></div>
+          <div class="battleship-part shadow">
+          <div class=" battleship-part battleship-heliport p1color shadow"></div>
+          <div class="battleship-part shadow">
+          <div class=" battleship-part battleship-helicopter p1color"></div>
+          <div class=" battleship-part battleship-cover p1color"></div>
+          <div class=" battleship-part battleship-antena p1color"></div>
+          <div class=" battleship-part battleship-front p1color"></div>
+          <div class="battleship-part shadow">
+          <div class=" battleship-part battleship-cannon p1color"></div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="boat cruiser-container shadow" id="cruiser"draggable="true">
+      <div class="cruiser" id="cruiser-body">
+          <div class="cruiser-part cruiser1 p1color"></div>
+          <div class="cruiser-part shadow">
+          <div class="cruiser-part cruiser2 p1color"></div>
+          <div class="cruiser-part shadow">
+          <div class="cruiser-part cruiser3 p1color"></div>
+          <div class="cruiser-part shadow">
+          <div class="cruiser-part cruiser4 p1color"></div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="boat submarine-container shadow" id="submarine"draggable="true">
+        <div class="submarine" id="submarine-body">
+          <div class="submarine-part shadow">
+          <div class="submarine-part submarine1 p1color"></div>
+          <div class="submarine-part shadow">
+          <div class="submarine-part submarine2 p1color">
+          </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="boat destroyer-container shadow" id="destroyer"draggable="true">
+      <div class="destroyer" id="destroyer-body">
+          <div class="destroyer-part shadow">
+          <div class="destroyer-part p1color destroyer1 "></div>
+          <div class="destroyer-part shadow">
+          <div class="destroyer-part p1color destroyer2"></div>
+          <div class="destroyer-part p1color destroyer3">
+          </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
+    
+    <div class="enemy-grid-background";>
+      <div class="text"></div>
+      <div class="cursor" id="cursor"></div>
+      
+      <div class="enemy-grid" id="enemyzone";></div>
+    </div>
+</div>
+</div>
+  
+  <script src="index.js"></script>
+</body>
+</html>

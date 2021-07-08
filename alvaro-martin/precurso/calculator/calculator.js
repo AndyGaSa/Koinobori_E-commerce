@@ -63,4 +63,4 @@ function calcu (num1 , num2 ){
     
 }
 }
-console.log (calcu( 4,6));
+calcu( 4,6);

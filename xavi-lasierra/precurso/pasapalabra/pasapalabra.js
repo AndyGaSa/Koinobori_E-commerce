@@ -65,9 +65,9 @@ function pasapalabra(){
     let round = 1;
     score = 0;
     do{
-        let endGame = newTurn(String.fromCharCode(asciiLetter).toString(), round);
+        let closeGame = newTurn(String.fromCharCode(asciiLetter).toString(), round);
 
-        if(endGame)
+        if(closeGame)
             break;
         
         //Calcula siguiente letra
@@ -87,15 +87,7 @@ function pasapalabra(){
 }
 
 function newTurn(currentLetter, round){
-    //Añade a currentGameQuestions 1 pregunta de la lista de la letra que toca
-    if(round === 1){
-        let aux = [];
-        for(let i=0; i<allQuestions.length; i++){
-            if(allQuestions[i].letter === currentLetter)
-                aux.push(i);
-        }    
-        currentGameQuestions.push(allQuestions[aux[Math.round(Math.random() * (aux.length - 1))]]);
-    }
+    addQuestion(currentLetter, round);
     
     console.clear();
     console.log(`PASAPALABRA\n\n`);
@@ -106,24 +98,21 @@ function newTurn(currentLetter, round){
     let failedLetters = `Letras falladas: `;
     let dueLetters = `Letras sin responder: `;
     let x = 0;
-    for(let i=0; i<currentGameQuestions.length; i++){
-        if(currentGameQuestions[i].status === 1)
+    for(let value of currentGameQuestions){
+        if(value.status === 1)
             correctLetters += `${allLetters.splice(x,1)}, `;
-        else if(currentGameQuestions[i].status === 2)
+        else if(value.status === 2)
             failedLetters += `${allLetters.splice(x,1)}, `;
         else
             x++;
     }
-    for(let i=0; i<allLetters.length; i++){
-        dueLetters +=  `${allLetters[i]}, `;
+
+    for (let value of allLetters){
+        dueLetters +=  `${value}, `;
     }
     console.log(`PROGRESO:\n\n${correctLetters}\n${failedLetters}\n${dueLetters}`);
     
     let currentObject = currentGameQuestions.find(({letter}) => letter === currentLetter);
-    /*
-    //Imprime la pregunta
-    console.log(`PREGUNTA:\n\n${currentObject.question}`);
-    */
     
     //Pide respuesta
     let answer;
@@ -165,6 +154,18 @@ function newTurn(currentLetter, round){
     }
 
     return false;
+}
+
+function addQuestion(currentLetter, round){
+        //Añade a currentGameQuestions 1 pregunta de la lista de la letra que toca
+        if(round === 1){
+            let aux = [];
+            for(let i=0; i<allQuestions.length; i++){
+                if(allQuestions[i].letter === currentLetter)
+                    aux.push(i);
+            }    
+            currentGameQuestions.push(allQuestions[aux[Math.round(Math.random() * (aux.length - 1))]]);
+        }
 }
 
 function endGame(won){

@@ -1,0 +1,1630 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+.main-container{
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+}
+#top-part {
+  display: flex;
+  height: 29%;
+  max-height: 600px;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgb(204, 120, 120);
+  background: linear-gradient( 
+180deg
+, rgba(204, 120, 120, 1) 0%, rgba(252, 181, 159, 1) 50%, rgba(250, 244, 182, 1) 100% );
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+#top-part > * {
+  margin: 4vw;
+}
+#bottom-part {
+  display: flex;
+  /* height: 50%; */
+  justify-content: center;
+  /* background: rgb(204, 120, 120); */
+  background: linear-gradient( 
+180deg
+, rgba(185, 214, 214, 0.9) 0%, rgba(51, 131, 148, 1) 50%, rgba(23, 54, 87, 1) 100% );
+  background-repeat: no-repeat;
+  margin-top: -1.5vw;
+  z-index: 2;
+}
+#bottom-part > * {
+  margin: 50px 20px 200px;
+}
+.enemy-ready {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  font-size: 70px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+.menu-buttons {
+  text-align: center;
+  max-width: 176px;
+  width: 10vw;
+  min-width: 150px;
+  color: rgb(226, 91, 91);
+  font-size: 43px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  z-index: 10;
+  border-radius: 20%;
+}
+ .menu-buttons:hover{
+  color: rgb(91, 154, 226);
+  cursor: pointer;
+}
+.boats-here {
+  transform: translate(54px, 41px);
+  POSITION: ABSOLUTE;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  font-size: 70px;
+  opacity: 0.3;
+  inline-size: 10px;
+  pointer-events: none;
+}
+.silouetes{
+  display: flex;
+  height: 10vw;
+  /* position: absolute; */
+  justify-content: space-around;
+  /* margin: revert; */
+  /* background-color: grey; */
+  /* opacity: 0.4; */
+  margin-top: -8.6vw;
+  align-items: flex-end;
+  z-index: 0;
+}
+/**********
+  RADAR
+**********/
+
+#radar-container {
+  border: #ffc75f 1vw solid;
+  border-radius: 50%;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 400px;
+  max-height: 400px;
+  width: 25vw;
+  height: 25vw;
+  display: grid;
+}
+#radar-container > *{
+  grid-column: 1;
+  grid-row: 1;
+}
+#radar-scan {
+
+  border-radius: 50%;
+  background: linear-gradient(230deg, #f9f871 00%, transparent 45.34%) 0 0;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  animation: linear radar-rotation 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes radar-rotation {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#radar-inner-lines {
+
+background: rgb(2, 0, 36);
+
+background: radial-gradient(
+      circle,
+      rgba(2, 0, 36, 0) 10%,
+      #ff6f91 11%,
+      rgba(0, 255, 50, 0) 12%
+    ),
+    radial-gradient(
+      circle,
+      rgba(2, 0, 36, 0) 35%,
+      #ff6f91 36%,
+      rgba(0, 255, 50, 0) 37%
+    ),
+    radial-gradient(
+      circle,
+      rgba(2, 0, 36, 0) 60%,
+      #ff6f91 61%,
+      rgba(0, 255, 50, 0) 62%
+    );
+
+border-radius: 50%;
+}
+.dot {
+  width: 0.7vw;
+  height: 0.7vw;
+  border-radius: 50%;
+  background-color: #f9f871;
+  animation: linear dotAnim 4s;
+  animation-iteration-count: infinite;
+}
+.dot1 {
+  transform: translate(14vw, 17vw);
+  animation-delay: 1.6s;
+  
+}
+.dot2 {
+  transform: translate(9vw, 3vw);
+  animation-delay: 3.8s;
+
+}
+.dot3 {
+  transform: translate(7vw, 16vw);
+  animation-delay: 2.4s;
+
+}
+.dot4 {
+  transform: translate(4vw, 18vw);
+  animation-delay: 2.3s;
+  
+}
+.dot5 {
+  transform: translate(20vw, 10vw);
+  animation-delay: 0.6s;
+
+}
+.dot6 {
+  transform: translate(6vw, 12vw);
+  animation-delay: 2.6s;
+  
+}
+.dot7 {
+  transform: translate(12vw, 14vw);
+  animation-delay: 1.7s;
+  
+}
+.dot8 {
+  transform: translate(14vw, 2vw);
+  animation-delay: 0.2s;
+
+}
+.dot9 {
+  transform: translate(12vw, 20vw);
+  animation-delay: 1.6s;
+}
+@keyframes dotAnim {
+  0% {
+    filter: blur(5px);
+  }
+  10% {
+    filter: blur(0px);
+  }
+  60% {
+    filter: blur(3px);
+  }
+  100% {
+    filter: blur(5px);
+  }
+}
+#radar-grid {
+
+border-radius: 50%;
+
+background-image: linear-gradient(to right, #d65db1 1px, transparent 1px),
+    linear-gradient(to bottom, #d65db1 1px, transparent 1px);
+
+background-size: 1vw 1vw;
+}
+#radar-background {
+
+border-radius: 50%;
+
+background: #845ec2;
+
+background: radial-gradient(circle, #845ec2 0%, rgba(0, 0, 0, 1) 100%);
+}
+.w{
+  width: 48px;
+  height: 48px;
+  background: rgb(0, 166, 250, 0.49);
+  margin-left: 2px;
+  margin-top: 2px;
+  position: absolute;
+  z-index: 2;
+}
+.w > * {
+  position: absolute;
+    height: 50px;
+    width: 50px;
+    background: rgb(0, 48, 100, 0.21);
+    transform-origin: bottom;
+}
+.water1{
+  clip-path: polygon(0 79%, 19% 83%, 31% 80%, 46% 82%, 57% 77%, 
+  68% 83%, 77% 76%, 86% 81%, 91% 75%, 100% 83%, 100% 100%, 0 100%);
+  animation: waterMoves 4s infinite;
+}
+.water2{
+  clip-path: polygon(0 65%, 19% 66%, 31% 54%, 46% 58%, 56% 50%,
+  71% 56%, 76% 49%, 86% 56%, 94% 49%, 100% 60%, 100% 100%, 0 100%);
+  animation: waterMoves 3s infinite;
+}
+.water3{
+  clip-path: polygon(0% 43%, 18% 37%, 32% 43%, 51% 48%, 58% 42%,
+   68% 44%, 78% 42%, 86% 46%, 94% 42%, 100% 50%, 100% 100%, 0% 100%);
+   animation: waterMoves 2s infinite;
+}
+.water4{
+  clip-path: polygon(0 19%, 16% 26%, 32% 27%, 48% 20%, 57% 32%, 
+  69% 36%, 76% 29%, 88% 26%, 94% 32%, 100% 34%, 100% 100%, 0 100%);
+  animation: waterMoves 3.2s infinite;
+}
+.water5{clip-path: polygon(0 13%, 17% 8%, 32% 11%, 53% 6%, 71% 9%, 
+  81% 15%, 87% 11%, 91% 18%, 98% 14%, 100% 19%, 100% 100%, 0 100%);
+  animation: waterMoves 6s infinite;}
+
+
+@keyframes waterMoves {
+  0%{transform: scaleY(0.7);}
+  25%{transform: scaleY(0.8);}
+  40%{transform: scaleY(0.9);}
+  55%{transform: scaleY(0.8);}
+  70%{transform: scaleY(0.85);}
+  100%{transform: scaleY(0.7);}
+  
+}
+
+/**********
+  BOATS INTERACTION
+**********/
+
+.menu {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.boat:hover {
+  cursor: grab;
+}
+.red-border {
+  border: red 2px solid;
+}
+
+/**********
+  GRID
+**********/
+
+.user-grid {
+  background-size: 50px 50px;
+  width: 501px;
+  height: 501px;
+  background-image: linear-gradient( to right, #4a0f52 2px, transparent 1px ), linear-gradient(to bottom, #4a0f52 2px, transparent 1px);
+}
+.user-grid-background {
+  box-sizing: content-box;
+  width: 501px;
+  height: 501px;
+  border: 10px #321364 solid;
+  border-radius: 2vw;
+  background: #845ec2;
+  background: radial-gradient( circle, rgb(163, 143, 231) 0%, rgb(110, 128, 209) 100% );
+}
+.enemy-grid {
+  cursor: none;
+  background-size: 50px 50px;
+  width: 501px;
+  height: 501px;
+  background-image: linear-gradient( to right, #532833 2px, transparent 1px ), linear-gradient(to bottom, #532833 2px, transparent 1px);
+}
+.enemy-grid-background {
+  box-sizing: content-box;
+  width: 501px;
+  height: 501px;
+  border: 10px rgb(116, 52, 52) solid;
+  border-radius: 20px;
+  background: #b3556d;
+  background: radial-gradient( circle, rgba(252, 181, 159, 1) 0%, rgba(204, 120, 120, 1) 100% );
+}
+
+
+/**********
+  BOATS
+**********/
+.p1color{
+  background-color: #7955b3
+}
+.p2color{
+  background-color: #b3556d
+}
+
+.shadow {
+  filter: drop-shadow(8px 5px 6px rgba(7, 1, 10, 0.5));
+}
+#battleship-silouetteP1 {
+  width: 24vw;
+  height: 8vw;
+  background-color: #100b18;
+  clip-path: polygon(
+    6% 64%,
+    10% 79%,
+    10% 79%,
+    13% 81%,
+    13% 81%,
+    13% 89%,
+    13% 89%,
+    15% 89%,
+    15% 89%,
+    16% 81%,
+    16% 81%,
+    19% 83%,
+    19% 83%,
+    18% 86%,
+    18% 86%,
+    17% 89%,
+    17% 89%,
+    19% 91%,
+    19% 91%,
+    25% 89%,
+    25% 89%,
+    33% 87%,
+    33% 87%,
+    45% 91%,
+    45% 91%,
+    59% 90%,
+    59% 90%,
+    62% 97%,
+    62% 97%,
+    66% 98%,
+    66% 98%,
+    68% 95%,
+    68% 95%,
+    68% 91%,
+    68% 91%,
+    85% 90%,
+    85% 90%,
+    87% 88%,
+    87% 88%,
+    88% 77%,
+    88% 77%,
+    91% 69%,
+    91% 69%,
+    93% 62%,
+    93% 62%,
+    96% 56%,
+    96% 56%,
+    80% 57%,
+    80% 57%,
+    80% 55%,
+    80% 55%,
+    77% 54%,
+    77% 54%,
+    77% 51%,
+    77% 51%,
+    75% 51%,
+    75% 51%,
+    74% 53%,
+    74% 53%,
+    73% 54%,
+    73% 54%,
+    73% 58%,
+    73% 58%,
+    72% 59%,
+    72% 59%,
+    71% 54%,
+    71% 54%,
+    69% 54%,
+    69% 54%,
+    65% 55%,
+    65% 55%,
+    62% 46%,
+    62% 46%,
+    62% 43%,
+    62% 43%,
+    61% 43%,
+    61% 43%,
+    59% 39%,
+    59% 39%,
+    57% 39%,
+    57% 39%,
+    55% 36%,
+    55% 36%,
+    55% 24%,
+    55% 24%,
+    55% 22%,
+    55% 22%,
+    54% 22%,
+    54% 22%,
+    54% 19%,
+    54% 19%,
+    54% 15%,
+    54% 15%,
+    53% 14%,
+    53% 14%,
+    53% 15%,
+    53% 15%,
+    52% 18%,
+    52% 18%,
+    52% 21%,
+    52% 21%,
+    51% 22%,
+    51% 22%,
+    51% 15%,
+    51% 15%,
+    51% 6%,
+    51% 6%,
+    50% 7%,
+    50% 7%,
+    50% 36%,
+    50% 36%,
+    50% 47%,
+    50% 47%,
+    48% 46%,
+    48% 46%,
+    48% 48%,
+    48% 48%,
+    48% 63%,
+    48% 63%,
+    46% 63%,
+    46% 63%,
+    46% 41%,
+    46% 41%,
+    43% 42%,
+    43% 42%,
+    43% 56%,
+    43% 56%,
+    42% 56%,
+    42% 56%,
+    42% 63%,
+    42% 63%,
+    40% 63%,
+    40% 63%,
+    40% 54%,
+    40% 54%,
+    39% 54%,
+    39% 54%,
+    39% 46%,
+    39% 46%,
+    37% 20%,
+    37% 20%,
+    37% 16%,
+    37% 16%,
+    34% 15%,
+    34% 15%,
+    35% 19%,
+    35% 19%,
+    35% 49%,
+    35% 49%,
+    34% 48%,
+    34% 48%,
+    34% 41%,
+    34% 41%,
+    30% 41%,
+    30% 41%,
+    32% 43%,
+    32% 43%,
+    31% 53%,
+    31% 53%,
+    29% 53%,
+    29% 53%,
+    29% 57%,
+    29% 57%,
+    26% 58%,
+    26% 58%,
+    26% 55%,
+    26% 55%,
+    24% 55%,
+    24% 55%,
+    24% 53%,
+    24% 53%,
+    22% 52%,
+    22% 52%,
+    22% 64%,
+    22% 64%,
+    6% 63%,
+    6% 63%
+  );
+}
+#battleship-silouetteP2 {
+  width: 24vw;
+  height: 8vw;
+  background-color: #100b18;
+  clip-path: polygon(
+    2% 73%,
+    2% 81%,
+    2% 84%,
+    3% 86%,
+    8% 86%,
+    8% 89%,
+    4% 88%,
+    5% 93%,
+    5% 94%,
+    8% 94%,
+    96% 94%,
+    97% 94%,
+    98% 91%,
+    97% 86%,
+    96% 66%,
+    91% 67%,
+    91% 64%,
+    92% 63%,
+    91% 60%,
+    91% 59%,
+    89% 60%,
+    89% 63%,
+    89% 67%,
+    76% 66%,
+    76% 65%,
+    77% 65%,
+    77% 63%,
+    82% 62%,
+    81% 61%,
+    76% 63%,
+    75% 61%,
+    73% 60%,
+    73% 59%,
+    72% 60%,
+    71% 65%,
+    72% 65%,
+    72% 66%,
+    67% 67%,
+    67% 61%,
+    68% 61%,
+    68% 58%,
+    66% 58%,
+    66% 55%,
+    67% 55%,
+    66% 53%,
+    64% 53%,
+    64% 50%,
+    65% 50%,
+    65% 46%,
+    64% 45%,
+    63% 41%,
+    63% 40%,
+    63% 14%,
+    62% 14%,
+    62% 58%,
+    61% 58%,
+    61% 55%,
+    62% 55%,
+    62% 53%,
+    61% 53%,
+    61% 50%,
+    61% 42%,
+    60% 38%,
+    59% 38%,
+    59% 42%,
+    59% 51%,
+    59% 54%,
+    59% 58%,
+    57% 57%,
+    57% 50%,
+    55% 50%,
+    55% 54%,
+    51% 54%,
+    51% 58%,
+    50% 58%,
+    51% 42%,
+    50% 40%,
+    49% 39%,
+    48% 42%,
+    48% 52%,
+    49% 54%,
+    47% 59%,
+    47% 64%,
+    46% 64%,
+    46% 72%,
+    44% 72%,
+    44% 71%,
+    45% 68%,
+    43% 68%,
+    43% 66%,
+    41% 66%,
+    41% 67%,
+    40% 66%,
+    39% 68%,
+    36% 68%,
+    36% 60%,
+    47% 46%,
+    36% 58%,
+    36% 46%,
+    36% 46%,
+    35% 67%,
+    35% 67%,
+    35% 50%,
+    35% 50%,
+    35% 46%,
+    34% 46%,
+    34% 29%,
+    34% 26%,
+    34% 2%,
+    33% 27%,
+    33% 31%,
+    33% 49%,
+    33% 51%,
+    33% 72%,
+    29% 73%,
+    28% 72%,
+    29% 72%,
+    29% 66%,
+    27% 66%,
+    27% 67%,
+    26% 67%,
+    25% 68%,
+    24% 68%,
+    24% 69%,
+    19% 67%,
+    19% 69%,
+    24% 71%,
+    24% 73%,
+    18% 73%,
+    17% 71%,
+    16% 71%,
+    15% 72%,
+    10% 72%,
+    10% 70%,
+    9% 70%,
+    9% 73%
+  );
+}
+.sink1{
+  animation: ease-in-out rotate1 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes rotate1 {
+  0%{transform: rotate(0deg)}
+  100%{transform: rotate(5deg)}
+}
+.sink2{
+  animation: ease-in-out rotate2 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes rotate2 {
+  0%{transform: rotate(5deg)}
+  100%{transform: rotate(15deg)}
+}
+.sink3{
+  animation: ease-in-out rotate3 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes rotate3 {
+  0%{transform: rotate(15deg)}
+  100%{transform: rotate(30deg)}
+}
+.sink4{
+  animation: ease-in-out rotate4 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes rotate4 {
+  0%{transform: rotate(30deg)}
+  100%{transform: rotate(60deg)}
+}
+.sink5{
+  animation: ease-in-out rotate5 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes rotate5 {
+  0%{transform: translate(0px, 0px) rotate(60deg)}
+  100%{transform: translate(20px, 200px) rotate(85deg)}
+}
+
+.carrier-container {
+  width: 250px;
+  height: 50px;
+
+}
+.carrier-containerR {
+  width: 50px;
+  height: 250px;
+
+}
+.carrierR {
+  transform: rotate(90deg);
+  position: relative;
+  width: 250px;
+  height: 50px;
+  transform-origin: 10% 50%;
+}
+.carrier {
+  position: relative;
+  width: 250px;
+  height: 50px;
+
+  
+}
+.carrier-part {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.carrier-base {
+  filter: brightness(0.6);
+  clip-path: polygon(
+    4% 34%,
+    2% 34%,
+    2% 62%,
+    4% 72%,
+    4% 86%,
+    23% 87%,
+    24% 90%,
+    24% 97%,
+    26% 97%,
+    26% 94%,
+    26% 88%,
+    27% 88%,
+    27% 96%,
+    29% 97%,
+    30% 90%,
+    35% 88%,
+    36% 93%,
+    38% 88%,
+    40% 87%,
+    45% 89%,
+    46% 86%,
+    67% 87%,
+    74% 71%,
+    74% 78%,
+    77% 78%,
+    79% 70%,
+    97% 64%,
+    97% 38%,
+    91% 36%,
+    91% 34%,
+    81% 32%,
+    80% 26%,
+    77% 27%,
+    76% 31%,
+    75% 31%,
+    67% 8%,
+    57% 8%,
+    57% 7%,
+    55% 7%,
+    55% 13%,
+    49% 14%,
+    49% 10%,
+    48% 11%,
+    48% 13%,
+    47% 13%,
+    47% 12%,
+    45% 12%,
+    44% 13%,
+    44% 10%,
+    43% 9%,
+    43% 13%,
+    41% 12%,
+    41% 15%,
+    40% 15%,
+    40% 12%,
+    33% 12%,
+    33% 11%,
+    33% 7%,
+    32% 13%,
+    31% 8%,
+    26% 8%,
+    23% 15%,
+    15% 15%,
+    14% 13%,
+    11% 13%,
+    11% 18%,
+    8% 18%,
+    8% 19%,
+    4% 19%
+  );
+}
+.carrier-platform {
+  filter: brightness(0.8);
+  clip-path: polygon(
+    2% 36%,
+    2% 59%,
+    3% 72%,
+    6% 72%,
+    6% 86%,
+    25% 86%,
+    25% 83%,
+    27% 78%,
+    28% 77%,
+    29% 80%,
+    31% 81%,
+    31% 86%,
+    39% 86%,
+    39% 71%,
+    45% 71%,
+    45% 86%,
+    54% 85%,
+    54% 71%,
+    60% 71%,
+    60% 86%,
+    67% 86%,
+    74% 69%,
+    96% 62%,
+    96% 39%,
+    75% 32%,
+    66% 9%,
+    58% 9%,
+    53% 15%,
+    43% 15%,
+    43% 13%,
+    41% 12%,
+    41% 15%,
+    32% 16%,
+    31% 12%,
+    25% 11%,
+    23% 15%,
+    21% 14%,
+    21% 30%,
+    15% 30%,
+    16% 15%,
+    11% 15%,
+    10% 32%
+  );
+}
+.carrier-lines1 {
+  transform: rotate(-10deg) scaleX(0.65) translate(-55px, 15px);
+  border: yellow dashed 1px;
+}
+.carrier-lines2 {
+  transform: rotate(-10deg) scaleX(0.6) translate(-80px, 5px);
+  border: grey solid 2px;
+}
+.carrier-lines3 {
+  transform: rotate(-10deg) scaleX(0.67) translate(-42px, 15px);
+  border: grey solid 2px;
+}
+
+.battleship-container {
+  width: 200px;
+  height: 50px;
+}
+.battleship-containerR {
+  width: 50px;
+  height: 200px;
+}
+.battleship {
+  position: relative;
+  width: 200px;
+  height: 50px;
+}
+.battleshipR {
+  transform: rotate(90deg);
+  position: relative;
+  width: 200px;
+  height: 50px;
+  transform-origin: 12.50% 50%;
+}
+.battleship-part {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.battleship-base {
+  filter: brightness(0.6);
+  clip-path: polygon(
+    1% 15%,
+    1% 85%,
+    65% 85%,
+    76% 79%,
+    85% 72%,
+    99% 52%,
+    99% 48%,
+    85% 28%,
+    76% 21%,
+    65% 15%
+  );
+}
+.battleship-heliport {
+  filter: brightness(0.7);
+  clip-path: polygon(3% 20%, 3% 80%, 18% 80%, 18% 20%);
+}
+.battleship-front {
+  filter: brightness(0.7);
+  clip-path: polygon(
+    65% 20%,
+    64% 24%,
+    73% 40%,
+    73% 60%,
+    64% 76%,
+    65% 80%,
+    74% 78%,
+    85% 68%,
+    85% 32%,
+    74% 22%
+  );
+}
+.battleship-cover {
+  filter: brightness(0.8);
+  clip-path: polygon(
+    20% 25%,
+    20% 75%,
+    30% 75%,
+    30% 70%,
+    36% 70%,
+    39% 65%,
+    39% 35%,
+    36% 30%,
+    30% 30%,
+    30% 25%
+  );
+}
+.battleship-helicopter {
+  filter: brightness(0.9);
+  clip-path: polygon(
+    0% 49%,
+    3% 49%,
+    3% 42%,
+    4% 42%,
+    5% 49%,
+    7% 49%,
+    8% 47%,
+    9% 46%,
+    6% 22%,
+    7% 20%,
+    10% 45%,
+    12% 45%,
+    15% 23%,
+    16% 24%,
+    13% 45%,
+    14% 46%,
+    15% 50%,
+    14% 54%,
+    13% 55%,
+    16% 76%,
+    15% 77%,
+    12% 55%,
+    10% 55%,
+    7% 80%,
+    6% 78%,
+    9% 54%,
+    8% 53%,
+    7% 51%,
+    5% 51%,
+    4% 58%,
+    3% 58%,
+    3% 51%,
+    0% 51%
+  );
+}
+.battleship-antena {
+  clip-path: polygon(
+    50% 25%,
+    49% 43%,
+    48% 45%,
+    48% 55%,
+    49% 57%,
+    50% 75%,
+    51% 75%,
+    52% 60%,
+    56% 60%,
+    57% 75%,
+    61% 75%,
+    64% 68%,
+    64% 32%,
+    61% 25%,
+    57% 25%,
+    56% 40%,
+    52% 40%,
+    51% 25%,
+    50% 25%,
+    49% 43%
+  );
+}
+.battleship-cannon {
+  filter: brightness(0.9);
+  clip-path: polygon(
+    90% 47%,
+    90% 53%,
+    80% 55%,
+    80% 65%,
+    76% 65%,
+    75% 60%,
+    75% 40%,
+    76% 35%,
+    80% 35%,
+    80% 45%
+  );
+}
+
+
+.cruiser-container{
+  width: 150px;
+  height: 50px;
+}
+.cruiser-containerR{
+  width: 50px;
+  height: 150px;
+}
+.cruiser {
+  position: relative;
+  width: 150px;
+  height: 50px;
+}
+.cruiserR {
+  transform: rotate(90deg);
+  position: relative;
+  width: 150px;
+  height: 50px;
+  transform-origin: 16.6% 50%;
+}
+.cruiser-part {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.cruiser1 {
+  filter: brightness(0.6);
+  clip-path: polygon(
+    4% 32%,
+    4% 68%,
+    8% 70%,
+    9% 75%,
+    13% 77%,
+    33% 79%,
+    60% 80%,
+    69% 80%,
+    77% 79%,
+    82% 76%,
+    87% 72%,
+    93% 65%,
+    96% 58%,
+    97% 50%,
+    96% 42%,
+    93% 35%,
+    87% 28%,
+    82% 24%,
+    77% 21%,
+    69% 20%,
+    60% 20%,
+    33% 21%,
+    13% 23%,
+    9% 25%,
+    8% 30%
+  );
+}
+.cruiser2 {
+  filter: brightness(0.7);
+  clip-path: polygon(
+    12% 24%,
+    12% 49%,
+    12% 76%,
+    36% 79%,
+    58% 79%,
+    73% 79%,
+    78% 75%,
+    81% 65%,
+    82% 54%,
+    86% 50%,
+    82% 46%,
+    81% 35%,
+    78% 25%,
+    73% 21%,
+    58% 21%,
+    36% 21%
+  );
+}
+.cruiser3 {
+  filter: brightness(0.8);
+  clip-path: polygon(
+    30% 26%,
+    33% 32%,
+    33% 50%,
+    33% 68%,
+    30% 74%,
+    33% 77%,
+    68% 77%,
+    71% 70%,
+    73% 50%,
+    71% 30%,
+    68% 23%,
+    33% 23%
+  );
+}
+.cruiser4 {
+  filter: brightness(0.9);
+  clip-path: polygon(
+    55% 31%,
+    57% 43%,
+    57% 57%,
+    55% 69%,
+    53% 72%,
+    43% 72%,
+    34% 70%,
+    32% 50%,
+    34% 30%,
+    43% 28%,
+    53% 28%
+  );
+}
+
+.submarine-container {
+  width: 150px;
+  height: 50px;
+}
+.submarine-containerR {
+  width: 50px;
+  height: 150px;
+}
+.submarine {
+  position: relative;
+  width: 150px;
+  height: 50px;
+}
+.submarineR {
+  transform: rotate(90deg);
+  position: relative;
+  width: 150px;
+  height: 50px;
+  transform-origin: 16.6% 50%;
+}
+.submarine-part {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.submarine1 {
+  filter: brightness(0.6);
+  clip-path: polygon(
+    94% 41%,
+    91% 36%,
+    87% 33%,
+    85% 30%,
+    84% 18%,
+    83% 18%,
+    82% 30%,
+    33% 29%,
+    29% 30%,
+    23% 33%,
+    14% 40%,
+    13% 33%,
+    12% 29%,
+    10% 29%,
+    10% 43%,
+    7% 46%,
+    7% 41%,
+    3% 43%,
+    3% 57%,
+    7% 59%,
+    7% 54%,
+    10% 57%,
+    10% 71%,
+    12% 71%,
+    13% 67%,
+    14% 60%,
+    23% 67%,
+    29% 70%,
+    33% 71%,
+    82% 70%,
+    83% 82%,
+    84% 82%,
+    85% 70%,
+    87% 67%,
+    91% 64%,
+    94% 59%,
+    95% 50%
+  );
+}
+.submarine2 {
+  filter: brightness(0.9);
+  clip-path: polygon(
+    78% 40%,
+    74% 38%,
+    61% 40%,
+    58% 42%,
+    56% 50%,
+    58% 58%,
+    61% 60%,
+    74% 62%,
+    78% 60%,
+    80% 50%
+  );
+}
+
+
+.destroyer-container {
+  width: 100px;
+  height: 50px;
+}
+.destroyer-containerR {
+  width: 50px;
+  height: 100px;
+}
+.destroyer {
+  position: relative;
+  width: 100px;
+  height: 50px;
+}
+.destroyerR {
+  
+  transform: rotate(90deg);
+  position: relative;
+  width: 100px;
+  height: 50px;
+  transform-origin: 25% 50%;
+}
+.destroyer-part {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.destroyer1 {
+  filter: brightness(0.6);
+  clip-path: polygon(
+    14% 30%,
+    9% 35%,
+    5% 50%,
+    9% 65%,
+    14% 70%,
+    37% 78%,
+    55% 79%,
+    70% 75%,
+    83% 67%,
+    94% 50%,
+    83% 33%,
+    70% 25%,
+    55% 21%,
+    37% 22%
+  );
+}
+.destroyer2 {
+  filter: brightness(0.8);
+  clip-path: polygon(
+    35% 30%,
+    35% 70%,
+    39% 60%,
+    50% 64%,
+    51% 77%,
+    60% 67%,
+    60% 33%,
+    51% 23%,
+    50% 36%,
+    39% 40%
+  );
+}
+.destroyer3 {
+  clip-path: polygon(16% 38%, 16% 62%, 34% 70%, 34% 30%);
+}
+
+/**********
+  fire
+**********/
+.fire {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  pointer-events: none;
+}
+.flame1 {
+ position: absolute;
+
+        background-color:yellow;
+       border-radius:5%;
+        transform:translateX(-50%)rotate(45deg);
+   animation: fire1Anime 2s infinite linear;
+}
+.flame2 {
+ position: absolute;
+
+        background-color:yellow;
+       border-radius:5%;
+        transform:translateX(-50%)rotate(45deg);
+   animation: fire2Anime 2s infinite linear;
+}
+.flame3 {
+ position: absolute;
+
+        background-color:yellow;
+       border-radius:5%;
+        transform:translateX(-50%)rotate(45deg);
+   animation: fire3Anime 2s infinite linear;
+}
+.flame4 {
+ position: absolute;
+
+        background-color:yellow;
+       border-radius:5%;
+        transform:translateX(-50%)rotate(45deg);
+   animation: fire4Anime 2s infinite linear;
+}
+.flame5 {
+ position: absolute;
+
+        background-color:yellow;
+       border-radius:5%;
+        transform:translateX(-50%)rotate(45deg);
+   animation: fire4Anime 2s infinite linear;
+}
+
+@keyframes fire1Anime {
+ 0% {
+   transform:translateY(50px)rotate(50deg);
+   height:0px;
+   width:0px;
+   border-radius:0%;
+   background-color:#FFDC01;
+ }
+ 20% {
+   transform:translateY(40px)rotate(40deg);
+   height:30px;
+   width:30px;
+   border-radius:5%;
+   background-color:#FFDC01;
+ }
+ 40%{ transform:translateY(30px)rotate(30deg);
+   height:30px;
+   width:30px;
+   border-radius:10%;
+   background-color:#FDAC01;
+ }
+ 60%{ transform:translateY(20px)rotate(20deg);
+   height:20px;
+   width:20px;
+   border-radius:20%;
+   background-color:#FDAC01;
+ }
+ 80%{
+    transform:translateY(10px)rotate(10deg);
+   height:0px;
+   width:0px;
+   border-radius:30%;
+   background-color:#F73B01;
+ }
+}
+@keyframes fire2Anime {
+ 20% {
+   transform:translateY(50px)rotate(50deg);
+   height:0px;
+   width:0px;
+   border-radius:0%;
+   background-color:#FFDC01;
+ }
+ 40% {
+   transform:translateY(40px)rotate(40deg);
+   height:30px;
+   width:30px;
+   border-radius:5%;
+   background-color:#FFDC01;
+ }
+ 60%{ transform:translateY(30px)rotate(30deg);
+   height:30px;
+   width:30px;
+   border-radius:10%;
+   background-color:#FDAC01;
+ }
+ 80%{ transform:translateY(20px)rotate(20deg);
+   height:20px;
+   width:20px;
+   border-radius:20%;
+   background-color:#FDAC01;
+ }
+ 100%{
+    transform:translateY(10px)rotate(10deg);
+   height:0px;
+   width:0px;
+   border-radius:30%;
+   background-color:#F73B01;
+ }
+
+ 
+}
+@keyframes fire3Anime {
+ 40% {
+   transform:translateY(50px)rotate(50deg);
+   height:0px;
+   width:0px;
+   border-radius:0%;
+   background-color:#FFDC01;
+ }
+ 60% {
+   transform:translateY(40px)rotate(40deg);
+   height:30px;
+   width:30px;
+   border-radius:5%;
+   background-color:#FFDC01;
+ }
+ 80%{ transform:translateY(30px)rotate(30deg);
+   height:30px;
+   width:30px;
+   border-radius:10%;
+   background-color:#FDAC01;
+ }
+ 100%{ transform:translateY(20px)rotate(20deg);
+   height:20px;
+   width:20px;
+   border-radius:20%;
+   background-color:#FDAC01;
+ }
+ 00%{ transform:translateY(20px)rotate(20deg);
+   height:20px;
+   width:20px;
+   border-radius:20%;
+   background-color:#FDAC01;
+ }
+ 
+ 20%{
+    transform:translateY(0px)rotate(0deg);
+   height:00px;
+   width:00px;
+   border-radius:30%;
+   background-color:#F73B01;
+ }
+}
+@keyframes fire4Anime {
+ 60% {
+   transform:translateY(50px)rotate(50deg);
+   height:0px;
+   width:0px;
+   border-radius:0%;
+   background-color:#FFDC01;
+ }
+ 80% {
+   transform:translateY(40px)rotate(40deg);
+   height:30px;
+   width:30px;
+   border-radius:5%;
+   background-color:#FFDC01;
+ }
+ 100%{ transform:translateY(30px)rotate(30deg);
+   height:30px;
+   width:30px;
+   border-radius:10%;
+   background-color:#FDAC01;
+ }
+ 00% {
+   transform:translateY(30px)rotate(30deg);
+   height:30px;
+   width:30px;
+   border-radius:10%;
+   background-color:#FDAC01;
+ }
+ 20%{ transform:translateY(20px)rotate(20deg);
+   height:20px;
+   width:20px;
+   border-radius:20%;
+   background-color:#FDAC01;
+ }
+ 40%{
+    transform:translateY(0px)rotate(0deg);
+   height:00px;
+   width:00px;
+   border-radius:30%;
+   background-color:#F73B01;
+ }
+}
+@keyframes fire5Anime {
+ 80% {
+   transform:translateY(50px)rotate(50deg);
+   height:0px;
+   width:0px;
+   border-radius:0%;
+   background-color:#FFDC01;
+ }
+ 100% {
+   transform:translateY(40px)rotate(40deg);
+   height:30px;
+   width:30px;
+   border-radius:5%;
+   background-color:#FFDC01;
+ }
+ 00% {
+   transform:translateY(40px)rotate(40deg);
+   height:30px;
+   width:30px;
+   border-radius:5%;
+   background-color:#FFDC01;
+ }
+ 20%{ transform:translateY(30px)rotate(30deg);
+   height:30px;
+   width:30px;
+   border-radius:10%;
+   background-color:#FDAC01;
+ }
+ 40%{ transform:translateY(20px)rotate(20deg);
+   height:20px;
+   width:20px;
+   border-radius:20%;
+   background-color:#FDAC01;
+ }
+ 60%{
+    transform:translateY(0px)rotate(0deg);
+   height:00px;
+   width:00px;
+   border-radius:30%;
+   background-color:#F73B01;
+ }
+}
+.hole1{
+ transform:translate(-10px, 40px);
+ position: absolute;
+ height:50px;
+ width:50px;
+ background-color:black;
+ clip-path: polygon(50% 17%, 62% 31%, 98% 35%, 73% 58%,   65% 79%, 48% 80%, 23% 85%, 20% 56%, 2% 35%, 30% 29%);
+}
+.hole2{
+ transform:translate(-10px, 40px);
+ position: absolute;
+ height:50px;
+ width:50px;
+ background-color:grey;
+ clip-path: polygon(27% 14%, 66% 13%, 82% 31%, 90% 69%, 69% 85%, 49% 94%, 35% 82%, 14% 82%, 20% 56%, 9% 38%);
+}
+.hole3{
+ transform:translate(-10px, 40px);
+ position: absolute;
+ height:50px;
+ width:50px;
+ background-color:rgb(36, 35, 35);
+ box-shadow: inset 5px 5px black;
+}
+
+/**********
+  cursor
+**********/
+.cursor {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  /*transition-duration: 200ms;
+  transition-timing-function: ease-out;*/
+  animation: cursorAnim .5s infinite alternate;
+  pointer-events: none;
+}
+
+.cursor::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 8px solid darkred;
+  border-radius: 50%;
+  opacity: .5;
+  top: -8px;
+  left: -8px;
+  animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(.7);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(.4);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(3);
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim3 .5s forwards;
+  border: 1px solid red;
+}

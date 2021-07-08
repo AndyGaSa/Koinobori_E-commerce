@@ -82,34 +82,10 @@ window.onload = () => {
         }
 
         if( userInput !== true ) alert( 'Operacion completada' )
-        console.clear();
-        console.log( `
-        Porfavor ${ user.nombre } escriba una de las siguientes opciones:
 
-        01 - Ver Vuelos
-        02 - Ver Coste medio
-        03 - Ver Escalas
-        04 - Ver ultimos vuelos
-        05 - Ver todo
-        ${ user.admin ? `06 - Crear vuelo
-        07 - Eliminar vuelo` : `06 - Buscar vuelo` }
-        08 - Cambiar Usuario
-        09 - Salir
-      ` )
+        mostrarMenu(  )
 
-        userInput = adquisicionDatos( `
-            Porfavor ${ user.nombre } escriba una de las siguientes opciones:
-
-            01 - Ver Vuelos
-            02 - Ver Coste medio
-            03 - Ver Escalas
-            04 - Ver ultimos vuelos
-            05 - Ver todo
-            ${ user.admin ? `06 - Crear vuelo
-            07 - Eliminar vuelo` : `06 - Buscar vuelo` }
-            08 - Cambiar Usuario
-            09 - Salir
-        `, 'dato' );
+        userInput = mostrarModal(  )
 
     } while ( !( userInput === null || userInput === 'salir' || userInput === '09' ) );
     console.clear();
@@ -217,7 +193,7 @@ const user = {
  * @param { * } 
  * @returns { * } 
  */
-addActivo = () => {
+const addActivo = () => {
     flights.forEach( flight => flight.activo = true )
 
 }
@@ -227,7 +203,7 @@ addActivo = () => {
  * @param { * }
  * @returns { * }
  */
-login = () => {
+const login = () => {
     user.nombre = adquisicionDatos( 'Dinos tu nombre porfavor' );
     user.admin = adquisicionDatos( 'Introduce si eres Admin o User' ) === 'admin' ? true : false;
 
@@ -239,9 +215,12 @@ login = () => {
  * @param { String } tipo 
  * @returns { String || null }
  */
- adquisicionDatos = ( mensaje, tipo ) => {
-    let expresion = new RegExp ( tipo === 'dato' ? /^[A-Za-zñáéíóú<>=,0-9\s]+$/g : tipo === 'num' ? /^[0-9]+$/ : /^([A-Za-zñáéíóú]+[\s]*)+$/);
+ const adquisicionDatos = ( mensaje, tipo ) => {
+    let expresion;
     let input = prompt( mensaje );
+    let evalChain = selectipo( tipo ); 
+
+    expresion = new RegExp( evalChain )
 
     if( input === null ) return null
     if( expresion.test( input ) ) return input === null ? null : input.toLocaleLowerCase().replace(/\s+/g, '');
@@ -255,7 +234,7 @@ login = () => {
  * @param { Array } vuelosParaMostrar 
  * @returns { * }
  */
-verVuelos = ( vuelosParaMostrar = flights ) => {
+const verVuelos = ( vuelosParaMostrar = flights ) => {
     if( !user.admin ) {
         vuelosParaMostrar.forEach( flight => {
             if( flight.activo ) console.log( `El vuelo con id ${ flight.id } y origen en: ${ flight.from }, y destino: ${ flight.to } tiene un coste de ${ flight.cost }€ y ${ flight.scale ? 'realiza' : 'no realiza ninguna' } escala.` )
@@ -272,7 +251,7 @@ verVuelos = ( vuelosParaMostrar = flights ) => {
  * @param { * }
  * @returns { * }
  */
-verCosteMedio = () => {
+const verCosteMedio = () => {
     let coste = 0;
     flights.forEach( flight => {
         if( flight.activo ) coste += flight.cost;
@@ -287,7 +266,7 @@ verCosteMedio = () => {
  * @param { * }
  * @returns { * }
  */
-verEscalas = () => {
+const verEscalas = () => {
     let escalas = 0;
     let activos = 0;
 
@@ -305,7 +284,7 @@ verEscalas = () => {
  * @param { * }
  * @returns { * }
  */
-verUltimosVuelos = () => {
+const verUltimosVuelos = () => {
     let vuelosActivos = flights.filter( flight => flight.activo === true );
     let ultimosVuelos = vuelosActivos.slice( vuelosActivos.length -5, vuelosActivos.length);
     
@@ -319,7 +298,7 @@ verUltimosVuelos = () => {
  * @param { * }
  * @returns { * }
  */
-crearVuelo = () => {
+const crearVuelo = () => {
     let vuelosActivos = 0;
     let userInput = [ 'Porfavor introduce el nombre del origen.', 'Porfavor introduce el nombre del destino.', 'Porfavor introduce el coste del vuelo. ( Solo digitos )', 'El vueo tiene escalas? ( True | False )' ];
 
@@ -333,12 +312,11 @@ crearVuelo = () => {
             this.activo = true;
         }
 
-    };
+    }
 
     flights.forEach( flight => flight.activo ? vuelosActivos++ : vuelosActivos )
     if( vuelosActivos > 15 ) {
         alert ( 'No pueden haber mas de 15 vuelos activos.' )
-        return;
 
     } else {
         for( message in userInput ) {
@@ -363,7 +341,8 @@ crearVuelo = () => {
  * @param { Number } userInput
  * @returns { Number }
  */
-eliminarVuelo = ( userInput = '' ) => {
+const eliminarVuelo = () => {
+    let userInput = '';
     let vueloParaMarcar = '';
 
     console.table( flights )
@@ -378,10 +357,10 @@ eliminarVuelo = ( userInput = '' ) => {
  * Busca los vuelos que cumplan con los parametros de busqueda que el usuario a introducido
  * @param { Array } buscarCoste [ operador ][ Coste ]
 */
-buscarVuelo = ( buscarCoste = '' ) => {
-    let resultado = new Array;
-    let operador = new String;
-    let userInput = new Number;
+const buscarVuelo = ( buscarCoste = '' ) => {
+    let resultado = [];
+    let operador = '';
+    let userInput = 0;
 
     if( Number.isInteger( buscarCoste ) ) { 
         return buscarCoste;
@@ -434,7 +413,71 @@ buscarVuelo = ( buscarCoste = '' ) => {
  * @param { Number } id
  * @returns { String } 
  */
-comprarVuelo = ( id ) => {
+const comprarVuelo = ( id ) => {
     return  flights.find( flight => flight.id === id && flight.activo === true ) ? 'Gracias por su compra, vuelva pronto.' : 'El vuelo indicado no existe';
  
+}
+
+/**
+ * Limpiamos la consola y mostramos el menu de nuevo
+ * @param { Object } user
+ */
+const mostrarMenu = (  ) => {
+    let opciones = user.admin ? `06 - Crear vuelo
+    07 - Eliminar vuelo` : `06 - Buscar vuelo`
+
+    console.clear();
+    console.log( `
+    Porfavor ${ user.nombre } escriba una de las siguientes opciones:
+
+    01 - Ver Vuelos
+    02 - Ver Coste medio
+    03 - Ver Escalas
+    04 - Ver ultimos vuelos
+    05 - Ver todo
+    ${ opciones }
+    08 - Cambiar Usuario
+    09 - Salir
+  ` )
+}
+
+/**
+ * Muestra una ventana modal con las opciones del menu y retorna el input del usuario
+ * @param { Object } user 
+ * @returns { String }
+ */
+const mostrarModal = (  ) => {
+    let opciones = user.admin ? `06 - Crear vuelo
+    07 - Eliminar vuelo` : `06 - Buscar vuelo`
+
+    return adquisicionDatos( `
+    Porfavor ${ user.nombre } escriba una de las siguientes opciones:
+
+    01 - Ver Vuelos
+    02 - Ver Coste medio
+    03 - Ver Escalas
+    04 - Ver ultimos vuelos
+    05 - Ver todo
+    ${ opciones }
+    08 - Cambiar Usuario
+    09 - Salir
+`, 'dato' );
+
+}
+
+/**
+ * Nos retorna un expreg dependiendo del tipo indicado
+ * @param { String } tipo 
+ * @returns { String }
+ */
+const selectipo = ( tipo ) => {
+    let types = {
+        'dato': /^[A-Za-zñáéíóú<>=,0-9\s]+$/g,
+        'num': /^[0-9]+$/,
+        'default': /^([A-Za-zñáéíóú]+[\s]*)+$/
+    };
+    return types[tipo] || types['default']
+    
+    
+    
 }
