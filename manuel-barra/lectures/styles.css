@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    padding: 40px;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: blue;
+}
+
+.header-box {
+    width: 100%;
+    height: 80px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.small-circlea,
+.small-circleb,
+.small-circlec {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: brown;
+}
+
+.main-box {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.image-headin {
+    width: 100%;
+}
+
+.cuadrator {
+    width: 20%;
+}
+
+.headdin {
+    width: 80%;
+    background-color: chocolate;
+}
+
+.lorem-text {
+    width: 100%;
+    background-color: darkblue;
+}
+
+.triangles-box {
+    width: 100%;
+    background-color: darkgoldenrod;
+}
