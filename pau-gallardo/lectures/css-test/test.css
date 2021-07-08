@@ -5,11 +5,11 @@
 
 .specific{
     background-color: aqua;
-    border: !important none;
+    border: none;
 }
 
 p{
     background-color: purple;
-    color: white;
+    color: green;
     padding: 5px;
 }
