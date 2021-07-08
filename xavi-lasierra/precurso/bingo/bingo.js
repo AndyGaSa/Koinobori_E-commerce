@@ -102,7 +102,7 @@ function createCarton(){
     const randNum = [];
     while(randNum.length < 15){
         let num = Math.ceil(Math.random() * 90);
-        if(!randNum.find(x => x === num))
+        if(!randNum.find(value => value === num))
             randNum.push(num);
     }
     randNum.sort(function(a,b){return a - b});
@@ -126,7 +126,7 @@ function newTurn(){
     //Comprueba si esta en el carton y si hay lo cambia por X
     //Comprueba si hay linea/bingo
     let found = false;
-    let bingo = true;
+    let bingoWin = true;
     let linea = false;
     for(let i=0; i<3; i++){
         let auxLinea = true;
@@ -137,13 +137,22 @@ function newTurn(){
             }
             if(carton[i][j] !== "X"){
                 auxLinea = false;
-                bingo = false;
+                bingoWin = false;
             }
         }
         if(auxLinea)
             linea = true;
     }
 
+    return printResults(num, found, linea, bingoWin);
+}
+
+function getRandomNumber(){
+    let aux = Math.round(Math.random() * (randNumers.length - 1));
+    return Number(randNumers.splice(aux,1));
+}
+
+function printResults(num, found, linea, bingoWin){
     //Imprime los resultados
     console.clear();
     console.log(`BINGO\n\nTurno: ${turns.toString()} - Número: ${num.toString()}!`);
@@ -153,7 +162,7 @@ function newTurn(){
             alreadyLinea = true;
             console.log(`\n¡LINEA!`);
         }
-        else if(bingo){
+        else if(bingoWin){
             console.log(`\n¡BINGO!`);
             return true;
         }
@@ -163,11 +172,6 @@ function newTurn(){
     else
         console.log(`\nNada.`);
     return false;
-}
-
-function getRandomNumber(){
-    let aux = Math.round(Math.random() * (randNumers.length - 1));
-    return Number(randNumers.splice(aux,1));
 }
 
 function continuePlaying(endG){
@@ -190,10 +194,7 @@ function continuePlaying(endG){
         return false;
     }
     else{
-        if(confirm(`BINGO\n\n¿Quieres seguir jugando?`))
-            return true;
-        else
-            return false;
+        return confirm(`BINGO\n\n¿Quieres seguir jugando?`);
     }
 }
 
