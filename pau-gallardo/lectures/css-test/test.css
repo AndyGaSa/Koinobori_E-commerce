@@ -13,3 +13,12 @@ p{
     color: green;
     padding: 5px;
 }
+
+@media screen and (min-width:600px) {
+    #morespecific{
+        background-color: black;
+    }
+    .specific{
+        background-color: gold;
+    }
+}
