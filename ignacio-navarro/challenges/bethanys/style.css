@@ -9,11 +9,6 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.main-container{
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
 
 .welcome-text{
     color: #a098ca;
@@ -30,6 +25,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 60%;
 }
 .aside-container{
     display: flex;
@@ -42,21 +38,30 @@ body{
 .sell-button{
     padding: 7px;
     border: none;
-    width: 34vw;
+    /* width: 34vw; */
     margin: 1px;
     background-color: #da4536;
     color: white;
     text-align: center;
+    width: 100%;
+    min-width: 150px;
+    max-width: 250px;
     text-decoration: none;
 }
 .main-content-divisor{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 40px;
+}
+.picture-bethany-container{
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 .main-logo{
-    width: 50vw;
+    width: 100%;
+    max-width: 250px;
 }
 
 .promotion-container{
@@ -99,5 +104,25 @@ figcaption{
         display: flex;
         flex-direction: row;
         padding: 20px;
+    }
+    .main-content-divisor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+    }
+    .bethany-picture {
+        width: 100%;
+    }   
+    .promotion-container {
+        padding: 0;
+        background-color: transparent;
+    }
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        margin-left: 20%;
     }
   }
