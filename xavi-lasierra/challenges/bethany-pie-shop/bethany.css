@@ -39,7 +39,15 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 340vw;
+    height: 350vw;
+}
+
+.logo-navigation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 170vw;
 }
 
 .bethany-pie-shop-logo {
@@ -159,3 +167,9 @@
     text-align: center; 
 }
 
+@media screen and (min-width: 600px) {
+    .page-main {
+        background-image: none;
+    }
+    
+}
