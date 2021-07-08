@@ -6,6 +6,7 @@
 }
 body {
     font-family: 'Cantarell', sans-serif;
+    font-size: 3vh;
 }
 
 header {
@@ -168,6 +169,6 @@ img {
 #webs {
     background-color: brown;
     text-align: center;
-    justify-self:center
+    justify-self:center;
     height: 5vh;
 }
