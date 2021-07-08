@@ -1,22 +1,55 @@
-#morespecific {
-    background-color: red;
-    border: 1px solid blck;
+#mainsection {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.specific {
-    background-color: gray;
-    border: none !important;
+#lostriangulos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
 
+#triangulo1, #triangulo2, #triangulo3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#figura1, #figura2, #figura3 {s
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid transparent;
+    border-bottom: 100px solid #ebebeb;
+    border-color: #8a8a8a 2px; 
 }
 
 p {
-    background-color: blue;
-    color: white;
-    padding: 5px;
+    text-justify: center;
+    margin: 18px;
 }
 
-@media screen and (min-width: 480px) {
-    body {
-        background-color: lightgreen;
-    }
+#cuadrado {
+    height: 200px;
+    width: 200px;
+    background-color: #ebebeb;
+    border-color: #8a8a8a 2px;
+    margin: 18px;
 }
+ #columna1 {
+     display: flex;
+     flex-direction: row;
+ }
+
+ #circulo {
+    height: 60px;
+    width: 60px;
+     border-radius: 50%;
+     background-color: #ebebeb;
+     border-color: #8a8a8a 2px;
+     margin: 18px;
+ }
