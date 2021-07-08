@@ -6,3 +6,27 @@
 
 
 
+#wrapper {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.aside-box {
+    order: -1;
+    border: 1px solid black;
+    flex: 1;
+}
+
+#main-box{
+    border: 1px solid black;
+    flex: 1;
+    align-self: flex-end;
+}
+
+#header-box{
+    border: 1px solid black;
+    flex: 1;
+    height: 200px;
+}
