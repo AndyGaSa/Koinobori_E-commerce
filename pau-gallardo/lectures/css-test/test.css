@@ -1,0 +1,15 @@
+#morespecific{
+    background-color: red;
+    border: 1px solid black;
+}
+
+.specific{
+    background-color: aqua;
+    border: !important none;
+}
+
+p{
+    background-color: purple;
+    color: white;
+    padding: 5px;
+}
