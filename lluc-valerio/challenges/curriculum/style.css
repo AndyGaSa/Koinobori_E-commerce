@@ -1,0 +1,177 @@
+/* 2021 - LLuc Valério */
+
+/* Browser Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 95%;
+}
+
+/* CV Lluc valério - HTML Styles */
+
+body {
+    height: 100vh;
+    display: flex;
+}
+
+.line {
+    border-top: 1px solid #e4e4e4;
+    height: 3px;
+    /* max-width: 80%; */
+ width: 90%;
+    margin: 10px 0 0 0;
+    padding-bottom: 10%;
+  }
+
+h1 {
+    display: none;
+}
+
+
+h1, h3 {
+    color: #ad3f40;
+}
+
+aside h2 {
+    display: none;
+}
+
+aside {
+    position: relative;
+    width: 20%;
+    background: linear-gradient(90deg, #ad3f40 10%, #f2f2f2 0%);
+    height: 100vh;
+}
+
+aside img {
+    position: absolute;
+    top: 3%;
+    left: 35%;
+    width: 40%;
+}
+
+aside section {
+    position: absolute;
+    margin: 0 15%;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside li {
+    position: relative;
+    padding: 2.5% 0 2.5% 20%;
+}
+
+#personalData {
+    top: 22%;
+}
+
+#name::before {
+    content: '';
+    width: 10%;
+    height: 90%;
+    position: absolute;
+    background-image: url('assets/user-solid.png');
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+#email::before {
+    content: '';
+    width: 10%;
+    height: 60%;
+    position: absolute;
+    background-image: url('assets/envelope-solid.png');
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#phone::before {
+    content: '';
+    width: 8%;
+    height: 80%;
+    position: absolute;
+    background-image: url('assets/mobile-alt-solid.png');
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#address::before {
+    content: '';
+    width: 10%;
+    height: 70%;
+    position: absolute;
+    background-image: url('assets/home-solid.png');
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#birthday::before {
+    content: '';
+    width: 10%;
+    height: 80%;
+    position: absolute;
+    background-image: url('assets/birthday-cake-solid.png');
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#linkedin::before {
+    content: '';
+    width: 10%;
+    height: 80%;
+    position: absolute;
+    background-image: url('assets/linkedin-brands.png');
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#git::before {
+    content: '';
+    width: 10%;
+    height: 80%;
+    position: absolute;
+    background-image: url('assets/github-brands.png');
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#skills {
+    top: 52%;
+}
+
+#languages {
+    top: 73%;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    width: 80%;
+    display: inline-block;
+    background-color: grey;
+    height: 100vh;
+}
