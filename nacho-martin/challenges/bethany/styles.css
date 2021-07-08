@@ -12,12 +12,14 @@ header {
     background-color: #A593C2;
 }
 
-main {
-    text-align: center;
+h1 {
+    color: #A593C2;
 }
 
-main p {
-    margin: 10px;
+main {
+    text-align: left;
+    margin: 30px auto;
+    width: 80%;
 }
 
 figure {
@@ -26,6 +28,20 @@ figure {
 
 footer {
     text-align: center;
+    padding: 20px;
+}
+
+.main-navigator {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-navigator-link {
+    background-color: #CF4522;
+    margin: 1px;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
 }
 
 .header-image {
@@ -50,6 +66,11 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+}
+
+.main-logo h4 {
+    font-weight: 700;
 }
 
 .main-image {
@@ -62,4 +83,18 @@ footer {
     background-color: #fff;
     border-radius: 20px;
     text-align: start;
+}
+
+.promotions h3,
+h4 {
+    margin: 20px;
+}
+
+.promotions-figure {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.promotions-image {
+    width: 100%;
 }
