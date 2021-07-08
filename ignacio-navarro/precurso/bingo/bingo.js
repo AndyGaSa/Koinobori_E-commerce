@@ -183,10 +183,8 @@ function newPhase(numberList = {}) {
   }
 }
 
-function checkLinea(numberList) {
-  if (!lineaCantada) {
+function checkHLine(numberList){
   let linea = 0;
-  let columna = 0;
   for (let i = 0; i < rows; i++) {
     linea = 0;
     for (let j = 0; j < columns; j++) {
@@ -200,6 +198,9 @@ function checkLinea(numberList) {
       }
     }
   }
+}
+function checkVLine(numberList){
+  let columna = 0;
   for (let i = 0; i < columns; i++) {
     columna = 0;
     for (let j = 0; j < rows; j++) {
@@ -213,6 +214,13 @@ function checkLinea(numberList) {
       }
     }
   }
+}
+
+function checkLinea(numberList) {
+  if (!lineaCantada) {
+  checkHLine(numberList)
+  checkVLine(numberList)
+  
 }
 }
 function checkBingo(numberList) {
