@@ -93,19 +93,19 @@ var questionsRandom3 = [
     { z: "CON LA Z. Sistema filosófico budista que tuvo su origen en China en el siglo VI" }
 ];
 //Defino un array que contiene esos tres array de preguntas
-var questionsRandomArr = [questionsRandom1, questionsRandom2, questionsRandom3];
+let questionsRandomArr = [questionsRandom1, questionsRandom2, questionsRandom3];
 //Defino una función de barajar
-function shuffle(questionsRandomArr) {
-    var i = questionsRandomArr.length,
+function shuffle(questionsRandomArray) {
+    var i = questionsRandomArray.length,
         j = 0,
         temp;
     while (i--) {
         j = Math.floor(Math.random() * (i + 1));
-        temp = questionsRandomArr[i];
-        questionsRandomArr[i] = questionsRandomArr[j];
-        questionsRandomArr[j] = temp;
+        temp = questionsRandomArray[i];
+        questionsRandomArray[i] = questionsRandomArray[j];
+        questionsRandomArray[j] = temp;
     }
-    return questionsRandomArr;
+    return questionsRandomArray;
 }
 //Y barajo el array que contiene a los 3 array de preguntas
 let ranQuestions = shuffle(questionsRandomArr);
@@ -288,9 +288,8 @@ function pasapalabra() {
         console.clear();
         console.log('Tu puntuación final ha sido de:');
         console.log('Aciertos: ' + aciertos + '. Fallos: ' + fallos + '.');
-        let rankOrdenado = rank.sort((a, b) => (b.puntuacion) - (a.puntuacion));
         console.log('RANKING:');
-        console.table(rankOrdenado);
+        console.table(rank.sort((a, b) => (b.puntuacion) - (a.puntuacion)););
     }
 //Función que vuelve a ejecutar el programa
     function volverAjugar() {

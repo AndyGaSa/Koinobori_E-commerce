@@ -47,17 +47,17 @@ function bingo() {
         { number: ranNumber[14], matched: false }];
 
     //Función de barajar un array para conseguir números aleatorios para el cartón y sin que se repitan (La encontré en stackoverflow y me la he apuntado porque la veo súper útil)
-    function shuffle(numbers) {
-        var i = numbers.length,
+    function shuffle(numShuff) {
+        var i = numShuff.length,
             j = 0,
             temp;
         while (i--) {
             j = Math.floor(Math.random() * (i + 1));
-            temp = numbers[i];
-            numbers[i] = numbers[j];
-            numbers[j] = temp;
+            temp = numShuff[i];
+            numShuff[i] = numShuff[j];
+            numShuff[j] = temp;
         }
-        return numbers;
+        return numShuff;
     }
 
     //Se limpia la consola
@@ -69,9 +69,7 @@ function bingo() {
     //Aquí defino todas las variables que he ido creando para tenerlas agrupadas en un mismo sitio
     let contador = 0;
     let linea = 0;
-    let numeroRandomOne;
     let numeroRandom;
-    let numeroEncontrado;
     let numerosSacados = [];
     //Si el usuario escribe su nombre y acepta, se pasa a la función que genera el cartón
     if (userName !== null) {
@@ -178,7 +176,7 @@ function bingo() {
             if (bingoCard[i].number === numeroRandom) {
                 console.log('Se ha encontrado el número ' + bingoCard[i].number + '.')
                 //Si es afirmativo, se pone una x y se marca matched como true
-                numeroEncontrado = bingoCard[i].number = 'x';
+                let numeroEncontrado = bingoCard[i].number = 'x';
                 bingoCard[i].matched = true;
             }
         }
@@ -199,9 +197,8 @@ function bingo() {
     }
     //Función donde se guarda el ranking y se ordena de menor puntuación a mayor
     function ranking() {
-        let rankOrdenado = rank.sort((a, b) => (a.puntuacion) - (b.puntuacion));
         console.log('RANKING:');
-        console.table(rankOrdenado);
+        console.table(rank.sort((a, b) => (a.puntuacion) - (b.puntuacion)));
     }
     //Función donde se indica, una vez acabado el juego, si el usuario quiere volver a jugar para ejecutarse de nuevo el programa
     function volverAjugar() {
