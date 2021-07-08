@@ -1,7 +1,7 @@
 *{
     margin: auto;
     text-align: center;
-    
+    padding: 10px;
 }
 .wrapper{
     width:auto ;
@@ -12,8 +12,12 @@
     margin-left: auto;
 }
 .pie{
-    margin-right: 0%;
+    margin-right: 0% !important;
 }
 body{
     background-image:url(https://i.ibb.co/dgg415M/pattern.png)
+}
+.menu{
+    display: flex;
+    flex-direction: column;
 }
