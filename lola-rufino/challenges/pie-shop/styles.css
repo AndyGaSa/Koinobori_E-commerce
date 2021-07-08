@@ -61,10 +61,11 @@ footer{
 }
 
 #welcome-header{
+    padding-left: 36px;
     padding-top: 20px;
     padding-bottom: 20px;
     color: #a593c2;
-    font-size: 30px;
+    font-size: 2.2em;
     font-weight: bold;
 }
 
@@ -156,5 +157,20 @@ footer{
     }
     #welcome-header {
         font-size: 40px;
+    }
+    .center-container{
+        align-items: left;
+    }
+    #image-cake{
+        width: 500px;
+        height: 300px;
+    }
+    #history-container{
+        margin: 10px;
+        max-width: 800px;
+    }
+    #weekly-promotions{
+        margin: 10px;
+        max-width: 800px;
     }
    }
