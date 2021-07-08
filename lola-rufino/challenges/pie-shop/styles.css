@@ -25,9 +25,10 @@ main, footer{
 }
 
 aside p{
-    text-align: center;
+    text-align: left;
+    padding-left: 35px;
     line-height: 50px;
-    width: 200px;
+    width: 150px;
     margin: 5px;
     color: white;
     background-color: #cf4522;
@@ -104,4 +105,15 @@ footer{
 #image-cake{
     width: 400px;
     height: 240px;
+}
+
+#history-container{
+    margin: 10px;
+    max-width: 400px;
+}
+
+#title-aside{
+    font-weight: bold;
+    margin-left: 40px;
+    margin-top: 20px;
 }
