@@ -8,7 +8,8 @@
     height: 200px;
     border-radius: 90px;
     border: 5px dashed white;
-    box-shadow: 2px 2px 2px  #9E8FB2, 3px 3px 3px white;;
+    box-shadow: 2px 2px 2px  #9E8FB2, 3px 3px 3px white;
+    margin-top: 20px;
 }
 
 .name{
@@ -68,3 +69,12 @@ a{
 .p-head{
     font-style: bold;
 }
+
+.span-class{
+    margin: 40px;
+    font-size: 20px;    
+}
+
+li{
+    list-style: circle;
+  }
