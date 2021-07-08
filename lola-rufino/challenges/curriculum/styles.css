@@ -34,7 +34,6 @@ header{
 
 main{
     display: flex;
-    display: flex;
     flex-direction: column;
     text-align: left;
     color: #414141;
