@@ -1,0 +1,11 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("./pattern.png");
+}
+.shopBar {
+    background-color: rgb(165, 147, 194);
+
+}
+.ulistNavBar {
+    list-style-type: none;
+}
