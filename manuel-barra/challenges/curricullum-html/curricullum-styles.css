@@ -81,7 +81,14 @@
         background-color: rgb(74, 71, 255);
         flex: 0 0 30%;
         display: flex;
+        flex-flow: column wrap;
+        align-items: center;
         border: 2px solid white;
+        color: white;
+        background-color: black;
+        text-align: center;
+        margin-top: -50px;
+        border-radius: 25px;
     }
     
     #footer-box {
