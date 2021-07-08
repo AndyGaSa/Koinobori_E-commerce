@@ -30,9 +30,16 @@ h1 {
     display: none;
 }
 
+h2 {
+    color: #ad3f40;
+    font-size: 400%;
+    margin: 2% 20% 0% 20%;
+}
 
 h1, h3 {
     color: #ad3f40;
+    font-size: 150%;
+    padding-bottom: 2%;
 }
 
 aside h2 {
@@ -174,4 +181,19 @@ main {
     display: inline-block;
     background-color: grey;
     height: 100vh;
+    line-height:1.5;
+    overflow: auto;
+}
+
+main section {
+    padding-top: 2.5%;
+    padding-left: 2.5%;
+}
+
+main span {
+    color: #ad3f40;
+}
+
+main ul {
+    padding-left: 2%;
 }
