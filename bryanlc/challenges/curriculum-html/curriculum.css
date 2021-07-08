@@ -1,0 +1,56 @@
+body{
+    font-family: Arial;
+    background-color: lightgrey;
+
+}
+header{
+    background-color: grey ;
+    height: 150px;
+}
+main{
+    height: 400px;
+}
+
+h1{
+    color: white;
+    text-align:center;
+    padding-top: 60px;
+    
+}
+
+
+img{
+    padding: 30px 30px;
+    position: absolute;
+    margin-top: 30px;
+    border-radius: 100%;;
+}
+
+aside{
+    float:left;
+    height:560px;
+    padding:20px;
+    width:180px;
+    margin: 150px 40px;
+}
+
+#datosp{
+    height: 115px;
+}
+#enlaces{
+    height: 115px;
+}
+#habilidades{
+    height: 115px;
+}
+#perfil{
+    margin:auto
+}
+#experiencia{
+    margin:auto
+}
+
+#educacion{
+    margin:auto
+}
+

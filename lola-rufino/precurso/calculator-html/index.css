@@ -1,0 +1,154 @@
+/*-----------> GENERAL STYLES <------------ */
+*{
+    font-family: 'Orbitron', monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d1dbee;
+}
+
+/* Main container styles*/
+#mainContainer{
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 399px;
+    height: 630px; 
+    border: 8px solid #797979;
+    border-radius: 15px;
+    background-color: #797979;
+    box-shadow: 10px 10px 5px rgb(151, 151, 151);
+}
+
+/* Display styles */
+#display{
+    height: 50px;
+    width: 360px;
+    color: white;
+    background-color: #092d68;
+    border-radius: 15px 15px 0px 0px;
+    padding-right: 20px;
+    padding-top: 62px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    text-align: right;
+    font-size: 65px;
+    overflow: hidden;
+}
+
+/*-----------> BUTTONS <------------ */
+.buttonsContainer{
+    height: 458px;
+    width: 400px;
+    text-align: center;
+}
+
+/* First line */
+.firstLine{
+    display: flex;
+    align-items: center;
+}
+
+.firstLine button{
+    border: 1px solid #797979;
+    width: 400px;
+    line-height: 90px;
+    font-size: 35px;
+}
+
+/*AC button*/
+.firstLine button:first-child{
+    flex: 2;
+    color: #6384B4;
+}
+
+.firstLine button:not(:first-child){
+    flex: 1;
+}
+
+/* Second line */
+.secondLine{
+    display: flex;
+    align-items: center;
+}
+
+.secondLine button{
+    border: 1px solid #797979;
+    width: 400px;
+    line-height: 90px;
+    font-size: 35px;
+}
+
+/* Third line */
+.thirdLine{
+    display: flex;
+    align-items: center;
+}
+
+.thirdLine button{
+    border: 1px solid #797979;
+    width: 400px;
+    line-height: 90px;
+    font-size: 35px;
+}
+
+/* Fourth line */
+.fourthLine{
+    display: flex;
+    align-items: center;
+}
+.fourthLine button{
+    border: 1px solid #797979;
+    width: 400px;
+    line-height: 90px;
+    font-size: 35px;
+}
+
+/* Fifth line*/
+.fifthLine{
+    display: flex;
+    align-items: center;
+    background-color: #797979;
+}
+
+.fifthLine button{
+    border: 1px solid #797979;
+    width: 400px;
+    line-height: 90px;
+    font-size: 35px;
+}
+
+/*0 button*/
+.fifthLine button:first-child{
+    flex: 2;
+    border-radius: 0px 0px 0px 15px;
+}
+
+.fifthLine button:not(:first-child){
+    flex: 1;
+}
+.fifthLine button:last-child{
+    border-radius: 0px 0px 15px 0px;
+}
+
+/*Numbers buttons*/
+.otherButton{
+    background-color: #d8d8d8;
+    color: #464646;
+}
+
+.otherButton:hover{
+    background-color: #f1f1f1;
+    color: #464646;
+}
+
+/* Operations buttons*/
+.operationsButton{
+    background-color: #6384bc;
+    color: white;
+    flex-grow: 1;
+}
+
+.operationsButton:hover{
+    background-color: #809bc5;
+    color: white;
+    flex-grow: 1;
+}

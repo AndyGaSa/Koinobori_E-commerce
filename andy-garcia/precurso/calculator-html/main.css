@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Audiowide', sans-serif;
+}
+
+body {
+    background-image: url('https://media.giphy.com/media/xT0Gqtpp7ITiwfQHgA/giphy.gif');
+    background-size: cover;
+}
+
+.start{ 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display:block;
+}
+
+.calc_body {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fafafa;
+    box-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 13px 13px 13px 13px;
+}
+
+.result {
+    background-color: #212121;
+    color: #fafafa;
+    text-shadow: -.0625rem -.0625rem 0 #6BFFFF, .0625rem .0625rem 0 #FF819E;
+    border-radius: 13px 13px 0 0;
+    padding: 20px;
+    font-size: 5vh;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.botones button {
+    width: 8vh;
+    height: 8vh;
+    border: none;
+    font-size: 2.75vh;
+    text-align: center;
+    transition: .2s linear all;
+    text-shadow: -.1625rem -.1625rem 0 #6BFFFF, .1625rem .1625rem 0 #FF819E;
+    background-color: #fafafa;
+    border-radius: 13px 13px 13px 13px;
+}
+
+.botones button:hover {
+    background-color: #e0e0e0;
+
+}
+
+.botones button:active {
+    background-color: #01cdfe;
+}
+
+.num:hover {
+    background-color: #ff71ce !important;
+}
+
+.num:active {
+    background-color: #b967ff !important;
+}
+.footer{
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    text-shadow: -.1625rem -.1625rem 0 #6BFFFF, .1625rem .1625rem 0 #FF819E;
+    color: black;
+   
+}

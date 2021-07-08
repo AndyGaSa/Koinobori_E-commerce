@@ -1,0 +1,159 @@
+body{
+  background-color: rgb(176, 231, 231);
+}
+
+.titulo {
+  text-align: center;
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.bloque-letras {
+  padding-left: 30px;
+  margin-top: 10px;
+}
+
+.letra{
+  display: inline-flex;
+  border: 3px solid black;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  background-color: rgb(235, 235, 81);
+}
+
+.letra:hover {
+  background-color: rgb(241, 241, 161);
+}
+
+.bloque-preguntas {
+  margin-top: 25px;
+}
+
+.pregunta {
+  height: 70px;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.respuesta{
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  float: center;
+}
+
+input {
+  font-size: 30px;
+}
+
+.resumenAciertos {
+  text-align: center;
+  font-size: 25px;
+}
+
+.presentacion {
+  text-align: left;
+  float: right;
+  padding-top: 100px;
+  margin-right: 200px;
+  font-size: 20px;
+}
+
+.presentacion::first-line {
+  font-weight: bold;
+}
+
+
+.img-rosco, .presentacion {
+  display: inline-block;
+  width: 550px;
+  height: 550px;
+}
+
+.img-rosco {
+  background-image: url("Rosco-pasapalabra.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 200px;
+}
+
+.play-btn {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  float:inline-end;
+}
+
+#play {
+  font-size: 50px;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(22, 20, 20);
+  font-weight: bold;
+  width: 200px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: rgb(84, 180, 148);
+}
+
+#play:hover {
+  background-color: rgb(151, 238, 209);
+}
+
+#menuPrincipal {
+  /*display:flex;
+  justify-content: center;
+  align-items: center;*/
+  background-image: url("fondo.jpg");
+  background-repeat: repeat;
+}
+
+#contdown {
+  font-size: 30px;
+  color: red;
+}
+
+#OK {
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 20%;
+  margin: 5px;
+}
+
+#OK:hover {
+  background-color: rgb(161, 235, 161);
+}
+
+#pasa {
+  background-color: rgb(25, 42, 197);
+  border: 2px solid black;
+  border-radius: 15%;
+  margin: 5px;
+}
+
+#pasa:hover {
+  background-color: rgb(157, 156, 226);
+}
+
+#stop {
+  background-color: rgb(139, 16, 0);
+  border: 2px solid black;
+  border-radius: 20%;
+  margin: 5px;
+}
+
+#stop:hover {
+  background-color: rgb(233, 122, 119);
+}
+
