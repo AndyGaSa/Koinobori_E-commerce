@@ -29,6 +29,8 @@
 
 .encabezado-elemento_contacto { 
       grid-area: contact;
+      flex-direction: row;
+      justify-content: space-around;
 }
 
 .encabezado-elemento_titulo { 
