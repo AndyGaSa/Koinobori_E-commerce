@@ -1,68 +1,13 @@
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #f5f7fa;
+#morespecific {
+  background-color: rgb(51, 57, 107);
+  border: 5px solid rgb(219, 123, 123);
 }
-
-.main-container {
-  display: flex;
-  flex-direction: row-reverse;
-  width: 1200px;
-  height: auto;
-  background: rgb(241, 239, 250);
-  margin: 40px auto;
+.specific {
+  background-color: rgb(6, 37, 6);
+  border: none !important;
 }
-.right-part-of-the-cv {
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-right: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.job-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: rgb(53, 53, 53);
-}
-
-.My-Description {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-style: italic;
-}
-
-.About-me-section {
-}
-.My-projects-section {
-}
-.Work-experience-section {
-}
-.My-education-section {
-}
-.sidebar {
-  background-color: #1e2939;
-  margin-top: 15px;
-  margin-left: 15px;
-  margin-bottom: 15px;
-  width: 370px;
-  height: auto;
-  left: 40px;
-  top: 40px;
-  padding-left: 20px;
-  color: white;
-}
-
-img {
-  width: 310px;
-  height: auto;
-  padding-left: 25px;
-  float: right;
-  margin-bottom: 25px;
-  margin-top: 15px;
-}
-
-ul {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+p {
+  background-color: rgb(128, 0, 60);
+  color: rgb(15, 15, 15);
+  padding: 5px;
 }
