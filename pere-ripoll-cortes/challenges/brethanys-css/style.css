@@ -189,9 +189,6 @@ footer > .footer > p{
     .main-box{
         display: flex;
         flex-direction: row;
-    }
-
-    .weekly-promotions{
-        background-color: none;
+        align-items: flex-start;
     }
 }
