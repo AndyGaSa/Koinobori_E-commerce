@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="es" xml:lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="calculator-index.css" href="https://fonts.gstatic.com"
+    <link rel="stylesheet" href="index.css" href="https://fonts.gstatic.com"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/74da354caa.js" crossorigin="anonymous"></script>
     <title>myCalculator-HTML</title>
@@ -22,7 +22,8 @@
                 +/-
             </button>
             <button id="buttonClear" onclick="deleteLastDigit()"> <!--This onclick button invokes the function to remove the last digit of the display number.-->
-                <i class="fas fa-redo-alt"></i>
+                <i class="fas fa-redo-alt"></i> <!--SonarQube: Rule: the <b> and <i> tags shall never be used-----Exceptions
+                    This rule is relaxed in case of icon fonts usage.-->
             </button>
             <button id="buttonOpDivide" onclick="runOperation('divide')"> <!--This onclick button invokes the function to divide operation.-->
                 /
@@ -78,7 +79,7 @@
         </section>
     </main>
 
-    <script src="calculator-index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 

@@ -12,6 +12,8 @@ let flights = [
 	{id: 10, to: 'Tel-Aviv', from: 'Madrid', cost: 150, scale: false}
 ];
 
+const match = (flights, roleId) => (flights.id === roleId); 
+
 function ft_userId() { 
 	let userId = prompt('Escribe un ID para comprar su vuelo.');
 
@@ -19,7 +21,7 @@ function ft_userId() {
 	if (userId !== null && !/[0-9]/.test(userId)) ft_userId();
 	if (userId !== null && /[0-9]/.test(userId)) {
 		userId = parseFloat(userId);
-		(flights.findIndex(flights => flights.id === userId) !== -1) ? alert(`Gracias por su compra!`) : ft_userId();
+		(flights.findIndex(match(flights, userId)) !== -1) ? alert(`Gracias por su compra!`) : ft_userId();
 	}
 }
 
@@ -31,9 +33,9 @@ function ft_userPrice() {
 	if (userPrice !== null && /[0-9]/.test(userPrice)) {
 		userPrice = parseFloat(userPrice);
 		flights.sort((a, b) => a.cost - b.cost);
-		let lower = flights.filter(flights => flights.cost < userPrice);
-		let equal = flights.filter(flights => flights.cost === userPrice);
-		let higher = flights.filter(flights => flights.cost > userPrice);
+		let lower = flights.filter(flightsLower => flightsLower.cost < userPrice);
+		let equal = flights.filter(flightsEqual => flightsEqual.cost === userPrice);
+		let higher = flights.filter(flightsHigher => flightsHigher.cost > userPrice);
 		console.clear();
 		if (lower.length !== 0) {
 			console.log('Precio más barato:');
@@ -97,12 +99,17 @@ function ft_adminDestination (adminFlight) {
 	if (adminDestination !== null && !/[A-z]/.test(adminDestination)) ft_adminDestination(adminFlight);
 	if (adminDestination !== null && /[A-z]/.test(adminDestination)) {
 		adminFlight.to = adminDestination;
-		ft_adminOrigin(adminFlight);
 	}
 }
 
+function ft_matchIndex(flights, roleId) {
+	flights.findIndex((flights, roleId) => {
+		(flights.id === roleId); 
+	} 
+}
+
 function ft_adminId() { 
-	const index = flights => flights.id === adminFlight.id;
+	//const index = flightsMatch => flightsMatch.id === adminFlight.id;
 	let adminId = prompt('Admin. Escribe el ID para crear un vuelo o eliminarlo si ya existe.');
 	let adminFlight = [];
 
@@ -110,10 +117,10 @@ function ft_adminId() {
 	if (adminId !== null && !/[0-9]/.test(adminId)) ft_adminId();
 	if (adminId !== null && /[0-9]/.test(adminId)) {
 		adminFlight.id = parseFloat(adminId);
-		if (flights.findIndex(index) !== -1 && flights.length > 5) {
-			flights.splice(flights.findIndex(index), 1);
+		if (ft_matchIndex() !== -1 && flights.length > 5) {
+			flights.splice(ft_matchIndex(), 1);
 			ft_adminInterface();
-		} else if (flights.findIndex(index) === -1 && flights.length < 14) {
+		} else if (ft_matchIndex() === -1 && flights.length < 14) {
 			ft_adminDestination(adminFlight);
 		} else {
 			alert('Límite de entre 5 y 15 vuelos!');
