@@ -11,3 +11,9 @@ p {
   color: rgb(15, 15, 15);
   padding: 5px;
 }
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: blueviolet;
+  }
+}
