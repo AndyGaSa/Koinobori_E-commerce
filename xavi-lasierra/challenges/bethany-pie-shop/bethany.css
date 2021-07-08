@@ -176,6 +176,10 @@
         padding: 0 8vw;
         min-width: 70em;
     }
+
+    .pie-logo {
+        margin-right: 0.7em;
+    }
             
     .top-navigation-list{
         list-style-type: none;
@@ -184,7 +188,7 @@
         justify-content: space-between;
         width: 13em;
         color: white;
-        font-size: 1.2em;
+        font-size: 1em;
         font-weight: bold;
     }
     
