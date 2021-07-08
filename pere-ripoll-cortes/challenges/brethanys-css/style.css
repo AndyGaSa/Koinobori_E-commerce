@@ -1,3 +1,7 @@
+body{
+    background-image: url("https://i.ibb.co/dgg415M/pattern.png");
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -13,7 +17,7 @@
     display: flex;
     flex-direction: row;
     width: 50%;
-    height: 100px;
+    height: 7em;
 }
 
 .btns-menu {
@@ -29,7 +33,7 @@
     background-color: none;
     text-decoration: none;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 .logo{
@@ -63,7 +67,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 20em;
+    width: 25em;
 }
 
 .big-logo > a > img{
@@ -108,7 +112,7 @@
 
 .main-block > .title {
     width: 70%;
-    font-size: 4em;
+    font-size: 5em;
     margin-bottom: 2%;
     font-weight: bold;
     color: violet;
@@ -143,7 +147,51 @@
 }
 
 .weekly-promotions{
+    align-items: center;
     width: 70%;
     background-color: white;
     border-radius: 5%;
+}
+
+.weekly-promotions > h3, h4{
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+.weekly-promotions > .price {
+    font-size: 1.5em;
+}
+
+.weekly-promotions > a > img {
+    width: 95%;
+    margin: auto;
+    align-self: flex-end;
+    margin-left: 1.5em;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer > .footer {
+    text-align: center;
+    width: 70%;
+}
+
+footer > .footer > p{
+    font-size: 1.5em;
+}
+
+@media screen and (min-width:500px) {
+    .main-box{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .weekly-promotions{
+        background-color: none;
+    }
 }
