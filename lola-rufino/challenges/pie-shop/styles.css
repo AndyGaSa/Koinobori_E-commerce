@@ -20,6 +20,32 @@
     font-size: 15px;
 }
 
-main{
+main, footer{
     background-image: url("https://i.ibb.co/dgg415M/pattern.png"); 
+    background-repeat: round;
+}
+
+aside p{
+    text-align: center;
+    line-height: 50px;
+    width: 200px;
+    margin: 5px;
+    color: white;
+    background-color: #cf4522;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.biglogo-and-pies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#big-logo{
+    width: 300px;
+    height: 300px;
 }
