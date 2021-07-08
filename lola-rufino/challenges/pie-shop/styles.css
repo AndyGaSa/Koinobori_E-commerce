@@ -1,5 +1,5 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
 }
 
@@ -22,7 +22,6 @@
 
 main, footer{
     background-image: url("https://i.ibb.co/dgg415M/pattern.png"); 
-    background-repeat: round;
 }
 
 aside p{
@@ -48,4 +47,61 @@ aside p{
 #big-logo{
     width: 300px;
     height: 300px;
+}
+
+#header-pies{
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+}
+
+#welcome-header{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #a593c2;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#main-image{
+    width: 400px;
+    height: 197px;
+}
+
+.center-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-items{
+    display: flex;
+    flex-direction: column;
+}
+
+#browse-pies{
+    font-weight: bold;
+    text-align: center;
+}
+
+#weekly-promotions{
+    margin-top:20px;
+    background-color: white;
+    border-radius: 5%;
+    padding: 2%;
+    box-shadow: 1px 1px 11px gray;
+}
+
+#weekly-promotions h2, h3, figcaption{
+    padding: 5px;
+}
+
+#image-cake{
+    width: 400px;
+    height: 240px;
 }
