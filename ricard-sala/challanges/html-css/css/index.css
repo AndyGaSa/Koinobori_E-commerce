@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main, footer{
+    background-image: url("https://i.ibb.co/dgg415M/pattern.png");
+}
+.first-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    background-color: #a593c2;
+}
+.image-cake{
+    height: 30px;
+    width: 30px;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: flex-start;
+    align-content: center;
+    
+    }
+.navigator{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-self:flex-end;
+    align-content:space-around;
+    }
+.navigator-items{
+    color: white;
+}
