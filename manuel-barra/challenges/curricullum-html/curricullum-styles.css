@@ -91,6 +91,11 @@
         border-radius: 25px;
     }
     
+    .img-photo {
+        width: 100px;
+        height: 100px;
+    }
+    
     #footer-box {
         height: 20%;
         width: 100%;
