@@ -173,6 +173,7 @@
         justify-content: left;
         align-items: center;
         padding: 0 8vw;
+        min-width: 70em;
     }
             
     .top-navigation-list{
@@ -190,8 +191,8 @@
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
-        max-height: 200vw;
-        min-width: 80em;
+        max-height: 75em;
+        min-width: 70em;
     }
     
     .logo-navigation-container {
@@ -202,12 +203,12 @@
     }
     
     .bethany-pie-shop-logo {
-        max-width: 20em;
-        max-height: 20em;
+        max-width: 15em;
+        max-height: 15em;
     }
     
     .navigation-title {
-        font-size: 1.6em;
+        font-size: 1.2em;
         margin-bottom: 1em;
     }
     
@@ -222,89 +223,70 @@
     }
     
     .article-container {
-        align-self: baseline;
-        height: 200vw;
+        max-height: 75em;
     }
     
     .main-title {
-        font-size: 10vw;
-        width: 80vw;
-        font-size: 6vw;
-        font-weight: bolder;
-        color: #A593C2;
+        font-size: 3em;
+        max-width: 20em;
     }
     
     .bethany-image {
-        width: 80vw;
-        height:39vw;
+        width: 42em;
+        height:20em;
     }
     
     .caption-image {
-        font-size: 2.2vw;
+        font-size: 1.2em;
     }
     
     .history-title {
-        width: 80vw;
-        font-size: 6vw;
-        margin-bottom: 2vw;
+        max-width: 20em;
+        font-size: 2.1em;
+        margin-bottom: 0.5em;
     }
     
     .history-text {
-        width: 80vw;
-        height: 55vw;
-        font-size: 3.7vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        max-width: 40em;
+        max-height: 9.5em;
+        font-size: 1em;
     }
-    
-    .bold-name {
-        font-weight: bold;
-    }
-    
+        
     .promotions-container {
-        background-color: white;
-        width: 80vw;
-        height: 65vw;
-        border-radius: 5vw;
-        padding: 3vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        background-color: transparent;
+        align-items: baseline;
+        max-width: 40em;
+        max-height: 25em;
+        padding: 0;
     }
     
     .promotions-title {
-        font-size: 4.5vw;
-        align-self:baseline;
+        font-size: 1.2em;
     }
     
     .cake-title {
-        font-size: 3.2vw;
-        align-self:baseline;
+        font-size: 1em;
     }
     
     .cake-image {
-        width: 70vw;
-        height:40vw;
+        width: 30em;
+        height: 18em;
     }
     
     .page-footer {
-        background-image: url("https://i.ibb.co/W567m6P/pattern.png");
-        height: 40vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        min-width: 70em;
+        height: 7em;
+        align-items: flex-start;
+        padding: 0 3em;
     }
     
     .footer-text {
-        font-size: 3.7vw;
-        text-align: center;
+        font-size: 0.7em;
+        text-align: left;
     }
     
     .copyright-text {
-        font-size: 3vw;
+        font-size: 0.6em;
         text-align: center; 
     }
 }
