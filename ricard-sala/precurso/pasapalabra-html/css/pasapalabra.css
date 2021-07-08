@@ -2,12 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: fuente;
+  font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  
 }
-@font-face {
-  font-family: fuente;
-  src: url("/pasapalabra-html/tipografias/hemi\ head\ bd\ it.ttf");
-}
+
 /*fondo y animacion*/
 #wrapper {
   height: 100%;
