@@ -11,3 +11,12 @@ p{
     color:white;
     padding:5px;
 }
+
+@media screen and (min-width: 600px){
+    body{
+        background-color: blue;
+    }
+
+}
+    
+    
