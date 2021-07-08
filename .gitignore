@@ -359,3 +359,5 @@ auth-data.js
 
 /.expo
 .expo/
+sonar-project.properties
+
