@@ -1,0 +1,55 @@
+#mainsection {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#lostriangulos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+#triangulo1, #triangulo2, #triangulo3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#figura1, #figura2, #figura3 {
+    width: 0px; 
+    height: 0px; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid transparent;
+    border-bottom: 100px solid #ebebeb;
+    border-color: #8a8a8a 2px; 
+}
+
+p {
+    text-justify: center;
+    margin: 18px;
+}
+
+#cuadrado {
+    height: 200px;
+    width: 200px;
+    background-color: #ebebeb;
+    border-color: #8a8a8a 2px;
+    margin: 18px;
+}
+ #columna1 {
+     display: flex;
+     flex-direction: row;
+ }
+
+ #circulo {
+    height: 60px;
+    width: 60px;
+     border-radius: 50%;
+     background-color: #ebebeb;
+     border-color: #8a8a8a 2px;
+     margin: 18px;
+ }
