@@ -1,6 +1,8 @@
 header{
     background-color: black;
+    width: 60vw;
     color:blanchedalmond;
+    text-align: center;
 
 }
 
@@ -11,8 +13,13 @@ address {
 
 h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 36px;
+    font-size: 5vw;
+    
 
+}
+
+article{
+    margin-left: 30px;
 }
 
 h2{
