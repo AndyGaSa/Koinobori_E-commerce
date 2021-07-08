@@ -35,7 +35,7 @@
         console.log(bienvenida + " aquí tiene todos los vuelos del día:");
 
         
-        for(let i=0; i<flights.length;i++){
+        for(let i in flights){
         if(flights[i].scale){
         console.log( `El vuelo con origen: ${flights[i].to} y destino: ${flights[i].from} tiene un coste de ${flights[i].cost}€ y realiza escala.`);
         escalasTotal++;
@@ -62,7 +62,7 @@
 
     function ultimosDestinos(){
     console.log("Los últimos 5 destinos son:");
-     for(i= flights.length-5; i < flights.length; i++){
+     for(let i= flights.length-5; i < flights.length; i++){
          console.log(`El vuelo con origen: ${flights[i].to} y destino: ${flights[i].from}`);
      }
     }

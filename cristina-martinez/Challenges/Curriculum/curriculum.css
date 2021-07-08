@@ -1,0 +1,44 @@
+*{
+    margin: 2%;
+    background-color: cornsilk;
+}
+h1{
+    color: rgb(145, 41, 7);
+}
+.header-container{
+    text-align:center;
+}
+img{
+    width: 40%;
+}
+main{
+    background-color: darkkhaki;
+    display: flex;
+    flex-direction: row;
+}
+
+h2{
+    color: rgb(145, 41, 7);
+}
+
+h3{
+    color: rgb(219, 70, 20);
+}
+
+.left{
+    min-width: 20vw;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
