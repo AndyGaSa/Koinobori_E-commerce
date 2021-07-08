@@ -1,0 +1,130 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#A593C2;
+    max-width: 100%;
+    height: 80px;
+}
+
+.pie-icon{
+    display: flex;
+    margin-left: 2rem;
+}
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    color: white;
+}
+.nav-buttons{
+    display: flex;
+    margin: 3px;
+    list-style: none;
+    font-weight: bold;
+}
+.nav-home,.nav-all-pies,.nav-about{
+    margin: 10px;
+    display: flex;
+}
+.main-container,.footer-container{
+    background-image:url("https://i.ibb.co/dgg415M/pattern.png");
+    display: flex;
+    flex-direction: column;
+}
+.bethany-logo{
+    margin: 10% auto;
+    align-items: center;
+    width: 60vw;
+    height: 60vw;
+}
+.container-pies{
+    text-align: center;
+}
+.title-pies{
+    font-size: 5vw;
+}
+.pies-list{
+    display: flex;
+    margin: 10% auto;
+    flex-direction: column;
+    list-style: none;
+    height: 60vw;
+    width: 60vw;
+    justify-content: space-evenly;
+}
+.pies-list li{
+    padding: 10px;
+    border: lightslategray;
+    background-color: #CF4522;
+    color: white;
+}
+.bethany-container{
+    max-width: 100%;
+    padding: 5% 5% 0 5%;
+
+}
+.tittle{
+    color: #AA99C5;
+    height: bold;
+    font-size: 2.2rem;
+    padding: 10 0%;
+    font-size: 8vw;;
+}
+
+.bethany-picture,.cheesecake-picture{
+    max-width: 100%;
+}
+.history-container{
+    margin: 0 5%;
+}
+.history-title{
+    padding: 1rem 0 0 0;
+    font-size: 6vw;
+}
+.history-text-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50vw;
+    font-size:3.2vw
+}
+.promotions-container{
+    background-color: white;
+    margin: 0 2vw;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.promotions-title{
+    margin: 0 0 1.5vw 0;
+    font-size: 4vw;
+}
+.promotions-cake{
+    margin: 2.5vw 0;
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 30vw;
+    justify-content: space-around;
+}
+
+@media screen and (min-width: 600px){
+    header{
+
+
+    }
+    main{
+
+    }
+
+}
+    
