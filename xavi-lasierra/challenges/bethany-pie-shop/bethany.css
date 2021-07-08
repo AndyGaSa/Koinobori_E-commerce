@@ -282,18 +282,18 @@
     
     .page-footer {
         min-width: 70em;
-        height: 7em;
+        height: 8em;
         align-items: flex-start;
         padding: 0 3em;
     }
     
     .footer-text {
-        font-size: 0.7em;
+        font-size: 0.9em;
         text-align: left;
     }
     
     .copyright-text {
-        font-size: 0.6em;
+        font-size: 0.8em;
         text-align: center; 
     }
 }
