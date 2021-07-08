@@ -18,9 +18,9 @@
 
 }
 
-#figura1, #figura2, #figura3 {s
-    width: 0; 
-    height: 0; 
+#figura1, #figura2, #figura3 {
+    width: 0px; 
+    height: 0px; 
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-top: 50px solid transparent;
