@@ -1,0 +1,145 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0;
+    padding: 0;
+}
+header{
+    display:flex;
+    flex-direction: row;
+    background-color: purple;
+    height: 80px;
+}
+.container-icono{
+width: 50%;
+display: flex;
+justify-content: center;
+color: white;
+}
+.container-menu{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+
+body{
+    background-image: url("https://i.ibb.co/dgg415M/pattern.png");
+}
+
+.container-logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-pies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.container-pies-texto{
+    display: flex;
+    font-size: 40px;
+    font-weight: bold;
+    height: 50px;
+}
+
+.container-menu-pies{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    
+}
+
+.menu-pies{
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 400px;
+    height: 30px;
+  
+}
+
+.container-welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-welcome-text{
+    font-size: 60px;
+    font-weight: bold;
+    color: violet;
+}
+
+.container-welcome.image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-historia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.historia-titulo{
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    width: 650px;
+    height: 50px;
+    align-items: center;
+}
+
+.historia-parrafo{
+    width: 650px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.container-promotions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-promotion-text{
+    display: flex;
+    justify-content: flex-start;
+    width: 500px;
+}
+
+.container-promotion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 600px;
+    height: 380px;
+    border-radius: 50px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
