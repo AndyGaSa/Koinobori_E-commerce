@@ -14,51 +14,81 @@ body {
     background-color: rgb(162, 149, 191);
 }
 
-.bold{
+.our-history {
     font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1.5rem;
 }
-.main{
+
+.main {
+    
+}
+.section-photo-menu {
     display: flex;
-    flex-wrap: wrap;
+    
     flex-direction: column;
     align-items: center;
     align-content: center;
+    width: 72%;
+    margin: auto;
+    margin-left: 14%;
 }
-.menu li{
+
+.section-articles-footer {
+    display: flex;
+    
+    flex-direction: column;
+    
+    align-content: center;
+    width: 72%;
+    margin: auto;
+    margin-left: 14%;
+    justify-content: flex-start;
+}
+
+.menu li {
     background-color: rgb(191, 79, 48);
-    height: 2rem;
-    width: 7rem;
+    height: 3rem;
+    width: 10rem;
     text-align: center;
     display: flex;
     align-content: center;
     align-items: center;
     margin-top: 0.15rem;
-    padding-left: 0.45rem;
-   
-    
+    padding-left: 2.45rem;
+
+
+
     color: white;
 }
-.main-photo{
-    width:  60vw;
-    margin-left: 0px;
-    
+
+.main-photo {
+    width: 72vw;
+
+
+
 }
-.logo{
+
+.logo {
     width: 30vw;
     margin-top: 1rem;
 }
-a{
+
+a {
     text-decoration: none;
-    color: white ;
+    color: white;
 }
 
-a:hover{
+a:hover {
     color: lightgray;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-.menu{
+
+.menu {
     display: flex;
     align-items: center;
     align-content: center;
@@ -66,4 +96,74 @@ ol, ul {
     justify-content: flex-start;
     text-align: center;
     padding-left: 0px;
+    margin-top: 1.5rem;
+}
+
+.welcomeh1 {
+    font-size: 5vw;
+    color: rgb(162, 149, 191);
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.caption {
+    font-size: 1rem;
+    text-align: left;
+}
+
+.picture {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-weight: bold;
+    text-align: left;
+    padding-left: 0rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.article-history {
+    text-align: left;
+
+}
+
+.recipe {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5%;
+
+
+}
+.recipe-photo{
+    width: 62vw;
+}
+
+.bold{
+    font-weight: bold;
+}
+h4{
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+h5{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+footer{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}
+footer a{
+    color: blue;
 }
