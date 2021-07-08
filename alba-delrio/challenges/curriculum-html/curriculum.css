@@ -1,0 +1,186 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+header{
+    background-color: #ADDCCA;
+    width: 100%;
+    height: 100vh;
+    padding-top:20px ;
+    padding-left:20px;
+    
+}
+
+
+#navegation-menu{
+    margin:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    align-items: flex-end;
+}
+#menu-options{
+    visibility:hidden;
+    margin:100px,0px,0px,0px;
+    font-size:40px;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: center;
+    background-color:#F7F8F3;
+    opacity:.5;
+}
+#menu-options>li{
+    margin:5px;
+    list-style:none;
+
+}
+#name{
+    color:#2C3D63;
+    font-size:50px;
+}
+#socialNetworkbuttons{
+    display:flex;
+    align-content: flex-end;
+    justify-content: center;
+}
+#socialNetworkbuttons> li{
+    margin:10px;
+    width:24dp;
+    height:24dp;
+}
+#position{
+    color:#FF6F5E;
+    display:flex;
+    flex-direction: column;
+    justify-content:right;
+    align-items: right;
+    font-size: larger;
+}
+#socialNetworkbuttons{
+    list-style:none;
+    margin:10px;
+
+}
+#about-me{
+    width:100%;
+    height:100vh;
+    background-color:#2C3D63;
+    
+}
+#personal-details{
+    margin: 30px;
+    list-style:none;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+#personal-details> li{
+    margin:10px;
+}
+#field-tittle{
+    color:#FF6F5E;
+    margin: 20px;
+}
+#field-content,#presentation{
+    color: #ADDCCA;
+}
+#presentation{
+    margin:50px;
+    text-align: justify;
+}
+img{
+  width: 20%;
+  height: auto;
+
+}
+#experience-education{
+    background-color:#F7F8F3;
+    width:100%;
+    height:auto;
+    padding:30px;
+}
+#experience-education> .articles{
+    text-align: justify;
+    margin:20px;
+    
+}
+.job-description, .studies-description{
+    margin:20px;
+    color:#2C3D63;
+}
+h2{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    color:#FF6F5E;
+    
+
+}
+
+.job-tittle, .studies-tittle{
+    color:#ADDCCA;
+}
+
+#skills-knowledge{
+    background-color:#ADDCCA;
+    width:100%;
+    height:50vh;
+    padding:20px;
+}
+
+
+.container{
+    display:flex;
+}
+.box{
+    flex:1;
+    margin:0 8px;
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+}
+.box>h3{
+    color:#2C3D63;
+    margin:10px;
+}
+.content{
+    flex:1;
+}
+.content>li{
+    list-style: none;
+    color:#F7F8F3;
+    margin:10px;
+}
+#contact{
+    width: 100%;
+    height:70vh;
+    background-color:#2C3D63;
+    padding: 20px;
+    
+}
+#contact>h2{
+    margin-bottom: 60px;
+}
+h4{
+    color:#FF6F5E;
+}
+.contac-list> li{
+    list-style: none;
+    margin: 25px;
+}
+.contac-list> li>span{
+    color:#ADDCCA
+}
+footer{
+    background-color:#2C3D63;
+    display: flex;
+    justify-content:center;
+    color:#ADDCCA;
+}
+
