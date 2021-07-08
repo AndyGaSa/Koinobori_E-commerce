@@ -1,0 +1,74 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.second-container-lorem {
+    background-color: white;
+}
+
+.third-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.cat {
+    background-color: white;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.dog {
+    background-color: white;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.bird {
+    background-color: white;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.triangle {
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid lightgray;
+}
+
+.first-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.square-container {
+    border: black solid;
+    width: 30vw;
+    height: 30vh;
+}
+
+.heading-text-date-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: black solid;
+}
