@@ -13,3 +13,9 @@ p {
     color: white;
     padding: 5px
 }
+
+@media screen and (min-width: 400px) {
+    .specific, #morespecific {
+        background-color: green;
+    }
+}
