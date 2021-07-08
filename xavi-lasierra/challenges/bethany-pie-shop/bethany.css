@@ -83,11 +83,12 @@
     justify-content: space-around;
     align-items: center;
     height: 300vw;
+    max-width: 80vw;
 }
 
 .main-title {
     font-size: 10vw;
-    width: 80vw;
+    max-width: 80vw;
     font-size: 6vw;
     font-weight: bolder;
     color: #A593C2;
@@ -188,6 +189,7 @@
     }
     
     .page-main {
+        padding: 1em;
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
@@ -223,31 +225,36 @@
     }
     
     .article-container {
-        max-height: 75em;
+        max-height: 71em;
+        max-width: 45em;
     }
     
     .main-title {
         font-size: 3em;
-        max-width: 20em;
+        max-width: 45em;
     }
     
     .bethany-image {
-        width: 42em;
-        height:20em;
+        width: 40em;
+        height:19em;
     }
     
     .caption-image {
-        font-size: 1.2em;
+        font-size: 0.9em;
     }
     
+    .history-container {
+        width: 45em;
+    }
+
     .history-title {
-        max-width: 20em;
+        width: 20em;
         font-size: 2.1em;
         margin-bottom: 0.5em;
     }
     
     .history-text {
-        max-width: 40em;
+        width: 45em;
         max-height: 9.5em;
         font-size: 1em;
     }
@@ -255,7 +262,7 @@
     .promotions-container {
         background-color: transparent;
         align-items: baseline;
-        max-width: 40em;
+        width: 45em;
         max-height: 25em;
         padding: 0;
     }
