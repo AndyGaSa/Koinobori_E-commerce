@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 a {
@@ -57,22 +58,27 @@ a {
 .main-box {
     height: auto;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
 }
 
 
-/*---------> Logo box <--------*/
+/*---------> Section Browser <-------*/
 
 .banner-logo-box {
     display: flex;
     justify-content: center;
     padding: 20px;
+    width: 100%;
 }
+
+
+/*---------> Logo <--------*/
 
 .logo-img {
     width: 200px;
+    margin: 15px;
 }
 
 
@@ -102,6 +108,17 @@ a {
     justify-content: flex-start;
     align-items: center;
     padding: 0 0 0 38px;
+}
+
+
+/*-------> Section Info <---------*/
+
+.section-info {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
 }
 
 
@@ -200,7 +217,7 @@ a {
 
 .footer-box {
     height: 9%;
-    width: 300px;
+    width: auto;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
@@ -215,12 +232,69 @@ a {
 .address-text,
 .copyright-text {
     font-size: 12px;
+    font-style: italic;
 }
 
 .email-text,
 .web-master-credits {
     color: blue;
     text-decoration: underline;
+}
+
+
+/*--------> Media Queries <---------*/
+
+@media only screen and (min-width: 1024px) {
+    .header-box {
+        justify-content: flex-start;
+        padding: 0 15%;
+    }
+    .browse-pie-box {
+        width: 50%;
+        align-items: center;
+        padding-left: 400px;
+    }
+    .section-info {
+        width: 50%;
+    }
+    .logo-img {
+        width: 300px;
+        margin: -150px 0 0 0;
+    }
+    .section-info {
+        align-items: flex-start;
+        width: 50%;
+    }
+    .h3-title {
+        font-size: 2.6rem;
+        margin: 20px 0px
+    }
+    .pies-items {
+        width: 300px;
+    }
+    .our-history-box {
+        width: 600px;
+    }
+    .welcome-box {
+        margin-left: -60px;
+    }
+    .welcome-img {
+        width: 550px;
+        height: 300px;
+    }
+    .our-history-box {
+        width: 700px;
+        margin-left: -80px;
+        font-size: 20px;
+    }
+    .menu-card {
+        width: 360px;
+        margin-left: -80px;
+    }
+    .footer-box {
+        align-items: start;
+        margin: 0 25%;
+    }
 }
 
 
