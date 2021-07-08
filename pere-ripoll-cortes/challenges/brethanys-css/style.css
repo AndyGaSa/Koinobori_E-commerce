@@ -1,0 +1,49 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(194, 162, 224);
+}
+
+.logo, .btns-menu{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100px;
+}
+
+.btns-menu {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btns-menu > a{
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    border: none;
+    background-color: none;
+    text-decoration: none;
+}
+
+.logo{
+    align-items: center;
+}
+
+.logo > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin-left: 70px;
+}
+
+.logo > a > img{
+    width: 100%;
+    height: 100%;
+}
