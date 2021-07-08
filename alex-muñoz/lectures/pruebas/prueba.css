@@ -12,7 +12,7 @@ p{
     padding:5px;
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) and (max-width: 800px){
     body{
         background-color: blue;
     }
