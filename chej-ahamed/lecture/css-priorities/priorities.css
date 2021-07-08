@@ -1,0 +1,18 @@
+#morespefific{
+    background-color: red;
+    border:1px solid black;
+}
+@media screen and(min-width:480px) {
+    body{
+    background-color:green;
+    }
+    p{
+        font-size: 20px;
+    }
+}
+#grad{
+    background: linear-gradient(blue, red);
+}
+p{
+    font-size: 10px;
+}
