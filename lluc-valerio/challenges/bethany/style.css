@@ -1,0 +1,132 @@
+/* 2021 - LLuc Valério */
+
+/* Browser Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Bethany - HTML Styles */
+
+header {
+    background-color: #a593c2;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    margin-left: 10%;
+    width: 10%;
+}
+
+header nav {
+    width: 30%;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 2% 2%;
+    font-size: 85%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("assets/pattern.png");
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    width: 70%;
+    margin-top: 5%;
+}
+
+aside p {
+    font-weight: bold;
+    font-size: 70%;
+    margin: 4% 0;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.asideMenu {
+    background-color: #cf4522;
+    color: #fff;
+    text-decoration: none;
+    width: 175%;
+    padding: 10% 15%;
+    font-size: 70%;
+    margin: 1%;
+}
+
+h1 {
+    color: #a593c2;
+    margin: 5% 0;
+    width: 80%;
+    font-size: 200%;
+}
+
+main figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main figure img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main figure figcaption {
+    font-size: 80%;
+    align-self: flex-start;
+    margin-left: 10%;
+}
+
+h2 {
+    font-weight: bold;
+    margin: 5% 10%;
+}
+
+#history {
+    margin: 0 10%;
+    line-height: 95%;
+}
+
+#weeklyPromotion {
+    background-color: #fff;
+    border-radius: 5%;
+    width: 80%;
+    margin: 5%;
+    padding: 2%;
+}
+
+#weeklyPromotion p {
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+#weeklyPromotion figcaption {
+    margin: 0;
+}
+
+#weeklyPromotionImage {
+    width: 100%;
+}
