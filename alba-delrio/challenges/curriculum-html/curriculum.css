@@ -10,7 +10,8 @@ header{
     background-color: #ADDCCA;
     width: 100%;
     height: 100vh;
-    padding:20px;
+    padding-top:20px ;
+    padding-left:20px;
     
 }
 
@@ -41,6 +42,16 @@ header{
 #name{
     color:#2C3D63;
     font-size:50px;
+}
+#socialNetworkbuttons{
+    display:flex;
+    align-content: flex-end;
+    justify-content: center;
+}
+#socialNetworkbuttons> li{
+    margin:10px;
+    width:24dp;
+    height:24dp;
 }
 #position{
     color:#FF6F5E;
