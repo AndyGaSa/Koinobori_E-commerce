@@ -65,14 +65,14 @@ function usuario() {
   if (typeof user === "string") {
     bingo();
   } else {
-    confirmBye = confirm(`seguro que desea salir?`);
-    if ((confirmBye = true)) {
+    if ( confirm(`seguro que desea salir?`) ) {
       alert(
         `gracias vuelve cuando tengas ganas de jugar TROLL REVIENTA JUEGOS`
       );
     } else {
       usuario();
-      console.log(`suerte in da live`)
+      console.log(`suerte in da live`);
+    
     }
   }
 }
@@ -173,7 +173,7 @@ function numerosBombo() {
     numeroDelBombo = Math.floor(Math.random() * 90) + 1;
     if (!listaNumerosBombo.includes(numeroDelBombo)) {
       listaNumerosBombo.push(numeroDelBombo);
-      preguntaTurno = confirm(
+      let preguntaTurno = confirm(
         //preguntamos a cada numero si se quiere seguir de ser asi se comparan los numeros con nuestra bingoCard
         `${user} salio el numero ${numeroDelBombo}, seguimos para bingo?`
       );
@@ -224,7 +224,7 @@ function puntosUser() {
 
 function ranking() {
   // pasaremos los datos y puntuaciones de nuestro usuario y lo comparamos con el ranking
-  player1 = {
+  let player1 = {
     nombre: user,
     puntos: puntosPartida,
     intentos: puntosRonda,
