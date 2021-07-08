@@ -1,0 +1,38 @@
+.encabezado {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "img contact"
+      "img title"; 
+}
+
+.encabezado-elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+.encabezado-elemento h1 {
+    margin: 0px;
+}
+
+.encabezado-elemento > p {
+    margin: 0px;
+}
+
+.encabezado-elemento_portrait { 
+      grid-area: img;
+}
+
+.encabezado-elemento_contacto { 
+      grid-area: contact;
+      flex-direction: row;
+      justify-content: space-around;
+}
+
+.encabezado-elemento_titulo { 
+    grid-area: title;
+}
