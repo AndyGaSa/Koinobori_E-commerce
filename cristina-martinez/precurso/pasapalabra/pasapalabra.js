@@ -40,7 +40,7 @@ let preguntas=
 
 function crearRosco(){
     jugador.nombre= prompt(`Nombre del jugador`);
-  for(i=0; i<26; i++){
+  for(let i=0; i<26; i++){
     let definition= {};
     let aleatorio = Math.floor(Math.random() * 3)
     definition.letter = preguntas[i].letter;
@@ -54,14 +54,8 @@ function crearRosco(){
 
 }
 
-
-
-
 function pasapalabra(){
     let respuesta;
-    let acierto;
-    let error;
-    let pasa;
     
     for(i=0; i<rosco.length; i++){
 
@@ -77,19 +71,19 @@ function pasapalabra(){
                         break;
 
                     }else if(respuesta === rosco[i].answer){
-                    acierto = alert(`¡Correcto!`);
+                    alert(`¡Correcto!`);
                     rosco[i].status = 2;
                     aciertos++;
                     respuestasContestadas++;
                     jugador.puntuacion++;
 
                     }else if(respuesta === `pasapalabra`){
-                    pasa = alert(`pasapalabra.`);
+                    alert(`pasapalabra.`);
                     rosco[i].status = 1;
                     pasapalabras++;
 
                     }else{
-                    error = alert(`¡Noooo! La respuesta correcta es ${rosco[i].answer}`);
+                    alert(`¡Noooo! La respuesta correcta es ${rosco[i].answer}`);
                     rosco[i].status = 2;
                     errores++;
                     respuestasContestadas++;
@@ -153,8 +147,7 @@ rankingJugadores.sort(function (a, b) {
   rankingJugadores.pop;
 
 if(acierto === rosco.length){
-    let roscoCompleto;
-    roscoCompleto= alert(`Enhorabuena ${jugador.nombre},¡Rosco Completado!`);
+    alert(`Enhorabuena ${jugador.nombre},¡Rosco Completado!`);
     console.log(rankingJugadores);
     nuevaPartida = confirm(`¿Quieres empezar una nueva partida?`);{
         if(nuevaPartida){
