@@ -2,18 +2,24 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
-
+.line{
+    color: #027368
+}
 strong{
-    color: rgb(37, 151, 37);
+    color: #027368;
 }
 
 .imagen-perfil{
+
     height: 100px;
     width: 100px;
+    border-radius: 50%  50%;
+    align-self:stretch;
+    margin-right: 30px;
 }
 .aboutme{
+    align-self:stretch;
     justify-content:end;
     margin: 15px;
 }
@@ -30,15 +36,16 @@ strong{
     margin-right: 30px;
     margin-left: 30px;
 } 
-.container-barra-lateral{
+.container-aside{
     order: 1;
     flex: 1 2 auto;
     align-self:stretch;
     margin-right: 30px;
-    background-color: rgb(25, 49, 25);
+    background-color: #023A40;
     color: oldlace;
+    padding: 20px;
 }
-.cuerpo{
+.body{
     order: 2;
     flex: 1 2 auto;
     align-self: flex-start;
@@ -48,6 +55,33 @@ header{
     align-items: flex-start;
     margin:15px;
 }
-.barra-progress{
-    color: olivedrab;
+
+h2{
+    color: #2DA66D;
 }
+h3{
+    color:antiquewhite ;
+}
+h4{
+    color: #2CBF7B;
+}
+footer{
+    background-color:#027368;
+    width: 100%;
+    height: 70px;
+}
+.keywords{
+    color: #2CBF7B;
+}
+.progress-bar::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+.linkedin{
+    display: flex;
+    justify-content:space-around;
+    align-content: space-around;
+    color: whitesmoke;
+
+}  
