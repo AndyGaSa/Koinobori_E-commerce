@@ -43,7 +43,7 @@ a {
 
   -webkit-transform: scale(0.1) rotate(-270deg);
   -moz-transform: scale(0.1) rotate(-270deg);
-  -transform: scale(0.1) rotate(-270deg);
+  transform: scale(0.1) rotate(-270deg);
 
   -webkit-transition: all 0.4s ease-out;
   -moz-transition: all 0.4s ease-out;

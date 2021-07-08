@@ -11,14 +11,12 @@ let jugador = { nombre: '', puntuacion:0};
 
 function Jugador(){
     
-    let bienvenida;
-    let despedida;
     jugador.nombre = prompt(`Nombre del jugador:`);{
         if(jugador.nombre){
-            bienvenida = alert(`Hola, ${jugador.nombre}. A continuación verás las reglas del juego.`);
+            let bienvenida = alert(`Hola, ${jugador.nombre}. A continuación verás las reglas del juego.`);
             crearCarton();
         }else{
-            despedida = alert(`¡Hasta luego, Lucas!`)
+            let despedida = alert(`¡Hasta luego, Lucas!`)
         }
     }
     
@@ -52,16 +50,15 @@ function crearCarton(){
 function generarNumeroRandom(){
     
     let numeroRandom = Math.floor((Math.random() * (51-1))+1);
-    let confirmarNumeroRandom;
     if(numerosUtilizadosX.includes(numeroRandom)){
         generarNumeroRandom();
         
     }else{
         numerosUtilizadosX.push(numeroRandom);
-        confirmarNumeroRandom = confirm(`Siguiente número cantado: ${numeroRandom}`);{
+        confirm(`Siguiente número cantado: ${numeroRandom}`);{
 
-            for(i = 0; i< carton.length; i++){
-                for(j= 0; j< carton[i].length; j++){
+            for(let i = 0; i< carton.length; i++){
+                for(let j= 0; j< carton[i].length; j++){
                     if(numeroRandom === carton[i][j]){
                         carton[i][j] = 'X'; 
                         if(i === 0){
@@ -93,14 +90,13 @@ function generarNumeroRandom(){
 
 
 function cantarLinea(){
-    let cantandoLinea;
-    let puntosLinea;
+    
 
         if(linea1 !== 5 && linea2 !== 5 && linea3 !== 5){
             preguntarNuevoTurno();
 
         }else if(linea1 === 5 || linea2 === 5 || linea3 === 5);{
-                cantandoLinea = alert(`¡¡LÍNEA!!`);
+                alert(`¡¡LÍNEA!!`);
                 linea = true;
                 if(turnoJugador === 5){
                     jugador.puntuacion += 300;
@@ -122,20 +118,20 @@ function cantarLinea(){
                 }else{
                     jugador.puntuacion += 25;
                 }
-                puntosLinea = alert(`¡Ha ganado ${jugador.puntuacion} puntos por  conseguir hacer línea en ${turnoJugador} turnos!`)
+                alert(`¡Ha ganado ${jugador.puntuacion} puntos por  conseguir hacer línea en ${turnoJugador} turnos!`)
                 preguntarNuevoTurno();
             }
             
          
 }
 function cantarBingo(){
-    let cantandoBingo;
+    
     
     if(linea1 !== 5 || linea2 !== 5 || linea3 !== 5){
         preguntarNuevoTurno();
 
         }else if(linea1 === 5 && linea2 === 5 && linea3 === 5){
-            cantandoBingo = alert(`¡¡BINGO!!`);
+            alert(`¡¡BINGO!!`);
             if(turnoJugador === 15){
                 jugador.puntuacion += 500;
     
@@ -172,14 +168,14 @@ function preguntarNuevoTurno(){
 
 
 function puntuacionFinalBingo(){
-let puntuacionDespedida;
-puntuacionDespedida = alert(`Enhorabuena ${jugador.nombre}, su puntiación final es de ${jugador.puntuacion} puntos por conseguir hacer bingo en ${turnoJugador} turnos.`);
+
+alert(`Enhorabuena ${jugador.nombre}, su puntiación final es de ${jugador.puntuacion} puntos por conseguir hacer bingo en ${turnoJugador} turnos.`);
 rankingFinal();
 }
 
 
 function rankingFinal(){
-    let ranking;
+  
     let rankingJugadores = [
         {nombre: 'Xavi', puntuacion:800},
         {nombre: 'Maria', puntuacion:750},
@@ -204,7 +200,7 @@ rankingJugadores.sort(function (a, b) {
     return 0;
   });
 
-  ranking = alert(`A continuación se muesta el ranking de los jugadores que han participado anteriormente.`)
+  alert(`A continuación se muesta el ranking de los jugadores que han participado anteriormente.`)
 
   console.table(rankingJugadores);
 
@@ -214,9 +210,9 @@ nuevaPartida();
 
 
 function nuevaPartida(){
-let nuevaPartida;
-nuevaPartida = confirm('¿Quiere empezar una nueva partida?');{
-    if(nuevaPartida){
+let nuevasPartidas;
+nuevasPartidas = confirm('¿Quiere empezar una nueva partida?');{
+    if(nuevasPartidas){
         console.clear();
 
         carton = [];
@@ -231,8 +227,7 @@ nuevaPartida = confirm('¿Quiere empezar una nueva partida?');{
         
         Jugador();
     }else{
-        let gracias;
-        gracias = alert('¡Gracias por jugar con nosotros!')
+        alert('¡Gracias por jugar con nosotros!')
     }
 }
 }

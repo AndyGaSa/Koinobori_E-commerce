@@ -1,27 +1,11 @@
 function calculatorPro(){
     console.clear();
 
-    let newNumber;
     let numberList = [];
     let output = [];
-    let error = false;
 
-    //Pregunta que valores añadir
-    do{
-        if (error) newNumber = prompt("CALCULATOR\n\nERROR: Last value wasn't a number. Not added to the operation\nEnter a number or press cancel to stop");
-        else newNumber = prompt("CALCULATOR\n\nEnter a number or press cancel to stop");
-        
-        if(newNumber === null) break;
-        //Comprueba si el valor es un número y lo añade a numberList
-        newNumber = parseFloat(newNumber);
-        if(!isNaN(newNumber)){
-            numberList.push(newNumber);
-            error = false;
-        }
-        else{
-            error = true;
-        }
-    } while(true);
+    //Añade los numeros
+    numberList = addNumbers();
 
     console.log("\n\n");
     //No se han añadido valores
@@ -62,6 +46,30 @@ function calculatorPro(){
             break;
         }
     }while(true);
+}
+
+//Añade los numeros a una lista
+function addNumbers(){
+    let list = [];
+    let num;
+    let error = false;
+    //Pregunta que valores añadir
+    do{
+        if (error) num = prompt("CALCULATOR\n\nERROR: Last value wasn't a number. Not added to the operation\nEnter a number or press cancel to stop");
+        else num = prompt("CALCULATOR\n\nEnter a number or press cancel to stop");
+        
+        if(num === null) break;
+        //Comprueba si el valor es un número y lo añade a numberList
+        num = parseFloat(num);
+        if(!isNaN(num)){
+            list.push(num);
+            error = false;
+        }
+        else{
+            error = true;
+        }
+    } while(true);
+    return list;
 }
 
 calculatorPro();

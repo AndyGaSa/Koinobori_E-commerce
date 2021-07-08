@@ -4,10 +4,7 @@
     font-size: clamp(1.5rem, 8vw - 2rem, 3rem);
     padding: 0;
 }
-@font-face {
-    font-family: mi fuente;
-    src: local(Calculator);
-  }
+
 body{  
     position: relative;
     display: flex;
@@ -35,7 +32,7 @@ body{
 }
 .display>span{
     color: rgb(0, 255, 255);
-    font-family: mi fuente;
+    font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
     filter: blur(.2px);
 }
 .btn{
