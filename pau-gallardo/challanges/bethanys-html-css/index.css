@@ -4,6 +4,10 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+h6{
+    display: none;
+}
     
 body {
     background-image: url("/images/pattern.png");
