@@ -42,13 +42,13 @@ function calculadora(num1, num2) {
   } else if (Number.isFinite(num1) === false || Number.isFinite(num2) === false) {
       return 'Por favor, utiliza sólo números. Gracias.';
   
-  // Si todo va bien y el usuario ha introducido dos números, entonces que me haga las operaciones de la función operaciones
+  // Si el flujo va bien y el usuario ha introducido dos números, entonces que me haga las operaciones de la función operaciones
   } else {
       return operaciones(num1, num2);
   }
 }
 
-// Llamo a la función calculadora a ver si funciona todo
+// Llamo a la función calculadora a ver si funciona al completo
 calculadora(-8, 32.5);
 
 // Por alguna razón, por consola, me sale un "undefined" cuando uso parámetros que son números enteros o números decimales
