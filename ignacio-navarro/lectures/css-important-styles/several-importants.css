@@ -1,0 +1,23 @@
+#morespecific{
+    background-color: red;
+    border: 1px solid black;
+    border: 4px solid yellow !important;
+}
+
+.specific{
+    background-color: gray;
+    border: none !important;
+}
+p{
+    background-color: blue;
+    border: 4px solid black !important;
+    color: white;
+    padding: 5px;
+}
+@media screen and (min-width:800px){
+    .specific{
+        background-color: teal;
+        font-size: 100px;
+    }
+    
+}
