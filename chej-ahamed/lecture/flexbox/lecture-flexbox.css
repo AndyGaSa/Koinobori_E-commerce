@@ -1,0 +1,77 @@
+#triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+  }
+  .main-container{
+      display: flex;
+      flex-direction: column;
+  }
+ .thrid-secction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+ }
+ .trianguloUno{
+    display: flex;
+    flex-direction: column;
+ }
+ .triangulo{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid lightgray;
+    
+     }
+ .first-secction{
+     display: flex;
+     flex-direction: row;
+     
+
+ }
+ .box{
+    background-color: grey;
+    width: 200px;
+    height: 200px;
+    border: 5px solid black ;
+ }
+ .sub-secction-info{
+     display: flex;
+     flex-direction: column;
+    
+ }
+ .text{
+
+ }
+ .circle{
+     border-radius: 80%;
+     background-color: grey;
+     width: 100px;
+     height: 100px;
+     margin: 5px;
+ }
+ .sub-secction-info{
+     display: flex;
+     flex-direction: row;
+     
+
+ }
+ .heading, .triangle-heading{
+    font-weight: bold;
+
+    
+ }
+ .triangle-heading{
+     margin-top: 10px;
+ }
+ .triangle-subheading{
+     color: lightgray;
+ }
+ .info{
+     margin-left: 80px;
+
+ }
