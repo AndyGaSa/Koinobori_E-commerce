@@ -13,3 +13,14 @@ p {
     color: white;
     padding: 5px;
 }
+
+div {
+    background-color: blue;
+    height: 100px;
+}
+
+@media screen and (min-width: 480px) {
+    div {
+        background-color: green;
+    }
+}
