@@ -6,7 +6,7 @@
 .photo{
     width: 200px;
     height: 200px;
-    border-radius: 90px;
+    border-radius: 50%;
     border: 5px dashed white;
     box-shadow: 2px 2px 2px  #9E8FB2, 3px 3px 3px white;
     margin-top: 20px;
@@ -21,6 +21,7 @@
 
 header{
     margin: 0 auto;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
@@ -33,7 +34,6 @@ header{
 }
 
 main{
-    display: flex;
     flex-direction: column;
     text-align: left;
     color: #414141;
@@ -70,8 +70,7 @@ a{
 }
 
 .span-class{
-    margin: 40px;
-    font-size: 20px;    
+    font-size: 20px;
 }
 
 li{

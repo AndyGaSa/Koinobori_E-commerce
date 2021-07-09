@@ -163,7 +163,7 @@ function selectTheArrayWithQuestions() {
     return questionsForThisRound;
 }
 /*An event listener is declared to perform a swith and execute a specific function when some keys are pressed.*/
-window.addEventListener("keyup", function (event) {
+document.addEventListener("keyup", function (event) {
     let keyUpPressed = event.key;
     switch (keyUpPressed) {
         case "Control":

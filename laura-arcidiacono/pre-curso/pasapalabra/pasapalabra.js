@@ -151,8 +151,8 @@ function pasapalabra() {
     function showTheDefinition(questionForThisLetter) {
         let answerOfThePlayer = window.prompt(questionForThisLetter);
         if (answerOfThePlayer !== null) {
-            answerOfThePlayer.trim();
-            answerOfThePlayer.toLowerCase();
+            answerOfThePlayer = answerOfThePlayer.trim();
+            answerOfThePlayer = answerOfThePlayer.toLowerCase();
         }
         return answerOfThePlayer
     };
@@ -334,7 +334,7 @@ function pasapalabra() {
     }
     //Here the program start to run
     let finalUserName = sayHi();
-    let startToPlay = welcome(finalUserName);
+    welcome(finalUserName);
     if (startToPlay === null) {
         sayGoodBye(finalUserName);
     } else {
