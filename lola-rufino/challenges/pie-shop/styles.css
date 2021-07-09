@@ -60,7 +60,7 @@ footer{
     padding: 10px;
 }
 
-#welcome-header{
+.welcome-header{
     padding-left: 36px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -74,7 +74,7 @@ footer{
     height: 197px;
 }
 
-.center-container{
+#center-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,16 +99,16 @@ footer{
     box-shadow: 1px 1px 11px gray;
 }
 
-#weekly-promotions h2, h3, figcaption{
+.weekly-promotions h2, h3, figcaption{
     padding: 5px;
 }
 
-#image-cake{
+.git addimage-cake{
     width: 400px;
     height: 240px;
 }
 
-#history-container{
+.history-container{
     margin: 10px;
     max-width: 400px;
 }
@@ -119,7 +119,7 @@ footer{
     margin-top: 20px;
 }
 
-@media screen and (min-width: 944px){
+@media screen and (min-width: 600px){
     .main-container{
         display: flex;
         flex-direction: row;
@@ -135,9 +135,9 @@ footer{
     }
     footer{
         text-align: left;
-        padding-left: 20%;
+        padding-left: 30%;
     }
-    #weekly-promotions{
+    .weekly-promotions{
         margin-top:20px;
         background-color: transparent;
         border-radius: 5%;
@@ -155,22 +155,18 @@ footer{
         height: 295px;
         margin-left: 30px;
     }
-    #welcome-header {
+    .welcome-header {
         font-size: 40px;
     }
-    .center-container{
-        align-items: left;
+    #center-container{
+        display: flex;
+        justify-content: left;
     }
-    #image-cake{
+    .image-cake{
         width: 500px;
         height: 300px;
     }
-    #history-container{
-        margin: 10px;
-        max-width: 800px;
-    }
-    #weekly-promotions{
-        margin: 10px;
+    .history-container{
         max-width: 800px;
     }
    }
