@@ -2,3 +2,11 @@ body {
     font-family: 12px/1.55 'Source Sans Pro', sans-serif;
     background-color: gainsboro;
 }
+
+navbar__person {
+    
+    width: 27px;
+    height: 27px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat;
+    margin: 10px;
+}
