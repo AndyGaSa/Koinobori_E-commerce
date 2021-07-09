@@ -1,9 +1,8 @@
 // Variables
-let num;
-let numberList = [];
-let displayScreen = document.getElementById('display');
 let newNumber;
 let currentResult;
+let numberList = [];
+let displayScreen = document.getElementById('display');
 
 /*Variable of currentOperation goes from 0 to 5
 0: not operation waiting
@@ -121,20 +120,20 @@ function operation(operator) {
 }
 
 // Operations
-function sum(currentResult, newNumber) {
-    return currentResult + newNumber;
+function sum(resultCurrent, numberNew) {
+    return resultCurrent +numberNew;
 }
 
-function rest(currentResult, newNumber) {
-    return currentResult - newNumber;
+function rest(resultCurrent, numberNew) {
+    return resultCurrent - numberNew;
 }
 
-function multi(currentResult, newNumber) {
-    return currentResult * newNumber;
+function multi(resultCurrent, numberNew) {
+    return resultCurrent * numberNew;
 }
 
-function divi(currentResult, newNumber) {
-    return currentResult / newNumber;
+function divi(resultCurrent, numberNew) {
+    return resultCurrent / numberNew;
 }
 
 // Operations in process
@@ -156,7 +155,7 @@ function operationInProcess() {
             currentResult = divi(currentResult, newNumber);
             break;
         case 5:
-            currentResult = currentResult;
+            this.currentResult = currentResult;
             break;
         default:
             console.log('Error');

@@ -5,27 +5,27 @@
     let costeMedio = 0;
     let escalasTotal = 0;
     const flights= [
-        { id: 00, to: 'Bilbao', from: 'Barcelona', cost: 1600, scale: false },
+        { id: 1, to: 'Bilbao', from: 'Barcelona', cost: 1600, scale: false },
 
-        { id: 01, to: 'New York', from: 'Barcelona', cost: 700, scale: false },
+        { id: 2, to: 'New York', from: 'Barcelona', cost: 700, scale: false },
     
-        { id: 02, to: 'Los Angeles', from: 'Madrid', cost: 1100, scale: true },
+        { id: 3, to: 'Los Angeles', from: 'Madrid', cost: 1100, scale: true },
     
-        { id: 03, to: 'Paris', from: 'Barcelona', cost: 210, scale: false },
+        { id: 4, to: 'Paris', from: 'Barcelona', cost: 210, scale: false },
     
-        { id: 04, to: 'Roma', from: 'Barcelona', cost: 150, scale: false },
+        { id: 5, to: 'Roma', from: 'Barcelona', cost: 150, scale: false },
     
-        { id: 05, to: 'London', from: 'Madrid', cost: 200, scale: false },
+        { id: 6, to: 'London', from: 'Madrid', cost: 200, scale: false },
     
-        { id: 06, to: 'Madrid', from: 'Barcelona', cost: 90, scale: false },
+        { id: 7, to: 'Madrid', from: 'Barcelona', cost: 90, scale: false },
     
-        { id: 07, to: 'Tokyo', from: 'Madrid', cost: 1500, scale: true },
+        { id: 8, to: 'Tokyo', from: 'Madrid', cost: 1500, scale: true },
     
-        { id: 08, to: 'Shangai', from: 'Barcelona', cost: 800, scale: true },
+        { id: 9, to: 'Shangai', from: 'Barcelona', cost: 800, scale: true },
     
-        { id: 09, to: 'Sydney', from: 'Barcelona', cost: 150, scale: true },
+        { id: 10, to: 'Sydney', from: 'Barcelona', cost: 150, scale: true },
     
-        { id: 10, to: 'Tel-Aviv', from: 'Madrid', cost: 150, scale: false } ];
+        { id: 11, to: 'Tel-Aviv', from: 'Madrid', cost: 150, scale: false } ];
 
        
      
@@ -35,8 +35,8 @@
         console.log(bienvenida + " aquí tiene todos los vuelos del día:");
 
         
-        for(i=0; i<flights.length;i++){
-        if(flights[i].scale == true){
+        for(let i in flights){
+        if(flights[i].scale){
         console.log( `El vuelo con origen: ${flights[i].to} y destino: ${flights[i].from} tiene un coste de ${flights[i].cost}€ y realiza escala.`);
         escalasTotal++;
         }else{
@@ -48,8 +48,8 @@
 
      function costes(){
 
-            let  costeTotal = flights[0].cost + flights[1].cost + flights[2].cost + flights[3].cost + flights[4].cost + flights[5].cost + flights[6].cost + flights[7].cost + flights[8].cost + flights[9].cost + flights[10].cost;
-            let costeMedio = costeTotal/10;
+            costeTotal = flights[0].cost + flights[1].cost + flights[2].cost + flights[3].cost + flights[4].cost + flights[5].cost + flights[6].cost + flights[7].cost + flights[8].cost + flights[9].cost + flights[10].cost;
+            costeMedio = costeTotal/10;
            
              console.log(`El coste medio de los vuelos es de ${costeMedio}€`);
              escalas();
@@ -62,7 +62,7 @@
 
     function ultimosDestinos(){
     console.log("Los últimos 5 destinos son:");
-     for(i= flights.length-5; i < flights.length; i++){
+     for(let i= flights.length-5; i < flights.length; i++){
          console.log(`El vuelo con origen: ${flights[i].to} y destino: ${flights[i].from}`);
      }
     }
