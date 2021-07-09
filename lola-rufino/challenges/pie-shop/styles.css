@@ -157,10 +157,12 @@ footer{
     }
     .welcome-header {
         font-size: 40px;
+        padding-left: 12px;
     }
     #center-container{
         display: flex;
         justify-content: left;
+        align-items: flex-start;
     }
     .image-cake{
         width: 500px;
