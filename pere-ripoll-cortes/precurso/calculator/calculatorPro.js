@@ -77,23 +77,18 @@ function getvalues(num){
 function doOperation(operation, values){
   switch (operation) {
     case 'sq':
-      //alert("The result of the square: " + Math.sqrt(values[0]));
       console.log("The result of the square: " + Math.sqrt(values[0]).toFixed(3));
       break;
     case '+':
-      //alert("The result of the sum: " + values[0] + values[1]);
       console.log("The result of the sum: " + (values[1] + values[0]).toFixed(3));
       break;
     case '-':
-      //alert("The result of subtraction: " + values[0] - values[1]);
       console.log("The result of subtraction: " + (values[0] - values[1]).toFixed(3));
       break;
     case '*':
-      //alert("The result of multiplication: " + values[0] * values[1]);
       console.log("The result of multiplication: " + (values[0] * values[1]).toFixed(3));
       break;
     case '/':
-      //alert("The result of division: " + values[0] / values[1]);
       console.log("The result of division: " + (values[0] / values[1]).toFixed(3));
       break;
   }

@@ -65,7 +65,7 @@ function flightsLog(values = []) {
   //logs finales
   let costsMedian =
     Math.round(
-      (costs.reduce((previous, current) => (current += previous)) /
+      (costs.reduce((previous, current) => current + previous) /
         (values.length + 1)) *
         1000
     ) / 1000;
@@ -148,8 +148,8 @@ function costOrder(money, values = []) {
 
 function priceUp(money, values = []) {
   let moreThan = [];
-  for (i = 0; i < values.length; i++) {
-    let flight = values[i];
+  for (let value of values) {
+    let flight = value;
     if (flight.cost > money) {
       moreThan.push(
         `vuelo desde ${flight.from} a ${flight.to} que vale ${flight.cost} con ID ${flight.id}`
@@ -165,8 +165,8 @@ function priceUp(money, values = []) {
 
 function priceDown(money, values = []) {
   let lessThan = [];
-  for (i = 0; i < values.length; i++) {
-    let flight = values[i];
+  for (let value of values) {
+    let flight = value;
     if (flight.cost < money) {
       lessThan.push(
         `vuelo desde ${flight.from} a ${flight.to} que vale ${flight.cost} con ID ${flight.id}`
@@ -182,8 +182,8 @@ function priceDown(money, values = []) {
 
 function priceEqual(money, values = []) {
   let equalThan = [];
-  for (i = 0; i < values.length; i++) {
-    let flight = values[i];
+  for (let value of values) {
+    let flight = value;
     if (flight.cost == money) {
       equalThan.push(
         `vuelo desde ${flight.from} a ${flight.to} que vale ${flight.cost} con ID ${flight.id}`
@@ -207,8 +207,8 @@ function buyFLight(values = []) {
     window.alert("EL dato introducido no es correcto");
     return buyFLight(values);
   } else {
-    for (i = 0; i < values.length; i++) {
-      let flight = values[i];
+    for (let value of values) {
+      let flight = value;
       if (flight.id == parseInt(idToBuy)) {
         console.log(
           `ha comprado el vuelo con recorrido ${flight.from} ${flight.to}. Gracias por su compra, vuelva pronto.`
@@ -233,8 +233,8 @@ function adminChoose(values = []) {
   }
 }
 function printFlights(values = []) {
-  for (i = 0; i < values.length; i++) {
-    let flight = values[i];
+  for (let value of values) {
+    let flight = value;
     console.log(
       `vuelo desde ${flight.from} a ${flight.to} que vale ${flight.cost} con ID ${flight.id}`
     );
@@ -310,8 +310,8 @@ function deleteFlight(values = []) {
     window.alert("disculpa, no te he entendido");
     return deleteFlight();
   } else {
-    for (i = 0; i < values.length; i++) {
-      let flight = values[i];
+    for (let value of values) {
+      let flight = value;
       if (flight.id == parseInt(idToDelete)) {
         window.alert(
           `Se ha eliminado el vuelo con origen: ${flight.from}, y destino: ${flight.to}.`

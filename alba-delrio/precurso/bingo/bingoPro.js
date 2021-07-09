@@ -12,13 +12,13 @@ let player;
 
 class Element{
      constructor(number){
-         this.number = number,
+         this.number = number;
          this.matched=false
         }
 }
 class User{
     constructor(userName,score){
-        this.userName= userName,
+        this.userName= userName;
         this.score= score
     }
 }
@@ -45,8 +45,8 @@ function juego(){
     if((num !== 0) && (num !== undefined)){
         alert("El numero "+num);
     }
-    for(let i=0; i<bingoCard.length;i++){
-        for(let j=0; j<bingoCard[i].length;j++){
+    for(let i in bingoCard){
+        for(let j in bingoCard){
             if(bingoCard[i][j].number === num){
                 bingoCard[i][j].number ='x';
                 bingoCard[i][j].matched= true;  
@@ -63,19 +63,20 @@ function juego(){
     if (!r){
         alert("Bye!");
     }else{
-        while(!cantarBingo()){
-            counterTurns += 1;
-            if(count===0){
-                cantarLinea();
-                juego();
-                
-            }else if (count===1){
-                juego();
+        cantarBingo();
             
-            }
+    }      
 
-        }
-    }
+}
+function cantarBingo(){
+    while(!cantarBingo()){
+        counterTurns += 1;
+        if(count===0){
+            cantarLinea();
+            juego();
+            
+        }else if (count===1){
+            juego();
 }
 
 //pedir nombre de usuario y guardarlo
@@ -112,7 +113,7 @@ function newBingoCard(){
             if(num === undefined || num===0){
                 j--;
             }else{
-                elem=new Element(num);
+                let elem=new Element(num);
             linea.push(elem);
             }        
         }
