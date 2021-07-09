@@ -26,7 +26,7 @@
         </label>
         <label for="user-phone-number">
             Phone number:*
-            <input type="tel" name="user-phone-number" id="user-phone-number" required>
+            <input type="tel" name="user-phone-number" id="user-phone-number" required pattern="[0-9]{9}" placeholder="### ### ###" maxlength="9">
         </label><br><br>
         <label for="flight-type">
             Flight type:
@@ -37,7 +37,7 @@
         </label>
         <label for="passengers">
             Passengers:*
-            <input type="number" name="passengers" id="passengers" value="1" required>
+            <input type="number" name="passengers" id="passengers" value="1" min="1" max="9" required>
         </label>
         <label for="flight-class">
             Flight class:
@@ -49,11 +49,11 @@
         </label><br><br>
         <label for="departure-location">
             Departure from:*
-            <input type="text" name="departure-location" id="departure-location" required>
+            <input type="text" name="departure-location" id="departure-location" required minlength="2" maxlength="20">
         </label>
         <label for="arrival-location">
             Arrival to:*
-            <input type="text" name="arrival-location" id="arrival-location" required>
+            <input type="text" name="arrival-location" id="arrival-location" required minlength="2" maxlength="20">
         </label><br><br>
         <label for="date">
             Date:*
