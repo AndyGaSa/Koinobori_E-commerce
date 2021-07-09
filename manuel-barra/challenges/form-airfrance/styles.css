@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#wrapper {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+label {
+    padding: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+}
+
+select {
+    padding: 10px;
+}
