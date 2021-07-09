@@ -13,7 +13,7 @@ body {
 
 header {
     height: 70px;
-    width: 100vh;
+    width: 100%;
     background-color: rgb(165, 147, 194);
     display: flex;
     flex-direction: row;
@@ -25,7 +25,10 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    
 }
 
 #biglogo {
@@ -47,6 +50,11 @@ main {
     padding-left: 20px;
 }
 
+ul {
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
 li {
     background-color: rgb(206, 70, 34);
     color: white;
@@ -58,16 +66,38 @@ li {
 #menu {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
 h3 {
     border-bottom: 30px;
+    font-weight: bold;
+}
+#imageintro {
+    padding: 20px;
+    width: 98%;
+}
+
+#bethanyimage {
+    width: 95%
 }
 
 h1 {
     color: rgb(165, 147, 194);
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+
+h2 {
+    font-weight: bold;
+}
+
+#history {
+    width: 85%;
 }
 
 #infofoto1 {
@@ -75,8 +105,28 @@ h1 {
 }
 
 article {
+    width: 85%;
     background-color: white;
     padding: 20px;
-    border-radius: 10%;
+    border-radius: 5%;
     box-shadow: 2px 2px lightgrey;
+    margin-bottom: 20px;
+}
+
+#articleimage{
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    align-items: center;
+    border-bottom: 20px;
+
+}
+
+#adressinfo {
+    font-style: italic;
+    text-align: center;
 }
