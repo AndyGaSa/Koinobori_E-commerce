@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="user-name">
+            Name:*
+            <input type="text" name="user-name" id="user-name" required minlength="2" maxlength="20">
+        </label>
+        <label for="user-surname">
+            Surname:*
+            <input type="text" name="user-surname" id="user-surname" required minlength="2" maxlength="20">
+        </label><br><br>
+        <label for="description">
+            Description:
+            <input type="textarea" name="description" id="description" maxlength="150" size="50">
+        </label><br><br>
+        <label for="user-email">
+            Email:*
+            <input type="email" name="user-email" id="user-email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="example@ex.com">
+        </label>
+        <label for="user-phone-number">
+            Phone number:*
+            <input type="tel" name="user-phone-number" id="user-phone-number" required>
+        </label><br><br>
+        <label for="flight-type">
+            Flight type:
+            <select name="flight-type" id="flight-type">
+                <option value="round-trip">Round trip</option>
+                <option value="one-way">One way</option>
+            </select>
+        </label>
+        <label for="passengers">
+            Passengers:*
+            <input type="number" name="passengers" id="passengers" value="1" required>
+        </label>
+        <label for="flight-class">
+            Flight class:
+            <select name="flight-class" id="flight-class">
+                <option value="economy">Economy</option>
+                <option value="normal">Normal</option>
+                <option value="first-class">First Class</option>
+            </select>
+        </label><br><br>
+        <label for="departure-location">
+            Departure from:*
+            <input type="text" name="departure-location" id="departure-location" required>
+        </label>
+        <label for="arrival-location">
+            Arrival to:*
+            <input type="text" name="arrival-location" id="arrival-location" required>
+        </label><br><br>
+        <label for="date">
+            Date:*
+            <input type="date" name="date" id="date" min="2021-07-09" max="2023-07-09" value="2021-07-09" required>
+        </label><br><br>
+        <label for="professional-trip">
+            Professional trip:
+            <input type="checkbox" name="professional-trip" id="professional-trip">
+        </label><br><br><br><br>
+        <label for="flight-submit">
+            Submit:
+            <input type="submit" name="flight-submit" id="flight-submit">
+        </label>
+    </form>
+</body>
+</html>
