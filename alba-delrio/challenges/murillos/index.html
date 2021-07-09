@@ -8,82 +8,90 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav class="topnav">
-            <a href="#">Menu</a>
-            <a href="#">Registro</a>
-            <a href="#">Busqueda</a>
-            <a href="#">carrito</a>
-            <span>items</span>
+    <header class= 'header-container'>
+        <nav class="header-container__topnav">
+            <a class="topnav__icon" href="#">Menu</a>
+            <a class="topnav__icon" href="#">Registro</a>
+            <a class="topnav__icon" href="#">Busqueda</a>
+            <a class="topnav__icon" href="#">carrito</a>
+            <span class="topnav__items">items</span>
         </nav>
-        <div>
-            <img logo>
+        <div class="header-container__logo">
+            <img class="logo" logo>
         </div>
     </header>
-    <main>
-        <div class="slidecontainer">
-            <ul>
-                <li class="slide" id="slide1">
+    <main class="main-container">
+        <div class="main-container__slidecontainer">
+            <ul class="slidecontainer">
+                <li class="slidecontainer_slide" id="slide1">
                     <a href="#">
                         <img src="photo1.jpg" alt="photo 1">      
                     </a>
                 </li>
-                <li class="slide" id="slide1">
+                <li class="slidecontainer_slide" id="slide1">
                     <a href="#">
                         <img src="photo1.jpg" alt="photo 1">      
                     </a>
                 </li>
-                <li class="slide" id="slide1">
+                <li class="slidecontainer_slide" id="slide1">
                     <a href="#">
                         <img src="photo1.jpg" alt="photo 1">      
                     </a>
                 </li>
-                <li class="slide" id="slide1">
+                <li class="slidecontainer_slide" id="slide1">
                     <a href="#">
                         <img src="photo1.jpg" alt="photo 1">      
                     </a>
                 </li>
-            </ul>
-            
-        
-            <ul>    
-                <li>o</li>
-                <li>o</li>
-                <li>o</li>
             </ul>
         </div>
         <div>
-            <ul>
-                <li>o</li>
-                <li>o</li>
-                <li>o</li>
-                <li>o</li>
-            </ul>
+            <ul class="slidecontainer__links">
+                <li>
+                  <a href="#slide1">1</a>
+                </li>
+                <li>
+                  <a href="#slide2">2</a>
+                </li>
+                 <li>
+                  <a href="#slide3">3</a>
+                </li>
+              </ul>
         </div>
-        </section>
+        <section class="main-container__first-section">
             <h2>Fiestas</h2>
-            <article>
-                <h3>Fiestas Tema</h3>
+            <article class="first-section__article-theme">
+                <h3>Fiestas Temáticas</h3>
             </article>
-            <article>
-                <h3>Accesorios para Fiestas</h3>
+            <article class="first-section__article-caracthers">
+                <h3>Fiestas Personaje</h3>
             </article>
-            <article>
+            <article class="first-section__article-accesories">
                 <h3>Accesorios para Fiestas</h3>
             </article>
             <span>VER MAS</span>
         </section>
-        <section>
+        <section class="main-container__second-section">
             <img modalidad envio>
-            <div>
+            <div class="second-section__folow">
                 <span>Síguenos</span>
             </div>
-            <form>
-                <label>RECIBE LAS NOVEDADES EN TU EMAIL</label>
-                <input>
+            <form class="second-section__form">
+                <label for="email" >RECIBE LAS NOVEDADES EN TU EMAIL</label>
+                <input type="email" id="email" name="email">
+                <input type="radio" ><br>
+                <label for="Accept">Acepto <a href="#">la política de privacidad</a></label>
             </form>
+            <span class="second-section__form">SUSCRÍBETE ></span>
         </section>
     </main>
-    <footer></footer>
+    <footer class="footer-container">
+        <section>
+            <span class="footer-container__contact">CONTACTO</span>
+            <span class="footer-container__info">SOBRE NOSOTROS</span>
+            <span class="footer-container__venta">CONDICIONES DE VENTA</span>
+        </section>
+        <span class="footer-container__coyright"></span>
+    </footer>
 </body>
 </html>
