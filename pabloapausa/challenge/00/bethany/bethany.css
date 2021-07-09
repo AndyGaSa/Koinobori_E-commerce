@@ -4,147 +4,135 @@
     background-color: rgb(224, 222, 208);
 }
 
-/* First navigation bar */
+/*Header*/
 
 header {
-    display: flex;
+    display: flex; 
     flex-direction: row;
-    background-color: rgb(147, 126, 181); 
+    background-color:rgb(147, 126, 181);
+    justify-content: space-between
 }
+
+header img {
+    background-color:rgb(147, 126, 181);
+}
+
+header nav {
+    background-color: rgb(147, 126, 181);
+}
+
+/*Header navigation bar*/
 
 header nav a {
+    text-decoration: blink; 
     color: white;
-    text-decoration: blink;
 }
 
-/* Second navigation bar */
+/*Aside*/
+
+aside {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+/*Logo*/
+
+aside img {
+    width: 128px;
+    margin-top: 16px;
+}
+
+/*Body navigation bar*/
 
 aside nav {
-    display: flex;
-    flex-direction: column;
+    display: flex; 
+    flex-direction: column; 
 }
 
 aside nav a {
-    color: black;
-    text-decoration: blink;
-    background-color: rgb(194, 48, 27);
+    text-decoration: blink; 
     color: white;
+    width: 128px;
+    height: 32px;
+    text-align: center;
+    margin-top: 4px;
+    background-color: rgb(194, 48, 27);
 }
 
-/* Text */
+/*Font, sizes and margins*/
 
-h1 {
+nav {
+    font-size: 16px; 
+    margin-top: 16px; 
+}
+
+h1{
+    font-size: 32px;
+    margin-top: 16px;
+    margin-bottom: 16px;
     color: rgb(147, 126, 181);
 }
 
-/* Text tags */
-    
-h1 {
-    font-size: 4vh;
-    margin-top: 4vh;
-    margin-bottom: 3vh;
-}
-        
 h2 {
-    font-size: 3vh;
-    margin-top: 3vh; 
-    margin-bottom: 2vh;
-}
-        
-h3 {
-    font-size: 3vh;
-    margin-top: 2vh; 
-    margin-bottom: 2vh;
-}
-        
-p {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    width: 50vw;
-}
-        
-figcaption {
-    margin-top: 1vh;
-    margin-left: 2vw;
-}
-        
-h3, p, figcaption, a {
-    font-size: 2vh;
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom:16px;
 }
 
-/* Images */
-    
-aside img {
-   width: 12.5vw;
+h3 {
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom:16px;
 }
-    
-article img {
-    width: 46vw;
-    margin-left: 2vw;
-    margin-right: 2vw;
+
+p {
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom:16px;
+    text-align: justify;
 }
+
+figcaption {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom:16px;
+}
+
+/*Query for big screen*/
 
 @media only screen and (min-width: 600px) {
-    /* Main */
-    
+    /*Nav and article display*/
     main {
-        display: flex;
+        display: flex; 
         flex-direction: row;
-    }
-    
-    /* Second navigation bar */
-    
-    aside {
-        margin-top: 4vh;
-        text-align: center;
-        width: 25vw;
+        justify-content: space-around;
     }
 
-    aside nav a {
-        margin: 0.25vw 0vw;
-        width: 12vw;
-        height: 3vw;
+    article {
+        width: 50vw;
+    }
+
+    article img {
+        width: 50vw;
     }
 }
 
-/*Media query*/
+/*Query for small screen*/
 
 @media only screen and (max-width: 600px) {
+    /*Nav and article display*/
     main {
-        display: flex;
+        display: flex; 
         flex-direction: column;
-        margin: 0vw 3vw;
+        align-content: space-between;
+        width: 96vw;
+        margin-left: 2vw; 
+        margin-right: 2vw; 
     }
 
-    .photo {
-        width: 94vw;
-    }
-
-    /* Navigation */
-
-    aside {
-        text-align: center;
-    }
-    
-    aside nav a {
-        width: 24vw;
-        height: 6vw;
-    }
-
-    p {
-        width: 92vw;
-    }
-
-    /* Images */
     article img {
-        width: 82vw;
-        margin-left: 2vw;
-        margin-right: 2vw;
-    }
-
-    /* Text tags */
-
-    #section-third {
-        background-color: white;
+        width: 96vw;
     }
 }
