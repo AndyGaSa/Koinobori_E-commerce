@@ -118,13 +118,54 @@
 }
 
 @media screen and (min-width: 600px){
-    header{
-
+    .header{
+        justify-content: flex-start;
+    }
+    .main-container{
+        flex-direction: unset;  
+        padding-left: 50px;      
+    }
+    .container-pies{
+        max-width: 360px;
+    }
+    .pies-list{
+        max-width: 360px;
+        max-height: 240px;
+    }
+    .bethany-logo{
+        max-width: 360px;
+        max-height: 360px;
+    }
+    .title-pies{
+        font-size: 20px;
 
     }
-    main{
-
+    .tittle{
+        font-size: 33px;
     }
+    .bethany-picture{
+        margin-left: 2em;
+        min-width: 50em;
 
 }
-    
+    .history-title{
+        font-size: 2.5em;
+    }
+    .history-text-div{
+        font-size: 1.5em;
+        height: 12em;
+        justify-content: space-around;
+    }
+    .promotions-container{
+        background-color: unset;
+
+    }
+    .promotions-title{
+        font-size:2em;
+
+    }
+    .footer-container{
+        height: 10em;
+        padding-left: 3em;
+        text-align: unset;
+    }
