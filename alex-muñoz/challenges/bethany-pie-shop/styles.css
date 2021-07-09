@@ -147,7 +147,7 @@
         margin-left: 2em;
         min-width: 50em;
 
-}
+    }
     .history-title{
         font-size: 2.5em;
     }
@@ -169,3 +169,4 @@
         padding-left: 3em;
         text-align: unset;
     }
+}
