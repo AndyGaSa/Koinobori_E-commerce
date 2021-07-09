@@ -5,59 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Maria Lunarillos</title>
 </head>
 <body>
     <header class= 'header-container'>
         <nav class="header-container__topnav">
             <a class="topnav__icon" href="#">Menu</a>
             <a class="topnav__icon" href="#">Registro</a>
-            <a class="topnav__icon" href="#">Busqueda</a>
-            <a class="topnav__icon" href="#">carrito</a>
-            <span class="topnav__items">items</span>
+            <div class="topnav__subgroup">
+                <a class="topnav__icon" id= "search" href="#">Busqueda</a>
+                <a class="topnav__icon" id= "trolley" href="#">carrito</a>
+                <span class="topnav__items" id="item">items</span>
+            </div>
         </nav>
         <div class="header-container__logo">
             <img class="logo" logo>
         </div>
     </header>
     <main class="main-container">
-        <div class="main-container__slidecontainer">
-            <ul class="slidecontainer">
-                <li class="slidecontainer_slide" id="slide1">
-                    <a href="#">
-                        <img src="photo1.jpg" alt="photo 1">      
-                    </a>
-                </li>
-                <li class="slidecontainer_slide" id="slide1">
-                    <a href="#">
-                        <img src="photo1.jpg" alt="photo 1">      
-                    </a>
-                </li>
-                <li class="slidecontainer_slide" id="slide1">
-                    <a href="#">
-                        <img src="photo1.jpg" alt="photo 1">      
-                    </a>
-                </li>
-                <li class="slidecontainer_slide" id="slide1">
-                    <a href="#">
-                        <img src="photo1.jpg" alt="photo 1">      
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <ul class="slidecontainer__links">
-                <li>
-                  <a href="#slide1">1</a>
-                </li>
-                <li>
-                  <a href="#slide2">2</a>
-                </li>
-                 <li>
-                  <a href="#slide3">3</a>
-                </li>
-              </ul>
-        </div>
         <section class="main-container__first-section">
             <h2>Fiestas</h2>
             <article class="first-section__article-theme">
@@ -76,22 +41,23 @@
             <div class="second-section__folow">
                 <span>Síguenos</span>
             </div>
-            <form class="second-section__form">
-                <label for="email" >RECIBE LAS NOVEDADES EN TU EMAIL</label>
-                <input type="email" id="email" name="email">
-                <input type="radio" ><br>
-                <label for="Accept">Acepto <a href="#">la política de privacidad</a></label>
-            </form>
-            <span class="second-section__form">SUSCRÍBETE ></span>
         </section>
     </main>
     <footer class="footer-container">
-        <section>
+        <form class="footer-container__form">
+            <label for="email" >RECIBE LAS NOVEDADES EN TU EMAIL</label>
+            <input type="email" id="email" name="email">
+            <input type="radio" ><br>
+            <label for="Accept">Acepto <a href="#">la política de privacidad</a></label>
+        </form>
+        <span class="footer-container__suscription">SUSCRÍBETE ></span>
+
+        <section class="footer-container__options">
             <span class="footer-container__contact">CONTACTO</span>
             <span class="footer-container__info">SOBRE NOSOTROS</span>
             <span class="footer-container__venta">CONDICIONES DE VENTA</span>
         </section>
-        <span class="footer-container__coyright"></span>
+        <span class="footer-container__coyright">Copyright ©2021 María Lunarillos</span>
     </footer>
 </body>
 </html>
