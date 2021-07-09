@@ -18,25 +18,49 @@
         <a href="">Book for 10+ passengers</a>
         <form action="" class="main-container__form">
             <label for="trip" class="form__trip-label">Viaje
-            <input type="select" name="trip" id="trip" class="form__trip-input"></label>
-
+                <select name="trip" id="trip" class="form__trip-input">
+                    <option value="round-trip">Ida y Vuelta</option>
+                    <option value="going-trip">Ida</option>
+                </select>
+            </label>
             <label for="passenger" class="form__passenger-label">Pasajeros
-            <input required type="number" name="passenger" id="passenger" class="form__passenger-input"></label>
+                <select required name="passenger" id="passenger" class="form__passenger-input">
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                    <option value="five">5</option>
+                    <option value="six">6</option>
+                    <option value="seven">7</option>
+                    <option value="eight">8</option>
+                    <option value="nine">9</option>
+                    <option value="ten">10</option>
+                </select>
+
+            </label>
+
 
             <label for="class" class="form__class-label">Clase
-            <input type="radio" name="class" id="class" class="form__class-input"></label>
+                <select name="class" id="class" class="form__class-input">
+                    <option value="turist">Clase Turista</option>
+                    <option value="economy">Clase Económica</option>
+                    <option value="first">Primera Clase</option>
+                </select>
+            </label>
 
             <label for="departures" class="form__departures-label">Salida de
-            <input required type="text" name="departures" id="departures" class="form__departures-input"></label>
+                <input required type="text" name="departures" id="departures" class="form__departures-input"></label>
 
             <label for="arrivals" class="form__arrivals-label">Llegada a
-            <input required type="text" name="arrivals" id="arrivals" class="form__arrivals-input"></label>
+                <input required type="text" name="arrivals" id="arrivals" class="form__arrivals-input">
+            </label>
 
             <label for="date-of-trvel" class="form__date-of-trvel-label">Fechas de viaje
-            <input type="date" name="date-of-trvel" id="date-of-trvel" class="form__date-of-trvel-input"></label>
+                <input type="date" name="date-of-trvel" id="date-of-trvel" class="form__date-of-trvel-input"></label>
 
             <label for="professional-trip" class="form__viaje-label">Viaje profesional
-            <input type="switch" name="professional-trip" id="professional-trip" class="form__professional-trip-input"></label>
+                <input type="switch" name="professional-trip" id="professional-trip"
+                    class="form__professional-trip-input"></label>
 
             <button>Buscar vuelos</button>
 
