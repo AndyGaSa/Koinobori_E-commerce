@@ -140,7 +140,7 @@ h2 {
     background-color: white;
     padding: 1rem;
     border-radius: 5%;
-
+    box-shadow: 1px 1px 10px black;
 
 }
 .recipe-photo{
@@ -202,7 +202,7 @@ footer a{
     }
     .recipe{
         background-color: transparent;
-       
+        box-shadow: 0px 0px 0px black;
         padding-left: 0;
     }
     .footer{
