@@ -1,0 +1,12 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label + label {
+    margin-top: 20px;
+}
+
+#lastname:valid {
+    background-color: green;
+}
