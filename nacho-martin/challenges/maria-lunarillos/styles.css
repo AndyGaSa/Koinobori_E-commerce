@@ -1,0 +1,25 @@
+.title {
+    display: none;
+}
+
+.user-icon {
+    width: 27px;
+    height: 27px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat;
+    margin: 10px;
+}
+
+.search-icon {
+    width: 50px;
+    height: 50px;
+    background: #BBB8B6 url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -304px 12px no-repeat;
+    cursor: pointer;
+}
+
+.cart-icon {
+    width: 50px;
+    height: 50px;
+    background: #fff url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -66px 10px no-repeat;
+    margin: 0;
+    position: relative;
+}
