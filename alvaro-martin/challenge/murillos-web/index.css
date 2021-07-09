@@ -1,0 +1,24 @@
+header{
+    display: flex;
+    flex-direction: row;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+}
+.slider{
+    display: flex;
+    flex-direction: row;
+}
+.envios{
+    display: flex;
+    flex-direction: row;
+}
+.envios__camion{
+    display: flex;
+    flex-direction: row;
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
