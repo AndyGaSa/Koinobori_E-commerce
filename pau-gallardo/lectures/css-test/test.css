@@ -1,0 +1,24 @@
+#morespecific{
+    background-color: red;
+    border: 1px solid black;
+}
+
+.specific{
+    background-color: aqua;
+    border: none;
+}
+
+p{
+    background-color: purple;
+    color: green;
+    padding: 5px;
+}
+
+@media screen and (min-width:600px) {
+    #morespecific{
+        background-color: black;
+    }
+    .specific{
+        background-color: gold;
+    }
+}
