@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
@@ -252,7 +252,7 @@ a {
     .browse-pie-box {
         width: 50%;
         align-items: center;
-        padding-left: 400px;
+        padding-left: 200px;
     }
     .section-info {
         width: 50%;
@@ -284,12 +284,12 @@ a {
     }
     .our-history-box {
         width: 700px;
-        margin-left: -80px;
+        margin-left: -20px;
         font-size: 20px;
     }
     .menu-card {
         width: 360px;
-        margin-left: -80px;
+        margin-left: -20px;
     }
     .footer-box {
         align-items: start;
