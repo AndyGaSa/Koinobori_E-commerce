@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     background-image: url("https://i.ibb.co/F6JMwrJ/pattern.png")
+}
+.page{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 992px) {
+    body {
+      background-color: blue;
+    }
+  }
+
+.index{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(168, 82, 248);
+    color: white;
+    font-family: sans-serif;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+button{
+    color: white;
+    background-color: rgb(165, 55, 16);
+    width: 10vw;
+    height: 5vh;
+}
+
+
