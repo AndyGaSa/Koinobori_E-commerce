@@ -13,18 +13,38 @@
 
 .top-header {
     display: flex;
+    background-color: #F8F8F8;
+    height: 50px;
 }
 
 .top-header__desktop-top-header{
     display: none;
 }
 
+.desktop-top-header__main-icons-container {
+    width: 220px;
+    background-color: purple;
+}
+
+.main-icons-container__icon-main {
+    width: 80px;
+    height: 140px;
+    background-color: #FF5959;
+}
+
+.main-icons-container__icon-side {
+    width: 70px;
+    height: 70px;
+}
+
+.main-icons-container__icon-side:hover {
+    height: 140px;
+}
+
 .top-header__mobile-top-header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #F8F8F8;
-    height: 50px;
     width: 100%;
 }
 
@@ -90,6 +110,10 @@
 @media screen and (min-width: 1023px) {
     .top-header__desktop-top-header{
         display: unset;
+    }
+
+    .mobile-top-header__menu-button {
+        display: none;
     }
 
     .mobile-top-header__login-button {
