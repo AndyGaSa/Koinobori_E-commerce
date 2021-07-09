@@ -21,59 +21,72 @@
     <main>
         <form class="main-form">
             <fieldset class="main form__personal-data personal-data">
-                <label for="name" class="personal-data__name-label name-label">
-                    Nombre: 
-                    <input class="name__input" type="text" id=name name="username" value="Viajero">
+                <label for="firstname" class="personal-data__firstname-label firstname-label">
+                    Nombre:
+                    <input class="firstname-label__firstname-input" type="text" id=firstname name="firstname" value="Viajero">
+                </label>
+                <label for="lastname" class="personal-data__lastname-label lastname-label">
+                    Apellido:
+                    <input class="lastname-label__last-input" type="text" id=lastname name="lastname" value="Apellido">
+                </label>
+                <label for="description" class="personal-data__description-label description-label">
+                    Descripcion:
+                    <textarea id="description" name="description-input"
+                    rows="5" cols="33"></textarea>
                 </label>
                 <label for="phone" class="personal-data__phone-label phone-label">
                     Telefono:
-                    <input class="phone__input" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    <input class="phone-label__phone-input" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                 </label>
                 <label for="email" class="personal-data__email-label email-label">
                     Email:
-                    <input id="email" type="email" required />
+                    <input class="email-label__email-input" id="email" type="email" required />
                 </label>
+            </fieldset>
+            <fieldset class="main-form__flights flights">
+                <label for="" class="flights__flight-label flights-label">
+                    Viaje:
+                    <select class="flights-label__oneway-roundtrip" id="oneway-roundtrip" name="oneway-roundtrip">
+                        <option value="ida">ida</option>
+                        <option value="vuelta">Ida y Vuelta</option>
+                    </select>
+                </label>
+                <label for="number-of-passangers" class="flights__passanger-label passanger-label">
+                    Numero de Pasajeros:
+                    <input id="number-of-passangers" class="passanger-label__passanger-input" type="number" name="passanger-number" step="1" id="passanger-number">
+                </label>
+                <label for="flights__class-label" class="flights__class-label class-label">
+                    Clase:
+                    <select class="class-label__class-input" id="oneway-roundtrip" name="oneway-roundtrip">
+                        <option value="ida">Business</option>
+                        <option value="vuelta">Primera Clase</option>
+                        <option value="vuelta">Economy</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset class="main-form__city city">
+                <label for="" class="city__departure-label departure-label">
+                    <input id="" class="departure-label__departure-input">
+                </label>
+                <label for="" class="city__arrival-label arrival-label">
+                    <input id="" class="arrival-label__arrival-input">
+                </label>
+            </fieldset>
+            <fieldset class="main-form__date date">
+                <label for="" class="date__date-label date-label">
+                    <input id="" class="date-label__date-input">
+                </label>
+            </fieldset>
+            <fieldset class="main-form__professional professional">
+                <label class="professional__professional-label professional-label">
+                    <input id="" class="professional-label__professional-input">
+                </label>    
+            </fieldset>
+            <fieldset class="main-form__submit-form">
+                <input type="submit">
             </fieldset>
 
         </form>
-
-            </div>
-        </section>
-        <section class="flight">
-            <div class="flights">
-
-            </div>
-            <div class="passangers">
-
-            </div>
-            <div class="class">
-
-            </div>
-            <div class="more-10">
-
-            </div>
-        </section>
-        <section class="City">
-            <div class="departure">
-
-            </div>
-            <div class="arrival">
-
-            </div>
-        </section>
-        <section class="date">
-            <div class="flight-date">
-
-            </div>
-        </section>
-        <section class="other-options">
-            <div class="professional">
-
-            </div>
-            <div class="search">
-                <button class="search-button>" type="submit">Buscar</button>
-            </div>
-        </section>
     </main>
 </body>
 
