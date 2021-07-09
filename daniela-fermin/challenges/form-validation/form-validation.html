@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="bethany, pie, shop, bakery, dishes, food, yummy">
-    <link rel="stylesheet" href="bethany.css">
+    <meta name="keywords" content="flights, travel, passenger, offers">
+    <link rel="stylesheet" href=form-validation.css">
     <link rel="stylesheet" href=>
-    <title>Bethany's Pie Shop</title>
+    <title>Form Validation</title>
 </head>
 
 <body>
@@ -65,27 +65,38 @@
                 </label>
             </fieldset>
             <fieldset class="main-form__city city">
-                <label for="" class="city__departure-label departure-label">
-                    <input id="" class="departure-label__departure-input">
+                <label for="departure" class="city__departure-label departure-label">
+                    Salida a:
+                    <select class="departure-label__departure-input" id="departure" name="departure">
+                        <option value="caracas">Caracas</option>
+                        <option value="barcelona">Barcelona</option>
+                        <option value="miami">Miami</option>
+                    </select>
                 </label>
-                <label for="" class="city__arrival-label arrival-label">
-                    <input id="" class="arrival-label__arrival-input">
+                <label for="arrival" class="city__arrival-label arrival-label">
+                    Llegada a:
+                    <select class="arrival-label__class-input" id="arrival" name="arrival">
+                        <option value="caracas">Caracas</option>
+                        <option value="barcelona">Barcelona</option>
+                        <option value="miami">Miami</option>
+                    </select>
                 </label>
             </fieldset>
             <fieldset class="main-form__date date">
-                <label for="" class="date__date-label date-label">
-                    <input id="" class="date-label__date-input">
+                <label for="trip-date" class="date__date-label date-label">
+                    <input type="date" id="trip-date" name="trip-date"
+                    value="2021-07-22">
                 </label>
             </fieldset>
             <fieldset class="main-form__professional professional">
-                <label class="professional__professional-label professional-label">
-                    <input id="" class="professional-label__professional-input">
+                <label for="flexSwitchCheckDefault" class="professional__professional-label professional-label">
+                    Viaje Profesional
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                 </label>    
             </fieldset>
             <fieldset class="main-form__submit-form">
-                <input type="submit">
+                <input type="submit" value="Buscar Vuelos">
             </fieldset>
-
         </form>
     </main>
 </body>
