@@ -130,7 +130,7 @@ function admin() {
         }
     }
 
-};
+}
 
 function user() {
    
