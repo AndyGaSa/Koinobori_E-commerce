@@ -9,9 +9,11 @@ body{
     flex-direction: column;
 }
 
-@media screen {
-    
-}
+@media screen and (max-width: 992px) {
+    body {
+      background-color: blue;
+    }
+  }
 
 .index{
     display: flex;
