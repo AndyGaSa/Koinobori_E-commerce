@@ -26,10 +26,7 @@ color: white;
 main{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    
 }
-
 
 body{
     background-image: url("https://i.ibb.co/dgg415M/pattern.png");
@@ -143,3 +140,30 @@ footer{
     align-items: center;
     font-weight: bold;
 }
+
+@media screen and (min-width:450px){
+        main{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container-icono {
+            width: 10%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        header {
+            display: flex;
+            background-color: purple;
+            height: 80px;
+        }
+
+        .container-menu {
+            width: 30%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+        }
+    }
