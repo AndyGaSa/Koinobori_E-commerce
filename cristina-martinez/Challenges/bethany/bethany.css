@@ -2,7 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-     background-image: src="https://i.ibb.co/F6JMwrJ/pattern.png"
+     background-image: url("https://i.ibb.co/F6JMwrJ/pattern.png")
 }
 .page{
     display: flex;
