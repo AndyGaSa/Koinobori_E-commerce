@@ -6,7 +6,7 @@
 }
 
 .header-container{
-    display:flex;
+    width:100vw;
 }   
 .header-container__topnav{
     width:100vw;
@@ -15,9 +15,13 @@
     display:flex;
     justify-content: space-evenly;
 }
-
-
-.topnav__icon{
-    
-   
+.header-container__logo{
+    width:100vw;
+    height:9.25rem;
+    display:flex;
+    justify-content: center;
+    background-color: chartreuse;
+}
+.logo{
+    width:50vw;
 }
