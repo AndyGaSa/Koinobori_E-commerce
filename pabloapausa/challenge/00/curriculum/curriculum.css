@@ -1,0 +1,43 @@
+* {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Sans-serif';
+    text-align: justify;
+    max-width: 500px;
+    margin: 0px;
+}
+
+h1 {
+    background-color: blue;
+    color: white;
+    margin-left: 1em;
+    font-size: 21px;
+}
+
+h1, h2, h3 {
+    font-size: 16px;
+
+}
+
+#description {
+    font-weight: bold;
+}
+
+main, footer {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+article {
+    margin: 2em 0em;
+}
+
+h3 {
+    color: blue;
+    font-weight: normal;
+    margin: 1em 0em;
+}
+
+footer {
+    font-weight: bold;
+}
