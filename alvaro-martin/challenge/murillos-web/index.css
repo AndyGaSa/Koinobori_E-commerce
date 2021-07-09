@@ -1,15 +1,24 @@
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0
+}
+
 header{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100vw;
+    background-color: #F8F8F8;
 }
+
+
 .header{
     display: flex;
     flex-direction: row;
 }
-.slider{
-    display: flex;
-    flex-direction: row;
-}
+
 .envios{
     display: flex;
     flex-direction: row;
@@ -21,4 +30,34 @@ header{
 main{
     display: flex;
     flex-direction: column;
+    
+}
+.fiestas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.follow-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    background-color: #F8F8F8;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    height: 10vw;
+    width: 100vw;
+    background-color: #FF5959;
+    
 }
