@@ -1,0 +1,150 @@
+* {
+    margin: 0vw;
+    font-family: 'helvetica Neue', 'helvetica', 'sans-serif';
+    background-color: rgb(224, 222, 208);
+}
+
+/* First navigation bar */
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(147, 126, 181); 
+}
+
+header nav a {
+    color: white;
+    text-decoration: blink;
+}
+
+/* Second navigation bar */
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+}
+
+aside nav a {
+    color: black;
+    text-decoration: blink;
+    background-color: rgb(194, 48, 27);
+    color: white;
+}
+
+/* Text */
+
+h1 {
+    color: rgb(147, 126, 181);
+}
+
+/* Text tags */
+    
+h1 {
+    font-size: 4vh;
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+}
+        
+h2 {
+    font-size: 3vh;
+    margin-top: 3vh; 
+    margin-bottom: 2vh;
+}
+        
+h3 {
+    font-size: 3vh;
+    margin-top: 2vh; 
+    margin-bottom: 2vh;
+}
+        
+p {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 50vw;
+}
+        
+figcaption {
+    margin-top: 1vh;
+    margin-left: 2vw;
+}
+        
+h3, p, figcaption, a {
+    font-size: 2vh;
+}
+
+/* Images */
+    
+aside img {
+   width: 12.5vw;
+}
+    
+article img {
+    width: 46vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+@media only screen and (min-width: 600px) {
+    /* Main */
+    
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    /* Second navigation bar */
+    
+    aside {
+        margin-top: 4vh;
+        text-align: center;
+        width: 25vw;
+    }
+
+    aside nav a {
+        margin: 0.25vw 0vw;
+        width: 12vw;
+        height: 3vw;
+    }
+}
+
+/*Media query*/
+
+@media only screen and (max-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        margin: 0vw 3vw;
+    }
+
+    .photo {
+        width: 94vw;
+    }
+
+    /* Navigation */
+
+    aside {
+        text-align: center;
+    }
+    
+    aside nav a {
+        width: 24vw;
+        height: 6vw;
+    }
+
+    p {
+        width: 92vw;
+    }
+
+    /* Images */
+    article img {
+        width: 82vw;
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+
+    /* Text tags */
+
+    #section-third {
+        background-color: white;
+    }
+}
