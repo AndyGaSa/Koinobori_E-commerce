@@ -129,7 +129,20 @@ footer{
     text-align: center;
 }
 
+@media screen and (min-width: 600px){
+    main{
+        flex-direction: row;
+        align-items:initial;
 
+    }
+}
+
+@media screen and (min-width: 600px){
+    .logo-pies{
+        justify-content: flex-start;
+        padding: 25px;
+    }
+}
 
 
 
