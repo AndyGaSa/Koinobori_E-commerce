@@ -269,7 +269,6 @@ body {
     height: 32px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -303px 2px no-repeat #BBB8B6;
     border: none;
-    margin-left: ;
 }
 
 
@@ -328,18 +327,21 @@ body {
     max-width: 150em;
 }
 
-.party-box, .party-header, .party-header__img{
+.party-header, .party-header__img{
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
 }
 
 .party-box {
     width: 90%;
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .party-header {
+    flex: 1;
     width: 20%;
     height: 15%;
 }
@@ -364,14 +366,6 @@ body {
     width: 80%;
     text-align: center;
     align-self: center;
-
-    border-radius: 1px solid red;
-}
-
-.party-body {
-    width: 80%;
-    height: 60%;
-    margin-top: 10em;
 }
 
 .party-header > div {
@@ -380,9 +374,95 @@ body {
     width: 100%;
 }
 
-.party-body{
+.party-box__espacio{
+    height: 3em;
+}
+
+.party-body {
     display: flex;
     flex-direction: row;
+    max-width: 110em;
+    align-self: center;
+    width: 80%;
+    height: 80%;
+}
 
-    background-color: #F6B436;
+.party-body-boxs-left{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 1em;
+}
+
+.party-body-boxs-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34%;
+    width: 150%;
+    height: 100%;
+}
+
+.party-body-box-right > img {
+    align-self: center;
+    width: 150%;
+    height: 100%;
+}
+
+
+.party-body-boxs-left__img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.party-body-boxs-left__img > img {
+    width: 100%;
+    height: 100%;
+}
+
+.party-footer__button {
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    background-color: #FF5959;
+    padding: 1em;
+}
+
+.party-footer__button:hover {
+    background-color: rgba(229, 89, 89, 0.5);;
+}
+
+.party-footer {
+    align-self: center;
+}
+
+.promoters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 110em;
+}
+
+.main-box{
+    width: 60%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-box__promoters {
+    margin: 1em;
+}
+
+.promoters__title {
+    font-size: 3em;
+    font-weight: bold;
+    padding: 0.3em;
+    width: 100%;
+    text-align: center;
+    align-self: center;
 }
