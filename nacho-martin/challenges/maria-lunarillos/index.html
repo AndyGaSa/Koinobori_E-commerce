@@ -15,14 +15,24 @@
 <body>
     <h1 class="title">Maria Lunarillos</h1>
     <header class="header">
-        <div class="header__top header-navigator">
+        <nav class="header__top header-navigator">
             <a href="#"><img src="https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/burger_menu.png" alt="burgermenu"></a>
             <svg class="header-navigator__link user-icon"></svg>
-            <svg class="header-navigator__link search-icon"></svg>
-            <svg class="header-navigator__link cart-icon"></svg>
+            <div class="shop-block">
+                <svg class="header-navigator__link search-icon"></svg>
+                <div class="header-navigator__cart">
+                    <svg class="cart__icon"></svg>
+                    <p class="cart__counter">0</p>
+                </div>
+            </div>
+        </nav>
+        <div class="header__bottom main-logo">
+            <img src="https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/logo-small.svg" class="main-logo__image">
         </div>
-        <div class="header__bottom"></div>
     </header>
+
+
+
 </body>
 
 </html>
