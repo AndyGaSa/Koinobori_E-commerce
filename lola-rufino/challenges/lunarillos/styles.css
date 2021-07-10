@@ -3,14 +3,14 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.main-header__nav-fixed{
-    background-color: #F8F8F8;
-    height: 50px;
+.main-header{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
 }
 
 .main-header__nav-fixed{
+    background-color: #F8F8F8;
+    height: 50px;
     display: flex;
     justify-content: space-around;
 }
@@ -178,20 +178,24 @@
 
 .main-header__bottom-header{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-around;
+    margin-bottom: 100px;
 }
 
 .bottom-header__quick-access{
-    width: 435px;
-    height: 200px;
+    width: 590px;
+    height: 310px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-content: flex-start;
 }
 
 .quick-access__present-nav{
     display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
 }
 
 .choices__menu-choices{
@@ -243,6 +247,7 @@
 }
 
 .present-nav__searcher{
+    width: 225px;
     color: #bbb8b6;
     border: 1px solid #bbb8b6;
     padding: 5px;
@@ -251,11 +256,13 @@
 .menu-choices__utils{
     display: flex;
     flex-direction: column;
+    text-align: center;
+    margin-right: 5px;
 }
 
 .utils__image{
-    width: 80px;
-    height: 85px;
+    width: 100px;
+    height: 105px;
     background-position: center;
     background-color: #f2f2f2;
     background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/utensiliosML.png);
@@ -270,8 +277,13 @@
 .menu-choices__ingredients{
     display: flex;
     flex-direction: column;
-    width: 80px;
-    height: 85px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.ingredients__image{
+    width: 100px;
+    height: 105px;
     background-position: center;
     background-color: #f2f2f2;
     background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/magdalena.png);
@@ -279,15 +291,20 @@
     background-size: 50%;
 }
 
-.menu-choices__ingredients:hover{
+.ingredients__image:hover{
     background-color: #FF5959;
 }
 
 .menu-choices__parties{
     display: flex;
     flex-direction: column;
-    width: 80px;
-    height: 85px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.partiess__image{
+    width: 100px;
+    height: 105px;
     background-position: center;
     background-color: #f2f2f2;
     background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/tarta-cumpleanos.png);
@@ -295,15 +312,19 @@
     background-size: 50%;
 }
 
-.menu-choices__parties:hover{
+.partiess__image:hover{
     background-color: #FF5959;
 }
 
 .menu-choices__brands{
     display: flex;
     flex-direction: column;
-    width: 80px;
-    height: 85px;
+    text-align: center;
+}
+
+.brands__image{
+    width: 100px;
+    height: 105px;
     background-position: center;
     background-color: #f2f2f2;
     background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/delantal.png);
@@ -311,21 +332,30 @@
     background-size: 70%;
 }
 
-.menu-choices__brands:hover{
+.brands__image:hover{
     background-color: #FF5959;
 }
 
 .menu-choices__blog{
+    margin-left: 58px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color:#ff5959;
+}
+
+.blog__image{
     background-color: #FF5959;
     background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/menu.svg);
     background-repeat: no-repeat;
     background-position: -320px 0px;
-    width: 80px;
-    height: 85px;
+    width: 100px;
+    height: 105px;
     background-size: 560px;
+    line-height: 50px;
 }
 
-.menu-choices__blog:hover{
+.blog__image:hover{
     background-color: #f2f2f2;
 }
 
@@ -333,3 +363,54 @@
     display: flex;
     justify-content: space-between;
 }
+
+.main-body{
+    background-color: #f2f2f2;
+}
+
+.main-body__header-decoration{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-decoration__cake-icon{
+    width: 100px;
+    height: 105px;
+    background-position: center;
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/tarta-cumpleanos.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    margin-top: -57px;
+}
+
+.header-decoration__line-decorative{
+    width: 165px;
+    height: 1px;
+    background-color: black;
+}
+
+.header-decoration__title-party{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 1000;
+}
+
+.main-body__image-container{
+    display: flex;
+    justify-content: center;
+}
+
+.image-container__photo-container{
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container__vertical-photo{
+    width: 200px;
+    height: 400px;
+}
+
