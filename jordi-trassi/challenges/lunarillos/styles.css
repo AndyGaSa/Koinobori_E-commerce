@@ -9,18 +9,30 @@ body {
     font-size: 25px;
 }
 header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
     background-color: #F8F8F8;
     border: none;
 }
 
 .main-nav {
-    width: 100%;
+    width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     
 }
-.main-nav__burger-menu {
+
+.main-nav__fixed {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.main-nav__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,43 +40,34 @@ header {
     height: 50px;
 }
 
-.main-nav__personal-nav {
+.main-nav__fixed--personal-nav {
     background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
     background-repeat: no-repeat;
-    /* position: relative;
-    top: 15px;
-    left: 15px; */
     margin: 10px;
     width: 27px;
     height: 27px;
 }
-/* .main-nav__personal-nav--image {
-    
-    
-} */
 
-.main-nav__search-menu {
-    width: 50px;
-    height: 50px;
-}
-
-.main-nav__mi-carrito {
-    width: 50px;
-    height: 50px;
-
-}
-
-.main-nav__cesta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main-nav__fixed--search-button {
+    background-color: #BBB8B6;
     color: white;
+    transform: scaleX(-1);
+    font-weight: bold;
+}
+
+.main-nav__fixed--carrito {
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
+    background-repeat: no-repeat;
+    background-position: 22% -2%;
     width: 50px;
     height: 50px;
+
+}
+
+.main-nav__fixed--cesta {
+    color: white;
     background-color: rgb(255, 89, 88);
 }
-
-
 
 .main-logo {
     display: flex;
@@ -72,3 +75,7 @@ header {
     size: 276px 50px;
     justify-content: center;
 }
+
+.main-nav__fix-buttons {
+    flex-direction: row;
+} 
