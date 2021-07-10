@@ -7,13 +7,21 @@
 
 .header-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+}
+
+.top-header-container {
+    display: flex;
+    justify-content: center;
+    background-color: #F8F8F8;
+    width: 100%;
 }
 
 .top-header {
     display: flex;
     justify-content: space-around;
-    background-color: #F8F8F8;
     height: 50px;
 }
 
@@ -64,7 +72,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 800px;
+    width: 80vw;
+    max-width: 800px;
 }
 
 .navigator-top-header__menu-button {
@@ -141,6 +150,7 @@
 .mid-header {
     display: none;
     height: 120px;
+    width: 1000px;
 }
 
 .mid-header__quick-access {
@@ -247,7 +257,10 @@
     width: 100px;
 }
 
-.desktop-navigator li a img {
+.desktop-navigator__utensilios a img,
+.desktop-navigator__ingredientes a img,
+.desktop-navigator__fiestas a img,
+.desktop-navigator__marcas a img{
     display: block;
     background-color: #F2F2F2;
     width: 100px;
@@ -256,9 +269,17 @@
     padding: 15px 25px;
 }
 
+.desktop-navigator__marcas a img {
+    padding: 15px 15px;
+}
+
+.desktop-navigator__blog {
+    margin-left: 50px;
+}
+
 .desktop-navigator__blog i {
     display: block;
-    background: #F2F2F2 url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/menu.svg) -400px 0px no-repeat;
+    background: #FF5959 url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/menu.svg) -400px 0px no-repeat;
     width: 100px;
     height: 100px;
     margin-bottom: 5px;
@@ -269,12 +290,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 325px;
+    height: 190px;
 }
 
 @media screen and (min-width: 1023px) {
+    .top-header {
+        justify-content: space-between;
+        width: 1000px;
+    }
+
     .top-header__desktop-top-header{
         display: unset;
+    }
+
+    .navigator-top-header{
+        justify-content: space-between;
+        width: 600px;
     }
 
     .navigator-top-header__menu-button {
@@ -302,7 +333,6 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        margin-right: 13.9vw;
     }
 
     .bottom-header-mobile {
@@ -311,5 +341,7 @@
 
     .bottom-header-desktop {
         display: flex;
+        justify-content: space-between;
+        width: 1000px;
     }
 }
