@@ -6,9 +6,11 @@
 }
 body{
     width:100%;
+    height: auto;
     display:flex;
     flex-direction: column;
     align-items: center;
+    background-color:#f8f8f8
 }
 .header-contaimer__desktop{
     display:none;
@@ -195,4 +197,114 @@ body{
     justify-content: center;
     padding:0.8vw;
     color:#fff;
+}
+
+.second-section_icon-info{
+    width:100vw;
+    height:60vw;
+    background-color: #c9c7c7;
+    
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#f8f8f8;
+    width:100vw;
+    height: auto;
+}
+.footer-container__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.footer-container__options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container__form>span{
+    margin-bottom:2vw;   
+}
+.form__icons{
+    display:flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin:5vw 0 5vw 0;
+    
+}
+.form__icons > li{
+    list-style:none;
+    
+}
+.form__icons > li>a{
+    margin:1vw;
+    border-color: 2px solid #ff5959;
+    text-decoration:none;
+    
+}
+
+.form__icons--box{
+    width:10vw;
+    height: 6vw;
+    border:3px solid #ff5959;
+    border-radius: 0 0 6px 6px;
+}
+.footer-container__form--email{
+    font-size: 2vw;
+    margin: 3vw;
+}
+
+.footer-container__form--email-input{
+    border:0.2vw solid black;
+    width:55vw;
+    height: 8vw;
+    background-color:#fff;
+    margin-bottom: 5vw;
+}
+.footer-container__form--checkbox-input{
+    margin-bottom: 2vw;
+    font-size: 2.5vw;
+}
+
+.footer-container__form--checkbox-input>a{
+    color:black;
+    font-size: 2.5vw;
+}
+.footer-container__suscription{
+    border:0.2vw solid black;
+    width:55vw;
+    height: 8vw;
+    background-color:#ff5959;
+    margin-bottom: 5vw;
+    color:#fff;
+    font-weight: bold;
+    font-size: 3vw;
+    text-align: center;
+    padding-top: 2vw;
+}
+
+.footer-container__options > span{
+    color:#ff5959;
+    font-size: 2.3vw;
+    margin:2vw;
+}
+.footer-container__options--round-icon{
+    width:8vw;
+    height: 8vw;
+    background-color: #ff5959;
+    border-radius: 80%;
+}
+.footer-container__coyright{
+    margin-top: 5vw;
+    width:100vw;
+    height:8vw;
+    background-color: #ff5959;
+    text-align: center;
+    padding: 3vw 0 2vw 0 ;
+    color:#fff;
+    font-size:2.3vw;
 }
