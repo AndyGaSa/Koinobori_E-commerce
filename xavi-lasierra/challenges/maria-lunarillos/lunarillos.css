@@ -557,6 +557,52 @@
     letter-spacing: 3px;
 }
 
+.parties__column-container {
+    max-height: 300px;
+    height: 75vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.parties__1,
+.parties__2,
+.parties__3 {
+    display: flex;
+    align-items: flex-end;
+    max-width: 325px;
+    max-height: 137px;
+    width: 100vw;
+    height: 35vw;
+    background-size: 100%;
+}
+
+.parties__1 {
+    background-image: url(https://static3.marialunarillos.com/media/wysiwyg/fiestastematicas.jpg);
+}
+
+.parties__2 {
+    background-image: url(https://static3.marialunarillos.com/media/wysiwyg/fiestaspersonajes.jpg);
+}
+.parties__3 {
+    background-image: url(https://static3.marialunarillos.com/media/wysiwyg/pompones.jpg);
+}
+
+.parties__1 span,
+.parties__2 span,
+.parties__3 span {
+    display: block;
+    max-width: 170px;
+    max-height: 75px;
+    width: 50%;
+    height: 50%;
+    padding: 16px;
+    background-color: #FFFFFFCC;
+    color: #67635F;
+    font-weight: 600;
+    font-size: 15px;
+}
+
 @media screen and (min-width: 1023px) {
     .top-header {
         justify-content: space-between;
@@ -607,5 +653,60 @@
         display: flex;
         justify-content: space-between;
         width: 1000px;
+    }
+
+    .parties__title {
+        height: 325px;
+    }
+
+    .parties__title h2 {
+        font-size: 30px;
+        width: 300px;
+        line-height: 70px;
+        height: 70px;
+        letter-spacing: 6px;
+    }
+
+    .parties__container {
+        display: flex;
+        justify-content: space-between;
+        width: 1055px;
+    }
+
+    .parties__column-container {
+        justify-content: space-between;
+        max-height: 625px;
+    }
+
+    .parties__1,
+    .parties__2 {
+        display: flex;
+        align-items: flex-end;
+        width: 715px;
+        height: 300px;
+        max-width: 715px;
+        max-height: 300px;
+        background-size: 100%;
+    }
+
+    .parties__3 {
+        height: 615px;
+        max-height: 615px;
+        width: 350px;
+    }
+
+    .parties__1 span,
+    .parties__2 span,
+    .parties__3 span {
+        display: block;
+        max-width: 170px;
+        max-height: 75px;
+        width: 50%;
+        height: 50%;
+        padding: 16px;
+        background-color: #FFFFFFCC;
+        color: #67635F;
+        font-weight: 600;
+        font-size: 15px;
     }
 }
