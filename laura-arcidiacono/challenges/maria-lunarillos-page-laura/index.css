@@ -95,6 +95,7 @@ a:-webkit-any-link {
     cursor: pointer;
     padding: 1vh;
 }
+
 .fa-shopping-cart:before {
     content: "\f07a";
     color: #514E4A;
@@ -255,7 +256,21 @@ h6 {
     margin-top: 1vh;
     margin-bottom: 1vh;
 }
+/*Main selectors__our-brands*/
+.our-brands{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 
+}
+.our-brands__img {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-left: 2vw;
+    margin-right: 3vw;
+}
 /*Main selectors__home-delibery*/
 
 .main-conteiner__home-delivery {
@@ -285,8 +300,6 @@ h6 {
     display: flex;
     flex-direction: column;
 }
-
-.contact-information__follow-us {}
 
 .follow-us__icono {
     color: rgb(255, 89, 89);
