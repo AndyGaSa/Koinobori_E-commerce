@@ -6,7 +6,7 @@
 body {
     margin: 0px 0px 0px 0px;
     /*permite que el header ocupe el 100%*/
-    font-family: 12px/1.55 'Source Sans Pro', sans-serif;
+    font-family: sans-serif;
     background-color: rgb(248, 248, 248);
 }
 
@@ -143,7 +143,13 @@ a {
 .main-container {
     display: block;
 }
-
+p{
+    font-size: 3vh;
+    display: none; 
+}
+h3{
+    font-size: 3vh;
+}
 .main-container__party {
     display: flex;
     flex-direction: column;
@@ -174,11 +180,23 @@ a {
     height: 100vh;
     background-size: cover;
     margin-top: 1vh;
+    display: flex;
+
 }
 .items__img {
     height: 100%;
 }
-
+.items__clip-path {
+    clip-path: polygon(0 25%, 63% 25%, 100% 100%, 0% 100%);
+    color: rgb(103, 99, 95);
+    opacity: 0.8;
+    background-color: rgb(254, 253, 249);
+    width: 70vw;
+    height: 20vh;
+    display: flex;
+    align-items: flex-end;
+    margin-block-start: auto;
+}
 .items__div1 {
     background-image: url("https://static3.marialunarillos.com/media/wysiwyg/pequenoelectrodomestico2.jpg");
 }
