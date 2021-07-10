@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     background-color: #F8F8F8;
-    width: 100%;
+    width: 100vw;
 }
 
 .top-header {
@@ -525,6 +525,37 @@
   }
 
 /*END CAROUSEL*/
+
+.parties__parties-navigator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parties__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 325px;
+}
+
+.parties__title img {
+    width: 107px;
+    height: 125px;
+}
+
+.parties__title h2 {
+    text-align: center;
+    font-size: 22px;
+    width: 200px;
+    line-height: 62px;
+    height: 62px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    letter-spacing: 3px;
+}
 
 @media screen and (min-width: 1023px) {
     .top-header {
