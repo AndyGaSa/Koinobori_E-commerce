@@ -1,3 +1,8 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+
 body {
     font-family: 12px/1.55 'Source Sans Pro', sans-serif;
     background-color: rgb(248, 248, 248);
@@ -6,57 +11,95 @@ body {
 /*Header-movile selectors*/
 
 .header-container {
-    background-color: gold;
+    display: flex;
+    flex-direction: column;
 }
 
 .header-container__navbar {
-    background-color: goldenrod;
+    background-color: rgb(248, 248, 248);
+    text-align: center;
+    align-items: center;
+    padding: 2vh;
 }
 
-.navbar__list {
-    background-color: green;
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+.navbar__anchor-items {
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    flex-direction: row;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+    height: 7vh;
+    justify-content: space-between;
 }
 
 .navbar__item {
     background-color: grey;
+    text-align: center;
+    justify-content: center;
 }
 
 .item__menu {
-    width: 50px;
-    height: 50px;
-    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) no-repeat center left;
-    text-indent: -999999px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    color: rgb(255, 89, 89);
+    width: 7vh;
+    height: auto;
+    cursor: pointer;
+    padding: 1vh;
 }
 
 .item__person {
-    width: 27px;
-    height: 27px;
-    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat;
-    margin: 10px;
+    color: #514E4A;
+    width: 3.5vh;
+    height: auto;
+    cursor: pointer;
+    padding: 1vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
 }
 
 .item__forget {
-    float: right;
-    width: 50px;
-    height: 50px;
-    text-indent: -99999px;
-    background: #BBB8B6 url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -304px 12px no-repeat;
+    background-color: rgb(187, 184, 182);
+    color: white;
     cursor: pointer;
+    padding: 1vh;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
 }
 
 .item__shopping-cart {
-    background: #fff url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -66px 10px no-repeat;
-    margin: 0;
-    position: relative;
+    color: #514E4A;
+    width: 7vh;
+    height: auto;
+    cursor: pointer;
+    padding: 1vh;
 }
 
-item__accountant {
+.item__accountant {
     background-color: rgb(255, 89, 89);
+    cursor: pointer;
+    padding: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    color: white;
+    font-size: 5vh;
+    font-family: "Myriad Pro", "Myriad Web", "Tahoma", "Helvetica", "Arial", sans-serif;
 }
-
+.header-container__img{
+    display: inline;
+    width: 60%;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    margin-left: auto;
+    margin-right: auto;
+}
 /*Header-desktop selectors*/
 
 .header-desktop {
@@ -89,14 +132,23 @@ item__accountant {
 
 .big-menu__blog {}
 
-
 /*Main selectors__party*/
 
 .main-container {}
 
 .main-container__party {}
 
-.party__header {}
+.party__header {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.party__tarta {
+    width: 25vw;
+}
 
 .party__items {}
 
@@ -105,7 +157,6 @@ item__accountant {
 .party__button {}
 
 .button__button {}
-
 
 /*Main selectors__home-delibery*/
 
@@ -124,7 +175,6 @@ item__accountant {
 .subscribe__privacy {}
 
 .subscribe__button {}
-
 
 /*Main selectors__know-us*/
 
