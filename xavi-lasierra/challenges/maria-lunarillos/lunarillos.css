@@ -8,7 +8,6 @@
 .header-container {
     display: flex;
     flex-direction: column;
-    height: 10em;
 }
 
 .top-header {
@@ -141,7 +140,7 @@
 
 .mid-header {
     display: none;
-    height: 200px;
+    height: 120px;
 }
 
 .mid-header__quick-access {
@@ -223,6 +222,38 @@
 
 .bottom-header-desktop {
     display: none;
+}
+
+.bottom-header-desktop__desktop-navigator{
+    list-style: none;
+    display: flex;
+}
+
+.desktop-navigator li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.desktop-navigator li a img {
+    display: block;
+    background-color: #F2F2F2;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+    padding: 15px 25px;
+}
+
+.desktop-navigator li a {
+    font-family: sans-serif;
+    color: #2E2925;
+    font-size: 13px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-align: center;
+    width: 100px;
 }
 
 .bottom-header-mobile {
