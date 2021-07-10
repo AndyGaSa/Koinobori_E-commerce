@@ -4,7 +4,8 @@
 }
 
 body {
-    margin: 0px 0px 0px 0px; /*permite que el header ocupe el 100%*/
+    margin: 0px 0px 0px 0px;
+    /*permite que el header ocupe el 100%*/
     font-family: 12px/1.55 'Source Sans Pro', sans-serif;
     background-color: rgb(248, 248, 248);
 }
@@ -39,7 +40,6 @@ a {
     margin-inline-end: 0px;
     padding-inline-start: 0;
     height: 7vh;
-
     justify-content: space-between;
 }
 
@@ -141,9 +141,7 @@ a {
 /*Main selectors__party*/
 
 .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
 }
 
 .main-container__party {
@@ -168,19 +166,31 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 100vw;
+    height: 100vh;
 }
-.items__div + .items__div {
-    width: 100%;
-    height: 45vh;
-    padding: 5vh;
+.my-divs{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    margin-top: 1vh;
 }
 .items__img {
-    width: 100%;
-    
+    height: 100%;
 }
-.items__div3{
+
+.items__div1 {
+    background-image: url("https://static3.marialunarillos.com/media/wysiwyg/pequenoelectrodomestico2.jpg");
+}
+
+.items__div2 {
+    background-image: url("https://i.ibb.co/sPHz3wj/marialunarillos-com-oficial-CA92-Axf-BYJm.jpg");
+}
+
+.items__div3 {
     background-image: url("https://i.ibb.co/qrv8Qd3/1387060033104580609-Ez-Tv-Dl-XEAEBk-IM.jpg");
 }
+
 .party__button {
     background-color: violet;
 }
