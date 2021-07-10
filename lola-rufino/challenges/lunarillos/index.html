@@ -10,6 +10,9 @@
         content="María Lunarillos es una tienda online de utensilios de repostería, fondant, moldes, cortadores de galletas...">
     <meta name="keywords" content="tienda online, repostería, cocina, María Lunarillos">
     <link href='styles.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
     <title>Utensilios de repostería - Tienda online María Lunarillos</title>
 </head>
 
@@ -17,10 +20,20 @@
     <header class="main-header">
         <nav class="main-header__nav-fixed nav-fixed">
             <section class="nav-fixed__main-icons main-icons">
-                <div class="main-icons__marialunarillos"></div>
-                <div class="main-icons__cucute"></div>
-                <div class="main-icons__mumuchu"></div>
-            </section> 
+                <div class="main-icons__container-icons-maria container-icons-maria">
+                    <img class="container-icons-maria__marialunarillos"
+                        src="https://i.ibb.co/zJ9swRW/maria-lunarillos.png" alt="Maria Lunarillos Logo">
+                </div>
+                <div class="main-icons__container-icons-cucute container-icons-cucute">
+                    <img class="container-icons-cucute__cucute" src="https://i.ibb.co/93Hfh3p/cucute.png"
+                        alt="Cucute Logo">
+                </div>
+                <div class="main-icons__container-icons-mumuchu container-icons-mumuchu">
+                    <img class="container-icons-mumuchu__mumuchu" src="https://i.ibb.co/rmj8YZ4/mumuchu.png"
+                        alt="Mumuchu Logo">
+                </div>
+            </section>
+            <div class="nav-fixed1">
             <section class="nav-fixed__user-login user-login">
                 <figure class="user-login__user-icon"></figure>
                 <figure class="user-login__text-login">ENTRA | REGÍSTRATE</figure>
@@ -32,23 +45,49 @@
                 <figure class="social-icons__pinterest-icon"></figure>
                 <figure class="social-icons__youtube-icon"></figure>
             </section>
-            <figure class="nav-fixed_trolley trolley"></figure>
-            <figure class="nav-fixed_trolley-number trolley-number"></figure>
+            <figure class="nav-fixed__trolley trolley"></figure>
+            <figure class="nav-fixed__trolley-number trolley-number">0</figure>
+            </div>
         </nav>
         <section class="main-header__bottom-header bottom-header">
-            <figure class="bottom-header__biglogo-marialunarillos"></figure>
+            <img class="bottom-header__biglogo-marialunarillos"
+                src="https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/logo.svg" alt="Maria Lunarillos Big Logo">
             <section class="bottom-header__quick-access quick-access">
                 <section class="quick-access__present-nav present-nav">
                     <div class="present-nav__novedad novedad">
                         <div class="novedad__novedad-icon"></div>
                         <p class="novedad__novedad-text">NOVEDADES</p>
+                    </div>
                     <div class="present-nav__ofertas ofertas">
                         <div class="ofertas__ofertas-icon"></div>
                         <p class="ofertas__ofertas-text">OFERTAS</p>
-                    <input class="present-nav__searcher">
+                    </div>
+                    <input class="present-nav__searcher" placeholder="¿QUÉ BUSCAS?">
+                    <button class="present-nav__button" type="submit"></button>
                 </section>
                 <section class="quick-access__choices choices">
-                    <section class="choices_"
+                    <section class="choices__menu-choices menu-choices">
+                        <section class="menu-choices__utils utils">
+                            <figure class="utils__image"></figure>
+                            <span class="utils__bottom-header">UTENSILIOS</span>
+                        </section>
+                        <section class="menu-choices__ingredients ingredients">
+                            <figure class="ingredients__image"></figure>
+                            <span class="ingredientes__bottom-header">INGREDIENTES</span>
+                        </section>
+                        <section class="menu-choices__parties parties">
+                            <figure class="partiess__image"></figure>
+                            <span class="parties__bottom-header">FIESTAS</span>
+                        </section>
+                        <section class="menu-choices__brands brands">
+                            <figure class="brands__image"></figure>
+                            <span class="brands__bottom-header">MARCAS</span>
+                        </section>
+                    </section>
+                    <section class="menu-choices__blog blog">
+                        <figure class="blog__image"></figure>
+                        <span class="blog__bottom-header">BLOG</span>
+                    </section>
                 </section>
             </section>
         </section>
