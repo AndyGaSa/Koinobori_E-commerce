@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .title {
@@ -151,4 +152,174 @@ header {
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
+}
+
+.products {
+    margin: 140px 0 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F8F8F8;
+}
+
+.products__image {
+    height: 125px;
+    margin: -62.5px auto 60px;
+}
+
+.products__title {
+    margin-bottom: 67px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.miniatures-group {
+    width: 100%;
+}
+
+.miniatures-group__miniature {
+    height: 40vw;
+    width: 90%;
+    padding: 7.5px;
+    margin: 8px auto;
+    max-width: 350px;
+    max-height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.miniatures-group__button {
+    margin-top: 40px;
+    padding: 15px 30px;
+    background-color: #FF5959;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.products__miniature--moldes {
+    background: url(https://static3.marialunarillos.com/media/catalog/category/moldesnordic.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--utensilios {
+    background-size: 100%;
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/utensiliosbasicos.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.products__miniature--electrodomestico {
+    background-size: 100%;
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/pequenoelectrodomestico2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.products__miniature--madalenas {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/capsulas-cupcakes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--cajas {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/cajas3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--cortadores {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/cortadoresgalletas2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--ceramica {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/stands.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--banetones {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/banetones.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--toppers {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/toppers3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--fondant {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/fondant2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--ingredientes {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/ingredientesreposteria.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--impresiones {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/impresionpersonalizada.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--colorantes {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/Colorantes-alimentarios.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--papel {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/papelcomestible.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--sprinkles {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/sprinkles3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--tematicas {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/fiestastematicas.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--personajes {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/fiestaspersonajes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.products__miniature--accesorios {
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/pompones.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
 }
