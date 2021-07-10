@@ -569,7 +569,8 @@
 .parties__2,
 .parties__3 {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
     max-width: 325px;
     max-height: 137px;
     width: 100vw;
@@ -588,19 +589,25 @@
     background-image: url(https://static3.marialunarillos.com/media/wysiwyg/pompones.jpg);
 }
 
-.parties__1 span,
-.parties__2 span,
-.parties__3 span {
+.parties__1 h3,
+.parties__2 h3,
+.parties__3 h3 {
     display: block;
     max-width: 170px;
     max-height: 75px;
     width: 50%;
     height: 50%;
-    padding: 16px;
+    padding-left: 16px;
     background-color: #FFFFFFCC;
     color: #67635F;
     font-weight: 600;
     font-size: 15px;
+}
+
+.parties__1 span,
+.parties__2 span,
+.parties__3 span {
+    display: none;
 }
 
 @media screen and (min-width: 1023px) {
@@ -681,7 +688,6 @@
     .parties__1,
     .parties__2 {
         display: flex;
-        align-items: flex-end;
         width: 715px;
         height: 300px;
         max-width: 715px;
@@ -689,24 +695,40 @@
         background-size: 100%;
     }
 
+    .parties__1 {
+        justify-content: flex-end;
+    }
+
     .parties__3 {
-        height: 615px;
-        max-height: 615px;
+        height: 625px;
+        max-height: 625px;
         width: 350px;
+    }
+
+    .parties__1 h3,
+    .parties__2 h3,
+    .parties__3 h3 {
+        display: block;
+        border-bottom: 150px solid #FFFFFFCC;
+        border-right: 150px solid transparent;
+        width: 350px;
+        max-width: 350px;
+        background-color: transparent;
+        font-weight: 600;
+        font-size: 20px;
+        position: relative;
+        top: 50px;
     }
 
     .parties__1 span,
     .parties__2 span,
     .parties__3 span {
         display: block;
-        max-width: 170px;
-        max-height: 75px;
-        width: 50%;
-        height: 50%;
-        padding: 16px;
-        background-color: #FFFFFFCC;
+        width: 200px;
+        font-size: 13px;
+        position: relative;
+        bottom: 22px;
+        padding-left: 16px;
         color: #67635F;
-        font-weight: 600;
-        font-size: 15px;
     }
 }
