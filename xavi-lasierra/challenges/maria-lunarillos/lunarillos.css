@@ -99,6 +99,14 @@
     padding: 15px;
 }
 
+.social li a i{
+    color: black;
+}
+
+.social li a i:hover{
+    color: #FF5959;
+}
+
 .navigator-top-header__small-navigator {
     display: flex;
 }
@@ -131,7 +139,93 @@
     text-align: center;
 }
 
-.bottom-header {
+.mid-header {
+    display: none;
+    height: 200px;
+}
+
+.mid-header__quick-access {
+    display: flex;
+    justify-content: space-between;
+    width: 265px;
+    list-style: none;
+}
+
+.quick-access li a {
+    font-family: sans-serif;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.quick-access li a span {
+    width: 95%;
+    text-align: center;
+}
+
+.quick-access__news {
+    background-color: #9FAA4D;
+    width: 130px;
+}
+
+.quick-access__news a {
+    display: flex;
+    align-items: center;
+}
+
+.quick-access__news a i{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background:  url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -244px 4px no-repeat;
+}
+
+.quick-access__offers {
+    background-color: #8E789D;
+    width: 130px;
+}
+
+.quick-access__offers a {
+    display: flex;
+    align-items: center;
+}
+
+.quick-access__offers a i{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background:  url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -274px 4px no-repeat;
+}
+
+.mid-header__search-desktop {
+    display: flex;
+    margin-left: 5px;
+}
+
+.search-desktop__text {
+    width: 249px;
+    height: 28px;
+    border: 1px solid #BBB8B6;
+    padding: 5px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #BBB8B6;
+}
+
+.search-desktop__submit {
+    background: #BBB8B6 url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -303px 2px no-repeat;
+    height: 28px;
+    width: 49px;
+    border: none;
+}
+
+.bottom-header-desktop {
+    display: none;
+}
+
+.bottom-header-mobile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,5 +256,20 @@
 
     .small-navigator__search-button {
         display: none;
+    }
+
+    .mid-header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 13.9vw;
+    }
+
+    .bottom-header-mobile {
+        display: none;
+    }
+
+    .bottom-header-desktop {
+        display: flex;
     }
 }
