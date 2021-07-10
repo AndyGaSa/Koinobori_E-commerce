@@ -8,8 +8,17 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
 .title {
     display: none;
+}
+
+body {
+    color: #67635F;
 }
 
 header {
@@ -322,4 +331,53 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
+}
+
+.services {
+    margin-top: 50px;
+    background-color: #E8E6E5;
+}
+
+.services-subsection {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    padding: 25px;
+}
+
+.services-subsection {
+    display: flex;
+    align-items: center;
+}
+
+.services-subsection__element {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+}
+
+.services-link {
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+.services-link__free-shipping {
+    width: 85px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -38px no-repeat transparent;
+}
+
+.services-link__fast-shipping {
+    width: 55px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -90px -38px no-repeat transparent;
+}
+
+.services-link__refounds {
+    width: 68px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -150px -36px no-repeat transparent;
+}
+
+.services-link__cash-on-delivery {
+    width: 77px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -223px -38px no-repeat transparent;
 }
