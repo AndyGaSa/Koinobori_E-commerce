@@ -4,6 +4,7 @@
 }
 
 body {
+    margin: 0px 0px 0px 0px; /*permite que el header ocupe el 100%*/
     font-family: 12px/1.55 'Source Sans Pro', sans-serif;
     background-color: rgb(248, 248, 248);
 }
@@ -38,6 +39,7 @@ a {
     margin-inline-end: 0px;
     padding-inline-start: 0;
     height: 7vh;
+
     justify-content: space-between;
 }
 
@@ -61,8 +63,8 @@ a {
     height: auto;
     cursor: pointer;
     padding: 1vh;
-    padding-left: 10vh;
-    padding-right: 10vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
 }
 
 .item__forget {
@@ -92,7 +94,8 @@ a {
     font-size: 5vh;
     font-family: "Myriad Pro", "Myriad Web", "Tahoma", "Helvetica", "Arial", sans-serif;
 }
-.header-container__img{
+
+.header-container__img {
     display: inline;
     width: 60%;
     margin-top: 7vh;
@@ -100,12 +103,14 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+
 /*Header-desktop selectors*/
 
 .header-desktop {
     display: none;
 }
 
+/*
 .header-desktop__big-logo {}
 
 .big-logo__colors {}
@@ -131,12 +136,20 @@ a {
 .header-containerlist-menu__marcas {}
 
 .big-menu__blog {}
+*/
 
 /*Main selectors__party*/
 
-.main-container {}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.main-container__party {}
+.main-container__party {
+    display: flex;
+    flex-direction: column;
+}
 
 .party__header {
     display: flex;
@@ -150,11 +163,27 @@ a {
     width: 25vw;
 }
 
-.party__items {}
-
-.items__img {}
-
-.party__button {}
+.party__items {
+    background-color: teal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.items__div + .items__div {
+    width: 100%;
+    height: 45vh;
+    padding: 5vh;
+}
+.items__img {
+    width: 100%;
+    
+}
+.items__div3{
+    background-image: url("https://i.ibb.co/qrv8Qd3/1387060033104580609-Ez-Tv-Dl-XEAEBk-IM.jpg");
+}
+.party__button {
+    background-color: violet;
+}
 
 .button__button {}
 
