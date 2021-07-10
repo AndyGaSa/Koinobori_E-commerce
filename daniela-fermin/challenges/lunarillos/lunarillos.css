@@ -30,14 +30,14 @@
 }
 
 .top-container--mobile__first-half{
-    width: 50%;
+    flex-grow: 1;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
 .top-container--mobile__second-half {
-    width: 50%;
+    flex-grow: 1;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -88,21 +88,82 @@
     margin-left: 20px;
 }
 
+
 .main-header--desktop{
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: row;
 }
 
-.left-container--desktop__color-nav{
-    width: 50%;
-    height: 140px;
+.main-header--desktop__left-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
+
+.main-header--desktop__right-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-container--desktop__header-logo{
+    margin-top: 40px;
+}
+
 .color-nav__top-gray-box-l{
+    top: 0;
+    left: 0;
     width: 100%;
+    z-index: 1;
     height: 50px;
-    z-index: -1;
-
+    text-indent: -999999px;
+    background-color: #F8F8F8;
 }
 
+.color-nav__color-icons{
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
 
+.color-icons__red{
+    background: url("https://www.marialunarillos.com/skin/frontend/defa…t/newdesign2017/images/icons/maria-lunarillos.png") #FF5959 bottom center no-repeat;
+    width: 70px;
+    height: 125px;
+    margin-left: 70px;
+}
+
+.color-icons__blue{
+    background: url("https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/cucute.png") #6199AF bottom center no-repeat;
+    width: 60px;
+    height: 70px;
+}
+
+.color-icons__yellow{
+    background: url("https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/mumuchu.png") #F6B436 bottom center no-repeat;
+    width: 60px;
+    height: 70px;
+}
+
+.right-container--desktop__top-gray-box-r{
+    width: 100%;
+    z-index: 1;
+    height: 50px;
+    text-indent: -999999px;
+    background-color: #F8F8F8;
+}
+
+.right-container--desktop__quick-access{
+    width: 100%;
+    flex-grow: 2;
+}
+
+.right-container-desktop__main-nav{
+    width: 100%;
+    flex-grow: 1.5;
+}
 
