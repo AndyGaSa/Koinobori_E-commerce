@@ -1,4 +1,143 @@
-/*
-PRIMERA IMAGEN SLIDE DEL BODY
-width="1080" height="600" style="position:relative;
-*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.header-top,
+.utensils,
+.ingredients,
+footer{
+    background-color: #F8F8F8;
+}
+
+.utensils,
+.ingredients {
+
+    border-top: 50px;
+    
+}
+
+.utensils-logo {
+
+    margin-top: 50px;
+}
+
+.copyright-message-footer,
+input[type=button], 
+input[type=submit] {
+
+    background-color:#FF5A5D;
+    color: white;
+    border: none;    
+}
+
+.copyright-message-footer {
+    text-align: center;
+    line-height: 50px;
+}
+
+.block-about-us-footer {
+    color: #FF5A5D;
+}
+
+.header-nav-items{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 582.400px;
+    height: 50px;
+    align-items: center;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content:center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.items-in-cart {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color: #fff;
+    font-family: "Myriad Pro", "Myriad Web", "Tahoma", "Helvetica", "Arial", sans-serif;
+    background-color: #FF5959;
+    width: 50px;
+    height: 50px;
+ 
+}
+
+.slide-picture-top {
+
+    height: 600px;
+    width: 100%;
+    position: relative;
+}
+
+.slide-picture-navigator {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: large;
+    color:#F8F8F8;
+}
+
+.utensils-logo {
+
+    display: flex;
+    justify-content: center;
+    height: 125px;
+}
+
+.ingredients-logo {
+
+    display: flex;
+    justify-content: center;
+    height: 125px;
+}
+
+.utensils-logo-title,
+.ingredients-logo-title {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    line-height: 22px;
+    font-size: 12px;
+    font-weight: 900;
+    color: #2E2925;
+}
+
+.divider {
+
+    height: 100px;
+    background-color: white;
+}
+
+.home-utensils-top-picture {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.home-utensils-top-block{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-options {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
