@@ -1,0 +1,87 @@
+/* 2021 - LLuc Valério */
+
+/* Browser Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CV Lluc valério - HTML Styles */
+
+
+body {
+    background: none;
+    color: #67635F;
+    font: 12px/1.55 'Source Sans Pro', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    padding-left: 12%;
+    height: 50px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.header__menu {
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/burger_menu.png) no-repeat center left;
+    width: 50px;
+    height: 50px;
+}
+
+.header__user {
+    width: 27px;
+    height: 27px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat;
+    margin: 1.75% 0% 1.75% -5%;
+
+}
+
+.header__products{
+    display: flex;
+    flex-direction: row;
+    padding-right: 20%;
+}
+
+.header__search{
+    /* float: right; */
+    width: 50px;
+    height: 50px;
+    text-indent: -99999px;
+    background: #BBB8B6 url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -304px 12px no-repeat;
+    cursor: pointer;
+    justify-content: right;
+}
+
+.header__shoppinig-cart{
+    width: 50px;
+    height: 50px;
+    background: #fff url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -66px 10px no-repeat;
+    margin: 0;
+}
+
+.header__items{
+    font-family: "Myriad Pro", "Myriad Web", "Tahoma", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    background: #FF5959;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
