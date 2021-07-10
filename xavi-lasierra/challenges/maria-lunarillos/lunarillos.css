@@ -696,7 +696,7 @@
     }
 
     .parties__1 {
-        justify-content: flex-end;
+        align-items: flex-end;
     }
 
     .parties__3 {
@@ -724,11 +724,12 @@
     .parties__2 span,
     .parties__3 span {
         display: block;
-        width: 200px;
+        width: 350px;
         font-size: 13px;
         position: relative;
         bottom: 22px;
         padding-left: 16px;
+        padding-right: 50px;
         color: #67635F;
     }
 }
