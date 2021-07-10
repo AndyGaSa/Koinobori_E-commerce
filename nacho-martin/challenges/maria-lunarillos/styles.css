@@ -66,7 +66,7 @@ header {
 
 .header-navigator__cart {
     display: flex;
-    text-align: center;
+    align-items: center;
 }
 
 .cart__counter {
@@ -88,4 +88,67 @@ header {
     padding-top: 100px;
     height: 100px;
     margin: 0 auto;
+}
+
+.summary__image {
+    margin-top: 80px;
+    height: 100vw;
+    width: 100%;
+    animation-name: summary-carrusel;
+    animation-duration: 25000ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes summary-carrusel {
+    0%,
+    100% {
+        background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-60e2ade0af856-png/1080X600.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    10% {
+        background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5ea8a9d45-png/1080X600.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    20% {
+        background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-60b4ce5b54e1a-png/1080X600.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    30% {
+        background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5d01295f96f37-png/1080X600.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    40% {
+        background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5f6b1d475371c-png/1080X600.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    50% {
+        background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-608bbdc34f1b1-png/1080X600.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    60% {
+        background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5f9aaa201f89c-png/1080X600.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    70% {
+        background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5c2955721-png/1080X600.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    80% {
+        background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5df77470cdc72-png/1080X600.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    90% {
+        background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5c6c4d1de-png/1080X600.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
 }
