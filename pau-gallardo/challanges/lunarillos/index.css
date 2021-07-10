@@ -22,7 +22,7 @@
     background-color: gold;
     height: 50px;
     width: 100%;
-    align-items: center;
+    
 }
 
 .nav-bar__container-2{
@@ -44,7 +44,6 @@
 }
 
 .nav-cart__lupa{
-    float: right;
     width: 50px;
     height: 50px;
     text-indent: -99999px;
@@ -53,12 +52,9 @@
 }
 
 .nav-cart__cart{
-    float: right;
-    width: 50px;
-    height: 50px;
-    text-indent: -99999px;
-    background: #BBB8B6 url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -304px 12px no-repeat;
-    cursor: pointer;
+    background: #fff url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0px 0px no-repeat;
+    margin: 0;
+    position: relative;
 }
 
 .nav-cart__number{
@@ -91,6 +87,91 @@
     align-self: center;
     margin: 20px;
 }
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+.main__fork{
+    height: 128px;
+    align-self: center;
+    margin: 15px;
+}
+
+.main__utensilios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.utensilios__linea-1{
+    width: 200px;
+    align-content: center;
+}
+
+.utensilios__linea-2{
+    width: 200px;
+    align-content: center;
+}
+
+.utensilios__letras{
+    align-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.main__img-container{
+    align-self: center;
+    height: 200px;
+    width: 400px;
+    object-fit: cover;
+    object-position: 0% 10%;
+    background: url(https://static3.marialunarillos.com/media/wysiwyg/moldesdereposteria.jpg) no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-end;
+    margin: 16px;
+}
+
+.img-container__letras{
+    background-color: gold;
+    padding: 12px;
+    height: 50px;
+    width: 200px;
+    align-self: flex-end;
+    opacity: 0.8;
+}
+
+.main-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-info__container-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: gold;
+}
+
+.main-info__container-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: gold;
+}
+
+
 
 
 
