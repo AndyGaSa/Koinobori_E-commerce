@@ -13,11 +13,8 @@ body{
     background-color:#f8f8f8
 }
 .header-contaimer__desktop{
-    display:none;
     width: 100vw;
     height:auto;
-    
-   
 }
 .header-container__desktop--research{
     display: flex;
@@ -51,7 +48,6 @@ body{
     
 }   
 .header-container__topnav{
-    visibility:visible;
     width:100%;
     height: 50px;
     background-color: #f8f8f8;
@@ -307,4 +303,16 @@ body{
     padding: 3vw 0 2vw 0 ;
     color:#fff;
     font-size:2.3vw;
+}
+@media(min-width:600px){
+    .header-container{
+        display: none;
+        
+    }
+    first-section__article-theme{
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    
 }
