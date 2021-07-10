@@ -10,7 +10,6 @@
 
 /* CV Lluc valério - HTML Styles */
 
-
 body {
     background: none;
     color: #67635F;
@@ -31,7 +30,7 @@ body {
 }
 
 .header__menu {
-    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/burger_menu.png) no-repeat center left;
+    background: url(https://i.ibb.co/8N2wLKc/burger-menu.png) no-repeat center left;
     width: 50px;
     height: 50px;
 }
@@ -39,35 +38,34 @@ body {
 .header__user {
     width: 27px;
     height: 27px;
-    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat;
+    background: url(./assets/sprite.svg) 0 0 no-repeat;
     margin: 1.75% 0% 1.75% -5%;
-
 }
 
-.header__products{
+.header__products {
     display: flex;
     flex-direction: row;
     padding-right: 20%;
 }
 
-.header__search{
+.header__search {
     /* float: right; */
     width: 50px;
     height: 50px;
     text-indent: -99999px;
-    background: #BBB8B6 url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -304px 12px no-repeat;
+    background: #BBB8B6 url(./assets/sprite.svg) -304px 12px no-repeat;
     cursor: pointer;
     justify-content: right;
 }
 
-.header__shoppinig-cart{
+.header__shoppinig-cart {
     width: 50px;
     height: 50px;
-    background: #fff url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -66px 10px no-repeat;
+    background: #fff url(./assets/sprite.svg) -66px 10px no-repeat;
     margin: 0;
 }
 
-.header__items{
+.header__items {
     font-family: "Myriad Pro", "Myriad Web", "Tahoma", "Helvetica", "Arial", sans-serif;
     font-size: 20px;
     color: #fff;
@@ -78,10 +76,123 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    margin: 14% 0 25% -12%;
+    max-width: 325px;
+}
+
+.parties {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8f8f8;
+}
+
+.p-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -11%;
+    margin-bottom: 4%;
+}
+
+.p-logo__logo-img {
+    width: 18%;
+}
+
+.p-logo__logo-text::before {
+    content: "";
+    display: block;
+    width: 218px;
+    border-top: 2px solid #2E2925;
+    padding-bottom: 6%;
+}
+
+.p-logo__logo-text {
+    padding: 8%;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: #2E2925;
+    text-align: center;
+}
+
+.p-logo__logo-text::after {
+    content: "";
+    display: block;
+    width: 218px;
+    border-top: 2px solid #2E2925;
+    margin-top: 6%;
+}
+
+.p-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-party {
+    width: 55%;
+    position: relative;
+}
+
+.p-party-img {
+    width: 100%;
+    z-index: 2;
+    /* position: absolute; */
+}
+
+.p-party-link {
+    z-index: 3;
+}
+
+.p-party-text-container {
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5% 0% 7% 5%;
+    width: 49%;
+    margin-top: 0%;
+    z-index: 10;
+}
+
+.p-text {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.p-more {
+    text-align: center;
+    margin-top: 8%;
+    font-size: 18px;
+    width: 50%;
+}
+
+.p-more__link {
+    background: #ff5959;
+    padding: 6% 10%;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
