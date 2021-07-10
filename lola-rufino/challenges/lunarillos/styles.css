@@ -366,6 +366,11 @@
 
 .main-body{
     background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 115px;
 }
 
 .main-body__header-decoration{
@@ -398,13 +403,15 @@
 }
 
 .main-body__image-container{
+    width: 600px;
+    height: 400px;
     display: flex;
     justify-content: center;
     margin-top: 40px;
 }
 
 .image-container__photo-container{
-    width: 200px;
+    width: 400px;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -415,7 +422,7 @@
     height: 200px;
     background: url(https://i.ibb.co/44VFbs8/1395303551174328320-E10d-Lw-GWEAAkd-TK.jpg);
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 100%;
     display: flex;
     flex-direction: column;
     color: #68645f;
@@ -426,7 +433,7 @@
     height: 200px;
     background: url(https://i.ibb.co/vvpbnZt/1405118768934801409-E3-8-EXh-UYAEDjob.jpg);
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 100%;
     display: flex;
     flex-direction: column;
     color: #68645f;
@@ -441,7 +448,8 @@
 }
 
 .main-body__button{
-    margin: 0 auto;
+    width: 84px;
+    height: 35px;
     margin-top: 30px;
     color: white;
     background-color:#ff5959;
@@ -449,11 +457,90 @@
     padding: 10px;
 }
 
-.background-letters{
-    display: flex;
+.background-letters-one{
     width: 30px;
-    height: 30px;
-    background-color: white;
-    opacity: 0.7;
+    opacity: 0.8;
+    border-right: 69px solid transparent;
+    border-left: 100px solid white;
+    border-bottom: 94px solid white;
+    margin-top: 61px;
+    margin-left: 200px;
 }
 
+.background-letters-two{
+    width: 30px;
+    opacity: 0.8;
+    border-right: 69px solid transparent;
+    border-left: 100px solid white;
+    border-bottom: 94px solid white;
+    margin-top: 46px;
+}
+
+.photo-container-one__text{
+    font-size: 12px;
+}
+
+.footer-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.footer-main__brands{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 790px;
+}
+
+.brands_image{
+    max-height: 75px;
+    margin: 10px;
+    margin-top: 50px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.brand_image:hover{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+.footer-main__delivery{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f8f8f8;
+    height: 300px;
+    width: 100%;
+}
+
+.delivery{
+    display:flex;
+    flex-direction: column;
+}
+
+.footer-main__aboutus{
+    display: flex;
+}
+
+.aboutus__follow{
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutus_email{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-main__bottom{
+    color: white;
+    line-height: 50px;
+    height: 50px;
+    background-color: #ff5959;
+    width: 100%;
+    text-align: center;
+}
