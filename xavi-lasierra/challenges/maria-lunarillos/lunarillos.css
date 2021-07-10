@@ -13,6 +13,7 @@
 
 .top-header {
     display: flex;
+    justify-content: space-around;
     background-color: #F8F8F8;
     height: 50px;
 }
@@ -22,33 +23,52 @@
 }
 
 .desktop-top-header__main-icons-container {
-    width: 220px;
-    background-color: purple;
+    width: 226px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.main-icons-container__icon-main {
+.main-icons-container__icon-mall {
     width: 80px;
     height: 140px;
     background-color: #FF5959;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-.main-icons-container__icon-side {
+.main-icons-container__icon-cucute {
     width: 70px;
     height: 70px;
+    background-color: #6199AF;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-.main-icons-container__icon-side:hover {
+.main-icons-container__icon-mumuchu {
+    width: 70px;
+    height: 70px;
+    background-color: #F6B436;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.main-icons-container__icon-cucute:hover,
+.main-icons-container__icon-mumuchu:hover {
     height: 140px;
 }
 
-.top-header__mobile-top-header {
+.top-header__navigator-top-header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
+    width: 800px;
 }
 
-.mobile-top-header__menu-button {
+.navigator-top-header__menu-button {
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/burger_menu.png) no-repeat center left;
     height: 50px;
     width: 50px;
@@ -68,7 +88,18 @@
     color: #2E2925;
 }
 
-.mobile-top-header__small-navigator {
+.navigator-top-header__social {
+    display: none;
+    list-style: none;
+}
+
+.social li {
+    width: 39px;
+    height: 50px;
+    padding: 15px;
+}
+
+.navigator-top-header__small-navigator {
     display: flex;
 }
 
@@ -112,16 +143,24 @@
         display: unset;
     }
 
-    .mobile-top-header__menu-button {
+    .navigator-top-header__menu-button {
         display: none;
     }
 
-    .mobile-top-header__login-button {
+    .navigator-top-header__login-button {
         display: flex;
         align-items: center;
     }
 
     .login-button__text{
         display: unset;
+    }
+
+    .navigator-top-header__social {
+        display: flex;
+    }
+
+    .small-navigator__search-button {
+        display: none;
     }
 }
