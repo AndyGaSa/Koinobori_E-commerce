@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h6{
+    display: none;
+}
+    
+body {
+    background-image: url("/images/pattern.png");
+}
+
+.section-container{
+    background-color: rgb(165, 147, 194);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+svg{
+    width: 5rem;
+    height: 5rem;
+    margin-left: 8vw;
+}
+
+.nav-container{
+    margin-right: 8vw;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8vh;
+}
+
+.nav-box-1{
+    background-color: rgb(207,69,34);
+    color: white;
+    height: 50px;
+    width: 150px;
+    margin: 4px;
+    padding: 18px;
+    text-align: center;
+}
+
+.nav-box-2{
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: left;
+    margin: 30px auto;
+    width: 72%;
+}
+
+p{
+    margin: 10px;
+}
+
+h2{
+    margin: 10px 10px;
+}
+
+.section-container-1{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.cheesecake{
+    width: 70%;
+    margin: 30px;
+}
+
+footer{
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+@media screen and (min-width: 600px){
+    .section-container{
+        background-color: rgb(165, 147, 194);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .box-responsive{
+        display: flex;
+        flex-direction: row;
+
+    }
+    body {
+        background-image: url("/images/pattern.png");
+    }
+
+    svg{
+        width: 5rem;
+        height: 5rem;
+        margin-left: 8vw;
+    }
+    
+    .nav-container{
+        margin-right: 8vw;
+    }
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 8vh;
+    }
+    
+    .nav-box-1{
+        background-color: rgb(207,69,34);
+        color: white;
+        height: 50px;
+        width: 150px;
+        margin: 4px;
+        padding: 18px;
+        text-align: center;
+    }
+    
+    .nav-box-2{
+        color: white;
+        text-decoration: none;
+        margin: 10px;
+    }
+    
+    main{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: left;
+        margin: 30px auto;
+        width: 72%;
+    }
+    
+    p{
+        margin: 10px;
+    }
+    
+    h2{
+        margin: 10px 10px;
+    }
+    
+    .section-container-1{
+        background-color: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cheesecake{
+        width: 70%;
+        margin: 30px;
+    }
+    
+    footer{
+        text-align: left;
+        margin-bottom: 65px;
+        margin-left: 20%;
+    }
+}
