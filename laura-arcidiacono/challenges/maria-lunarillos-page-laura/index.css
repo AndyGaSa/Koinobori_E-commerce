@@ -29,10 +29,12 @@ a {
     text-decoration: none;
     padding: 2px 1px 0;
 }
+
 a:-webkit-any-link {
     color: white;
     cursor: pointer;
 }
+
 .navbar__anchor-items {
     background-color: rgb(248, 248, 248);
     display: flex;
@@ -53,21 +55,29 @@ a:-webkit-any-link {
 }
 
 .item__menu {
-    color: rgb(255, 89, 89);
     width: 7vh;
     height: auto;
     cursor: pointer;
     padding: 1vh;
 }
 
+.fa-bars:before {
+    content: "\f0c9";
+    color: rgb(255, 89, 89);
+}
+
 .item__person {
-    color: #514E4A;
     width: 3.5vh;
     height: auto;
     cursor: pointer;
     padding: 1vh;
     padding-left: 5vh;
     padding-right: 5vh;
+}
+
+.fa-user-plus:before {
+    content: "\f234";
+    color: #514E4A;
 }
 
 .item__forget {
@@ -80,11 +90,14 @@ a:-webkit-any-link {
 }
 
 .item__shopping-cart {
-    color: #514E4A;
     width: 7vh;
     height: auto;
     cursor: pointer;
     padding: 1vh;
+}
+.fa-shopping-cart:before {
+    content: "\f07a";
+    color: #514E4A;
 }
 
 .item__accountant {
@@ -146,13 +159,25 @@ a:-webkit-any-link {
 .main-container {
     display: block;
 }
-p{
-    font-size: 3vh;
-    display: none; 
+
+p {
+    font-size: 2vh;
+    display: none;
+    margin-block-start: 1vh;
+    margin-block-end: 1vh;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
-h3{
-    font-size: 3vh;
+
+h3 {
+    font-size: 2vh;
+    margin-block-end: 1vh;
 }
+
+h6 {
+    font-weight: lighter;
+}
+
 .main-container__party {
     display: flex;
     flex-direction: column;
@@ -177,17 +202,19 @@ h3{
     width: 100vw;
     height: 100vh;
 }
-.my-divs{
+
+.my-divs {
     width: 100vw;
     height: 100vh;
     background-size: cover;
     margin-top: 1vh;
     display: flex;
-
 }
+
 .items__img {
     height: 100%;
 }
+
 .items__clip-path {
     clip-path: polygon(0 25%, 63% 25%, 100% 100%, 0% 100%);
     color: rgb(103, 99, 95);
@@ -198,7 +225,10 @@ h3{
     display: flex;
     align-items: flex-end;
     margin-block-start: auto;
+    flex-direction: column;
+    justify-content: flex-start;
 }
+
 .items__div1 {
     background-image: url("https://static3.marialunarillos.com/media/wysiwyg/pequenoelectrodomestico2.jpg");
 }
@@ -211,7 +241,7 @@ h3{
     background-image: url("https://i.ibb.co/qrv8Qd3/1387060033104580609-Ez-Tv-Dl-XEAEBk-IM.jpg");
 }
 
-.party__button {
+.button__button {
     background-color: rgb(255, 89, 89);
     text-decoration: none;
     color: white;
@@ -223,29 +253,95 @@ h3{
     justify-content: center;
     align-items: center;
     margin-top: 1vh;
+    margin-bottom: 1vh;
 }
+
 /*Main selectors__home-delibery*/
 
 .main-conteiner__home-delivery {
-    
+    background-color: rgb(232, 230, 229);
+    display: flex;
+    flex-direction: row;
+}
+
+.home-delibery__line {
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    justify-content: space-around;
+    color: #514E4A;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    text-align: center;
 }
 
 /*Main selectors__contact-information*/
 
-.main-container__contact-information {}
+.main-container__contact-information {
+    color: #514E4A;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
 
-.contact-information__folow-us {}
+.contact-information__follow-us {}
 
-.contact-information__subscribe {}
+.follow-us__icono {
+    color: rgb(255, 89, 89);
+    font-weight: lighter;
+}
 
-.subscribe__mail {}
+.contact-information__subscribe {
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+}
 
-.subscribe__privacy {}
+.subscribe__mail {
+    width: 80vw;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
 
-.subscribe__button {}
+a.subscribe__privacy {
+    text-decoration: underline;
+    color: #514E4A;
+    font-size: small;
+}
+
+.fa-square:before {
+    content: "\f0c8";
+    margin-right: 2vw;
+}
+
+.subscribe__button {
+    width: 100vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
 
 /*Main selectors__know-us*/
 
-.contact-information__know-us {}
+.contact-information__know-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(255, 89, 89);
+    padding: 5vh;
+    font-family: "Myriad Pro", "Myriad Web", "Tahoma", "Helvetica", "Arial", sans-serif;
+}
 
-footer {}
+footer {
+    background-color: rgb(255, 89, 89);
+    text-decoration: none;
+    color: white;
+    height: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: 2vh;
+}
