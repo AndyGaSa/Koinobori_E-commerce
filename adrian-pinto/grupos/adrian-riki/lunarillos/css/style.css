@@ -3,18 +3,42 @@
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+h1 { 
+    display: none;
+}
+
 /*HEADER*/
 .header{}
+
+.header h2 {
+    display: none;
+}
 
 .header__links-group{}
 
 .links-group__friends-site{}
 
-.friends--sites__home{}
+.friends--sites__home{
+    display: block;
+    width: 70px;
+    height: 125px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/maria-lunarillos.png) #FF5959 bottom center no-repeat;
+}
 
-.friends--sites__cocute{}
+.friends--sites__cocute{
+    display: block;
+    width: 60px;
+    height: 70px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/cucute.png) #6199AF bottom center no-repeat;
+}
 
-.friends--site__mamuchu{}
+.friends--site__mamuchu{
+    display: block;
+    width: 60px;
+    height: 70px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/mumuchu.png) #F6B436 bottom center no-repeat;
+}
 
 .links-group__login img{
     width: 27px;
