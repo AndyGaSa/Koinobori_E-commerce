@@ -383,11 +383,11 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
 
 /*END CAROUSEL*/
 .scrollable {
-    overflow-x: hidden;
     width: 100vw;
 }
 
 .scrollable__list {
+    list-style: none;
     display: flex;
     flex-wrap: nowrap;
     scroll-snap-type: x mandatory;
@@ -401,18 +401,69 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     display: none;
 }
 
-.scrollable__list li {
+.scrollable__list .scrollable__item {
     flex-grow: 0;
     flex-shrink: 0;
     max-width: 100%;
     scroll-snap-align: center;
 }
 
-.scrollable__list li a {
+.scrollable__list .scrollable__item a {
     display: block;
-    background-color: red;
+    background-size: cover;
     width: 40vw;
     height: 25vw;
+}
+
+#scrollable__item1 a{
+    background-image: url(https://images-2.wuaki.tv/system/images/7170/original/highlights-video-july-2021-1625123289-width308-quality80.jpeg);
+}
+
+#scrollable__item2 a{
+    background-image: url(https://images-3.wuaki.tv/system/images/5166/original/cinema-generic-middle-banner-1624981151-width308-quality80.jpeg);
+}
+
+#scrollable__item3 a{
+    background-image: url(https://images-3.wuaki.tv/system/images/5673/original/free-generic-middle-1622099920-width308-quality80.png);
+}
+
+#scrollable__item4 a{
+    background-image: url(https://images-2.wuaki.tv/system/images/4819/original/starzplay-generic-reg-vis-ui30-1621953241-width308-quality80.png);
+}
+
+#scrollable__item5 a{
+    background-image: url(https://images-2.wuaki.tv/system/images/8815/original/fast-and-furious-promo-3-0-1624866397-width308-quality80.png);
+}
+
+.scrollable__buttons-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    margin: auto;
+    position: relative;
+    bottom: 16vw;
+}
+
+.scrollable__back-button {
+    color: white;
+    background-size: cover;
+    width: 20px;
+    height: 40px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+}
+
+.scrollable__next-button {
+    color: white;
+    background-size: cover;
+    width: 20px;
+    height: 40px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
 }
   
 
