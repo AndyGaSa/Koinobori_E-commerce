@@ -84,15 +84,14 @@ header {
 }
 
 .cart__counter {
-    margin: 0;
     width: 50px;
-    height: 50px;
+    height: auto;
     color: #fff;
     background-color: #FF5959;
     text-align: center;
     font-size: 24px;
     line-height: -25px;
-    margin: auto;
+    padding: 10px;
 }
 
 .main-logo {
@@ -106,10 +105,10 @@ header {
 
 .summary__image {
     margin-top: 80px;
-    height: 75vw;
+    height: 95vw;
     width: 100%;
     animation-name: summary-carrusel;
-    animation-duration: 25000ms;
+    animation-duration: 35000ms;
     animation-iteration-count: infinite;
 }
 
@@ -117,52 +116,52 @@ header {
     0%,
     100% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-60e2ade0af856-png/1080X600.png);
-        background-size: 100% 100%;
+        background-size: 180% 100%;
         background-repeat: no-repeat;
     }
     10% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5ea8a9d45-png/1080X600.png);
-        background-size: 100% 100%;
+        background-size: 180% 100%;
         background-repeat: no-repeat;
     }
     20% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-60b4ce5b54e1a-png/1080X600.png);
-        background-size: 100% 100%;
+        background-size: 180% 100%;
         background-repeat: no-repeat;
     }
     30% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5d01295f96f37-png/1080X600.png);
-        background-size: 100% 100%;
+        background-size: 180% 100%;
         background-repeat: no-repeat;
     }
     40% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5f6b1d475371c-png/1080X600.png);
-        background-size: 100% 100%;
+        background-size: 180% 100%;
         background-repeat: no-repeat;
     }
     50% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-608bbdc34f1b1-png/1080X600.png);
-        background-size: 100% 100%;
+        background-size: 180% 100%;
         background-repeat: no-repeat;
     }
     60% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5f9aaa201f89c-png/1080X600.png);
-        background-size: 100% 100%;
+        background-size: 180% 100%;
         background-repeat: no-repeat;
     }
     70% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5c2955721-png/1080X600.png);
-        background-size: 100% 100%;
+        background-size: 180% 100%;
         background-repeat: no-repeat;
     }
     80% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5df77470cdc72-png/1080X600.png);
-        background-size: 100% 100%;
+        background-size: 180% 100%;
         background-repeat: no-repeat;
     }
     90% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5c6c4d1de-png/1080X600.png);
-        background-size: 100% 100%;
+        background-size: 180% 100%;
         background-repeat: no-repeat;
     }
 }
@@ -181,9 +180,16 @@ header {
 }
 
 .products__title {
+    width: 180px;
+    height: 65px;
     margin-bottom: 67px;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+    line-height: 2.5;
+    letter-spacing: 5px;
 }
 
 .miniatures-group {
@@ -193,13 +199,29 @@ header {
 .miniatures-group__miniature {
     height: 40vw;
     width: 90%;
-    padding: 7.5px;
     margin: 8px auto;
     max-width: 350px;
     max-height: 150px;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
+    background-position: left;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.miniatures-group__miniature a {
+    height: 50%;
+    width: 50%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    color: #67635F;
+}
+
+.miniatures-group__miniature a:hover {
+    text-decoration: underline;
 }
 
 .miniatures-group__button {
