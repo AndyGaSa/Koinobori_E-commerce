@@ -90,6 +90,11 @@
     width: 27px;
 }
 
+.login-button__login-icon:hover {
+  background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -37px 0 no-repeat;
+}
+
+
 .login-button__text{
     display: none;
     font-size: 12px;
@@ -135,6 +140,10 @@
     background: #ffff url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -66px 12px no-repeat;
     height: 50px;
     width: 50px;
+}
+
+.cart-button__cart-icon:hover {
+  background: #FF5959 url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -106px 12px no-repeat;
 }
 
 .cart__cart-content {
@@ -257,6 +266,10 @@
     width: 100px;
 }
 
+.desktop-navigator li a img:hover {
+  background-color: #FF5959;
+}
+
 .desktop-navigator__utensilios a img,
 .desktop-navigator__ingredientes a img,
 .desktop-navigator__fiestas a img,
@@ -284,6 +297,10 @@
     height: 100px;
     margin-bottom: 5px;
     padding: 15px 25px;
+}
+
+.desktop-navigator__blog i:hover {
+  background-color: #F2F2F2;
 }
 
 .bottom-header-mobile {
