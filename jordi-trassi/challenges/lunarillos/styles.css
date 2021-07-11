@@ -16,6 +16,12 @@ header {
     border: none;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
 .main-nav {
     width: 50px;
     height: 50px;
@@ -40,12 +46,27 @@ header {
     height: 50px;
 }
 
-.main-nav__fixed--personal-nav {
+
+#personal-btn, #carrito-btn{
+    display: none;
+}
+.main-nav__fixed--personal-btn {
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
+    background-repeat: no-repeat;
+    display: block;
+    margin: 10px;
+    width: 27px;
+    height: 27px;
+}
+#main-nav__fixed--personal-btn:active {
     background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
     background-repeat: no-repeat;
     margin: 10px;
     width: 27px;
     height: 27px;
+}
+#personal-btn:checked + label {
+    background-position: 11.5% 0%;
 }
 
 .main-nav__fixed--search-button {
@@ -55,14 +76,25 @@ header {
     font-weight: bold;
 }
 
-.main-nav__fixed--carrito {
+
+.main-nav__fixed--carrito-btn {
     background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
     background-repeat: no-repeat;
     background-position: 22% -2%;
     width: 50px;
     height: 50px;
-
 }
+.main-nav__fixed--carrito-btn:active {
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+#carrito-btn:checked + label{
+    background-color: rgb(255, 89, 88);
+    background-position: 36% -2%;
+}
+
 
 .main-nav__fixed--cesta {
     color: white;
@@ -76,6 +108,76 @@ header {
     justify-content: center;
 }
 
-.main-nav__fix-buttons {
+/*-----  Slider Images ----*/
+
+.slider-images {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 50px;
+    width: 600px;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none inside; 
+}
+
+.slider-images__box {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative; /*Necesitamos que el ul sea relativo*/
+}
+
+.slider-images__box img{
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slider-images__box li {
+    opacity: 0; /*Ocultamos todos los <li>*/
+    transition: opacity 2s;
+    position: absolute; /*Posicionamos en absoluto los <li>*/
+    left: 0px;
+    top: 0px;
+    margin:0px;
+    padding:0px;
+    border: none;
+    background:#fff;
+}
+.slider-images__box li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+.slider-images__box li:target {
+    opacity: 1; /*Mostramos el <li> al que apunta el enlace*/
+}
+
+.slider-nav {
+    display: flex;
     flex-direction: row;
-} 
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.slider-nav li {
+    width: 35px;
+    height: 30px;
+}
+
+.slider-nav__point-selection {
+    width: 15px;
+    height: 15px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #BBB8B6;
+    
+}
