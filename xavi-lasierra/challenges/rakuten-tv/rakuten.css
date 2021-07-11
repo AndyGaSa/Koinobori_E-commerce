@@ -134,249 +134,286 @@
 
 .main-container {
     background-color: #171717;
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /*CAROUSEL*/
 
 @keyframes tonext {
     75% {
-      left: 0;
+        left: 0;
     }
     95% {
-      left: 100%;
+        left: 100%;
     }
     98% {
-      left: 100%;
+        left: 100%;
     }
     99% {
-      left: 0;
+        left: 0;
     }
-  }
-  
-  @keyframes tostart {
-    75% {
-      left: 0;
-    }
-    95% {
-      left: -300%;
-    }
-    98% {
-      left: -300%;
-    }
-    99% {
-      left: 0;
-    }
-  }
-  
-  @keyframes snap {
-    96% {
-      scroll-snap-align: center;
-    }
-    97% {
-      scroll-snap-align: none;
-    }
-    99% {
-      scroll-snap-align: none;
-    }
-    100% {
-      scroll-snap-align: center;
-    }
-  }
-  
-  .carousel {
-    display: block;
-    position: absolute;
-    top: 0;
-    padding-top: 37vw;
-    width: 100vw;
-    height: 40vw;
-    background-color: #171717;
-  }
-  
-  .carousel__viewport {
-    list-style: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    height: 100%;
-  }
-  
-  .carousel__slide {
-    position: relative;
-    flex: 0 0 100%;
-    width: 100%;
-  }
-  
-  .carousel__slide:before {
-    position: absolute;
-    transform: translate3d(-50%,-40%,70px);
-    color: #fff;
-    font-size: 2em;
-  }
-  
-  .carousel__snapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    scroll-snap-align: center;
-  }
-  
-  @media (hover: hover) {
-    .carousel__snapper {
-      animation-name: tonext, snap;
-      animation-timing-function: ease;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
-    }
-  
-    .carousel__slide:last-child .carousel__snapper {
-      animation-name: tostart, snap;
-    }
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
-    .carousel__snapper {
-      animation-name: none;
-    }
-  }
-  
-  .carousel:hover .carousel__snapper,
-  .carousel:focus-within .carousel__snapper {
-    animation-name: none;
-  }
-  
-  * {
-    scrollbar-color: transparent transparent; /* thumb and track color */
-    scrollbar-width: 0px;
-  }
-  
-  *::-webkit-scrollbar {
-    width: 0;
-  }
-  
-  *::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    background: transparent;
-    border: none;
-  }
-  
-  * {
-    -ms-overflow-style: none;
-  }
-  
-  .carousel__navigation {
-    position: absolute;
-    padding: 0 45vw;
-    right: 0;
-    left: 0;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .carousel__navigation-list,
-  .carousel__navigation-item {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-  }
-  
-  .carousel__navigation-button {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    background-color: #fff;
-    opacity: 0.25;
-    background-clip: content-box;
-    border: 0.25rem solid transparent;
-    border-radius: 50%;
-    font-size: 0;
-    transition: transform 0.1s;
-  }
+}
 
-  .carousel__navigation-button:active {
-    opacity: 1;
-  }
-  
-  .carousel::before,
-  .carousel::after,
-  .carousel__prev,
-  .carousel__next {
-    position: absolute;
-    margin: 0 15vw;
-    margin-top: 20vw;
-    top: 0;
-    width: 2rem;
-    height: 2rem;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    font-size: 0;
-    opacity: 0.5;
-  }
-  
-  .carousel::after,
-  .carousel__next {
+@keyframes tostart {
+75% {
+    left: 0;
+}
+95% {
+    left: -300%;
+}
+98% {
+    left: -300%;
+}
+99% {
+    left: 0;
+}
+}
+
+@keyframes snap {
+96% {
+    scroll-snap-align: center;
+}
+97% {
+    scroll-snap-align: none;
+}
+99% {
+    scroll-snap-align: none;
+}
+100% {
+    scroll-snap-align: center;
+}
+}
+
+.carousel {
+display: block;
+position: absolute;
+top: 0;
+padding-top: 37vw;
+width: 100vw;
+height: 40vw;
+background-color: #171717;
+}
+
+.carousel__viewport {
+list-style: none;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display: flex;
+overflow-x: scroll;
+scroll-behavior: smooth;
+scroll-snap-type: x mandatory;
+height: 100%;
+}
+
+.carousel__slide {
+position: relative;
+flex: 0 0 100%;
+width: 100%;
+}
+
+.carousel__slide:before {
+position: absolute;
+transform: translate3d(-50%,-40%,70px);
+color: #fff;
+font-size: 2em;
+}
+
+.carousel__snapper {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+scroll-snap-align: center;
+}
+
+@media (hover: hover) {
+.carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.carousel__snapper {
+    animation-name: none;
+}
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+animation-name: none;
+}
+
+* {
+scrollbar-color: transparent transparent; /* thumb and track color */
+scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+width: 0;
+}
+
+*::-webkit-scrollbar-track {
+background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+background: transparent;
+border: none;
+}
+
+* {
+-ms-overflow-style: none;
+}
+
+.carousel__navigation {
+position: absolute;
+padding: 0 45vw;
+right: 0;
+left: 0;
+text-align: center;
+width: 100%;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+display: flex;
+justify-content: space-around;
+list-style: none;
+}
+
+.carousel__navigation-button {
+display: inline-block;
+width: 1rem;
+height: 1rem;
+background-color: #fff;
+opacity: 0.25;
+background-clip: content-box;
+border: 0.25rem solid transparent;
+border-radius: 50%;
+font-size: 0;
+transition: transform 0.1s;
+}
+
+.carousel__navigation-button:active {
+opacity: 1;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+position: absolute;
+margin: 0 15vw;
+margin-top: 20vw;
+top: 0;
+width: 2rem;
+height: 2rem;
+transform: translateY(-50%);
+border-radius: 50%;
+font-size: 0;
+opacity: 0.5;
+}
+
+.carousel::after,
+.carousel__next {
+display: block;
+right: -1rem;
+}
+
+.carousel::before,
+.carousel::after {
+content: '';
+z-index: 1;
+color: #fff;
+pointer-events: none;
+}
+
+.carousel::before {
+background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.carousel::after {
+background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+#carousel__slide1,
+#carousel__slide2,
+#carousel__slide3,
+#carousel__slide4 {
+display: block;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+}
+
+#carousel__slide1 {
+background-image: url(https://images-3.wuaki.tv/system/images/8894/original/hasta-el-cielo-1625479330-width1920-quality80.jpeg);
+
+}
+
+#carousel__slide2 {
+background-image: url(https://images-0.wuaki.tv/system/images/8893/original/inmune-1625479302-width1920-quality80.jpeg);
+
+}
+
+#carousel__slide3 {
+background-image: url(https://images-1.wuaki.tv/system/images/8814/original/fast-and-furious-promo-1624866349-width1920-quality80.jpeg);
+
+}
+
+#carousel__slide4 {
+background-image: url(https://images-3.wuaki.tv/system/images/8813/original/nomadland-1624866195-width1920-quality80.jpeg);
+
+}
+
+/*END CAROUSEL*/
+.scrollable {
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.scrollable__list {
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-width: 0;
+    scrollbar-color: transparent transparent;
+}
+
+.scrollable__list::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable__list li {
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 100%;
+    scroll-snap-align: center;
+}
+
+.scrollable__list li a {
     display: block;
-    right: -1rem;
-  }
-  
-  .carousel::before,
-  .carousel::after {
-    content: '';
-    z-index: 1;
-    color: #fff;
-    pointer-events: none;
-  }
-  
-  .carousel::before {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
-  }
-  
-  .carousel::after {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
-  }
-  
-  #carousel__slide1,
-  #carousel__slide2,
-  #carousel__slide3,
-  #carousel__slide4 {
-    display: block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
-  
-  #carousel__slide1 {
-    background-image: url(https://images-3.wuaki.tv/system/images/8894/original/hasta-el-cielo-1625479330-width1920-quality80.jpeg);
-  
-  }
-  
-  #carousel__slide2 {
-    background-image: url(https://images-0.wuaki.tv/system/images/8893/original/inmune-1625479302-width1920-quality80.jpeg);
-  
-  }
-  
-  #carousel__slide3 {
-    background-image: url(https://images-1.wuaki.tv/system/images/8814/original/fast-and-furious-promo-1624866349-width1920-quality80.jpeg);
-  
-  }
-  
-  #carousel__slide4 {
-    background-image: url(https://images-3.wuaki.tv/system/images/8813/original/nomadland-1624866195-width1920-quality80.jpeg);
-  
-  }
-  
-  /*END CAROUSEL*/
+    background-color: red;
+    width: 40vw;
+    height: 25vw;
+}
   
 
 @media screen and (min-width: 1024px){
