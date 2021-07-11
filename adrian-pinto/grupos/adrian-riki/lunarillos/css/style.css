@@ -19,6 +19,7 @@
 .links-group__login img{
     width: 27px;
     height: 27px;
+    margin: 10px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
 }
 .links-group__social-media{}
@@ -84,9 +85,47 @@
 .services__add-more{}
 
 /*BRANDS*/
-
+.brands{}
+.brands__partners{}
+.brands__add-more{}
 /*TRANSPORT-INFO*/
-/*CONTACT-INFO*/
-/*COPYRIGHT*/
-/*MAIL-FORM*/
+.transport-info{}
 
+.transport-info__cost{}
+
+.transport-info__time{}
+
+.transport-info__returns{}
+
+.transport-info__cash{}
+
+/*CONTACT-INFO*/
+.contact-info{}
+
+.contact-info__social-media{}
+
+.social-media__facebook--footer{}
+
+.social-media__twiter--footer{}
+
+.social-media__insta--footer
+
+.social-media__pinteres--footer{}
+
+.social-media__youtube--footer{}
+
+.contact-info__news-letter{}
+
+
+.contact-info__about{}
+
+.about__contact{}
+
+.about__us{}
+
+.about__conditions{}
+
+/*COPYRIGHT*/
+.copyright{}
+/*MAIL-FORM*/
+.mail-form{}
