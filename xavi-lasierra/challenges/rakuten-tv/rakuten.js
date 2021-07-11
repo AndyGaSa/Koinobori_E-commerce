@@ -32,5 +32,3 @@ function back() {
     else if(index===3)
         nextButton.style.visibility = "visible";
 }
-
-carouselContainer.scrollBy(0, 0);

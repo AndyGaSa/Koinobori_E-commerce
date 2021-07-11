@@ -386,7 +386,8 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     margin-top: 35vw;
 }
 
-.scrollable__list {
+.scrollable__list,
+.scrollable__list-vertical {
     list-style: none;
     display: flex;
     flex-wrap: nowrap;
@@ -440,6 +441,13 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
 
 #scrollable__item5 a{
     background-image: url(https://images-2.wuaki.tv/system/images/8815/original/fast-and-furious-promo-3-0-1624866397-width308-quality80.png);
+}
+
+.scrollable__item--vertical a {
+    width: 60vw;
+    height: 35vw;
+    background-image: url(https://images-2.wuaki.tv/system/images/8815/original/fast-and-furious-promo-3-0-1624866397-width308-quality80.png);
+
 }
 
 .scrollable__buttons-container {
