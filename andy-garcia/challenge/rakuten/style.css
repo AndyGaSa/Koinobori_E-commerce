@@ -20,6 +20,7 @@ header {
     width: 100vw;
     height: 4vh;
     background-color: #000000;
+    position: sticky;
 }
 
 .header__navbar {
@@ -114,7 +115,7 @@ footer {
 }
 .main__slider--container{
     background-color: khaki;
-    flex: 35 1 auto;
+    flex: 55 1 auto;
     height: 100%;
     width: 84vw;
     display: flex;
@@ -122,12 +123,15 @@ footer {
     justify-content: center;
 }
 .main__horizontal-cards{
-    background-color: fuchsia;
+    background-color: #181818;
     flex: 25 1 auto;
+    height: 100%;
+
 }
 .main__vertical-cards{
     background-color: grey;
-    flex: 30 1 auto;
+    flex: 20 1 auto;
+    height: 100%;
 }
 
 ul.slider{
@@ -157,7 +161,7 @@ ul.slider li:first-child{
 .slider__menu{
     position: absolute;
     text-align: center;
-    margin-top: 70vh;
+    margin-top: 24vh;
     z-index: 3;
 }
 .slider__menu li{
@@ -179,6 +183,15 @@ ul.slider li:first-child{
 ul.slider li:target{
     opacity: 1;
 }
-.slider__menu li a:hover{
+.slider__menu li a:active, .slider__menu li a:focus{
     background-color: #FFFFFF;
+}
+.main__horizontal-cards ul{
+    display: flex;
+    object-fit: cover;
+    justify-content: space-around;
+}
+.main__horizontal-cards ul li{
+    box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 10%);
+    height: 80%;
 }
