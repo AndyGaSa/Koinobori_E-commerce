@@ -6,7 +6,6 @@
 }
 body {
     font-family: sans-serif;
-    font-size: 25px;
 }
 header {
     width: 100%;
@@ -303,10 +302,9 @@ ul, li {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 80px;
-    background-color: #F8F8F8;
-    height: 325px;
+    background-color: #e8e6e5;
+    height: 450px;
     width: 100vw;
-    
     
 }
 
@@ -328,7 +326,6 @@ ul, li {
 }
 
 .menu-condiciones__button span {
-    /* margin-top: 10px; */
     font-size: small;
     font-weight: bold;
     text-align: center;
@@ -349,6 +346,7 @@ ul, li {
     width: 85px;
     height: 70px;
 }
+
 
 #reloj {
     background-position: 30% 5%;
@@ -377,3 +375,142 @@ ul, li {
     height: 70px;
 
 }
+
+
+/* --- CONTACT AREA --- */
+
+.contact-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    
+}
+
+.contact-area p {
+    color: #67635F; 
+    font-size: small;
+    
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+.contact-area__logo {
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
+    background-repeat: no-repeat;
+    width: 220px;
+    height: 40px;
+    background-position: 0 73%;
+}
+
+.linea {
+    width: 300px;
+    border-bottom: 1px solid #e8e6e5;
+    margin-top: 30px;
+}
+
+.email-form {
+    border: 1px solid;
+    box-sizing: border-box;
+    width: 300px;
+    height: 40px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.checkbox-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox-form__box {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #e8e6e5;
+    margin-right: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+     
+}
+
+a {
+    font-family: sans-serif;
+    color: #67635F; 
+}
+
+.subscribe-button {
+    border: none;
+    width: 300px;
+    height: 40px;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+    text-justify: center;
+    color: white;
+    background-color: rgb(255, 89, 88);
+    font-size: small;
+    letter-spacing: 1px;
+    
+}
+
+.linea2 {
+    margin-bottom: 30px;
+}
+
+.contacto-lunarillos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 70px;
+}
+
+.contacto-lunarillos__contacto {
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 38px;
+    background-position: -1% 30%;   
+}
+
+.contacto-lunarillos__contacto--p {
+    height: 20px;
+    color: rgb(255, 89, 88);
+    font-size: small; 
+    font-weight: lighter;   
+}
+
+.contacto-lunarillos__nosotros {
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 38px;
+    background-position: -1% 36%;   
+}
+.contacto-lunarillos__venta {
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 38px;
+    background-position: -1% 42%;   
+}
+
+
+
+.footer {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 89, 88);
+    color: white;
+    font-size: small;
+    margin-top: 80px;
+    text-align: center;
+    padding: 20px;
+}
+
+
