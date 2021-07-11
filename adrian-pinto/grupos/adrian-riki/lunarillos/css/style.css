@@ -167,7 +167,10 @@ h1, h2{
     background: #BBB8B6 url("https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg") -314px 2px no-repeat;
 }
 
-.search-section__type{}
+.search-section__type{
+    display: flex;
+
+}
 
 .type__tools{
     display: block;
@@ -280,20 +283,53 @@ h1, h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.services__header{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 .services__header img{
-    border: 0;
-    height: 125px;
+    width: 132px;
+}
+
+.services__header h2 {
+    display: block;
+    border-width: 1px;
+    border-style: solid none;
+    text-align: center;
+    padding: .25em;
+    width: 5em;
+    margin-top: 1.5em;
 }
 
 .services__container{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "container__tematicas container__tematicas container__accesorios"
+      "container__personajes container__personajes container__accesorios"; 
+    width: auto;
+    height: 40em;
+    margin: 6em 0;
+  }
+
+.services__container article {
+    margin: .25em;
 }
 
 .container__tematicas{
+    grid-area: container__tematicas;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
     background-image:url(https://static3.marialunarillos.com/media/wysiwyg/fiestastematicas.jpg);
-    height: 300px;
-    width: 715px;
+    
 }
 
 .tematica__informacion{
@@ -309,9 +345,12 @@ h1, h2{
 }
 
 .container__personajes{
+    grid-area: container__personajes;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
     background-image:url(https://static3.marialunarillos.com/media/wysiwyg/fiestaspersonajes.jpg);
-    height: 300px;
-    width: 715px;
+   
 }
 .personajes__informacion{
     background:rgba(255,255,255,0.8); 
@@ -323,12 +362,16 @@ h1, h2{
     clip-path: polygon(0 0, 0 100%, 100% 100%);
     height: 150px;
     width: 100px;
+    border: 0;
 }
 
 .container__accesorios{
+    grid-area: container__accesorios;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
     background-image:url(https://static3.marialunarillos.com/media/wysiwyg/pompones.jpg);
-    height: 715px;
-    width: 300px;
+    
 }
 
 .accesorios__informacion{
