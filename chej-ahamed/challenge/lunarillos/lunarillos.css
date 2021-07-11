@@ -90,7 +90,32 @@ body{
     border: 3px solid rgb(228, 16, 16);
 }
 .footer{
+    
     display: flex;
+    align-content: center;
+    justify-content: center;
     flex-direction: column;
-    align-content: space-around;
+    align-items: center;
+
+}
+@media (max-width: 600px) {
+    .right-section {
+      display: none;
+    }
+    .navagator{
+        display: none;  
+    }
+    .registro p{
+        display: none;
+    }
+    .central-section{
+        display: flex ;
+        flex-direction: column;
+    }
+    footer  {
+        display: none;
+    }
+    
+   
+    
 }
