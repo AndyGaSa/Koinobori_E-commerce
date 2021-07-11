@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airfrance forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="forms__container">
+        <label>Viaje</label>
+        <select name="Viaje">
+            <option value="both">Ida y vuelta</option>
+            <option value="one-way">Solo ida</option>
+          </select>
+
+        <label>Pasajeros</label>
+        <input type="number" placeholder="Cuantos pasajeros?">
+        <label>Clase</label>
+        <select name="Viaje">
+            <option value="economy">Economy</option>
+            <option value="businnes">Businnes</option>
+            <option value="first">First</option>
+          </select>
+        <label>Salida de</label>
+        <input type="text" placeholder="Introduce el origen">
+        <label>Llegada a</label>
+        <input type="text" placeholder="Introduce el destino">
+        <label>Fechas de viaje</label>
+        <input type="date" placeholder="Fechas de viaje">
+        <label>Viaje profesional</label>
+        <input type="checkbox">
+        <label>Nombre</label>
+        <input type="text" placeholder="Nombre">
+        <label>Apellidos</label>
+        <input type="text" placeholder="Apellidos">
+        <label>Descripcion</label>
+        <textarea name="description-box" id="description" cols="30" rows="10"></textarea>
+        <label>Email</label>
+        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email">
+        <label>Número de telefono</label>
+        <input type="number"  pattern="[0-9]*" placeholder="tlfn">
+    </form>
+</body>
+</html>
