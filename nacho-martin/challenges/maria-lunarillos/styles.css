@@ -175,12 +175,11 @@ header {
 
 .cart__counter {
     width: 50px;
-    height: auto;
+    height: 50px;
     color: #fff;
     background-color: #FF5959;
     text-align: center;
     font-size: 24px;
-    line-height: -25px;
     padding: 10px;
 }
 
@@ -191,6 +190,30 @@ header {
     padding-top: 100px;
     height: 100px;
     margin: 0 auto 80px;
+}
+
+.desktop-subheader {
+    padding: 180px 0 100px;
+    margin: 0 auto;
+    height: 200px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.desktop-navigator {
+    width: 445px;
+    height: 150px;
+}
+
+.summary__image {
+    height: 95vw;
+    max-height: 410px;
+    width: 100%;
+    animation-name: summary-slide;
+    animation-duration: 35000ms;
+    animation-iteration-count: infinite;
+    background-size: 100% 100%;
 }
 
 @keyframes summary-slide {
@@ -245,16 +268,6 @@ header {
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
-}
-
-.summary__image {
-    height: 95vw;
-    max-height: 410px;
-    width: 100%;
-    animation-name: summary-slide;
-    animation-duration: 35000ms;
-    animation-iteration-count: infinite;
-    background-size: 100% 100%;
 }
 
 .products {
@@ -624,7 +637,7 @@ h5 {
 }
 
 .newsletter__email-field {
-    width: 100%;
+    width: 325px;
     height: 40px;
     padding: unset;
 }
@@ -652,6 +665,7 @@ h5 {
     height: 40px;
     font-size: 16px;
     font-weight: 700;
+    text-align: center;
     color: #fff;
     background: #FF5959;
     border: none;
@@ -659,6 +673,7 @@ h5 {
 }
 
 .newsletter__submit:hover {
+    cursor: pointer;
     opacity: 50%;
 }
 
