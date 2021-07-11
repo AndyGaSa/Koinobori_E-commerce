@@ -26,14 +26,14 @@ h1, h2{
 
 .friends--sites__cocute{
     display: block;
-    width: 60px;
+    width: 70px;
     height: 70px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/cucute.png) #6199AF bottom center no-repeat;
 }
 
 .friends--site__mamuchu{
     display: block;
-    width: 60px;
+    width: 70px;
     height: 70px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/mumuchu.png) #F6B436 bottom center no-repeat;
 }
@@ -41,7 +41,6 @@ h1, h2{
 .links-group__login img{
     width: 27px;
     height: 27px;
-    margin: 10px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
 }
 .links-group__social-media{}
@@ -58,11 +57,31 @@ h1, h2{
 
 .links-group__search-buy{}
 
-.search-buy__magnifying{}
+.search-buy__magnifying {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #BBB8B6 url("https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg") -304px 12px no-repeat;
+}
 
-.search-buy__cart{}
+.search-buy__cart {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #fff url("https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg") -66px 10px no-repeat;
+}
 
-.search-buy__cart_items{}
+.search-buy__cart_items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ff5959;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
 
 .header__site-logo{}
 
