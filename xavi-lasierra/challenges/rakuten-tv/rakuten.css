@@ -98,7 +98,26 @@
 
 .navigator__login-container a {
     display: block;
-    width: 113px;
     height: 36px;
-    background-color: green;
+    line-height: 36px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 8px;
+    margin: 0 5px;
 }
+
+.login-container__help {
+    color: #999;
+}
+
+.login-container__login {
+    color: #fff;
+}
+
+.login-container__register {
+    background-color: #FFE300;
+    border-radius: 2px;
+    color: #252525;
+}
+
