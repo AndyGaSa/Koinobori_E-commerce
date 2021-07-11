@@ -1,0 +1,1 @@
+function post(d){if(d.source===parent&&d.origin===location.protocol+"//"+location.hostname&&typeof d.data==="string"){var a=d.data.indexOf(":");var c=d.data.substr(0,a);var b=d.data.substr(a+1);if(c==="ddg"){parent.window.location.href=b}}}if(window.addEventListener){window.addEventListener("message",post,false)};
