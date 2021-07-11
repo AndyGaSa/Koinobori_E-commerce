@@ -155,7 +155,6 @@ h1, h2{
 }
 
 .services__container{
-    display: flex;
 }
 
 .container__tematicas{
@@ -164,12 +163,13 @@ h1, h2{
     width: 715px;
 }
 
-.container__tematicas section{
+.tematica__informacion{
     background:rgba(255,255,255,0.8); 
     height: 150px;
     width: 250px;
 }
 .tematicas__triangle{
+    background:rgba(255,255,255,0.8);
     background-image:url(https://static3.marialunarillos.com/media/wysiwyg/fiestaspersonajes.jpg);
     height: 150px;
     width: 100px;
@@ -180,12 +180,13 @@ h1, h2{
     height: 300px;
     width: 715px;
 }
-.container__personajes section{
-    background:rgba(255,255,255,0.8); ;
+.personajes__informacion{
+    background:rgba(255,255,255,0.8); 
     height: 150px;
     width: 250px;
 }
 .personajes__triangle{
+    background:rgba(255,255,255,0.8);
     clip-path: polygon(0 0, 0 100%, 100% 100%);
     height: 150px;
     width: 100px;
@@ -197,12 +198,13 @@ h1, h2{
     width: 300px;
 }
 
-.container__accesorios section{
+.accesorios__informacion{
     background:rgba(255,255,255,0.8); ;
     height: 150px;
     width: 250px;
 }
 .accesorios__triangle{
+    background:rgba(255,255,255,0.8);
     clip-path: polygon(0 0, 0 100%, 100% 100%);
     height: 150px;
     width: 100px;
