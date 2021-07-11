@@ -1,0 +1,26 @@
+*{}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+}
+header{
+    width: 100vw;
+    height: 5vh;
+    background-color: white;
+}
+main{
+    width: 95vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    height: 75vh;
+    background-color: lightgray;
+}
+footer{
+    width: 95vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    height: 20vh;
+    background-color: green;
+}
