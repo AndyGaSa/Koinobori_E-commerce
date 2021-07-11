@@ -62,27 +62,77 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__shipping">
-            <div class="footer_shipping">
-                <div class="footer_shippinig__container"></div>
-                <div class="footer_shippinig__container"></div>
+        <div class="shipping footer__shipping">
+            <div class="s-container shipping__container">
+                <a class="free-shipment s-container__container" href="#">
+                    <div class="free-shipment__icon"></div>
+                    <p class="free-shipment__first-comment">Envío gratis</p>
+                    <p class="free-shipment__second-comment">Pedidos superiores a 49&euro;</p>
+                </a>
+                <a class="send-time s-container__container" href="#">
+                    <div class="send-time__icon"></div>
+                    <p class="send-time__first-comment">Envío 24-48 horas gratis</p>
+                    <p class="send-time__second-comment">Haz tu pedido antes de las 18:00H&euro;</p>
+                </a>
             </div>
-            <div class="footer_shipping">
-                <div class="footer_shippinig__container"></div>
-                <div class="footer_shippinig__container"></div>
+            <div class="s-container shipping__container">
+                <a class="returns-shipment s-container__container" href="#">
+                    <div class="returns-shipment__icon"></div>
+                    <p class="returns-shipment__first-comment">Devoluciones</p>
+                    <p class="returns-shipment__second-comment">30 días para devolver tu compra</p>
+                </a>
+                <a class="cash-delivery s-container__container" href="#">
+                    <div class="cash-delivery__icon"></div>
+                    <p class="cash-delivery__first-comment">Contra reembolso</p>
+                    <p class="cash-delivery__second-comment">Sin comisión</p>
+                </a>
             </div>
         </div>
-        <div class="footer__social-network">
-
+        <div class="social-network footer__social-network">
+            <p class="social_network__text">Síguenos</p>
+            <div class="social-container social-network__container">
+                <a class="social-container__facebook" href="#"></a>
+                <a class="social-container__twitter" href="#"></a>
+                <a class="social-container__instagram" href="#"></a>
+                <a class="social-container__pinterest" href="#"></a>
+                <a class="social-container__youtube" href="#"></a>
+            </div>
         </div>
-        <div class="footer__newsletter">
-
+        <div class="separator-1 footer__separator"></div>
+        <div class="newsletter footer__newsletter">
+            <form class="form newsletter__form" action="#">
+                <label class="form__text-lb" for="newsletter">
+                    <p class="form__text">Recibe las novedades en tu email</p>
+                </label>
+                <div class="form-input form__form-input">
+                    <div class="email form-input__email">
+                        <input class="email__textbox" type="email" name="newsletter" id="newsletter">
+                        <label class="email__check-lb" for="check">
+                            <input class="email__check" type="checkbox" name="check" id="check">
+                            <div class="email__info-policy">Acepto la <a class="email__privacy-politic" href="#">política de privacidad</a></div>
+                        </label>
+                    </div>
+                    <input class="form-input__submit" type="button" value="suscríbete">
+                </div>
+            </form>
         </div>
-        <div class="footer__company">
-
+        <div class="separator-2 footer__separator"></div>
+        <div class="company footer__company">
+            <a class="contact company__contact" href="#">
+                <div class="contact__icon"></div>
+                <p class="contact__text">Contacto</p>
+            </a>
+            <a class="about-us company__about-us" href="#">
+                <div class="about-us__icon"></div>
+                <p class="about-us__text">Sobre nosotros</p>
+            </a>
+            <a class="sales-condition company__sales-condition" href="#">
+                <div class="sales-condition__icon"></div>
+                <p class="sales-condition__text">Condiciones de venta</p>
+            </a>
         </div>
-        <div class="footer__copyright">
-
+        <div class="copyright footer__copyright">
+            <p class="copyright__text">Copyright &#169;2021 María Lunarillos</p>
         </div>
     </footer>
 </body>
