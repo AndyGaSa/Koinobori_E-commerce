@@ -1,0 +1,158 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    ;
+}
+
+body{
+    background-image: url("https://i.ibb.co/PN9Vbnh/pattern.jpg");
+    margin: 0;
+}
+
+header{
+    background-color: violet;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-content: center;
+    margin: 0;
+}
+
+.cake-icon{
+    height: 100%;
+    width: 10%;
+}
+.navigation{
+    height: 100%;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navigation a{
+    color: white;
+    padding: 3px;
+    text-decoration: none;
+    margin: 2%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.logo-pies{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.main-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center
+}
+
+.our-pies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.button-like{
+    height: 90%;
+    width: 65%;
+    background-color: tomato;
+    color: white;
+    margin: 1%;
+    padding: 3%;
+    color: white;
+    text-decoration: none;
+}
+
+.welcome{
+    width: 70%;
+    margin: 2%;
+    padding: 2%;
+}
+
+.welcome h2{
+    font-size: 4em;
+    color: violet;
+
+}
+.welcome img{
+    width: 100%;
+}
+
+.welcome h3{
+    font-size: 2em;
+}
+
+.welcome p {
+    padding: 2%;
+}
+
+.weekly-promotions{
+    width: 70%;
+    margin: 2%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 3%;
+    box-shadow: 2px 2px 2px #888888;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.weekly-promotions h4{
+    font-size: 1.5em;
+    margin: 3% 0;
+}
+.weekly-promotions p {
+    font-size: 1.5em;
+    margin: 3% 0;
+}
+.weekly-promotions img {
+    width: 100%;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (min-width: 600px){
+    main{
+        flex-direction: row;
+        align-items:initial;
+
+    }
+}
+
+@media screen and (min-width: 600px){
+    .logo-pies{
+        justify-content: flex-start;
+        padding: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
