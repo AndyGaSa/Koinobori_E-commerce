@@ -280,6 +280,8 @@ h1, h2{
 /*SERVICES*/
 
 .services{
+    margin-top: 10em;
+    background: #f8f8f8;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -288,8 +290,12 @@ h1, h2{
 
 .services__header{
     display: flex;
+    position: relative;
+    top: -85px;
+    
     flex-direction: column;
     align-content: center;
+    align-items: center;
 }
 
 .services__header img{
@@ -304,6 +310,7 @@ h1, h2{
     padding: .25em;
     width: 5em;
     margin-top: 1.5em;
+    font-size: 4em;
 }
 
 .services__container{
@@ -316,7 +323,7 @@ h1, h2{
       "container__personajes container__personajes container__accesorios"; 
     width: auto;
     height: 40em;
-    margin: 6em 0;
+    
   }
 
 .services__container article {
@@ -396,19 +403,43 @@ h1, h2{
     color: #fff;
     letter-spacing: 1px;
     border: 0;
+    margin-top: 6em;
 }
 
 /*BRANDS*/
-.brands{}
+.brands{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.brands h2{
+    display: block;
+    border-width: 1px;
+    border-style: solid none;
+    text-align: center;
+    padding: .25em;
+    width: 9em;
+    margin-top: 1.5em;
+    font-size: 4em;
+}
 .brands__partners{
     filter: grayscale(100%);
+    margin: 4em 10em 0 10em;
 }
+
+.brands__partners img {
+    margin: .5em;
+}
+
 .brands__add-more{
     background: #FF5959;
     padding: 15px 30px;
     color: #fff;
     letter-spacing: 1px;
     border: 0;
+    margin-top: 6em;
+    
 
 }
 /*TRANSPORT-INFO*/
