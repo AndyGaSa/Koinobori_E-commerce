@@ -111,17 +111,74 @@ h1, h2{
 
 /*SERVICES*/
 
-.services{}
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.services__header{}
+.services__header img{
+    border: 0;
+    height: 125px;
+}
 
-.services__container{}
+.services__container{
+    display: flex;
+}
 
-.container__tematicas{}
+.container__tematicas{
+    background-image:url(https://static3.marialunarillos.com/media/wysiwyg/fiestastematicas.jpg);
+    height: 300px;
+    width: 715px;
+}
 
-.container__personajes{}
+.container__tematicas section{
+    background:rgba(255,255,255,0.8); 
+    height: 150px;
+    width: 250px;
+}
+.tematicas__triangle{
+    background-image:url(https://static3.marialunarillos.com/media/wysiwyg/fiestaspersonajes.jpg);
+    height: 150px;
+    width: 100px;
+}
 
-.container__accesorios{}
+.container__personajes{
+    background-image:url(https://static3.marialunarillos.com/media/wysiwyg/fiestaspersonajes.jpg);
+    height: 300px;
+    width: 715px;
+}
+.container__personajes section{
+    background:rgba(255,255,255,0.8); ;
+    height: 150px;
+    width: 250px;
+}
+.personajes__triangle{
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    height: 150px;
+    width: 100px;
+}
+
+.container__accesorios{
+    background-image:url(https://static3.marialunarillos.com/media/wysiwyg/pompones.jpg);
+    height: 715px;
+    width: 300px;
+}
+
+.container__accesorios section{
+    background:rgba(255,255,255,0.8); ;
+    height: 150px;
+    width: 250px;
+}
+.accesorios__triangle{
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    height: 150px;
+    width: 100px;
+}
+
+
+
+
 
 .services__add-more{
     background: #FF5959;
@@ -181,9 +238,13 @@ h1, h2{
 }
 /*CONTACT-INFO*/
 .contact-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .contact-info__social-media{
+
 
 }
 
@@ -227,7 +288,7 @@ h1, h2{
     background-position: -175px -492px;
 }
 
-.contact-info__news-letter form input{
+.contact-info__news-letter form input[type="submit"]{
     height: 40px;
     line-height: 40px;
     width: 100%;
@@ -276,7 +337,7 @@ h1, h2{
     line-height: 50px;
 }
 /*MAIL-FORM*/
-.mail-form{
+.mail-form[type="submit"]{
     height: 20px;
     width: 20px;
     background: #FF5959
