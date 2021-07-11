@@ -187,7 +187,7 @@ ul, li {
     justify-content: center;
     align-items: center;
     background-color:#F8F8F8;
-    margin: 90px 0 15px;
+    margin: 85px 0 15px;
     
 }
 
@@ -207,6 +207,75 @@ ul, li {
     display: inline-block;
     border-top: 2px solid;
     border-bottom: 2px solid;
-    margin: 50px;
+    margin: 40px;
     text-align: center;
+    margin-bottom: 70px;
 }
+
+.articles__block {
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    height: 20vh;
+    margin-top: 3px;
+}
+
+.articles__figure {
+    display: flex;
+    align-content: flex-end;
+    width: 325;
+    height: 140px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.articles__figure--rectangulo-blanco {
+    width: 170px;
+    height: 76px;
+    background-color: white;
+    margin-top: 64px;
+    opacity: 0.8;    
+}
+
+.articles__figure--text {   
+    color: #67635F;
+    font-family: sans-serif;
+    font-size: 2vh;
+    font-weight: bold;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 1.0;
+}
+
+/* --- Block 1 Photos --- */
+
+.block1__image-1 {
+    background-image: url(https://static3.marialunarillos.com/media/wysiwyg/moldesdereposteria.jpg) ;
+}
+.block1__image-2 {
+    background-image: url(https://static3.marialunarillos.com/media/wysiwyg/utensiliosbasicos.jpg) ;
+}
+.block1__image-3 {
+    background-image: url(https://static3.marialunarillos.com/media/wysiwyg/pequenoelectrodomestico2.jpg) ;
+}
+.block1__image-4 {
+    background-image: url(https://static3.marialunarillos.com/media/wysiwyg/capsulas-cupcakes.jpg) ;
+}
+.block1__image-5 {
+    background-image: url(https://static3.marialunarillos.com/media/wysiwyg/cajas3.jpg) ;
+}
+.block1__image-6 {
+    background-image: url(https://static3.marialunarillos.com/media/wysiwyg/cortadoresgalletas2.jpg) ;
+}
+.block1__image-7 {
+    background-image: url(https://static3.marialunarillos.com/media/wysiwyg/stands.jpg) ;
+}
+.block1__image-8 {
+    background-image: url(https://static3.marialunarillos.com/media/wysiwyg/banetones.jpg) ;
+}
+.block1__image-9 {
+    background-image: url(https://static3.marialunarillos.com/media/wysiwyg/toppers3.jpg) ;
+}
+
+
