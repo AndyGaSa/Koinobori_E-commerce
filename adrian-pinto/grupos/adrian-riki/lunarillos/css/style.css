@@ -178,9 +178,10 @@ h1, h2{
     height: 66px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -38px no-repeat transparent;
     background-position: -223px -40px;
-
+}
 /*CONTACT-INFO*/
-.contact-info{}
+.contact-info{
+}
 
 .contact-info__social-media{
 
