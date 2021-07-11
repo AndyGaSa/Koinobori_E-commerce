@@ -1,0 +1,174 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.upper-navigation{
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #a593c2;
+    align-items: center;
+}
+
+.upper-navigation-menu{
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+}
+
+main, footer{
+    background-image: url("https://i.ibb.co/dgg415M/pattern.png"); 
+}
+
+aside p{
+    text-align: left;
+    padding-left: 50px;
+    line-height: 50px;
+    width: 150px;
+    margin: 5px;
+    color: white;
+    background-color: #cf4522;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.biglogo-and-pies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#big-logo{
+    width: 300px;
+    height: 300px;
+}
+
+#header-pies{
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+}
+
+.welcome-header{
+    padding-left: 36px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #a593c2;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+#main-image{
+    width: 400px;
+    height: 197px;
+}
+
+#center-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-items{
+    display: flex;
+    flex-direction: column;
+}
+
+#browse-pies{
+    font-weight: bold;
+    text-align: center;
+}
+
+#weekly-promotions{
+    margin-top:20px;
+    background-color: white;
+    border-radius: 5%;
+    padding: 2%;
+    box-shadow: 1px 1px 11px gray;
+}
+
+.weekly-promotions h2, h3, figcaption{
+    padding: 5px;
+}
+
+.git addimage-cake{
+    width: 400px;
+    height: 240px;
+}
+
+.history-container{
+    margin: 10px;
+    max-width: 400px;
+}
+
+#title-aside{
+    font-weight: bold;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 600px){
+    .main-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .upper-navigation{
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 60px;
+        background-color: #a593c2;
+        align-items: center;
+    }
+    footer{
+        text-align: left;
+        padding-left: 30%;
+    }
+    .weekly-promotions{
+        margin-top:20px;
+        background-color: transparent;
+        border-radius: 5%;
+        padding: 2%;
+        box-shadow: none;
+    }
+    #big-logo{
+        margin-top: 20px;
+    }
+    aside p{
+        width: 200px;
+    }
+    #main-image{
+        width: 600px;
+        height: 295px;
+        margin-left: 30px;
+    }
+    .welcome-header {
+        font-size: 40px;
+        padding-left: 12px;
+    }
+    #center-container{
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+    }
+    .image-cake{
+        width: 500px;
+        height: 300px;
+    }
+    .history-container{
+        max-width: 800px;
+    }
+   }
