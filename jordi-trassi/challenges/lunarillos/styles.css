@@ -173,6 +173,8 @@ ul, li {
 .slider-nav__point-selection {
     width: 15px;
     height: 15px;
+    margin-left: auto;
+    margin-right: auto;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -188,6 +190,7 @@ ul, li {
     align-items: center;
     background-color:#F8F8F8;
     margin: 85px 0 15px;
+    margin-bottom: 40px;
     
 }
 
@@ -248,6 +251,20 @@ ul, li {
     opacity: 1.0;
 }
 
+.button__ver-mas {
+    width: 132px;
+    height: 57;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgb(255, 89, 88);
+    padding: 20px;
+    text-align: center;
+    font-size: medium;
+    letter-spacing: 2px;
+    margin-top: 40px;
+
+}
+
 /* --- Block 1 Photos --- */
 
 .block1__image-1 {
@@ -277,5 +294,7 @@ ul, li {
 .block1__image-9 {
     background-image: url(https://static3.marialunarillos.com/media/wysiwyg/toppers3.jpg) ;
 }
+
+
 
 
