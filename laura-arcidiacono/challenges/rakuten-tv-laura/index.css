@@ -4,15 +4,16 @@
 }
 /*General selectors*/
 body {
+    display: flex;
+    flex-direction: column;
     margin: 0px 0px 0px 0px;
     background-color:rgb(23, 23, 23);
     font-family: NotoSans-Regular,Arial,sans-serif;
     color: rgb(255, 255, 255);
 }
-header, nav {
-    display: flex;
+main {
+    display: block;
 }
-
 .logo-rakuten {
     width: 40vw;
     height: 10vh;
@@ -24,7 +25,7 @@ a {
     outline: none;
     text-decoration: none;
     padding: 1vh;
-    font-size: 2vw;
+    font-size: 2vh;
     font-family: NotoSans-Bold, Arial, sans-serif;
     text-align: center;
     color: rgb(153 153 153);
@@ -39,25 +40,22 @@ img {
 }
 
 /*Header mobile selectors*/
-.header-mobile{
-    display: flex;
-    height: 5vh;
+.nav__mobile {
+    background-color: rgb(0, 0, 0);
+    color: rgb(153, 153, 153);
+    font-size: 2vh;
+    text-align: center;
+    display: flex;    
+    justify-content: space-evenly;
+    align-items: center;
+    height: 8vh;
     position: sticky;
     margin: 0px;
     bottom: 0px;
     margin-top: auto;
 }
-.nav__mobile {
-    background-color: rgb(0, 0, 0);
-    color: rgb(153, 153, 153);
-    font-size: 2vw;
-   
-    text-align: center;
-    display: flex;
-}
 
 /*header desktop selectors*/
-
 .nav__desktop {
     background-color: rgb(0, 0, 0);
     color: white;
@@ -184,32 +182,43 @@ input[id="5"]:checked~.principal-slide__pagination .pagination__item[for="5"] {
     opacity: 1;
 }
 
-input[id="5"]:checked~.principal-slide__img {
+input[id="6"]:checked~.principal-slide__img {
     animation: none;
     transform: translate3d(calc(-100% * 5), 0, 0);
 }
 
-input[id="5"]:checked~.principal-slide__pagination .pagination__item[for="5"] {
+input[id="6"]:checked~.principal-slide__pagination .pagination__item[for="6"] {
+    opacity: 1;
+}
+input[id="7"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 6), 0, 0);
+}
+
+input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
     opacity: 1;
 }
 
 @keyframes slide-autoplay {
-    16.6% {
+    14.2% {
         transform: translate3d(calc(-100% * 0), 0, 0);
     }
-    33.3% {
+    28.6% {
         transform: translate3d(calc(-100% * 1), 0, 0);
     }
-    50% {
+    42.9% {
         transform: translate3d(calc(-100% * 2), 0, 0);
     }
-    66.6% {
+    57.2% {
         transform: translate3d(calc(-100% * 3), 0, 0);
     }
-    83.3% {
+    71.5% {
         transform: translate3d(calc(-100% * 4), 0, 0);
     }
-    100% {
+    85.8% {
         transform: translate3d(calc(-100% * 5), 0, 0);
+    }
+    100% {
+        transform: translate3d(calc(-100% * 6), 0, 0);
     }
 }
