@@ -73,7 +73,6 @@ main {
     background-color: #BBB8B6;
     color: white;
     transform: scaleX(-1);
-    font-weight: bold;
 }
 
 
@@ -296,5 +295,85 @@ ul, li {
 }
 
 
+/* --- Menu Condiciones --- */
 
 
+.menu-condiciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+    background-color: #F8F8F8;
+    height: 325px;
+    width: 100vw;
+    
+    
+}
+
+.menu-condiciones__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: 165px;
+    font-family: sans-serif;
+    color: #67635F; 
+}
+
+.menu-condiciones__button--image {
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
+    background-repeat: no-repeat;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.menu-condiciones__button span {
+    /* margin-top: 10px; */
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.menu-condiciones__button p {
+    margin-top: 5px;
+    font-size: x-small;
+    text-align: center;
+}
+
+#camion {
+    background-position: 0% 5%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85px;
+    height: 70px;
+}
+
+#reloj {
+    background-position: 30% 5%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55px;
+    height: 70px;
+}
+
+#sobre {
+    background-position: 53% 5%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70px;
+    height: 70px;
+}
+
+#tarjeta {
+    background-position: 84% 5%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85px;
+    height: 70px;
+
+}
