@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: NotoSans-Bold,Arial,sans-serif;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    background-color: black;
+}
+
+.header-container__navigator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    max-width: 105em;
+}
+
+.films-navigator {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.films-navigator a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.films-navigator__icon {
+    display: block;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/e/e5/Rakuten_TV_logo.svg);
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    width: 122px;
+    height: 37px;
+}
+
+.films-navigator__menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 315px;
+}
+
+.films-navigator__triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 4px 0 4px;
+    border-color: #ffff transparent transparent transparent;
+    margin-left: 5px;
+}
+
+.films-navigator__search {
+    display: flex;
+    align-items: center;
+}
+
+.search__icon {
+    width: 5px;
+    height: 40px;
+    color: #ccc;
+    position: relative;
+    z-index: 10;
+    line-height: 40px;
+    left: 20px;
+}
+
+.search__input {
+    background-color: #333333;
+    padding: 10px 10px 10px 40px;
+    width: 260px;
+    height: 40px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #ccc;
+    border: none;
+    border-radius: 2px;
+}
+
+.navigator__login-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navigator__login-container a {
+    display: block;
+    width: 113px;
+    height: 36px;
+    background-color: green;
+}
