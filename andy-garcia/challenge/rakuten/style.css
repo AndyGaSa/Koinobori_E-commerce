@@ -1,10 +1,13 @@
-* {}
+* {
+    font-family: NotoSans-Bold,Arial,sans-serif;
+}
 
 body {
     width: 100vw;
     height: 100vh;
     background-color: #0F0F0F;
     margin: 0;
+    
 }
 
 ul {
@@ -18,8 +21,7 @@ header {
 }
 
 .header__navbar {
-    margin-left: 8vw;
-    margin-right: 8vw;
+    margin: 0 auto;
     width: 84vw;
     height: 100%;
     background-color: grey;
@@ -32,55 +34,43 @@ header {
 
 main {
 
-    margin-right: 8vw;
-    margin-left: 8vw;
+    margin: 0 auto;
     width: 84vw;
     height: 75vh;
     background-color: #181818;
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
     width: 84vw;
-    margin-left: 8vw;
-    margin-right: 8vw;
+    margin: 0 auto;
     height: 20vh;
     background-color: green;
 }
 
 .navbar__logo {
     background-color: indigo;
-
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 7vw;
-    margin: 0;
-    padding: 0;
-
-
-
-
-
 }
 
 .navbar__logo--png {
-
     width: 90%;
-
 }
 
 .navbar__categories {
     display: flex;
     background-color: lightsalmon;
-
     height: 100%;
     width: 15vw;
     justify-content: space-around;
     align-items: center;
     color: white;
-    margin: 0;
-    padding: 0;
+    padding-left: 0;
 }
 
 .navbar__login {
@@ -91,8 +81,7 @@ footer {
     height: 100%;
     width: 19vw;
     color: white;
-    margin: 0;
-    padding: 0;
+    padding-left: 0;
 
 }
 
@@ -100,20 +89,12 @@ footer {
     background-color: hotpink;
     width: 28vw;
     height: 100%;
-    margin: 0;
-    padding: 0;
-
-
 }
 
 .navbar__search-div {
     background-color: red;
-
-
     height: 100%;
     width: 15vw;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items:center
@@ -122,5 +103,24 @@ footer {
 .search-div__input{
     width: 98%;
     height: 65%;
+    background-color: #333333;
+    border: 0;
+    border-radius: 3%;
+}
+.search-div__input:hover{
+    background-color: white;
+    
+}
+.main__slider{
+    background-color: khaki;
+    flex: 45 1 auto;
+}
+.main__horizontal-cards{
+    background-color: fuchsia;
+    flex: 20 1 auto;
+}
+.main__vertical-cards{
+    background-color: grey;
+    flex: 25 1 auto;
 }
 
