@@ -445,33 +445,68 @@ h1, h2{
 /*TRANSPORT-INFO*/
 .transport-info{
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-evenly;
     height: 250px;
     margin: 0 auto 25px;
     background: #e8e6e5;
+   
+}
+.transport-info__cost{
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.transport-info__cost{
+.transport-info__cost img {
+    order: 0;
+    flex: 0 1 auto;
     width: 87px;
     height: 64px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -38px no-repeat transparent;
 }
-
-.transport-info__time {
+.transport-info__time{
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.transport-info__time img{
+    order: 0;
+    flex: 0 1 auto;
     width: 58px;
     height: 64px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -38px no-repeat transparent;
     background-position: -90px -38px;
 }
-
-.transport-info__returns {
+.transport-info__returns{
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.transport-info__returns img{
+    order: 0;
+    flex: 0 1 auto;
     width: 68px;
     height: 60px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -38px no-repeat transparent;
     background-position: -150px -36px;
 }
+.transport-info__cash{
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
 
-.transport-info__cash {
+.transport-info__cash img{
     width: 77px;
     height: 66px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -38px no-repeat transparent;
@@ -481,11 +516,18 @@ h1, h2{
 .contact-info{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
     align-items: center;
+
 }
 
 .contact-info__social-media{
-
+align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
