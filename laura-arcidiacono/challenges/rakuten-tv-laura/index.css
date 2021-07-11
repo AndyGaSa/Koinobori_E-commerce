@@ -1,6 +1,65 @@
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: border-box;
     padding: 0;
+}
+
+/*General selectors*/
+
+.logo-rakuten {
+    width: 40vw;
+    height: 10vh;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 1vh;
+    font-size: 2vw;
+    font-family: NotoSans-Bold, Arial, sans-serif;
+    text-align: center;
+    color: rgb(153 153 153);
+}
+
+a:hover {
+    color: rgb(247, 216, 0);
+}
+
+/*Header mobile selectors*/
+
+.nav__mobile {
+    background-color: rgb(0, 0, 0);
+    color: rgb(153, 153, 153);
+    position: sticky;
+    margin: 0px;
+    bottom: 0px;
+    font-size: 2vw;
+    height: 5vh;
+    text-align: center;
+    display: flex;
+}
+
+/*header desktop selectors*/
+
+.nav__desktop {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+    position: sticky;
+    top: 0px;
+}
+
+.nav__left {
+    justify-content: flex-start;
+}
+
+.nav__right {
+    justify-content: flex-end;
+}
+
+/*Principal Slider Selectors*/
+.principal-slider__input{
+    visibility: hidden;
 }
