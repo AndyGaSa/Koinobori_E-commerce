@@ -1,5 +1,11 @@
 
-
+body{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: "Source Sans Pro",sans-serif;
+}
 
 .navagator{
     vertical-align: top;
@@ -11,10 +17,10 @@
 .upper-header{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-content: flex-start;
-    justify-content: space-evenly;
     align-items: flex-start;
+    justify-content: space-around;
 }
 .registro{
     display: flex;
@@ -29,6 +35,21 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: flex-start;
+}
+.fiestass{
+    align-items: center;
+    align-content: center;
+   
+    
+}
+.utilensili{
+    height: 10px;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
