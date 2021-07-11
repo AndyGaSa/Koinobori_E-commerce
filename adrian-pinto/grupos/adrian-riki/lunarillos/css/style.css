@@ -148,7 +148,7 @@ h1, h2{
 .transport-info{
     display: flex;
     justify-content: space-evenly;
-    height: 120px;
+    height: 250px;
     margin: 0 auto 25px;
     background: #e8e6e5;
 }
@@ -163,7 +163,7 @@ h1, h2{
     width: 58px;
     height: 64px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -38px no-repeat transparent;
-    background-position: -90px -109px;
+    background-position: -90px -38px;
 }
 
 .transport-info__returns {
@@ -173,12 +173,11 @@ h1, h2{
     background-position: -150px -36px;
 }
 
-.transport-info__cash a{
+.transport-info__cash {
     width: 77px;
-    height: 60px;
+    height: 66px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -38px no-repeat transparent;
-    background-position: 223px -38px
-}
+    background-position: -223px -40px;
 
 /*CONTACT-INFO*/
 .contact-info{}
