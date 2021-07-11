@@ -51,14 +51,13 @@ function back() {
 function nextVertical(){
     if(indexV===19) return;
 
-    if(document.querySelector(".header-container").backgroundColor === "black"){
-        carouselContainerV.scrollBy(carouselItemWidthV*2, 0);
-        indexV += 2;
-    }
-    else{
-        console.log("ee");
+    if(window.matchMedia("(min-width: 1024px)").matches){
         carouselContainerV.scrollBy(carouselItemWidthV*7, 0);
         indexV += 7;
+    }
+    else{
+        carouselContainerV.scrollBy(carouselItemWidthV*2, 0);
+        indexV += 2;
     }
     if(indexV>0)
         backButtonV.style.visibility= "visible";
@@ -68,13 +67,13 @@ function nextVertical(){
 
 function backVertical() {
     if(indexV===0) return;
-    if(document.querySelector(".header-container").backgroundColor === "black"){
-        carouselContainerV.scrollBy(-carouselItemWidthV*2, 0);
-        indexV += 2;
-    }
-    else{
+    if(window.matchMedia("(min-width: 1024px)").matches){
         carouselContainerV.scrollBy(-carouselItemWidthV*7, 0);
         indexV += 7;
+    }
+    else{
+        carouselContainerV.scrollBy(-carouselItemWidthV*2, 0);
+        indexV += 2;
     }
     if(indexV<=0)
         backButtonV.style.visibility= "hidden";

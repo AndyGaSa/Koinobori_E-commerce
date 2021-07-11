@@ -53,6 +53,11 @@
     align-items: center;
 }
 
+.films-navigator a:hover {
+    color: yellow;
+    transition: color 0.2s;
+}
+
 .films-navigator__icon {
     display: block;
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/e/e5/Rakuten_TV_logo.svg);
@@ -76,6 +81,12 @@
     border-width: 8px 4px 0 4px;
     border-color: #ffff transparent transparent transparent;
     margin-left: 5px;
+}
+
+.films-navigator a:hover .films-navigator__triangle {
+    border-width: 0 4px 8px 4px;
+    border-color: yellow transparent yellow transparent;
+    transition: border-color 0.2s;
 }
 
 .films-navigator__search {
@@ -109,6 +120,11 @@
     border-radius: 2px;
 }
 
+.search__input:focus {
+    background-color: white;
+    outline: none;
+}
+
 .navigator__login-container {
     display: flex;
     justify-content: flex-end;
@@ -125,6 +141,11 @@
     margin: 0 5px;
 }
 
+.navigator__login-container a:hover {
+    color: yellow;
+    transition: color 0.2s;
+}
+
 .login-container__help {
     display: none;
     color: #999;
@@ -138,6 +159,12 @@
     background-color: #FFE300;
     border-radius: 2px;
     color: #252525;
+}
+
+.login-container__register:hover {
+    background-color: #e2c801;
+    color: #252525 !important;
+    transition: background-color 0.2s;
 }
 
 /*CAROUSEL*/
@@ -386,6 +413,13 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     margin-top: 35vw;
 }
 
+.scrollable__title {
+    color: white;
+    position: relative;
+    margin: 3vw 0 0.5vw 1vw;
+    font-size: 3.7vw;
+}
+
 .scrollable--vertical {
     margin-top: 0;
 }
@@ -416,9 +450,13 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
 
 .scrollable__item a {
     display: block;
-    background-size: cover;
+    background-size: 100%;
     width: 60vw;
     height: 37vw;
+}
+
+.scrollable__item a:hover {
+    border: 1vw solid yellow;
 }
 
 .scrollable__empty a {
@@ -448,8 +486,8 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
 }
 
 .scrollable__item--vertical a {
-    width: 55vw;
-    height: 78vw;
+    width: 40vw;
+    height: 55vw;
     background-image: url(https://images-0.wuaki.tv/system/artworks/26653/original/dying-of-the-light-1611333563-width217-quality80.jpeg);
 }
 
@@ -493,7 +531,7 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     width: 80vw;
     margin: auto;
     position: relative;
-    bottom: 40vw;
+    bottom: 35vw;
 }
 
   
@@ -555,6 +593,14 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
         display: flex;
         width: 90vw;
         bottom: 10vw;
+    }
+
+    .scrollable__title {
+        font-size: 1.5vw;
+    }
+
+    .scrollable__item a:hover {
+        border: 0.5vw solid yellow;
     }
 }
 
