@@ -34,17 +34,30 @@ body {
     background: url(https://i.ibb.co/8N2wLKc/burger-menu.png) no-repeat center left;
     width: 50px;
     height: 50px;
+    margin: 0 0 0 -20%;
+}
+
+.menu-trio {
+    display: none;
 }
 
 .header__user {
+    margin: 10px 45px 0px 0px;
+}
+
+.header__user--logo {
     width: 27px;
     height: 27px;
     background: url(./assets/sprite.svg) 0 0 no-repeat;
-    margin: 1.75% 0% 1.75% -5%;
 }
 
-.header__user:hover {
+.header__user--logo:hover {
     background: url(./assets/sprite.svg) -37px 0 no-repeat;
+    cursor: pointer;
+}
+
+.header__user--text {
+    display: none;
 }
 
 .header__products {
@@ -73,6 +86,11 @@ body {
     background: #ff5959 url(./assets/sprite.svg) -107px 10px no-repeat;
 }
 
+.header__shop {
+    display: flex;
+    flex-direction: row;
+}
+
 .header__items {
     font-family: "Myriad Pro", "Myriad Web", "Tahoma", "Helvetica", "Arial", sans-serif;
     font-size: 20px;
@@ -94,8 +112,12 @@ body {
 }
 
 .logo {
-    margin: 14% 0 25% -12%;
-    max-width: 325px;
+    margin: 59px 0 120px -200px;
+    max-width: 625px;
+}
+
+.menu {
+    display: none;
 }
 
 .parties {
@@ -103,18 +125,19 @@ body {
     flex-direction: column;
     align-items: center;
     background: #f8f8f8;
+    width: 100%;
 }
 
 .p-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -11%;
-    margin-bottom: 4%;
+    margin-top: -65px;
+    margin-bottom: 25px;
 }
 
 .p-logo__logo-img {
-    width: 18%;
+    width: 110px;
 }
 
 .p-logo__logo-text::before {
@@ -150,13 +173,13 @@ body {
     align-items: center;
 }
 
-.p-sub-container {
+.p-container__subcontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.p-party {
+.p-party-1, .p-party-2 {
     width: 55%;
     position: relative;
 }
@@ -164,7 +187,6 @@ body {
 .p-party-img {
     width: 100%;
     z-index: 2;
-    /* position: absolute; */
 }
 
 .p-party-link {
@@ -194,12 +216,16 @@ body {
     text-decoration: underline;
 }
 
+.p-party__description {
+    display: none;
+}
+
 .p-more {
     text-align: center;
     margin-top: 8%;
     padding-bottom: 3%;
     font-size: 18px;
-    width: 50%;
+    width: 400px;
 }
 
 .p-more__link {
@@ -215,12 +241,23 @@ body {
     text-decoration: underline;
 }
 
+.our-branches {
+    display: none;
+}
+
 .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin-top: 20%;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .shipping {
@@ -235,8 +272,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-items: center;
-    width: 70%;
-    padding: 6% 0;
+    width: 450px;
+    padding: 30px 0;
 }
 
 .s-container__container {
@@ -324,6 +361,10 @@ body {
     justify-items: center;
 }
 
+.header-social {
+    display: none;
+}
+
 .social-container__facebook, .social-container__twitter, .social-container__instagram, .social-container__pinterest, .social-container__youtube {
     width: 33px;
     height: 32px;
@@ -370,7 +411,6 @@ body {
 }
 
 .footer__separator {
-    /* display: block; */
     content: '';
     border-bottom: 1px solid #bbb8b6;
     padding-bottom: 35px;
@@ -378,8 +418,12 @@ body {
     margin: 2% 0 7% 0;
 }
 
+.separator-3, .separator-4 {
+    display: none;
+}
+
 .newsletter {
-    width: 100%;
+    width: 576px;
 }
 
 .form {
@@ -476,6 +520,9 @@ body {
 }
 
 .contact, .about-us, .sales-condition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #ff5959;
     text-transform: uppercase;
     font-size: 14px;
@@ -514,4 +561,404 @@ body {
     font-size: 14px;
     line-height: 50px;
     margin-top: 15%;
+}
+
+@media only screen and (min-width: 1120px) {
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 100px 0 -90px 0;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0 0 13%;
+        width: 55%;
+    }
+    .menu-trio {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        margin: 0 0 0 -100px;
+    }
+    .menu-trio--first, .menu-trio--second, .menu-trio--third {
+        width: 60px;
+        height: 70px;
+        color: #FF5959;
+        text-decoration: none;
+        cursor: pointer;
+        margin: 0 3px;
+    }
+    .menu-trio--first {
+        width: 70px;
+        height: 125px;
+        background: url(https://i.ibb.co/3SXX9jk/maria-lunarillos.png) #FF5959 bottom center no-repeat;
+    }
+    .menu-trio--second {
+        background: url(https://i.ibb.co/xY9DG9k/cucute.png) #6199AF bottom center no-repeat;
+    }
+    .menu-trio--third {
+        background: url(https://i.ibb.co/42yKYjm/mumuchu.png) #F6B436 bottom center no-repeat;
+    }
+    .menu-trio--second:hover {
+        height: 125px;
+    }
+    .menu-trio--third:hover {
+        height: 125px;
+    }
+    .header__menu {
+        display: none;
+    }
+    .header__products {
+        padding: 0;
+    }
+    .header__user {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 10px -30px 0 170px;
+    }
+    .header__user--logo {
+        display: flex;
+    }
+    .header__user--text {
+        display: inline-block;
+        line-height: 50px;
+        font-weight: 400;
+        color: #2E2925;
+        font-size: 13px;
+        text-transform: uppercase;
+        width: 130px;
+        text-align: center;
+        margin: -10px 0 0 0;
+    }
+    .header-social {
+        display: flex;
+        margin: 10px 0px 0px 0px;
+    }
+    .header-social .social-container__facebook {
+        background: url(./assets/sprite.svg) -0px -534px no-repeat transparent;
+    }
+    .header-social .social-container__twitter {
+        background: url(./assets/sprite.svg) -35px -534px no-repeat transparent;
+    }
+    .header-social .social-container__instagram {
+        background: url(./assets/sprite.svg) -70px -534px no-repeat transparent;
+    }
+    .header-social .social-container__pinterest {
+        background: url(./assets/sprite.svg) -106px -534px no-repeat transparent;
+    }
+    .header-social .social-container__youtube {
+        background: url(./assets/sprite.svg) -176px -534px no-repeat transparent;
+    }
+    .header-social .social-container__facebook:hover {
+        background: url(./assets/sprite.svg) 0 -494px no-repeat transparent;
+    }
+    .header-social .social-container__twitter:hover {
+        background: url(./assets/sprite.svg) -35px -494px no-repeat transparent;
+    }
+    .header-social .social-container__instagram:hover {
+        background: url(./assets/sprite.svg) -70px -494px no-repeat transparent;
+    }
+    .header-social .social-container__pinterest:hover {
+        background: url(./assets/sprite.svg) -106px -494px no-repeat transparent;
+    }
+    .header-social .social-container__youtube:hover {
+        background: url(./assets/sprite.svg) -176px -494px no-repeat transparent;
+    }
+    .header__search {
+        display: none;
+    }
+    .header__shop {
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 0 40px;
+    }
+    .parties {
+        margin-top: 200px;
+    }
+    .logo {
+        width: 30%;
+        margin: 50px 235px 120px 0;
+        content: url("https://i.ibb.co/z7j26dW/logoGran.png");
+    }
+    .search, .nav {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+    }
+    .search {
+        margin: 0 0 5% 10%;
+    }
+    .tools-header__text, .ingredients-header__text, .parties-header__text, .branches-header__text, .blog-header__text {
+        bottom: -25px;
+        padding: 0;
+        width: 100%;
+        padding-top: 7px;
+        font-size: 15px;
+        letter-spacing: 1px;
+        color: #2E2925;
+        width: 80px;
+        height: 80px;
+        text-transform: uppercase;
+        padding: 0;
+        text-align: center;
+        font-weight: 600;
+    }
+    .tools-header, .ingredients-header, .parties-header, .branches-header, .blog-header {
+        margin: 0 0.5%;
+    }
+    .tools-header__picture, .ingredients-header__picture, .parties-header__picture, .branches-header__picture, .blog-header__picture {
+        width: 100px;
+        height: 100px;
+        background-color: #f2f2f2;
+        padding: 15px;
+    }
+    .blog-header {
+        margin-left: 6%;
+    }
+    .blog-header__picture {
+        width: 100px;
+        height: 100px;
+        background-size: 700px;
+        background: url(./assets/menu.svg) -400px 0 no-repeat transparent;
+        background-color: #ff5959;
+    }
+    .seeker__input {
+        border: 1px solid #bbb8b6;
+        width: calc(100% - 49px);
+        height: 28px;
+        margin: 0;
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding: 0 5px;
+        color: #BBB8B6;
+        text-transform: uppercase;
+    }
+    .seeker__button {
+        width: 49px;
+        height: 28px;
+        background: url(./assets/sprite.svg) -303px 2px no-repeat #bbb8b6;
+        border: none;
+    }
+    .news, .offers, .seeker {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 150px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        letter-spacing: 1px;
+        line-height: 30px;
+        text-align: center;
+    }
+    .news {
+        background: #9faa4d;
+        padding-right: 8px;
+    }
+    .offers {
+        background: #8e789d;
+        padding-right: 15px;
+    }
+    .seeker {
+        width: 250px;
+    }
+    .news__logo {
+        width: 30px;
+        height: 30px;
+        background: url(./assets/sprite.svg) -244px 4px no-repeat;
+        content: '';
+    }
+    .offers__logo {
+        width: 30px;
+        height: 30px;
+        background: url(./assets/sprite.svg) -274px 4px no-repeat;
+        content: '';
+    }
+    .p-party-1, .p-party-2 {
+        width: 97%;
+        height: 100%;
+    }
+    .p-party__description {
+        display: inline-block;
+        padding-top: 5%;
+        margin-bottom: -2%;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .p-party-text-container {
+        padding-bottom: 5%;
+        height: 143px;
+        width: 230px;
+    }
+    .p-party-1__triangle, .p-party-2__triangle {
+        position: absolute;
+        /* display: inline; */
+        width: 0;
+        height: 0;
+        border-right: 72px solid transparent;
+        border-top: 72px solid transparent;
+        border-left: 72px solid rgba(255, 255, 255, 0.8);
+        border-bottom: 72px solid rgba(255, 255, 255, 0.8);
+        z-index: 100;
+        bottom: 0;
+        left: 49%;
+    }
+    .p-sub-container-1 .p-party-1__text-container {
+        width: 36%;
+        left: 44%
+    }
+    .p-sub-container-1 .p-party-2__text-container {
+        width: 36%;
+    }
+    .p-sub-container-1 .p-party-1__triangle, .p-sub-container-1 .p-party-2__triangle {
+        left: 80%;
+        bottom: 1%;
+    }
+    .p-sub-container-1 .p-party-2__triangle {
+        left: 36%;
+    }
+    .p-sub-container-2 .p-party-1__text-container {
+        width: 58%;
+    }
+    .p-sub-container-2 .p-party-1__triangle {
+        left: 58%;
+    }
+    .p-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .p-sub-container-2 {
+        height: 100%;
+    }
+    .p-sub-container-2__party .p-party-img {
+        height: 100%;
+        content: url("https://i.ibb.co/kDdbsxg/pompones.jpg");
+    }
+    .p-party-text-container {
+        bottom: 1%;
+    }
+    .p-sub-container-2 .p-party-text-container {
+        bottom: 0;
+    }
+    .shipping {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .footer__container {
+        flex-direction: row;
+        justify-content: center;
+        margin: 60px 0 35px 0px;
+    }
+    .form-input {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    .our-branches {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 8% auto;
+    }
+    .our-branches__text::before, .our-branches__text::after {
+        content: "";
+        display: block;
+        height: 0;
+        margin: 0 auto;
+        border-top: 2px solid #2E2925;
+        width: 280px;
+    }
+    .our-branches__text::before {
+        margin-bottom: 5%;
+    }
+    .our-branches__text::after {
+        margin-top: 5%;
+    }
+    .our-branches__text {
+        display: inline-block;
+        padding: 3% 0;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        font-weight: 900;
+        color: #2E2925;
+        line-height: 30px;
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+    .footer {
+        margin-top: 0;
+    }
+    .footer__separator {
+        display: inline-block;
+        content: '';
+        border-bottom: 0px;
+        border-right: 1px solid #bbb8b6;
+        padding-right: 0;
+        padding-left: 0;
+        width: 0%;
+        height: 170px;
+        margin: -23px 0px 0px 14px;
+    }
+    .separator-1, .separator-2 {
+        display: none;
+    }
+    .form__text-lb {
+        margin: 12px 0px -34px 75px;
+    }
+    .email {
+        width: 400px;
+    }
+    .email__textbox {
+        margin: -12px 120px 30px 0px;
+        width: 275px;
+    }
+    .form-input__submit {
+        width: 106px;
+        margin: -49px 5px 11px -110px;
+    }
+    .email__check-lb {
+        margin-left: -6%;
+        margin-top: -4%;
+    }
+    .email__info-policy {
+        margin-top: 1%;
+        margin-left: -10%;
+    }
+    .contact, .about-us, .sales-condition {
+        flex-direction: row;
+        justify-items: flex-start;
+    }
+    .contact__text, .about-us__text, .sales-condition__text {
+        padding-left: 13px;
+    }
+    .social-network {
+        margin: 0px 0px 75px 190px;
+        align-items: flex-start;
+        width: 181px;
+    }
+    .form {
+        align-items: flex-start;
+        padding: 0% 0 0 5%;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .company {
+        padding: 0% 0 0 0%;
+        align-items: flex-start;
+        width: 300px;
+        margin: 0px 0 40px 20px;
+    }
+    .newsletter {
+     margin: 0 0 0 0;
+    }
+    .copyright {
+        margin-top: 3%;
+    }
 }
