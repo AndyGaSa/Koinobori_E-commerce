@@ -1,26 +1,126 @@
-*{}
-body{
+* {}
+
+body {
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background-color: #0F0F0F;
     margin: 0;
 }
-header{
+
+ul {
+    list-style: none;
+}
+
+header {
     width: 100vw;
-    height: 5vh;
-    background-color: white;
+    height: 4vh;
+    background-color: #000000;
 }
-main{
-    width: 95vw;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
+
+.header__navbar {
+    margin-left: 8vw;
+    margin-right: 8vw;
+    width: 84vw;
+    height: 100%;
+    background-color: grey;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+
+}
+
+main {
+
+    margin-right: 8vw;
+    margin-left: 8vw;
+    width: 84vw;
     height: 75vh;
-    background-color: lightgray;
+    background-color: #181818;
 }
-footer{
-    width: 95vw;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
+
+footer {
+    width: 84vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
     height: 20vh;
     background-color: green;
 }
+
+.navbar__logo {
+    background-color: indigo;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 7vw;
+    margin: 0;
+    padding: 0;
+
+
+
+
+
+}
+
+.navbar__logo--png {
+
+    width: 90%;
+
+}
+
+.navbar__categories {
+    display: flex;
+    background-color: lightsalmon;
+
+    height: 100%;
+    width: 15vw;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__login {
+    display: flex;
+    background-color: indianred;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 19vw;
+    color: white;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar__padding {
+    background-color: hotpink;
+    width: 28vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.navbar__search-div {
+    background-color: red;
+
+
+    height: 100%;
+    width: 15vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items:center
+
+}
+.search-div__input{
+    width: 98%;
+    height: 65%;
+}
+
