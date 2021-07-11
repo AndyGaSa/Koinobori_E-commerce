@@ -86,5 +86,11 @@ body{
     height: 30px;
     width: 90px;
    background:red;
+   
     border: 3px solid rgb(228, 16, 16);
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
 }
