@@ -1,0 +1,21 @@
+*{
+
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__nav-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.header__nav-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
