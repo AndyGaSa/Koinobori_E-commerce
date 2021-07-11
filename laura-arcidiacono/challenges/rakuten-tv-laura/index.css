@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     margin: 0px 0px 0px 0px;
     background-color: rgb(23, 23, 23);
-    font-family:   'Noto Sans', Arial, sans-serif;
+    font-family: 'Noto Sans', Arial, sans-serif;
     color: rgb(255, 255, 255);
 }
 
@@ -92,13 +92,15 @@ img_img:hover {
 .nav__right {
     justify-content: flex-end;
 }
-button{
+
+button {
     background-color: rgb(247, 216, 0);
     height: 4vh;
     width: 20vh;
     border: none;
     border-radius: 00.5vh;
 }
+
 /*Principal slide Selectors*/
 
 .principal-slide {
@@ -338,7 +340,7 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
     .information__principal {
         display: block;
     }
-    footer{
+    footer {
         text-align: center;
     }
 }
