@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP:wght@300;700&display=swap"
+        rel="stylesheet">
     <title>Rakuten TV</title>
 </head>
 
@@ -16,8 +20,8 @@
         <section class="header-desktop">
             <nav class="nav__desktop">
                 <div class="nav__left">
-                    <a href="#" >
-                        <svg class=".left__logo-rakuten" xmlns="http://www.w3.org/2000/svg">
+                    <a href="#" class="logo-rakuten">
+                        <svg height="42" viewBox="0 0 187 42" width="187" xmlns="http://www.w3.org/2000/svg">
                             <g fill="#fff" fill-rule="evenodd">
                                 <path
                                     d="m162.126 10.7207c-.054-.891-.075-1.259.593-1.663.467-.283 3.036-1.768 7.653-3.196.57-.178 1.09-.066 1.422.307.345.389.419.983.181 1.509-.433.952-.55 1.847-.068 2.224.395.309.782.418 1.982-.207 1.573-.821 3.433-2.885 3.32-6.274-.041-1.213-.495-2.119-1.349-2.695-.806-.544-1.888-.726-2.988-.726-2.999 0-4.453.746-8.406 2.158-5.48 1.958-12.385 4.246-16.209 5.186-1.572.386-2.948 1.543-2.948 3.131 0 2.512 3.026 3.152 5.096 2.459.435-.145 4.729-1.692 6.25-1.887.217-.028.322.053.339.212.025.209.118 2.362.158 3.335.169 4.105.515 12.084.547 12.642.062 1.058.07 4.386 1.882 4.386 1.685 0 2.497-1.8 2.924-4.386.601-3.656.1-8.888-.143-13.071-.069-1.181-.236-3.444-.236-3.444">
@@ -53,13 +57,12 @@
                     <a href="#">CINEMA</a>
                     <a href="#">GRATIS</a>
                     <a href="#">SUSCRIBETE</a>
-                    
-                        <label for="search"></label>
-                            <span><i class="fas fa-search"></i></span>
-                            <input type="text" name="search" id="search"
-                                placeholder="Buscar">
-                        </label>
-                    
+
+                    <label for="search"></label>
+                    <span><i class="fas fa-search"></i></span>
+                    <input type="text" name="search" id="search" placeholder="Buscar">
+                    </label>
+
                 </div>
                 <div class="nav__right">
                     <a href="#">AYUDA</a>
@@ -143,21 +146,21 @@
             <section class="horizontal-slide__img">
                 <button role="button" id="left-angle" class="left-angle"><i class="fas fa-angle-left"></i></button>
                 <div class="img__carousel"></div>
-                    <div class="img__img"> <a href="#"> <img
-                                src="https://i.ibb.co/HHv82LJ/highlights-video-july-2021-1625123289-width308-quality80.jpg"
-                                alt="Hasta el cielo"></a> </div>
-                    <div class="img__img"> <a href="#"></a><img
-                            src="https://i.ibb.co/s27K03s/cinema-generic-middle-banner-1624981151-width308-quality80.jpg"
-                            alt="Cruella"> </a></div>
-                    <div class="img__img"><a href="#"></a> <img
-                            src="https://i.ibb.co/py4Cywc/free-generic-middle-1622099920-width308-quality80.png"
-                            alt="BVB09"></a> </div>
-                    <div class="img__img"> <a href="#"></a><img
-                            src="https://i.ibb.co/xFD3gb7/starzplay-generic-reg-vis-ui30-1621953241-width308-quality80.png"
-                            alt="Starzplay"></a> </div>
-                    <div class="img__img"><a href="#"></a> <img
-                            src="https://i.ibb.co/QHp8bDD/fast-and-furious-promo-3-0-1624866397-width308-quality80.png"
-                            alt="Fast and Furious"> </a></div>
+                <div class="img__img"> <a href="#"> <img
+                            src="https://i.ibb.co/HHv82LJ/highlights-video-july-2021-1625123289-width308-quality80.jpg"
+                            alt="Hasta el cielo"></a> </div>
+                <div class="img__img"> <a href="#"></a><img
+                        src="https://i.ibb.co/s27K03s/cinema-generic-middle-banner-1624981151-width308-quality80.jpg"
+                        alt="Cruella"> </a></div>
+                <div class="img__img"><a href="#"></a> <img
+                        src="https://i.ibb.co/py4Cywc/free-generic-middle-1622099920-width308-quality80.png"
+                        alt="BVB09"></a> </div>
+                <div class="img__img"> <a href="#"></a><img
+                        src="https://i.ibb.co/xFD3gb7/starzplay-generic-reg-vis-ui30-1621953241-width308-quality80.png"
+                        alt="Starzplay"></a> </div>
+                <div class="img__img"><a href="#"></a> <img
+                        src="https://i.ibb.co/QHp8bDD/fast-and-furious-promo-3-0-1624866397-width308-quality80.png"
+                        alt="Fast and Furious"> </a></div>
                 </div>
                 <button role="button" id="right-angle" class="right-angle"><i class="fas fa-angle-right"></i></button>
 
@@ -214,12 +217,13 @@
             </article>
             <article class="information__aditional">
                 <div>
-                   <a href="#"><i class="fas fa-mobile-alt"></i><i class="fas fa-desktop"></i></a> 
+                    <a href="#"><i class="fas fa-mobile-alt"></i><i class="fas fa-desktop"></i></a>
                     <h3>Cómo funciona</h3>
                     <p>Rakuten TV es compatible con la gran mayoría de dispositivos conectados.</p>
                 </div>
                 <div>
-                    <a href="#"><i class="fab fa-paypal"></i><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i></a>
+                    <a href="#"><i class="fab fa-paypal"></i><i class="fab fa-cc-visa"></i><i
+                            class="fab fa-cc-mastercard"></i></a>
                     <h3>Más formas de pago</h3>
                     <p>Rakuten TV es compatible con PayPal y con tarjetas de crédito Visa y Mastercard.</p>
                 </div>

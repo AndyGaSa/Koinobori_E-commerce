@@ -10,17 +10,12 @@ body {
     flex-direction: column;
     margin: 0px 0px 0px 0px;
     background-color: rgb(23, 23, 23);
-    font-family: NotoSans-Regular, Arial, sans-serif;
+    font-family:   'Noto Sans', Arial, sans-serif;
     color: rgb(255, 255, 255);
 }
 
 main {
     display: block;
-}
-
-.logo-rakuten {
-    width: 40vw;
-    height: 10vh;
 }
 
 p {
@@ -79,6 +74,7 @@ img_img:hover {
 .nav__desktop {
     background-color: rgb(0, 0, 0);
     color: white;
+    height: 8vh;
     display: none;
     flex-direction: row;
     align-content: space-between;
@@ -86,28 +82,30 @@ img_img:hover {
     top: 0px;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 1vh;
 }
 
 .nav__left {
     justify-content: flex-start;
 }
 
-.left__logo-rakuten {
-    height: 8vh;
-    width: 28vh;
-    padding: 1vh;
-}
-
 .nav__right {
     justify-content: flex-end;
 }
-
+button{
+    background-color: rgb(247, 216, 0);
+    height: 4vh;
+    width: 20vh;
+    border: none;
+    border-radius: 00.5vh;
+}
 /*Principal slide Selectors*/
 
 .principal-slide {
     position: relative;
     width: 100%;
     overflow: hidden;
+    background-color: black;
 }
 
 .principal-slide__input {
