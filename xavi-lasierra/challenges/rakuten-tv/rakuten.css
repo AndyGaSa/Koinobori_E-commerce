@@ -6,6 +6,8 @@
 }
 
 .header-container {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,6 +85,10 @@
     left: 20px;
 }
 
+.search__icon--white {
+    color: white;
+}
+
 .search__input {
     background-color: #333333;
     padding: 10px 10px 10px 40px;
@@ -124,6 +130,10 @@
     background-color: #FFE300;
     border-radius: 2px;
     color: #252525;
+}
+
+.main-container {
+    background-color: #171717;
 }
 
 /*CAROUSEL*/
@@ -174,13 +184,13 @@
   }
   
   .carousel {
-    margin-top: 20px;
     display: block;
-    position: relative;
-    padding-top: 75%;
-    width: 100%;
-    max-height: 600px;
-    height: 75vw;
+    position: absolute;
+    top: 0;
+    padding-top: 37vw;
+    width: 100vw;
+    height: 40vw;
+    background-color: #171717;
   }
   
   .carousel__viewport {
@@ -195,7 +205,6 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     height: 100%;
-    max-height: 600px;
   }
   
   .carousel__slide {
@@ -204,14 +213,8 @@
     width: 100%;
   }
   
-  .carousel__slide:nth-child(even) {
-    background-color: #99f;
-  }
-  
   .carousel__slide:before {
     position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate3d(-50%,-40%,70px);
     color: #fff;
     font-size: 2em;
@@ -223,7 +226,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    max-height: 500px;
     scroll-snap-align: center;
   }
   
@@ -275,7 +277,7 @@
   
   .carousel__navigation {
     position: absolute;
-    padding: 0 40vw;
+    padding: 0 45vw;
     right: 0;
     left: 0;
     text-align: center;
@@ -291,14 +293,19 @@
   
   .carousel__navigation-button {
     display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #333;
+    width: 1rem;
+    height: 1rem;
+    background-color: #fff;
+    opacity: 0.25;
     background-clip: content-box;
     border: 0.25rem solid transparent;
     border-radius: 50%;
     font-size: 0;
     transition: transform 0.1s;
+  }
+
+  .carousel__navigation-button:active {
+    opacity: 1;
   }
   
   .carousel::before,
@@ -307,25 +314,19 @@
   .carousel__next {
     position: absolute;
     margin: 0 15vw;
+    margin-top: 20vw;
     top: 0;
-    margin-top: 300px;
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     transform: translateY(-50%);
     border-radius: 50%;
     font-size: 0;
-    outline: 0;
-  }
-  
-  .carousel::before,
-  .carousel__prev {
-    display: none;
-    left: -1rem;
+    opacity: 0.5;
   }
   
   .carousel::after,
   .carousel__next {
-    display: none;
+    display: block;
     right: -1rem;
   }
   
@@ -352,26 +353,26 @@
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 center;
+    background-position: center center;
   }
   
   #carousel__slide1 {
-    background-image: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5df77470cdc72-png/1080X600.png);
+    background-image: url(https://images-3.wuaki.tv/system/images/8894/original/hasta-el-cielo-1625479330-width1920-quality80.jpeg);
   
   }
   
   #carousel__slide2 {
-    background-image: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5c6c4d1de-png/1080X600.png);
+    background-image: url(https://images-0.wuaki.tv/system/images/8893/original/inmune-1625479302-width1920-quality80.jpeg);
   
   }
   
   #carousel__slide3 {
-    background-image: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-60e2ade0af856-png/1080X600.png);
+    background-image: url(https://images-1.wuaki.tv/system/images/8814/original/fast-and-furious-promo-1624866349-width1920-quality80.jpeg);
   
   }
   
   #carousel__slide4 {
-    background-image: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5ea8a9d45-png/1080X600.png);
+    background-image: url(https://images-3.wuaki.tv/system/images/8813/original/nomadland-1624866195-width1920-quality80.jpeg);
   
   }
   
@@ -392,6 +393,19 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .carousel{
+        padding-top: 28vw;
+        height: 30vw;
+        position: relative;
+    }
+
+    .carousel::before,
+    .carousel::after,
+    .carousel__prev,
+    .carousel__next {
+      margin-top: 15vw;
     }
 }
 
