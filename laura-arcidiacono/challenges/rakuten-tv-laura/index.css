@@ -2,14 +2,24 @@
     box-sizing: border-box;
     padding: 0;
 }
-
 /*General selectors*/
+body {
+    margin: 0px 0px 0px 0px;
+    background-color:rgb(23, 23, 23);
+    font-family: NotoSans-Regular,Arial,sans-serif;
+    color: rgb(255, 255, 255);
+}
+header, nav {
+    display: flex;
+}
 
 .logo-rakuten {
     width: 40vw;
     height: 10vh;
 }
-
+p, h3{
+    color: rgb(255, 255, 255);
+}
 a {
     outline: none;
     text-decoration: none;
@@ -24,16 +34,24 @@ a:hover {
     color: rgb(247, 216, 0);
 }
 
-/*Header mobile selectors*/
+img {
+    width: 100%;
+}
 
-.nav__mobile {
-    background-color: rgb(0, 0, 0);
-    color: rgb(153, 153, 153);
+/*Header mobile selectors*/
+.header-mobile{
+    display: flex;
+    height: 5vh;
     position: sticky;
     margin: 0px;
     bottom: 0px;
+    margin-top: auto;
+}
+.nav__mobile {
+    background-color: rgb(0, 0, 0);
+    color: rgb(153, 153, 153);
     font-size: 2vw;
-    height: 5vh;
+   
     text-align: center;
     display: flex;
 }
@@ -43,7 +61,7 @@ a:hover {
 .nav__desktop {
     background-color: rgb(0, 0, 0);
     color: white;
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
     align-content: space-between;
@@ -59,7 +77,139 @@ a:hover {
     justify-content: flex-end;
 }
 
-/*Principal Slider Selectors*/
-.principal-slider__input{
+/*Principal slide Selectors*/
+
+.principal-slide {
+    position: relative;
+    /*max-width: 1000px;*/
+    width: 100%;
+    overflow: hidden;
+}
+
+.principal-slide__input {
     visibility: hidden;
+}
+
+.principal-slide__img {
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: all 2s;
+    animation-name: slide-autoplay;
+    animation-duration: 20s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.img__item-slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+.principal-slide__pagination {
+    position: absolute;
+    bottom: 2vh;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    color: white;
+    opacity: 0.6;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 0.5vh;
+    text-align: center;
+}
+
+.pagination__item:hover {
+    opacity: 1;
+}
+
+input[id="1"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 0), 0, 0);
+}
+
+input[id="1"]:checked~.principal-slide__pagination .pagination__item[for="1"] {
+    opacity: 1;
+}
+
+input[id="2"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked~.principal-slide__pagination .pagination__item[for="2"] {
+    opacity: 1;
+}
+
+input[id="3"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked~.principal-slide__pagination .pagination__item[for="3"] {
+    opacity: 1;
+}
+
+input[id="4"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 3), 0, 0);
+}
+
+input[id="4"]:checked~.principal-slide__pagination .pagination__item[for="4"] {
+    opacity: 1;
+}
+
+input[id="5"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 4), 0, 0);
+}
+
+input[id="5"]:checked~.principal-slide__pagination .pagination__item[for="5"] {
+    opacity: 1;
+}
+
+input[id="5"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 5), 0, 0);
+}
+
+input[id="5"]:checked~.principal-slide__pagination .pagination__item[for="5"] {
+    opacity: 1;
+}
+
+@keyframes slide-autoplay {
+    16.6% {
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+    33.3% {
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+    50% {
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+    66.6% {
+        transform: translate3d(calc(-100% * 3), 0, 0);
+    }
+    83.3% {
+        transform: translate3d(calc(-100% * 4), 0, 0);
+    }
+    100% {
+        transform: translate3d(calc(-100% * 5), 0, 0);
+    }
 }
