@@ -4,6 +4,10 @@
         display: none;
         visibility: collapse;
     }
+    .main__utensils--mobile{
+        display: none;
+        visibility: collapse;
+    }
     .main-header--desktop{
         visibility: visible;
     }
@@ -12,6 +16,9 @@
 
 @media screen and (max-width: 600px) {
     .main-header--desktop{
+        visibility: visible;
+    }
+    .main__utensils--mobile{
         visibility: visible;
     }
     .main-header--desktop{
@@ -216,12 +223,10 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    justify-content: space-around;
 }
 
 .quick-access__news{
     background-color: #9faa4d;
-    padding-right: 8px;
     width: 130px;
     text-transform: uppercase;
     color: #ffffff;
@@ -231,7 +236,7 @@
     letter-spacing: 1px;
     line-height: 30px;
     text-align: center;
-    margin-left: 50px;
+    margin: 0 2px 2px 50px;
 }
 .quick-access__offers{
     background-color: #8e789d;
@@ -245,6 +250,7 @@
     letter-spacing: 1px;
     line-height: 30px;
     text-align: center;
+    margin: 0 10px 2px 2px;
 }
 .quick-access__search-text{
     height: 28px;
@@ -352,4 +358,81 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 10px 10px 200px 10px
+}
+
+.main__utensils{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+    background: #f8f8f8;
+    margin-bottom: 15px;
+    justify-content: center;
+
+
+}
+
+.img-first-group--desktop{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+.utensils__img-second-group{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.img-first-group--desktop__one-block img{
+    margin-left: 25px;
+
+}
+.img-first-group--desktop__two-block{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.img-first-group--desktop__two-block img, .img-first-group--desktop__one-block img{
+    padding: 7.5px;
+
+}
+.utensils__logo-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.utensils__logo-title img{
+    width: 100px;
+    height: 100px;
+    margin-top: -260px;
+}
+
+.logo-title__title{
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 20px 0;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    line-height: 22px;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: #2E2925;
+    margin-top: 60px;
+}
+.logo-title__title:before, .logo-title__title:after{
+    content: "";
+    display: block;
+    width: 218px;
+    height: 0;
+    margin: 0 auto;
+    border-top: 2px solid #2E2925
 }
