@@ -10,12 +10,20 @@ h1, h2{
 }
 
 /*HEADER*/
-.header{}
+.header{
+    
+}
 
 
-.header__links-group{}
+.header__links-group{
+    display: flex;
+    flex-direction: row;
+}
 
-.links-group__friends-site{}
+.links-group__friends-sites{
+    display: flex;
+
+}
 
 .friends--sites__home{
     display: block;
@@ -39,23 +47,65 @@ h1, h2{
 }
 
 .links-group__login img{
+
     width: 27px;
     height: 27px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
 }
-.links-group__social-media{}
+.links-group__social-media{
+    display: flex;
+    flex-direction: row;
+}
 
-.social-media__facebook{}
+.social-media__facebook{
+    display: block;
+    width: 25px;
+    height: 20px;
+    margin: 13px 7px 0;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat transparent;
+    background-position: -3px -539px;
+}
 
-.social-media__twiter{}
+.social-media__twiter{
+    display: block;
+    width: 25px;
+    height: 20px;
+    margin: 13px 7px 0;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat transparent;
+    background-position: -34px -539px;  
+}
 
-.social-media__insta{}
+.social-media__insta{
+    display: block;
+    width: 25px;
+    height: 20px;
+    margin: 15px 7px 0;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat transparent;
+    background-position: -69px -492px;
+}
 
-.social-media__pinteres{}
+.social-media__pinteres{
+    display: block;
+    width: 25px;
+    height: 20px;
+    margin: 15px 7px 0;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat transparent;
+    background-position: -104px -492px;
+}
 
-.social-media__youtube{}
+.social-media__youtube{
+    display: block;
+    width: 25px;
+    height: 20px;
+    margin: 15px 7px 0;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat transparent;
+    background-position: -175px -492px;
+}
 
-.links-group__search-buy{}
+.links-group__search-buy{
+    display: flex;
+    flex-direction: row;
+}
 
 .search-buy__magnifying {
     display: block;
@@ -85,9 +135,14 @@ h1, h2{
 
 .header__site-logo{}
 
-.header__search-section{}
+.header__search-section{
+    
+}
 
-.search-section__products{}
+.search-section__products{
+    display: flex;
+    flex-direction: row;
+}
 
 .products__news{
     display: inline-block;
@@ -248,7 +303,7 @@ h1, h2{
 }
 .tematicas__triangle{
     background:rgba(255,255,255,0.8);
-    background-image:url(https://static3.marialunarillos.com/media/wysiwyg/fiestaspersonajes.jpg);
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
     height: 150px;
     width: 100px;
 }
