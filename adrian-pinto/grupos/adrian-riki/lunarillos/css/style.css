@@ -176,25 +176,103 @@ h1, h2{
     background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/utensiliosML.png);
     background-repeat: no-repeat;
     background-size: 50%;
-    font-size: 15px;
-    letter-spacing: 1px;
-    color: #2E2925;
     width: 80px;
     height: 80px;
-    text-transform: uppercase;
-    padding: 0;
+}
+
+.type__tools span {
+    position: relative;
+    top: 5em;
+    color: #2E2925;
+    font-size: 15px;
+    letter-spacing: 1px;
     text-align: center;
     font-weight: 600;
 }
 
+.type__ingredients{
+    display: block;
+    background-position: center;
+    background-color: #f2f2f2;
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/magdalena.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 80px;
+    height: 80px;
+}
 
-.type__ingredients{}
+.type__ingredients span {
+    position: relative;
+    top: 5em;
+    color: #2E2925;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 600;
+}
 
-.type__partys{}
+.type__partys{
+    display: block;
+    background-position: center;
+    background-color: #f2f2f2;
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/tarta-cumpleanos.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 80px;
+    height: 80px;
+}
 
-.type__brands{}
+.type__partys span {
+    position: relative;
+    top: 5em;
+    color: #2E2925;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 600;
+}
 
-.type__blog{}
+.type__brands{
+    display: block;
+    background-position: center;
+    background-color: #f2f2f2;
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/delantal.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.type__brands span {
+    position: relative;
+    top: 5em;
+    color: #2E2925;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.type__blog{
+    display: block;
+    background-color: #f2f2f2;
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/menu-hover.svg);
+    background-repeat: no-repeat;
+    background-position: -320px 0;
+    background-size: 560px;
+    width: 80px;
+    height: 80px;
+}
+
+.type__blog span {
+    position: relative;
+    top: 5em;
+    color: #2E2925;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 600;
+}
 
 /*SERVICES*/
 
