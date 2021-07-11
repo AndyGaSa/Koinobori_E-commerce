@@ -29,6 +29,7 @@ h1, h2{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 2em;
 }
 
 .links-group__menu-btn {
@@ -64,11 +65,17 @@ h1, h2{
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/mumuchu.png) #F6B436 bottom center no-repeat;
 }
 
-.links-group__login img{
+.links-group__login {
+    display: flex;
+    align-items: center;
+    height: 51px;
+}
 
-    width: 27px;
-    height: 27px;
-    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
+.links-group__login span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg") 0 0 no-repeat transparent;
 }
 .links-group__social-media{
     display: flex;
@@ -162,7 +169,15 @@ h1, h2{
     flex-direction: row;
 }
 
-.products__news{
+.products__news {
+    display: flex;
+    align-items: center;
+    background-color: #9faa4d;
+    color: white;
+    padding-right: .5em;
+}
+
+.products__news span{
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -680,9 +695,17 @@ h1, h2{
     background: #FF5959
 }
 
-@media ( min-width: 600px) {
+@media ( max-width: 600px) {
     body {
         background-color: red;
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .header__links-group {
+        
     }
 
     .links-group__friends-sites {
@@ -693,11 +716,14 @@ h1, h2{
         display:  none;
     }
 
-    .links-group__login span {
+    .links-group__login {
         display: none;
     }
 
     .header__search-section {
+        display: none;
+    }
+    .brands {
         display: none;
     }
 }
