@@ -82,12 +82,27 @@
 
 .container__accesorios{}
 
-.services__add-more{}
+.services__add-more{
+    background: #FF5959;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 1px;
+    border: 0;
+}
 
 /*BRANDS*/
 .brands{}
-.brands__partners{}
-.brands__add-more{}
+.brands__partners{
+    filter: grayscale(100%);
+}
+.brands__add-more{
+    background: #FF5959;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 1px;
+    border: 0;
+
+}
 /*TRANSPORT-INFO*/
 .transport-info{}
 
