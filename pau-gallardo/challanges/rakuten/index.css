@@ -1,11 +1,16 @@
-*{
-
+*{    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:white;
+    background-color: rgb(23,23,23);
 }
 
 .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: black;
 }
 
 .header__nav-1{
@@ -19,3 +24,99 @@
     flex-direction: row;
     justify-content: flex-end;
 }
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main__pelis{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__nav-1_cinema{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header__nav-1__logo{
+    margin: 15px;
+    align-self: center;
+}
+
+.header__nav-1__cinema-1{
+    margin: 15px;
+    align-self: center;
+}
+
+.header__nav-1__gratis{
+    margin: 15px;
+    align-self: center;
+}
+
+.header__nav-1__subs{
+    margin: 15px;
+    align-self: center;
+}
+
+.header__nav-1__form{
+    margin: 15px;
+    align-self: center;
+}
+
+.header__nav-2__ayuda{
+    margin: 15px;
+    align-self: center;
+}
+
+.header__nav-2__entrar{
+    margin: 15px;
+    align-self: center;
+}
+
+.header__nav-2__registrarse{
+    margin: 15px;
+    align-self: center;
+}
+
+.main__slide{
+    height: auto;
+    width: auto;
+}
+
+.main__gratis{
+    margin: 20px 0px 13px 20px;
+}
+
+.main__pelis__foto{
+    margin: 3px;
+    width: auto;
+    height: 275px;
+}
+
+.main__pelis__foto:hover{
+    outline: 1px solid gold;
+    outline-offset: 0px;
+    cursor: pointer;
+}
+
+.header__nav-1__cinema-1::after{
+    content: '▼';
+    margin-left: 4px;
+    font-size: 10px;
+}
+
+.header__nav-1__cinema-1:hover{
+    color: gold;
+}
+
+.header__nav-1__cinema-1:hover::after{
+    content: 'ASDASFA';
+    margin-left: 4px;
+    font-size: 10px;
+}
+
