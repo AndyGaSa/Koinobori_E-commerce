@@ -137,7 +137,6 @@
     height: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 }
 
@@ -384,6 +383,7 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
 /*END CAROUSEL*/
 .scrollable {
     width: 100vw;
+    margin-top: 35vw;
 }
 
 .scrollable__list {
@@ -402,17 +402,24 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
 }
 
 .scrollable__list .scrollable__item {
+    margin: 0 1vw;
     flex-grow: 0;
     flex-shrink: 0;
     max-width: 100%;
     scroll-snap-align: center;
 }
 
-.scrollable__list .scrollable__item a {
+.scrollable__item a {
     display: block;
     background-size: cover;
-    width: 40vw;
-    height: 25vw;
+    width: 60vw;
+    height: 35vw;
+}
+
+.scrollable__empty a {
+    display: block;
+    width: 30vw;
+    height: 35vw;
 }
 
 #scrollable__item1 a{
@@ -454,6 +461,7 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     z-index: 10;
     background-color: transparent;
     border: none;
+    visibility: hidden;
 }
 
 .scrollable__next-button {
@@ -494,6 +502,24 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     .carousel__prev,
     .carousel__next {
       margin-top: 15vw;
+    }
+
+    .scrollable {
+        margin-top: 0;
+    }
+
+    .scrollable__item a {
+        width: 18vw;
+        height: 12vw;
+    }
+    
+    .scrollable__empty a {
+        display: none;
+    }
+
+    
+    .scrollable__buttons-container {
+        display: none;
     }
 }
 
