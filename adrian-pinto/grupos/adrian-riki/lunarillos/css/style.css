@@ -66,13 +66,13 @@ h1, h2{
     background-position: -3px -539px;
 }
 
-.social-media__twiter{
+.social-media__twitter{
     display: block;
     width: 25px;
     height: 20px;
     margin: 13px 7px 0;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat transparent;
-    background-position: -34px -539px;  
+    background-position: -40px -540px;  
 }
 
 .social-media__insta{
@@ -81,7 +81,7 @@ h1, h2{
     height: 20px;
     margin: 15px 7px 0;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat transparent;
-    background-position: -69px -492px;
+    background-position: -75px -540px;
 }
 
 .social-media__pinteres{
@@ -90,7 +90,7 @@ h1, h2{
     height: 20px;
     margin: 15px 7px 0;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat transparent;
-    background-position: -104px -492px;
+    background-position: -110px -540px;
 }
 
 .social-media__youtube{
