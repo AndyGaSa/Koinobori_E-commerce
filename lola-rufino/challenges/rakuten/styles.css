@@ -1,0 +1,31 @@
+*{
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    cursor: pointer;
+}
+
+.main-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: black;
+    color: white;
+}
+
+.link__submenu-container{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.main-header__button{
+    color: black;
+    background-color: #F0D500;
+    border: 0;
+    width: 113px;
+    height: 36px;
+    border-radius: 5%;
+    margin-right: 10px;
+}
