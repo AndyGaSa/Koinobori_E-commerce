@@ -19,37 +19,40 @@
 <body>
     <header class="main-header">
         <nav class="main-header__nav-fixed nav-fixed">
-            <section class="nav-fixed__main-icons main-icons">
-                <div class="main-icons__container-icons-maria container-icons-maria">
+            <section class="nav-fixed__main-icons hidden main-icons">
+                <div class="main-icons__container-icons-maria hidden container-icons-maria">
                     <img class="container-icons-maria__marialunarillos"
                         src="https://i.ibb.co/zJ9swRW/maria-lunarillos.png" alt="Maria Lunarillos Logo">
                 </div>
-                <div class="main-icons__container-icons-cucute container-icons-cucute">
+                <div class="main-icons__container-icons-cucute hidden container-icons-cucute">
                     <img class="container-icons-cucute__cucute" src="https://i.ibb.co/93Hfh3p/cucute.png"
                         alt="Cucute Logo">
                 </div>
-                <div class="main-icons__container-icons-mumuchu container-icons-mumuchu">
+                <div class="main-icons__container-icons-mumuchu hidden container-icons-mumuchu">
                     <img class="container-icons-mumuchu__mumuchu" src="https://i.ibb.co/rmj8YZ4/mumuchu.png"
                         alt="Mumuchu Logo">
                 </div>
             </section>
             <div class="nav-fixed1">
+                <figure class="nav-fixed__mobile"></figure>
                 <section class="nav-fixed__user-login user-login">
                     <figure class="user-login__user-icon"></figure>
-                    <figure class="user-login__text-login">ENTRA | REGÍSTRATE</figure>
+                    <figure class="user-login__text-login hidden">ENTRA | REGÍSTRATE</figure>
                 </section>
-                <section class="nav-fixed__social-icons social-icons">
+                <section class="nav-fixed__social-icons hidden social-icons">
                     <figure class="social-icons__facebook-icon"></figure>
                     <figure class="social-icons__twitter-icon"></figure>
                     <figure class="social-icons__instagram-icon"></figure>
                     <figure class="social-icons__pinterest-icon"></figure>
                     <figure class="social-icons__youtube-icon"></figure>
                 </section>
+                <figure class="nav-fixed__lens"></figure>
                 <figure class="nav-fixed__trolley trolley"></figure>
                 <figure class="nav-fixed__trolley-number trolley-number">0</figure>
             </div>
         </nav>
-        <section class="main-header__bottom-header bottom-header">
+        <section class="main-header-mobile"></section>
+        <section class="main-header__bottom-header hidden bottom-header">
             <img class="bottom-header__biglogo-marialunarillos"
                 src="https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/logo.svg"
                 alt="Maria Lunarillos Big Logo">
@@ -117,19 +120,20 @@
                 </figure>
             </section>
             <section class="image-container__vertical-photo">
-                <h4>ACCESORIOS PARA FIESTAS</h4>
-                <p>Farolillos, pompones, guirnaldas, confeti, globos... ¡Decora tu fiesta!</p>
+                <h4 class="photo-container-three__text">ACCESORIOS PARA FIESTAS</h4>
+                <p class="photo-container-three__text">Farolillos, pompones, guirnaldas, confeti, globos... ¡Decora tu fiesta!</p>
+                <div class="background-letters-three"></div>
             </section>
         </section>
         <button class="main-body__button">VER MÁS</button>
     </main>
     <footer class="footer-main">
-        <section class="main-body__header-decoration">
+        <section class="main-body__header-decoration hidden">
             <div class="header-decoration__line-decorative"></div>
             <span class="header-decoration__title-party">N U E S T R A S M A R C A S</span>
             <div class="header-decoration__line-decorative"></div>
         </section>
-        <section class="footer-main__brands">
+        <section class="footer-main__brands hidden">
             <img class="brands_image" src="https://static3.marialunarillos.com/media/catalog/category/Wilton_4.png">
             <img class="brands_image"
                 src="https://static3.marialunarillos.com/media/catalog/category/Emile_Henry_2.png">
@@ -157,51 +161,58 @@
                 src="https://static3.marialunarillos.com/media/catalog/category/Rainbow_Dust_1.png">
             <img class="brands_image" src="https://static3.marialunarillos.com/media/catalog/category/LorAnn_1.png">
         </section>
-        <button class="main-body__button">VER MÁS</button>
+        <button class="main-body__button hidden">VER MÁS</button>
         <section class="footer-main__delivery">
             <section class="delivery__truck delivery">
-                <figure></figure>
+                <figure class="delivery__truckfig"></figure>
                 <h4>PEDIDOS GRATIS</h4>
                 <span>PEDIDOS SUPERIORES A 70€</span>
             </section>
             <section class="delivery__clock delivery">
-                <figure></figure>
+                <figure class="delivery__clockfig"></figure>
                 <h4>ENVÍO 24-48 HORAS</h4>
                 <span>HAZ TU PEDIDO ANTES DE LAS 18:00H</span>
             </section>
             <section class="delivery__card delivery">
-                <figure></figure>
+                <figure class="delivery__cardfig"></figure>
                 <h4>DEVOLUCIONES</h4>
                 <span>30 DÍAS PARA DEVOLVER TU COMPRA</span>
             </section>
             <section class="delivery__creditcard delivery">
-                <figure></figure>
+                <figure class="delivery__creditcardfig"></figure>
                 <h4>CONTRA REEMBOLSO</h4>
                 <span>SIN COMISIÓN</span>
             </section>
         </section>
         <section class="footer-main__aboutus">
             <section class="aboutus__follow">
-                <span>Síguenos</span>
-                <figure></figure>
+                <span class="follow-header">SÍGUENOS</span>
+                <figure class="follow-fig"></figure>
             </section>
             <section class="aboutus_email">
-                <span>RECIBE LAS NOTICIAS EN TU E-MAIL</span>
-                <input>
-                <span>Acepto la política de privacidad</span>
+                <span class="email-header">RECIBE LAS NOTICIAS EN TU E-MAIL</span>
+                <div class="input-container">
+                <input class="aboutus_input">
+                <button class="input__button hidden" type="submit">SUSCRÍBETE ></button>
+                </div>
+                <div class="policity-check">
+                <input class="checkbox-check" type="checkbox"></input>
+                <span class="policity-word">Acepto la política de privacidad</span>
+                </div>
+                <button class="button-mobile" type="submit">SUSCRÍBETE ></button>
             </section>
-            <section>
-                <span>
-                    <figure></figure>
-                    <span>CONTACTO</span>
+            <section class="container-about-header">
+                <span class="container-about">
+                    <figure class="contact-fig"></figure>
+                    <span class="header-contact-container">CONTACTO</span>
                 </span>
-                <span>
-                    <figure></figure>
-                    <span>SOBRE NOSOTROS</span>
+                <span class="container-about">
+                    <figure class="aboutusfig"></figure>
+                    <span class="header-contact-container">SOBRE NOSOTROS</span>
                 </span>
-                <span>
-                    <figure></figure>
-                    <span>CONDICIONES DE VENTA</span>
+                <span class="container-about">
+                    <figure class="conditionsfig"></figure>
+                    <span class="header-contact-container">CONDICIONES DE VENTA</span>
                 </span>
             </section>
         </section>
