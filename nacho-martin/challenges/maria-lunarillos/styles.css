@@ -14,6 +14,8 @@ h4 {
 }
 
 a {
+    color: #67635F;
+    ;
     text-decoration: none;
 }
 
@@ -27,6 +29,93 @@ body {
 
 header {
     justify-content: center;
+}
+
+.main-pages {
+    display: flex;
+}
+
+.lunarillos {
+    width: 70px;
+    height: 180px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/maria-lunarillos.png) #FF5959 bottom center no-repeat;
+}
+
+.cucute {
+    width: 60px;
+    height: 70px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/cucute.png) #6199AF bottom center no-repeat;
+}
+
+.mumuchu {
+    width: 60px;
+    height: 70px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/mumuchu.png) #F6B436 bottom center no-repeat;
+    ;
+}
+
+.header__login {
+    display: flex;
+}
+
+.header__media {
+    display: flex;
+    justify-content: center;
+}
+
+.facebook-icon {
+    width: 25px;
+    height: 20px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) transparent -5px -540px no-repeat;
+    display: block;
+}
+
+.facebook-icon:hover {
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) transparent -5px -500px no-repeat;
+}
+
+.twitter-icon {
+    width: 25px;
+    height: 20px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) transparent -40px -540px no-repeat;
+    display: block;
+}
+
+.twitter-icon:hover {
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) transparent -40px -500px no-repeat;
+}
+
+.instagram-icon {
+    width: 25px;
+    height: 20px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) transparent -75px -540px no-repeat;
+    display: block;
+}
+
+.instagram-icon:hover {
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) transparent -75px -500px no-repeat;
+}
+
+.pinterest-icon {
+    width: 25px;
+    height: 20px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) transparent -110px -540px no-repeat;
+    display: block;
+}
+
+.pinterest-icon:hover {
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) transparent -110px -500px no-repeat;
+}
+
+.youtube-icon {
+    width: 25px;
+    height: 20px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) transparent -180px -540px no-repeat;
+    display: block;
+}
+
+.youtube-icon:hover {
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) transparent -180px -500px no-repeat;
 }
 
 .header-navigator {
@@ -49,6 +138,7 @@ header {
     height: 27px;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat;
     margin: 10px;
+    display: flex;
 }
 
 .user-icon:hover {
@@ -100,70 +190,71 @@ header {
     display: flex;
     padding-top: 100px;
     height: 100px;
-    margin: 0 auto;
+    margin: 0 auto 80px;
 }
 
-.summary__image {
-    margin-top: 80px;
-    height: 95vw;
-    width: 100%;
-    animation-name: summary-carrusel;
-    animation-duration: 35000ms;
-    animation-iteration-count: infinite;
-}
-
-@keyframes summary-carrusel {
+@keyframes summary-slide {
     0%,
     100% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-60e2ade0af856-png/1080X600.png);
-        background-size: 180% 100%;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
     }
     10% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5ea8a9d45-png/1080X600.png);
-        background-size: 180% 100%;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
     }
     20% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-60b4ce5b54e1a-png/1080X600.png);
-        background-size: 180% 100%;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
     }
     30% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5d01295f96f37-png/1080X600.png);
-        background-size: 180% 100%;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
     }
     40% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5f6b1d475371c-png/1080X600.png);
-        background-size: 180% 100%;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
     }
     50% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-608bbdc34f1b1-png/1080X600.png);
-        background-size: 180% 100%;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
     }
     60% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5f9aaa201f89c-png/1080X600.png);
-        background-size: 180% 100%;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
     }
     70% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5c2955721-png/1080X600.png);
-        background-size: 180% 100%;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
     }
     80% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5df77470cdc72-png/1080X600.png);
-        background-size: 180% 100%;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
     }
     90% {
         background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5c6c4d1de-png/1080X600.png);
-        background-size: 180% 100%;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
     }
+}
+
+.summary__image {
+    height: 95vw;
+    max-height: 410px;
+    width: 100%;
+    animation-name: summary-slide;
+    animation-duration: 35000ms;
+    animation-iteration-count: infinite;
+    background-size: 100% 100%;
 }
 
 .products {
@@ -621,4 +712,69 @@ footer {
     background-color: #FF5959;
     color: #fff;
     font-size: 14px;
+}
+
+@media screen and (max-width: 600px) {
+    .desktop-only {
+        display: none;
+    }
+    @keyframes summary-slide {
+        0%,
+        100% {
+            background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-60e2ade0af856-png/1080X600.png);
+            background-size: 180% 100%;
+            background-repeat: no-repeat;
+        }
+        10% {
+            background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5ea8a9d45-png/1080X600.png);
+            background-size: 180% 100%;
+            background-repeat: no-repeat;
+        }
+        20% {
+            background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-60b4ce5b54e1a-png/1080X600.png);
+            background-size: 180% 100%;
+            background-repeat: no-repeat;
+        }
+        30% {
+            background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5d01295f96f37-png/1080X600.png);
+            background-size: 180% 100%;
+            background-repeat: no-repeat;
+        }
+        40% {
+            background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5f6b1d475371c-png/1080X600.png);
+            background-size: 180% 100%;
+            background-repeat: no-repeat;
+        }
+        50% {
+            background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-608bbdc34f1b1-png/1080X600.png);
+            background-size: 180% 100%;
+            background-repeat: no-repeat;
+        }
+        60% {
+            background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5f9aaa201f89c-png/1080X600.png);
+            background-size: 180% 100%;
+            background-repeat: no-repeat;
+        }
+        70% {
+            background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5c2955721-png/1080X600.png);
+            background-size: 180% 100%;
+            background-repeat: no-repeat;
+        }
+        80% {
+            background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5df77470cdc72-png/1080X600.png);
+            background-size: 180% 100%;
+            background-repeat: no-repeat;
+        }
+        90% {
+            background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5c6c4d1de-png/1080X600.png);
+            background-size: 180% 100%;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mobile-only {
+        display: none;
+    }
 }
