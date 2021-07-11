@@ -466,3 +466,18 @@ body {
     text-align: center;
     align-self: center;
 }
+
+.body-web__footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-method {
+    width: 90%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
