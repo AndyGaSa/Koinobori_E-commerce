@@ -386,7 +386,7 @@ header {
 }
 
 .media {
-    padding: 50px;
+    padding: 75px 0 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -462,20 +462,21 @@ h5 {
 
 .newsletter {
     margin: 0 auto;
-    padding: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #F8F8F8;
 }
 
 .newsletter__form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 325px;
+    width: 325px;
     border-top: 1px solid;
     border-bottom: 1px solid;
+    margin: 0 auto;
+    padding: 30px 0;
 }
 
 .newsletter__title {
@@ -491,6 +492,7 @@ h5 {
 .newsletter__email-field {
     width: 100%;
     height: 40px;
+    padding: unset;
 }
 
 .policy-group {
@@ -519,8 +521,61 @@ h5 {
     color: #fff;
     background: #FF5959;
     border: none;
+    margin-bottom: 30px;
 }
 
 .newsletter__submit:hover {
     opacity: 50%;
+}
+
+.pages-of-interest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F8F8F8;
+    padding: 30px 0 90px;
+}
+
+.pages-title {
+    width: fit-content;
+    margin: 0 auto;
+    color: #FF5959;
+    font-weight: 400;
+}
+
+.pages-of-interest__link {
+    height: 60px;
+    margin: 0 auto 10px;
+}
+
+.pages-of-interest__link:hover {
+    text-decoration: underline #FF5959;
+}
+
+.p-o-i__icon {
+    display: block;
+    width: 30px;
+    height: 31px;
+    margin: 0 auto 10px;
+}
+
+.p-o-i__icon--contact {
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -207px no-repeat;
+}
+
+.p-o-i__icon--about {
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -247px no-repeat;
+}
+
+.p-o-i__icon--terms {
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -286px no-repeat;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    background-color: #FF5959;
+    color: #fff;
+    font-size: 14px;
 }
