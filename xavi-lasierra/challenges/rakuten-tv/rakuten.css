@@ -5,6 +5,14 @@
     font-family: NotoSans-Bold,Arial,sans-serif;
 }
 
+.main-container {
+    background-color: #171717;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .header-container {
     position: relative;
     z-index: 1;
@@ -130,14 +138,6 @@
     background-color: #FFE300;
     border-radius: 2px;
     color: #252525;
-}
-
-.main-container {
-    background-color: #171717;
-    height: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 /*CAROUSEL*/
@@ -386,6 +386,10 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     margin-top: 35vw;
 }
 
+.scrollable--vertical {
+    margin-top: 0;
+}
+
 .scrollable__list,
 .scrollable__list-vertical {
     list-style: none;
@@ -402,7 +406,7 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     display: none;
 }
 
-.scrollable__list .scrollable__item {
+.scrollable__item {
     margin: 0 1vw;
     flex-grow: 0;
     flex-shrink: 0;
@@ -414,7 +418,7 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     display: block;
     background-size: cover;
     width: 60vw;
-    height: 35vw;
+    height: 37vw;
 }
 
 .scrollable__empty a {
@@ -444,10 +448,9 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
 }
 
 .scrollable__item--vertical a {
-    width: 60vw;
-    height: 35vw;
-    background-image: url(https://images-2.wuaki.tv/system/images/8815/original/fast-and-furious-promo-3-0-1624866397-width308-quality80.png);
-
+    width: 55vw;
+    height: 78vw;
+    background-image: url(https://images-0.wuaki.tv/system/artworks/26653/original/dying-of-the-light-1611333563-width217-quality80.jpeg);
 }
 
 .scrollable__buttons-container {
@@ -481,6 +484,18 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     background-color: transparent;
     border: none;
 }
+
+.scrollable__buttons-container--vertical {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    margin: auto;
+    position: relative;
+    bottom: 40vw;
+}
+
   
 
 @media screen and (min-width: 1024px){
@@ -528,6 +543,18 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     
     .scrollable__buttons-container {
         display: none;
+    }
+
+    
+    .scrollable__item--vertical a {
+        width: 13vw;
+        height: 18vw;
+    }
+
+    .scrollable__buttons-container--vertical {
+        display: flex;
+        width: 90vw;
+        bottom: 10vw;
     }
 }
 
