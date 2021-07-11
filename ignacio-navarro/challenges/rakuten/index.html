@@ -5,25 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rakuten TV</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav class="navigation-bar">
-            <img class="navigation-bar__image" src="logo.svg" alt="">
-            <a href="#" class="navigation-bar__item navigation-bar__item--dropdown">cinema</a>
-            <div class="dropdown__content">
-                <a class="dropdown__link" href="#">Link 1</a>
-                <a class="dropdown__link" href="#">Link 2</a>
-                <a class="dropdown__link" href="#">Link 3</a>
+            <img class="navigation-bar__image" src="logo.svg" alt="rakuten logo">
+            <div class="dropdown">
+                <button class="navigation-bar__item dropdown__button">cinema</button>
+                    <div class="dropdown__content">
+                        <a class="navigation-bar__item navigation-bar__item--drowpdown-list-item" href="#">Link 1</a>
+                        <a class="navigation-bar__item navigation-bar__item--drowpdown-list-item" href="#">Link 2</a>
+                        <a class="navigation-bar__item navigation-bar__item--drowpdown-list-item" href="#">Link 3</a>
+                    </div>
+                </div>
             </div>
             <a href="#" class="navigation-bar__item">gratis</a>
-            <a href="#" class="navigation-bar__item navigation-bar__item--dropdown">suscripciones</a>
-            <div class="dropdown__content">
-                <a class="dropdown__link" href="#">Link 1</a>
-                <a class="dropdown__link" href="#">Link 2</a>
-                <a class="dropdown__link" href="#">Link 3</a>
+            <div class="dropdown">
+                <button class="navigation-bar__item dropdown__button">suscripciones</button>
+                    <div class="dropdown__content">
+                        <a class="navigation-bar__item navigation-bar__item--drowpdown-list-item" href="#">Link 1</a>
+                        <a class="navigation-bar__item navigation-bar__item--drowpdown-list-item" href="#">Link 2</a>
+                        <a class="navigation-bar__item navigation-bar__item--drowpdown-list-item" href="#">Link 3</a>
+                    </div>
+                </div>
             </div>
-            <input type="text" class="navigation-bar__search-box">
+            <input type="text" class="navigation-bar__search-box" placeholder="Buscar">
             <a href="#" class="navigation-bar__item navigation-bar__item--grey">ayuda y dispositivos</a>
             <a href="#" class="navigation-bar__item">entrar</a>
             <a href="#" class="navigation-bar__item navigation-bar__item--yellow-button">registrarse</a>
