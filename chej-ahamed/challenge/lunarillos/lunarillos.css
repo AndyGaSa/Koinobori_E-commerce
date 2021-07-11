@@ -39,8 +39,7 @@ body{
     align-items: flex-start;
 }
 .fiestass{
-    align-items: center;
-    align-content: center;
+    text-align: center;
    
     
 }
@@ -52,4 +51,29 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+.top-left-img{
+    height: 250px;
+    width: 250px;
+    background-image: url(	https://static3.marialunarillos.com/media/catalog/category/hadas.jpg);
+}
+.bottom-left-sec{
+    height: 250px;
+    width: 250px;
+    background-image: url(https://static3.marialunarillos.com/media/catalog/category/corazones.jpg);
+}
+.right-central-sec {
+    height: 500px;
+    width: 300px;
+    background-image: url(https://static3.marialunarillos.com/media/catalog/category/fiestaspreppy.jpg);
+}
+.central-section{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+
 }
