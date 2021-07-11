@@ -89,17 +89,49 @@ h1, h2{
 
 .search-section__products{}
 
-.products__news{}
+.products__news{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg") -244px 4px no-repeat;
+}
 
-.products__oferts{}
-
-.products__search-btn{}
+.products__oferts{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg") -274px 4px no-repeat;
+}
 
 .products__search-bar{}
 
+.products__search-btn{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #BBB8B6 url("https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg") -314px 2px no-repeat;
+}
+
 .search-section__type{}
 
-.type__tools{}
+.type__tools{
+    display: block;
+    background-position: center;
+    background-color: #f2f2f2;
+    background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/utensiliosML.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #2E2925;
+    width: 80px;
+    height: 80px;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: center;
+    font-weight: 600;
+}
+
 
 .type__ingredients{}
 
