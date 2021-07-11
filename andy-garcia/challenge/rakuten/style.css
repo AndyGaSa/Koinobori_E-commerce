@@ -12,7 +12,9 @@ body {
 
 ul {
     list-style: none;
+    padding-left: 0;
 }
+
 
 header {
     width: 100vw;
@@ -70,7 +72,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     color: white;
-    padding-left: 0;
+    
 }
 
 .navbar__login {
@@ -81,7 +83,6 @@ footer {
     height: 100%;
     width: 19vw;
     color: white;
-    padding-left: 0;
 
 }
 
@@ -111,16 +112,73 @@ footer {
     background-color: white;
     
 }
-.main__slider{
+.main__slider--container{
     background-color: khaki;
-    flex: 45 1 auto;
+    flex: 35 1 auto;
+    height: 100%;
+    width: 84vw;
+    display: flex;
+    align-items:center;
+    justify-content: center;
 }
 .main__horizontal-cards{
     background-color: fuchsia;
-    flex: 20 1 auto;
+    flex: 25 1 auto;
 }
 .main__vertical-cards{
     background-color: grey;
-    flex: 25 1 auto;
+    flex: 30 1 auto;
 }
 
+ul.slider{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    
+}
+ul.slider li{
+    top: 0;
+    position: absolute;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+}
+ul.slider li img{
+    
+    width: 84vw;
+    height: 100%;
+    object-fit: cover;
+}
+ul.slider li:first-child{
+    opacity: 1;
+}
+.slider__menu{
+    position: absolute;
+    text-align: center;
+    margin-top: 70vh;
+    z-index: 3;
+}
+.slider__menu li{
+    display: inline-block;
+    text-align: center;
+
+}
+.slider__menu li a{
+    display: inline-block;
+    color:white;
+    text-decoration: none;
+    background-color: #57575E;
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    padding: 6px;
+
+}
+ul.slider li:target{
+    opacity: 1;
+}
+.slider__menu li a:hover{
+    background-color: #FFFFFF;
+}
