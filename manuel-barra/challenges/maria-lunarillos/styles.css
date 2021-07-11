@@ -28,9 +28,9 @@
 /*------> Header__header-top-links <---------*/
 
 .header-top-links {
-    background-color: blueviolet;
-    height: 11.6rem;
     width: 100%;
+    background-color: #F8F8F8;
+    height: 11.3rem;
 }
 
 .header-top-links__container-movile {
@@ -102,12 +102,6 @@
     align-items: center;
     background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
     background-position: -300px 12px;
-}
-
-.header-top-links__container-movile__car-box {
-    width: 3.3rem;
-    height: 3.3rem;
-    background-color: white;
 }
 
 .header-top-links__container-movile__car-box {
@@ -632,11 +626,6 @@
     display: none;
 }
 
-.header-top-links {
-    background-color: #F8F8F8;
-    height: 11.3rem;
-}
-
 @media only screen and (min-width: 600px) {
     .header-top-links {
         background-color: #F8F8F8;
@@ -673,7 +662,6 @@
         padding: 10px;
     }
     .header-top-links__container-desktop-three-links__item:nth-child(1) {
-        height: 130px;
         height: 130px;
         background-position: 0px 55px;
     }
