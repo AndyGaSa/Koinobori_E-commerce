@@ -1,0 +1,119 @@
+@font-face {
+    font-family:NotoSans-Bold;
+    src: url('NotoSans-Bold.ttf');
+}
+
+body{
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    background-color: black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header__nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cinema__submenu, .gratis__submenu{
+    display: none;
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+}
+
+.nav__cinema:hover .cinema__submenu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+}
+
+.suscriptores__submenu{
+    display: none;
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+}
+
+.nav__suscriptores:hover .suscriptores__submenu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+}
+
+.header__nav a {
+    font-size: 14px;
+    margin: 0.5em;
+    font-weight: bold;
+}
+
+.header__input{
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.input__btn{
+    background: #333333;
+    border: none;
+}
+
+.input__input{
+    background: #333333;
+    padding: 10px 10px 10px 40px;
+    width: 100%;
+    color: #ccc;
+    font-size: 16px;
+    transition: background-color .1s ease;
+    border: none;
+}
+
+.header__register a{
+    font-size: 14px;
+    margin: 0.5em;
+    font-weight: bold;
+}
+
+.register__entrar:hover, .register__ayuda:hover{
+    color: #ffe300;
+}
+
+.register__registrarse{
+    background-color: #ffe300;
+    color: black;
+    padding-right: 8px;
+    padding-left: 8px;
+    min-height: 32px;
+    border-radius: 5%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.body{
+    width: 80%;
+    height: 500px;
+    background-color: rosybrown;
+    align-items: center;
+}
