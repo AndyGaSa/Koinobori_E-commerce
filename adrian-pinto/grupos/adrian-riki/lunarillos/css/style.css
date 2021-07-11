@@ -5,19 +5,37 @@
     
 }
 
+body {
+
+}
+
 h1, h2{ 
     display: none;
 }
 
 /*HEADER*/
-.header{
-    
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15vw;
 }
 
 
 .header__links-group{
+    flex: 0 1 100vw;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+}
+
+.links-group__menu-btn {
+    width: 50px;
+    height: 50px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/burger_menu.png) no-repeat center left;
+    border: none;
 }
 
 .links-group__friends-sites{
@@ -582,4 +600,35 @@ h1, h2{
     height: 20px;
     width: 20px;
     background: #FF5959
+}
+
+@media ( min-width: 600px) {
+    body {
+        background-color: red;
+    }
+
+    .links-group__friends-sites {
+        display: none;
+    }
+
+    .links-group__social-media {
+        display:  none;
+    }
+
+    .links-group__login span {
+        display: none;
+    }
+
+    .header__search-section {
+        display: none;
+    }
+}
+
+@media ( min-width: 1023px) {
+    body {
+        background-color: green;
+    }
+    .links-group__menu-btn {
+        display: none;
+    }
 }
