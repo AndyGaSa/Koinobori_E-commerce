@@ -17,6 +17,9 @@
     justify-content: center;
     background-color: #F8F8F8;
     width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
 .top-header {
@@ -90,10 +93,13 @@
     width: 27px;
 }
 
-.login-button__login-icon:hover {
+.login-button:hover .login-button__login-icon {
   background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -37px 0 no-repeat;
 }
 
+.login-button:hover .login-button__text {
+  color: #FF5959;
+}
 
 .login-button__text{
     display: none;
@@ -160,6 +166,7 @@
     display: none;
     height: 120px;
     width: 1000px;
+    margin-top: 50px;
 }
 
 .mid-header__quick-access {
@@ -598,6 +605,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
+    width: 80vw;
 }
 
 .parties__1,
@@ -622,6 +631,7 @@
 }
 .parties__3 {
     background-image: url(https://static3.marialunarillos.com/media/wysiwyg/pompones.jpg);
+    margin: auto;
 }
 
 .parties__1 h3,
