@@ -73,7 +73,6 @@ img_img:hover {
 
 .nav__desktop {
     background-color: rgb(0, 0, 0);
-    color: white;
     height: 8vh;
     display: none;
     flex-direction: row;
@@ -86,12 +85,13 @@ img_img:hover {
 }
 
 .nav__left {
-    justify-content: flex-start;
+    display:flex;
+    align-items: baseline;
 }
-
 .nav__right {
     justify-content: flex-end;
 }
+
 
 button {
     background-color: rgb(247, 216, 0);
@@ -264,7 +264,7 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
 
 .img__carousel {
     display: flex;
-    position:relative;
+    position: relative;
 }
 
 .vertical-slide {
@@ -325,12 +325,13 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
     text-align: center;
     padding: 2vh;
 }
+
 /*Info film details*/
-.img__carousel:hover{
-    border:rgb(247, 216, 0) 1vh solid;
-}
+
+.img__carousel:hover {}
+
 .carousel__tooltip-film-detail {
-    position:absolute;
+    position: absolute;
     display: flex;
     flex-direction: column;
     background-color: grey;
@@ -339,15 +340,16 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
     align-items: center;
     z-index: 1;
     border-radius: 1vh;
-
 }
 
 .carousel__tooltip-film-detail::after {
-    content:"";
+    content: "";
 }
-.carousel__tooltip-film-detail:hover{
+
+.carousel__tooltip-film-detail:hover {
     display: flex;
 }
+
 /*Media Queries*/
 
 @media screen and (min-width: 600px) {
@@ -366,5 +368,4 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
     footer {
         text-align: center;
     }
-    
 }
