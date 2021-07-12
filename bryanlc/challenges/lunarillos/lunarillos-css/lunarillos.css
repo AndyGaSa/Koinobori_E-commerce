@@ -1,0 +1,208 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.direction--column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-logos--space{
+    margin-top: 3em;
+}
+
+.container--row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.headweb{
+background-color:#F8F8F8;
+}
+
+.user{
+    padding-left: 10em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo{
+    background-color: #FF5959;
+    justify-content: center;
+}
+
+.button{
+    width: 25px;
+    height: 20px;
+    background-color: red;
+    margin: 10px;
+}
+
+.button--addlogo{
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg)0 0 no-repeat;
+  
+    width: 27px;
+    height: 27px;
+    margin: 10px;
+    display: block;
+}
+.button--facebook{
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg)transparent 0 0 no-repeat;
+    background-position: -2px -539px;
+}
+
+.button--twiter{
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg)transparent 0 0 no-repeat;
+    background-position: -40px -540px;
+}
+
+.button--insta{
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg)transparent 0 0 no-repeat;
+     background-position: -75px -540px;
+}
+
+.button--pinterest{
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg)transparent 0 0 no-repeat;
+    background-position: -110px -540px;
+}
+
+.button--youtube{
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg)transparent 0 0 no-repeat;
+    background-position: -180px -540px;
+}
+
+.label--rosa{
+    width: 70px;
+    background:url("https://i.ibb.co/DMb6800/maria-lunarillos.png") #FF5959 bottom center no-repeat;
+}
+.label--lila{
+    width: 70px;
+    background:url("https://i.ibb.co/DMb6800/maria-lunarillos.png") #FF5959 bottom center no-repeat;
+}
+.label--orange{
+    width: 70px;
+    background:url("https://i.ibb.co/DMb6800/maria-lunarillos.png") #FF5959 bottom center no-repeat;
+}
+
+.menu-search{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
+.largo{
+    width: 40px;
+    background-color:#FF5959;
+}
+
+.button--star{
+     
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg)-242px 4px no-repeat;
+}
+.sublabels{
+    background-color: #FF5959;
+    width: 6em;
+    height: 1em;
+    text-align: center;
+}
+
+.option-sections__section{
+    background-color: #F8F8F8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 5em;
+    height: 4em;
+}
+
+.section__header{
+    padding: 3em;
+}
+
+.section--utensilios{
+    background-image: url(" https://i.ibb.co/sPv1zBC/utensilios-ML.png");
+   
+}
+.section--ingredientes{
+
+    background-image:url("    https://i.ibb.co/ZNJNz6w/magdalena.png");
+}
+
+.section--fiestas{
+
+    background-image:url("https://i.ibb.co/JccHTQC/tarta-cumpleanos.png");
+}
+
+.section--marcas{
+
+    background-image:url(" https://i.ibb.co/qgBnLjL/delantal.png");
+}
+
+.section--blog{
+
+    background-image:url("https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/icons/menu.svg");
+    background-position: -320px 0;
+    background-size: 560px
+}
+
+
+.section{
+    align-items: center;
+}
+.section__header__image{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 15em; 
+    height: 14em;
+}
+
+.section__header__text{
+    text-align: center;
+    font-size: 2em;
+}
+.tarjet{
+    background-image: url(https://i.ibb.co/1df3xP4/fiestaspersonajes.jpg);
+    background-repeat: no-repeat;
+    width: 40em;
+    height: 17em;
+    padding: 1em;
+}
+
+.tarjet__aside{
+    background-image: url(https://i.ibb.co/zxR5sLL/pompones.jpg);
+    width: 22em;
+    height: 36em;
+    background-repeat: no-repeat;
+}
+.vermas{
+    width: 10em;
+    height: 5em;
+    background-color: #FF5959;
+    border: none;
+    color: white;
+}
+
+.marcas__image{
+    background-size: 50%;
+    width: 12em; 
+    height: 7em;
+    background-repeat: no-repeat;
+}
+
+.direction--wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.marcas_body{
+    padding: 0em 9em 0em 13em;
+}
+.box{
+    width: 88px;
+    height: 59px;
+}
+.box--image{
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -37px no-repeat transparent;
+}
