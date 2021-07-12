@@ -624,6 +624,44 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     display: none;
 }
 
+.footer {
+    background-color: #0D0D0D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10vw;
+}
+
+.footer__links-container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+
+.footer__links-container  li{
+    margin: 0 5px;
+}
+
+.footer__links-container  li a{
+    color: #CCCCCC;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.footer__text {
+    color: #737373;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 20px;
+}
   
 
 @media screen and (min-width: 1024px){
