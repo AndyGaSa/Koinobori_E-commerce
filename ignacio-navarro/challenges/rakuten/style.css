@@ -90,15 +90,13 @@ button, input[type="submit"], input[type="reset"] {
     cursor: text;
     font-family: NotoSans-Bold,Arial,sans-serif;
     border: none;
-    
-    
 }
 input[type=text]:focus{
     background-color: white;
   }
   
 /*----------------------
-    NAVIGATION BAR
+        MAIN SLIDER
 -----------------------*/
 .main-slider__arrow{
     font-size: 12vw;
@@ -120,8 +118,6 @@ input[type=text]:focus{
 
 .header-slider-selectors{
     display: flex;
-    /* position: absolute; */
-    /* width: 20%; */
     flex-direction: row;
     justify-content: center;
 }
@@ -198,15 +194,14 @@ input[type=text]:focus{
     outline: 4px solid #ffe300;
 }
 .movies-nav-bar__card:hover .card__pop-up {
-    display: block;
+    display: flex;
+    opacity: 0.4;
 }
-
-
 .movies-section {
     display: grid;
-  grid-template-columns: repeat(3, 100%);
-  overflow: hidden;
-  scroll-behavior: smooth;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 .slider-nav-bar {
     width: 100%;
@@ -214,11 +209,9 @@ input[type=text]:focus{
     display: flex;
     flex-direction: row;
 }
-
 .movies-nav-bar__card--vertical{
     width: 13%;
 }
-
 .movies-section__arrow-button {
     font-family: sans-serif;
     position: absolute;
@@ -242,7 +235,6 @@ input[type=text]:focus{
     bottom: 0;
     right: 0;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
-
 }
 
 /*----------------------
@@ -250,18 +242,53 @@ input[type=text]:focus{
 -----------------------*/
 
 .card__pop-up {
-    width: 20%;
+    display: none;
+    font-family: NotoSans-Bold,Arial,sans-serif;
+    width: 20vw;
     background-color: rgb(51, 51, 51);
-    height: 150px;
+    height: 14vw;
     border-radius: 10px;
     position: absolute;
-    transform: translate(220px, 0px);
+    transform: translate(19vw, 0px);
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    opacity: 0.4;
+    transition: opacity 0.5s ease-in-out 0s;
+    opacity: 0;
 }
-.dropdown__content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    z-index: 1;
+.pop-up__title{
+    color: white;
+    font-size: 1.2vw;
+}
+.pop-up__buttons-container{
+    display: flex;
+    flex-direction: row;
+}
+.pop-up__button{
+    color: white;
+    font-size: 0.5vw;
+    border: 0.2vw white solid;
+    padding: 0.6vw 1vw;
+    border-radius: 20px;
+    margin: 0 5px;
+}
+.pop-up__audience{
+    color: white;
+    font-size: 0.5vw;
+    font-weight: 500;
+}
+.pop-up__summary{
+    color: white;
+    font-size: 0.7vw;
+    font-weight: 200;
+    text-align: center;
+}
+.pop-up__link{
+    color: #ffe300;
+    font-size: 0.7vw;
+    font-weight: bold;
+    text-align: center;
 }
 .navigation-bar__item--drowpdown-list-item{
     padding: 12px 16px;
