@@ -1,0 +1,5 @@
+.forms__container{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
