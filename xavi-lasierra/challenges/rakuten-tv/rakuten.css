@@ -7,7 +7,6 @@
 
 .main-container {
     background-color: #171717;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -499,8 +498,7 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     justify-content: space-between;
     width: 80vw;
     margin: auto;
-    position: relative;
-    bottom: 16vw;
+    bottom: 20vw;
 }
 
 .scrollable__back-button {
@@ -525,14 +523,14 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
 }
 
 .scrollable__buttons-container--vertical {
-    position: relative;
+    position: absolute;
+    top: 110vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 80vw;
-    margin: auto;
-    position: relative;
-    bottom: 35vw;
+    margin: 0 10vw;
+    bottom: 0;
 }
 
 .overlay {
@@ -665,6 +663,10 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
   
 
 @media screen and (min-width: 1024px){
+    .main-container {
+        height: 90vw;
+    }
+
     .header-container {
         background-color: black;
         height: 60px;
@@ -732,7 +734,8 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     .scrollable__buttons-container--vertical {
         display: flex;
         width: 90vw;
-        bottom: 10vw;
+        top: 60vw;
+        margin: 0 5vw;
     }
 
     .scrollable__title {
