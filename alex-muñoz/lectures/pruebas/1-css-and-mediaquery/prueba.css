@@ -1,0 +1,22 @@
+#more-especific{
+    background-color: red;
+    border: 1px solid black;
+}
+.specific{
+    background-color: grey;
+    border: none !important;
+}
+p{
+    background-color: blue;
+    color:white;
+    padding:5px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px){
+    body{
+        background-color: blue;
+    }
+
+}
+    
+    

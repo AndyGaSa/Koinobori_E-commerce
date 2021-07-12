@@ -1,0 +1,32 @@
+
+*{
+    max-width: 500px;
+    margin: auto;
+    
+}
+h1{
+    color:rgb(13, 39, 61);
+    
+}
+h2{
+    color:#083a4d;
+    
+
+}
+h3{
+    color:rgb(3, 54, 75);
+}
+h4{
+    color:rgb(11, 23, 56);
+}
+h1, h2, h3 {
+    padding:10px;
+}
+body {
+    background:#668080  ;
+    
+  }
+img {
+    width: 200px; height: 200px;
+    border-radius: 50% 50% 0;
+  }
