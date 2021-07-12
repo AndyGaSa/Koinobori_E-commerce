@@ -230,6 +230,10 @@ h1, h2{
     justify-content: space-between;
 }
 
+.search-section__type > section > a {
+    text-decoration: none;
+}
+
 .type__inner {
     display: flex;
     justify-content: space-between;
@@ -333,12 +337,13 @@ h1, h2{
     background-size: 560px;
     width: 80px;
     height: 80px;
+    text-decoration: none;
 }
 
 .type__blog span {
     position: relative;
     top: 6em;
-    color: #2E2925;
+    color: #ff5959;
     font-size: 10px;
     letter-spacing: 1px;
     text-align: center;
