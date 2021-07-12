@@ -26,7 +26,7 @@
 
 .film-miniature__buttons {
     display: flex;
-    margin-bottom: 25em;
+    margin-bottom: 18em;
 }
 
 .film-miniature__buttons div {
@@ -141,6 +141,68 @@
     margin-right: 0.3em;
 }
 
+.film-description__summary {
+    margin: 2em;
+}
+
+.film-description__languages {
+    margin: 2em;
+}
+
+.header {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.header-icon{
+    margin-right: 0.5em;
+}
+
+.film-description__languages div{
+    display: flex;
+    justify-content: baseline;
+}
+
+.film-description__languages div .film-description__languages-detail{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+}
+
+.film-description__languages-detail h3 {
+    font-size: 0.9em;
+}
+
+.film-description__languages-detail span {
+    color: #737373;
+    font-size: 0.9em;
+}
+
+.film-description__actors {
+    margin: 2em;
+}
+
+.actors__list {
+    display: flex;
+    list-style: none;
+}
+
+.actors__list li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1em;
+}
+
+.actors__list li span {
+    font-size: 0.8em;
+    color: #252525
+}
+
+.actors__list li img {
+    width: 5em;
+    height: 7.6em;
+}
 
 @media screen and (min-width: 1024px){
     .wrapper {
@@ -179,5 +241,25 @@
         display: none;
     }
     
+    .flex {
+        flex-direction: row;
+    }
+
+    .social {
+        order: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: baseline;
+        width: 20em;
+        height: 50vw;
+        padding-top: 2vw;
+    }
+
+    .social button {
+        margin: 0.3em 2em;
+    }
     
+    .main-container {
+        height: auto;
+    }
 }
