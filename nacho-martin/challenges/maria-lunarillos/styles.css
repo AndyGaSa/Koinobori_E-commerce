@@ -105,9 +105,13 @@ header {
     color: #fff;
     background-color: #FF5959;
     text-align: center;
-    font-size: 24px;
-    line-height: -25px;
+    font-size: 22px;
     padding: 10px;
+}
+
+.upper-navigator__link {
+    width: 50px;
+    height: 15px;
 }
 
 .main-logo {
@@ -701,5 +705,15 @@ footer {
 @media screen and (min-width: 600px) {
     .mobile-only {
         display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .desktop-only {
+        display: none;
+    }
+    .header__bottom {
+        display: flex;
+        justify-content: space-between;
     }
 }
