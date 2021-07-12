@@ -44,12 +44,12 @@ img {
     width: 100%;
 }
 
-img__img {
+.img__img {
     border: transparent 1vh solid;
 }
 
-img_img:hover {
-    border-color: rgb(247, 216, 0) 1vh solid;
+.img_img:hover {
+    border-color: rgb(247, 216, 0) 1vw solid;
 }
 
 /*Nav mobile selectors*/
@@ -85,13 +85,13 @@ img_img:hover {
 }
 
 .nav__left {
-    display:flex;
+    display: flex;
     align-items: baseline;
 }
+
 .nav__right {
     justify-content: flex-end;
 }
-
 
 button {
     background-color: rgb(247, 216, 0);
@@ -255,7 +255,7 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
 .horizontal-slide {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .horizontal-slide__img, .vertical-slide__img {
@@ -263,15 +263,20 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
 }
 
 .img__carousel {
+    width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+#carousel-1, #carousel-2, #carousel-3 {
     display: flex;
-    position: relative;
 }
 
-.vertical-slide {
-    position: relative;
-    width: 95%;
-    margin: auto;
-    overflow: hidden;
+.vertical-slide .vertical-slide__img {
+    width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
 }
 
 .left-angle, .right-angle {
@@ -328,26 +333,44 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
 
 /*Info film details*/
 
-.img__carousel:hover {}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
 
-.carousel__tooltip-film-detail {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    background-color: grey;
-    width: 25vw;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+.tooltip .carousel__tooltip-film-detail {
+    visibility: hidden;
+    width: 48vh;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 1vh 0;
     border-radius: 1vh;
+    position: absolute;
+    z-index: 1;
+    left: 100%;
+    opacity: 0.8;
+    transition: opacity 0.3s;
 }
 
-.carousel__tooltip-film-detail::after {
+/* Tooltip arrow */
+
+.tooltip .carousel__tooltip-film-detail::after {
     content: "";
+    position: absolute;
+    /*top: 100%;*/
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
 
-.carousel__tooltip-film-detail:hover {
-    display: flex;
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.tooltip:hover .carousel__tooltip-film-detail {
+    visibility: visible;
+    opacity: 1;
 }
 
 /*Media Queries*/
