@@ -18,14 +18,24 @@
             <div class="navigator__films-navigator films-navigator">
                 <a class="films-navigator__icon" href=""></a>
                 <ul class="films-navigator__menu">
-                    <li>
-                        <a class="films-navigator__cinema" href="">CINEMA<span class="films-navigator__triangle"></span></a>
+                    <li class="films-navigator__cinema cinema">
+                        <a href="">CINEMA<span class="films-navigator__triangle"></span></a>
+                        <ul class="cinema__menu">
+                            <li>FAMILY</li>
+                            <li>COLECCIONES</li>
+                            <li>TOP POPULARES</li>
+                            <li>TODOS LOS GÉNEROS</li>
+                        </ul>
                     </li>
                     <li>
-                        <a class="films-navigator__free" href="">GRATIS</span></a>
+                        <a href="">GRATIS</span></a>
                     </li>
-                    <li>
-                        <a class="films-navigator__subscriptions" href="">SUSCRIPCIONES<span class="films-navigator__triangle"></span></a>
+                    <li class="films-navigator__subscriptions subscriptions">
+                        <a href="">SUSCRIPCIONES<span class="films-navigator__triangle"></span></a>
+                        <ul class="subscriptions__menu">
+                            <li>STARZPLAY</li>
+                            <li>RTV SUBSCRIPCIÓN</li>
+                        </ul>
                     </li>
                 </ul>
                 <form class="films-navigator__search search">
@@ -207,7 +217,6 @@
             </div>
         </section>
 
-
     </main>
     <footer class="footer">
         <section class="footer__top">
@@ -221,9 +230,6 @@
                 <li class="footer__link"><a href="">Trabaja con nosotros</a></li>
             </ul>
             <small class="footer__text">2009 - 2021 @ Rakuten TV Europe, S.L.U. - v1.887.0</small>
-        </section>
-        <section class="footer_bottom">
-
         </section>
     </footer>
 
