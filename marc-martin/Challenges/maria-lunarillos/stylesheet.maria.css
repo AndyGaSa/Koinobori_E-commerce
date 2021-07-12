@@ -141,3 +141,41 @@ input[type=submit] {
     align-content: center;
 
 }
+
+@media (min-aspect-ratio: 8/5) {
+   
+    .header-nav-items,
+    h1,
+    .slide-picture-top,
+    .utensils,
+    .home-utensils-top-picture
+    {
+        width: 100%;
+    }
+
+}
+
+a  {
+    color: #8a8a82;
+}
+
+.home-utensils-top-block-link-title {
+    background-color: white;
+    
+}
+
+.img-responsive-widget {
+    width: 500px;
+    display: flex;
+    margin-left: 25px;
+
+}
+
+footer {
+    text-align: center;
+}
+
+.social-media ul li{
+    display: flex;
+    flex-direction: row;
+}
