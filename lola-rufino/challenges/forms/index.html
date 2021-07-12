@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="name">Nombre: </label>
+        <input type="text" name="name" id="name"><br>
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" name="apellidos" id="apellidos"><br>
+        <label for="description">Description: </label>
+        <textarea id="description" name="description" rows="5" cols="30"></textarea><br>
+        <label for="email">E-mail: </label>
+        <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><input type="submit"><br>
+        <label for="number">Número de teléfono: </label>
+        <input type="number" name="number" id="number" pattern="[A-Za-z]{9}"><br>
+        <label for="ciudad">Viaje: </label>
+        <input type="text" list="flights-options" id="options" name="options">
+        <datalist id="flights-options">
+            <option value="Ida y vuelta"></option>
+            <option value="Ida"></option>
+            <option value="Vuelta"></option>
+        </datalist><br>
+        <label for="number">Número de pasajeros: </label>
+        <input type="number" name="number" id="number" required><br>
+        <label for="ciudad">Clase: </label>
+        <input type="text" list="class-options" id="class" name="class">
+        <datalist id="class-options">
+            <option value="Economy"></option>
+            <option value="Premium economy"></option>
+            <option value="Business"></option>
+            <option value="La première"></option>
+        </datalist><br>
+        <label for="number">Salida de: </label>
+        <input type="text" list="ciudades" id="ciudad" name="ciudad" required>
+        <datalist id="ciudades">
+            <option value="Amsterdam"></option>
+            <option value="Tokyo"></option>
+            <option value="Barcelona"></option>
+            <option value="Osaka"></option>
+            <option value="Las Palmas de Gran Canaria"></option>
+            <option value="Santa Cruz de Tenerife"></option>
+        </datalist><br>
+        <label for="number">Llegada as: </label>
+        <input type="text" list="ciudades" id="ciudad" name="ciudad" required>
+        <datalist id="ciudades">
+            <option value="Amsterdam"></option>
+            <option value="Tokyo"></option>
+            <option value="Barcelona"></option>
+            <option value="Osaka"></option>
+            <option value="Las Palmas de Gran Canaria"></option>
+            <option value="Santa Cruz de Tenerife"></option>
+        </datalist><br>
+        <label for="ciudad">Fechas de viaje: </label>
+        <input id="date" type="date" value="Fechas de viaje*"><br>
+        <label for="profesional">Viaje profesional: </label>
+        <input type="button" id="profesional">
+    </form>
+</body>
+
+</html>
