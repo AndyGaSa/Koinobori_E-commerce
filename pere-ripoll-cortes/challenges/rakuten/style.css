@@ -114,6 +114,50 @@ a {
 .body{
     width: 80%;
     height: 500px;
-    background-color: rosybrown;
     align-items: center;
 }
+
+/*----BODY SLIDER--------*/
+.body__slider{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.slider__img{
+    width: 100%;
+}
+
+.slider__left, .slider__right{
+    position: absolute;
+}
+/*.......................*/
+
+
+/*-----BODY BANNER-------*/
+.body__banner{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.banner__img{
+    padding: 0.1%;
+}
+
+.banner__img > img {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.banner__img > img:hover {
+    border: 4px solid yellow;
+
+}
+
+/*-----------------------*/
+
+
+/*-------BODY FILS--------*/
+/*------------------------*/
