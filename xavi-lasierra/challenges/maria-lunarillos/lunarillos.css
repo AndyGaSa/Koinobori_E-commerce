@@ -670,6 +670,30 @@
   background-color: #FF5959;
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact li i {
+  display: block;
+  width: 31px;
+  height: 30px;
+}
+
+.contact__contact-icon {
+  background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5df77470cdc72-png/1080X600.png) 0 -207px no-repeat
+}
+
+.contact__about-us-icon {
+  background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5df77470cdc72-png/1080X600.png) 0 -207px no-repeat;
+}
+
+.contact__shop-conditions-icon {
+  background: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5df77470cdc72-png/1080X600.png) 0 -207px no-repeat;
+}
+
 @media screen and (min-width: 1023px) {
     .top-header {
         justify-content: space-between;
