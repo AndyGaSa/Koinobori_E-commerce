@@ -148,7 +148,9 @@ body{
 .header-container__search:focus{
     background-color: whitesmoke;
 }
-
+.top-header__search-bar{
+    
+}
 
 
 
