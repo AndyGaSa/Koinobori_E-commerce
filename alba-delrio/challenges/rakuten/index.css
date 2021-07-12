@@ -95,6 +95,10 @@ body{
     align-items: center;
     padding-left:2vw;
 }
+.header-contaier__dropdown{
+    display:flex;
+    align-items: center;
+}
 .header-contaier__options{
     width:100vw;
     height: 6vw;
@@ -273,7 +277,6 @@ ul.slider__menu li a:hover{
     object-fit:cover;
     margin:0 2px 0 2px;
     border-radius:1.8px;
-    overflow:scroll;
 }
 
 .footer-container, .footer-container__link-section, .footer-container__logo-container{
