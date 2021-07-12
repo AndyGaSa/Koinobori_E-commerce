@@ -1,23 +1,41 @@
 *{
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
+}
+
+a{
     cursor: pointer;
 }
 
 .main-header{
     width: 100%;
+    height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     background-color: black;
     color: white;
 }
 
+.main-header__logo{
+    width: 130px;
+    height: 34px;
+}
+
 .link__submenu-container{
+    display: none;
+    position: absolute;
+}
+
+.link__submenu-container:hover{
+    display: block;
     display: flex;
     flex-direction: column;
-    display: none;
+}
+
+.main-header__link{
+    margin: 10px;
 }
 
 .main-header__button{
@@ -27,5 +45,8 @@
     width: 113px;
     height: 36px;
     border-radius: 5%;
-    margin-right: 10px;
+}
+
+body{
+    background-color: darkslategray
 }
