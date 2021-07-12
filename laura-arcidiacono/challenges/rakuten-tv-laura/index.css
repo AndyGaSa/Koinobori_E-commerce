@@ -324,7 +324,15 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
     text-align: center;
     padding: 2vh;
 }
-
+/*Info film details*/
+.carousel__film-detail {
+    position:absolute;
+    display: none;
+    
+}
+.carousel__film-detail:hover{
+    display: flex;
+}
 /*Media Queries*/
 
 @media screen and (min-width: 600px) {
@@ -343,4 +351,5 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
     footer {
         text-align: center;
     }
+    
 }
