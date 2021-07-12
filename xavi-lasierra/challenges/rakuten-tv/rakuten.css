@@ -527,8 +527,9 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     align-items: center;
     justify-content: space-between;
     width: 80vw;
+    height: 0px;
     margin: auto;
-    bottom: 20vw;
+    bottom: 18vw;
 }
 
 .scrollable__back-button {
@@ -554,11 +555,12 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
 
 .scrollable__buttons-container--vertical {
     position: absolute;
-    top: 110vw;
+    top: 115vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 80vw;
+    height: 0px;
     margin: 0 10vw;
     bottom: 0;
 }
