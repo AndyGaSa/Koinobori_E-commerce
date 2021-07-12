@@ -88,6 +88,36 @@
     transition: border-color 0.2s;
 }
 
+.cinema__menu,
+.subscriptions__menu {
+    display: none;
+    height: 0px;
+    width: 40px;
+    list-style: none;
+}
+
+.cinema__menu li,
+.subscriptions__menu li {
+    background-color: black;
+    color: white;
+    width: 170px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.cinema__menu li:hover,
+.subscriptions__menu li:hover {
+    color: yellow;
+}
+
+.cinema:hover ul,
+.subscriptions:hover ul {
+    display: block;
+}
+
 .films-navigator__search {
     display: flex;
     align-items: center;
