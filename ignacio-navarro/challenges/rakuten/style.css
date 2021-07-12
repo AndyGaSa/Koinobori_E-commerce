@@ -197,7 +197,7 @@ input[type=text]:focus{
     outline-offset: -8px;
     outline: 4px solid #ffe300;
 }
-.card__image:hover{
+.movies-nav-bar__card:hover .card__pop-up {
     display: block;
 }
 
@@ -250,11 +250,12 @@ input[type=text]:focus{
 -----------------------*/
 
 .card__pop-up {
-    width: 600px;
-    margin: 0 auto;
-    height: 300px;
+    width: 20%;
+    background-color: rgb(51, 51, 51);
+    height: 150px;
     border-radius: 10px;
-    padding: 40px;
+    position: absolute;
+    transform: translate(220px, 0px);
 }
 .dropdown__content {
     display: none;
