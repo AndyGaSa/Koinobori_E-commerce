@@ -74,12 +74,12 @@
     border-radius: 1px 1px 1px 1px;
 }
 
-.header__nav-1__form:focus{
+input[type="text"]:focus{
     background-color: white;
 }
 
 input[type="text"]{
-    background: none;
+    background-color: pink;
     color: inherit;
     border: none;
     padding: 0;
@@ -122,9 +122,10 @@ input[type="text"]{
 }
 
 .main__pelis__foto{
-    margin: 3px;
-    width: auto;
-    height: 275px;
+    margin: 5px;
+    width: 12v;
+    height: auto;
+    align-self: 0 0 auto;
 }
 
 .main__pelis__foto:hover{
