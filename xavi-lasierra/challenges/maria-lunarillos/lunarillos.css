@@ -655,6 +655,21 @@
     display: none;
 }
 
+.footer-container {
+  margin-top: 100px;
+}
+
+.footer-container__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background-color: #FF5959;
+}
+
 @media screen and (min-width: 1023px) {
     .top-header {
         justify-content: space-between;
