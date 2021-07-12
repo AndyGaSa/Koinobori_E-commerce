@@ -165,12 +165,18 @@ h1, h2{
 }
 
 .header__search-section{
-    
+    width: 41vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .search-section__products{
     display: flex;
     flex-direction: row;
+    align-items: normal;
+    justify-content: space-between;
+    margin-bottom: 1em;
 }
 
 .products__news {
@@ -203,9 +209,16 @@ h1, h2{
     background: url("https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg") -274px 4px no-repeat;
 }
 
-.products__search-bar{}
+.products__search-bar{
+    display: flex;
+    flex-direction: row;
+}
 
-.products__search-btn{
+.search-bar__input {
+
+}
+
+.search-bar__btn{
     display: block;
     width: 30px;
     height: 30px;
@@ -214,10 +227,16 @@ h1, h2{
 
 .search-section__type{
     display: flex;
-
+    justify-content: space-between;
 }
 
-.type__tools{
+.type__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 32vw;
+}
+
+.inner__tools{
     display: block;
     background-position: center;
     background-color: #f2f2f2;
@@ -228,17 +247,18 @@ h1, h2{
     height: 80px;
 }
 
-.type__tools span {
+.inner__tools span {
     position: relative;
-    top: 5em;
+    top: 8em;
     color: #2E2925;
-    font-size: 15px;
+    font-size: 10px;
     letter-spacing: 1px;
     text-align: center;
     font-weight: 600;
+    display: block;
 }
 
-.type__ingredients{
+.inner__ingredients{
     display: block;
     background-position: center;
     background-color: #f2f2f2;
@@ -249,17 +269,18 @@ h1, h2{
     height: 80px;
 }
 
-.type__ingredients span {
+.inner__ingredients span {
     position: relative;
-    top: 5em;
+    top: 6em;
     color: #2E2925;
-    font-size: 15px;
+    font-size: 10px;
     letter-spacing: 1px;
     text-align: center;
     font-weight: 600;
+    display: block;
 }
 
-.type__partys{
+.inner__partys{
     display: block;
     background-position: center;
     background-color: #f2f2f2;
@@ -270,17 +291,18 @@ h1, h2{
     height: 80px;
 }
 
-.type__partys span {
+.inner__partys span {
     position: relative;
-    top: 5em;
+    top: 6em;
     color: #2E2925;
-    font-size: 15px;
+    font-size: 10px;
     letter-spacing: 1px;
     text-align: center;
     font-weight: 600;
+    display: block;
 }
 
-.type__brands{
+.inner__brands{
     display: block;
     background-position: center;
     background-color: #f2f2f2;
@@ -291,14 +313,15 @@ h1, h2{
     height: 80px;
 }
 
-.type__brands span {
+.inner__brands span {
     position: relative;
-    top: 5em;
+    top: 6em;
     color: #2E2925;
-    font-size: 15px;
+    font-size: 10px;
     letter-spacing: 1px;
     text-align: center;
     font-weight: 600;
+    display: block;
 }
 
 .type__blog{
@@ -314,12 +337,13 @@ h1, h2{
 
 .type__blog span {
     position: relative;
-    top: 5em;
+    top: 6em;
     color: #2E2925;
-    font-size: 15px;
+    font-size: 10px;
     letter-spacing: 1px;
     text-align: center;
     font-weight: 600;
+    display: block;
 }
 
 /*SERVICES*/
@@ -713,7 +737,8 @@ h1, h2{
     }
 
     .header {
-        justify-content: center;
+        justify-content: flex-start;
+        padding: 0 20vw;
     }
 
     .header__links-group {
@@ -730,6 +755,10 @@ h1, h2{
 
     .links-group__login {
         display: none;
+    }
+
+    .links-group__menu-btn {
+
     }
 
     .header__search-section {
