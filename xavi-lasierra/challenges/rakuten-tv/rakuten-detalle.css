@@ -1,5 +1,12 @@
 .wrapper {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.empty {
+    height: 47.1em;
 }
 
 .film-miniature {
@@ -83,6 +90,57 @@
     background-color: #ddc300;
 }
 
+.flex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.social {
+    width: 100%;
+    height: 6em;
+    background-color: rgb(231, 231, 231);
+    border-top: 2px solid #d9d9d9;
+    border-bottom: 2px solid #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social button {
+    width: 4em;
+    height: 4em;
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    margin: 0 0.2em;
+}
+
+.film-description {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.film-description__detail {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 1em 2em;
+
+}
+
+.film-description__detail li {
+    margin-right: 1em;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.film-description__detail li i{
+    margin-right: 0.3em;
+}
+
 
 @media screen and (min-width: 1024px){
     .wrapper {
@@ -115,6 +173,10 @@
         margin-bottom: 3em;
         width: 20em;
         height: 4.5em;
+    }
+
+    .empty {
+        display: none;
     }
     
     
