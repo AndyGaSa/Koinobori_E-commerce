@@ -1,0 +1,121 @@
+.wrapper {
+    width: 100%;
+}
+
+.film-miniature {
+    width: 100%;
+    height: 50em;
+    background: black url(https://images-2.wuaki.tv/system/shots/195811/original/snapshot-1590664794-width1920-quality80.jpeg);
+    background-size: 150vw;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.film-miniature__buttons {
+    display: flex;
+    margin-bottom: 25em;
+}
+
+.film-miniature__buttons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.film-miniature__buttons div button {
+    width: 5em;
+    height: 5em;
+    background-color: #000000B3;
+    border: none;
+    border-radius: 50%;
+    margin: 0 1.5em;
+}
+
+.film-miniature__buttons div small {
+    margin-top: 1em;
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-shadow: black 1px 1px;
+    width: 8em;
+    text-align: center;
+}
+
+.film-miniature__buttons div button:hover i {
+    color: yellow;
+}
+
+.film-miniature__buttons div button i {
+    color: white;
+}
+
+.film-miniature__imdb {
+    color:#F5C518;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.film-miniature__title {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 2em;
+    margin-bottom: 2em;
+    font-weight: bold;
+}
+
+.film-miniature__watch {
+    margin-bottom: 4em;
+    width: 80vw;
+    height: 4.5em;
+    background-color: #FFE300;
+    border: none;
+    font-weight: bold;
+}
+
+.film-miniature__watch:hover {
+    background-color: #ddc300;
+}
+
+
+@media screen and (min-width: 1024px){
+    .wrapper {
+        max-width: 90vw;
+    }
+
+    .film-miniature {
+        width: 90vw;
+        height: 40em;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    
+    .film-miniature__buttons {
+        margin-bottom: 12em;
+    }
+    
+    .film-miniature__buttons div button {
+        width: 7em;
+        height: 7em;
+    }
+        
+    .film-miniature__title {
+        font-size: 2.3em;
+        margin-bottom: 0.5em;
+    }
+    
+    .film-miniature__watch {
+        margin-bottom: 3em;
+        width: 20em;
+        height: 4.5em;
+    }
+    
+    
+}
