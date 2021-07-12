@@ -193,10 +193,7 @@ input[type=text]:focus{
     outline-offset: -8px;
     outline: 4px solid #ffe300;
 }
-.movies-nav-bar__card:hover .card__pop-up {
-    display: flex;
-    opacity: 0.4;
-}
+
 .movies-section {
     display: grid;
     grid-template-columns: repeat(3, 100%);
@@ -242,21 +239,32 @@ input[type=text]:focus{
 -----------------------*/
 
 .card__pop-up {
-    display: none;
     font-family: NotoSans-Bold,Arial,sans-serif;
-    width: 20vw;
     background-color: rgb(51, 51, 51);
-    height: 14vw;
     border-radius: 10px;
     position: absolute;
-    transform: translate(19vw, 0px);
+    height: 0;
+    width: 0;
+    transform: translate(-3000px, -3000px);
     flex-direction: column;
     align-items: center;
     z-index: 2;
-    opacity: 0.4;
-    transition: opacity 0.5s ease-in-out 0s;
     opacity: 0;
 }
+.movies-nav-bar__card:hover .card__pop-up {
+    transition: opacity 0.5s;
+    transition-delay:1s;
+    opacity: 1;
+}
+.movies-nav-bar__card:hover .card__pop-up {
+    display: flex;
+    height: 14vw;
+    width: 20vw;
+    transform: translate(19vw, 0px);
+    transition: transform 0s;
+    transition-delay:1s;
+}
+
 .pop-up__title{
     color: white;
     font-size: 1.2vw;
