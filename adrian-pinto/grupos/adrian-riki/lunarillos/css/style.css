@@ -562,18 +562,30 @@ h1, h2{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-content: space-around;
-    align-items: center;
-
+    align-items: flex-start;
+    margin: 0px 170px 0px 170px
 }
 
 .contact-info__social-media{
-align-items: center;
+    align-items: center;
+    flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
+}
+.contact-info hr{
+    height: 300px;
+    margin: 20px;
+}
+.social-media__links{
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-media__facebook--footer{
@@ -615,22 +627,43 @@ align-items: center;
     background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat transparent;
     background-position: -175px -492px;
 }
+.contact-info__news-letter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contact-info hr{
+    height: 90px;
+}
+.contact-info__news-letter form input[type="text"]{
+    height: 40px;
+    line-height: 40px;
+    width: 286px;
+}
 
 .contact-info__news-letter form input[type="submit"]{
     height: 40px;
     line-height: 40px;
-    width: 100%;
+    font-size: 1em;
+    text-decoration:solid;
     background: #FF5959;
     color: #fff;
     border: none;
     cursor: pointer;
 }
 
-
 .contact-info__about{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom:90px ;
+}
+.contact-info__about a{
+    margin: 5px;
 }
 
 .about__contact{
@@ -639,6 +672,9 @@ align-items: center;
     display: list-item;
     width: 30px;
     height: 31px;
+}
+.about__container{
+    display: flex;
 }
 
 .about__us{
