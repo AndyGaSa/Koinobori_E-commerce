@@ -39,6 +39,13 @@ body{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
+.cinema__content__items{
+    width:130px;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
 .dropdown__content{
     display: none;
     position: absolute;
@@ -47,7 +54,19 @@ body{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.cinema__content a:hover{color:gold}
+.cinema__content a{
+    font-size: 11px;
+    margin:3px;
+    text-decoration:none;
+    color:#FFFFFF;
+
+}
+.cinema__content a:hover{
+    color:gold;
+    font-size: 12px;
+    margin:2px;
+    text-decoration:none;
+}
 .suscription__content a:hover{color: gold}
 
 .dropdown:hover .cinema__content {
@@ -70,10 +89,11 @@ body{
     color:gold;
 }
 .header-contaier{
+    display: none;
     width:100vw;
     height:6vw ;
-    display:flex;
     align-items: center;
+    padding-left:2vw;
 }
 .header-contaier__options{
     width:100vw;
@@ -101,12 +121,16 @@ body{
 .registration__record{
     color:#171717;
     font-weight: bold;
+    font-size:15px;
     width:10vw;
-    height:3vw;
+    height:4vw;
     background-color: gold;
     margin:2vw;
     border-radius: 3%;
-    
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    padding:2px;
 }
 
 .main-continer{
@@ -162,6 +186,7 @@ ul.slider li:target{
 }
 
 ul.slider__menu{
+    position:relative;
     width:100vw;
     height: 10vw;
     margin-bottom: 1px;
@@ -171,6 +196,8 @@ ul.slider__menu{
     z-index: 1;
     
 }
+
+
 ul.slider__menu li a{
     display:inline-block;
     width:0.07vw;
@@ -188,6 +215,7 @@ ul.slider__menu li a:hover{
 
 .main-continer__horizontal-scroll{
     display: flex;
+    align-content: center;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 70px;
@@ -203,48 +231,51 @@ ul.slider__menu li a:hover{
     display: flex;
     flex-direction: row;
     align-content:flex-start;
-    flex-wrap: nowrap;
+    justify-content: center;
     width:98vw;
     height:136px;
-    margin-bottom: 1.5vw;
+    margin-bottom: 3vw;
+    overflow: hidden;
 }
 
 .horizontal-scroll__menu li img{
     width: 265px;
     height:100%;
     object-fit:cover;
-    margin:0 3px 0 3px;
+    margin:0 2px 0 2px;
     border-radius:1.8px;
 }
 
 .horizontal-scroll__menu li:first-child,.horizontal-scroll__menu li:last-child,
 .upright-scroll__menu li:first-child{
-    margin:0 4px 0 4px;
+    margin:0 4px 0 0;
 }
 
 .horizontal-scroll__menu li img:hover,.upright-scroll__menu li img:hover{
-    padding:2.5px;
-    background-color: gold;
-
+    border: 2px solid gold;
 }
 
 .upright-scroll__menu{
     display: flex;
-    flex-direction: row;
     align-content:flex-start;
-    flex-wrap: nowrap;
     width:98vw;
-    height:136px;
+    height:300px;
     margin-bottom:15vw;
+    overflow: hidden;
+    border: 2,5px solid transparent;
+    border-radius: 2%;
 }
+
 
 .upright-scroll__menu li img{
     width: 200px;
     height:250px;
     object-fit:cover;
-    margin:0 3px 0 3px;
+    margin:0 2px 0 2px;
     border-radius:1.8px;
+    overflow:scroll;
 }
+
 .footer-container, .footer-container__link-section, .footer-container__logo-container{
     display: flex;
     flex-direction: column;
@@ -272,6 +303,7 @@ ul.slider__menu li a:hover{
 .footer-container__nav{
     width: 100vw;
     height: 50px;
+    display: flex;
     display: flex;
     flex-direction: row;
    
@@ -312,4 +344,14 @@ ul.slider__menu li a:hover{
 
 .items__text:hover{
     color:gold;
+}
+
+@media screen and (min-width: 600px){
+    .footer-container__nav{
+       display:none;
+    }
+    .header-contaier{
+        display:flex;
+    }
+    
 }
