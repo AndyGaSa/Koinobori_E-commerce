@@ -195,6 +195,7 @@
 }
 
 .actors__list li span {
+    margin-top: 0.53em;
     font-size: 0.8em;
     color: #252525
 }
@@ -202,6 +203,45 @@
 .actors__list li img {
     width: 5em;
     height: 7.6em;
+}
+
+.score-genres-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.film-description__score{
+    margin: 2em;
+}
+
+.film-description__genres {
+    margin: 2em;
+}
+
+.genres__list{
+    list-style: none;
+    display: flex;
+}
+
+.genres__list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1em;
+}
+
+.genres__list li a {
+    background: #D9D9D9 url(https://images-2.wuaki.tv/system/brandable_photos/13332/original/action-1591342700.png);
+    background-size: 6em;
+    background-position: center center;
+    display: block;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+}
+
+.genres__list li span {
+    font-size: 0.9em;
 }
 
 @media screen and (min-width: 1024px){
@@ -261,5 +301,13 @@
     
     .main-container {
         height: auto;
+    }
+
+    .score-genres-container {
+        flex-direction: row;
+    }
+
+    .film-description__genres {
+        margin-left: 5em;
     }
 }
