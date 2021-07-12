@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Noto Sans','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 body{
     background-color: #171717;
@@ -127,7 +127,6 @@ body{
     color:#171717;
     font-weight: bold;
     font-size:10px;
-    
     background-color: gold;
     margin:2vw;
     border-radius: 3%;
@@ -148,8 +147,24 @@ body{
 .header-container__search:focus{
     background-color: whitesmoke;
 }
-.top-header__search-bar{
-    
+.top-header{
+    width:100vw;
+    height:13vw ;
+    background-color:#FFFFFF;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:2px;
+}
+.top-header img{
+    width:20px;
+    height: auto;
+}
+.top-header input{
+    width: 280px;
+    height: 45px;
+    border-style: none;
+    font-size: 18px;   
 }
 
 
@@ -242,6 +257,9 @@ body{
     }
     .slider{
         margin-bottom:200px;
+    }
+    .top-header{
+        display:none;
     }
     
 }
