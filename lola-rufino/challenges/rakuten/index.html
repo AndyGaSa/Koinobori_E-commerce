@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,31 +13,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <title>Rakuten TV - Tu cine en casa</title>
 </head>
 
 <body>
     <header class="main-header">
         <img class="main-header__logo" src="https://i.ibb.co/ysYSjKK/logo.png">
-        <nav class="main-header__first-container">
-            <a class="main-header__link main-header__link--active">CINEMA</a>
-            <ul class="link__submenu-container">
-                <li class="link__submenu">FAMILY</li>
-                <li class="link__submenu">COLECCIONES</li>
-                <li class="link__submenu">TOP POPULARES</li>
-                <li class="link__submenu">TOP TODOS LOS GÉNEROS</li>
-            </ul>
-            <a class="main-header__link">GRATIS</a>
-            <a class="main-header__link main-header__link--active">SUSCRIPCIONES</a>
-            <ul class="link__submenu-container">
-                <li class="link__submenu">STARZPLAY</li>
-                <li class="link__submenu">RTV SUSCRIPCIÓN</li>
+        <nav>
+            <ul class="first-container__link">
+                <li class="first-container__link-dropdown"><a class="link__header-link triangle" href="#">CINEMA</a>
+                    <ul class="link-dropdown__submenu">
+                        <li class="submenu-link"><a class="link__header-link" href="#">FAMILY</a></li>
+                        <li class="submenu-link"><a class="link__header-link" href="#">COLECCIONES</a></li>
+                        <li class="submenu-link"><a class="link__header-link" href="#">TOP POPULARES</a></li>
+                        <li class="submenu-lin"><a class="link__header-link" href="#">TOP TODOS LOS GÉNEROS</a></li>
+                    </ul>
+                </li>
+                <li><a class="link__header-link" href="#">GRATIS</a></li>
+                <li class="first-container__link-dropdown"><a class="link__header-link triangle"
+                        href="#">SUSCRIPCIONES</a>
+                    <ul class="link-dropdown__submenu">
+                        <li class="submenu-link"><a class="link__header-link" href="#">STARZPLAY</a></li>
+                        <li class="submenu-link"><a class="link__header-link" href="#">RTV SUSCRIPCIÓN</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
-        <input class="main-header__searcher">
-        <nav class="main-header__second-container">
-            <a class="main-header__link">ENTRAR</a>
-            <button class="">REGISTRARSE</button>
+        <div class="main-header__container-searcher">
+            <figure></figure>
+            <input class="main-header__searcher" placeholder="Buscar">
+        </div>
+        <div class="main-header__empty-container"></div>
+        <nav class="main-header__second-nav">
+            <a class="main-header__link link__header-link" href="#">ENTRAR</a>
+            <button class="main-header__button">REGISTRARSE</button>
         </nav>
     </header>
 

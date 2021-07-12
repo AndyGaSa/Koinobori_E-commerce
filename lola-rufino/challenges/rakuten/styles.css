@@ -3,8 +3,13 @@
     margin: 0;
 }
 
-a{
+a, button{
     cursor: pointer;
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
 }
 
 .main-header{
@@ -16,6 +21,14 @@ a{
     position: fixed;
     background-color: black;
     color: white;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.main-header__empty-container{
+    flex-grow: 1;
+
 }
 
 .main-header__logo{
@@ -23,19 +36,44 @@ a{
     height: 34px;
 }
 
-.link__submenu-container{
+.first-container__link{
+    display: flex;
+}
+
+.first-container__link-dropdown:hover > .link-dropdown__submenu{
+    display: block;
+}
+
+.triangle::after{
+    content: " ▾";
+}
+
+.triangle:hover::after{
+    content: " ▴";
+}
+
+.link-dropdown__submenu{
     display: none;
     position: absolute;
+    padding: 25px 0px 15px 10px;
+    background-color: black;
+    z-index: 1;
+    font-weight: lighter;
 }
 
-.link__submenu-container:hover{
-    display: block;
-    display: flex;
-    flex-direction: column;
+.submenu-link{
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
-.main-header__link{
+.link__header-link{
+    color: white;
+    text-decoration: none;
     margin: 10px;
+}
+
+.link__header-link:hover{
+    color: gold;
 }
 
 .main-header__button{
@@ -45,6 +83,27 @@ a{
     width: 113px;
     height: 36px;
     border-radius: 5%;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+.main-header__container-searcher{
+    display: flex;
+}
+
+.main-header__searcher{
+    background: #333 url(https://i.ibb.co/3FQJHd8/lupa.png) no-repeat scroll 7px 5px;
+    color: #ccc;
+    font-size: 17px;
+    border: none;
+    border-radius: 3%;
+    height: 70%;
+    font-weight: lighter;
+    padding-left:30px;
+}
+
+.main-header__searcher:focus{
+    background-color: white;
 }
 
 body{
