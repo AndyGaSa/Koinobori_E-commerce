@@ -4,13 +4,15 @@
     box-sizing: border-box;
     color:white;
     background-color: rgb(23,23,23);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: black;
+    font-size: 1vw;
+    height: 65px;
 }
 
 .header__nav-1{
@@ -44,8 +46,10 @@
 }
 
 .header__nav-1__logo{
-    margin: 15px;
+    margin-left: 10px;
     align-self: center;
+    height: 50%;
+    width: auto;
 }
 
 .header__nav-1__cinema-1{
@@ -64,8 +68,28 @@
 }
 
 .header__nav-1__form{
-    margin: 15px;
+    margin: 0 auto;
     align-self: center;
+    width: 40%;
+    border-radius: 1px 1px 1px 1px;
+}
+
+.header__nav-1__form:focus{
+    background-color: white;
+}
+
+input[type="text"]{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    align-self: center;
+    width: 180px;
+    height: 40px;
+    border-radius: 1px 1px 1px 1px;
 }
 
 .header__nav-2__ayuda{
@@ -79,8 +103,13 @@
 }
 
 .header__nav-2__registrarse{
+    padding: 10px;
     margin: 15px;
     align-self: center;
+    color: black;
+    line-height: 30px;
+    background-color: gold;
+    border-radius: 4px 4px 4px 4px;
 }
 
 .main__slide{
