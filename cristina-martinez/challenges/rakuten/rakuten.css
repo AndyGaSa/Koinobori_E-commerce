@@ -1,0 +1,60 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+}
+.firstheader{
+    display: flex;
+    flex-direction: row;
+}
+.firstheader__logo{
+    width: 122px;
+}
+.cinema{
+    display: flex;
+    flex-direction: column;
+}
+.cinema__topics{
+    background-color: black;
+    z-index: 1;
+
+}
+.cinema__topics:hover{
+    position: absolute;
+    display:flex ;
+    flex-direction: column;
+}
+.promotion{
+    display: flex;
+    flex-direction: column;
+}
+
+.advertisements{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+.advertisements img{
+    width: 214px;
+    border: 1vw  solid transparent;
+
+}
+
+.advertisements img:hover{
+    border: 1vw solid rgb(177, 177, 19);
+}
+
+
+
+
