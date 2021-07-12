@@ -123,15 +123,48 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    background-image: url("https://images-0.wuaki.tv/system/images/8893/original/inmune-1625479302-width1920-quality80.jpeg");
+    background-size: ;
+    height: 25em;
 }
 
-.slider__img{
+.slider__left {
+    position: relative;
+    right: 0;
+    top: 14px;
+    left: 75px;
+}
+
+.slider__right {
+    position: relative;
+    right: 95px;
+    top: 14px;
+    left: -75px;
+}
+
+.img__img1 {
     width: 100%;
 }
 
-.slider__left, .slider__right{
-    position: absolute;
+.img__img1 > img{
+    width: 100%;
 }
+
+.img__button-nav{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    
+}
+
+.img__button-nav > button {
+    display: block;
+    color: transparent;
+    width: 8px;
+    height: 7px;
+}
+
 /*.......................*/
 
 
