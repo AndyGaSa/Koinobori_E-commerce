@@ -453,6 +453,7 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     background-size: 100%;
     width: 60vw;
     height: 37vw;
+    border: 1vw solid #171717;
 }
 
 .scrollable__item a:hover {
@@ -534,6 +535,67 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     bottom: 35vw;
 }
 
+.overlay {
+    display: none;
+    align-items: center;
+    position: relative;
+    width: 30vw;
+    left: 11vw;
+    bottom: 18vw;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.overlay__triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1vw 2vw 1vw 0;
+    border-color: transparent #171717 transparent transparent;
+}
+
+.overlay__box {
+    width: 100%;
+    height: 18vw;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid black;
+    background-image: url(https://tvline.com/wp-content/uploads/2018/02/tv-too-dark-walking-dead-vest.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1vw;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.overlay__title {
+    color: white;
+    font-size: 2vw;
+
+}
+
+.overlay__trailer,
+.overlay__add {
+    background-color: black;
+    color: white;
+    padding: 0 2vw;
+    height: 2.5vw;
+    font-size: 0.75vw;
+    border: 2px solid white;
+    border-radius: 1.25vw;
+}
+
+.overlay__trailer i,
+.overlay__add i {
+    margin-right: 1vw;
+}
+
+.scrollable__item--vertical:hover .overlay{
+    display: none;
+}
+
   
 
 @media screen and (min-width: 1024px){
@@ -572,6 +634,11 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
     .scrollable__item a {
         width: 18vw;
         height: 12vw;
+        border: 0.5vw solid #171717;
+    }
+
+    .scrollable__item a:hover {
+        border: 0.5vw solid yellow;
     }
     
     .scrollable__empty a {
@@ -583,6 +650,9 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
         display: none;
     }
 
+    .scrollable__item--vertical {
+        width: 13vw;
+    }
     
     .scrollable__item--vertical a {
         width: 13vw;
@@ -601,6 +671,10 @@ background-image: url(https://images-3.wuaki.tv/system/images/8813/original/noma
 
     .scrollable__item a:hover {
         border: 0.5vw solid yellow;
+    }
+
+    .scrollable__item:hover .overlay{
+        display: flex;
     }
 }
 
