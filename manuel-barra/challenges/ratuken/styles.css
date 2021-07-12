@@ -204,7 +204,7 @@
     background-image: url(https://images-2.wuaki.tv/system/artworks/11880/original/gotti-1611323038-width217-quality80.jpeg);
     background-repeat: no-repeat;
     background-size: contain;
-    border: 2px solid yellow;
+    border: 2px solid rgba(255, 255, 0, 0);
 }
 
 .main-box__section-box__carrusel__link:nth-child(2) {
@@ -213,6 +213,7 @@
 
 .main-box__section-box__carrusel__link:hover {
     border: 2px solid red;
+    transform: scale(2);
 }
 
 .footer-box {
@@ -226,7 +227,7 @@
     display: flex;
     flex-flow: column wrap;
     text-align: center;
-    color: darkseagreen;
+    color: #999999;
     width: 100%;
     background-color: rgb(3, 8, 8);
     height: 180px;
@@ -240,6 +241,7 @@
     justify-content: space-around;
     height: 45px;
     align-items: center;
+    border-top: solid 1px #3b3b3b;
 }
 
 .footer-box__nav__item-box {
@@ -255,6 +257,16 @@
 }
 
 .footer-box__legal-contact-box__text-footer {
-    color: silver;
+    color: #999999;
     text-decoration: none;
+}
+
+h5 {
+    background-image: url(https://prod1-kraken-cloudfront.rakuten.tv/images/logos/rktv-grey-eae681a197.svg);
+    width: 187px;
+    height: 200px;
+    color: silver;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 405px;
 }
