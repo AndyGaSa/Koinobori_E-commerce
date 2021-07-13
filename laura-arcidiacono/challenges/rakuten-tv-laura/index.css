@@ -263,20 +263,25 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
 }
 
 .img__carousel {
+    display: gid;
+    grid-template-columns: repeat(3, 100%);
     width: 100%;
-	padding: 20px 0;
-	overflow: hidden;
-	scroll-behavior: smooth;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
+
 #carousel-1, #carousel-2, #carousel-3 {
     display: flex;
+    overflow: hidden;
+    width: auto;
 }
 
 .vertical-slide .vertical-slide__img {
     width: 100%;
-	padding: 20px 0;
-	overflow: hidden;
-	scroll-behavior: smooth;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 .left-angle, .right-angle {
@@ -333,6 +338,21 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
 
 /*Info film details*/
 
+.tooltip-film-detail__button {
+    display: flex;
+    justify-content: space-around;
+}
+    
+.bottom__tooltip {
+    border-radius: 10vh;
+    border-color: white 1vh solid;
+    color: white;
+    width: -webkit-fill-available;
+    border-radius: 10vh;
+    background-color: black;
+    border: white 0.3vh solid;
+}
+
 .tooltip {
     position: relative;
     display: inline-block;
@@ -341,6 +361,8 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
 .tooltip .carousel__tooltip-film-detail {
     visibility: hidden;
     width: 48vh;
+    background-image: url("https://images-2.wuaki.tv/system/artworks/11880/original/gotti-1611323038-width217-quality80.jpeg");
+    overflow: hidden;
     background-color: black;
     color: #fff;
     text-align: center;
