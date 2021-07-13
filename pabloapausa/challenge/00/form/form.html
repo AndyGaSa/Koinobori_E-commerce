@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en_GB">
+    <head>
+        <link href="form.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <h1>Book a flight</h1>
+            <form>
+                <fieldset>
+                    <div>
+                        <label>Trip</label>
+                        <select name="trip">
+                            <option value="round-trip">Round trip</option>
+                            <option value="one-way">One way</option>
+                            <option value="multi-city">Multi-city</option>
+                        </select>
+                        <input type="text" name="departure" placeholder="Departing from *">
+                        <input type="text" name="arrive" placeholder="Arriving at *">
+                    </div>
+                    <div>
+                        <label>Travel Dates</label>
+                        <input type="date" name="fecha">
+                        <label>Passengers *</label>
+                        <input type="number" name="pasajeros" value="1">
+                        <label>Clase</label>
+                        <select>
+                            <option value="ECONOMY">ECONOMY</option>
+                            <option value="PREMIUM ECONOMY">PREMIUM ECONOMY</option>
+                            <option value="BUSINESS">BUSINESS</option>
+                            <option value="FIRST CLASSS">LA PREMIÈRE</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Traveling for work</label>
+                        <button></button>
+                    </div>
+                </fieldset>
+                <div>
+                    <label>Search</label>
+                    <button></button>
+                </div>
+            </form>               
+        </main>
+    </body>
+</html>
+

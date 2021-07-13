@@ -1,0 +1,281 @@
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-navbar {
+
+    background-color: rgb(248, 248, 248);
+    flex: 0 1 auto;
+    height: 15%;
+}
+
+.header__container {
+   
+    flex: 95 1 auto;
+    height: 85%;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 15px;
+    flex: 10 1 auto;
+    justify-content: space-evenly;
+    display: flex;
+
+    align-items: center;
+
+
+
+}
+
+.shopping-cart {
+    display: flex;
+    margin-top: 0px;
+
+    flex: 10 1 auto;
+}
+
+.entra {
+    flex: 20 1 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar__links{
+    margin-left: 11%;
+    flex: 60 1 auto;
+}
+.marialunar{
+    margin-left: 12%;
+    height: 120px;
+    width: 70px;
+    background-color: #FF5958 !important;
+    
+}
+.cutemumu{
+    height: 70px;
+    width: 70px;
+    background-color: #619AAF;
+}
+.mucho{
+    height: 70px;
+    width: 70px;
+    background-color:#F6B435;
+}
+.navbar__links{
+    display: flex;
+    align-items: ;
+    margin-left: 15%;
+    
+}
+.links__picture{
+    margin-left: 3px;
+}
+
+.cutemumu{
+
+}
+.fa-user-plus {
+    margin-left: 4px;
+    margin-right: 6px;
+    margin-top: 9px;
+    font-size: 1.5rem;
+}
+
+.entraNav {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-left: 4px;
+}
+
+.header__container {
+    display: flex;
+}
+
+.container__logo {
+    flex: 50 1 auto;
+    
+    display: flex;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+.container__menu {
+    flex: 50 1 auto;
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.logo {
+
+    flex: 100 1 auto;
+    margin-top: 6%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+#logo{
+    height: 25%;
+}
+
+.menu__searcher {
+    flex: 10 1 auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    height: 25%;
+    margin-top: 3%;
+
+}
+
+.menu__categories {
+    flex: 90 1 auto;
+    width: 100%;
+    height: 72%;
+
+}
+
+.categories {
+    height: 100%;
+    display: flex;
+}
+
+.button-menu {
+    width: 8rem;
+    height: 1.4rem;
+    border: 0;
+    margin-left: 3px;
+    color: white;
+}
+
+.search {
+    margin-left: 3px;
+    width: 20vw;
+}
+
+.cart {
+
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+
+    justify-content: center;
+    height: 40px;
+}
+
+.cart2 {
+    background-color: rgb(236, 101, 95);
+    width: 40px;
+    height: 40px;
+    color: white;
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.button-green {
+    background-color: #9EAA4D;
+}
+
+.button-purple {
+    background-color: #8D799C;
+}
+
+.imgs {
+   height: 100%;
+   width: 80%;
+   background-color: #D5D4D3;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+.imgs:hover{
+    background-color: #FF5958;
+
+}
+.imgs__img{
+    height: 70%;
+}
+.categories__all {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin-left: 0;
+
+    
+}
+
+.pictures-menu {
+    display: flex;
+    flex-direction: column;
+    
+    
+    height: 40%;
+    align-items: center;
+    font-size: .80rem;
+    width: 40%;
+    
+    
+    
+}
+.imgs__blog{
+    height: 100%;
+   width: 80%;
+   background-color: #FF5958;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.menu__blog{
+    margin-left: 5%;
+    margin-right: 10%;
+   
+}
+.imgs__blog:hover{
+    background-color: #D5D4D3;
+}
