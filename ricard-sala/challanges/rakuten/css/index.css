@@ -104,7 +104,10 @@ align-items: center;
     display: flex;
     justify-content: center;
     margin: 3px;
+}
+.cartelera img{
     border: 3px solid transparent;
+    
 }
 .cartelera img:hover{
     border: 3px solid yellow;
