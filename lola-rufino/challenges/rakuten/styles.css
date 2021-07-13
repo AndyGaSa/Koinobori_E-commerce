@@ -12,6 +12,10 @@ li{
     list-style-type: none;
 }
 
+body{
+    background-color: black;
+}
+
 .main-header{
     width: 100%;
     height: 60px;
@@ -106,6 +110,64 @@ li{
     background-color: white;
 }
 
-body{
-    background-color: darkslategray
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-views{
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.mini-view__img{
+    margin: 10px;
+    max-width: 285px;
+    max-height: 185px;
+}
+
+.mini-view__img:hover{
+    outline: 5px solid gold;
+}
+
+.mini-views-vertical{
+    display: flex;
+    justify-content: center;
+}
+
+.mini-view-vertical__img{
+    margin: 10px;
+}
+
+.mini-view-vertical__img:hover{
+    outline: 5px solid gold;
+}
+
+.footer-company{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-about{
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-about a{
+    color: #737373;;
+    font-size: 14px;
+}
+
+.footer-about a:hover{
+    color: white;
+}
+
+.copyright{
+    color: #737373;
+    margin: 10px;
+    margin-left: 30px;
+    margin-bottom: 50px;
 }
