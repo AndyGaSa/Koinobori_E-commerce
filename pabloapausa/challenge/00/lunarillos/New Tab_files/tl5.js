@@ -1,1 +1,0 @@
-function setLocale(){var a=navigator.language||navigator.userLanguage;return a||"en-US"}var locale=setLocale();

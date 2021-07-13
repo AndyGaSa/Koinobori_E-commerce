@@ -5,6 +5,7 @@
     text-decoration: blink; 
     font-weight: bold; 
     font-family: 'Helvetica', 'Arial', 'sans-serif';
+    font-size: 16px;
 }
 
 /* header-top */ /* header-top */ /* header-top */
@@ -16,103 +17,108 @@
     background-color: #F8F8F8;
 }
 
-.header-top__navigation-bar {
+.header-top__navigation {
     display: flex;
     flex-direction: row;
     margin: 0 12.5vw;
     justify-content: space-between;
 }
 
-/* navigation-bar__main-icon */
+/* navigation__left-side */
 
-.navigation-bar__main-icon {
+.navigation__left-side {
     justify-content: flex-start;
     display: flex; 
     flex-direction: row;
 }
 
-.navigation-bar__main-icon > li:hover {
-    height: 200px;
+.left-side__icon {
+    width: 100px;
 }
 
-.main-icon__maria {
-    width: 100px;
+.icon__maria {
     height: 200px;
     background-color:rgb(255, 89, 89);
 }
 
-.main-icon__cucute {
-    width: 100px;
+.icon__cucute {
     height: 100px;
-    margin: 0px 5px;
     background-color:rgb(97, 153, 175);
+    margin: 0px 5px;
 }
 
-.main-icon__mumuchu {
-    width: 100px;
+.icon__mumuchu {
     height: 100px;
     background-color: rgb(246, 180, 54);
 }
 
-/* navigation-bar__other-icon */
+.left-side__icon:hover {
+    height: 200px;
+}
 
-.navigation-bar__other-icon {
+/* navigation__right-side */
+
+.navigation__right-side {
     display: flex; 
     flex-direction: row;
 }
 
-/* other-icon__sign-in */
+/* right-side__sign-in */
 
-.other-icon__sign-in {
+.right-side__sign-in {
     height: 50px;
-    margin-right: 20px;
-    margin-top: 15px;
+    margin-right: 25px;
 }
 
-.other-icon__sign-in > a {
+.right-side__sign-in > a {
     text-decoration: blink; 
     font-weight: bold; 
     color: #BBB8B6;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    color: black;
 }
 
-.other-icon__sign-in > a:hover {
+.right-side__sign-in > a:hover {
     color: rgb(255, 89, 89);
 }
 
 /* header-top__social-media */
 
-.other-icon__social-media {
+.right-side__social-media {
     display: flex;
     flex-direction: row;
+    /* Entender bien esto */
     margin-right: 55px;
 }
 
-.other-icon__social-media > li {
+.social-media__icon {
     width: 50px;
     height: 50px;
     margin-left: 5px;
     background-color: #BBB8B6;
 }
 
-.other-icon__social-media > li:hover {
+.social-media__icon:hover {
     background-color: rgb(255, 89, 89);
 }
 
-/* other-icon__shopping-cart */
+/* right-side__shopping-cart */
 
-.other-icon__shopping-cart {
+.right-side__shopping-cart {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
 }
 
-.shopping-cart__link {
+.shopping-cart__icon {
     background-color: rgb(255, 255, 255);
     width: 50px;
     height: 50px;
 }
 
-.shopping-cart__link:hover {
+.shopping-cart__icon:hover {
     background-color: rgb(255, 89, 89);
 }
 
@@ -125,10 +131,10 @@
 /* header-bottom */
 
 .header-bottom {
-    height: 275px;
+    height: 375px;
 }
 
-.header-bottom__maria-lunarillos {
+.header-bottom__lunarillos {
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
@@ -138,58 +144,43 @@
 
 /* logo */ 
 
-.maria-lunarillos__logo {
+.lunarillos__icon {
     margin-top: 250px;
 }
 
-.maria-lunarillos__logo > a > img {
+.lunarillos__icon > a > img {
     width: 310px;
 }
 
-/* navigation-top */
+/* top-side */
 
-.navigation-top__search-by {
+.top-side__search-by {
     display: flex; 
     flex-direction: row;
     margin-top: 150px;
 }
 
-.search-by__novelties {
-    background-color: rgb(255, 89, 89);
-    width: 125px; 
-    height: 25px;
-    margin-right: 5px;
-}
-
-.search-by__novelties:hover {
-    background-color: #BBB8B6;
-}
-
-
-.search-by__novelties > a {
-    text-decoration: blink; 
-    font-weight: bold; 
-    color: white;
-}
-
-.search-by__offers {
+.search-by__categories {
     width: 125px; 
     height: 25px;
     background-color: rgb(255, 89, 89);
     margin-right: 5px;
 }
 
-.search-by__offers > a {
+.search-by__categories > a {
     text-decoration: blink; 
     font-weight: bold;
     color: white;
+    vertical-align: middle;
+    line-height: 25px;
+    margin-left: 5px;
 }
 
 /* text-form */
 
 .text-form {
     width: 300px;
-    height: 20.5px;
+    height: 20px;
     display: flex; 
     flex-direction: row;
     border: 2.5px solid #BBB8B6;
@@ -197,88 +188,68 @@
 
 .text-form__input {
     width: 250px;
-    height: 20.5px;
+    height: 20px;
     background-color: transparent;
     color: #BBB8B6;
     border: none;
+    margin-left: 5px;
 }
 
 .text-form__button {
     width: 50px;
-    height: 20.5px;
+    height: 20px;
     background-color:#BBB8B6;
     border: none;
 }
 
-/* navigation-bottom */
+/* bottom-side */
 
-.quick-access__navigation-bottom {
-    margin-top: 25px; 
+.quick-access__bottom-side {
+    margin-top: 50px; 
     display: flex; 
     flex-direction: row;
     justify-content: flex-end;
 }
 
-/* .navigation-bottom__utensils */
-
-.navigation-bottom__utensils {
+.bottom-side__categories {
     height: 100px; 
     width: 100px; 
     background-color:#BBB8B6;
     margin-right: 5px;
+
 }
 
-.navigation-bottom__utensils:hover {
+.bottom-side__categories:hover {
     background-color:rgb(255, 89, 89);
 }
-
-/* .navigation-bottom__ingredients */
-
-.navigation-bottom__ingredients {
-    height: 100px; 
-    width: 100px; 
-    background-color:#BBB8B6;
-    margin-right: 5px;
-} 
-
-.navigation-bottom__ingredients:hover {
-    background-color:rgb(255, 89, 89);
+/*
+.bottom-side__categories > a {
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    line-height: 230px;
+    color: black;
 }
-
-/* .navigation-bottom__party */
-
-.navigation-bottom__party {
-    height: 100px; 
-    width: 100px; 
-    background-color:#BBB8B6;
-    margin-right: 5px;
-}
-
-.navigation-bottom__party:hover {
-    background-color:rgb(255, 89, 89);
-}
-
-/* .navigation-bottom__brands */
-
-.navigation-bottom__brands {
-    height: 100px; 
-    width: 100px; 
-    background-color:#BBB8B6;
+*/
+.categories__brands {
     margin-right: 50px;
 }
 
-.navigation-bottom__brands:hover {
-    background-color:rgb(255, 89, 89);
-}
-
-/* .navigation-bottom__blog */
-
-.navigation-bottom__blog {
-    height: 100px; 
-    width: 100px; 
+.categories__blog {
     background-color: rgb(255, 89, 89);
 }
 
-.navigation-bottom__blog:hover {
+.categories__blog:hover {
     background-color:#BBB8B6; 
+}
+
+/* END OF HEADER */ /* END OF HEADER */ /* END OF HEADER */
+
+.carrousel {
+    width: 100vw; 
+    height: 600px; 
+    background-color:rgb(255, 255, 255);
+    animation-name: ejemplo; 
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
