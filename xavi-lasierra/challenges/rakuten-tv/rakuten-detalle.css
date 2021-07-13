@@ -241,10 +241,76 @@
 }
 
 .genres__list li span {
-    font-size: 0.9em;
+    font-size: 0.8em;
+    color: grey;
+    margin-top: 0.5em;
 }
 
+/*Round progress bar*/
+  .score-wrapper {
+      display: flex;
+  }
+
+  .score-wrapper div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .score-wrapper div small{
+    width: 5em;
+    text-align: center;
+    margin: 0 0 1em 0;
+    color: grey;
+    font-size: 0.8em;
+  }
+  
+  .circular-chart {
+    display: block;
+    margin: 0.5em;
+    width: 6em;
+    height: 6em;
+    min-width: 6em;
+    min-height: 6em;
+  }
+  
+  .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+  }
+  
+  .circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+  
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+  
+  .circular-chart.orange .circle {
+    stroke: #ffe300;
+  }
+    
+  .percentage {
+    fill: #666;
+    font-size: 0.6em;
+    font-weight: bold;
+    text-anchor: middle;
+  }
+
+  
+
 @media screen and (min-width: 1024px){
+    .main-container {
+        height: auto;
+    }
+
     .wrapper {
         max-width: 90vw;
     }
@@ -283,6 +349,7 @@
     
     .flex {
         flex-direction: row;
+        height: auto;
     }
 
     .social {
@@ -291,16 +358,12 @@
         justify-content: flex-start;
         align-items: baseline;
         width: 20em;
-        height: 50vw;
+        height: 55em;
         padding-top: 2vw;
     }
 
     .social button {
         margin: 0.3em 2em;
-    }
-    
-    .main-container {
-        height: auto;
     }
 
     .score-genres-container {
