@@ -1,0 +1,36 @@
+* {
+    font-family: 'helvetica neue', 'helvetica', 'sans-serfif';
+    margin: 0;
+}
+
+body {
+    /*Center*/
+    displaY: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: blue;
+}
+
+main {
+    background-color: white;
+    /*Width and height*/
+    width: 1280px;
+    height: 50vh;
+    /*Flex box*/
+    display: flex; 
+    flex-direction: column;
+    /*Border*/
+    border-radius: 12px;
+}
+
+form {
+    display: flex; 
+    flex-direction: row;
+    margin-left: 0;
+    justify-content: space-between;
+}
+
+fieldset {
+    border: 0;
+}
