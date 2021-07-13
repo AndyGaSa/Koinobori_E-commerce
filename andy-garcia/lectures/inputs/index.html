@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="reserveFly">
+        <div class="block1">
+            <label for="trip">Viaje</label> <select name="returnOrGo">
+                <option value="Ida y vuelta">Ida y vuelta</option>
+                <option value="Ida">Ida</option>
+                <option value="Vuelta">Vuelta</option>
+            </select>
+            <div class="my-input-container">
+                <label for="passengers">Pasajeros *</label> <input class="passengers-input" value="1" type="number" name="viaje"
+                    id=""></input>
+                
+ 
+            </div>
+            <label for="class">Clase</label> <select name="typeOfFly">
+                <option value="ECONOMY">ECONOMY</option>
+                <option value="Ida">Ida</option>
+                <option value="Vuelta">Vuelta</option>
+            </select>
+        </div>
+        <div>
+            <label for="start">Salida de *</label> <input type="text" name="viaje" id=""></input>
+            <label for="end">Llegada a *</label> <input type="text" name="viaje" id=""></input>
+        </div>
+        <label for="time">Fechas de viaje <input type="date" name="viaje" id=""></input></label> <br>
+        <div>
+            <label class="switchProfessional">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="spanProf">Viaje profesional</span>
+        </div>
+        <input class="submitFly" type="submit" value="Buscar vuelos">
+
+
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>

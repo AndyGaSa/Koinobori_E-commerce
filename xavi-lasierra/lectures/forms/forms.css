@@ -1,0 +1,20 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label + label {
+    margin-top: 20px;
+}
+
+input{
+    border: 2px solid;
+}
+
+#lastname:valid {
+    background-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}

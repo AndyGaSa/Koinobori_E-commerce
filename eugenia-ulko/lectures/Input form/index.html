@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirFrance Booking Form</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    
+    <form action="/action_page.php" method="get" name="myForm" autocomplete="on">
+        
+        
+        
+        <label for="trip">Trip:</label>
+        <p><select name="trip">
+                <option>Round trip</option>
+                <option>One way trip</option>
+            </select></p>
+
+        <label for="passengers">Passengers:</label>
+        <input type="text" id="passengers" name="passengers" required><br><br>
+        
+        <label for="class">Class:</label>
+        <p><select name="class">
+                <option>ECONOMY</option>
+                <option>BUSINESS</option>
+            </select></p>
+
+        <input type="text" id="departure" name="departure" placeholder="Departure from">
+
+        <input type="text" id="arrival" name="arrival" placeholder="Arrival to"><br><br>
+
+        <label for="date">Travel dates:</label>
+        <input type="date" id="date" name="date"><br><br>
+
+        
+
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+
+        <label for="description">Description:</label>
+        <input type="textarea" id="description" name="description"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br><br>
+
+        <label for="tel">Tel:</label>
+        <input type="tel" pattern="\+34\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"><br><br>
+
+        <label for="worktrip"> It's a business trip</label><br>
+        <input type="checkbox" id="worktrip" name="worktrip" value="worktrip"><br><br>
+
+        <input type="button" onclick="formSubmit()" value="Buscar vuelos">
+    </form>
+
+</body>
