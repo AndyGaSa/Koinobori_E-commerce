@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Airlines Form</title>
+</head>
+<body>
+    <form><br>
+        <label for="nombre">
+            Nombre:
+            <input type="text" maxlength="15" size="18" required>
+        </label>
+        <label for="apellidos">
+            Apellidos:
+            <input type="text" maxlength="40" required>
+        </label>
+        <label for="comentario">
+            Comentario:
+            <input type="text" maxlength="250">
+        </label><br>
+        <label for="mail">
+            Email:
+            <input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        </label>
+        <label for="telefono">
+            Teléfono:
+            <input type="tel" pattern="[0-9]" re>
+        </label><br>
+        <label for="clase">
+            Clase:
+            <select name="clase">
+                <option value="economy">Economy</option>
+                <option value="businnes">Businnes</option>
+                <option value="first">First</option>
+          </select>
+        </label>
+        <label for="pasajeros">
+            Pasajeros:
+            <input type="number" maxlength="2" min="1" max="9" required>
+        </label>
+        <label for="viaje">
+            Viaje:
+            <select name="viaje" required>
+                <option value="economy">Ida y vuelta</option>
+                <option value="businnes">Solo ida</option>
+          </select>
+        </label><br>
+        <label for="salida">
+            Salida de:
+            <input type="text" placeholder="Salida de" required>
+        </label>
+        <label for="llegada">
+            Llegada de:
+            <input type="text" placeholder="Llegada de" required>
+        </label><br>
+        <label for="fechas">
+            Fechas de viaje:
+            <input type="date" required>
+        </label><br>
+        <label for="profesional">
+            Viaje profesional:
+            <input type="checkbox">
+        </label><br><br>
+        <label for="submit">
+            <input type="button" value="Buscar Vuelos">
+        </label>
+
+    </form>
+    
+</body>
+</html>
