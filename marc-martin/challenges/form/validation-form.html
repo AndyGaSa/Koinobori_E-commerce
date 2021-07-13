@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marc Martín Barrios">
+    <title>Form validation</title>
+</head>
+<body>
+    <form>
+        <label for="first-name">First name: </label>
+            <input type="text" name="first-name" pattern="[A-z]{2-10}" required><br>
+        <label for="last-name">Last name: </label>
+            <input type="text" name="last-name" pattern="[A-z]{2-20}" required><br>
+        <label for="email">Email: </label>
+            <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br>
+        <label for="phone-number">Phone: </label>
+            <input type="tel" name="phone-number" pattern="[0-9]{9}" maxlength="9"><br>
+        <label for="trip">Trip: </label> 
+            <select name="trip" required>
+                <option value="round-trip" selected>Round trip</option>
+                <option value="one-way">One way</option>
+            </select><br>
+        <label for="passengers">Passengers:</label>
+            <select name="passengers" id="passengers">
+                <option value="one" selected>1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+                <option value="six">6</option>
+                <option value="seven">7</option>
+                <option value="eight">8</option>
+                <option value="nine">9</option>
+                <option value="ten">10</option>
+            </select><br>
+        <label for="class">Class: </label>
+            <select name="class" id="class">
+                <option value="economy" selected>ECONOMY</option>
+                <option value="business">BUSINESS</option>
+                <option value="first-class">FIRST CLASS</option>
+            </select><br>
+        <label for="departure-to"></label>
+            <input type="text" placeholder="Departure-to *" name="departure-to">
+        <label for="arrival-to"></label>
+            <input type="text" placeholder="Arrival to *" name="arrival-to"><br>
+        <label for="travel-dates"></label>
+            <input type="date" name="travel-dates"><br>
+        <label for="switch-button">Business Trip</label>
+            <input type="checkbox" name="switch-button"><br>
+        <label for="description">Description: </label>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea><br>
+        <label for="search-flights-button"></label>
+            <input type="submit" value="Search flights">
+        </label>
+    </form>
+</body>
+</html>
