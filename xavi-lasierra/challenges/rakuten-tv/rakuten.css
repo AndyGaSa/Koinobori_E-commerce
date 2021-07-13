@@ -51,8 +51,9 @@
     display: flex;
     align-items: center;
 }
-
-.films-navigator a:hover {
+.films-navigator__free:hover a, 
+.films-navigator__cinema:hover a, 
+.films-navigator__subscriptions:hover a {
     color: yellow;
     transition: color 0.2s;
 }
@@ -82,7 +83,8 @@
     margin-left: 5px;
 }
 
-.films-navigator a:hover .films-navigator__triangle {
+.films-navigator__subscriptions:hover .films-navigator__triangle,
+.films-navigator__cinema:hover .films-navigator__triangle {
     border-width: 0 4px 8px 4px;
     border-color: yellow transparent yellow transparent;
     transition: border-color 0.2s;
