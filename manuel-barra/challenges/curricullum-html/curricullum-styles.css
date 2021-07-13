@@ -2,26 +2,28 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Courier New', Courier, monospace;
     }
     
     #wrapper {
-        height: auto;
+        height: 100%;
         width: 100%;
-        background-color: blueviolet;
         display: flex;
         flex-flow: column wrap;
         min-height: 100vh;
+        background-color: black;
     }
     /*----------> header <--------*/
     
     #header-box {
-        height: 20%;
+        height: 8vw;
         width: 100%;
         background-color: black;
         display: flex;
         align-items: flex-end;
         flex-flow: column;
         border-bottom: solid 2px white;
+        justify-content: center;
     }
     
     h1,
@@ -43,9 +45,8 @@
     /*--------> Main <----------*/
     
     #main-box {
-        height: 80%;
+        height: 80vh;
         width: 100%;
-        background-color: rgba(255, 0, 0, 0.795);
         display: flex;
         flex-flow: row-reverse nowrap;
     }
@@ -78,8 +79,7 @@
     }
     
     .aside-box {
-        background-color: rgb(74, 71, 255);
-        flex: 0 0 30%;
+        flex: 0 0 25%;
         display: flex;
         flex-flow: column wrap;
         align-items: center;
@@ -87,12 +87,18 @@
         color: white;
         background-color: black;
         text-align: center;
-        margin-top: -50px;
+        border-radius: 25px;
+        margin-top: -5%;
+    }
+    
+    .img-photo {
+        width: auto;
+        height: 200px;
+        margin-top: 10%;
         border-radius: 25px;
     }
     
     #footer-box {
-        height: 20%;
+        height: 10vh;
         width: 100%;
-        background-color: rgb(11, 184, 63);
     }

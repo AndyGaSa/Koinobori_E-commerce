@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Air-France</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <form action="#" class="formulario">
+            <h1 class="Formulario-h1">Formulario Air-France</h1>
+            <label for="transporte">Viaje</label>
+            <select name="transporte" required>
+                <option selected>Ida y vuelta</option>
+                <option>Solo ida</option>
+                </select>
+            <label for="Pasajero">Pasajeros</label>
+            <select name="Pasajero" required>
+                    <option selected>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            <label for="Clase">Clase</label>
+            <select name="Clase" required>
+                    <option selected>Economy</option>
+                    <option>Plus</option>
+                    <option>First Class</option>
+                </select>
+            <input required type="text" placeholder="Salida desde" pattern="[a-z]">
+            <input required type="text" placeholder="Llegada destino" pattern="[a-z]">
+            <input required type="date" name="fecha-de-salida" id="fecha-de-salida">
+            <label class="Viaje Profesional">Viaje Profesional
+                <input required type="checkbox" placeholder="Viaje profesional">
+            </label>
+            <label for="Name">Nombre
+                <input required  type="text" id="Name" pattern="^([A-Z]{1}[a-zñáéíóú]+[\s]*)+$">
+            </label>
+            <label for="Apellido">Apellido
+                <input required type="text" id="Apellido" pattern="^([A-Z]{1}[a-zñáéíóú]+[\s]*)+$">
+            </label>
+            <label for="text-area">Descripción
+                <textarea required id="text-area" name="description" rows="3" cols="30"></textarea>
+            </label>
+            <label for="mail">E-mail
+                <input required type="email" name="mail" id="mail" pattern="[\w]+@{1}[\w]+\.[a-z]{2,3}">
+            </label>
+            <label for="tel">Telefono
+                <input required type="tel" name="tel" id="tel" pattern="^[\d]{3}[-]*([\d]{2}[-]*){2}[\d]{2}$">
+            </label>
+
+            <input required type="submit" value="Enviar" id="Enviar">
+        </form>
+    </div>
+</body>
+
+</html>
