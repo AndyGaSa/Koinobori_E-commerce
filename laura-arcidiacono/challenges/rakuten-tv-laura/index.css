@@ -262,6 +262,12 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
     display: flex;
 }
 
+/*.vertical-slide .vertical-slide__img {
+    width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
 .img__carousel {
     display: gid;
     grid-template-columns: repeat(3, 100%);
@@ -270,32 +276,54 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
     overflow: hidden;
     scroll-behavior: smooth;
 }
+.carousel__img{
+
+}
 
 #carousel-1, #carousel-2, #carousel-3 {
     display: flex;
     overflow: hidden;
-    width: auto;
-    
-}
+    width: auto; 
+}*/
 
-.vertical-slide .vertical-slide__img {
-    width: 100%;
-    padding: 20px 0;
+.vertical-slide {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
     overflow: hidden;
     scroll-behavior: smooth;
+}
+
+.vertical-slide__section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 5vh repeat(5, 1fr) 5vh;
+    margin: 2vh 0;
+}
+
+.carousel__img {
+    padding: 0 0.25;
+    transition: 250ms all;
+    width: 90%;
+    border: 0.5vh solid transparent;
+}
+
+.carousel__img:hover{
+    border: 0.5vh solid rgb(247, 216, 0);
 }
 
 .left-angle, .right-angle {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     border: none;
     background: rgba(0, 0, 0, 0.3);
-    font-size: 5vh;
-    top: calc(50% - 25%);
-    width: 5vh;
+    font-size: 4vh;
+    width: 3vh;
     color: #fff;
     cursor: pointer;
-    transition: .2s ease all;
+    transition: .3s ease all;
+    position: initial;
 }
 
 .left-angle:hover, .right-angle:hover {
@@ -343,7 +371,7 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
     display: flex;
     justify-content: space-around;
 }
-    
+
 .bottom__tooltip {
     border-radius: 10vh;
     border-color: white 1vh solid;
