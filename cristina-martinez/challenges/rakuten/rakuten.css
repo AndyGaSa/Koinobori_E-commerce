@@ -9,28 +9,30 @@ body{
 .header{
     display: flex;
     flex-direction: row;
-    height: 60px;
+    align-items: center;
+}
+.header__logo{
+    width: 122px;
 }
 .firstheader{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    width: 314px;
 }
-.firstheader__logo{
-    width: 122px;
-}
+
 .cinema{
     display: flex;
     flex-direction: column;
 }
 .cinema__topics{
-    background-color: black;
-    z-index: 1;
-
-}
-.cinema__topics:hover{
     position: absolute;
     display:flex ;
     flex-direction: column;
+    top: 3vh;
+}
+.header__headersearch{
+    width: 487px;
 }
 .promotion{
     display: flex;
