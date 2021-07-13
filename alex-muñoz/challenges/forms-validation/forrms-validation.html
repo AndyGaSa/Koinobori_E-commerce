@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms validation</title>
+</head>
+<body>
+    <form class="formulario">   
+        <div class="contenedor-campos">
+            <div class="campo">
+                <label for="">Nombre</label>
+                <input class="input-text"type="text"pattern='[A-Z]' placeholder="Tu Nombre">
+                <label for="">Apellido</label>
+                <input class="input-text"type="text" pattern='[A-Z]' placeholder="Tu Apellido">
+            </div>
+            <div class="campo">
+                <label for="">Teléfono</label>
+                <input class="input-text"type="tel" pattern="[0-9]" placeholder="Tu Teléfono">
+                <label for="">Correo</label>
+                <input class="input-text"type="email"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Tu Email">
+            </div>
+            <div class="campo">
+                <label for="">Descripción</label>
+                <textarea class="input-text" id="" ></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="">Viaje</label>
+                <select name="viaje" >
+                    <option value="Ida" selected>Ida y vuelta</option>
+                    <option value="Ida y vuelta">Ida</option>
+                    <option value="Vuelta">Vuelta</option>
+                </select>
+                <label for="">Pasajeros*</label>
+                <select name="viaje" >
+                    <option value="value2" selected>1 Pasajero</option>
+                    <option value="value1">2 Pasajeros</option>
+                </select>
+                <label for="">Clase</label>
+                <select name="viaje" >
+                    <option value="Ida">Primera Clase</option>
+                    <option value="Ida" selected>Economy</option>
+                    <option value="Vuelta">Vuelta</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <input class="input-text"type="text"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Salida de">
+                <input class="input-text"type="text"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Llegada a*">
+            </div>
+
+            <div class="campo">
+                <input class="input-text"type="date"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Fechas de viaje">
+            </div>
+            <div class="campo">
+                <label for="">Viaje profesional</label>
+                <input class="input-text"type="checkbox"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Fechas de viaje">
+            </div>
+        </div> 
+        <div class="alinear-derecha flex">
+            <input class="boton w-sm-100" type="Submit" value="Enviar">
+        </div>
+    </form>
+</body>
+</html>

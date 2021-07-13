@@ -1,0 +1,295 @@
+/**
+** -------> Estilos CSS <---------
+** ---->Bethany's Challenge <-----
+**/
+
+
+/*---------> General styles <-------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#wrapper {
+    width: 100%;
+    height: 1800px;
+    display: flex;
+    flex-flow: column wrap;
+    background-image: url(/skylab-bootcamp-202107-bcn/manuel-barra/challenges/bethanys-challenge/pattern.png);
+}
+
+
+/*--------------> HEader <-----------*/
+
+.header-box {
+    background-color: #A593C2;
+    width: 100%;
+    height: 4%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    font-size: 25px;
+}
+
+.navegation {
+    display: flex;
+}
+
+.nav-links {
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0 15px 0 0;
+}
+
+
+/*---------> Main <----------*/
+
+.main-box {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/*---------> Section Browser <-------*/
+
+.banner-logo-box {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+
+/*---------> Logo <--------*/
+
+.logo-img {
+    width: 200px;
+    margin: 15px;
+}
+
+
+/*----------> Browse Products <----------*/
+
+.browse-pie-box {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.h2-title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 0 20px 0;
+}
+
+.pies-items {
+    width: 170px;
+    height: 60px;
+    background-color: #CF4522;
+    margin: 5px;
+    color: white;
+    font-size: 21px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 0 38px;
+}
+
+
+/*-------> Section Info <---------*/
+
+.section-info {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+
+/*----------> Welcome Banner <-----------*/
+
+.welcome-box {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.h3-title {
+    font-size: 1.8rem;
+    margin: 20px 30px;
+    color: #A593C2;
+    font-weight: bold;
+}
+
+.img-description {
+    font-size: 16px;
+    padding: 5px 0 0 30px;
+    align-self: flex-start;
+    margin-left: 10px;
+}
+
+.welcome-img {
+    width: 300px;
+    height: 170px;
+}
+
+
+/*---------> About <--------*/
+
+.our-history-box {
+    display: flex;
+    flex-flow: column wrap;
+    width: 300px;
+    align-items: center;
+}
+
+.h3-history {
+    align-self: flex-start;
+    font-size: 26px;
+    font-weight: 800;
+    text-justify: auto;
+    margin-top: 10px;
+}
+
+.text-history {
+    padding: 10px 0;
+}
+
+
+/*-----------> Card <-------------*/
+
+.menu-card {
+    width: 300px;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    border-radius: 25px;
+}
+
+.h4-title {
+    font-size: 18px;
+    padding: 10px 0 0 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.h5-title {
+    font-size: 16px;
+    padding: 10px 0 10px 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.price {
+    font-size: 14px;
+    padding: 0px 0 10px 8px;
+    color: black;
+}
+
+.mg-product-card {
+    width: 100%;
+    padding: 10px;
+}
+
+.img-product-card {
+    padding: 10px;
+}
+
+
+/*----------> Footer <--------*/
+
+.footer-box {
+    height: 9%;
+    width: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.h6-title {
+    font-weight: bold;
+}
+
+.address-text,
+.copyright-text {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.email-text,
+.web-master-credits {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+/*--------> Media Queries <---------*/
+
+@media only screen and (min-width: 1024px) {
+    .header-box {
+        justify-content: flex-start;
+        padding: 0 15%;
+    }
+    .browse-pie-box {
+        width: 50%;
+        align-items: center;
+        padding-left: 200px;
+    }
+    .logo-img {
+        width: 300px;
+        margin: -150px 0 0 0;
+    }
+    .section-info {
+        align-items: flex-start;
+        width: 50%;
+    }
+    .h3-title {
+        font-size: 2.6rem;
+        margin: 20px 0px
+    }
+    .pies-items {
+        width: 300px;
+    }
+    .welcome-box {
+        margin-left: -60px;
+    }
+    .welcome-img {
+        width: 550px;
+        height: 300px;
+    }
+    .our-history-box {
+        width: 700px;
+        margin-left: -20px;
+        font-size: 20px;
+    }
+    .menu-card {
+        width: 360px;
+        margin-left: -20px;
+    }
+    .footer-box {
+        align-items: start;
+        margin: 0 25%;
+    }
+}
+
+
+/*----------> fin <---------*/

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakuten Tv</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__navbar navbar">
+            <a href="" class="navbar__logo logo">
+                <img class="navbar__logo--png logo--png"
+                    src="https://appstv-static-content-prod.wuaki.tv/images/720p/UI30_about_us-logo.70c3538baaaa2c6937b498be48c7e456.png"
+                    alt="logo">
+            </a>
+            <ul class="navbar__categories categories">
+                <li>CINEMA
+                    <ul id="categories__expand">
+						<li><a href="">FAMILY</a></li>
+						<li><a href="">COLECCIONES</a></li>
+						<li><a href="">TOP POPULARES</a></li>
+						<li><a href="">TODOS LOS GENEROS</a></li>
+					</ul>
+                </li>
+                <li>GRATIS</li>
+                <li>SUSCRIPCIONES</li>
+            </ul>
+            <div class="navbar__search-div search-div">
+                <input class="search-div__input" type="text" name="search" placeholder="Buscar" value=""
+                    autocomplete="off">
+            </div>
+            <div class="navbar__padding"></div>
+            <ul class="navbar__login login">
+                <li class="login__help">AYUDA Y DISPOSITIVOS</li>
+                <li class="login__entrar">ENTRAR</li>
+                <li class="login__register">REGISTRARSE</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="main__slider--container slider--container">
+            <ul class="slider">
+                <li id="slide1">
+                    <img src="https://pa1.narvii.com/7526/90727856e4fde63e975ea5e387aaf4da0d247655r1-500-261_hq.gif"
+                        alt="slider1foto">
+                </li>
+                <li id="slide2">
+                    <img src="https://i.ytimg.com/vi/7wexlVI84oM/maxresdefault.jpg" alt="slider2foto">
+                </li>
+                <li id="slide3">
+                    <img src="https://pics.filmaffinity.com/Enter_the_Void-113928297-large.jpg" alt="slider3foto">
+                </li>
+            </ul>
+            <ul class="slider__menu">
+                <li>
+                    <a href="#slide1"></a>
+                </li>
+                <li>
+                    <a href="#slide2"></a>
+                </li>
+                <li>
+                    <a href="#slide3"></a>
+                </li>
+                <li>
+                    <a href="#slide1"></a>
+                </li>
+                <li>
+                    <a href="#slide2"></a>
+                </li>
+                <li>
+                    <a href="#slide3"></a>
+                </li>
+            </ul>
+        </section>
+        <div class="main__horizontal-cards horizontal-cards">
+            <ul>
+                <li>
+                    <img src="https://www.xtrafondos.com/descargar.php?id=3727&resolucion=3840x2160" alt="Hzcard1">
+                </li>
+                <li>
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/1ce2c0fc14f1222f45d2bdd9edbf53be2da9920697a1d5cd55decb57c656f8a9._RI_V_TTW_.jpg"
+                        alt="Hzcard2">
+                </li>
+                <li>
+                    <img src="https://miro.medium.com/max/1600/1*LJ7Q2v_D3MZ_EllF8_w9XA.jpeg" alt="Hzcard3">
+                </li>
+                <li>
+                    <img src="https://c4.wallpaperflare.com/wallpaper/684/776/916/anime-the-seven-deadly-sins-meliodas-the-seven-deadly-sins-hd-wallpaper-preview.jpg"
+                        alt="Hzcard4">
+                </li>
+                <li>
+                    <img src="https://i.blogs.es/dd69e5/ryuk-death-note-/500_333.jpeg" alt="Hzcard5">
+                </li>
+            </ul>
+        </div>
+       <span class="main__text"> GRATIS - La mejor selección de películas</span> 
+        <div class="main__vertical-cards vertical-cards">
+            <ul>
+                <li>
+                    <img src="https://img.europapress.es/fotoweb/fotonoticia_20151214165941-852249_420.jpg" alt="Hzcard1">
+                </li>
+                <li>
+                    <img src="https://d2e111jq13me73.cloudfront.net/sites/default/files/styles/product_image_aspect_switcher_170w/public/product-images/csm-tv/fullmetal-alchemist-brotherhood-poster.jpg?itok=G8WQucq6"
+                        alt="Hzcard2">
+                </li>
+                <li>
+                    <img src="https://es.web.img3.acsta.net/pictures/14/05/07/12/38/160972.jpg" alt="Hzcard3">
+                </li>
+                <li>
+                    <img src="https://pbs.twimg.com/media/EJ9M3BsXsAUcSxf.jpg:large"
+                        alt="Hzcard4">
+                </li>
+                <li>
+                    <img src="https://pics.filmaffinity.com/El_indomable_Will_Hunting-764690099-large.jpg" alt="Hzcard5">
+                </li>
+                <li>
+                    <img src="data:image/jpeg;base64,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" alt="Hzcard1">
+                </li>
+                <li>
+                    <img src="https://pics.filmaffinity.com/Blade_Runner_2049-681477614-large.jpg"
+                        alt="Hzcard2">
+                </li>
+                <li>
+                    <img src="https://miro.medium.com/max/1600/1*LJ7Q2v_D3MZ_EllF8_w9XA.jpeg" alt="Hzcard3">
+                </li>
+                <li>
+                    <img src="https://c4.wallpaperflare.com/wallpaper/684/776/916/anime-the-seven-deadly-sins-meliodas-the-seven-deadly-sins-hd-wallpaper-preview.jpg"
+                        alt="Hzcard4">
+                </li>
+                <li>
+                    <img src="https://i.blogs.es/dd69e5/ryuk-death-note-/500_333.jpeg" alt="Hzcard5">
+                </li>
+            </ul>
+        </div>
+
+
+    </main>
+    <footer>
+        <section class="footer__genders genders"></section>
+        <section class="footer__info info"></section>
+        <section class="footer__about about"></section>
+    </footer>
+</body>
+
+</html>

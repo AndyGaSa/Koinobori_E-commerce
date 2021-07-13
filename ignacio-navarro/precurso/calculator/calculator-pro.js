@@ -54,12 +54,13 @@ function operation (values = []){
     let resultMult = 1;
     let resultDiv = 1;
 
-    for (let i = 0; i < values.length; i++){
-        resultSum += values[i];
-        resultRest -= values[i];
-        resultMult *= values[i];
-        resultDiv /= values[i];
-    }
+    for (let value of values) {
+        resultSum += value;
+        resultRest -= value;
+        resultMult *= value;
+        resultDiv /= value;
+      }
+    
     operations[0] = resultSum;
     operations[1] = resultRest;
     operations[2] = resultMult;

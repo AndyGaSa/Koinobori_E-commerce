@@ -1,0 +1,1 @@
+sonar-scanner.bat -D"sonar.projectKey=precurso" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=ea0dc999c283ff8b8286c9cf2139b8926e485261"
