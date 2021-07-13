@@ -337,7 +337,12 @@ footer,
             letter-spacing: 1px;
             color: #2E2925;
         }
-        
+        .market-navigation-bar-button__icon:hover{
+            background-color:#FF5959;
+        }
+        .header-navigation-bar__shopping-icon:hover{
+            background-color:#FF5959;
+        }
 
 
 
@@ -654,10 +659,15 @@ footer,
 .burger-button{
     display: none;
 }
-
+.brands{
+    margin: 80px 0;
+}
 .brands,
 .brands-more-link{
-   display: flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .brands-more-link{
