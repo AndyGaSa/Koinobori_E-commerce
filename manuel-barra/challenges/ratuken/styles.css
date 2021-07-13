@@ -163,19 +163,7 @@
     font-size: 1.5rem;
 }
 
-@media only screen and (min-width: 1200px) {
-    .slide {
-        width: 1200px;
-    }
-    .caption {
-        font-size: 96px;
-        bottom: 96px;
-        right: 50px;
-    }
-}
-
 .main-box {
-    background-color: chartreuse;
     width: 100%;
     height: 40%;
 }
@@ -204,7 +192,7 @@
     background-image: url(https://images-2.wuaki.tv/system/artworks/11880/original/gotti-1611323038-width217-quality80.jpeg);
     background-repeat: no-repeat;
     background-size: contain;
-    border: 2px solid yellow;
+    border: 2px solid rgba(255, 255, 0, 0);
 }
 
 .main-box__section-box__carrusel__link:nth-child(2) {
@@ -213,6 +201,7 @@
 
 .main-box__section-box__carrusel__link:hover {
     border: 2px solid red;
+    transform: scale(2);
 }
 
 .footer-box {
@@ -226,7 +215,7 @@
     display: flex;
     flex-flow: column wrap;
     text-align: center;
-    color: darkseagreen;
+    color: #999999;
     width: 100%;
     background-color: rgb(3, 8, 8);
     height: 180px;
@@ -240,6 +229,7 @@
     justify-content: space-around;
     height: 45px;
     align-items: center;
+    border-top: solid 1px #3b3b3b;
 }
 
 .footer-box__nav__item-box {
@@ -255,6 +245,112 @@
 }
 
 .footer-box__legal-contact-box__text-footer {
-    color: silver;
+    color: #999999;
     text-decoration: none;
+}
+
+h5 {
+    background-image: url(https://prod1-kraken-cloudfront.rakuten.tv/images/logos/rktv-grey-eae681a197.svg);
+    width: 187px;
+    height: 200px;
+    color: silver;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 405px;
+}
+
+.header-box__header-top__right-link-desktop {
+    display: none;
+}
+
+.header-box__header-top__right-link-desktop__item {
+    display: none;
+}
+
+.header-box__header-top__text-link {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    /* CSS */
+    .header-top-links {
+        display: none;
+    }
+    .slides {
+        background-color: black;
+        width: 80%;
+        margin: 0 auto;
+        height: 60vh;
+        flex-flow: row nowrap;
+    }
+    .slide {
+        width: 1200px;
+    }
+    .caption {
+        font-size: 96px;
+        bottom: 96px;
+        right: 50px;
+    }
+    .header-box__slider-box {
+        position: relative;
+        margin-top: 0px;
+        height: 540px;
+        width: 100%;
+        z-index: 1;
+    }
+    .slide img {
+        width: 80vw;
+        vertical-align: top;
+        height: 60vh;
+    }
+    .header-box__header-top {
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 auto;
+        width: 80%;
+    }
+    .header-box__header-top__right-link-desktop {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 15%;
+    }
+    .header-box__header-top__right-link-desktop__item {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    .header-box__header-top__right-link-desktop__item:nth-child(3) {
+        padding: 10px;
+        margin: 10px;
+        background-color: yellow;
+        border-radius: 5px;
+        color: black;
+    }
+    .header-box__header-top__text-link {
+        color: white;
+        text-decoration: none;
+        width: auto;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .header-box__header-top__text-link:nth-child(2) {
+        width: 120px;
+    }
+    .header-box__header-top__search-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 300px;
+        margin: 0 0 0 0;
+        background-image: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg);
+        background-repeat: no-repeat;
+        background-position: -312px 3px;
+        z-index: 2;
+        background-color: #999;
+        border-radius: 10px;
+    }
 }
