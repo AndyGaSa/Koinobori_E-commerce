@@ -60,3 +60,14 @@ test("Function strictEquals of 0 and false is false", function() {
     expect(strictEquals(0, false)).toBe(false);
 })
 
+test("Function strictEquals of null and undefined is false", function() {
+    expect(strictEquals(null, undefined)).toBe(false);
+})
+
+test("Function strictEquals of null and null is true", function() {
+    expect(strictEquals(null, null)).toBe(true);
+})
+
+test("Function strictEquals of undefined and undefined is false", function() {
+    expect(strictEquals(undefined, undefined)).toBe(true);
+})
