@@ -79,7 +79,6 @@
     }
     
     .aside-box {
-        background-color: rgb(74, 71, 255);
         flex: 0 0 25%;
         display: flex;
         flex-flow: column wrap;
