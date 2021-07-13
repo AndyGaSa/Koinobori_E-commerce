@@ -28,7 +28,7 @@
                             <li>TODOS LOS GÉNEROS</li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="films-navigator__free">
                         <a href="">GRATIS</span></a>
                     </li>
                     <li class="films-navigator__subscriptions subscriptions">
@@ -116,11 +116,46 @@
                     </section>
                     <div class="score-genres-container">
                         <section class="film-description__score">
-                            <h2 class="header"><i class="header-icon fas fa-star fa-sm"></i>Dirección y reparto</h2>
-
+                            <h2 class="header"><i class="header-icon fas fa-star fa-sm"></i>Puntuación</h2>
+                            <div class="score-wrapper">
+                                <div>
+                                    <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                        <path class="circle-bg"
+                                          d="M18 2.0845
+                                            a 15.9155 15.9155 0 0 1 0 31.831
+                                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        />
+                                        <path class="circle"
+                                          stroke-dasharray="44, 100"
+                                          d="M18 2.0845
+                                            a 15.9155 15.9155 0 0 1 0 31.831
+                                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        />
+                                        <text x="18" y="20.35" class="percentage">4.4</text>
+                                    </svg>
+                                    <small>IMDb</small>
+                                </div>
+                                <div>
+                                    <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                        <path class="circle-bg"
+                                          d="M18 2.0845
+                                            a 15.9155 15.9155 0 0 1 0 31.831
+                                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        />
+                                        <path class="circle"
+                                          stroke-dasharray="47, 100"
+                                          d="M18 2.0845
+                                            a 15.9155 15.9155 0 0 1 0 31.831
+                                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        />
+                                        <text x="18" y="20.35" class="percentage">4.7</text>
+                                      </svg>
+                                      <small>The Movie Database</small>
+                                </div>
+                            </div>
                         </section>
                         <section class="film-description__genres genres">
-                            <h2 class="header"><i class="header-icon fas fa-theater-masks fa-sm"></i>Dirección y reparto</h2>
+                            <h2 class="header"><i class="header-icon fas fa-theater-masks fa-sm"></i>Géneros</h2>
                             <ul class="genres__list">
                                 <li><a></a><span>Acción</span></li>
                                 <li><a></a><span>Drama</span></li>
@@ -146,6 +181,6 @@
             <small class="footer__text">2009 - 2021 @ Rakuten TV Europe, S.L.U. - v1.887.0</small>
         </section>
     </footer>
-
+    <script src="rakuten.js"></script>
 </body>
 </html>
