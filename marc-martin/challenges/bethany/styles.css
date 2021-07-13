@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    background-image: url("./pattern.png");
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #A593C2;
+    flex: 20;
+    border: 2px black ;
+    justify-content: flex-start;
+}
+
+.pie-logo {
+
+    float: left;
+    display: flex;
+    border: 2px black;
+    flex: 2;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.logo {
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+nav {
+    float: right;
+    display: flex;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-direction: row;
+   
+}
+
+nav li {
+    font-size: large;
+    margin-left: 70px;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+footer{
+    text-align: center;
+    font-size: large;
+}
+
+article{
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin: 20px;
+}
+
+.our-history {
+    font-size: medium;
+    text-align: justify;
+}
+
+section ul {
+    text-align: center;
+    list-style: none;
+}
+
+section ul li {
+
+    border: 1px solid black;
+    box-sizing: content-box;
+    background-color: #CF4522;
+    color: #ffff;
+    font-size: larger;
+}
+
+h1 {
+    color: #A593C2;
+    text-align: center;
+}
+
+.promotions {
+    background-color: white;
+}
