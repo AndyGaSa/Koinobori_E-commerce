@@ -4,15 +4,15 @@ const strictEquals = function (a, b){
         return false;
     }
 
-    if(Object.is(a, -0) && Object.is(b,0)){
+    if(Object.is(a, -0) && Object.is(b, 0)){
         return true;
     }
 
-    if(Object.is(a, 0) && Object.is(b,-0)){
+    if(Object.is(a, 0) && Object.is(b, -0)){
         return true;
     }
     
-    if(Object.is(a,b)){
+    if(Object.is(a, b)){
         return true;
     } else
         return false;
@@ -63,6 +63,12 @@ test("Function strict equals of false and false is true", function(){
 
 test("Function strict equals of 'water' and 'oil'is false", function(){
     const result = strictEquals('water','oil');
+    expect(result).toBe(false);
+}
+)
+
+test("Function strict equals of undefined and null", function(){
+    const result = strictEquals(undefined, null);
     expect(result).toBe(false);
 }
 )
