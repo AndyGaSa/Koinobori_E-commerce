@@ -275,6 +275,7 @@ input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
     display: flex;
     overflow: hidden;
     width: auto;
+    
 }
 
 .vertical-slide .vertical-slide__img {
