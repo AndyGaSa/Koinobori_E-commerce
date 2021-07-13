@@ -148,7 +148,7 @@ body{
     background-color: whitesmoke;
 }
 .top-header{
-    width:92vw;
+    width:98vw;
     height:13vw ;
     background-color:#FFFFFF;
     display:flex;
@@ -189,7 +189,7 @@ body{
 }
 .main-continer__mobile span{
     position: relative;
-    bottom:150vw;
+    bottom:40vw;
     z-index: 1;
     width: 100vw;
     height: 50vw;

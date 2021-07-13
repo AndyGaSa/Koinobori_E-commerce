@@ -252,6 +252,7 @@ ul.slider__menu li a:hover{
 .horizontal-scroll__menu li:first-child,.horizontal-scroll__menu li:last-child,
 .upright-scroll__menu li:first-child{
     margin:0 4px 0 0;
+
 }
 
 .horizontal-scroll__menu li img:hover,.upright-scroll__menu li img:hover{
