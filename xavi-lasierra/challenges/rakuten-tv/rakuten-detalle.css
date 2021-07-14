@@ -1,0 +1,376 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.empty {
+    height: 47.1em;
+}
+
+.film-miniature {
+    width: 100%;
+    height: 50em;
+    background: black url(https://images-2.wuaki.tv/system/shots/195811/original/snapshot-1590664794-width1920-quality80.jpeg);
+    background-size: 150vw;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.film-miniature__buttons {
+    display: flex;
+    margin-bottom: 18em;
+}
+
+.film-miniature__buttons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.film-miniature__buttons div button {
+    width: 5em;
+    height: 5em;
+    background-color: #000000B3;
+    border: none;
+    border-radius: 50%;
+    margin: 0 1.5em;
+}
+
+.film-miniature__buttons div small {
+    margin-top: 1em;
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-shadow: black 1px 1px;
+    width: 8em;
+    text-align: center;
+}
+
+.film-miniature__buttons div button:hover i {
+    color: yellow;
+}
+
+.film-miniature__buttons div button i {
+    color: white;
+}
+
+.film-miniature__imdb {
+    color:#F5C518;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.film-miniature__title {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 2em;
+    margin-bottom: 2em;
+    font-weight: bold;
+}
+
+.film-miniature__watch {
+    margin-bottom: 4em;
+    width: 80vw;
+    height: 4.5em;
+    background-color: #FFE300;
+    border: none;
+    font-weight: bold;
+}
+
+.film-miniature__watch:hover {
+    background-color: #ddc300;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.social {
+    width: 100%;
+    height: 6em;
+    background-color: rgb(231, 231, 231);
+    border-top: 2px solid #d9d9d9;
+    border-bottom: 2px solid #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social button {
+    width: 4em;
+    height: 4em;
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    margin: 0 0.2em;
+}
+
+.film-description {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.film-description__detail {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 1em 2em;
+
+}
+
+.film-description__detail li {
+    margin-right: 1em;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.film-description__detail li i{
+    margin-right: 0.3em;
+}
+
+.film-description__summary {
+    margin: 2em;
+}
+
+.film-description__languages {
+    margin: 2em;
+}
+
+.header {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.header-icon{
+    margin-right: 0.5em;
+}
+
+.film-description__languages div{
+    display: flex;
+    justify-content: baseline;
+}
+
+.film-description__languages div .film-description__languages-detail{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+}
+
+.film-description__languages-detail h3 {
+    font-size: 0.9em;
+}
+
+.film-description__languages-detail span {
+    color: #737373;
+    font-size: 0.9em;
+}
+
+.film-description__actors {
+    margin: 2em;
+}
+
+.actors__list {
+    display: flex;
+    list-style: none;
+}
+
+.actors__list li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1em;
+}
+
+.actors__list li span {
+    margin-top: 0.53em;
+    font-size: 0.8em;
+    color: #252525
+}
+
+.actors__list li img {
+    width: 5em;
+    height: 7.6em;
+}
+
+.score-genres-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.film-description__score{
+    margin: 2em;
+}
+
+.film-description__genres {
+    margin: 2em;
+}
+
+.genres__list{
+    list-style: none;
+    display: flex;
+}
+
+.genres__list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1em;
+}
+
+.genres__list li a {
+    background: #D9D9D9 url(https://images-2.wuaki.tv/system/brandable_photos/13332/original/action-1591342700.png);
+    background-size: 6em;
+    background-position: center center;
+    display: block;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+}
+
+.genres__list li span {
+    font-size: 0.8em;
+    color: grey;
+    margin-top: 0.5em;
+}
+
+/*Round progress bar*/
+  .score-wrapper {
+      display: flex;
+  }
+
+  .score-wrapper div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .score-wrapper div small{
+    width: 5em;
+    text-align: center;
+    margin: 0 0 1em 0;
+    color: grey;
+    font-size: 0.8em;
+  }
+  
+  .circular-chart {
+    display: block;
+    margin: 0.5em;
+    width: 6em;
+    height: 6em;
+    min-width: 6em;
+    min-height: 6em;
+  }
+  
+  .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+  }
+  
+  .circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+  
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+  
+  .circular-chart.orange .circle {
+    stroke: #ffe300;
+  }
+    
+  .percentage {
+    fill: #666;
+    font-size: 0.6em;
+    font-weight: bold;
+    text-anchor: middle;
+  }
+
+  
+
+@media screen and (min-width: 1024px){
+    .main-container {
+        height: auto;
+    }
+
+    .wrapper {
+        max-width: 90vw;
+    }
+
+    .film-miniature {
+        width: 90vw;
+        height: 40em;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    
+    .film-miniature__buttons {
+        margin-bottom: 12em;
+    }
+    
+    .film-miniature__buttons div button {
+        width: 7em;
+        height: 7em;
+    }
+        
+    .film-miniature__title {
+        font-size: 2.3em;
+        margin-bottom: 0.5em;
+    }
+    
+    .film-miniature__watch {
+        margin-bottom: 3em;
+        width: 20em;
+        height: 4.5em;
+    }
+
+    .empty {
+        display: none;
+    }
+    
+    .flex {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .social {
+        order: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: baseline;
+        width: 20em;
+        height: 55em;
+        padding-top: 2vw;
+    }
+
+    .social button {
+        margin: 0.3em 2em;
+    }
+
+    .score-genres-container {
+        flex-direction: row;
+    }
+
+    .film-description__genres {
+        margin-left: 5em;
+    }
+}
