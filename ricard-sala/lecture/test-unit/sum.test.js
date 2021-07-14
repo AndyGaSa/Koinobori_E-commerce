@@ -1,7 +1,10 @@
 const stricEqual = ( a, b ) => {
-    if( isNaN( a ) && isNaN ( b )) return false;
-    if(isNaN(a/b) || isNaN(b/a))return true;
-    return Object.is(a,b);
+    if( isNaN( a ) && isNaN ( b )) {
+        return false;
+    }else if(isNaN(a/b) || isNaN(b/a)){
+        return true;
+    }else{
+        return Object.is(a,b)};
 }
 test('Compare 1 and 1 expect true',()=>{
     let result = stricEqual(1, 1);
