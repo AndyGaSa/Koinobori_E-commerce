@@ -254,4 +254,113 @@ The current design is useful if you want to be able to call the function without
 The other can be useful when you want to ensure an object is passed to the function.*/
 
 
+//NESTED OBJECT AND ARRAY DESTRUCTING
 
+const metadata = {
+    title: 'Scratchpad',
+    translations: [
+        {
+            locale: 'de',
+            localization_tags: [],
+            last_edit: '2014-04-14T08:43:37',
+            url: '/de/docs/Tools/Scratchpad',
+            title: 'JavaScript-Umgebung'
+        }
+    ],
+    url: '/en-US/docs/Tools/Scratchpad'
+};
+
+let {
+    title: englishTitle, // rename
+    translations: [
+        {
+            title: localeTitle, // rename
+        },
+    ],
+} = metadata;
+
+console.log(englishTitle); // "Scratchpad"
+console.log(localeTitle);  // "JavaScript-Umgebung"
+/*You can deconstruct objects inside an array inside an object*/
+
+
+//FOR OF ITERATION AND DESTRUCTURING
+
+const people = [
+    {
+      name: 'Mike Smith',
+      family: {
+        mother: 'Jane Smith',
+        father: 'Harry Smith',
+        sister: 'Samantha Smith'
+      },
+      age: 35
+    },
+    {
+      name: 'Tom Jones',
+      family: {
+        mother: 'Norah Jones',
+        father: 'Richard Jones',
+        brother: 'Howard Jones'
+      },
+      age: 25
+    }
+];
+
+for (const {name: n, family: {father: f}} of people) {
+    console.log('Name: ' + n + ', Father: ' + f);
+}
+// "Name: Mike Smith, Father: Harry Smith"
+// "Name: Tom Jones, Father: Richard Jones"
+
+
+//COMPUTED OBJECT PROPERTY NAMES AND DESTRUCTURING
+
+/*Computed property names (like on object literals) can be used with destructing*/
+let key = 'z';
+let {[key]: foo} = {z: 'bar'};
+
+console.log(foo); // "bar"
+
+
+//REST IN OBJECT DESTRUCTURING
+
+/*Rest property collect the remaining own enumerable propety keys that are not already picked off by the destructing pattern*/
+let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
+a; // 10
+b; // 20
+rest; // { c: 30, d: 40 }
+
+
+//INVALID JAVASCRIPT IDENTIFIER AS A PROPERTY NAME
+
+/*Destructing can be used with propety names that are not valid JavaScrip identifiers by providing an alternative valid identifier*/
+const foo = { 'fizz-buzz': true };
+const { 'fizz-buzz': fizzBuzz } = foo; //fizz-buzz '-' is invalid in JavaScript SyntaxError
+
+console.log(fizzBuzz); // "true"
+
+
+//COMBINED ARRAY AND OBJECT DESTRUCTURING
+
+/*Array and Object destructuring can be combined. In this example we have an array of objects.
+Say you want the name property of the third element of props*/
+const props = [
+    { id: 1, name: 'Fizz'},
+    { id: 2, name: 'Buzz'},
+    { id: 3, name: 'FizzBuzz'}
+];
+
+const [,, { name }] = props;
+
+console.log(name); // "FizzBuzz"
+
+
+//THE PROTOTYPE CHAIN IS LOOKED UP WHEN THE OBJECT IS DECONSTRUCTED
+
+/*When deconstructing an object, if a property is not accessed in itself, it will continue to llok up along the prototype chain*/
+let obj = {self: '123'};
+obj.__proto__.prot = '456';
+const {self, prot} = obj;
+// self "123"
+// prot "456" (Access to the prototype chain)
