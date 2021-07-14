@@ -14,7 +14,7 @@ test ("A function that checks if 2 numbers are strictly equal, expects true", fu
     expect(strictEquals(1,1)).toBe(true);
 })
 
-test ("A function that checks if a number is strictly equal to a string, expects true", function(){
+test ("A function that checks if a number is strictly equal to a string, expects false", function(){
 
     expect(strictEquals("1",1)).toBe(false);
 })
