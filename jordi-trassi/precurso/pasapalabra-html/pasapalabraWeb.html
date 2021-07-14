@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head lang="es-ES">
+      <meta charset="UTF-8">
+      <title>PASAPALABRA HTML</title>
+      <link href="pasapalabraWeb.css" rel="stylesheet" type="text/css">
+      <script src="pasapalabraWeb.js"></script>
+    </head> 
+    <body>
+      <header>
+        <h1>BIENVENIDOS AL PASAPALABRA DE SKYLAB:</h1>        
+      </header><br/><br/><br/>   
+
+      <div id="principal">
+        <div id="rosco">          
+          <img src="roscoAzul.png" alt="Rosco Pasapalabra" id="azul">    <!-- Rosco inicial con las letras azules-->
+          <img src="verdeA.png" alt="A Acertada" id="a1" class="verde">   <!-- Imagenes con las letras VERDES para las respuestas acertadas -->
+          <img src="verdeB.png" alt="B Acertada" id="b1" class="verde">
+          <img src="verdeC.png" alt="C Acertada" id="c1" class="verde">
+          <img src="verdeD.png" alt="D Acertada" id="d1" class="verde">
+          <img src="verdeE.png" alt="E Acertada" id="e1" class="verde">
+          <img src="verdeF.png" alt="F Acertada" id="f1" class="verde">
+          <img src="verdeG.png" alt="G Acertada" id="g1" class="verde">
+          <img src="verdeH.png" alt="H Acertada" id="h1" class="verde">
+          <img src="verdeI.png" alt="I Acertada" id="i1" class="verde">
+          <img src="verdeJ.png" alt="J Acertada" id="j1" class="verde">
+          <img src="verdeL.png" alt="L Acertada" id="l1" class="verde">
+          <img src="verdeM.png" alt="M Acertada" id="m1" class="verde">
+          <img src="verdeN.png" alt="N Acertada" id="n1" class="verde">
+          <img src="verdeO.png" alt="O Acertada" id="o1" class="verde">
+          <img src="verdeP.png" alt="P Acertada" id="p1" class="verde">
+          <img src="verdeQ.png" alt="Q Acertada" id="q1" class="verde">
+          <img src="verdeR.png" alt="R Acertada" id="r1" class="verde">
+          <img src="verdeS.png" alt="S Acertada" id="s1" class="verde">
+          <img src="verdeT.png" alt="T Acertada" id="t1" class="verde">
+          <img src="verdeU.png" alt="U Acertada" id="u1" class="verde">
+          <img src="verdeV.png" alt="V Acertada" id="v1" class="verde">
+          <img src="verdeX.png" alt="X Acertada" id="x1" class="verde">
+          <img src="verdeY.png" alt="Y Acertada" id="y1" class="verde">
+          <img src="verdeZ.png" alt="Z Acertada" id="z1" class="verde">
+          <img src="rojaA.png" alt="A Error" id="a2" class="roja">      <!-- Imagenes con las letras ROJAS para las respuestas falladas -->
+          <img src="rojaB.png" alt="B Error" id="b2" class="roja">
+          <img src="rojaC.png" alt="C Error" id="c2" class="roja">
+          <img src="rojaD.png" alt="D Error" id="d2" class="roja">
+          <img src="rojaE.png" alt="E Error" id="e2" class="roja">
+          <img src="rojaF.png" alt="F Error" id="f2" class="roja">
+          <img src="rojaG.png" alt="G Error" id="g2" class="roja">
+          <img src="rojaH.png" alt="H Error" id="h2" class="roja">
+          <img src="rojaI.png" alt="I Error" id="i2" class="roja">
+          <img src="rojaJ.png" alt="J Error" id="j2" class="roja">
+          <img src="rojaL.png" alt="L Error" id="l2" class="roja">
+          <img src="rojaM.png" alt="M Error" id="m2" class="roja">
+          <img src="rojaN.png" alt="N Error" id="n2" class="roja">
+          <img src="rojaO.png" alt="O Error" id="o2" class="roja">
+          <img src="rojaP.png" alt="P Error" id="p2" class="roja">
+          <img src="rojaQ.png" alt="Q Error" id="q2" class="roja">
+          <img src="rojaR.png" alt="R Error" id="r2" class="roja">
+          <img src="rojaS.png" alt="S Error" id="s2" class="roja">
+          <img src="rojaT.png" alt="T Error" id="t2" class="roja">
+          <img src="rojaU.png" alt="U Error" id="u2" class="roja">
+          <img src="rojaV.png" alt="V Error" id="v2" class="roja">
+          <img src="rojaX.png" alt="X Error" id="x2" class="roja">
+          <img src="rojaY.png" alt="Y Error" id="y2" class="roja">
+          <img src="rojaZ.png" alt="Z Error" id="z2" class="roja">
+          
+        </div>
+        <div id="rosco2">               <!-- Parte derecha de la página, donde colocamos el texto, las preguntas... -->      
+           <div id="texto">               <!-- Texto inicial de presentación -->
+            <h2>El participante deberá usar la letra con la que esté jugando para responder las preguntas o 
+            definiciones.<br/><br/>Si elige PASAPALABRA, se deja la letra pendiente para la siguiente ronda donde 
+            se le planteará otra pregunta de otra temática referente a esa letra.<br/><br/>Dispondrá de 5 minutos para completar todas las letras.</h2><br/>
+            <button type="button" onclick="introNombre()" class="play">&nbsp;EMPEZAR EL JUEGO&nbsp;</button>
+          </div>
+          <div id="nombre"></div>            <!-- Div donde aparece el nombre del concursante -->
+          <div id="aviso"><b>ÚLTIMA RONDA!</b></div>   <!-- Div que aparece cuando empieza la ultima ronda de preguntas -->
+          <div id="finPartida">FIN DE LA PARTIDA!!!<br/>     <!-- Div que informa cuando se ha termindo la partida -->
+            <button type="button" title="Empezar Partida Nueva." onclick="statusReset()" class="play" style="background-color: orangered;">&nbsp;NUEVA PARTIDA&nbsp;</button>
+          </div> 
+          <div id="preguntas"></div>      <!-- Div donde van apareciendo las preguntas -->                     
+        </div>  
+      </div>
+      <div id="crono"></div>          <!--     div donde colocamos la cuanta regresiva-->
+      <div id="controles">           <!-- Div donde agrupamos los controles principales con el input de respuesta y botones varios -->
+        <h2>TU RESPUESTA: <input type="text" id="respuesta">
+        <button type="button" title="Confirmar Tu Respuesta!" onclick="comprobarRespuesta()" class="play">&nbsp;OK!&nbsp;</button>
+        <button type="button" onclick="pasapalabra()" id="pasapalabra" class="play">&nbsp;PASAPALABRA&nbsp;</button>
+        <button type="button" title="Finalizar Partida." onclick="salirPasapalabra(1)" class="play" style="background-color: orangered;">&nbsp;<i>STOP</i>&nbsp;</button></h2>
+      </div>
+      <div id="ranquing">
+        <div id="puntuacion"><br/>     <!-- En este Div mostramos al participante el total de letras acertada y falladas -->
+          <h2>LETRAS ACERTADAS:&nbsp;&nbsp;</h2><h2 id="acertadas"></h2>
+          <h2>LETRAS FALLADAS:&nbsp;&nbsp;</h2><h2 id="falladas"></h2><br/><br/>          
+        </div>
+        <div id="listado"><h1>- RANQUING -</h1><h2>PARTICIPANTE:&nbsp;&nbsp;&nbsp;PUNTOS:</h2>
+          <div id="listadoJugadores"></div>
+        </div>
+      </div>  
+    </body>
+</html>
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+

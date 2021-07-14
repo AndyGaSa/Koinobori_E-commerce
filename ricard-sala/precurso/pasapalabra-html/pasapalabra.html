@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gasalacabra</title>
+  <script src="./js/gasalacabra.js" defer></script>
+  <link rel="stylesheet" href="./css/pasapalabra.css" />
+</head>
+  <body>
+  <div id="wrapper">
+    <header class="header-box">
+      <h1 class="h1-title">GAS A LA CABRA</h1>
+      <div class="lap-box">
+        <div>lap1/2</div>
+      </div>
+      <div class="time-box">
+        <img class="crono" src="/pasapalabra-html/recursos-visuales/cronometros.png" alt="imagen crono">
+        <div class="timer">140</div>
+      </div>
+    </header>
+    <!--PRIMERA SECCION DEL JUEGO PRESENTACION-->
+    <section class="containerPresentacion ">
+      <form class="presentacionText">Bienvenido a GASALACABRA,esto no es un pasapalabra normal, ¿Te consideras un
+        auténtico motero y no se te escapa nada sobre el mundo de las dos ruedas?<br><br>Entonces este juego esta hecho
+        para ti, la dinamica es muy sencilla, el concursante debera completar un panel con las 27 letras del abecedario
+        despues de leer su descripcion. <br><br>Las respuestas no distinguen entre mayusculas, minusculas o acentos,y
+        los puntos se iran sumando a un contador para posteriormente darnos una tabla, conseguiras estar en la pole??
+        vamos a descubrirlo. GAS!!!
+        <br><br>cada respuesta correcta sumara 3 puntos en la primera ronda y 1 punto en la segunda ronda ten cuidado en
+        la segunda ronda ya no podras dar GAS. 
+      </form>
+      <div class="buttons">
+        <button type="submit" class="ACEPTAR" id="start-game">EMPEZAR</button>
+      </div>
+    </section>
+    <!--SEGUNDA SECCION DEL JUEGO JUEGO-->
+    <section class="section juego">
+      <div class="questions-box">
+        <div class="question" >
+
+        </div>
+        <div class="buttons form">
+        <div class="answer-box">
+          <label for="respuesta"><input id="input-answer" class="answer" type="string" name="respuesta" autofocus placeholder="Escribe tu respuesta..." required  for="respuesta"/></label>
+        </div>
+          <button class="check submit" type="submit" id="check">check</button>
+          <button class="pasapalabra" id="pasapalabra">GAS</button>
+        </div>
+        <div class="correct-answer"><span>La respuesta correcta era: </span><p id="correction-answer"></p></div>
+          <div class="letra-a circle" id='a'>a</div>
+          <div class="letra-b circle" id='b'>b</div>
+          <div class="letra-c circle" id='c'>c</div>
+          <div class="letra-d circle" id='d'>d</div>
+          <div class="letra-e circle" id='e'>e</div>
+          <div class="letra-f circle" id='f'>f</div>
+          <div class="letra-g circle" id='g'>g</div>
+          <div class="letra-h circle" id='h'>h</div>
+          <div class="letra-i circle" id='i'>i</div>
+          <div class="letra-j circle" id='j'>j</div>
+          <div class="letra-k circle" id='k'>k</div>
+          <div class="letra-l circle" id='l'>l</div>
+          <div class="letra-m circle" id='m'>m</div>
+          <div class="letra-n circle" id='n'>n</div>
+          <div class="letra-o circle" id='o'>o</div>
+          <div class="letra-p circle" id='p'>p</div>
+          <div class="letra-q circle" id='q'>q</div>
+          <div class="letra-r circle" id='r'>r</div>
+          <div class="letra-s circle" id='s'>s</div>
+          <div class="letra-t circle" id='t'>t</div>
+          <div class="letra-u circle" id='u'>u</div>
+          <div class="letra-v circle" id='v'>v</div>
+          <div class="letra-w circle" id='w'>w</div>
+          <div class="letra-x circle" id='x'>x</div>
+          <div class="letra-y circle" id='y'>y</div>
+          <div class="letra-z circle" id='z'>z</div>
+      </div>
+    </section>
+    <!--ULTIMA SECCION DEL JUEGO FINAL Y PUNTUACIONES-->
+    <section class="section finJuego">
+      <div class="presentacionText">Terminaste!!! Has llegado al final del juego, ahora toca saber en que posicion as
+        quedado. <br><br> Danos tu nombre para poder darte tu posicion en parrilla y saber si llegaste en primera
+        posicion.
+      </div>
+      <div class="answer-box">
+        <input id="playerName" class="answer" type="text"></input>
+      </div>
+      <div class="buttons">
+        <button type="submit" class="ACEPTAR" id="confirm">GAS</button>
+        <button class="tryAgain ACEPTAR">RESTART</button>
+      </div>
+      <table class="ranking-table" ><caption>ranking de 6 posiciones con nombre puntos y posicion </caption>
+        <tr>
+          <th id="posicionesRanking">Posición</th>
+          <th id="nombresRanking">Nombre</th>
+          <th id="puntosRanking">Puntos</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td class="subject-name"></td>
+          <td class="subject-points"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="subject-name"></td>
+          <td class="subject-points"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="subject-name"></td>
+          <td class="subject-points"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="subject-name"></td>
+          <td class="subject-points"></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="subject-name"></td>
+          <td class="subject-points"></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td class="subject-name"></td>
+          <td class="subject-points"></td>
+        </tr>
+      </table>
+      
+    </section>
+    <footer class="footer-box">riki design</footer>
+  </div>
+</body>
+</html>

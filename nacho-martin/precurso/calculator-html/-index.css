@@ -1,0 +1,39 @@
+body {
+    background-color: azure;
+}
+
+h1,
+p {
+    text-align: center;
+}
+
+.calculadora {
+    padding: 1rem;
+    margin: 0 auto;
+    width: 12rem;
+    background-color: cadetblue;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    font-weight: 700;
+}
+
+.screen {
+    border: none;
+    background-color: azure;
+    grid-column: 1/5;
+    height: 1.5rem;
+    text-align: end;
+}
+
+.screen:hover {
+    cursor: default;
+}
+
+#borrar {
+    grid-column: 1 /3;
+}
+
+#AC {
+    grid-column: 3/5;
+}

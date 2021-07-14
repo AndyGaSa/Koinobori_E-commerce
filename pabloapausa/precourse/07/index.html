@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Calculator.</title>
+	<meta name="description" content="Dark themed calculator.">
+	<link href="index.css" rel="stylesheet">
+
+	<meta name="twitter:creator" content="@pabloapausa">
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Calculator">
+	<meta property="og:description" content="Dark Themed Calculator.">
+	<meta property="og:image" content="">
+	<meta property="og:locale" content="es_ES">
+</head>
+
+<body>
+	<div class="rectangle"></div>
+	<div class="calculator">
+		<div class="output">
+			<div data-current-output></div>
+		</div>
+		<button data-clear class="main">C</button>	
+		<button data-delete class="main">DEL</button>	
+		<button data-number class="main">,</button>	
+		<button data-operator class="operator">÷</button>	
+		<button data-number class="number">7</button>	
+		<button data-number class="number">8</button>	
+		<button data-number class="number">9</button>	
+		<button data-operator class="operator">×</button>	
+		<button data-number class="number">4</button>	
+		<button data-number class="number">5</button>	
+		<button data-number class="number">6</button>	
+		<button data-operator class="operator">–</button>	
+		<button data-number class="number">1</button>	
+		<button data-number class="number">2</button>	
+		<button data-number class="number">3</button>	
+		<button data-operator class="operator">+</button>	
+		<button data-number class="number" id="cero">0</button>	
+		<button data-equals class="equals">=</button>	
+	</div>
+	<script src="index.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+#morespecific {
+    background-color: red;
+    border: 1px solid black;
+}
+
+.specific {
+    background-color: gray;
+    border: none !important;
+}
+
+p {
+    background-color: blue;
+    color: white;
+    padding: 5px;
+}
+
+div {
+    background-color: blue;
+    height: 100px;
+}
+
+@media screen and (min-width: 480px) {
+    div {
+        background-color: green;
+    }
+}

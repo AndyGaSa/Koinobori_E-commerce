@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculator PRO</title>
+        <meta content="text/html; charset=utf-8" />
+    </head>
+    
+    <body>
+        <script> // CALCULADORA PRO
+        console.log('\n' + 'Bienvenido a la Calculadora PRO!' + '\n');
+
+        var newNumber;
+        var numberList = [];
+
+        function introNumero() {
+            newNumber = prompt('Introduzca un numero o presione cancelar para parar:');
+            if (isNaN (newNumber)) {
+                valorIncorrecto();      
+            } else if (newNumber === null) {
+                if (numberList.length < 2) {
+                    newNumber = Number(newNumber);
+                    numberList.push(newNumber);
+                    raizQ(newNumber);
+                } else {
+                    calculadora();
+                }
+            } else {
+                newNumber = Number(newNumber);
+                numberList.push(newNumber);
+                introNumero();
+            }
+
+        }
+        function valorIncorrecto() {
+            newNumber = prompt('INCORRECTO!!\n El valor introducido NO ES CORRECTO, inserte otro valor o presione cacelar:');
+            if (isNaN (newNumber)) {
+                valorIncorrecto();
+            } else if (newNumber === null) {
+                calculadora();
+            } else {
+                newNumber = Number(newNumber);
+                numberList.push(newNumber);
+                introNumero();
+            }
+        }
+        function calculadora() {
+            let i;            
+            let sumaResult = numberList[0];
+            let restaResult = numberList[0];
+            let multiResult = numberList[0];
+            let diviResult = numberList[0];
+
+            for (i = 1; i < numberList.length; i++) {
+                sumaResult = sumaResult + numberList[i];
+                restaResult = restaResult - numberList[i];
+                multiResult = multiResult * numberList[i];
+                diviResult = diviResult / numberList[i];
+                
+            }
+            
+            console.log('\n' + 'La suma es: ' + sumaResult);
+            console.log('\n' + 'La resta es: ' + restaResult);
+            console.log('\n' + 'La multiplicación es: ' + multiResult);
+            console.log('\n' + 'La división es: ' + diviResult.toFixed(3) + '\n');
+            
+            console.log(numberList);
+            nuevaOperacion();
+        }
+
+        function raizQ(newNumber) {
+                let raiz = Math.sqrt(numberList[0]);
+                raiz = raiz.toFixed(3);
+                console.log('\n' + 'La raiz cuadrada es: ' + raiz + '\n');
+                nuevaOperacion();                
+            }
+
+
+        function nuevaOperacion() {
+            let respuesta = prompt('Quiere realizar más operaciones? Y/N');
+            if (respuesta === 'y' || respuesta === 'Y') {
+                let eliminados;
+                eliminados = numberList.splice(0);
+                introNumero();        
+            } else {
+                console.log('Bye Bye!');
+            }
+        }
+        introNumero();
+        </script>
+    </body>
+</html>

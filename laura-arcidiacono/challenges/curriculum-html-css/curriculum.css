@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+body {
+    font-family: 'Cantarell', sans-serif;
+    font-size: 3vh;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 13vh;
+    text-align: center;
+}
+
+h2 {
+    font-size: 7vh;
+    text-align: center;
+}
+h3 {
+    font-size: 4vh;
+    text-align: center;
+}
+h5 {
+    display: none;
+}
+p {
+    text-align: justify;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+
+#nav-link {
+    width: 100%;
+    position: sticky;
+    margin: 0px;
+    top: 0px;
+    font-size: 2vw;
+    height: 1vh;
+    text-align: center;
+    cursor: pointer;
+    justify-self:center;
+    
+}
+
+ul {
+    list-style-type: none;
+    justify-self:center
+}
+
+.ul-header {
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0px 30px;
+    justify-self:center
+}
+li {
+    align-items: center;
+    justify-items: center;
+    justify-self:center
+}
+li a {
+    text-decoration: none;
+    margin-right: 25px;
+    color: white;
+    font-size: 3vh;
+    justify-self:center
+}
+
+a {
+    opacity: 1;
+}
+
+a:hover {
+    color: rgb(21, 78, 116);
+    opacity: 0.5;
+}
+
+#bigContainer {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "foto experiencia", "otrosDatos experiencia";
+}
+section {
+    display: block;
+}
+#myPhoto {
+    background-color: blue;
+    grid-area: foto;
+}
+
+img {
+    display: flex;
+    border-radius: 50%;
+    width: 20vw;
+    height: auto;
+
+}
+
+#leftColumn {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items:center;
+    justify-content: space-between;
+    padding: 4vh;
+    text-align: center;
+}
+
+#contactMe {
+    background-color: brown;
+    width: 30vw;
+    padding: 2vh;
+    justify-self:center
+}
+
+#aptitudes {
+
+    width: 30vw;
+    padding: 2vh;
+    justify-self:center
+}
+
+#references {
+    background-color: cadetblue;
+    width: 30vw;
+    padding: 2vh;
+}
+
+#rightColumn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    justify-self:center;
+    text-align: center;
+}
+
+#workExperience {
+    justify-self:center;
+    width: 100%;
+    padding: 2vh;
+}
+
+#academicStudies {
+    justify-self:center;
+    width: 100%;
+    padding: 2vh;
+}
+
+#technicalKnowledge {
+    justify-self:center;
+    width: 100%;
+    padding: 2vh;
+}
+
+#webs {
+    background-color: brown;
+    text-align: center;
+    justify-self:center;
+    height: 5vh;
+}

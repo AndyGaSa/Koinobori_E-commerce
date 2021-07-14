@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Head-->
+<head>
+    <meta charset="utf-8">
+    <title>Pasapalabra HTML de Lola Rufino</title>
+    <link href='index.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<!-- Body-->
+<body>
+    <header>
+        <h1>El rosco de Pasapalabra</h1>
+    </header>
+    <main>
+        <!-- Main game container-->
+        <div id='pasapalabra-container'>
+            <!-- Letters container-->
+            <div id='letters-container'>
+                <div class='letter' id='a'>A</div>
+                <div class='letter' id='b'>B</div>
+                <div class='letter' id='c'>C</div>
+                <div class='letter' id='d'>D</div>
+                <div class='letter' id='e'>E</div>
+                <div class='letter' id='f'>F</div>
+                <div class='letter' id='g'>G</div>
+                <div class='letter' id='h'>H</div>
+                <div class='letter' id='i'>I</div>
+                <div class='letter' id='j'>J</div>
+                <div class='letter' id='k'>K</div>
+                <div class='letter' id='l'>L</div>
+                <div class='letter' id='m'>M</div>
+                <div class='letter' id='n'>N</div>
+                <div class='letter' id='ñ'>Ñ</div>
+                <div class='letter' id='o'>O</div>
+                <div class='letter' id='p'>P</div>
+                <div class='letter' id='q'>Q</div>
+                <div class='letter' id='r'>R</div>
+                <div class='letter' id='s'>S</div>
+                <div class='letter' id='t'>T</div>
+                <div class='letter' id='u'>U</div>
+                <div class='letter' id='v'>V</div>
+                <div class='letter' id='w'>W</div>
+                <div class='letter' id='x'>X</div>
+                <div class='letter' id='y'>Y</div>
+                <div class='letter' id='z'>Z</div>
+                <!-- Input, pasapalabra container -->
+                <div id='input-container'>
+                    <input id='answer' type='text' placeholder='Escribe aquí tu respuesta...' autocomplete='off'>
+                    <button id='pasapalabra-button'>Pasapalabra</button>
+                    <img id='think' src='thinking.png' alt='a girl thinking cartoon'/>
+                </div>
+            </div>
+            <!-- Definition and info-->
+            <div id='definition'>
+                <!-- Mini header-->
+                <h5 id='play-header'>¡A jugar!<img id='swear' src='swear.png' alt='funny cartoon'/></h5>
+                <!-- Welcoming, username and instructions-->
+                <p id='display'>¡Bienvenido/a! ¿Cómo te llamas?<br><br><input id='usernickname' type='text'
+                        placeholder='Escribe tu nombre...' autocomplete='off'><br><br>
+                    <span id='instructions'>Instrucciones:</span> Presiona "Enter" una vez escrita tu respuesta dentro
+                    del rosco para validarla o el botón "Pasapalabra" para contestarla en la siguiente
+                    vuelta.<br><br>¡La cuenta atrás comenzará cuando hagas click en "Comenzar"!<br><br>
+                    <button id='start-button'>Comenzar</button>
+                </p>
+                <!-- Images and button for next question-->
+                <img id='image-check' src='check.png' alt='check cartoon image'/>
+                <img id='image-delete' src='delete.png' alt='delete cartoon image' />
+                <img id='image-over' src='game-over.png' alt='time over cartoon image'/>
+                <img id='image-gratz' src='product-lauch.png' alt='congratulations cartoon image'/>
+                <button id='next-button'>Siguiente pregunta</button>
+                <button id='re-game-button'>Volver a jugar</button>
+            </div>
+        </div>
+        <!-- Timer, right guess and failures-->
+        <div id='counters-info'>
+            <div id='time'>Tiempo</div>
+            <div id='rights'>Aciertos</div>
+            <div id='fails'>Fallos</div>
+        </div>
+        <div id='counters-container'>
+            <div id='countdown'>180</div>
+            <div id='right-answer'></div>
+            <div id='failed-answer'></div>
+        </div>
+    </main>
+    <footer class='footer'>
+        <!-- Ranking-->
+        <div class='ranking'>
+            <h5><img src='trophy.png' alt='trophy image cartoon'/>Ranking<img src='trophy.png' alt='trophy image cartoon'/></h5>
+<<<<<<< HEAD
+            <table aria-describedby='mydesc'>
+                <tr>
+                    <th scope='col'>Nombre</th>
+                    <th scope='col'>Aciertos</th>
+=======
+<<<<<<< HEAD
+            <table aria-describedby="my-table">
+=======
+            <table aria-describedby='ranking-table'>
+>>>>>>> 6072297ecdfa7638a1ca4982e612787c3a21eba4
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Aciertos</th>
+>>>>>>> a90d5f9fdff653dc5c70b3a1365576485bde17eb
+                </tr>
+                <tr>
+                    <td id='ranking-name1'></td>
+                    <td id='ranking-puntuation1'></td>
+                </tr>
+                <tr>
+                    <td id='ranking-name2'></td>
+                    <td id='ranking-puntuation2'></td>
+                </tr>
+                <tr>
+                    <td id='ranking-name3'></td>
+                    <td id='ranking-puntuation3'></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Exit button -->
+        <button id='exit-button'>Finalizar juego</button>
+    </footer>
+    <!-- Link to JavaScript file-->
+    <script src='index.js'></script>
+</body>
+
+</html>

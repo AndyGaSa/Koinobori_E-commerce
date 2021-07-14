@@ -1,0 +1,39 @@
+#container{
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(7,60px);
+  
+}
+
+button{
+    border: 1px solid black ;
+    background-color:#939d9e ;
+    font-size: 20px;
+}
+
+#pantalla{
+    background-color: grey;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-size:  30px; 
+    text-align: right;
+    padding: 20px;
+    word-wrap: break-word;
+}
+
+#borrar{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#cero{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#operacion{
+    background-color: rgb(191, 221, 190);
+}
