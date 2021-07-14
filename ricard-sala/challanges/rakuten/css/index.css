@@ -1,0 +1,115 @@
+*{
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+a{
+    margin: 10px;
+}
+.wraped{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between
+}
+.logo{
+    height: 23px;
+    width: 122px;
+    background-color: blanchedalmond;
+}
+.content{
+    display: flex;
+    align-items: center;
+}
+.cinema__submenu{
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    z-index: 1;
+}
+.cinema__title::after{
+    content: 'CINEMA ▲';
+    color: white;
+}
+.content:hover .cinema__title::after{
+    content: 'CINEMA ▼';
+    color: yellow;
+}
+
+.content:hover .cinema__submenu{
+    padding-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 0;
+}
+.content a{
+    margin:25px;
+}
+.subscribe__title::after{
+    content: 'SUBSCRIBETE ▲';
+    color: white;
+}
+.content:hover .subscribe__title::after{
+    content: 'SUBSCRIBETE ▼';
+    color: yellow;
+}
+.content:hover .title__submenu{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+}
+.submenu a{
+    margin: 10px;
+}
+.title__submenu{
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    z-index: 1;
+}
+.login-info{
+    display: flex;
+    flex-direction: row;
+    
+}
+.login-info a{
+    padding: 15px;
+}
+.login-info__help:hover{
+    color: yellow;
+}
+.login-info__login:hover{
+    color: yellow;
+}
+.login-info__button{
+    background-color: yellow;
+    color: black;
+    border-radius: 3px;
+}
+.login-info__button:hover{
+    color: yellow;
+    background-color: black;
+}
+.destacados-mes{
+margin-top: 300px;
+display: flex;
+align-items: center;
+}
+.destacados-mes img{
+ margin: 25px;
+    }
+.cartelera{
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+}
+.cartelera img{
+    border: 3px solid transparent;
+    
+}
+.cartelera img:hover{
+    border: 3px solid yellow;
+    
+}

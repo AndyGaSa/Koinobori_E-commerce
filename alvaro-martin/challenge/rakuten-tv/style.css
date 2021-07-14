@@ -3,8 +3,7 @@
     border: 0;
     margin: 0;
     color: white;
-    font-family: 'Noto Sans', sans-serif;
-   
+    font-family: 'Noto Sans', sans-serif;   
 }
 .header{
     display: flex;
@@ -87,7 +86,6 @@
     border-radius: 2px;
     position:relative;
 }
-
  input[type="text"]{
     background: none;
     color: inherit;
@@ -102,7 +100,6 @@
     background-color: white;
     color: black;
 }
-
 .nav__right{
     display: flex;
     justify-content: center;
