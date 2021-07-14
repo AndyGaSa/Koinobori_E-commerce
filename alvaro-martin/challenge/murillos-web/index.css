@@ -1,0 +1,329 @@
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: white;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    
+}
+
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 14vw;
+    background-color: #F8F8F8;
+    
+}
+
+
+.envios{
+    display: flex;
+    flex-direction: row;
+}
+.envios__camion{
+    display: flex;
+    flex-direction: row;
+}
+.maria-biglogo{
+    display: flex;
+    justify-content: center;
+    margin: 3vw;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.fiestas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F8F8F8;
+    
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.follow-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    background-color: #F8F8F8;
+}
+
+.top-header{
+    display: flex;
+    justify-content: space-evenly;
+    width: 15vw;
+    
+}
+.user{
+    width: 10vw;
+    height: 10vw;
+    
+}
+.main-menu{
+    display: flex;
+    
+    
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    width: 10vw;
+    height: 10vw;
+}
+.buy-box{
+    width: 10vw;
+    height: 10vw;
+}
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vw;
+    color: #FFFFFF;
+    width: 10vw;
+    height: 10vw;
+    background-color: #FF5959;
+
+}
+.right-header{
+    display: flex;
+    justify-content: space-around;
+}
+.search{
+    display: flex;
+    width: 10vw;
+    height: 10vw;
+    
+}
+
+.social{
+    display: none;
+}
+.cake-container{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    height: 50vw;
+    width: 50vw;
+    padding: 5vw;
+    
+}
+.cake{
+    height: 35vw;
+    width: 30vw;
+    
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vw;
+    width: 100vw;
+    background-color: #FF5959;
+    color: white;
+    
+}
+.fiestas-texto{
+    border-top: solid 0.5vw black;
+    border-bottom: solid 0.5vw black;
+    text-align: center;
+    width: 50vw;
+}
+.fiestas-texto-container{
+    padding: 5vw;
+}
+.container-fiestas{
+    position: relative;
+    display: flex;
+    text-align: center;
+}
+.main-container-fiestas{
+    padding: 2vw;
+}
+.cuadro{
+    
+    position: absolute;
+    bottom: 0ch;
+    background-color:white;
+    opacity: 0.8;
+    display: flex;
+    width: 40vw;
+    height: 11vw;
+    align-items: center;
+    text-align: start;
+    padding: 4vw;
+
+}
+.tematicas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    
+}
+.rainbow{
+    width: 70vw;
+    height: 30vw;
+    
+}
+.container__ver-mas{
+    margin-top: 8vw;
+    background-color: #FF5959;
+    
+}
+.ver-mas{
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.envios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20vw;
+    background-color: #E8E6E5;    
+}
+.envios-container{
+    padding-top: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.top-envios{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20vw;
+}
+.bottom-envios{
+    display: flex;
+    flex-direction: row;
+}
+.envios__camion{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    width: 42vw;
+    text-align: center;
+}
+.envios-icon{
+    width: 25vw;
+    height: 25vw;
+}
+.envios-icon-reloj{
+    width: 20vw;
+    height: 20vw;
+    padding: 2.5vw;    
+}
+.title{
+    font-weight: bold;
+}
+
+.subtitle{
+    font-size: 3vw;
+}
+.follow-us{
+    padding: 10vw;
+    
+}
+.siguenos-container{
+    padding: 5vw;
+}
+
+
+
+.facebook-down{
+    width: 8vw;
+    height: 8vw;
+    border: solid 0.5vw #FF5959;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+.middle-footer{
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    border-top:solid 2px #D4D2D1 ;
+    border-bottom: solid 2px #D4D2D1;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+}
+.email{
+
+    background: #fff;
+    border: 1px solid #bbb8b6;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    color: #67625f;
+}
+
+.submit{
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    background: #FF5959;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.politica{
+    padding: 1vw;
+}
+.novedades{
+    text-align: center;
+    font-size: 2.5vw;
+}
+.last-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mail-logo{
+    width: 8vw;
+    height: 8vw;
+}
+.last-footer__mail{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.last-footer{
+    color: #FF5959;
+}
+.last-footer__last{
+    padding: 8vw;
+}
+
+

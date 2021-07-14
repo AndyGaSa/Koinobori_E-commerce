@@ -1,0 +1,7 @@
+form{
+    display: flex;
+    flex-direction: column;
+}
+label + label{
+    margin-top: 42px;
+}

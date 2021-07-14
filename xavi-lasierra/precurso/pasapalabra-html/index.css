@@ -1,0 +1,570 @@
+/*General*/
+*{
+    font-family: sans-serif;
+    overflow: visible;
+}
+
+*:focus{
+    outline: none;
+}
+
+body {
+    position: relative;
+    min-width: 1500px;
+    width: 99%;
+    height: 700px;
+    background-color: rgb(100, 100, 255);
+    animation: blueBack 5s infinite;
+}
+@keyframes blueBack{
+    0%, 100% {background-color: rgb(100, 100, 255);}
+    50%  {background-color: rgb(60, 60, 255);}
+}
+
+/*Center position and disabled*/
+.center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0;
+}
+/*Text*/
+h1 {
+    color:white;
+    font-size: 80px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 3px 2px lightgrey;
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px grey;
+}
+
+h3 {
+    color:white;
+    font-size: 30px;
+    text-shadow: 0px 0px 6px black;
+}
+
+h4 {
+    color:white;
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 0px 0px 6px black;
+}
+
+.text1{
+    position: relative;
+    color:white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 0px 0px 6px black;
+}
+
+/*Buttons and inputs*/
+.main-button {
+    background-color: transparent;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 3px solid white;
+}
+
+.main-button:hover {
+    background-color: white;
+    color: rgb(95, 95, 182);
+    animation-name: pop-up;
+    animation-duration: 0.5s;
+}
+
+@keyframes pop-up {
+    0% {font-size: 25px;}
+    10% {font-size: 26px;}
+    100% {font-size: 25px;}  
+}
+
+.main-button:active {
+    background-color: white;
+    color: rgb(95, 95, 182);
+    width: 135px;
+    height: 45px;
+    font-size: 22px;
+    animation: none;
+}
+
+.small-button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 3px solid white;
+    background-color: transparent;
+}
+
+.small-button:hover {
+    animation-name: pop-up-small;
+    animation-duration: 0.5s;
+    background-color: white;
+    color: rgb(95, 95, 182);
+}
+
+@keyframes pop-up-small {
+    0% {font-size: 15px;}
+    10% {font-size: 16px;}
+    100% {font-size: 15px;}  
+}
+
+.small-button:active {
+    background-color: white;
+    color: rgb(95, 95, 182);
+    width: 35px;
+    height: 35px;
+    font-size: 13px;
+    animation: none;
+}
+
+.input-box{
+    background-color: transparent;
+    color: white;
+    width: 250px;
+    height: 30px;
+    font-size: 25px;
+    margin: 30px auto;
+    text-align: center;
+    border: 3px solid white;
+    text-shadow: none;
+}
+
+#answer-button {
+    top: 80%;
+    left: 80%;
+}
+
+#pasapalabra-button {
+    top: 92%;
+    width: 140px;
+    height: 40px;
+    color: limegreen;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 3px solid limegreen;
+    background-color: transparent;
+}
+
+#pasapalabra-button:hover {
+    animation-name: pop-up-small;
+    animation-duration: 0.5s;
+    background-color: limegreen;
+    color: rgb(95, 95, 182);
+}
+
+#pasapalabra-button:active {
+    background-color: rgb(29, 139, 29);
+    color: rgb(95, 95, 182);
+    width: 115px;
+    height: 35px;
+    font-size: 13px;
+    animation: none;
+}
+
+#play-again-button {
+    left: 43%;
+}
+
+#home-button {
+    left: 57%;
+}
+
+#quit-button {
+    right: -40%;
+    top: 77%;
+    z-index: 5;
+    border-color: red;
+    color: red;
+}
+
+#quit-button:hover {
+    background-color: red;
+    color: white;
+}
+/*Rosco*/
+#main {
+    position: absolute;
+    min-width: 700px;
+    min-height: 700px;
+    top: 350px;
+    left: 50%;
+}
+
+#rosco {
+    display: block;
+    margin:0;
+    width: 700px;
+    height: 700px;
+    top: 50%;
+    list-style-type: none;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 2px rgb(0, 0, 66);
+}
+.red {
+    background-image: radial-gradient(closest-side, rgba(255, 0, 0, 0.75), transparent);
+}
+.green {
+    background-image: radial-gradient(closest-side,rgba(50, 205, 50, 0.75), transparent);
+}
+
+#rosco li {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    border: 3px solid white;
+    border-radius: 50%;
+    text-align: center;
+    transition: width 0.25s, height 0.25s;
+
+}
+
+.normal-circle{
+    box-shadow: 0px 0px 8px darkblue;
+    background-image: linear-gradient(to top right, blue, rgb(108, 108, 255));
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.active-circle {
+    box-shadow: 0px 0px 8px blue;
+    width: 53px;
+    height: 53px;
+    line-height: 55px;
+    animation: change-color 2s infinite;
+}
+
+@keyframes change-color {
+    0%, 100% {background-color: rgb(108, 108, 255);}
+    50% {background-color: rgb(0, 183, 255);}
+}
+
+.green-circle {
+    box-shadow: 0px 0px 8px darkgreen;
+    background-image: linear-gradient(to top right, green, limegreen);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.red-circle {
+    box-shadow: 0px 0px 8px darkred;
+    background-image: linear-gradient(to top right, rgb(194, 0, 0), red);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+
+#timer-box{
+    position: absolute;
+    top: 85%;
+    width: 700px;
+    height: 150px;
+    transition: opacity 0.25s;
+}
+#timer{
+    position: absolute;
+    background-image: linear-gradient(to top right, darkorange, orange);
+    width: 90px;
+    height: 90px;
+    border: 6px solid white;
+    border-radius: 50%;
+    font-size: 45px;
+    line-height: 90px;
+    text-shadow: 0px 0px 6px rgb(138, 76, 0);
+    z-index: 2;
+}
+#points-good{
+    position: absolute;
+    background-image: linear-gradient(to top right, green, limegreen);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border: 3px solid white;
+    border-radius: 50%;
+    font-size: 27px;
+    text-align: center;
+    line-height: 45px;
+    text-shadow: 0px 0px 4px darkgreen;
+    left: 12%;
+    top: 45%;
+    z-index: 1;
+}
+#points-bad{
+    position: absolute;
+    background-image: linear-gradient(to top right, rgb(194, 0, 0), red);
+    color: white;
+    width: 35px;
+    height: 35px;
+    border: 3px solid white;
+    border-radius: 50%;
+    font-size: 21px;
+    text-align: center;
+    line-height: 35px;
+    text-shadow: 0px 0px 3px darkred;
+    left: 8%;
+    top: 68%;
+    z-index: 0;
+}
+
+/*Inside rosco*/
+#inside-rosco {
+    position: absolute;
+    margin: 40px;
+    width: 90%;
+    height: 500px;
+    top: 50px;
+}
+
+#title {
+    margin: 0;
+    top: 42.5%;
+    width: 475px;
+    height: 200px;
+    transition: opacity 0.25s;
+}
+#author {
+    position: relative;
+    color:lightgrey;
+    font-size: 20px;
+    text-align: right;
+    top: -20%;
+}
+
+#name-selection {
+    margin: 0;
+    top: 42.5%;
+    width: 475px;
+    height: 200px;
+    transition: opacity 0.25s;
+}
+#name-input-label{
+    width: 500px;
+    text-align: center;
+    color:white;
+    font-size: 35px;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+#game-start{
+    margin: 0;
+    top: 42.5%;
+    width: 475px;
+    height: 200px;
+    transition: opacity 0.25s;
+}
+#game-start-timer{
+    font-size: 100px;
+}
+
+#game {
+    text-align: center;
+    margin: 0;
+    top: 50%;
+    width: 475px;
+    height: 475px;
+    transition: opacity 0.25s;
+}
+#question-type {
+    width: 100%;
+    position: absolute;
+    top: -3%; 
+}
+#question-letter {
+    width: 100%;
+    position: absolute;
+    top: -10%;
+
+}
+#question{
+    left: 5%;
+    width: 90%;
+    height: 200px;
+    position: absolute;
+    top: 23%;
+}
+#answer {
+    top: 14em;
+    left: 45%;
+}
+#answer-label {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    text-shadow: 0px 0px 2px black;
+    top: 72%;
+    left: 18%;
+}
+
+#answer-correction {
+    text-align: center;
+    margin: 0;
+    top: 65%;
+    width: 475px;
+    height: 475px;
+    transition: opacity 0.25s;
+}
+#good-bad-answer {
+    font-size: 60px;
+    top: 20%;
+}
+#explanation {
+    top: 15%;
+}
+
+#game-summary {
+    text-align: center;
+    margin: 0;
+    top: 60%;
+    width: 475px;
+    height: 475px;
+    transition: opacity 0.25s;
+}
+#end-text {
+    font-size: 70px;
+}
+#time-is-up {
+    top: -5%;
+    font-size: 25px;
+}
+#game-summary-answers {
+    top: 47%;
+    color: white;
+    text-shadow: 0px 1px 3px black;
+    font-size: 25px;
+    table-layout: fixed;
+    line-height: 40px;
+}
+#goods-summary {
+    border: 3px solid green;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(50, 205, 50, 0.75);
+    box-shadow: 0px 1px 2px rgb(0, 65, 0);
+}
+#time-summary {
+    border: 3px solid grey;
+    width: 80px;
+    height: 40px;
+    border-radius: 25%;
+    background-color: rgb(158, 158, 158, 0.75);
+    box-shadow: 0px 2px 2px rgb(75, 75, 75);
+}
+#bads-summary {
+    border: 3px solid darkred;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.75);
+    box-shadow: 0px 2px 2px rgb(85, 0, 0);
+}
+#ranking-entry {
+    font-size: 20px;
+    top: -2%;
+}
+
+/*Rules*/
+#rules {
+    position: absolute;
+    min-width: 375px;
+    min-height: 600px;
+    top: 7%;
+    left: 1%;
+    background-color: rgb(0, 0, 0, 0.15);
+    border: 3px solid white;
+    box-shadow: -10px 5px 5px black;
+    transform: translate(-16%, 20%) scale(0.7) rotateZ(-1deg);
+    transition: transform 0.1s;
+}
+#rules:hover {
+    transform: scale(1);
+}
+#rules-text {
+    margin: 10px;
+    width: 355px;
+    font-size: 16px;
+    text-align: left;
+}
+
+/*Ranking*/
+#ranking {
+    position: absolute;
+    min-width: 375px;
+    min-height: 600px;
+    top: 12%;
+    right: 0px;
+}
+#ranking-table {
+    font-size: 15px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    box-shadow: 10px 5px 5px black;
+    transform: translate(15%, 25%) scale(0.7) rotateZ(1deg);
+    transition: transform 0.1s;
+}
+.ranking-active,
+#ranking-table:hover {
+    transform: scale(1) !important;
+}
+#ranking-table thead{
+    border: 3px solid white;
+    height: 50px;
+}
+#ranking-table thead th{
+    background-color: rgb(0, 0, 0, 0.25);
+}
+#ranking-name{
+    width: 125px;
+}
+#ranking-good,
+#ranking-bad,
+#ranking-time{
+    width: 75px;
+}
+#ranking-table tbody tr{
+    border: 3px solid white;
+    height: 40px;
+}
+#ranking-table tbody tr td{
+    border: 1px solid white;
+    background-color: rgb(0, 0, 0, 0.05);
+    transition: background-color 1s;
+}
+.ranking-new td{
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}

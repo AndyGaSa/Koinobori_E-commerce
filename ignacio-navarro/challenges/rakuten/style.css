@@ -1,0 +1,317 @@
+body{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+/*----------------------
+    NAVIGATION BAR
+-----------------------*/
+
+.navigation-bar{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.navigation-bar__image{
+    width: 130px;
+    height: auto;
+}
+.navigation-bar__item{
+    font-family: NotoSans-Bold,Arial,sans-serif;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 0.9em;
+}
+.navigation-bar__item--grey{
+    color: rgb(129, 129, 129);
+}
+.navigation-bar__item--yellow-button{
+    background-color: #ffe300;
+    border-radius: 2px;
+    color: black;
+    height: 40px;
+    line-height: 40px;
+    width: 130px;
+    text-align: center;
+}
+.navigation-bar__item:hover{
+    color: #ffe300;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown__content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+.navigation-bar__item--drowpdown-list-item{
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: black;
+    font-weight: normal;
+}
+.dropdown:hover .dropdown__content {
+    display: block;
+}
+.navigation-bar__search-box{
+    height: 40px;
+    padding: 0;
+    text-rendering: auto;
+    background-color: rgb(51, 51, 51);
+    cursor: text;
+    font-family: NotoSans-Bold,Arial,sans-serif;
+    border: none;
+}
+input[type=text]:focus{
+    background-color: white;
+  }
+  
+/*----------------------
+        MAIN SLIDER
+-----------------------*/
+.main-slider__arrow{
+    font-size: 12vw;
+    text-decoration: none;
+    color: white;
+}
+.main-slider__arrows__container{
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-slider-selectors__dot{
+    font-size: 20vw;
+    color: white;
+}
+
+.header-slider-selectors{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+  .main-slider__images{
+    animation: pictures 30s infinite ease-in-out;
+    width: 100vw;
+    height: 30vw;
+    background-image: url(https://static3.marialunarillos.com/media/custom/advancedslider/resized/slide-5c2f5c6c4d1de-png/1080X600.png);
+    
+}
+
+@keyframes pictures {
+    0% {background: url(https://images-3.wuaki.tv/system/images/8894/original/hasta-el-cielo-1625479330-width1920-quality80.jpeg);
+    background-size: 100vw;}
+    12% {background: url(https://images-0.wuaki.tv/system/images/8893/original/inmune-1625479302-width1920-quality80.jpeg);
+    background-size: 100vw;}
+    24% {background: url(https://images-1.wuaki.tv/system/images/8814/original/fast-and-furious-promo-1624866349-width1920-quality80.jpeg);
+    background-size: 100vw;}
+    36% {background: url(https://images-3.wuaki.tv/system/images/8813/original/nomadland-1624866195-width1920-quality80.jpeg);
+    background-size: 100vw;}
+    48% {background: url(https://images-3.wuaki.tv/system/images/8851/original/minari-1625124784-width1920-quality80.jpeg);
+    background-size: 100vw;}
+    60% {background: url(https://images-2.wuaki.tv/system/images/4773/original/starzplay-generic-vis-reg-1621952935-width1920-quality80.png);
+    background-size: 100vw;}
+    72% {background: url(https://images-2.wuaki.tv/system/images/8563/original/bvb-dortmund-1622099617-width1920-quality80.png);
+    background-size: 100vw;}
+    84% {background: url(https://images-2.wuaki.tv/system/images/150/original/rtv-suscripcion-generic-slider-vis-reg-1614848906-width1920-quality80.png);
+    background-size: 100vw;}
+    100% {background: url(https://images-3.wuaki.tv/system/images/8894/original/hasta-el-cielo-1625479330-width1920-quality80.jpeg);
+    background-size: 100vw;}
+}
+
+
+/*----------------------
+    MOVIES NAV BAR
+-----------------------*/
+
+.movies-nav-bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.movies-nav-bar__card{
+    width: 19%;
+    
+}
+.card__image{
+    width: 100%;
+    border: 4px solid transparent;
+}
+
+/*----------------------
+    SLIDER NAV BAR
+-----------------------*/
+
+.slider-nav-bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.slider-nav-bar__card{
+    width: 19%;
+}
+.card__image{
+    width: 100%;
+    outline: transparent solid 4px;
+    outline-offset: -8px;
+}
+.card__image:hover{
+    outline-offset: -8px;
+    outline: 4px solid #ffe300;
+}
+
+.movies-section {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.slider-nav-bar {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.movies-nav-bar__card--vertical{
+    width: 13%;
+}
+.movies-section__arrow-button {
+    font-family: sans-serif;
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background: black;
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+.movies-section__arrow-button--left{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+.movies-section__arrow-button--right{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+/*----------------------
+    POP UP INFO
+-----------------------*/
+
+.card__pop-up {
+    font-family: NotoSans-Bold,Arial,sans-serif;
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
+    position: absolute;
+    height: 0;
+    width: 0;
+    transform: translate(-3000px, -3000px);
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+}
+.movies-nav-bar__card:hover .card__pop-up {
+    transition: opacity 0.5s;
+    transition-delay:1s;
+    opacity: 1;
+}
+.movies-nav-bar__card:hover .card__pop-up {
+    display: flex;
+    height: 14vw;
+    width: 20vw;
+    transform: translate(19vw, 0px);
+    transition: transform 0s;
+    transition-delay:1s;
+}
+
+.pop-up__title{
+    color: white;
+    font-size: 1.2vw;
+}
+.pop-up__buttons-container{
+    display: flex;
+    flex-direction: row;
+}
+.pop-up__button{
+    color: white;
+    font-size: 0.5vw;
+    border: 0.2vw white solid;
+    padding: 0.6vw 1vw;
+    border-radius: 20px;
+    margin: 0 5px;
+}
+.pop-up__audience{
+    color: white;
+    font-size: 0.5vw;
+    font-weight: 500;
+}
+.pop-up__summary{
+    color: white;
+    font-size: 0.7vw;
+    font-weight: 200;
+    text-align: center;
+}
+.pop-up__link{
+    color: #ffe300;
+    font-size: 0.7vw;
+    font-weight: bold;
+    text-align: center;
+}
+.navigation-bar__item--drowpdown-list-item{
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: black;
+    font-weight: normal;
+}
+.dropdown:hover .dropdown__content {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    a.arrow__btn {
+        display: none;
+}
+}
+

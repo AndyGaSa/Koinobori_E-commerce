@@ -1,0 +1,145 @@
+body {
+    background-image: url(/images/images/pattern.png);
+    margin: 0;
+}
+
+header {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    background-color: #A593C2;
+}
+
+h2 {
+    color: #A593C2;
+}
+
+article h2 {
+    max-width: 300px;
+}
+
+main {
+    text-align: left;
+    margin: 30px auto;
+    width: 80%;
+}
+
+figure {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.main-navigator {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-navigator-link {
+    background-color: #CF4522;
+    margin: 1px;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-image {
+    height: 20px;
+}
+
+.header-navigator {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.main-logo {
+    margin: 20px auto;
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-logo h4 {
+    font-weight: 700;
+}
+
+.main-image,
+.article-image {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.promotions {
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: start;
+    padding: 10px;
+}
+
+.promotions h3,
+h4 {
+    margin: 20px;
+}
+
+.promotions-figure {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.promotions-image {
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    main {
+        display: flex;
+        justify-content: space-around;
+    }
+    header {
+        justify-content: left;
+        padding: 10px 20px;
+    }
+    footer {
+        text-align: unset;
+    }
+    article h2 {
+        max-width: unset;
+    }
+    .main-logo {
+        justify-content: unset;
+    }
+    .desktop-container {
+        margin: 0 30px;
+        max-width: 60%;
+    }
+    .header-navigator {
+        justify-content: unset;
+    }
+    .header-link {
+        margin: 0 10px;
+    }
+    .promotions {
+        background-color: unset;
+    }
+    .article-image {
+        src: url(/images/images/bethany-fullsize.jpg);
+    }
+}

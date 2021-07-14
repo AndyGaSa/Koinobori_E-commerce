@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <title>Connecta4</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body id='body'>
+        <div id='up-bar'>
+            <button type='button' id='home-button' class='small-button'>⌂</button>
+            <p id='author'>Xavier Lasierra</p>
+        </div>
+        <div id='all'>
+            <div id='main'>
+                <div id='title' class='center'>
+                    <h1>CONECTA 4</h1>
+                    <canvas id='title-token1' class='token-choose active-red'></canvas>
+                    <canvas id='title-token2' class='token-choose active-yellow'></canvas>
+                    <div id='game-selection-border' class='center'>
+                        <div id='game-selection'>
+                            <h2>SELECCIONA LOS JUGADORES</h2>
+                            <div id='player-type-selector'>
+                                <div id='pl1'>
+                                    <canvas id='' class='token-choose active-red'></canvas><br>
+                                    <label class="switch">
+                                        <input type="checkbox" id='player1-type'>
+                                        <span class="slider red-switch"></span>
+                                    </label><br>
+                                    <input type='text' id='player1-name' class='input-box' maxlength='11' placeholder="Nombre JG1">
+                                    <h3 class='cpu-text disabled' id='player1-cpu'>MÁQUINA</h3>
+                                </div>
+                                <div id='line'></div>
+                                <div id='pl2'>
+                                    <canvas id='' class='token-choose active-yellow'></canvas><br>
+                                    <label class="switch">
+                                        <input type="checkbox" id='player2-type'>
+                                        <span class="slider yellow-switch"></span>
+                                    </label><br>
+                                    <input type='text' id='player2-name' class='input-box' maxlength='11' placeholder="Nombre JG2">
+                                    <h3 class='cpu-text disabled' id='player2-cpu'>MÁQUINA</h3>
+                                </div>
+                            </div>
+                            <h3 id='pvp'>JUGADOR <em>vs</em> JUGADOR</h3>
+                            <button type='button' id='play-button' class='normal-button'>JUGAR</button>
+                        </div>     
+                    </div>
+                </div>
+            </div>
+    
+            <div id='board-container' class='center game-off'>
+                <div id='board'>
+                    <div id='token-row'>
+                        <canvas class='token-choose' id='t0'></canvas>
+                        <canvas class='token-choose' id='t1'></canvas>
+                        <canvas class='token-choose' id='t2'></canvas>
+                        <canvas class='token-choose' id='t3'></canvas>
+                        <canvas class='token-choose' id='t4'></canvas>
+                        <canvas class='token-choose' id='t5'></canvas>
+                        <canvas class='token-choose' id='t6'></canvas>
+                    </div>
+                    <div id='grid'>
+                        <div class='column' id='col0'>
+                            <canvas class='slot' id='s00'></canvas>
+                            <canvas class='slot' id='s10'></canvas>
+                            <canvas class='slot' id='s20'></canvas>
+                            <canvas class='slot' id='s30'></canvas>
+                            <canvas class='slot' id='s40'></canvas>
+                            <canvas class='slot' id='s50'></canvas>
+                        </div>
+                        <div class='column' id='col1'>
+                            <canvas class='slot' id='s01'></canvas>
+                            <canvas class='slot' id='s11'></canvas>
+                            <canvas class='slot' id='s21'></canvas>
+                            <canvas class='slot' id='s31'></canvas>
+                            <canvas class='slot' id='s41'></canvas>
+                            <canvas class='slot' id='s51'></canvas>
+                        </div>
+                        <div class='column' id='col2'>
+                            <canvas class='slot' id='s02'></canvas>
+                            <canvas class='slot' id='s12'></canvas>
+                            <canvas class='slot' id='s22'></canvas>
+                            <canvas class='slot' id='s32'></canvas>
+                            <canvas class='slot' id='s42'></canvas>
+                            <canvas class='slot' id='s52'></canvas>
+                        </div>
+                        <div class='column' id='col3'>
+                            <canvas class='slot' id='s03'></canvas>
+                            <canvas class='slot' id='s13'></canvas>
+                            <canvas class='slot' id='s23'></canvas>
+                            <canvas class='slot' id='s33'></canvas>
+                            <canvas class='slot' id='s43'></canvas>
+                            <canvas class='slot' id='s53'></canvas>
+                        </div>
+                        <div class='column' id='col4'>
+                            <canvas class='slot' id='s04'></canvas>
+                            <canvas class='slot' id='s14'></canvas>
+                            <canvas class='slot' id='s24'></canvas>
+                            <canvas class='slot' id='s34'></canvas>
+                            <canvas class='slot' id='s44'></canvas>
+                            <canvas class='slot' id='s54'></canvas>
+                        </div>
+                        <div class='column' id='col5'>
+                            <canvas class='slot' id='s05'></canvas>
+                            <canvas class='slot' id='s15'></canvas>
+                            <canvas class='slot' id='s25'></canvas>
+                            <canvas class='slot' id='s35'></canvas>
+                            <canvas class='slot' id='s45'></canvas>
+                            <canvas class='slot' id='s55'></canvas>
+                        </div>
+                        <div class='column' id='col6'>
+                            <canvas class='slot' id='s06'></canvas>
+                            <canvas class='slot' id='s16'></canvas>
+                            <canvas class='slot' id='s26'></canvas>
+                            <canvas class='slot' id='s36'></canvas>
+                            <canvas class='slot' id='s46'></canvas>
+                            <canvas class='slot' id='s56'></canvas>
+                        </div>
+                    </div>
+                    <div id='d-effect'>
+                        <div class='column'>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                        </div>
+                        <div class='column'>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                        </div>
+                        <div class='column'>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                        </div>
+                        <div class='column'>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                        </div>
+                        <div class='column'>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                        </div>
+                        <div class='column'>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                        </div>
+                        <div class='column'>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                            <canvas class='slotB'></canvas>
+                        </div>
+                    </div>
+                    <div id='foot'></div>
+                    <div id='floor'></div>
+                    <div id='hud' class='disabled'>
+                        <div id='timer-turn-border'>
+                            <div id='timer-turn'>
+                                <p id='timer'>00:01</p>
+                                <p id='turn'>Turno 1</p>
+                            </div>
+                        </div>
+                        <div id='token-turn-border'>
+                            <div id='token-turn'>
+                                <p id='who-turn'>Turno oaifoia</p>
+                                <canvas id='turn-token' class='token-choose active-red'></canvas>
+                            </div>
+                        </div>
+                        <div id='exit'>
+                            <button type='button' id='reset-button' class='normal-button'>⭯</button>
+                            <button type='button' id='exit-button' class='normal-button'>SALIR</button>
+                        </div>
+                    </div>
+                    <div id='end-game-hud' class='disabled'>
+                        <div id='end-game'>
+                            <h3 id='who-won'>HA GANADO<br>KFALKJLSDDKS</h3>
+                            <p id='win-info'>Turno<br>10<br><br>Tiempo<br>23:23<br><br>Contra<br>Jugador(dfajkfdkafdk)</p><br>
+                            <button type='button' id='win-home-button' class='small-button'>⌂</button>
+                            <button type='button' id='win-play-button' class='small-button'>⭯</button>
+                        </div>
+                    </div>
+                    <div id='game-starting-border' class='center disabled'>
+                            <h2 id='game-starting'><em>EMPIEZA LA PARTIDA</em><br><br>Turno rojo<br>Name</h2>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div id='pop-up' class='disabled'>
+            <div id=pop-up-in-border>
+                <div id=pop-up-in>
+                    <div id='sure-exit' class='disabled'>
+                        <h4 id='question-pop'>¿Estás seguro que quieres salir?</h4><br>
+                        <p>Se perderá el progreso de la partida actual.</p><br>
+                        <button type='button' id='yes-button' class='small-button'>SÍ</button>
+                        <button type='button' id='no-button' class='small-button'>NO</button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </body>
+
+    <script src="index.js"></script>
+</html>

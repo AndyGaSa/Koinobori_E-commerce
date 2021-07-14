@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skylab Airlines by Malb</title>
+</head>
+
+<body>
+    <script>
+        /** 
+         ** The Skylab Airlines
+         **By Underground Mc-MalB.
+         **/
+
+
+        //Variables principales y Array con funciones.
+        let nombre;
+        let flights = [
+
+            {
+                id: 00,
+                to: 'Bilbao',
+                from: 'Barcelona',
+                cost: 1600,
+                scale: false
+            },
+
+            {
+                id: 01,
+                to: 'New York',
+                from: 'Barcelona',
+                cost: 700,
+                scale: false
+            },
+
+            {
+                id: 02,
+                to: 'Los Angeles',
+                from: 'Madrid',
+                cost: 1100,
+                scale: true
+            },
+
+            {
+                id: 03,
+                to: 'Paris',
+                from: 'Barcelona',
+                cost: 210,
+                scale: false
+            },
+
+            {
+                id: 04,
+                to: 'Roma',
+                from: 'Barcelona',
+                cost: 150,
+                scale: false
+            },
+
+            {
+                id: 05,
+                to: 'London',
+                from: 'Madrid',
+                cost: 200,
+                scale: false
+            },
+
+            {
+                id: 06,
+                to: 'Madrid',
+                from: 'Barcelona',
+                cost: 90,
+                scale: false
+            },
+
+            {
+                id: 07,
+                to: 'Tokyo',
+                from: 'Madrid',
+                cost: 1500,
+                scale: true
+            },
+
+            {
+                id: 08,
+                to: 'Shangai',
+                from: 'Barcelona',
+                cost: 800,
+                scale: true
+            },
+
+            {
+                id: 09,
+                to: 'Sydney',
+                from: 'Barcelona',
+                cost: 150,
+                scale: true
+            },
+
+            {
+                id: 10,
+                to: 'Tel-Aviv',
+                from: 'Madrid',
+                cost: 150,
+                scale: false
+            }
+
+        ];
+
+
+        //Saludamos 
+
+        const saludarNombreDeUsuario = () => {
+            nombre = prompt('Welcome to Skylab Airlines. Please insert your \"User Name\". ');
+            alert(`We are very happy to have you here \nMr(s) ${nombre}, \nCheck your possible flights by console`);
+        }
+        saludarNombreDeUsuario();
+
+        //Mostramos los vuelos por Consola
+
+        const showFlights = () => {
+
+            flights.forEach(vuelo => console.log(`Flight id:${vuelo.id} with destiny to: ${vuelo.to}, from: ${vuelo.from}, price: ${vuelo.cost}€. scale: ${vuelo.scale}`));
+
+        }
+        showFlights();
+
+        // Airlines Pro -
+
+        // Admin - Input
+
+        function adminUserInput() {
+            inputUser = prompt(`Insert \"Admin\" if you are, or \"User\". Press cancel to exit`);
+            switch (inputUser.toUpperCase()) {
+                case "ADMIN":
+                    adminCreate();
+                    adminEraseById();
+                    break;
+                case "USER":
+                    user();
+                    break;
+                case (typeof(inputUser) === null):
+                    console.log("You press Cancel. Continue with no user Info. ")
+                    break;
+                default:
+                    console.log("Try again, please.")
+                    adminUserInput()
+                    break;
+            }
+        }
+        adminUserInput()
+
+        // Admin -Create a flights 15 max.
+
+
+        function adminCreate() {
+            let i = 1;
+            let createNewFlights;
+            do {
+                createNewFlights = confirm(`Mr(s) ${nombre}. Do you gonna create another flight. `);
+                if (createNewFlights === false) {
+                    return alert(`Thanks for create new flights Mr(s) ${nombre}.`)
+                }
+
+                function NewFlightFunction(id, to, from, cost, scale) {
+                    this.id = id;
+                    this.to = to;
+                    this.from = from;
+                    this.cost = cost;
+                    this.scale = scale;
+                }
+                let inputId = flights.length;
+                let inputTo = prompt('Insert you destiny. ');
+                let inputFrom = prompt('Insert the start point. ');
+                let inputCost = parseInt(prompt('Insert the cost'));
+                let inputScale = confirm(`Flight with \"Scales\" Accept to YES o Cancel to NO`);
+
+
+
+
+                let newObjetoFlight = new NewFlightFunction(inputId, inputTo, inputFrom, inputCost, inputScale);
+                flights.push(newObjetoFlight);
+                console.log()
+                showFlights()
+
+                ++i;
+            } while (i < 15 && createNewFlights === true)
+
+        }
+
+        function adminEraseById() {
+            let idResponse = "";
+            do {
+                idResponse = prompt(`Insert the Id, for erase the flight. Mr(s)${nombre}, o press cancel to exit`)
+                idResponse = parseInt(idResponse);
+
+                flights.splice(idResponse, 1)
+
+
+            } while (!isNaN(idResponse))
+
+
+            console.log(`Esta es tu nueva lista de productos Mr(s) ${nombre}`)
+            console.log(flights)
+            showFlights()
+
+
+        }
+
+
+        // User
+        function user() {
+            let price = parseInt(prompt(`Insert the price of flights, can i search your max, min, and same flights.`))
+
+
+            console.log(`\nFlights with MAX price. `)
+            flights.forEach(flight => {
+
+                if (price < flight.cost) {
+
+                    console.log(`The MAX flight id: ${flight.id}, to: ${flight.to} from: ${flight.from}  price: ${flight.cost} scale: ${flight.scale}`)
+                }
+
+            });
+            console.log(`\nFlights with MIN price. `)
+            flights.forEach(flight => {
+
+                if (price > flight.cost) {
+
+                    console.log(`The MIN flight id: ${flight.id}, to: ${flight.to} from: ${flight.from}  price: ${flight.cost} scale: ${flight.scale}`)
+                }
+
+            });
+            console.log(`\nFlights with EQUAL price. `)
+            flights.forEach(flight => {
+
+                if (price == flight.cost) {
+
+                    console.log(`The MIN flight id: ${flight.id}, to: ${flight.to} from: ${flight.from}  price: ${flight.cost} scale: ${flight.scale}`)
+                }
+
+            });
+
+
+
+
+        }
+
+
+
+
+        const halfPrice = () => {
+
+            halfP = 0;
+
+            for (let flight of flights) {
+
+                halfP = (halfP + flight.cost);
+            }
+            halfP = Math.ceil(halfP / flights.length)
+
+            alert('Check the avarage price of your flights by console.')
+            console.log(`\nThe avarage price of your alternative flights is: ${halfP}€ Mr(s) ${nombre}.\n`);
+
+        }
+        halfPrice();
+
+        const scalesFlights = () => {
+            let scalesFlights = []
+
+            flights.map(flight => {
+                if (flight.scale === true) {
+                    scalesFlights.push(flight)
+                }
+            })
+            console.log()
+            alert('Check the last five flights by console.')
+            scalesFlights.forEach(scaleflightShow => console.log(`Flight with SCALE, destiny to: ${scaleflightShow.to}, from: ${scaleflightShow.from}, price: ${scaleflightShow.cost}€. `));
+
+        }
+        scalesFlights()
+
+        const lastFiveFlights = () => {
+
+            lastFive = flights.slice(-5)
+
+            console.log()
+            alert('Check the 5 last flights by console.')
+            lastFive.forEach(five => console.log(`The last 5 flights of the day: id:${five.id}  ${five.to}, from: ${five.from}, price: ${five.cost}€. scale: ${five.scale}`));
+
+        }
+
+        lastFiveFlights()
+
+        alert(`Thanks for your visit, Have a good day Mr(s) ${nombre}.`)
+        console.log()
+        console.log(`Thanks for your visit, Have a good day Mr(s) ${nombre}.`)
+    </script>
+</body>
+
+</html>

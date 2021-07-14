@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <title>Pasabalabra</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body id='background'>
+        <div id = 'main' class= 'center'>
+            <ul id='rosco' class = 'center'>
+                <li id='a' class='normal-circle'>A</li>
+                <li id='b' class='normal-circle'>B</li>
+                <li id='c' class='normal-circle'>C</li>
+                <li id='d' class='normal-circle'>D</li>
+                <li id='e' class='normal-circle'>E</li>
+                <li id='f' class='normal-circle'>F</li>
+                <li id='g' class='normal-circle'>G</li>
+                <li id='h' class='normal-circle'>H</li>
+                <li id='i' class='normal-circle'>I</li>
+                <li id='j' class='normal-circle'>J</li>
+                <li id='k' class='normal-circle'>K</li>
+                <li id='l' class='normal-circle'>L</li>
+                <li id='m' class='normal-circle'>M</li>
+                <li id='n' class='normal-circle'>N</li>
+                <li id='ñ' class='normal-circle'>Ñ</li>
+                <li id='o' class='normal-circle'>O</li>
+                <li id='p' class='normal-circle'>P</li>
+                <li id='q' class='normal-circle'>Q</li>
+                <li id='r' class='normal-circle'>R</li>
+                <li id='s' class='normal-circle'>S</li>
+                <li id='t' class='normal-circle'>T</li>
+                <li id='u' class='normal-circle'>U</li>
+                <li id='v' class='normal-circle'>V</li>
+                <li id='w' class='normal-circle'>W</li>
+                <li id='x' class='normal-circle'>X</li>
+                <li id='y' class='normal-circle'>Y</li>
+                <li id='z' class='normal-circle'>Z</li>
+            </ul>
+            <div id='timer-box' class='disabled center'>
+                <h1 id='timer'>200</h1>
+                <h2 id='points-good'>0</h2>
+                <h2 id='points-bad'>0</h2>
+                <button type='button' id='quit-button' class='small-button center'>✖</button>
+            </div>
+            <div id="inside-rosco">
+                <div id = 'title' class='center'>
+                    <h1>pasapalabra</h1>
+                    <h2 id='author'>por Xavier Lasierra</h2><br><br><br><br>
+                    <button type='button' id='play-button' class='center main-button'>JUGAR</button>
+                </div>
+                <div id = 'name-selection' class='center disabled'>
+                    <p class='text1'>Tienes 200 segundos<br>para intentar completar el rosco.<br>¡Buena suerte!</p><br>
+                    <label id='name-input-label' class='center'>Elige tu nombre:</label><br>
+                    <input type='text' id='user-name' class='input-box center' maxlength='10' value=''><br><br><br><br><br>
+                    <button type='button' id='start-button' class='center main-button'>EMPEZAR</button>
+                </div>
+                <div id = 'game-start' class='center disabled'>
+                    <p class='text1'>El juego empieza en<br>
+                    <h1 id='game-start-timer'></h1>
+                </div>
+                <div id = 'game' class='center disabled'>
+                    <h3 id='question-type'>CON LA</h3>
+                    <h4 id='question-letter'>X</h4>
+                    <p class='text1' id='question'>Ejemplo ejemplo ejemplo ejemplo ejemplo</p><br>
+                    <label id='answer-label'>Respuesta:</label><br>
+                    <input type='text' id='answer' class='input-box center' maxlength='15' value=''>
+                    <button type='button' id='answer-button' class='center small-button'>→</button>
+                    <button type='button' id='pasapalabra-button' class='center'>PASAPALABRA</button>
+                </div>
+                <div id = 'answer-correction' class='center disabled'>
+                    <h1 id='good-bad-answer'>PASAPALABRA</h3>
+                    <p class='text1' id='explanation'>La respuesta correcta era<br>Respuesta</p><br>
+                </div>
+                <div id = 'game-summary' class='center disabled'>
+                    <h1 id='end-text'>SE ACABÓ</h1>
+                    <p class='text1' id='time-is-up'>Has completado el rosco</p><br>
+                    <table  id='game-summary-answers' class='center' aria-label="Resultados de la partida (CORRECTAS/TIEMPO/INCORRECTAS)">
+                        <tbody>
+                            <tr>
+                                <td id='goods-summary'>0</td>
+                                <td id='time-summary'>0s</td>
+                                <td id='bads-summary'>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class='text1' id='ranking-entry'>Has conseguido entrar en el ranking.<br>¡Enhorabuena!</p><br>
+                    <button type='button' id='play-again-button' class='small-button center'>⭯</button>
+                    <button type='button' id='home-button' class='small-button center'>⌂</button>
+                </div>
+            </div> 
+        </div>
+        <div id='rules'>
+            <h2>Normas</h2>
+            <p class='text1' id='rules-text'>Bienvenido al juego de Pasapalabra de Skylab.<br><br>
+            Las normas estan basadas en el concurso de televisión "Pasapalabra":<br><br>
+            Se mostraran definiciones por pantalla y el usuario deberá reponder. El usuario tiene la opción de usar "pasapalabra" para reponder esta más adelante.<br><br>
+            Para comprobar la respuesta puedes presionar "enter" o pulsar el botón.<br><br>Para usar "pasapalabra" puedes presionar "enter" cuando no hay nada escrito en el cuadro de respuesta o usar el botón correspondiente.<br><br>
+            Tienes 200 segundos para completar el rosco. ¡Buena suerte!</p>
+        </div>
+        <div id='ranking'>
+            <table id='ranking-table' class='text1' aria-label="Clasificación de los jugadores de pasapalabra">
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th colspan="4" scope="col"><h2 id='ranking-title'>Ranking</h2></th>
+                    </tr>
+                    <tr>
+                        <th id='ranking-name' scope="col">Nombre</th>
+                        <th id='ranking-good' scope="col">Aciertos</th>
+                        <th id='ranking-bad' scope="col">Fallos</th>
+                        <th id='ranking-time' scope="col">Tiempo Restante</th>
+                    </tr>
+                </thead>
+                <tbody id='ranking-data'>
+                    <tr>
+                        <td>n</td>
+                        <td>a</td>
+                        <td>f</td>
+                        <td>t</td>
+                    </tr>
+                    <tr>
+                        <td>n</td>
+                        <td>a</td>
+                        <td>f</td>
+                        <td>t</td>
+                    </tr>
+                    <tr>
+                        <td>n</td>
+                        <td>a</td>
+                        <td>f</td>
+                        <td>t</td>
+                    </tr>
+                    <tr>
+                        <td>n</td>
+                        <td>a</td>
+                        <td>f</td>
+                        <td>t</td>
+                    </tr>
+                    <tr>
+                        <td>n</td>
+                        <td>a</td>
+                        <td>f</td>
+                        <td>t</td>
+                    </tr>
+                    <tr>
+                        <td>n</td>
+                        <td>a</td>
+                        <td>f</td>
+                        <td>t</td>
+                    </tr>
+                    <tr>
+                        <td>n</td>
+                        <td>a</td>
+                        <td>f</td>
+                        <td>t</td>
+                    </tr>
+                    <tr>
+                        <td>n</td>
+                        <td>a</td>
+                        <td>f</td>
+                        <td>t</td>
+                    </tr>
+                    <tr>
+                        <td>n</td>
+                        <td>a</td>
+                        <td>f</td>
+                        <td>t</td>
+                    </tr>
+                    <tr>
+                        <td>n</td>
+                        <td>a</td>
+                        <td>f</td>
+                        <td>t</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+
+    <script src="index.js"></script>
+</html>

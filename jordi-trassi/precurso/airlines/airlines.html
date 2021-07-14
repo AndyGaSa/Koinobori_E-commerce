@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Airlines</title>
+        <meta content="text/html; charset=utf-8" />
+    </head>
+    
+    <body>
+        <script> // AIRLINES
+        
+        var vuelos = [{id: 00, to: 'Bilbao', from: 'Barcelona', cost: 1600, scale: false},
+                    {id: 01, to: 'New York', from: 'Barcelona', cost: 700, scale: false},
+                    {id: 02, to: 'Los Angeles', from: 'Madrid', cost: 1100, scale: true},
+                    {id: 03, to: 'Paris', from: 'Barcelona', cost: 210, scale: false},
+                    {id: 04, to: 'Roma', from: 'Barcelona', cost: 150, scale: false},
+                    {id: 05, to: 'London', from: 'Madrid', cost: 200, scale: false},
+                    {id: 06, to: 'Madrid', from: 'Barcelona', cost: 90, scale: false},
+                    {id: 07, to: 'Tokyo', from: 'Madrid', cost: 1500, scale: true},
+                    {id: 08, to: 'Shangai', from: 'Barcelona', cost: 800, scale: true},
+                    {id: 09, to: 'Sydney', from: 'Barcelona', cost: 150, scale: true},
+                    {id: 10, to: 'Tel-Aviv', from: 'Madrid', cost: 150, scale: false}
+                ];
+    
+        var costeMedio = 0;
+        var vuelosConEscala = 0;
+        var ultimosVuelos = [];
+
+        var yourName = prompt('Bienvenido a Skylab Airlines!' + '\n' + 'Introduzca sun nombre por favor:');
+        console.log('Bienvenido ' + yourName +'!\n\nEstos son los vuelos disponibles:');            
+            
+        let i = 0; 
+        for (i = 0; i < vuelos.length; i++) {
+            let conSin;
+            if (vuelos[i].scale === true){
+                conSin = 'el vuelo realiza escalas.'
+                vuelosConEscala++; 
+            } else {
+                conSin = 'el vuelo es directo.'
+            }
+        costeMedio += vuelos[i].cost;    
+        console.log('El vuelo con destino: ' + vuelos[i].to + ', y salida desde: ' + vuelos[i].from + ' tiene un coste de ' + vuelos[i].cost + ' EUROS y ' + conSin);
+        }
+        
+        costeMedio /= vuelos.length;
+         
+        console.log('\n\nEl precio medio de los vuelos es: ' + costeMedio.toFixed(2) + ' Euros.');
+        console.log('\n\nHay ' + vuelosConEscala + ' vuelos que realizan escala.');
+
+        ultimosVuelos = vuelos.map(x => x.to);
+        ultimosVuelos.splice(0, ultimosVuelos.length -5);
+        console.log('\n\nLos ultimos destinos del dia son: ' + ultimosVuelos); 
+
+                   
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+#header{
+    text-align:center;
+    color: lightgrey;
+  }
+  body{
+    margin: 0 ;
+    background-color: #636769;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "screen screen screen screen"
+      ". . . ."
+      ". . . ."
+      ". . . ."
+      ". . . ."
+      "zero zero . .";
+  }
+  
+  #zero{
+    grid-area: zero;
+  }
+  .screen { 
+    grid-area: screen;
+    background-color:#2b3244;
+    color: #f5f4f4;
+    font-size:50px;
+    text-align: right;
+    padding-right:10px;
+  }
+  
+   .calculator{
+    width: 280px;
+    margin: auto;
+  }
+  
+  .numbers, .misc{
+    font-size:20px;
+    color:#636769;
+  }
+  
+  .symbol{
+    background-color:#f08e34;
+    font-size:20px;
+    color: #ffffff;
+  }
+  
+  .symbol:hover{
+    background-color:#b76c28;
+  }
