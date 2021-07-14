@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8b80b61e9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="rakuten.css">
+    <title>Rakuten TV - Tu cine en casa</title>
+</head>
+<body>
+    <header class="header-container">
+        <nav class="header-container__navigator-mobile navigator-mobile">
+            <a class="films-navigator__icon" href=""></a>
+            <i class="fas fa-search fa-lg search__icon--white"></i>
+        </nav>
+        <nav class="header-container__navigator navigator">
+            <div class="navigator__films-navigator films-navigator">
+                <a class="films-navigator__icon" href=""></a>
+                <ul class="films-navigator__menu">
+                    <li class="films-navigator__cinema cinema">
+                        <a href="">CINEMA<span class="films-navigator__triangle"></span></a>
+                        <ul class="cinema__menu">
+                            <li>FAMILY</li>
+                            <li>COLECCIONES</li>
+                            <li>TOP POPULARES</li>
+                            <li>TODOS LOS GÉNEROS</li>
+                        </ul>
+                    </li>
+                    <li class="films-navigator__free">
+                        <a href="">GRATIS</span></a>
+                    </li>
+                    <li class="films-navigator__subscriptions subscriptions">
+                        <a href="">SUSCRIPCIONES<span class="films-navigator__triangle"></span></a>
+                        <ul class="subscriptions__menu">
+                            <li>STARZPLAY</li>
+                            <li>RTV SUBSCRIPCIÓN</li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="films-navigator__search search">
+                    <label for="search__input"><i class="fas fa-search fa-sm search__icon"></i></label>
+                    <input type="text" name="search__input" class="search__input" placeholder="Buscar">
+                </form>
+            </div>
+            <div class="navigator__login-container login-container">
+                <a class="login-container__help" href="">AYUDA Y DISPOSITIVOS</a>
+                <a class="login-container__login" href="">ENTRAR</a>
+                <a class="login-container__register" href="">REGISTRARSE</a>
+            </div>
+        </nav>
+    </header>
+    <main class="main-container">
+        <section class="main-container__carousel carousel">
+            <ol class="carousel__viewport">
+                <li id="carousel__slide1" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <a href="#carousel__slide4"
+                        class="carousel__prev">Go to last slide</a>
+                        <a href="#carousel__slide2"
+                        class="carousel__next">Go to next slide</a>
+                    </div>
+                </li>
+                <li id="carousel__slide2" class="carousel__slide">
+                    <div class="carousel__snapper"></div>
+                    <a href="#carousel__slide1"
+                        class="carousel__prev">Go to previous slide</a>
+                    <a href="#carousel__slide3"
+                        class="carousel__next">Go to next slide</a>
+                </li>
+                <li id="carousel__slide3" class="carousel__slide">
+                    <div class="carousel__snapper"></div>
+                    <a href="#carousel__slide2"
+                        class="carousel__prev">Go to previous slide</a>
+                    <a href="#carousel__slide4"
+                        class="carousel__next">Go to next slide</a>
+                </li>
+                <li id="carousel__slide4" class="carousel__slide">
+                    <div class="carousel__snapper"></div>
+                    <a href="#carousel__slide3"
+                        class="carousel__prev">Go to previous slide</a>
+                    <a href="#carousel__slide1"
+                        class="carousel__next">Go to first slide</a>
+                </li>
+            </ol>
+            <aside class="carousel__navigation">
+                <ol class="carousel__navigation-list">
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide1"
+                        class="carousel__navigation-button"></a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide2"
+                        class="carousel__navigation-button">Go to slide 2</a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide3"
+                        class="carousel__navigation-button">Go to slide 3</a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide4"
+                        class="carousel__navigation-button">Go to slide 4</a>
+                    </li>
+                </ol>
+            </aside>
+        </section>
+        <section class="main-container__scrollable scrollable">
+            <ol class="scrollable__list">
+                <li class="scrollable__item" id="scrollable__item1"><a></a></li>
+                <li class="scrollable__item" id="scrollable__item2"><a></a></li>
+                <li class="scrollable__item" id="scrollable__item3"><a></a></li>
+                <li class="scrollable__item" id="scrollable__item4"><a></a></li>
+                <li class="scrollable__item" id="scrollable__item5"><a></a></li>
+                <li class="scrollable__empty"><a></a></li>
+            </ol>
+            <div class="scrollable__buttons-container">
+                <button class="scrollable__back-button" id="back-button"><i class="fas fa-angle-right fa-flip-horizontal fa-3x"></i></button>
+                <button class="scrollable__next-button" id="next-button"><i class="fas fa-angle-right fa-3x"></i></button>
+            </div>
+        </section>
+        <section class="main-container__scrollable scrollable scrollable--vertical">
+            <a><h2 class="scrollable__title">GRATIS - La mejor selección de películas</h2></a>
+            <ol class="scrollable__list-vertical">
+                <li class="scrollable__item scrollable__item--vertical"><a></a>
+                    <div class="overlay">
+                        <div class="overlay__triangle"></div>
+                        <div class="overlay__box">
+                            <h4 class="overlay__title">Dying of the Light</h4>
+                            <div>
+                                <button class="overlay__trailer"><i class="fas fa-play fa-lg"></i>TRÁILER</button>
+                                <button class="overlay__add"><i class="fas fa-thumbtack fa-lg"></i>AÑADIR A QUIERO VER</button>
+                            </div>
+                            <span class="overlay__film-type">2014 ACCIÓN, DRAMA, THRILLER</span>
+                            <p class="overlay__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vitae aliquid sunt dignissimos? Quod repellendus consectetur assumenda laboriosam id ipsa quos sequi quia animi voluptatibus, iusto inventore labore voluptate cum!</p>
+                            <small class="overlay__price">VER AHORA DESDE 0,00 €</small>
+                        </div>
+                    </div>
+                </li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a>
+                    <div class="overlay">
+                        <div class="overlay__triangle"></div>
+                        <div class="overlay__box">
+                            <h4 class="overlay__title">Dying of the Light</h4>
+                            <div>
+                                <button class="overlay__trailer"><i class="fas fa-play fa-lg"></i>TRÁILER</button>
+                                <button class="overlay__add"><i class="fas fa-thumbtack fa-lg"></i>AÑADIR A QUIERO VER</button>
+                            </div>
+                            <span class="overlay__film-type">2014 ACCIÓN, DRAMA, THRILLER</span>
+                            <p class="overlay__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vitae aliquid sunt dignissimos? Quod repellendus consectetur assumenda laboriosam id ipsa quos sequi quia animi voluptatibus, iusto inventore labore voluptate cum!</p>
+                            <small class="overlay__price">VER AHORA DESDE 0,00 €</small>
+                        </div>
+                    </div>
+                </li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a>
+                    <div class="overlay">
+                        <div class="overlay__triangle"></div>
+                        <div class="overlay__box">
+                            <h4 class="overlay__title">Dying of the Light</h4>
+                            <div>
+                                <button class="overlay__trailer"><i class="fas fa-play fa-lg"></i>TRÁILER</button>
+                                <button class="overlay__add"><i class="fas fa-thumbtack fa-lg"></i>AÑADIR A QUIERO VER</button>
+                            </div>
+                            <span class="overlay__film-type">2014 ACCIÓN, DRAMA, THRILLER</span>
+                            <p class="overlay__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vitae aliquid sunt dignissimos? Quod repellendus consectetur assumenda laboriosam id ipsa quos sequi quia animi voluptatibus, iusto inventore labore voluptate cum!</p>
+                            <small class="overlay__price">VER AHORA DESDE 0,00 €</small>
+                        </div>
+                    </div>
+                </li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a>
+                    <div class="overlay">
+                        <div class="overlay__triangle"></div>
+                        <div class="overlay__box">
+                            <h4 class="overlay__title">Dying of the Light</h4>
+                            <div>
+                                <button class="overlay__trailer"><i class="fas fa-play fa-lg"></i>TRÁILER</button>
+                                <button class="overlay__add"><i class="fas fa-thumbtack fa-lg"></i>AÑADIR A QUIERO VER</button>
+                            </div>
+                            <span class="overlay__film-type">2014 ACCIÓN, DRAMA, THRILLER</span>
+                            <p class="overlay__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vitae aliquid sunt dignissimos? Quod repellendus consectetur assumenda laboriosam id ipsa quos sequi quia animi voluptatibus, iusto inventore labore voluptate cum!</p>
+                            <small class="overlay__price">VER AHORA DESDE 0,00 €</small>
+                        </div>
+                    </div>
+                </li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a>
+                    <div class="overlay">
+                        <div class="overlay__triangle"></div>
+                        <div class="overlay__box">
+                            <h4 class="overlay__title">Dying of the Light</h4>
+                            <div>
+                                <button class="overlay__trailer"><i class="fas fa-play fa-lg"></i>TRÁILER</button>
+                                <button class="overlay__add"><i class="fas fa-thumbtack fa-lg"></i>AÑADIR A QUIERO VER</button>
+                            </div>
+                            <span class="overlay__film-type">2014 ACCIÓN, DRAMA, THRILLER</span>
+                            <p class="overlay__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vitae aliquid sunt dignissimos? Quod repellendus consectetur assumenda laboriosam id ipsa quos sequi quia animi voluptatibus, iusto inventore labore voluptate cum!</p>
+                            <small class="overlay__price">VER AHORA DESDE 0,00 €</small>
+                        </div>
+                    </div>
+                </li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+                <li class="scrollable__item scrollable__item--vertical"><a></a></li>
+            </ol>
+            <div class="scrollable__buttons-container scrollable__buttons-container--vertical">
+                <button class="scrollable__back-button" id="back-button-vertical"><i class="fas fa-angle-right fa-flip-horizontal fa-3x"></i></button>
+                <button class="scrollable__next-button" id="next-button-vertical"><i class="fas fa-angle-right fa-3x"></i></button>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <section class="footer__top">
+            <a class="films-navigator__icon" href=""></a>
+            <ul class="footer__links-container">
+                <li class="footer__link"><a href="">Acerca de Rakuten</a></li>
+                <li class="footer__link"><a href="">Quiénes somos</a></li>
+                <li class="footer__link"><a href="">Condiciones de uso</a></li>
+                <li class="footer__link"><a href="">Política de privacidad y cookies</a></li>
+                <li class="footer__link"><a href="">Proceso de autoregulación por edad</a></li>
+                <li class="footer__link"><a href="">Trabaja con nosotros</a></li>
+            </ul>
+            <small class="footer__text">2009 - 2021 @ Rakuten TV Europe, S.L.U. - v1.887.0</small>
+        </section>
+    </footer>
+
+    <script src="rakuten.js"></script>
+</body>
+</html>
