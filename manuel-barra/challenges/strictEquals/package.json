@@ -10,7 +10,6 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "jest": "^27.0.6",
-        "jshint": "^2.13.0"
+        "jest": "^27.0.6"
     }
 }
