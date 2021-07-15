@@ -58,13 +58,33 @@ class SkylabArray {
     }
     return aux;
   }
+
+  concat(sArr) {
+    const aux = new SkylabArray();
+    for (let i = 0; i < this.length; i += 1) {
+      aux.push(this[i]);
+    }
+    if (sArr.constructor === SkylabArray) {
+      for (let i = 0; i < sArr.length; i += 1) {
+        aux.push(sArr[i]);
+      }
+    } else {
+      aux.push(sArr);
+    }
+    return aux;
+  }
 }
 
 const a = new SkylabArray();
 a.push(1);
 a.push(2);
 a.push(3);
-a.push(4);
-a.push(2328623);
-console.log(a.reverse());
+const b = new SkylabArray();
+b.push(4);
+b.push(5);
 console.log(a);
+console.log(b);
+const c = a.concat(b);
+console.log(c);
+console.log(a);
+console.log(a.concat('hello'));
