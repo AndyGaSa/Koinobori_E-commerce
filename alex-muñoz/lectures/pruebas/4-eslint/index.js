@@ -1,6 +1,6 @@
 const strictEqual = (a, b) => {
-  if (isNaN(a) && isNaN(b)) return false;
-  if (isNaN(a / b) || isNaN(b / a)) return true;
+  if (Number.isNaN(a) && Number.isNaN(b)) return false;
+  if (Number.isNaN(a / b) || Number.isNaN(b / a)) return true;
   return Object.is(a, b);
 };
 
@@ -43,3 +43,17 @@ test('Compare if "water" and  "oil" its false', () => {
   const result = strictEqual('water', 'oil');
   expect(result).toBe(false);
 });
+
+const friends = ['Ryan', 'Kieran', 'Jason', 'Yous'];
+
+function myFriends(friends) {
+  const myFriend = [];
+  for (let i = 0; i < friends.length; i++) {
+    for (let j = 0; j < friends[i].length; j++) {
+      if (friends[i].length === 4) {
+        myFriends.push(friends);
+      }
+    }
+  }
+}
+myFriends();
