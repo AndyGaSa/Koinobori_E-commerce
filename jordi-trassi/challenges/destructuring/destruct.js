@@ -81,5 +81,164 @@ console.log(a);
 console.log(b);
 
 
+function parseProtocol(url) {
+    const parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
+    if (!parsedURL) {
+        return false;
+    }
+console.log(parsedURL);
+const [, protocol, fullhost, fullpath] = parsedURL;
+return protocol;
+}
+console.log(parseProtocol('https://developer.mozilla.org/es/Web/JavaScript'));
+
+
+// DESESTRUCTURACIÓN DE OBJETOS ----------
+
+
+const user = {
+    id: 42,
+    is_verified: true
+};
+
+const {id, is_verified} = user;
+console.log(id);
+console.log(is_verified);
+
+
+let a, b;
+({a, b} = {a: 1, b: 2});
+
+
+const o = {p: 42, q: true};
+const {p: foo, q: bar} = o;
+console.log(foo);
+console.log(bar);
+
+
+const {a = 10, b = 5} = {a: 3};
+console.log(a);
+console.log(b); 
+
+
+const {a: aa = 10, b: bb = 5} = {a: 3};
+console.log(aa); 
+console.log(bb);
+
+
+const user = {
+    id: 42,
+    displayName: 'jdoe',
+    fullName: {
+      firstName: 'John',
+      lastName: 'Doe'
+    }
+  };
+  function userId({id}) {
+    return id;
+  }
+  function whois({displayName, fullName: {firstName: name}}) {
+    return `${displayName} is ${name}`;
+  }
+  console.log(userId(user));
+  console.log(whois(user)); 
+
+
+
+  function drawChart({size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}) {
+    console.log(size, coords, radius);
+  }
+  drawChart({
+    coords: {x: 18, y: 30},
+    radius: 30
+  });
+
+
+
+
+  const metadata = {
+    title: 'Scratchpad',
+    translations: [
+      {
+        locale: 'de',
+        localization_tags: [],
+        last_edit: '2020-08-29T08:43:37',
+        url: '/de/docs/Tools/Scratchpad',
+        title: 'JavaScript-Umgebung'
+      }
+    ],
+    url: '/es/docs/Tools/Scratchpad'
+  };
+  
+  let {
+    title: englishTitle, 
+    translations: [
+      {
+         title: localeTitle, 
+      },
+    ],
+  } = metadata;
+  
+  console.log(englishTitle); 
+  console.log(localeTitle); 
+
+
+
+
+  const people = [
+    {
+      name: 'Mike Smith',
+      family: {
+        mother: 'Jane Smith',
+        father: 'Harry Smith',
+        sister: 'Samantha Smith'
+      },
+      age: 35
+    },
+    {
+      name: 'Tom Jones',
+      family: {
+        mother: 'Norah Jones',
+        father: 'Richard Jones',
+        brother: 'Howard Jones'
+      },
+      age: 25
+    }
+  ];
+  for (const {name: n, family: {father: f}} of people) {
+    console.log('Nombre: ' + n + ', Padre: ' + f);
+  }
+
+
+let key = 'z';
+let {[key]: foo} = {z: 'bar'};     
+console.log(foo);
+
+
+let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
+a; 
+b; 
+rest;
+
+
+const foo = { 'fizz-buzz': true };
+const { 'fizz-buzz': fizzBuzz } = foo;
+console.log(fizzBuzz);
+
+const props = [
+    { id: 1, name: 'Fizz'},
+    { id: 2, name: 'Buzz'},
+    { id: 3, name: 'FizzBuzz'}
+  ];
+  const [,, { name }] = props;
+  console.log(name); 
+
+
+
+let obj = {self: '123'};
+obj.__proto__.prot = '456';
+const {self, prot} = obj;
+
+
 
 
