@@ -19,9 +19,9 @@ header {
     width: 100vw;
     height: 4vh;
     background-color: #000000;
-    position: sticky;
+    position: absolute;
 }
-
+ 
 .header__navbar {
     margin: 0 auto;
     width: 84vw;
@@ -29,6 +29,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    
 }
 
 main {
@@ -62,31 +63,32 @@ footer {
 .navbar__categories {
     display: flex;
     height: 100%;
-    width: 15vw;
+    width: 17vw;
     justify-content: space-around;
     align-items: center;
     color: white;
     font-size: 0.75vw;
     z-index: 12;
-
 }
 
 .navbar__categories li:hover {
     color: #F0D500;
 }
 
+
 .navbar__login {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    width: 19vw;
+    width: 24vw;
     color: white;
     font-size: 0.75vw;
+    
 }
 
 .navbar__padding {
-    width: 28vw;
+    width: 24vw;
     height: 100%;
 }
 
@@ -97,6 +99,7 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 0.85vw;
+    margin-left: 1vw;
 }
 
 .search-div__input {
@@ -107,7 +110,7 @@ footer {
     border-radius: 3%;
 }
 
-.search-div__input:hover {
+.search-div__input:focus {
     background-color: white;
 }
 
@@ -118,7 +121,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 0;
+    margin-top: 4vh;
+    
 }
 
 .main__horizontal-cards {
@@ -133,9 +137,10 @@ footer {
 
 .main__vertical-cards {
     background-color: #181818;
-    flex: 15 1 auto;
-    height: 60%;
+    flex: 20 1 auto;
+    height: 70%;
     width: 100%;
+    padding-bottom: 2vh;
     overflow: hidden;
 }
 
@@ -168,7 +173,7 @@ ul.slider li:first-child {
 .slider__menu {
     position: absolute;
     text-align: center;
-    margin-top: 32vh;
+    margin-top: 26vh;
 }
 
 .slider__menu li {
@@ -218,7 +223,11 @@ ul.slider li:target {
 
 .main__horizontal-cards ul li img:hover,
 .main__vertical-cards ul li img:hover {
-    border: 4px solid #F0D500;
+    border: 3px solid #F0D500;
+}
+.main__horizontal-cards ul li img,
+.main__vertical-cards ul li img{
+    border: 3px solid transparent;
 }
 
 .login__help:hover,
@@ -254,6 +263,7 @@ ul.slider li:target {
     width: 11vw;
     height: 18vh;
     box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 10%);
+    
 }
 
 .main__text {
@@ -267,43 +277,65 @@ ul.slider li:target {
 .navbar__categories li ul {
     display: none;
     position: absolute;
-    min-width: 140px;
-    z-index: 12;
 }
 
 .navbar__categories li:hover>ul {
     display: flex;
     flex-direction: column;
-    width: 4vw;
+    width: 0.25vw;
     background-color: black;
     height: 10vh;
-    z-index: 12000;
     position: absolute;
     transition: color .1s ease;
 }
-
-.navbar__categories li {
-    z-index: 12;
-}
-
-.navbar__categories li ul li {
-    position: relative;
-    z-index: 12;
-}
-
-.navbar__categories li ul li ul {
-    right: -140px;
-    top: 0px;
-    z-index: 12;
+#categories__expand  li{
+    margin-top: 2px;
 }
 
 #categories__expand li a {
     text-decoration: none;
     color: white;
-    background-color: black;
+    margin-top: 200px;
+    
 }
 
-#categories__expand li {
-    margin-top: 0.5vh;
-    z-index: 12;
+#categories__expand  {
+    width: 8vw;
+    background-color: black;
+    margin-top: 1vh;
+    
+}
+#categories__expand2  {
+    width: 7vw;
+    background-color: black;
+    
+}
+#categories__expand2 li a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+#categories__expand2 li {
+    margin-top: 1vh; 
+    width: 7.5vw;
+    padding: 2px;
+    
+}
+
+.vertical-cards .vertical-cards__popup{ 
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 9999;
+  
+}
+.vertical-cards:hover .vertical-cards__popup{
+    visibility: visible;
+    
 }
