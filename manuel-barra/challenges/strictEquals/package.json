@@ -1,0 +1,15 @@
+{
+    "name": "strictEquals",
+    "version": "1.0.0",
+    "description": "",
+    "main": "code-strict.js",
+    "scripts": {
+        "test": "jest --watchAll --collect-coverage"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "jest": "^27.0.6"
+    }
+}
