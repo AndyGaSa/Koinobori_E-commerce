@@ -1,0 +1,445 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/*General selectors*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 0px;
+    background-color: rgb(23, 23, 23);
+    font-family: 'Noto Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+main {
+    display: block;
+}
+
+p {
+    color: rgb(153, 153, 153);
+}
+
+h3 {
+    color: rgb(255, 255, 255);
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 1vh;
+    font-size: 2vh;
+    font-family: NotoSans-Bold, Arial, sans-serif;
+    text-align: center;
+    color: rgb(153 153 153);
+}
+
+nav a:hover {
+    color: rgb(247, 216, 0);
+}
+
+img {
+    width: 100%;
+}
+
+.img__img {
+    border: transparent 1vh solid;
+}
+
+.img_img:hover {
+    border-color: rgb(247, 216, 0) 1vw solid;
+}
+
+/*Nav mobile selectors*/
+
+.nav__mobile {
+    background-color: rgb(0, 0, 0);
+    color: rgb(153, 153, 153);
+    font-size: 2vh;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 8vh;
+    position: sticky;
+    margin: 0px;
+    bottom: 0px;
+    margin-top: auto;
+}
+
+/*Nav desktop selectors*/
+
+.nav__desktop {
+    background-color: rgb(0, 0, 0);
+    height: 8vh;
+    display: none;
+    flex-direction: row;
+    align-content: space-between;
+    position: sticky;
+    top: 0px;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1vh;
+}
+
+.nav__left {
+    display: flex;
+    align-items: baseline;
+}
+
+.nav__right {
+    justify-content: flex-end;
+}
+
+button {
+    background-color: rgb(247, 216, 0);
+    height: 4vh;
+    width: 20vh;
+    border: none;
+    border-radius: 00.5vh;
+}
+
+/*Principal slide Selectors*/
+
+.principal-slide {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+.principal-slide__input {
+    visibility: hidden;
+}
+
+.principal-slide__img {
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: all 2s;
+    animation-name: slide-autoplay;
+    animation-duration: 20s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.img__item-slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+.principal-slide__pagination {
+    position: absolute;
+    bottom: 2vh;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    color: white;
+    opacity: 0.6;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 0.5vh;
+    text-align: center;
+}
+
+.pagination__item:hover {
+    opacity: 1;
+}
+
+input[id="1"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 0), 0, 0);
+}
+
+input[id="1"]:checked~.principal-slide__pagination .pagination__item[for="1"] {
+    opacity: 1;
+}
+
+input[id="2"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked~.principal-slide__pagination .pagination__item[for="2"] {
+    opacity: 1;
+}
+
+input[id="3"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked~.principal-slide__pagination .pagination__item[for="3"] {
+    opacity: 1;
+}
+
+input[id="4"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 3), 0, 0);
+}
+
+input[id="4"]:checked~.principal-slide__pagination .pagination__item[for="4"] {
+    opacity: 1;
+}
+
+input[id="5"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 4), 0, 0);
+}
+
+input[id="5"]:checked~.principal-slide__pagination .pagination__item[for="5"] {
+    opacity: 1;
+}
+
+input[id="6"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 5), 0, 0);
+}
+
+input[id="6"]:checked~.principal-slide__pagination .pagination__item[for="6"] {
+    opacity: 1;
+}
+
+input[id="7"]:checked~.principal-slide__img {
+    animation: none;
+    transform: translate3d(calc(-100% * 6), 0, 0);
+}
+
+input[id="7"]:checked~.principal-slide__pagination .pagination__item[for="7"] {
+    opacity: 1;
+}
+
+@keyframes slide-autoplay {
+    14.2% {
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+    28.6% {
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+    42.9% {
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+    57.2% {
+        transform: translate3d(calc(-100% * 3), 0, 0);
+    }
+    71.5% {
+        transform: translate3d(calc(-100% * 4), 0, 0);
+    }
+    85.8% {
+        transform: translate3d(calc(-100% * 5), 0, 0);
+    }
+    100% {
+        transform: translate3d(calc(-100% * 6), 0, 0);
+    }
+}
+
+/*Horizontal and Vertical slide Selectors*/
+
+.horizontal-slide {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+
+.horizontal-slide__img, .vertical-slide__img {
+    display: flex;
+}
+
+/*.vertical-slide .vertical-slide__img {
+    width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+.img__carousel {
+    display: gid;
+    grid-template-columns: repeat(3, 100%);
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.carousel__img{
+
+}
+
+#carousel-1, #carousel-2, #carousel-3 {
+    display: flex;
+    overflow: hidden;
+    width: auto; 
+}*/
+
+.vertical-slide {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.vertical-slide__section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 5vh repeat(5, 1fr) 5vh;
+    margin: 2vh 0;
+}
+
+.carousel__img {
+    padding: 0 0.25;
+    transition: 250ms all;
+    width: 90%;
+    border: 0.5vh solid transparent;
+}
+
+.carousel__img:hover{
+    border: 0.5vh solid rgb(247, 216, 0);
+}
+
+.left-angle, .right-angle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 4vh;
+    width: 3vh;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease all;
+    position: initial;
+}
+
+.left-angle:hover, .right-angle:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.information {
+    display: none;
+    flex-direction: column;
+}
+
+.information__principal {
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.information__aditional {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 10vh;
+}
+
+.information a {
+    color: white;
+    font-size: 10vh;
+}
+
+.footer__logo-and-anchor {
+    padding: 4vh;
+}
+
+.footer__small {
+    text-align: center;
+    padding: 2vh;
+}
+
+/*Info film details*/
+
+.tooltip-film-detail__button {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottom__tooltip {
+    border-radius: 10vh;
+    border-color: white 1vh solid;
+    color: white;
+    width: -webkit-fill-available;
+    border-radius: 10vh;
+    background-color: black;
+    border: white 0.3vh solid;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .carousel__tooltip-film-detail {
+    visibility: hidden;
+    width: 48vh;
+    background-image: url("https://images-2.wuaki.tv/system/artworks/11880/original/gotti-1611323038-width217-quality80.jpeg");
+    overflow: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 1vh 0;
+    border-radius: 1vh;
+    position: absolute;
+    z-index: 1;
+    left: 100%;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+
+.tooltip .carousel__tooltip-film-detail::after {
+    content: "";
+    position: absolute;
+    /*top: 100%;*/
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.tooltip:hover .carousel__tooltip-film-detail {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*Media Queries*/
+
+@media screen and (min-width: 600px) {
+    .nav__desktop {
+        display: flex;
+    }
+    .nav__mobile {
+        display: none;
+    }
+    .information {
+        display: flex;
+    }
+    .information__principal {
+        display: block;
+    }
+    footer {
+        text-align: center;
+    }
+}
