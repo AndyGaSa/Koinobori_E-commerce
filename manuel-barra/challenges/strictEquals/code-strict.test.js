@@ -18,14 +18,6 @@ function strictEquals(a, b) {
 }
 
 
-
-
-
-
-
-
-
-
 const { expect, test } = require("@jest/globals")
 
 test("Compare 1 to 1 is equal true",
