@@ -1,10 +1,17 @@
 class SkylabArray {
   constructor(skylabArray) {
-    this.skylab_array = skylabArray;
-    this.skylab_length = 0;
+    this.skylabArray = skylabArray;
+    this.skyLength = 0;
   }
 
-  skylab_length() {
-    for (index in this.skylab_array) {} return index;
+  skylabLength() {
+    for (const elem of this.skylabArray) {
+      this.skyLength += 1;
+    }
+    return this.skyLength;
   }
 }
+
+a = new SkylabArray([1, 2, 3]);
+a.skylabLength();
+console.log(a.skyLength);
