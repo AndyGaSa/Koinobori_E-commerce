@@ -1,0 +1,210 @@
+*{    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:white;
+    background-color: rgb(23,23,23);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1vw;
+    height: 65px;
+}
+
+.header__nav-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.header__nav-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main__pelis{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__nav-1_cinema{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.header__nav-1__logo{
+    margin-left: 10px;
+    align-self: center;
+    height: 50%;
+    width: auto;
+}
+
+.header__nav-1__cinema-1{
+    margin: 15px;
+    align-self: center;
+}
+
+.header__nav-1__gratis{
+    margin: 15px;
+    align-self: center;
+}
+
+.header__nav-1__subs{
+    margin: 15px;
+    align-self: center;
+}
+
+.header__nav-1__form{
+    margin: 0 auto;
+    align-self: center;
+    width: 40%;
+    border-radius: 1px 1px 1px 1px;
+}
+
+input[type="text"]:focus{
+    background-color: white;
+}
+
+input[type="text"]{
+    background-color: pink;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    align-self: center;
+    width: 180px;
+    height: 40px;
+    border-radius: 1px 1px 1px 1px;
+}
+
+.header__nav-2__ayuda{
+    margin: 15px;
+    align-self: center;
+}
+
+.header__nav-2__entrar{
+    margin: 15px;
+    align-self: center;
+}
+
+.header__nav-2__registrarse{
+    padding: 10px;
+    margin: 15px;
+    align-self: center;
+    color: black;
+    line-height: 30px;
+    background-color: gold;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.main__slide{
+    height: auto;
+    width: auto;
+}
+
+.main__gratis{
+    margin: 20px 0px 13px 20px;
+}
+
+.main__pelis__foto{
+    margin: 5px;
+    width: 12vw;
+    height: auto;
+    align-self: 0 0 auto;
+}
+
+.main__pelis__foto:hover{
+    outline: 1px solid gold;
+    outline-offset: 0px;
+    cursor: pointer;
+}
+
+.header__nav-1__cinema-1::after{
+    content: '▼';
+    margin-left: 4px;
+    font-size: 10px;
+}
+
+.header__nav-1__cinema-1:hover{
+    color: gold;
+}
+
+.header__nav-1__gratis:hover{
+    color: gold;
+}
+
+.header__nav-1__subs:hover{
+    color: gold;
+}
+
+.header__nav-1__subs:hover{
+    color: gold;
+}
+
+.header__nav-2__ayuda:hover{
+    color: gold;
+}
+
+.header__nav-2__entrar:hover{
+    color: gold;
+}
+
+.header__nav-1__cinema-1:hover::after{
+    content: '▴';
+    margin-left: 4px;
+    font-size: 10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    padding-top: 60px;
+    background-color:transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
