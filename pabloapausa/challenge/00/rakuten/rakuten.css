@@ -1,0 +1,18 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: blink; 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.body__header {
+
+}
+
+.header, .left-side, .categories {
+    display: flex; 
+    flex-direction: row; 
+}
+
+

@@ -1,6 +1,0 @@
-test(
-    "describe test",
-    function() {
-
-    }
-);

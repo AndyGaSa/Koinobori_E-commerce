@@ -8,7 +8,7 @@
     font-size: 16px;
 }
 
-/* header-top */ /* header-top */ /* header-top */
+/* header-top */
 
 .header-top {
     position: fixed;
@@ -89,7 +89,6 @@
 .right-side__social-media {
     display: flex;
     flex-direction: row;
-    /* Entender bien esto */
     margin-right: 55px;
 }
 
@@ -222,15 +221,15 @@
 .bottom-side__categories:hover {
     background-color:rgb(255, 89, 89);
 }
-/*
-.bottom-side__categories > a {
+
+/*.bottom-side__categories > a {
     text-align: center;
     font-weight: bold;
     vertical-align: middle;
-    line-height: 230px;
+    line-height: 225px;
     color: black;
-}
-*/
+}*/
+
 .categories__brands {
     margin-right: 50px;
 }
