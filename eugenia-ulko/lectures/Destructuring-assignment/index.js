@@ -25,3 +25,42 @@ var {p, q} = o;
 
 console.log(p); // 42
 console.log(q); // true
+
+// второй элемент не нужен
+let [firstName, , title] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+
+alert(title); // Consul
+
+let [a, b, c] = "abc";
+let [one, two, three] = new Set([1, 2, 3]);
+
+//Присваивайте чему угодно с левой стороны!!!
+
+let user = {};
+[user.name, user.surname] = "Ilya Kantor".split(' ');
+
+alert(user.name); // Ilya
+
+
+// Цикл с .entries()
+
+let user = {
+  name: "John",
+  age: 30
+};
+
+// цикл по ключам и значениям
+for (let [key, value] of Object.entries(user)) {
+  alert(`${key}:${value}`); // name:John, затем age:30
+}
+
+// a mesma coisa:
+let user = new Map();
+user.set("name", "John");
+user.set("age", "30");
+
+for (let [key, value] of user) {
+    alert(`${key}:${value}`); // name:John, затем age:30
+    
+
+
