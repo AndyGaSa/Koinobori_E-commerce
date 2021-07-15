@@ -66,3 +66,22 @@ const skynet = {
     protect: 'humanity'
 }
 const { serving: killing, protect: destroy } = skynet;
+
+const product = {
+    code: 1234,
+    name: 'cereals',
+    madeOf: {
+        main: 'wheat',
+        flavour: 'chocolate'
+    }
+};
+
+function productSearcher({ code }) {
+    return code;
+}
+
+function whatIs({ name, madeOf: { flavour } }) {
+    return `${flavour} flavoured ${name}`;
+}
+
+console.log(whatIs(product));
