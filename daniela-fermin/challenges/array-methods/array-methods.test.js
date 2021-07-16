@@ -3,22 +3,24 @@ class SkylabArray {
     this.myLength = 0;
   }
 
-  /*  length(object) {
+  length() {
     this.myLength = 0;
-    for (const property in object) { myLength += 1; }
-    return myLength;
+    let property;
+    while (this.object[property] !== undefined) { myLength += 1; }
+    return this.myLength;
   }
-*/
+
   push(newItem) {
+    this.myLength = 0;
     this[this.myLength] = newItem;
-    myLength += 1;
-    this.myLength;
+    this.myLength += 1;
+    return this.myLength;
   }
 
   pop() {
     if (this.myLength !== 0) { delete this[this.myLength - 1]; }
     this.myLength -= 1;
-    this.myLength;
+    return this.myLength;
   }
 
   some(callback) {
@@ -31,9 +33,25 @@ class SkylabArray {
 
   find(callback) {
     for (let property = 0; property < this.myLength; property++) {
-      if (callback(this[property]) === true) {
+      if (callback(this[property])) {
         return this[property];
       }
     } return undefined;
+  }
+
+  filter(callback) {
+    const emptyArray = [];
+    for (let property = 0; property < this.myLength; property++) {
+      if (callback(this[property])) {
+        emptyArray.push(this[property]);
+      }
+    }
+  }
+
+  map(callback) {
+    const emptyArray = [];
+    for (let property = 0; property < this.myLength; property++) {
+      emptyArray.push(callback(this[property]));
+    }
   }
 }
