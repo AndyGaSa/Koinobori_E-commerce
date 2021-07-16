@@ -21,8 +21,3 @@ const array1 = new SkylabArray();
 
 array1.push('Lola');
 array1.push('Alvaro');
-array1.pop();
-array1.pop();
-array1.pop();
-
-console.log(array1);
