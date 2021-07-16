@@ -3,21 +3,29 @@ class SkylabArray {
     this.length = 0;
   }
 
-  push(param) {
-    this[this.length] = param;
+  push(newValue) {
+    this[this.length] = newValue;
     this.length += 1;
+    return this.length;
   }
 
   pop() {
     if (this.length === 0) {
-      return undefined;
+      return 'Error';
     }
+    const lastValue = this[this.length - 1];
+    delete this[this.length - 1];
     this.length -= 1;
-    delete this[this.length];
+    return lastValue;
   }
 }
 
-const array1 = new SkylabArray();
+module.exports = SkylabArray;
 
-array1.push('Lola');
-array1.push('Alvaro');
+const students = ['Lola', 'Laura', 'Xavi'];
+
+students.push('Adrian');
+console.log(students);
+const lastValue = students.pop();
+console.log(lastValue);
+console.log(students);
