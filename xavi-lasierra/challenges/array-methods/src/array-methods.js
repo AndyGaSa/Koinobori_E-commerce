@@ -2,6 +2,7 @@
 class SkylabArray {
   constructor() {
     this.length = 0;
+
     if (arguments.length === 1 && typeof (arguments[0]) === 'number') {
       for (let i = 0; i < arguments[0]; i += 1) {
         this.push(undefined);
