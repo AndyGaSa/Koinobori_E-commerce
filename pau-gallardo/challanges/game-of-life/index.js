@@ -1,25 +1,91 @@
-function imAlive(arr, x, y) {
-//TL x-1 y-1
-//T x y-1
-//TR x+1 y-1
-//R x+1 y
-//RB x+1 y+1 
-//B x y+1
-//BL x-1 y
-//L x-1 y   
+const grid = [[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]];
+function neighbourCount(arr, i, j) {
+  let count = 0;
+  // TL
+  if (i !== 0 && j !== 0) {
+    // Look TL neighbour
+    if (arr[i - 1][j - 1] === 1) {
+      count += 1;
+    }
+  }
+  // T
+  if (i !== 0) {
+    // Look T neighbour
+    if (arr[i - 1][j] === 1) {
+      count += 1;
+    }
+  }
 
-let count = 0;
-//TL
-if (x !== 0 && y !==0){
-    //Look TL neighbour
-    if (arr[x-1][y-1] === 1){
-        count++;
+  // TR
+  if (j < arr[0].length - 1 && i !== 0) {
+    // Look TR neighbour
+    if (arr[i - 1][j + 1] === 1) {
+      count += 1;
     }
+  }
+
+  // R
+  if (j < arr[0].length - 1) {
+    // Look R neighbour
+    if (arr[i][j + 1] === 1) {
+      count += 1;
+    }
+  }
+
+  // BR
+  if (j < arr[0].length - 1 && i < arr.length - 1) {
+    // Look BR neighbour
+    if (arr[i + 1][j + 1] === 1) {
+      count += 1;
+    }
+  }
+
+  // B
+  if (i < arr.length - 1) {
+    // Look B neighbour
+    if (arr[i + 1][j] === 1) {
+      count += 1;
+    }
+  }
+
+  // BL
+  if (j !== 0 && i < arr.length - 1) {
+    // Look BL neighbour
+    if (arr[i + 1][j - 1] === 1) {
+      count += 1;
+    }
+  }
+
+  // L
+  if (j !== 0) {
+    // Look BL neighbour
+    if (arr[i][j - 1] === 1) {
+      count += 1;
+    }
+  }
+  return count;
 }
-//T
-if (y !==0){
-    //Look T neighbour
-    if (arr[x][y-1]){
-        count++;
+
+// Check the life stage of the cell
+function amAlive(arr, i, j) {
+  const count = neighbourCount(arr, i, j);
+  if (arr[i][j] === 1) {
+    if (count <= 2 && count <= 3) {
+      return 1;
     }
+    return 0;
+  }
+  if (count === 3 && arr[i][j] === 0) {
+    return 1;
+  }
+}
+
+function game(arr) {
+  let newArray = [];
+  for (let i = 0; i < arr[0].length; i += 1) {
+    for (let j = 0; j < arr.length; j += 1) {
+      newArray = arr.map(neighbourCount(arr, i, j));
+    }
+  }
+  return newArray;
 }
