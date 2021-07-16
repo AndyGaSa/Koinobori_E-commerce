@@ -1,11 +1,22 @@
 class SkylabArray {
-  constructor() {
+  constructor(...el) {
     this.length = 0;
+    if (el.length === 1 && typeof (el[0]) === 'number') {
+      for (let i = 0; i < el[0]; i += 1) {
+        this.push(undefined);
+      }
+    } else {
+      for (let i = 0; i < el.length; i += 1) {
+        this.push(el[i]);
+      }
+    }
   }
 
-  push(el) {
-    this[this.length] = el;
-    this.length += 1;
+  push(...newValues) {
+    for (let i = 0; i < newValues.length; i += 1) {
+      this[this.length] = newValues[i];
+      this.length += 1;
+    }
     return this.length;
   }
 
@@ -74,5 +85,4 @@ class SkylabArray {
     return aux;
   }
 }
-
 module.exports = SkylabArray;
