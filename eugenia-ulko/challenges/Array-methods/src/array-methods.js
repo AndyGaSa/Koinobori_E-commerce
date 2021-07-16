@@ -1,8 +1,13 @@
+// function (export, module, require, filename, dirname) {}
+
 class SkylabArray {
   constructor(arr) {
-    this._dlina = 0;
+    this.length = 0;
   }
 }
+
+module.exports = SkylabArray;
+// define what we export - a class to use it in another module
 
 const pushSimulator = function (arr, newElement) {
   arr[arr.length] = newElement;
