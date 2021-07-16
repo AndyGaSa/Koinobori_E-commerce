@@ -40,4 +40,18 @@ describe('SkylabArray class', () => {
           });
           )}
   })
+
+  descrive('Given a map method', () => {
+      descrive('When is invoked', () => {
+          test('Then resturn a new array', () => {
+            myArray = new SkylabArray();
+            const mapCallback = (value) => `Skylab: ${value}`;
+            const newArray = myArray.map(mapCallback);
+
+            expect(myArray.length).toEqual(newArray.length);
+            });
+
+            
+      })
+  })
 });

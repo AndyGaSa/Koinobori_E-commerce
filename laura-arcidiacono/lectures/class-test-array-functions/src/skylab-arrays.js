@@ -18,7 +18,15 @@ class SkylabArray {
     this[this.length] -= 1;
     return this.length;
       }
+  }
 
+  map(callback) {
+      let newArray = SkylabArray();
+      for(let index = 0; index < this.length -1; index += 1) {
+          const element = callback(this[index]);
+          newArray.push(element);
+      }
+      return newArray;
   }
 }
 
