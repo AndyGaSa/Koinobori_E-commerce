@@ -32,19 +32,22 @@ class SkylabArray {
   }
 
   find(callback) {
-    const fun = callback;
     for (let i = 0; i < this.long; i += 1) {
-      if (fun(this[i])) {
+      if (callback(this[i])) {
         return this[i];
       }
     }
     return undefined;
   }
+
+  map(callback) {
+    const obj = {};
+    for (let i = 0; i < this.long; i += 1) {
+      obj[i] = callback(this[i]);
+    }
+    return obj;
+  }
 }
 
-const a = new SkylabArray();
-a.push(true);
-a.push(14);
-a.push(34, 45, 34, 'pere');
-
-console.log(a.find((element) => element > 10));
+const arr = new SkylabArray();
+arr.push(1, 2, 3, 4, 'pere');
