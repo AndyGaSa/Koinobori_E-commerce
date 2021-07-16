@@ -58,11 +58,68 @@ describe('SkylabArray class', () => {
       });
 
       test('Then return a new array with same length', () => {
-        expect(myArray.length).not.toEqual(newArray.length);
+        expect(myArray.length).toEqual(newArray.length);
       });
 
       test('Then newArray[0] should contain myArray[0]', () => {
         expect(newArray[0]).toMatch(myArray[0]);
+      });
+    });
+  });
+  describe('Given a some method', () => {
+    describe('When is invoked with a true boolean', () => {
+      test('Then return true', () => {
+        myArray = new SkylabArray();
+        myArray.push(true);
+        const boolean = ((element) => element === true);
+        expect(myArray.some(boolean)).toBe(true);
+      });
+    });
+    describe('When is invoked with a false boolean', () => {
+      test('Then return false', () => {
+        myArray = new SkylabArray();
+        myArray.push(true);
+        const boolean = ((element) => element === false);
+        expect(myArray.some(boolean)).toBe(false);
+      });
+    });
+  });
+  describe('Given a find method', () => {
+    describe('When is invoked with a Skylab string', () => {
+      test('Then return Skylab string', () => {
+        myArray.push('Lola');
+        myArray.push('Skylab');
+        const found = myArray.find((element) => element === 'Skylab');
+        expect(found).toBe('Skylab');
+      });
+    });
+    describe('When is invoked with an a number higher than 10', () => {
+      test('Then return 12', () => {
+        myArray.push(12);
+        const found = myArray.find((element) => element > 10);
+        expect(found).toBe(12);
+      });
+    });
+  });
+  describe('Given a filter method', () => {
+    describe('When is invoked with 3 strings', () => {
+      test('Then return strings with more than 3 word length', () => {
+        const myArrayLola = new SkylabArray();
+        myArrayLola.push('Lola');
+        myArrayLola.push('Skylab');
+        myArrayLola.push('Po');
+        const result = myArrayLola.filter((element) => element.length > 3);
+        expect(result).toBe(['Lola', 'Skylab']);
+      });
+    });
+    describe('When is invoked with an a number and a string', () => {
+      test('Then return only the numbers', () => {
+        const myArrayOtherLola = new SkylabArray();
+        myArrayOtherLola.push(12);
+        myArrayOtherLola.push(5);
+        myArrayOtherLola.push('Lola');
+        const filterNumber = myArrayOtherLola.filter((element) => typeof element === 'number');
+        expect(filterNumber).toBe([12, 5]);
       });
     });
   });

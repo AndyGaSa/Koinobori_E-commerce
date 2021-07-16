@@ -3,7 +3,7 @@ class SkylabArray {
     this.length = 0;
   }
 
-  push() {
+  push(newValue) {
     this[this.length] = newValue;
     this.length += 1;
     return this.length;
@@ -27,14 +27,47 @@ class SkylabArray {
     }
     return newArray;
   }
+
+  some(callback) {
+    const myArray = new SkylabArray();
+    for (let i = 0; i < this.length; i += 1) {
+      if (callback(this[i])) {
+        return true;
+      }
+      return false;
+    }
+  }
+
+  find(callback) {
+    const myArray = new SkylabArray();
+    for (let i = 0; i < this.length; i += 1) {
+      if (callback(this[i])) {
+        return this[i];
+      }
+    }
+  }
+
+  filter(callback) {
+    const myArray = new SkylabArray();
+    for (let i = 0; i < this.length; i += 1) {
+      if (callback(this[i])) {
+        const newValue = this[i];
+        const newArray = [];
+        newArray.push(newValue);
+        return newArray;
+      }
+    }
+  }
 }
 
 module.exports = SkylabArray;
 
-const students = ['Lola', 'Laura', 'Xavi'];
+const students = new SkylabArray();
 
-students.push('Adrian');
-console.log(students);
-const lastValue = students.pop();
-console.log(lastValue);
+students.push('Lola');
+console.log(students.some((element) => element === 'Lola'));
+students.push(15);
+console.log(students.find((element) => element > 12));
+console.log(students.filter((element) => element === Number));
+
 console.log(students);
