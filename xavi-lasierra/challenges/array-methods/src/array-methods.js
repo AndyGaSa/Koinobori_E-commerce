@@ -51,11 +51,11 @@ class SkylabArray {
   }
 
   map(callback) {
-    const aux = new SkylabArray();
+    const newArray = new SkylabArray();
     for (let i = 0; i < this.length; i += 1) {
-      aux.push(callback(this[i]));
+      newArray.push(callback(this[i]));
     }
-    return aux;
+    return newArray;
   }
 
   reverse() {
