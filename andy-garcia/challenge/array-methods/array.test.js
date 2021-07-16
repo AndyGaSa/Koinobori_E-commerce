@@ -15,7 +15,7 @@ function SkylabSome(array) {
   const even = (element) => element % 2 === 0;
   let contador = 0;
   const length = SkylabLength(array);
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length; i += 1) {
     const result = even(array[i]);
     if (result === true) {
       contador += 1;
@@ -29,7 +29,7 @@ function SkylabFind(array, functionToTest) {
   const length = SkylabLength(array);
   let contador = 0;
   let result;
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length; i += 1) {
     if (functionToTest(array[i]) === true && contador === 0) {
       result = array[i];
       contador += 1;
