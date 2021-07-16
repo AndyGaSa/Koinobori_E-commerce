@@ -4,12 +4,34 @@ class SkylabArray {
   constructor(arr) {
     this.length = 0;
   }
+
+  push(newValue) {
+    this[this.length] = newValue;
+    this.length += 1;
+    return this.length;
+  }
+
+  pop() {
+    const lastValue = this[this.length - 1];
+    delete this[this.length - 1];
+    this[this.length] -= 1;
+    return lastValue;
+  }
+}
+
+map(callback) {
+  const newArray = new SkylabArray();
+  for (let index = 0; index < this.length - 1; index++) {
+    const element = callback(this[index]);
+    newArray.push(element);
+  }
+  return newArray;
 }
 
 module.exports = SkylabArray;
 // define what we export - a class to use it in another module
 
-const pushSimulator = function (arr, newElement) {
+const pushSimulator = function (...newElement) {
   arr[arr.length] = newElement;
   return arr;
 };
