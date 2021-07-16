@@ -3,9 +3,13 @@ class SkaylabArray {
     this.length = 0;
   }
 
-  push(newValue) {
-    this[this.length] = newValue;
-    this.length += 1;
+  push(...args) {
+    for (let index = 0; index < arguments.length; index += 1) {
+      const elements = arguments[index];
+      this[this.length] = arguments[index];
+      this.length += 1;
+    }
+
     return this.length;
   }
 
@@ -24,6 +28,16 @@ class SkaylabArray {
     }
     return newArray;
   }
+
+  filter(callback) {
+    const newArray = new SkaylabArray();
+    for (let x = 0; x < this.length; x += 1) {
+      if (callback(this[x])) {
+        newArray.push(this[x]);
+      }
+    }
+    return newArray;
+  }
 }
 
 const myArray = new SkaylabArray();
@@ -33,6 +47,9 @@ myArray.push('jordi');
 myArray.push('eddy');
 console.log(myArray);
 
-console.log(myArray.pop());
+let x;
+myArray.filter(myArray[x] !== Number);
+
+// console.log(myArray.pop());
 
 module.exports = SkaylabArray;

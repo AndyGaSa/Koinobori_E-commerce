@@ -22,29 +22,45 @@ describe('Given a push method', () => {
   describe('When is invoked with Skylab string', () => {
     describe('And the array is empty', () => {
       test('Then return 1', () => {
-        expect(myArray.push('Skylab')).toBe(1);
+        expect(myArray.push('Skaylab')).toBe(1);
+      });
+      test('Then myArray[0]=Skaylab', () => {
+        myArray.push('Skaylab');
+        expect(myArray[0]).toBe('Skaylab');
+      });
+    });
+    describe('And the array length is 2', () => {
+      beforeEach(() => {
+        myArray.push(true);
+        myArray.push(true);
+      });
+      test('The return is 3', () => {
+        expect(myArray.push('Skylab')).toBe(3);
       });
     });
   });
 });
 
-describe('When is invoked pop method', () => {
-  describe('And the array is empty', () => {
-    test('Then return myArray length - 1', () => {
-      expect(myArray.pop).toBe(myArray.length - 1);
+describe('Given a pop method', () => {
+  describe('When is invoked pop method', () => {
+    describe('And the array is empty', () => {
+      test('Then return undefined', () => {
+        expect(myArray.pop).toBe(undefined);
+      });
     });
   });
 });
 
 describe('Given a map method', () => {
   describe('When is invoked', () => {
-    test('then return a new arry', () => {
-      myArray = new SkaylabArray();
-      myArray.push('mola');
-      const mapCallback = (value) => `Skyalb: ${value}`;
-      const newArray = myArray.map(mapCallback);
-
-      expect(myArray).not.toEqual(newArray);
+    describe('And array has at least 1 element', () => {
+      beforeEach(() => {
+        myArray.push('mola');
+        newArray = myArray.map((value) => `Skylab: ${value}`);
+      });
+      test('then return a new arry', () => {
+        expect(myArray).not.toEqual(newArray);
+      });
     });
   });
 });
