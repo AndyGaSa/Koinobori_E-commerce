@@ -3,7 +3,7 @@ class SkylabArray {
     this.length = 0;
   }
 
-  push(newValue) {
+  push() {
     this[this.length] = newValue;
     this.length += 1;
     return this.length;
@@ -17,6 +17,15 @@ class SkylabArray {
     delete this[this.length - 1];
     this.length -= 1;
     return lastValue;
+  }
+
+  map(callback) {
+    const newArray = new SkylabArray();
+    for (let i = 0; i < this.length; i += 1) {
+      const newValue = callback(this[i]);
+      newArray.push(newValue);
+    }
+    return newArray;
   }
 }
 

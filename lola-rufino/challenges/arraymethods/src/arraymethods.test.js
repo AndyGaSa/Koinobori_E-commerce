@@ -42,4 +42,28 @@ describe('SkylabArray class', () => {
       });
     });
   });
+  describe('Given a map method', () => {
+    describe('When is invoked', () => {
+      let newArray;
+      beforeEach(() => {
+        myArray = new SkylabArray();
+        myArray.push('mola');
+
+        const mapCallback = (value) => `Skylab: ${value}`;
+        newArray = myArray.map(mapCallback);
+      });
+
+      test('Then return a new array', () => {
+        expect(myArray).not.toEqual(newArray);
+      });
+
+      test('Then return a new array with same length', () => {
+        expect(myArray.length).not.toEqual(newArray.length);
+      });
+
+      test('Then newArray[0] should contain myArray[0]', () => {
+        expect(newArray[0]).toMatch(myArray[0]);
+      });
+    });
+  });
 });
