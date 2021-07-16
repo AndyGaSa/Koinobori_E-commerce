@@ -24,4 +24,12 @@ class SkylabArray {
     }
     return false;
   }
+
+  skyPop() {
+    if (this.length === 0) return undefined;
+    const aux = this[this.skyLength - 1];
+    delete this[this.skyLength - 1];
+    this.skyLength -= 1;
+    return aux;
+  }
 }
