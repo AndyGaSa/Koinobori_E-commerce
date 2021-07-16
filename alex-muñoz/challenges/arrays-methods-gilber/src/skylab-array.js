@@ -6,22 +6,29 @@ class SkylabArray {
   }
 
   push(newValue) {
-    for (let index = 0; index < arguments.length; index += 1) {
-      this[this.length] = arguments.length;
-      this.length += 1;
-    }
+    this[this.length] = newValue;
+    this.length += 1;
 
     return this.length;
   }
 
-  map(callback) {
-    let newArray;
-    for (let index = 0; index < this.length; index += 1) {
-      const element = callback(this[index]);
-      newArray.push(element);
+  pop() {
+    if (this.length === 0) {
+      return undefined;
     }
+    delete this[this.length - 1];
+    this.length -= 1;
+    return this.length;
+  }
 
-    return newArray;
+  some(element) {
+    let value = false;
+    for (let index = 0; index < this.length; index += 1) {
+      if (element === this[index]) {
+        value = true;
+      }
+    }
+    return value;
   }
 }
 

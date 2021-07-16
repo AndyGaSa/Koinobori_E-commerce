@@ -2,9 +2,9 @@
   "name": "skylab-array",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "skylab-array.test.js",
   "scripts": {
-    "test": "git"
+    "test": "jest --watchAll --collect-coverage"
   },
   "keywords": [],
   "author": "",
