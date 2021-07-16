@@ -6,8 +6,11 @@ class SkylabArray {
   }
 
   push(newValue) {
-    this[this.length] = newValue;
-    this.length += 1;
+    for (let index = 0; index < arguments.length; index += 1) {
+      this[this.length] = arguments.length;
+      this.length += 1;
+    }
+
     return this.length;
   }
 
