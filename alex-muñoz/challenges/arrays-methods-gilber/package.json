@@ -1,18 +1,18 @@
 {
-  "name": "arrays-methods-gilber",
+  "name": "skylab-array",
   "version": "1.0.0",
   "description": "",
-  "main": "gilber.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll --collect-coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jest": "^27.0.6"
   },
   "devDependencies": {
+    "jest": "^27.0.6",
     "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4"
