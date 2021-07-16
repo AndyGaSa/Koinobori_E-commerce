@@ -38,6 +38,15 @@ class SkaylabArray {
     }
     return newArray;
   }
+
+  some(callback) {
+    for (let x = 0; x < this.length; x += 1) {
+      if (callback(this[x])) {
+        return true;
+      }
+      return false;
+    }
+  }
 }
 
 const myArray = new SkaylabArray();
@@ -47,9 +56,6 @@ myArray.push('jordi');
 myArray.push('eddy');
 console.log(myArray);
 
-let x;
-myArray.filter(myArray[x] !== Number);
-
-// console.log(myArray.pop());
+console.log(myArray.pop());
 
 module.exports = SkaylabArray;
