@@ -1,20 +1,20 @@
 class SkylabArray {
-  constructor(...args) {
+  constructor() {
     this.length = 0;
-    if (args.length === 1 && typeof (args[0]) === 'number') {
-      for (let i = 0; i < args[0]; i += 1) {
+    if (arguments.length === 1 && typeof (arguments[0]) === 'number') {
+      for (let i = 0; i < arguments[0]; i += 1) {
         this.push(undefined);
       }
     } else {
-      for (let i = 0; i < args.length; i += 1) {
-        this.push(args[i]);
+      for (let i = 0; i < arguments.length; i += 1) {
+        this.push(arguments[i]);
       }
     }
   }
 
-  push(...args) {
-    for (let i = 0; i < args.length; i += 1) {
-      this[this.length] = args[i];
+  push() {
+    for (let i = 0; i < arguments.length; i += 1) {
+      this[this.length] = arguments[i];
       this.length += 1;
     }
     return this.length;
