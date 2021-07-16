@@ -25,5 +25,3 @@ class SkylabArray {
     return false;
   }
 }
-
-a = new SkylabArray([1, 2, 3]);
