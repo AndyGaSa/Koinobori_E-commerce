@@ -59,9 +59,18 @@ describe('SkylabArray class', () => {
           expect(myArray[0]).toBe('Skylab');
         });
       });
+      describe('And the array.length is 2', () => {
+        beforeEach(() => {
+          myArray.push(true);
+          myArray.push(true);
+        });
+        test('Then return 3', () => {
+          expect(myArray.push('Skylab')).toBe(3);
+        });
+      });
     });
 
-    describe('When is invoked with two string one and two', () => {
+    describe('When is invoked with [one, two] string', () => {
       describe('And the array is empty', () => {
         test('Then return 2', () => {
           expect(myArray.push('one', 'two')).toBe(2);

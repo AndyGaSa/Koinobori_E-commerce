@@ -1,3 +1,4 @@
+/* eslint-disable prefer-rest-params */
 class SkylabArray {
   constructor() {
     this.length = 0;
