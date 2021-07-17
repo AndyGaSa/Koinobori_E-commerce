@@ -59,12 +59,23 @@ class SkylabArray {
     }
   }
 
-  reduce(callback) {
-    const newArray = new SkylabArray();
+  reduce() {
+    const myArray = new SkylabArray();
+    let accumulator = 0;
     for (let i = 0; i < this.length; i += 1) {
-      const newValue = callback(this[i]);
-      return newValue;
+      accumulator += this[i];
     }
+    return accumulator;
+  }
+
+  every(callback) {
+    const myArray = new SkylabArray();
+    for (let i = 0; i < this.length; i += 1) {
+      if (!(callback(this[i]))) {
+        return false;
+      }
+    }
+    return true;
   }
 }
 
@@ -73,9 +84,6 @@ module.exports = SkylabArray;
 const students = new SkylabArray();
 
 students.push(1);
-students.push(3);
-students.push(1);
-students.push(1);
-console.log(students.reduce((accumulator, currentValue) => accumulator + currentValue));
-
-console.log(students);
+students.push(30);
+students.push(39);
+console.log(students.every((element) => element < 40));
