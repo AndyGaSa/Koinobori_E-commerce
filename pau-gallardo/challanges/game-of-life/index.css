@@ -16,4 +16,8 @@ td{
 .alive{
     background-color:green;
 }
+
+.button{
+    cursor: pointer;
+}
   

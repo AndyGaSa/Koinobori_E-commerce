@@ -1,5 +1,7 @@
-const tableFirst = [];
-const tableNext = [];
+let tableFirst = [];
+let tableNext = [];
+let play = false;
+let bucle;
 
 // Function that swaps alive to dead and viceversa in html and the array
 function whatsMyId() {
@@ -63,6 +65,8 @@ function neighbourCount(arr, i, j) {
 
   // R
   if (j < arr[0].length - 1) {
+    console.log(`i${i}`);
+    console.log(`j${j}`);
     // Look R neighbour
     if (arr[i][j + 1] === 1) {
       count += 1;
@@ -124,8 +128,8 @@ function amAlive(arr, i, j) {
 function nextGeneration() {
   let rowArray = [];
   let id = '';
-  for (let i = 0; i < tableFirst[0].length; i += 1) {
-    for (let j = 0; j < tableFirst.length; j += 1) {
+  for (let i = 0; i < tableFirst.length; i += 1) {
+    for (let j = 0; j < tableFirst[0].length; j += 1) {
       id = `${i}_${j}`;
       if (amAlive(tableFirst, i, j) === 1) {
         document.getElementById(id).setAttribute('class', 'alive');
@@ -138,3 +142,39 @@ function nextGeneration() {
     rowArray = [];
   }
 }
+
+// Function that updates table values
+function update() {
+  nextGeneration();
+  tableFirst = tableNext;
+  tableNext = [];
+  if (play) {
+    bucle = setTimeout(update, 500);
+  }
+}
+
+// Function that initiates the bucle and stops it
+function startStop() {
+  if (play === true) {
+    play = false;
+    clearTimeout(bucle);
+  } else {
+    play = true;
+    update();
+  }
+}
+
+// Function that refreshes the browser window
+function resetWindow() {
+  location.reload();
+}
+
+function gameOfLife() {
+  createTable(50, 100);
+  const startStopBtn = document.getElementById('start');
+  startStopBtn.addEventListener('click', startStop);
+  const resetBtn = document.getElementById('reset');
+  resetBtn.addEventListener('click', resetWindow);
+}
+
+window.onload = () => { gameOfLife(); };
