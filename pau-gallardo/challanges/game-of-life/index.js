@@ -1,4 +1,4 @@
-// const grid = [[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]];
+// Funcition that counts alive neighbours
 function neighbourCount(arr, i, j) {
   let count = 0;
   // TL
@@ -66,7 +66,21 @@ function neighbourCount(arr, i, j) {
   return count;
 }
 
-// Check the life stage of the cell
+// Function that creates a new array with de new cell status
+function nextGeneration(arr) {
+  const newArray = [];
+  let rowArray = [];
+  for (let i = 0; i < arr[0].length; i += 1) {
+    for (let j = 0; j < arr.length; j += 1) {
+      rowArray.push(amAlive(arr, i, j));
+    }
+    newArray.push(rowArray);
+    rowArray = [];
+  }
+  return newArray;
+}
+
+// Check the life status of the cell
 function amAlive(arr, i, j) {
   const count = neighbourCount(arr, i, j);
   let lifeState = arr[i][j];
@@ -83,27 +97,24 @@ function amAlive(arr, i, j) {
   return lifeState;
 }
 
-function nextGeneration(arr) {
+function createTable(rows, columns) {
   const newArray = [];
   let rowArray = [];
-  for (let i = 0; i < arr[0].length; i += 1) {
-    for (let j = 0; j < arr.length; j += 1) {
-      rowArray.push(amAlive(arr, i, j));
-    }
-    newArray.push(rowArray);
-    rowArray = [];
-  }
-  return newArray;
-}
-
-function createTable(rows, columns) {
   const tableHTML = document.querySelector('.mainTable');
   for (let i = 0; i < rows; i += 1) {
     const tr = document.createElement('tr');
     for (let j = 0; j < columns; j += 1) {
+      rowArray.push(0);
       const td = document.createElement('td');
+      td.setAttribute('id', `${i}_${j}`);
+      td.setAttribute('class', 'dead');
       tr.appendChild(td);
     }
+    newArray.push(rowArray);
+    rowArray = [];
     tableHTML.appendChild(tr);
   }
+  return newArray;
 }
+
+// document.getElementById('MyElement').addEventListener('click', changeClass);
