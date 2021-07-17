@@ -25,7 +25,7 @@ class SkylabArray {
     return lastValue;
   }
 
-  skylabMap() {
+  skylabMap(callback) {
     const newArray = new SkylabArray();
 
     for (let index = 0; index < this.length - 1; index += 1) {
@@ -33,6 +33,21 @@ class SkylabArray {
       newArray.skylabPush(element);
     }
     return newArray;
+  }
+
+  skylabSome(callback) {
+    for (let i = 0; i < this.length; i += 1) {
+      if (callback(this[i])) return true;
+    }
+    return false;
+  }
+
+  skylabFilter(callback) {
+    const aux = new SkylabArray();
+    for (let i = 0; i < this.length; i += 1) {
+      if (callback(this[i])) return this[i];
+    }
+    return aux;
   }
 }
 
