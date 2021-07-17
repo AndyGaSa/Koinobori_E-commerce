@@ -5,7 +5,7 @@ class Button {
     this.htmlElement = htmlElement;
   }
 }
-const matrix = [];
+let matrix = [];
 const generateMatrix = (rows, columns) => {
   for (let x = 0; x < rows; x += 1) {
     matrix[x] = [];
@@ -27,35 +27,29 @@ const generateMatrix = (rows, columns) => {
 
 fillButton();
 */
-const bff = () => {
+const bff = (button) => {
     for (let x = 0; x < matrix.length -1; x += 1) {
         for (let y = 0; y < matrix[x].length -1; y += 1) {
             const p = [matrix[y-1][x-1].status,matrix[y-1][x].status, matrix[y-1][x+1].status];
             const c = [matrix[y][x-1].status, matrix[y][x+1].status];
             const n = [matrix[y+1][x-1].status,matrix[y+1][x].status, matrix[y+1][x+1].status];
-            const neibourghs = [p, c, n].reduce((a,b) => a.concat(b))
-            const sumAlive = neibourghs.reduce((a,b) => {return a + b}, 0)
-            if(matrix[x][y].status === 1){
-                if (ma)
-
+            const neihbourgs = [p, c, n].reduce((a,b) => a.concat(b))
+            const sumAlive = neihbourgs.reduce((a,b) => {return a + b}, 0)
+            if(!(button.status === 1 && (sumAlive > 1 && sumAlive < 4))){
+                button.status = 0;
+            
+            } else if (button.status === 0 && (sumAlive === 0)){
+                button.status = 0;
             }
         }
     }
 }
-console.table(matrix);
 
-const topLeft = array[xAxis - 1][yAxis - 1];
-const topCenter = array[xAxis][yAxis - 1];
-const topRight = array[xAxis + 1][yAxis - 1];
-const centerLeft = array[xAxis - 1][yAxis];
-const center = array[xAxis][yAxis];
-const centerRight = array[xAxis + 1][yAxis];
-const bottomLeft = array[xAxis - 1][yAxis - 1];
-const bottomCenter = array[xAxis][yAxis - 1];
-const bottomRight = array[xAxis + 1][yAxis - 1];
+let newMatrix =  matrix.map (rows => rows.map(bff(column)))
+
+matrix = newMatrix;
 
 
 
 
-
-module.exports =;
+module.exports =; 
