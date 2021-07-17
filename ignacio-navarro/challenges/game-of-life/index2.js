@@ -58,22 +58,36 @@ function cellsAround(cell) {
 function touchedCells(arr = []) {
   let touched = [];
   for (let i = 0; i < arr.length; i += 1) {
-    touched = [...touched, ...cellsAround(arr[i])];
+    touched = touched.concat(cellsAround(arr[i]));
   }
   return touched;
+}
+function paintArray(arr=[]){
+  let printedArray = 
+    [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+  for (let i = 0; i < arr.length;i += 1){
+    printedArray[arr[i][0]][arr[i][1]] = 1;
+  }
+  return printedArray
 }
 
 function newPhase(arr = []) {
   const cellsAroundAlive = touchedCells(arr);
-  console.log(`cellsDepuration: ${cellsAroundAlive}`);
-  const cellsCountAll = removeDupes(cellsAroundAlive);
-  console.log(`cellsDepuration: ${cellsCountAll}`);
-  const cellsInNumbers = arrToNum(cellsCountAll);
-  console.log(`cellsDepuration: ${cellsInNumbers}`);
-  const newCellsAlive = cellsDepuration(cellsInNumbers);
-  console.log(`cellsDepuration: ${newCellsAlive}`);
-  // newCellsAlive = numToArray(newCellsAlive);
-  return newCellsAlive;
+  const cellsToNumbers = arrToNum(cellsAroundAlive);
+  const cellsCountAll = removeDupes(cellsToNumbers);
+  const newCellsAlive = cellsDepuration(cellsCountAll);
+  const cellsToArray = numToArray(newCellsAlive);
+  console.table(paintArray(cellsToArray));
+  return cellsToArray;
 }
 
-setInterval(() => newPhase(aliveCells), 1000);
+setInterval(() => aliveCells = newPhase(aliveCells), 1000);
