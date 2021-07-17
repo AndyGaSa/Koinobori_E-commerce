@@ -21,7 +21,7 @@ class SkylabArray {
 
   map(callback) {
     const newArray = new SkylabArray();
-    for (let index = 0; index < this.length - 1; index += 1) {
+    for (let index = 0; index < this.length; index += 1) {
       const element = callback(this[index]);
       newArray.push(element);
     }
