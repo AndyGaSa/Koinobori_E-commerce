@@ -67,4 +67,29 @@ describe('SkylabArray class', () => {
       });
     });
   });
+
+  describe('Given a some method', () => {
+    describe('When ins invoked', () => {
+      describe('And the array is empty', () => {
+        test('Then return false', () => {
+          const someCallback = (value) => value === 3;
+          expect(myArray.some(someCallback)).toBe(false);
+        });
+      });
+      describe('And the array has some strictly equal element', () => {
+        test('Then return true', () => {
+          myArray.push(3);
+          const someCallback = (value) => value === 3;
+          expect(myArray.some(someCallback)).toBe(true);
+        });
+      });
+      describe('And the array hasn´t some strictly equal element', () => {
+        test('Then return false', () => {
+          myArray.push(2);
+          const someCallback = (value) => value === 3;
+          expect(myArray.some(someCallback)).toBe(false);
+        });
+      });
+    });
+  });
 });
