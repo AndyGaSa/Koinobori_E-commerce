@@ -7,7 +7,7 @@ describe('SkylabArray class', () => {
   beforeEach(() => {
     myArray = new SkylabArray();
   });
-  
+
   describe('Given a length property', () => {
     describe('When is first created', () => {
       test('Then return 0', () => {
@@ -19,44 +19,43 @@ describe('SkylabArray class', () => {
   describe('Given a push method', () => {
     describe('When is invoked with Skylab string', () => {
       describe('And the array is empty', () => {
-        beforeEach(() => {
-          myArray = new SkylabArray();
-        });
-
         test('Then return 1', () => {
           expect(myArray.push('Skylab')).toBe(1);
         });
         test('Then myArray[0]=Skylab', () => {
           myArray.push('Skylab');
-          expect(myArray.length).toBe(1);
+          expect(myArray[0]).toBe('Skylab');
         });
       });
     });
   });
+
   describe('Given a pop methos', () => {
-      describe('When is invoked with an array', () => {
-          describe('And the array is empty', () => 
-          beforeEach(() => {
-              myArray = new SkylabArray();
+    describe('When is invoked with an array', () => {
+      describe('And the array is empty', () => {
+        test('Then return error', () => {
+          expect(myArray.pop()).toBe('Error');
         });
-
-          test('Then return error', () => {
-              expect(myArray.pop()).toBe('Error');
+        describe('but if the array is not empty', () => {
+          test('Then return the last element of the array', () => {
+            myArray.push('Laura');
+            expect(myArray.pop()).toBe('Laura');
           });
-          )}
-  })
+          test('Then myArray.length return 0', () => {
+            expect(myArray.length).toBe(0);
+          });
+        });
+      });
+    });
+  });
 
-  descrive('Given a map method', () => {
-      descrive('When is invoked', () => {
-          test('Then resturn a new array', () => {
-            myArray = new SkylabArray();
-            const mapCallback = (value) => `Skylab: ${value}`;
-            const newArray = myArray.map(mapCallback);
-
-            expect(myArray.length).toEqual(newArray.length);
-            });
-
-            
-      })
-  })
+  describe('Given a map method', () => {
+    describe('When is invoked', () => {
+      test('Then resturn a new array', () => {
+        const mapCallback = (value) => `Skylab: ${value}`;
+        myArray.map(mapCallback);
+        expect(myArray.length).toEqual(newArray.length);
+      });
+    });
+  });
 });

@@ -10,24 +10,23 @@ class SkylabArray {
   }
 
   pop() {
-      if (this.length === 0) {
-          return 'Error';
-      } else {
+    if (this.length === 0) {
+      return 'Error';
+    }
     const lastValue = this[this.length - 1];
-    delete lastValue;
+    delete this[this.length - 1];
     this[this.length] -= 1;
-    return this.length;
-      }
+    return lastValue;
   }
 
   map(callback) {
-      let newArray = SkylabArray();
-      for(let index = 0; index < this.length -1; index += 1) {
-          const element = callback(this[index]);
-          newArray.push(element);
-      }
-      return newArray;
+    const newArray = new SkylabArray();
+    for (let index = 0; index < this.length - 1; index += 1) {
+      const element = callback(this[index]);
+      newArray.push(element);
+    }
+    return newArray;
   }
 }
-/*starting my methods*/
+
 module.exports = SkylabArray;
