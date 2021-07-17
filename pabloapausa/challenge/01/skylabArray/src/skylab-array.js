@@ -1,22 +1,22 @@
 class SkylabArray {
-  constructor(oldArray) {
-    this.oldArray = oldArray;
+  constructor(array) {
+    this.array = array;
     let i = 0;
-    while (this.oldArray[i] !== undefined) {
+    while (this.array[i] !== undefined) {
       i += 1;
     }
     this.length = i;
   }
 
   push(value) {
-    this.oldArray[this.length] = value;
-    return this.oldArray;
+    this.array[this.length] = value;
+    return this.array;
   }
 
   some(even) {
     this.even = even;
-    for (let i = 0; this.oldArray[i] !== undefined; i += 1) {
-      if (this.even(this.oldArray[i])) {
+    for (let i = 0; this.array[i] !== undefined; i += 1) {
+      if (this.even(this.array[i])) {
         return true;
       }
     }
@@ -25,9 +25,9 @@ class SkylabArray {
 
   find(found) {
     this.found = found;
-    for (let i = 0; this.oldArray[i] !== undefined; i += 1) {
-      if (this.found(this.oldArray[i])) {
-        return this.oldArray[i];
+    for (let i = 0; this.array[i] !== undefined; i += 1) {
+      if (this.found(this.array[i])) {
+        return this.array[i];
       }
     }
     return undefined;
@@ -36,9 +36,9 @@ class SkylabArray {
   filter(result) {
     this.result = result;
     const newArray0 = [];
-    for (let i = 0; this.oldArray[i] !== undefined; i += 1) {
-      if (this.result(this.oldArray[i])) {
-        newArray0.push(this.oldArray[i]);
+    for (let i = 0; this.array[i] !== undefined; i += 1) {
+      if (this.result(this.array[i])) {
+        newArray0.push(this.array[i]);
       }
     }
     return newArray0;
@@ -47,9 +47,9 @@ class SkylabArray {
   map(multiply) {
     this.multiply = multiply;
     const newArray1 = [];
-    for (let i = 0; this.oldArray[i] !== undefined; i += 1) {
-      if (this.multiply(this.oldArray[i])) {
-        newArray1.push(multiply(this.oldArray[i]));
+    for (let i = 0; this.array[i] !== undefined; i += 1) {
+      if (this.multiply(this.array[i])) {
+        newArray1.push(multiply(this.array[i]));
       }
     }
     return newArray1;
