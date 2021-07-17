@@ -1,7 +1,5 @@
-const { func } = require('prop-types');
-
 let aliveCells = [];
-aliveCells = [33, 34, 35, 42, 43, 44];
+aliveCells = [[3, 3], [3, 4], [3, 5], [4, 2], [4, 3], [4, 4]];
 
 function numToArray(num) {
   const arrayOfArrays = [];
@@ -19,6 +17,7 @@ function arrToNum(arr = []) {
   }
   return numberArray;
 }
+
 function removeDupes(arr) {
   const cellsCount = {};
   let i = arr.length;
@@ -32,7 +31,6 @@ function removeDupes(arr) {
   }
   return cellsCount;
 }
-
 function cellsDepuration(countedCells) {
   const alive = [];
   for (const cell in countedCells) {
@@ -45,15 +43,15 @@ function cellsDepuration(countedCells) {
 
 function cellsAround(cell) {
   const cellNeighbours = [];
-  cellNeighbours.push(cell - 11);
-  cellNeighbours.push(cell - 10);
-  cellNeighbours.push(cell - 9);
-  cellNeighbours.push(cell - 1);
-  cellNeighbours.push(cell);
-  cellNeighbours.push(cell + 1);
-  cellNeighbours.push(cell + 9);
-  cellNeighbours.push(cell + 10);
-  cellNeighbours.push(cell + 11);
+  cellNeighbours.push([cell[0] - 1, cell[1] - 1]);
+  cellNeighbours.push([cell[0] - 1, cell[1]]);
+  cellNeighbours.push([cell[0] - 1, cell[1] + 1]);
+  cellNeighbours.push([cell[0], cell[1] - 1]);
+  cellNeighbours.push([cell[0], cell[1]]);
+  cellNeighbours.push([cell[0], cell[1] + 1]);
+  cellNeighbours.push([cell[0] + 1, cell[1] - 1]);
+  cellNeighbours.push([cell[0] + 1, cell[1]]);
+  cellNeighbours.push([cell[0] + 1, cell[1] + 1]);
 
   return cellNeighbours;
 }
@@ -67,8 +65,12 @@ function touchedCells(arr = []) {
 
 function newPhase(arr = []) {
   const cellsAroundAlive = touchedCells(arr);
+  console.log(`cellsDepuration: ${cellsAroundAlive}`);
   const cellsCountAll = removeDupes(cellsAroundAlive);
-  const newCellsAlive = cellsDepuration(cellsCountAll);
+  console.log(`cellsDepuration: ${cellsCountAll}`);
+  const cellsInNumbers = arrToNum(cellsCountAll);
+  console.log(`cellsDepuration: ${cellsInNumbers}`);
+  const newCellsAlive = cellsDepuration(cellsInNumbers);
   console.log(`cellsDepuration: ${newCellsAlive}`);
   // newCellsAlive = numToArray(newCellsAlive);
   return newCellsAlive;
