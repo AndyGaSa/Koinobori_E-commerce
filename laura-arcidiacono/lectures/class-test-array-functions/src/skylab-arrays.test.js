@@ -184,24 +184,19 @@ describe('SkylabArray class', () => {
           myArray.push(20);
           const filterCallback = (value) => value > 5;
           newArray = myArray.filter(filterCallback);
-          expect(newArray[0] + newArray[1]).toEqual(35);
+          expect(newArray[0].toString() + newArray[1].toString()).toEqual('1520');
         });
       });
     });
   });
   describe('Given an array and a concat method', () => {
     describe('When is invoked with another array', () => {
-        test('Then return a new array that contains copies of the same elements combined from the original arrays', () => {
-          myArray.push(3);
-          myArray.push(true);
-          myArray.push('Hola Skylabers ');
-          myArray.push(852);
-          otherArray.push(false);
-          otherArray.push(-10);
-          otherArray.push('Skylab mola! ');
-          otherArray.push(20);
-          expect(newArray).toEqual(myArray + otherArray);
-        });
+      test('Then return a new array that contains copies of the same elements combined from the original arrays', () => {
+        myArray.push('Hola Skylabers ');
+        otherArray.push('Skylab mola! ');
+        newArray = myArray.concat(otherArray);
+        expect(newArray[0] + newArray[1]).toEqual('Hola Skylabers Skylab mola! ');
       });
-
+    });
+  });
 });
