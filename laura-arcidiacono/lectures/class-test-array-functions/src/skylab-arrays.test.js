@@ -184,7 +184,7 @@ describe('SkylabArray class', () => {
           myArray.push(20);
           const filterCallback = (value) => value > 5;
           newArray = myArray.filter(filterCallback);
-          expect(newArray[0].toString() + newArray[1].toString()).toEqual('1520');
+          expect((newArray[0], newArray[1])).toBe((15, 20));
         });
       });
     });
@@ -195,7 +195,7 @@ describe('SkylabArray class', () => {
         myArray.push('Hola Skylabers ');
         otherArray.push('Skylab mola! ');
         newArray = myArray.concat(otherArray);
-        expect(newArray[0] + newArray[1]).toEqual('Hola Skylabers Skylab mola! ');
+        expect((newArray[0], newArray[1])).toEqual(('Hola Skylabers ', 'Skylab mola! '));
       });
     });
   });
