@@ -199,4 +199,14 @@ describe('SkylabArray class', () => {
       });
     });
   });
+  describe('Given an array and a reverse method', () => {
+    describe('When is invoked ', () => {
+      test('Then return the array reversing the order of the array', () => {
+        myArray.push('Hola Skylabers ');
+        myArray.push('Skylab mola! ');
+        const myReversedArray = myArray.reverse();
+        expect((myReversedArray[0], myReversedArray[1])).toEqual(('Skylab mola! ', 'Hola Skylabers '));
+      });
+    });
+  });
 });
