@@ -55,7 +55,7 @@ class LifeGrid {
   }
 }
 
-let gameGrid = new LifeGrid(0.5);
+let gameGrid = new LifeGrid(10);
 const canvas = document.getElementById('gameBoard');
 const ctx = canvas.getContext('2d');
 canvas.width = 1600;
@@ -64,7 +64,6 @@ const startButton = document.getElementById('start-button');
 
 const widthCells = gameGrid.width;
 const heightCells = gameGrid.height;
-let startTime = null;
 const intervalTime = 100;
 let running = false;
 
@@ -114,6 +113,7 @@ function onClickCanvas(x, y) {
 }
 
 canvas.addEventListener('click', (evt) => {
+  if (running) return;
   const pos = canvas.getBoundingClientRect();
   let posX = evt.pageX - (pos.left + window.scrollX);
   let posY = evt.pageY - (pos.top + window.scrollY);
@@ -122,16 +122,13 @@ canvas.addEventListener('click', (evt) => {
   onClickCanvas(Math.floor(posX), Math.floor(posY));
 });
 
-function play(timestamp) {
-  if (startTime === null) { startTime = timestamp; }
-  const elapsed = timestamp - startTime;
+function play() {
+  gameGrid = gameGrid.nextGeneration();
+  drawCanvas();
 
-  if (elapsed > intervalTime) {
-    gameGrid = gameGrid.nextGeneration();
-    drawCanvas();
-    startTime = null;
+  if (running) {
+    setTimeout(play, intervalTime);
   }
-  if (running) { window.requestAnimationFrame(play); }
 }
 
 function startStop() {
@@ -141,7 +138,7 @@ function startStop() {
   } else {
     running = true;
     startButton.innerHTML = 'STOP';
-    window.requestAnimationFrame(play);
+    setTimeout(play, intervalTime);
   }
 }
 

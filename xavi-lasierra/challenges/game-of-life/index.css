@@ -6,10 +6,59 @@
 
 .header {
     position: fixed;
+    width: 100vw;
+    background-color: red;
+    transform: translate(0, -10em);
+    transition: transform 0.2s;
+}
+
+.header:hover {
+    transform: translate(0, 0);
+}
+
+.header__open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10em;
+
+}
+
+.header__closed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__opener {
+    display: flex;
+    align-items: center;
+}
+
+.rectangle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 2em;
+    background-color: lightgray;
 }
 
 .triangle {
-    
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.triangle--left {
+    border-width: 0 2em 2em 0;
+    border-color: transparent lightgray transparent transparent;
+
+}
+
+.triangle--right {
+    border-width: 2em 2em 0 0;
+    border-color: lightgray transparent transparent transparent;
 }
 
 .canvas-wrapper {
