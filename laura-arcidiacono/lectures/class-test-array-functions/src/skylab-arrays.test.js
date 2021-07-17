@@ -3,9 +3,11 @@ const SkylabArray = require('./skylab-arrays');
 describe('SkylabArray class', () => {
   let myArray;
   let newArray;
+  let otherArray;
 
   beforeEach(() => {
     myArray = new SkylabArray();
+    otherArray = new SkylabArray();
   });
 
   describe('Given a length property', () => {
@@ -123,7 +125,7 @@ describe('SkylabArray class', () => {
       });
     });
   });
-  /// /////////////
+
   describe('Given a find method', () => {
     describe('When is invoked with an array', () => {
       describe('And the array is empty', () => {
@@ -154,4 +156,52 @@ describe('SkylabArray class', () => {
       });
     });
   });
+
+  describe('Given a filter method', () => {
+    describe('When is invoked with an array', () => {
+      describe('And the array is empty', () => {
+        test('Then return a empty array', () => {
+          const filterCallback = (value) => value > 5;
+          newArray = myArray.filter(filterCallback);
+          expect(newArray.length).toEqual(0);
+        });
+      });
+      describe('And all the values of the array are false after callback', () => {
+        test('Then return a new empty array', () => {
+          myArray.push(3);
+          myArray.push(2);
+          myArray.push(1);
+          myArray.push(0);
+          const filterCallback = (value) => value > 5;
+          expect(myArray.filter(filterCallback).length).toEqual(0);
+        });
+      });
+      describe('And the array has one or more elements true after callback', () => {
+        test('Then return a new array with those elements', () => {
+          myArray.push(3);
+          myArray.push(-10);
+          myArray.push(15);
+          myArray.push(20);
+          const filterCallback = (value) => value > 5;
+          newArray = myArray.filter(filterCallback);
+          expect(newArray[0] + newArray[1]).toEqual(35);
+        });
+      });
+    });
+  });
+  describe('Given an array and a concat method', () => {
+    describe('When is invoked with another array', () => {
+        test('Then return a new array that contains copies of the same elements combined from the original arrays', () => {
+          myArray.push(3);
+          myArray.push(true);
+          myArray.push('Hola Skylabers ');
+          myArray.push(852);
+          otherArray.push(false);
+          otherArray.push(-10);
+          otherArray.push('Skylab mola! ');
+          otherArray.push(20);
+          expect(newArray).toEqual(myArray + otherArray);
+        });
+      });
+
 });
