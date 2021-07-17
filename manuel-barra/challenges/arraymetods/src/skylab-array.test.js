@@ -1,50 +1,56 @@
 const SkylabArray = require('./skylab-array');
 
-/**
- * GIVEN
- * WHEN
- * THEN
- * AND
- * OR
- */
+const myArray = new SkylabArray();
 describe('SkylabArray class', () => {
-  const myArray = new SkylabArray();
-
-  describe('Given a length property', () => {
-    describe('When is first creates', () => {
-      test('should have a length equals to 0', () => {
-      /* expect(myArray.length).toBe(0); */
+  describe('Given a length method', () => {
+    describe('When is first created', () => {
+      test('Then returns 0', () => {
+        expect(myArray.length).toBe(0);
       });
     });
   });
-
-  describe('Given a push property', () => {
-    describe('When is invoke with one value', () => {
-      test('Then return 0', () => {
-        // expect(myArray.push()).toBe(1);
+  describe('Given a push method', () => {
+    describe('When ths array is empty', () => {
+      describe('And invoked with string "pelicano"', () => {
+        test('Then the array length shoulds returns 1', () => {
+          expect(myArray.push('pelicano')).toBe(1);
+        });
+        test('Then my array[0] should return pelicano', () => {
+          expect(myArray[0]).toBe('pelicano');
+        });
+      });
+      describe('And invoked with two new values', () => {
+        test('Then the array length should return 3', () => {
+          expect(myArray.push(1, 2)).toBe(3);
+        });
       });
     });
   });
-
-  describe('Given a pop property', () => {
-    myArray.push(2, 3, 4, 5, 'tomate');
-    describe('When is invoke with one value', () => {
-      test('Then return the value and delete', () => {
-        expect(myArray.pop()).toBe('tomate');
+  describe('Given a pop method', () => {
+    describe('Whas the array have two values ', () => {
+      test('Then my array.length to be 2', () => {
+        expect(myArray.pop()).toBe(2);
       });
     });
   });
-  describe('Given a map method', () => {
-    let myArray;
-    beforeEach(() => {
-      myArray = new SkylabArray();
-      myArray.push('mola');
+  describe('Given given a some method', () => {
+    describe('When invoked with callback in a object of 3 properties', () => {
+      test('Then return true if element is equal to "pelicano"', () => {
+        expect(myArray.some((element) => element === 'pelicano')).toBe(true);
+      });
     });
-    describe('When is invoked', () => {
-      test('Then return new array', () => {
-        const mapCallback = (value) => `Skylab: ${value}`;
-        const newArray = myArray.map(mapCallback);
-        expect(myArray).not.toEqual(newArray);
+  });
+  describe('Given given a some method', () => {
+    describe('When invoked with callback in a object of 3 properties', () => {
+      test('Then return true if element is equal to "pelicano"', () => {
+        expect(myArray.some((element) => element === 'pelicano')).toBe(true);
+      });
+    });
+  });
+  describe('Given given a find method', () => {
+    describe('When invoked with callback in a object of 5 properties', () => {
+      test('Then return the value of the first property that returns', () => {
+        expect(myArray.find((element) => element === 'pelicano')).toStrictEqual('pelicano');
       });
     });
   });

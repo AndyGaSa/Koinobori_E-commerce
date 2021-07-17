@@ -1,7 +1,6 @@
 {
-  "name": "arraymetods",
+  "name": "skylab-array",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll --collect-coverage"
@@ -9,13 +8,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    
-  },
+  "dependencies": {},
   "devDependencies": {
-    "jest": "^27.0.6",
     "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.23.4"
-  }
+    "eslint-plugin-import": "^2.23.4",
+    "jest": "^27.0.6"
+  },
+  "description": ""
 }
