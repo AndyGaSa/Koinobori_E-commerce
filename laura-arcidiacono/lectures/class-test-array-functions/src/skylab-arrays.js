@@ -27,6 +27,19 @@ class SkylabArray {
     }
     return newArray;
   }
+
+  some(callback) {
+    if (this.length === 0) {
+      return false;
+    }
+    for (let index = 0; index < this.length; index += 1) {
+      const boolean = callback(this[index]);
+      if (boolean) {
+        return true;
+      }
+    }
+    return false;
+  }
 }
 
 module.exports = SkylabArray;
