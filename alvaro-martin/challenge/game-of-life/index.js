@@ -1,47 +1,56 @@
-const matriz = [
-  ['', '', '', '', '', '', '', '', '', ''],
-  ['', 0, 0, 0, 0, 0, 0, 0, 0, ''],
-  ['', 0, 0, 0, 0, 0, 0, 0, 0, ''],
-  ['', 0, 0, 1, 1, 1, 0, 0, 0, ''],
-  ['', 0, 0, 0, 1, 1, 1, 0, 0, ''],
-  ['', 0, 0, 0, 0, 0, 0, 0, 0, ''],
-  ['', 0, 0, 0, 0, 0, 0, 0, 0, ''],
-  ['', 0, 0, 0, 0, 0, 0, 0, 0, ''],
-  ['', 0, 0, 0, 0, 0, 0, 0, 0, ''],
-  ['', '', '', '', '', '', '', '', '', ''],
-];
-const matriz2 = new Array(10);
-for (let i = 0; i < matriz2.length; i++) { matriz2[i] = new Array(10); }
-for (let row = 0; row < matriz2.length; row++) {
-  for (col = 0; col < matriz2[row].length; col++) {
-    matriz2[row][col] = 0;
+// Create a multidimensional array
+let life2 = new Array(10);
+for (let i = 0; i < life2.length; i += 1) { life2[i] = new Array(10); }
+// Initialize the array
+function initMatrix() {
+  for (let row = 0; row < life2.length; row += 1) {
+    for (let col = 0; col < life2.length; col += 1) {
+      life2[row][col] = 0;
+    }
   }
 }
-
-let numeroVecinos;
-
-console.table(matriz);
-
-function life() {
-  for (let i = 1; i < matriz.length - 1; i += 1) {
-    for (let j = 1; j < matriz[i].length - 1; j += 1) {
-      const numeroVecinosArriba = matriz[i - 1][j - 1] + matriz[i - 1][j] + matriz[i - 1][j + 1];
-      const numeroVecinosMedio = matriz[i][j - 1] + matriz[i][j + 1];
-      const numeroVecinosAbajo = matriz[i + 1][j - 1] + matriz[i + 1][j] + matriz[i + 1][j + 1];
-      const numeroVecinos = numeroVecinosArriba + numeroVecinosMedio + numeroVecinosAbajo;
-      if (matriz[i][j] === 1) {
-        if (numeroVecinos === 3 || numeroVecinos === 2) {
-          matriz2[i][j] = 1;
+let life = [
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+];
+function searchLife(arr) {
+  initMatrix(life2);
+  for (let i = 1; i < arr.length - 1; i += 1) {
+    for (let j = 1; j < arr.length - 1; j += 1) {
+      const arrayLife = [arr[i - 1][j - 1],
+        arr[i - 1][j], arr[i - 1][j + 1],
+        arr[i][j - 1], arr[i][j + 1],
+        arr[i + 1][j - 1], arr[i + 1][j],
+        arr[i + 1][j + 1]];
+      const sumNeighbours = arrayLife.reduce((i, j) => i + j, 0);
+      if (arr[i][j] === 1) {
+        if (sumNeighbours === 2 || sumNeighbours === 3) {
+          life2[i][j] = 1;
         } else {
-          matriz2[i][j] = 0;
+          life2[i][j] = 0;
         }
-      } else if (matriz[i][j] === 0) {
-        if (numeroVecinos === 3) {
-          matriz2[i][j] = 1;
+      } else if (life2[i][j] === 0) {
+        if (sumNeighbours === 3) {
+          life2[i][j] = 1;
         }
       }
     }
   }
+  return life2;
 }
-life(matriz);
-console.table(matriz2);
+let s = 0;
+while (s < 5) {
+  searchLife(life);
+  console.table(life2);
+  [life, life2] = [life2, life];
+  initMatrix(life2);
+  s += 1;
+}
