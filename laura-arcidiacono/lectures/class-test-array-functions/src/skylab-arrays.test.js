@@ -1,8 +1,13 @@
 const SkylabArray = require('./skylab-arrays');
 
 describe('SkylabArray class', () => {
-  let myArray = new SkylabArray();
+  let myArray;
+  let newArray;
 
+  beforeEach(() => {
+    myArray = new SkylabArray();
+  });
+  
   describe('Given a length property', () => {
     describe('When is first created', () => {
       test('Then return 0', () => {
