@@ -40,6 +40,32 @@ class SkylabArray {
     }
     return false;
   }
+
+  every(callback) {
+    if (this.length === 0) {
+      return true;
+    }
+    for (let index = 0; index < this.length; index += 1) {
+      const boolean = callback(this[index]);
+      if (!boolean) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  find(callback) {
+    if (this.length === 0) {
+      return undefined;
+    }
+    for (let index = 0; index < this.length; index += 1) {
+      const boolean = callback(this[index]);
+      if (boolean) {
+        return index;
+      }
+    }
+    return undefined;
+  }
 }
 
 module.exports = SkylabArray;
