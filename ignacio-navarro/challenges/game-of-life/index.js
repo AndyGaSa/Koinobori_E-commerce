@@ -9,48 +9,81 @@ function newArray(width,height){
     return arr
 }
 
-function findNeighbours(arrElement=[]){
+let x = 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
+[0, 0, 1, 1, 1, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
+function findNeighbours(arr=[]){
     let newArray = []
-    for (let i = 0; i < arrElement.length; i+=1){
+    for (let row = 0; row < arr.length; row+=1){
         newArray.push([])
-        for (let j = 0; j < arrElement[i].length; j+=1){
+        for (let column = 0; column < arr[row].length; column+=1){
+
             let count = 0;
-            if (arrElement[i-1] && arrElement[i-1][j-1] && arrElement[i-1][j-1]===1){
+            let up = row-1
+            let down = row+1
+            let left = column-1
+            let right = column+1
+
+            if (arr[up] && arr[up][left] && arr[up][left]===1){
                 count +=1;
             }
-            if (arrElement[i-1] && arrElement[i-1][j] && arrElement[i-1][j]===1){
+            if (arr[up] && arr[up][column] && arr[up][column]===1){
                 count +=1;
             }
-            if (arrElement[i-1] && arrElement[i-1][j+1] && arrElement[i-1][j+1]===1){
+            if (arr[up] && arr[up][right] && arr[up][right]===1){
                 count +=1;
             }
-            if (arrElement[i] && arrElement[i][j-1] && arrElement[i][j-1]===1){
+            if (arr[row] && arr[row][left] && arr[row][left]===1){
                 count +=1;
             }
-            if (arrElement[i] && arrElement[i][j] && arrElement[i][j-1]===1){
+            if (arr[row] && arr[row][column] && arr[row][left]===1){
                 count +=1;
             }
-            if (arrElement[i] && arrElement[i][j+1] && arrElement[i][j+1]===1){
+            if (arr[row] && arr[row][right] && arr[row][right]===1){
                 count +=1;
             }
-            if (arrElement[i+1] && arrElement[i+1][j-1] && arrElement[i+1][j-1]===1){
+            if (arr[down] && arr[down][left] && arr[down][left]===1){
                 count +=1;
             }
-            if (arrElement[i+1] && arrElement[i+1][j] && arrElement[i+1][j]===1){
+            if (arr[down] && arr[down][column] && arr[down][column]===1){
                 count +=1;
             }
-            if (arrElement[i+1] && arrElement[i+1][j+1] && arrElement[i+1][j+1]===1){
+            if (arr[down] && arr[down][right] && arr[down][right]===1){
                 count +=1;
             }
-            if (count <= 2){
-                newArray[i].push(0);
+            if (arr[row][column]===1 && (count === 2 || count === 3) ){
+                newArray[row].push(1);
+            } else if (count === 3 && arr[row][column]===0) {
+                newArray[row].push(1);
             } else {
-                newArray[i].push(1);
+                newArray[row].push(0)
             }
         }
     }
-    return newArray
+    console.table(newArray)
+    x = newArray;
+    return x
+
 }
+
+let times = 10;
+let interval = 1000;
+
+for (let i = 0; i < times; i++) {
+    setTimeout(findNeighbours(x), i * interval)
+}
+
+    
+
 
 class gameArray {
     arr: [...Array(6)].map(x => 0);
