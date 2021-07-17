@@ -1,4 +1,4 @@
-const grid = [[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]];
+// const grid = [[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]];
 function neighbourCount(arr, i, j) {
   let count = 0;
   // TL
@@ -69,23 +69,29 @@ function neighbourCount(arr, i, j) {
 // Check the life stage of the cell
 function amAlive(arr, i, j) {
   const count = neighbourCount(arr, i, j);
+  let lifeState = arr[i][j];
   if (arr[i][j] === 1) {
-    if (count <= 2 && count <= 3) {
-      return 1;
+    if (count >= 2 && count <= 3) {
+      lifeState = 1;
+    } else {
+      lifeState = 0;
     }
-    return 0;
   }
   if (count === 3 && arr[i][j] === 0) {
-    return 1;
+    lifeState = 1;
   }
+  return lifeState;
 }
 
-function game(arr) {
-  let newArray = [];
+function nextGeneration(arr) {
+  const newArray = [];
+  let rowArray = [];
   for (let i = 0; i < arr[0].length; i += 1) {
     for (let j = 0; j < arr.length; j += 1) {
-      newArray = arr.map(neighbourCount(arr, i, j));
+      rowArray.push(amAlive(arr, i, j));
     }
+    newArray.push(rowArray);
+    rowArray = [];
   }
   return newArray;
 }
