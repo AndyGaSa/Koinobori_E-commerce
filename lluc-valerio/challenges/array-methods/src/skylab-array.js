@@ -1,10 +1,3 @@
-/*
-Implementar una clase SkylabArray que simule el comportamiento de un Array.
-- some
-- find
-- filter
-- map
-*/
 class SkylabArray {
   constructor() {
     this.length = 0;
@@ -13,10 +6,10 @@ class SkylabArray {
   push(newValue, ...moreValues) {
     this[this.length] = newValue;
     this.length += 1;
-    // for (let i = 0; i < this.length - 1; i += 1) {
-    //   this[this.length] = newValue;
-    //   this.length += 1;
-    // }
+    for (let i = 0; i < moreValues.length; i += 1) {
+      this[this.length] = moreValues[i];
+      this.length += 1;
+    }
     return this.length;
   }
 
@@ -32,11 +25,47 @@ class SkylabArray {
   map(callback) {
     const newArray = new SkylabArray();
 
-    for (let index = 0; index < this.length; index += 1) {
-      const newValue = callback(this[index]);
+    for (let i = 0; i < this.length; i += 1) {
+      const newValue = callback(this[i]);
       newArray.push(newValue);
     }
 
+    return newArray;
+  }
+
+  some(callBack) {
+    if (arguments.length <= 0) {
+      throw new TypeError();
+    } else {
+      let newValue = false;
+      for (let i = 0; i < this.length; i += 1) {
+        if (callBack(this[i])) {
+          newValue = true;
+          break;
+        }
+      }
+      return newValue;
+    }
+  }
+
+  find(callBack) {
+    let newValue;
+    for (let i = 0; i < this.length; i += 1) {
+      if (callBack(this[i])) {
+        newValue = this[i];
+        break;
+      }
+    }
+    return newValue;
+  }
+
+  filter(callBack) {
+    const newArray = new SkylabArray();
+    for (let i = 0; i < this.length; i += 1) {
+      if (callBack(this[i])) {
+        newArray.push(this[i]);
+      }
+    }
     return newArray;
   }
 }
