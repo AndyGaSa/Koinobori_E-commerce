@@ -4,14 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8b80b61e9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
     <title>Game of Life</title>
 </head>
-<body>
-    <header>
-
+<body class="hello">
+    <header class="header">
+        <div class="header__closed">
+            <div class="header__opener">
+                <div class="triangle triangle--left"></div>
+                <div class="rectangle">
+                    <i class="far fa-arrow-alt-circle-down fa-lg"></i>
+                </div>
+                <div class="triangle triangle--right"></div>
+            </div>
+        </div>
+        <div class="header__open">
+            <nav>
+                <button id="start-button">START</button>
+            </nav>
+        </div>
     </header>
-    <main>
-        <canvas id="canvas" class="board"></canvas>
+    <main class="main">
+        <div class="canvas-wrapper">
+            <canvas id="gameBoard" class="board"></canvas>
+        </div>
     </main>
+    <script src="src/game-of-life.js"></script>
 </body>
 </html>
