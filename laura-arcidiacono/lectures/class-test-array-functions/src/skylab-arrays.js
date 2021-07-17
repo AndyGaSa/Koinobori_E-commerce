@@ -66,6 +66,24 @@ class SkylabArray {
     }
     return undefined;
   }
+
+  concat() {
+
+  }
+
+  filter(callback) {
+    const newArray = new SkylabArray();
+    if (this.length === 0) {
+      return newArray;
+    }
+    for (let index = 0; index < this.length; index += 1) {
+      const boolean = callback(this[index]);
+      if (boolean) {
+        newArray.push(this[index]);
+      }
+    }
+    return newArray;
+  }
 }
 
 module.exports = SkylabArray;
