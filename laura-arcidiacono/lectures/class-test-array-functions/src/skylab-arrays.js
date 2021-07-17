@@ -67,8 +67,15 @@ class SkylabArray {
     return undefined;
   }
 
-  concat() {
-
+  concat(otherArray) {
+    const newArray = new SkylabArray();
+    for (let index = 0; index < this.length; index += 1) {
+      newArray.push(this[index]);
+    }
+    for (let index = 0; index < otherArray.length; index += 1) {
+      newArray.push(otherArray[index]);
+    }
+    return newArray;
   }
 
   filter(callback) {
