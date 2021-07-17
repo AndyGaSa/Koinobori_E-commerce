@@ -1,3 +1,9 @@
+class Button {
+  constructor() {
+    this.status = 0;
+    this.element = element;
+  }
+}
 // Create a multidimensional array
 let life2 = new Array(10);
 for (let i = 0; i < life2.length; i += 1) { life2[i] = new Array(10); }
@@ -5,7 +11,8 @@ for (let i = 0; i < life2.length; i += 1) { life2[i] = new Array(10); }
 function initMatrix() {
   for (let row = 0; row < life2.length; row += 1) {
     for (let col = 0; col < life2.length; col += 1) {
-      life2[row][col] = 0;
+      const box = new Button();
+      life2[row][col] = box;
     }
   }
 }
@@ -13,10 +20,10 @@ let life = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
