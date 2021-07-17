@@ -21,7 +21,7 @@ describe('SkylabArray class', () => {
     });
   });
 
-  describe('Given a push property', () => {
+  describe('Given a push method', () => {
     describe('When is invoked with Skylab string', () => {
       describe('And the array is empty', () => {
         beforeEach(() => {
@@ -38,7 +38,7 @@ describe('SkylabArray class', () => {
       });
     });
   });
-  describe('Given a pop property', () => {
+  describe('Given a pop method', () => {
     describe('When myArray length === 0', () => {
       test('Then return Error', () => {
         myArray.pop();
@@ -59,12 +59,29 @@ describe('SkylabArray class', () => {
       });
     });
   });
-  describe('Given a some property', () => {
+  describe('Given a some method', () => {
     describe('When match 3', () => {
       test('Then return true', () => {
-        myArray.push(3);
-        myArray.some(3);
-        expect(myArray.some()).toBe(3);
+        myArray = [3, 6, 9, 4];
+        expect(myArray.some((x) => x = 3)).toBe(true);
+      });
+    });
+  });
+  describe('Given a map method', () => {
+    describe('When i multiply one element', () => {
+      test('Then element x 2', () => {
+        myArray = [3];
+        const newArray = myArray.map((x) => x * 2);
+        expect(newArray[0]).toBe(6);
+      });
+    });
+    describe('When i multiply two elements', () => {
+      test('Then elements x 2', () => {
+        myArray = [3, 6];
+        const newArray = myArray.map((x) => x * 2);
+        console.log(myArray);
+        console.log(newArray);
+        expect(newArray).toStrictEqual([6, 12]);
       });
     });
   });

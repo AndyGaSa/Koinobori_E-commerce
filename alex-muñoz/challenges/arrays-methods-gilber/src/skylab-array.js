@@ -21,14 +21,22 @@ class SkylabArray {
     return this.length;
   }
 
-  some(element) {
+  some(callback) {
     let value = false;
     for (let index = 0; index < this.length; index += 1) {
-      if (element === this[index]) {
+      if (callback(this[index])) {
         value = true;
       }
     }
     return value;
+  }
+
+  map(callback) {
+    const mapArray = new SkylabArray();
+    for (let index = 0; index < this.length; index += 1) {
+      mapArray[index].push(callback[this[index]]);
+    }
+    return mapArray;
   }
 }
 
