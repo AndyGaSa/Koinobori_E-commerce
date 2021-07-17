@@ -123,4 +123,26 @@ describe('SkylabArray class', () => {
       });
     });
   });
+  describe('Given a reduce method', () => {
+    describe('When is invoked with an array of three elements', () => {
+      test('Then return the sum of those three ', () => {
+        const myArrayLola = new SkylabArray();
+        myArrayLola.push(1);
+        myArrayLola.push(2);
+        myArrayLola.push(2);
+        const result = myArrayLola.reduce((accumulator, currentValue) => accumulator + currentValue));
+        expect(result).toBe(5);
+      });
+    });
+    describe('When is invoked with an a number and a string', () => {
+      test('Then return only the numbers', () => {
+        const myArrayOtherLola = new SkylabArray();
+        myArrayOtherLola.push(12);
+        myArrayOtherLola.push(5);
+        myArrayOtherLola.push('Lola');
+        const filterNumber = myArrayOtherLola.filter((element) => typeof element === 'number');
+        expect(filterNumber).toBe([12, 5]);
+      });
+    });
+  });
 });

@@ -58,16 +58,24 @@ class SkylabArray {
       }
     }
   }
+
+  reduce(callback) {
+    const newArray = new SkylabArray();
+    for (let i = 0; i < this.length; i += 1) {
+      const newValue = callback(this[i]);
+      return newValue;
+    }
+  }
 }
 
 module.exports = SkylabArray;
 
 const students = new SkylabArray();
 
-students.push('Lola');
-console.log(students.some((element) => element === 'Lola'));
-students.push(15);
-console.log(students.find((element) => element > 12));
-console.log(students.filter((element) => element === Number));
+students.push(1);
+students.push(3);
+students.push(1);
+students.push(1);
+console.log(students.reduce((accumulator, currentValue) => accumulator + currentValue));
 
 console.log(students);
