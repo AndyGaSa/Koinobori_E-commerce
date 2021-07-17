@@ -91,6 +91,14 @@ class SkylabArray {
     }
     return newArray;
   }
+
+  reverse() {
+    const myReversedArray = new SkylabArray();
+    for (let index = this.length - 1; index >= 0; index -= 1) {
+      myReversedArray.push(this[index]);
+    }
+    return myReversedArray;
+  }
 }
 
 module.exports = SkylabArray;
