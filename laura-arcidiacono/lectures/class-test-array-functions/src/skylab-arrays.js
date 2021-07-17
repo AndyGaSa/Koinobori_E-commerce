@@ -29,5 +29,5 @@ class SkylabArray {
       return newArray;
   }
 }
-
+/*starting my methods*/
 module.exports = SkylabArray;
