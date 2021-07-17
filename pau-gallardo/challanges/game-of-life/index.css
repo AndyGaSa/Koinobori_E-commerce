@@ -1,13 +1,12 @@
-
-
-#world {
-    padding-bottom: 10px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-table {
-    background-color: whitesmoke;
-}
-td {
-    border: 1px solid darkgray;
+
+td{
+    background-color: gold;
     width: 10px;
     height: 10px;
-}
+  }
+  

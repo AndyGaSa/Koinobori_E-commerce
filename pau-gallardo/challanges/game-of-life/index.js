@@ -95,3 +95,15 @@ function nextGeneration(arr) {
   }
   return newArray;
 }
+
+function createTable(rows, columns) {
+  const tableHTML = document.querySelector('.mainTable');
+  for (let i = 0; i < rows; i += 1) {
+    const tr = document.createElement('tr');
+    for (let j = 0; j < columns; j += 1) {
+      const td = document.createElement('td');
+      tr.appendChild(td);
+    }
+    tableHTML.appendChild(tr);
+  }
+}
