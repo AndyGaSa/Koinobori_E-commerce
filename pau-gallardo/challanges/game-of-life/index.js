@@ -1,3 +1,5 @@
+const tableFirst = [];
+const tableNext = [];
 // Funcition that counts alive neighbours
 function neighbourCount(arr, i, j) {
   let count = 0;
@@ -66,20 +68,6 @@ function neighbourCount(arr, i, j) {
   return count;
 }
 
-// Function that creates a new array with de new cell status
-function nextGeneration(arr) {
-  const newArray = [];
-  let rowArray = [];
-  for (let i = 0; i < arr[0].length; i += 1) {
-    for (let j = 0; j < arr.length; j += 1) {
-      rowArray.push(amAlive(arr, i, j));
-    }
-    newArray.push(rowArray);
-    rowArray = [];
-  }
-  return newArray;
-}
-
 // Check the life status of the cell
 function amAlive(arr, i, j) {
   const count = neighbourCount(arr, i, j);
@@ -97,8 +85,34 @@ function amAlive(arr, i, j) {
   return lifeState;
 }
 
+// Function that creates a new array with de new cell status
+function nextGeneration(arr) {
+  let rowArray = [];
+  for (let i = 0; i < arr[0].length; i += 1) {
+    for (let j = 0; j < arr.length; j += 1) {
+      rowArray.push(amAlive(arr, i, j));
+    }
+    tableNext.push(rowArray);
+    rowArray = [];
+  }
+}
+
+// Function that swaps alive to dead and viceversa in html and the array
+function whatsMyId() {
+  const id = this.id.split('_');
+  const i = Number(id[0]);
+  const j = Number(id[1]);
+  if (this.className === 'alive') {
+    this.setAttribute('class', 'dead');
+    tableFirst[i][j] = 0;
+  } else {
+    this.setAttribute('class', 'alive');
+    tableFirst[i][j] = 1;
+  }
+}
+
+// Function that creates the initial table given the number of rows and columns
 function createTable(rows, columns) {
-  const newArray = [];
   let rowArray = [];
   const tableHTML = document.querySelector('.mainTable');
   for (let i = 0; i < rows; i += 1) {
@@ -107,14 +121,16 @@ function createTable(rows, columns) {
       rowArray.push(0);
       const td = document.createElement('td');
       td.setAttribute('id', `${i}_${j}`);
+      td.addEventListener('click', whatsMyId);
       td.setAttribute('class', 'dead');
       tr.appendChild(td);
     }
-    newArray.push(rowArray);
+    tableFirst.push(rowArray);
     rowArray = [];
     tableHTML.appendChild(tr);
   }
-  return newArray;
 }
 
-// document.getElementById('MyElement').addEventListener('click', changeClass);
+function play() {
+
+}

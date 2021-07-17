@@ -5,8 +5,15 @@
 }
 
 td{
-    background-color: gold;
     width: 10px;
     height: 10px;
   }
+
+.dead{
+    background-color: purple;
+}
+
+.alive{
+    background-color:green;
+}
   
