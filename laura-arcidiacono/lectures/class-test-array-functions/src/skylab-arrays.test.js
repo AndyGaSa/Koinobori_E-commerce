@@ -51,10 +51,19 @@ describe('SkylabArray class', () => {
 
   describe('Given a map method', () => {
     describe('When is invoked', () => {
-      test('Then resturn a new array', () => {
+      test('Then return a new array', () => {
         const mapCallback = (value) => `Skylab: ${value}`;
-        myArray.map(mapCallback);
-        expect(myArray.length).toEqual(newArray.length);
+        myArray.push('mola');
+        myArray.push('rocks!');
+        newArray = myArray.map(mapCallback);
+        expect(myArray.length).toBe(newArray.length);
+      });
+      test('Then return a new array', () => {
+        const mapCallback = (value) => `Skylab ${value}`;
+        myArray.push('mola ');
+        myArray.push('rocks!');
+        newArray = myArray.map(mapCallback);
+        expect(newArray[0] + newArray[1]).toBe('Skylab mola Skylab rocks!');
       });
     });
   });
