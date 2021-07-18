@@ -74,6 +74,8 @@ const styleCustom = document.getElementById('style-custom');
 const backgroundColorCustom = document.getElementById('background-color');
 const gridColorCustom = document.getElementById('grid-color');
 const cellColorCustom = document.getElementById('cell-color');
+const styleChooser = document.getElementById('style');
+const cellChooser = document.getElementById('cell-creator');
 
 // cell generation variables
 let intervalTime;
@@ -105,7 +107,34 @@ function printEmptyCell(x, y) {
   ctx.stroke();
 }
 
+function customStyleSelector() {
+  switch (styleChooser.value) {
+    case 'rainbow':
+      backgroundColor = '#FFFFFF';
+      gridColor = '#FFFFFF';
+      cellColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+      break;
+    case 'changer':
+      if (backgroundColor === '#000000') {
+        backgroundColor = '#FFFFFF';
+        gridColor = '#FFFFFF';
+        cellColor = '#000000';
+      } else {
+        backgroundColor = '#000000';
+        gridColor = '#000000';
+        cellColor = '#FFFFFF';
+      }
+      break;
+    default:
+      backgroundColor = '#FFFFFF';
+      gridColor = '#808080';
+      cellColor = '#000000';
+      break;
+  }
+}
+
 function drawCanvas() {
+  if (styleCustom.checked) { customStyleSelector(); }
   for (let i = 0; i < gameGrid.height; i += 1) {
     for (let j = 0; j < gameGrid.width; j += 1) {
       if (gameGrid.grid[i][j] === 0) {
@@ -189,10 +218,6 @@ function startStop() {
   }
 }
 
-function customStyleSelector() {
-
-}
-
 startButton.addEventListener('click', () => {
   startStop();
 });
@@ -242,16 +267,27 @@ styleCustom.addEventListener('change', () => {
   if (!styleCustom.checked) {
     document.getElementById('user-style').classList = 'custom-style';
     document.getElementById('choose-style').classList = 'preset-style hide';
+    document.getElementById('style-type-selector__text').innerHTML = 'Custom style';
 
     backgroundColor = backgroundColorCustom.value;
     gridColor = gridColorCustom.value;
     cellColor = cellColorCustom.value;
+    drawCanvas();
   } else {
     document.getElementById('user-style').classList = 'custom-style hide';
     document.getElementById('choose-style').classList = 'preset-style';
+    document.getElementById('style-type-selector__text').innerHTML = 'Preset style';
 
-    customStyleSelector();
+    drawCanvas();
   }
+}, false);
+
+styleChooser.addEventListener('change', () => {
+  drawCanvas();
+}, false);
+
+cellChooser.addEventListener('change', () => {
+
 }, false);
 
 newBoard();
