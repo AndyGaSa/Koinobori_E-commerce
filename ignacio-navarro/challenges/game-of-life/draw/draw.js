@@ -2,28 +2,74 @@ let canvas = document.getElementById("canvas-container");
 let ctx = canvas.getContext("2d");  
 let startButton = document.getElementById("start-button");
 let stopButton = document.getElementById("stop-button");
-let startTime;
+let resetButton = document.getElementById("reset-button");
+let clearButton = document.getElementById("clear-button");
+let speedSlider = document.getElementById("speed-slider")
+let wantedSpeed = 50;
+let startTime =0;
+let paintMode = false;
 
 let aliveCells = [];
+let cellsReservoir = []
 aliveCells = [];
-let arraySize = 80
-let parcelSize = 10
+let arraySize = 400
+let parcelSize = 2
 
 startButton.addEventListener("click",start)
 stopButton.addEventListener("click",stop)
-canvas.addEventListener("click",updateCellsArray)
+resetButton.addEventListener('click',reset)
+clearButton.addEventListener('click',clear)
+speedSlider.addEventListener("change", speedChange)
+canvas.addEventListener("mousedown",()=>{paintMode = true})
+canvas.addEventListener("mouseup",()=>{paintMode = false})
+canvas.addEventListener("mouseleave",()=>{paintMode = false})
+canvas.addEventListener("mousemove",updateCellsArray)
+
+function clear (){
+  aliveCells =[]
+  paintArray(aliveCells)
+}
+function reset (){
+  aliveCells = cellsReservoir
+  paintArray(aliveCells)
+}
+
+function speedChange(){
+  if (startTime >= 1){
+    stop()
+    if (speedSlider.value === "0"){
+      wantedSpeed = 1;
+    } else {
+      wantedSpeed = speedSlider.value;
+    }
+    start()
+  } else {
+    if (speedSlider.value === "0"){
+      wantedSpeed = 1;
+    } else {
+      wantedSpeed = speedSlider.value;
+    }
+  }
+  
+}
 
 function newCell (e){
   let windowWidth = e.srcElement.clientWidth;
   let blockSize = windowWidth/arraySize;
-  let clickedCell = [Math.round(e.offsetY / blockSize), Math.round(e.offsetX / blockSize)]
+  let clickedCell = [Math.round(e.offsetY / blockSize)+parcelSize, Math.round(e.offsetX / blockSize)]
   return clickedCell
 }
 function updateCellsArray (e) {
-  aliveCells.push(newCell(e))
-  paintArray(aliveCells)
+  if (newCell(e)!==undefined){
+    if (paintMode){
+      aliveCells.push(newCell(e))
+      paintArray(aliveCells)
+      cellsReservoir = aliveCells
+    }
+  }
+  
+  
 }
-
 function paintArray(arr=[]){
   let printedArray = newArray(arraySize,arraySize/2)
   ctx.clearRect(0, 0, 800, 400);
@@ -68,7 +114,6 @@ function removeDupes(arr) {
 }
 function cellsDepuration(countedCells) {
   let stringAlive = arrToNum(aliveCells);
-  console.log(aliveCells)
   const alive = [];
   for (const cell in countedCells) {
     if(stringAlive.includes(cell)){
@@ -81,19 +126,36 @@ function cellsDepuration(countedCells) {
   }
   return alive;
 }
-function cellsAround(cell) {
-  const cellNeighbours = [];
-  cellNeighbours.push([cell[0] - 1, cell[1] - 1]);
-  cellNeighbours.push([cell[0] - 1, cell[1]]);
-  cellNeighbours.push([cell[0] - 1, cell[1] + 1]);
-  cellNeighbours.push([cell[0], cell[1] - 1]);
-  cellNeighbours.push([cell[0], cell[1]]);
-  cellNeighbours.push([cell[0], cell[1] + 1]);
-  cellNeighbours.push([cell[0] + 1, cell[1] - 1]);
-  cellNeighbours.push([cell[0] + 1, cell[1]]);
-  cellNeighbours.push([cell[0] + 1, cell[1] + 1]);
-  return cellNeighbours;
-}
+
+  function cellsAround(cell) {
+    const cellNeighbours = [];
+    if ((cell[1] !== 0) && (cell[0] !== 0)){
+      cellNeighbours.push([cell[0] - 1, cell[1] - 1]);
+    }
+    if ((cell[1] !== arraySize) && (cell[0] !== 0)){
+      cellNeighbours.push([cell[0] - 1, cell[1] + 1]);
+    }
+    if (cell[0] !== 0){
+      cellNeighbours.push([cell[0] - 1, cell[1]]);
+    }
+    if (cell[1] !== 0){
+      cellNeighbours.push([cell[0], cell[1]-1]);
+    }
+    if (cell[1] !== arraySize){
+      cellNeighbours.push([cell[0], cell[1]+1]);
+    }
+    if ((cell[0] !== arraySize/2-1) && (cell[1] !== 0)){
+      cellNeighbours.push([cell[0] + 1, cell[1] - 1]);
+    }
+    if ((cell[0] !== arraySize/2-1) && (cell[1] !== arraySize)){
+      cellNeighbours.push([cell[0] + 1, cell[1] + 1]);
+    }
+    if (cell[0] !== arraySize/2-1){
+      cellNeighbours.push([cell[0]+1, cell[1]]);
+    }
+    cellNeighbours.push([cell[0], cell[1]]);
+    return cellNeighbours;
+  }
 function touchedCells(arr = []) {
   let touched = [];
   for (let i = 0; i < arr.length; i += 1) {
@@ -122,9 +184,10 @@ function newPhase(arr = []) {
 }
 
 function start (){
-  startTime = setInterval(() => aliveCells = newPhase(aliveCells), 1000);
+  startTime = setInterval(() => aliveCells = newPhase(aliveCells), (5000/wantedSpeed));
 }
 
 function stop (){
   clearInterval(startTime)
+  startTime = 0;
 }

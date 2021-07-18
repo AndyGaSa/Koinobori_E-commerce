@@ -1,0 +1,8 @@
+
+.canvas--drawing{
+    border-radius: 20px;
+    background-color: tomato;
+    margin: 100px auto;
+    width: 80%;
+     filter: drop-shadow(11px 10px 17px #363636e0);
+}

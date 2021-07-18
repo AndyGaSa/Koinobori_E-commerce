@@ -5,19 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game of Ignacio's life</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="draw.css">
 </head>
 <body class="body">
     <header>
         <nav class="nav-bar">
-            <a class="nav-bar__link" href="#">home</a>
-            <a class="nav-bar__link" href="draw/draw.html">references</a>
+            <a class="nav-bar__link" href="../index.html">home</a>
+            <a class="nav-bar__link" href="#">references</a>
             <a class="nav-bar__link" href="#">wiki</a>
         </nav>
+        <h1>Game of life "Drawing"</h1>
     </header>
     <main>
-        <canvas class="canvas" id="canvas-container" width="800" height="400">
+        <canvas class="canvas--drawing" id="canvas-container" width="800" height="400">
         </canvas>
     </main>
     <footer>
@@ -28,6 +30,6 @@
         <input class="footer__slider" id="speed-slider" type="range" name="Speed">
         <input class="footer__slider" id="size-slider" type="range" name="Size">
     </footer>
-    <script src="index.js"></script>
+    <script src="draw.js"></script>
 </body>
 </html>
