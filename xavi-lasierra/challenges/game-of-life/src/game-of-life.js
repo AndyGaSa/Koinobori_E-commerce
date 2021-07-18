@@ -9,6 +9,11 @@ class LifeGrid {
     }
   }
 
+  setCellState(x, y, state) {
+    this.grid[y][x] = state;
+    return state;
+  }
+
   changeCellState(x, y) {
     if (this.grid[y][x] === 0) {
       this.grid[y][x] = 1;
@@ -176,12 +181,38 @@ function newBoard() {
   drawCanvas();
 }
 
+function customCell(x, y) {
+  let clicks = [];
+  switch (cellChooser.value) {
+    case 'blinker':
+      clicks = [
+        [1],
+        [1],
+        [1]
+      ];
+      break;
+    default:
+      clicks = [[1]];
+      break;
+  }
+  for (let i = 0; i < clicks.length; i += 1) {
+    for (let j = 0; j < clicks[i].length; j += 1) {
+      gameGrid.setCellState(x + j, y + i, clicks[i][j]);
+    }
+  }
+  drawCanvas();
+}
+
 function onClickCanvas(x, y) {
-  const cell = gameGrid.changeCellState(x, y);
-  if (cell === 0) {
-    printEmptyCell(x, y);
+  if (cellChooser.value === 'single') {
+    const cell = gameGrid.changeCellState(x, y);
+    if (cell === 0) {
+      printEmptyCell(x, y);
+    } else {
+      printFullCell(x, y);
+    }
   } else {
-    printFullCell(x, y);
+    customCell(x, y);
   }
 }
 
