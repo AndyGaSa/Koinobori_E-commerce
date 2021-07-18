@@ -15,17 +15,44 @@ function generateMatrix(rows, columns) {
     }
   }
 }
-generateMatrix(11, 11);
-matrix[2][3].status = 1;
-matrix[3][3].status = 1;
-matrix[4][3].status = 1;
-matrix[5][7].status = 1;
-matrix[2][6].status = 1;
-matrix[6][6].status = 1;
-matrix[4][6].status = 1;
-matrix[5][6].status = 1;
-matrix[4][3].status = 1;
 
+function generateHTML() {
+  const container = document.querySelector('.matrix-container');
+  for (let i = 1; i < matrix.length - 1; i += 1) {
+    const row = document.createElement('DIV');
+    row.classList.add('matrix-container__row');
+    for (let j = 0; j < matrix[i].length - 1; j += 1) {
+      const visualButton = document.createElement('INPUT:BUTTON');
+      visualButton.id = `button${i}${j}`;
+      visualButton.classList.add('matrix-conatiner__button');
+      matrix[i][j].element = visualButton;
+      row.appendChild(visualButton);
+    }
+    container.appendChild(row);
+  }
+}
+generateMatrix(11, 11);
+function initialUniverse() {
+  matrix[2][3].status = 1;
+  matrix[3][3].status = 1;
+  matrix[4][3].status = 1;
+  matrix[5][7].status = 1;
+  matrix[2][6].status = 1;
+  matrix[6][6].status = 1;
+  matrix[4][6].status = 1;
+  matrix[5][6].status = 1;
+  matrix[4][3].status = 1;
+}
+
+function isAlive() {
+  for (let i = 0; i < matrix.length - 1; i += 1) {
+    for (let j = 1; j < matrix[i].length; j += 1) {
+      if (matrix[i][j].status === 1) {
+        matrix[i][j].element.classList.add('alive');
+      }
+    }
+  }
+}
 let newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => x));
 
 function bff() {
@@ -56,7 +83,16 @@ function evolution() {
     newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => x));
     bff();
     [matrix, newMatrix] = [newMatrix, matrix];
+    isAlive();
   }, 1000);
 }
-
 evolution();
+
+function bigBang() {
+  generateMatrix(20, 20);
+  generateHTML();
+  initialUniverse();
+  isAlive();
+}
+
+bigBang();
