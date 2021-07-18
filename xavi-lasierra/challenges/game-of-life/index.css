@@ -2,10 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.hide {
-    display: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .header {
@@ -31,11 +28,64 @@
     background-color: #D2E5E0CC;
 }
 
+.cell-selector select{
+    height: 1.75em;
+    width: 8em;
+    background-color: white;
+    border: 2px solid black;
+    outline: none;
+}
+
 .sliders-wrapper {
     width: 30vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.cell-selector,
+.slidecontainer label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cell-selector span,
+.slidecontainer label span {
+    font-size: 0.8em;
+    margin-bottom: 0.25em;
+}
+
+/*Slider*/
+.slider {
+    appearance: none;
+    width: 8em;
+    height: 1.75em;
+    background-color: white;
+    outline: none;
+    border: 2px solid black;
+}
+
+.slider:hover::-webkit-slider-thumb  {
+    width: 1.5em;
+}
+
+.slider:active::-webkit-slider-thumb  {
+    width: 1.5em;
+    background-color: grey;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 1em;
+    height: 1.5em;
+    background: black;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#generation-velocity {
+    direction: rtl;
 }
 
 .buttons-wrapper {
@@ -79,14 +129,14 @@
 
 .style-wrapper {
     width: 30vw;
+    height: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.custom-style__grid-color {
-    display: none;
-}
-
-.header:hover .custom-style__grid-color {
-    display: unset;
+#style-type-selector__text {
+    font-size: 0.8em;
 }
 
 /* Checkbox toggle switch*/
@@ -95,8 +145,8 @@
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 2em;
+    height: 1.5em;
     border-radius: 50%;
 }
 
@@ -115,31 +165,67 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: white;
+    border: 2px solid black;
     transition: .4s;
 }
 
 .slider-checkbox:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
+    height: 1.2em;
+    width: 1em;
+
+    bottom: 0.05em;
+    background-color: black;
     transition: .4s;
 }
 
 input:checked + .slider-checkbox {
-    background-color: #2196F3;
-}
-
-input:focus + .slider-checkbox {
-    box-shadow: 0 0 1px #2196F3;
+    background-color: grey;
 }
 
 input:checked + .slider-checkbox:before {
-    transform: translateX(26px);
+    transform: translateX(0.7em);
+}
+
+.custom-style {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.custom-style label {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-style label input {
+    display: none;
+    width: 8em;
+    height: 2em;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.header:hover .custom-style label input {
+    display: unset;
+}
+
+.custom-style label span {
+    font-size: 0.8em;
+    margin-bottom: 0.25em;
+}
+
+.preset-style {
+    align-self: center;
+}
+
+.preset-style select {
+    height: 2em;
+    width: 8em;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .header__closed {
@@ -179,31 +265,6 @@ input:checked + .slider-checkbox:before {
     border-color: #D2E5E0CC transparent transparent transparent;
 }
 
-/*Slider*/
-.slider {
-    appearance: none;
-    width: 8em;
-    height: 1.75em;
-    background: white;
-    outline: none;
-    border: 2px solid black;
-    transition: opacity .2s;
-}
-
-.slider:hover::-webkit-slider-thumb  {
-    width: 1.5em;
-    color: white;
-    transition: .2s;
-}
-
-.slider::-webkit-slider-thumb {
-    appearance: none;
-    width: 1em;
-    height: 1.5em;
-    background: black;
-    cursor: pointer;
-}
-
 .canvas-wrapper {
     overflow: hidden;
     width: 100%;
@@ -214,4 +275,8 @@ input:checked + .slider-checkbox:before {
     width: 96em;
     height: 96em;
     border: 1px solid black;
+}
+
+.hide {
+    display: none;
 }
