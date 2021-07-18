@@ -1,5 +1,6 @@
 const reset = document.querySelector('.reset');
 const start = document.querySelector('.start');
+const clear = document.querySelector('.clear');
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -15,9 +16,18 @@ function buildMatriz() {
     .map(() => new Array(ROWS).fill(null)
       .map(() => Math.floor(Math.random() * 2)));
 }
-
+function clearMatriz() {
+  return new Array(COLS).fill(null)
+    .map(() => new Array(ROWS).fill(null));
+}
 start.onclick = function play() {
   requestAnimationFrame(update);
+};
+reset.onclick = function reset() {
+  matriz = buildMatriz();
+};
+clear.onclick = function clear() {
+  matriz = clearMatriz();
 };
 
 let matriz = buildMatriz();
