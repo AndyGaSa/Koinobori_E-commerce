@@ -329,8 +329,4 @@ styleChooser.addEventListener('change', () => {
   drawCanvas();
 }, false);
 
-cellChooser.addEventListener('change', () => {
-
-}, false);
-
 newBoard();
