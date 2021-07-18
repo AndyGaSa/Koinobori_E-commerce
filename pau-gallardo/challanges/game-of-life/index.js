@@ -20,7 +20,7 @@ function whatsMyId() {
 // Function that creates the initial table given the number of rows and columns
 function createTable(rows, columns) {
   let rowArray = [];
-  const tableHTML = document.querySelector('.mainTable');
+  const tableHTML = document.querySelector('.main__table');
   for (let i = 0; i < rows; i += 1) {
     const tr = document.createElement('tr');
     for (let j = 0; j < columns; j += 1) {
@@ -65,8 +65,6 @@ function neighbourCount(arr, i, j) {
 
   // R
   if (j < arr[0].length - 1) {
-    console.log(`i${i}`);
-    console.log(`j${j}`);
     // Look R neighbour
     if (arr[i][j + 1] === 1) {
       count += 1;
@@ -170,7 +168,7 @@ function resetWindow() {
 }
 
 function gameOfLife() {
-  createTable(50, 100);
+  createTable(40, 100);
   const startStopBtn = document.getElementById('start');
   startStopBtn.addEventListener('click', startStop);
   const resetBtn = document.getElementById('reset');

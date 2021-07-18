@@ -4,20 +4,89 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 100vw;
+    background-color: black;
+    font-family: 'Press Start 2P', avenir;
+}
+
+.main{
+    align-self: center;
+    cursor: crosshair;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__tittle, .main__subtittle{
+    margin: 15px;
+    text-align: center;
+    color: #E3E7E7;
+    font-size: 8vh;
+}
+
+.main__subtittle{
+    margin: 15px;
+    align-self: center;
+    text-align: center;
+    color: #E3E7E7;
+    text-align: center;
+    font-size: 2vh;
+}
+
+.main__subtittle__span:hover{
+    font-weight: 10;
+        color: #fff;
+        text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #0fa,
+            0 0 82px #0fa,
+            0 0 92px #0fa,
+            0 0 102px #0fa,
+            0 0 151px #0fa;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
 td{
     width: 10px;
     height: 10px;
+    min-width: 10px;
+    max-width: 10px;
   }
 
 .dead{
-    background-color: purple;
+    background-color: gold;
 }
 
 .alive{
-    background-color:green;
+    box-shadow:0px 0px 11px 4px gold ;
+    border-radius: 50%;
+    transition: 1000ms;
 }
 
-.button{
+.footer__button{
+    margin: 15px;
+    width: auto;
+    font-family: 'Press Start 2P', avenir;
+    border-radius: 2px;
+    background: black;
+    border: 1px solid #00FF00;
+    color: #00FF00;
     cursor: pointer;
+    font-size: 3vh;
+    padding: 8px 15px 6px;
+    text-align: center;
+    align-self:auto;
 }
   
