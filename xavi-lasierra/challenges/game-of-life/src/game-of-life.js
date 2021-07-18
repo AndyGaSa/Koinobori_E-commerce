@@ -184,11 +184,23 @@ function newBoard() {
 function customCell(x, y) {
   let clicks = [];
   switch (cellChooser.value) {
-    case 'blinker':
+    case 'blinkerV':
       clicks = [
         [1],
         [1],
         [1]
+      ];
+      break;
+    case 'blinkerH':
+      clicks = [
+        [1, 1, 1]
+      ];
+      break;
+    case 'gliderLD':
+      clicks = [
+        [0, 1, 0],
+        [0, 0, 1],
+        [1, 1, 1]
       ];
       break;
     default:
