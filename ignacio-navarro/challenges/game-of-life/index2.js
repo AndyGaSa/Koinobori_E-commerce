@@ -1,10 +1,45 @@
-let aliveCells = [];
-aliveCells = [[3, 3], [3, 4], [3, 5], [4, 2], [4, 3], [4, 4]];
+let canvas = document.getElementById("canvas-container");
+let ctx = canvas.getContext("2d");  
+let startButton = document.getElementById("start-button");
+let stopButton = document.getElementById("stop-button");
+let startTime;
 
+let aliveCells = [];
+aliveCells = [];
+let arraySize = 80
+let parcelSize = 10
+
+startButton.addEventListener("click",start)
+stopButton.addEventListener("click",stop)
+canvas.addEventListener("click",updateCellsArray)
+
+function newCell (e){
+  let windowWidth = e.srcElement.clientWidth;
+  let blockSize = windowWidth/arraySize;
+  let clickedCell = [Math.round(e.offsetY / blockSize), Math.round(e.offsetX / blockSize)]
+  return clickedCell
+}
+function updateCellsArray (e) {
+  aliveCells.push(newCell(e))
+  paintArray(aliveCells)
+}
+
+function paintArray(arr=[]){
+  let printedArray = newArray(arraySize,arraySize/2)
+  ctx.clearRect(0, 0, 800, 400);
+  for (let i = 0; i < arr.length;i += 1){
+    printedArray[arr[i][0]][arr[i][1]] = 1;
+    ctx.fillStyle = 'orange'; 
+    ctx.fillRect(arr[i][1]*parcelSize, arr[i][0]*parcelSize, parcelSize, parcelSize)
+  }
+  return printedArray
+}
 function numToArray(num) {
   const arrayOfArrays = [];
   for (let i = 0; i < num.length; i += 1) {
-    const element = num[i].toString(10).replace(/\D/g, '0').split('').map(Number);
+    let element = num[i].split(",");
+    element[0] = parseInt(element[0])
+    element[1] = parseInt(element[1])
     arrayOfArrays.push(element);
   }
   return arrayOfArrays;
@@ -12,12 +47,12 @@ function numToArray(num) {
 function arrToNum(arr = []) {
   const numberArray = [];
   for (let i = 0; i < arr.length; i += 1) {
-    const element = Number(arr[i].join(''));
-    numberArray.push(element);
+    const element = arr[i]
+    let elementArray = element.toString();
+    numberArray.push(elementArray);
   }
   return numberArray;
 }
-
 function removeDupes(arr) {
   const cellsCount = {};
   let i = arr.length;
@@ -32,15 +67,20 @@ function removeDupes(arr) {
   return cellsCount;
 }
 function cellsDepuration(countedCells) {
+  let stringAlive = arrToNum(aliveCells);
+  console.log(aliveCells)
   const alive = [];
   for (const cell in countedCells) {
-    if (countedCells[cell] === 3) {
-      alive.push(parseInt(cell));
+    if(stringAlive.includes(cell)){
+      if (countedCells[cell] === 3 || countedCells[cell] === 4){
+        alive.push(cell);
+      }
+    } else if (countedCells[cell] === 3) {
+      alive.push(cell);
     }
   }
   return alive;
 }
-
 function cellsAround(cell) {
   const cellNeighbours = [];
   cellNeighbours.push([cell[0] - 1, cell[1] - 1]);
@@ -52,7 +92,6 @@ function cellsAround(cell) {
   cellNeighbours.push([cell[0] + 1, cell[1] - 1]);
   cellNeighbours.push([cell[0] + 1, cell[1]]);
   cellNeighbours.push([cell[0] + 1, cell[1] + 1]);
-
   return cellNeighbours;
 }
 function touchedCells(arr = []) {
@@ -62,32 +101,30 @@ function touchedCells(arr = []) {
   }
   return touched;
 }
-function paintArray(arr=[]){
-  let printedArray = 
-    [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
-  for (let i = 0; i < arr.length;i += 1){
-    printedArray[arr[i][0]][arr[i][1]] = 1;
+function newArray(width,height){
+  let arr = [];
+  for (let i = 0; i < height; i+=1){
+      arr.push([])
+      for (let j = 0; j < width; j+=1){
+          arr[i].push(0)
+      }
   }
-  return printedArray
+  return arr
 }
-
 function newPhase(arr = []) {
   const cellsAroundAlive = touchedCells(arr);
   const cellsToNumbers = arrToNum(cellsAroundAlive);
   const cellsCountAll = removeDupes(cellsToNumbers);
   const newCellsAlive = cellsDepuration(cellsCountAll);
   const cellsToArray = numToArray(newCellsAlive);
-  console.table(paintArray(cellsToArray));
+  paintArray(cellsToArray)
   return cellsToArray;
 }
 
-setInterval(() => aliveCells = newPhase(aliveCells), 1000);
+function start (){
+  startTime = setInterval(() => aliveCells = newPhase(aliveCells), 1000);
+}
+
+function stop (){
+  clearInterval(startTime)
+}

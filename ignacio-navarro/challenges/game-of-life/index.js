@@ -1,90 +1,135 @@
+let canvas = document.getElementById("canvas-container");
+let ctx = canvas.getContext("2d");  
+let startButton = document.getElementById("start-button");
+let stopButton = document.getElementById("stop-button");
+let startTime;
+let paintMode = false;
+
+let aliveCells = [];
+aliveCells = [];
+let arraySize = 400
+let parcelSize = 2
+
+startButton.addEventListener("click",start)
+stopButton.addEventListener("click",stop)
+canvas.addEventListener("mousedown",()=>{paintMode = true})
+canvas.addEventListener("mouseup",()=>{paintMode = false})
+canvas.addEventListener("mousemove",updateCellsArray)
+
+function newCell (e){
+  let windowWidth = e.srcElement.clientWidth;
+  let blockSize = windowWidth/arraySize;
+  let clickedCell = [Math.round(e.offsetY / blockSize), Math.round(e.offsetX / blockSize)]
+  return clickedCell
+}
+function updateCellsArray (e) {
+  if (paintMode){
+    aliveCells.push(newCell(e))
+    paintArray(aliveCells)
+  }
+}
+
+function paintArray(arr=[]){
+  console.log("hola")
+  let printedArray = newArray(arraySize,arraySize/2)
+  ctx.clearRect(0, 0, 800, 400);
+  for (let i = 0; i < arr.length;i += 1){
+    printedArray[arr[i][0]][arr[i][1]] = 1;
+    ctx.fillStyle = 'orange'; 
+    ctx.fillRect(arr[i][1]*parcelSize, arr[i][0]*parcelSize, parcelSize, parcelSize)
+  }
+  return printedArray
+}
+function numToArray(num) {
+  const arrayOfArrays = [];
+  for (let i = 0; i < num.length; i += 1) {
+    let element = num[i].split(",");
+    element[0] = parseInt(element[0])
+    element[1] = parseInt(element[1])
+    arrayOfArrays.push(element);
+  }
+  return arrayOfArrays;
+}
+function arrToNum(arr = []) {
+  const numberArray = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    const element = arr[i]
+    let elementArray = element.toString();
+    numberArray.push(elementArray);
+  }
+  return numberArray;
+}
+function removeDupes(arr) {
+  const cellsCount = {};
+  let i = arr.length;
+  while (i--) {
+    if (cellsCount.hasOwnProperty(arr[i])) {
+      cellsCount[arr[i]] += 1;
+      arr.splice(i, 1);
+    } else {
+      cellsCount[arr[i]] = 1;
+    }
+  }
+  return cellsCount;
+}
+function cellsDepuration(countedCells) {
+  let stringAlive = arrToNum(aliveCells);
+  const alive = [];
+  for (const cell in countedCells) {
+    if(stringAlive.includes(cell)){
+      if (countedCells[cell] === 3 || countedCells[cell] === 4){
+        alive.push(cell);
+      }
+    } else if (countedCells[cell] === 3) {
+      alive.push(cell);
+    }
+  }
+  return alive;
+}
+function cellsAround(cell) {
+  const cellNeighbours = [];
+  cellNeighbours.push([cell[0] - 1, cell[1] - 1]);
+  cellNeighbours.push([cell[0] - 1, cell[1]]);
+  cellNeighbours.push([cell[0] - 1, cell[1] + 1]);
+  cellNeighbours.push([cell[0], cell[1] - 1]);
+  cellNeighbours.push([cell[0], cell[1]]);
+  cellNeighbours.push([cell[0], cell[1] + 1]);
+  cellNeighbours.push([cell[0] + 1, cell[1] - 1]);
+  cellNeighbours.push([cell[0] + 1, cell[1]]);
+  cellNeighbours.push([cell[0] + 1, cell[1] + 1]);
+  return cellNeighbours;
+}
+function touchedCells(arr = []) {
+  let touched = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    touched = touched.concat(cellsAround(arr[i]));
+  }
+  return touched;
+}
 function newArray(width,height){
-    let arr = [];
-    for (let i = 0; i < height; i+=1){
-        arr.push([])
-        for (let j = 0; j < width; j+=1){
-            arr[i].push(0)
-        }
-    }
-    return arr
+  let arr = [];
+  for (let i = 0; i < height; i+=1){
+      arr.push([])
+      for (let j = 0; j < width; j+=1){
+          arr[i].push(0)
+      }
+  }
+  return arr
+}
+function newPhase(arr = []) {
+  const cellsAroundAlive = touchedCells(arr);
+  const cellsToNumbers = arrToNum(cellsAroundAlive);
+  const cellsCountAll = removeDupes(cellsToNumbers);
+  const newCellsAlive = cellsDepuration(cellsCountAll);
+  const cellsToArray = numToArray(newCellsAlive);
+  paintArray(cellsToArray)
+  return cellsToArray;
 }
 
-let x = 
-[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
-[0, 0, 1, 1, 1, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
-
-function findNeighbours(arr=[]){
-    let newArray = []
-    for (let row = 0; row < arr.length; row+=1){
-        newArray.push([])
-        for (let column = 0; column < arr[row].length; column+=1){
-
-            let count = 0;
-            let up = row-1
-            let down = row+1
-            let left = column-1
-            let right = column+1
-
-            if (arr[up] && arr[up][left] && arr[up][left]===1){
-                count +=1;
-            }
-            if (arr[up] && arr[up][column] && arr[up][column]===1){
-                count +=1;
-            }
-            if (arr[up] && arr[up][right] && arr[up][right]===1){
-                count +=1;
-            }
-            if (arr[row] && arr[row][left] && arr[row][left]===1){
-                count +=1;
-            }
-            if (arr[row] && arr[row][column] && arr[row][left]===1){
-                count +=1;
-            }
-            if (arr[row] && arr[row][right] && arr[row][right]===1){
-                count +=1;
-            }
-            if (arr[down] && arr[down][left] && arr[down][left]===1){
-                count +=1;
-            }
-            if (arr[down] && arr[down][column] && arr[down][column]===1){
-                count +=1;
-            }
-            if (arr[down] && arr[down][right] && arr[down][right]===1){
-                count +=1;
-            }
-            if (arr[row][column]===1 && (count === 2 || count === 3) ){
-                newArray[row].push(1);
-            } else if (count === 3 && arr[row][column]===0) {
-                newArray[row].push(1);
-            } else {
-                newArray[row].push(0)
-            }
-        }
-    }
-    console.table(newArray)
-    x = newArray;
-    return x
-
+function start (){
+  startTime = setInterval(() => aliveCells = newPhase(aliveCells), 200);
 }
 
-let times = 10;
-let interval = 1000;
-
-for (let i = 0; i < times; i++) {
-    setTimeout(findNeighbours(x), i * interval)
+function stop (){
+  clearInterval(startTime)
 }
-
-    
-
-
-class gameArray {
-    arr: [...Array(6)].map(x => 0);
-    }
