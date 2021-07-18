@@ -99,6 +99,23 @@ class SkylabArray {
     }
     return myReversedArray;
   }
+
+  reduce(callback) {
+    if (this.length === 0) {
+      return TypeError;
+    }
+    if (this.length === 1) {
+      return this[0];
+    }
+    if (this.length > 1) {
+      let acumulator = this[0];
+      for (let index = 1; index < this.length; index += 1) {
+        const result = callback(acumulator, this[index]);
+        acumulator = result;
+      }
+      return acumulator;
+    }
+  }
 }
 
 module.exports = SkylabArray;
