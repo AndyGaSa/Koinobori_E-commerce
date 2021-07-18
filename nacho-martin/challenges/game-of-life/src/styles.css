@@ -17,6 +17,7 @@ width: 90%;
 height: 50%;
 margin: 50px auto;
 align-items: center;
+overflow: hidden;
 }
 .matrix-container__row{
 display: flex;
@@ -26,8 +27,8 @@ height: fit-content;
 }
 
 .matrix-container__button{
-width: 25px;
-height: 25px;
+width: 20px;
+height: 20px;
 border: 1px #F0B930 solid;
 background-color: #3DF04C
 }
@@ -38,9 +39,15 @@ background-color: #3DF04C
 .button-container{
  margin: 50px auto;
 
- width: 220px; 
+ width: 330px; 
+ height: 35px;
 }
 
 .button-container__button{
-    width: 100px
+    width: 100px;
+    height: 35px;
+    background-color: #F0B930;
+    color: #F0246C;
+    font-weight: 700;
+    border: none;
 }

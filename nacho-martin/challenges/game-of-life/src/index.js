@@ -48,15 +48,12 @@ function generateHTML() {
   }
 }
 function initialUniverse() {
-  matrix[2][3].status = 1;
-  matrix[3][3].status = 1;
-  matrix[4][3].status = 1;
-  matrix[5][7].status = 1;
-  matrix[2][6].status = 1;
-  matrix[6][6].status = 1;
-  matrix[4][6].status = 1;
-  matrix[5][6].status = 1;
-  matrix[4][3].status = 1;
+  matrix[19][18].status = 1;
+  matrix[19][16].status = 1;
+  matrix[18][16].status = 1;
+  matrix[18][17].status = 1;
+  matrix[18][18].status = 1;
+  matrix[17][17].status = 1;
 }
 
 function isAlive() {
@@ -72,7 +69,7 @@ function isAlive() {
   }
 }
 
-function bff() {
+function nextGen() {
   for (let i = 1; i < matrix.length - 1; i += 1) {
     for (let j = 1; j < matrix[i].length - 1; j += 1) {
       const p = [matrix[i - 1][j - 1].status, matrix[i - 1][j].status, matrix[i - 1][j + 1].status];
@@ -107,7 +104,7 @@ function copyWorld() {
 function evolution() {
   generation = setInterval(() => {
     copyWorld();
-    bff();
+    nextGen();
     matrix = [...newMatrix];
     isAlive();
   }, 500);
@@ -127,13 +124,31 @@ function buttonStop() {
   stopButton.addEventListener('click', stop);
 }
 
+function catastrophe(button) {
+  // eslint-disable-next-line no-param-reassign
+  button.status = 0;
+}
+
+function resetUniverse() {
+  stop();
+  const bigCrash = matrix.flat();
+  bigCrash.forEach((element) => catastrophe(element));
+  initialUniverse();
+  isAlive();
+}
+
+function buttonReset() {
+  const resetButton = document.querySelector('#reset');
+  resetButton.addEventListener('click', resetUniverse);
+}
 function bigBang() {
-  generateMatrix(15, 30);
+  generateMatrix(25, 35);
   generateHTML();
   buttonStart();
   initialUniverse();
   isAlive();
   buttonStop();
+  buttonReset();
 }
 
 bigBang();
