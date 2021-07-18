@@ -55,45 +55,59 @@ class LifeGrid {
   }
 }
 
-let gameGrid = new LifeGrid(10);
+// VARIABLES
+// board matrix
+let gameGrid;
+
+// board canvas
 const canvas = document.getElementById('gameBoard');
 const ctx = canvas.getContext('2d');
-canvas.width = 1600;
-canvas.height = 1600;
-const startButton = document.getElementById('start-button');
 
-const widthCells = gameGrid.width;
-const heightCells = gameGrid.height;
-const intervalTime = 100;
+// buttons sliders
+const startButton = document.getElementById('start-button');
+const resetButton = document.getElementById('reset-button');
+const nextButton = document.getElementById('next-button');
+const previousButton = document.getElementById('previous-button');
+const numCellsSlider = document.getElementById('number-of-cells');
+const velocitySlider = document.getElementById('generation-velocity');
+const styleCustom = document.getElementById('style-custom');
+const backgroundColorCustom = document.getElementById('background-color');
+const gridColorCustom = document.getElementById('grid-color');
+const cellColorCustom = document.getElementById('cell-color');
+
+// cell generation variables
+let intervalTime;
 let running = false;
+let lastGenerations;
+let gridColor;
+let cellColor;
+let backgroundColor;
 
 function printFullCell(x, y) {
-  const unitWidth = canvas.width / widthCells;
-  const unitHeight = canvas.height / heightCells;
+  const unitWidth = canvas.width / gameGrid.width;
+  const unitHeight = canvas.height / gameGrid.height;
   ctx.beginPath();
-  ctx.fillStyle = '#000';
-  ctx.strokeStyle = 'red';
+  ctx.fillStyle = cellColor;
+  ctx.strokeStyle = gridColor;
   ctx.rect(unitWidth * x, unitHeight * y, unitWidth, unitHeight);
   ctx.fillRect(unitWidth * x, unitHeight * y, unitWidth, unitHeight);
   ctx.stroke();
 }
 
 function printEmptyCell(x, y) {
-  const unitWidth = canvas.width / widthCells;
-  const unitHeight = canvas.height / heightCells;
+  const unitWidth = canvas.width / gameGrid.width;
+  const unitHeight = canvas.height / gameGrid.height;
   ctx.beginPath();
-  ctx.fillStyle = '#fff';
-  ctx.strokeStyle = 'red';
+  ctx.fillStyle = backgroundColor;
+  ctx.strokeStyle = gridColor;
   ctx.rect(unitWidth * x, unitHeight * y, unitWidth, unitHeight);
   ctx.fillRect(unitWidth * x, unitHeight * y, unitWidth, unitHeight);
   ctx.stroke();
 }
 
 function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  for (let i = 0; i < heightCells; i += 1) {
-    for (let j = 0; j < widthCells; j += 1) {
+  for (let i = 0; i < gameGrid.height; i += 1) {
+    for (let j = 0; j < gameGrid.width; j += 1) {
       if (gameGrid.grid[i][j] === 0) {
         printEmptyCell(j, i);
       } else {
@@ -101,6 +115,36 @@ function drawCanvas() {
       }
     }
   }
+}
+
+function newBoard() {
+  if (gameGrid === undefined || gameGrid === null) {
+    gameGrid = new LifeGrid(numCellsSlider.value);
+    lastGenerations = new Array(10).fill(null);
+
+    intervalTime = velocitySlider.value;
+    backgroundColor = backgroundColorCustom.value;
+    gridColor = gridColorCustom.value;
+    cellColor = cellColorCustom.value;
+    canvas.width = 1600;
+    canvas.height = 1600;
+  } else {
+    const aux = new LifeGrid(numCellsSlider.value);
+    let nCells;
+    if (gameGrid.grid.length > numCellsSlider.value * 16) {
+      nCells = numCellsSlider.value * 16;
+    } else {
+      nCells = gameGrid.grid.length;
+    }
+    for (let i = 0; i < nCells; i += 1) {
+      for (let j = 0; j < nCells; j += 1) {
+        aux.grid[i][j] = gameGrid.grid[i][j];
+      }
+    }
+    gameGrid = aux;
+  }
+
+  drawCanvas();
 }
 
 function onClickCanvas(x, y) {
@@ -117,13 +161,16 @@ canvas.addEventListener('click', (evt) => {
   const pos = canvas.getBoundingClientRect();
   let posX = evt.pageX - (pos.left + window.scrollX);
   let posY = evt.pageY - (pos.top + window.scrollY);
-  posX /= (pos.right / widthCells);
-  posY /= (pos.bottom / heightCells);
+  posX /= (pos.right / gameGrid.width);
+  posY /= (pos.bottom / gameGrid.height);
   onClickCanvas(Math.floor(posX), Math.floor(posY));
 });
 
 function play() {
-  gameGrid = gameGrid.nextGeneration();
+  const nextGen = gameGrid.nextGeneration();
+  lastGenerations.pop();
+  lastGenerations.unshift(gameGrid);
+  gameGrid = nextGen;
   drawCanvas();
 
   if (running) {
@@ -134,16 +181,77 @@ function play() {
 function startStop() {
   if (running) {
     running = false;
-    startButton.innerHTML = 'START';
+    startButton.innerHTML = '<i class="fas fa-play fa-lg"></i>';
   } else {
     running = true;
-    startButton.innerHTML = 'STOP';
+    startButton.innerHTML = '<i class="fas fa-pause fa-lg"></i>';
     setTimeout(play, intervalTime);
   }
+}
+
+function customStyleSelector() {
+
 }
 
 startButton.addEventListener('click', () => {
   startStop();
 });
 
-drawCanvas();
+resetButton.addEventListener('click', () => {
+  gameGrid = null;
+  if (running) { startStop(); }
+  newBoard();
+});
+
+previousButton.addEventListener('click', () => {
+  if (lastGenerations === null) return;
+  [gameGrid] = lastGenerations;
+  lastGenerations.shift();
+  lastGenerations.push(null);
+  newBoard();
+});
+
+nextButton.addEventListener('click', () => {
+  play();
+});
+
+numCellsSlider.addEventListener('change', () => {
+  newBoard();
+}, false);
+
+velocitySlider.addEventListener('change', () => {
+  intervalTime = velocitySlider.value;
+}, false);
+
+backgroundColorCustom.addEventListener('change', () => {
+  backgroundColor = backgroundColorCustom.value;
+  drawCanvas();
+}, false);
+
+gridColorCustom.addEventListener('change', () => {
+  gridColor = gridColorCustom.value;
+  drawCanvas();
+}, false);
+
+cellColorCustom.addEventListener('change', () => {
+  cellColor = cellColorCustom.value;
+  drawCanvas();
+}, false);
+
+styleCustom.addEventListener('change', () => {
+  if (!styleCustom.checked) {
+    document.getElementById('user-style').classList = 'custom-style';
+    document.getElementById('choose-style').classList = 'preset-style hide';
+
+    backgroundColor = backgroundColorCustom.value;
+    gridColor = gridColorCustom.value;
+    cellColor = cellColorCustom.value;
+  } else {
+    document.getElementById('user-style').classList = 'custom-style hide';
+    document.getElementById('choose-style').classList = 'preset-style';
+
+    customStyleSelector();
+  }
+}, false);
+
+newBoard();
