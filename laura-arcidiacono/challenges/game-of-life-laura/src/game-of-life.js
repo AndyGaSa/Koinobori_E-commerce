@@ -1,11 +1,22 @@
-const gridSize = 20;
-
-const myGridArray = [];
-for (let i = 0; i < gridSize; i += 1) {
-  const temporalArray = [];
-  for (let j = 0; j < gridSize; j += 1) {
-    temporalArray.push(0);
+class GameOfLife {
+  constructor() {
+    this.gridSize = 5;
   }
-  myGridArray.push(temporalArray);
+
+  gridArrayGenerator(newGridSize) {
+    if (newGridSize === undefined) {
+      newGridSize = this.gridSize;
+    }
+    const myGridArray = [];
+    for (let i = 0; i < newGridSize; i += 1) {
+      const temporalArray = [];
+      for (let j = 0; j < newGridSize; j += 1) {
+        temporalArray.push(0);
+      }
+      myGridArray.push(temporalArray);
+    }
+    return myGridArray;
+  }
 }
-console.table(myGridArray);
+
+module.exports = GameOfLife;
