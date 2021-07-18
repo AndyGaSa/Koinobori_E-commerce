@@ -87,5 +87,12 @@ class SkylabArray {
     }
     return aux;
   }
+
+  findIndex(callback) {
+    for (let i = 0; i < this.length; i += 1) {
+      if (callback(this[i])) return i;
+    }
+    return -1;
+  }
 }
 module.exports = SkylabArray;

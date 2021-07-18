@@ -254,4 +254,43 @@ describe('SkylabArray class', () => {
       });
     });
   });
+
+  describe('Given a findIndex method', () => {
+    describe('When is invoked', () => {
+      describe('And array has at least 5 element [a,b,c,d,e]', () => {
+        beforeEach(() => {
+          myArray.push('a');
+          myArray.push('b');
+          myArray.push('c');
+          myArray.push('d');
+          myArray.push('e');
+        });
+        test('Then the return of findIdex of c will be 2', () => {
+          const result = myArray.findIndex((value) => value === 'c');
+          expect(result).toBe(2);
+        });
+        test('Then the return of findIdex of e will be 4', () => {
+          const result = myArray.findIndex((value) => value === 'e');
+          expect(result).toBe(4);
+        });
+        test('Then the return of findIdex of f will be -1', () => {
+          const result = myArray.findIndex((value) => value === 'f');
+          expect(result).toBe(-1);
+        });
+      });
+      describe('And array has at least 5 element [5,4,200,2,1]', () => {
+        beforeEach(() => {
+          myArray.push(5);
+          myArray.push(4);
+          myArray.push(200);
+          myArray.push(2);
+          myArray.push(1);
+        });
+        test('Then the return of findIdex > 10 will be 2', () => {
+          const result = myArray.findIndex((value) => value > 10);
+          expect(result).toBe(2);
+        });
+      });
+    });
+  });
 });
