@@ -10,23 +10,39 @@
 </head>
 <body class="body">
     <header>
-        <nav class="nav-bar">
-            <a class="nav-bar__link" href="#">home</a>
-            <a class="nav-bar__link" href="draw/draw.html">references</a>
-            <a class="nav-bar__link" href="#">wiki</a>
+        <nav class="nav-bar__header">
+            <nav class="nav-bar__sliders-container">
+                <div>
+                    <label for="speed">speed</label>
+                    <input class="slider" id="speed-slider" type="range" name="Speed">
+                </div>
+                <div>
+                    <label for="Size">Size</label>
+                    <input class="slider" id="Size-slider" type="range" name="Size">
+                </div>
+            </nav>
+            <nav class="nav-bar__webs">
+                <a class="nav-bar__link" href="#">home</a>
+                <a class="nav-bar__link" href="draw/draw.html">references</a>
+                <a class="nav-bar__link" href="#">wiki</a>
+            </nav>
         </nav>
     </header>
     <main>
+        <nav class="nav-bar__buttons-container">
+            <button class="footer__button" id="start-button">start</button>
+            <button class="footer__button" id="stop-button">stop</button>
+            <button class="footer__button" id="reset-button">reset</button>
+            <button class="footer__button" id="clear-button">clear</button>
+        </nav>
         <canvas class="canvas" id="canvas-container" width="800" height="400">
         </canvas>
     </main>
     <footer>
-        <button class="footer__button" id="start-button">start</button>
-        <button class="footer__button" id="stop-button">stop</button>
-        <button class="footer__button" id="reset-button">reset</button>
-        <button class="footer__button" id="clear-button">clear</button>
-        <input class="footer__slider" id="speed-slider" type="range" name="Speed">
-        <input class="footer__slider" id="size-slider" type="range" name="Size">
+        
+        
+        
+       
     </footer>
     <script src="index.js"></script>
 </body>
