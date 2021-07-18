@@ -14,11 +14,11 @@ align-items: center;
 .matrix-container__row{
 display: flex;
 width: fit-content;
-height: 25px;
+height: fit-content;
 
 }
 
-.matrix-conatiner__button{
+.matrix-container__button{
 width: 25px;
 height: 25px;
 border: 1px #000 solid;
