@@ -1,29 +1,51 @@
-const matrix = [[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0],
-  [0, 0, 0, 0, 0]];
-
-const bff = () => {
-  debugger;
-  const newArray = [];
-  for (let x = 1; x < matrix.length - 1; x += 1) {
-    for (let y = 1; y < matrix[x].length - 1; y += 1) {
-      const p = [matrix[y - 1][x - 1], matrix[y - 1][x], matrix[y - 1][x + 1]];
-      const c = [matrix[y][x - 1], matrix[y][x + 1]];
-      const n = [matrix[y + 1][x - 1], matrix[y + 1][x], matrix[y + 1][x + 1]];
-      const neihbourgs = [p, c, n].reduce((a, b) => a.concat(b));
-      const sumAlive = neihbourgs.reduce((a, b) => a + b, 0);
-      if (matrix[x][y] === 0) {
-        if (sumAlive === 3) {
-          newArray.push(1);
-        } else { newArray.push(0); }
-      } else if (matrix[x][y] === 1) {
-        if (sumAlive > 1 && sumAlive > 4) {
-          newArray.push(1);
+let matrix = [];
+function generateMatrix(rows, columns) {
+  for (let i = 0; i < rows; i += 1) {
+    matrix[i] = [];
+    for (let j = 0; j < columns; j += 1) {
+      matrix[i][j] = 0;
+    }
+  }
+}
+generateMatrix(11, 11);
+matrix[2][3] = 1;
+matrix[3][3] = 1;
+matrix[4][3] = 1;
+matrix[5][7] = 1;
+matrix[2][6] = 1;
+matrix[6][6] = 1;
+matrix[4][6] = 1;
+matrix[5][6] = 1;
+matrix[4][3] = 1;
+let newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => x));
+function bff() {
+  for (let i = 1; i < matrix.length - 1; i += 1) {
+    for (let j = 1; j < matrix[i].length - 1; j += 1) {
+      const p = [matrix[i - 1][j - 1], matrix[i - 1][j], matrix[i - 1][j + 1]];
+      const c = [matrix[i][j - 1], matrix[i][j + 1]];
+      const n = [matrix[i + 1][j - 1], matrix[i + 1][j], matrix[i + 1][j + 1]];
+      const neighbours = [p, c, n].reduce((a, b) => a.concat(b));
+      const sumAlive = neighbours.reduce((a, b) => a + b);
+      if (matrix[i][j] === 1) {
+        if (sumAlive > 1 && sumAlive < 4) {
+          newMatrix[i][j] = 1;
         } else {
-          newArray.push(0);
+          newMatrix[i][j] = 0;
         }
+      } else if (sumAlive === 3) {
+        newMatrix[i][j] = 1;
+      } else {
+        newMatrix[i][j] = 0;
       }
     }
   }
-};
-
-bff();
+}
+function evolution() {
+  const generation = setInterval(() => {
+    newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => x));
+    bff();
+    console.table(newMatrix);
+    [matrix, newMatrix] = [newMatrix, matrix];
+  }, 1000);
+}
+evolution();
