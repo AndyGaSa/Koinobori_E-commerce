@@ -8,7 +8,10 @@ class GameOfLife extends Array { /* extends: toma las propiedades del proto de a
   gridArrayGenerator(newGridSize) {
     let definitiveGridSize;
     if (newGridSize === undefined) {
-      definitiveGridSize = this.gridSize + 2;
+      definitiveGridSize = this.gridSize + 2; /* Incremento en dos el valor de gridSize para
+                                                obtener dos filas y dos columnas que no serán
+                                                utilizadas en el juego,pero son necesarias para
+                                                realizar la comprobacion de cellulas vivas. */
     } else {
       definitiveGridSize = newGridSize + 2;
       this.gridSize = newGridSize;
