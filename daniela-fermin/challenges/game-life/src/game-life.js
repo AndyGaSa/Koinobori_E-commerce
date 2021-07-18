@@ -103,7 +103,7 @@ function evolution() {
   generations = setInterval(() => {
     copyWorld();
     bff();
-    matrix = [...newMatrix];
+    [matrix, newMatrix] = [newMatrix, matrix];
     isItAlive();
   }, 500);
 }
@@ -119,7 +119,10 @@ const buttonStop = () => {
   const startButton = document.querySelector('#stop');
   startButton.addEventListener('click', stop);
 };
-
+const buttonReset = () => {
+  const startButton = document.querySelector('#reset');
+  startButton.addEventListener('click', theBeginning);
+};
 const theBeginning = () => {
   generateMatrix(20, 20);
   generateHtmlMatrix();
@@ -127,6 +130,7 @@ const theBeginning = () => {
   initialUniverse();
   isItAlive();
   buttonStop();
+  buttonReset();
 };
 
 theBeginning();
