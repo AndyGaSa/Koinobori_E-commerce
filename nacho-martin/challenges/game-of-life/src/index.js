@@ -1,6 +1,7 @@
 let matrix = [];
 let newMatrix;
 let generation;
+let time = false;
 class Button {
   constructor(id, status, element) {
     this.id = id;
@@ -102,12 +103,15 @@ function copyWorld() {
 }
 
 function evolution() {
-  generation = setInterval(() => {
-    copyWorld();
-    nextGen();
-    matrix = [...newMatrix];
-    isAlive();
-  }, 500);
+  if (!time) {
+    generation = setInterval(() => {
+      copyWorld();
+      nextGen();
+      matrix = [...newMatrix];
+      isAlive();
+    }, 500);
+    time = true;
+  }
 }
 
 function buttonStart() {
@@ -117,6 +121,7 @@ function buttonStart() {
 
 function stop() {
   clearInterval(generation);
+  time = false;
 }
 
 function buttonStop() {
