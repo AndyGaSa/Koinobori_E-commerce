@@ -67,3 +67,21 @@ body {
     margin: 25px;
     align-content: center;
 }
+
+.size__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.size__labelContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.size__text-input {
+    width: 50px;
+    margin-left: 15px;
+}
+
