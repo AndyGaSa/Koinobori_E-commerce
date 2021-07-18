@@ -5,8 +5,8 @@ const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
 const resolution = 10;
-canvas.width = 800;
-canvas.height = 800;
+canvas.width = 600;
+canvas.height = 600;
 
 const COLS = canvas.width / resolution;
 const ROWS = canvas.height / resolution;
@@ -20,22 +20,16 @@ function clearMatriz() {
   return new Array(COLS).fill(null)
     .map(() => new Array(ROWS).fill(null));
 }
-start.onclick = function play() {
-  requestAnimationFrame(update);
-};
-reset.onclick = function reset() {
-  matriz = buildMatriz();
-};
-clear.onclick = function clear() {
-  matriz = clearMatriz();
-};
-
-let matriz = buildMatriz();
-paint(matriz);
-function update() {
-  matriz = checkNeighbour(matriz);
-  paint(matriz);
-  requestAnimationFrame(update);
+function paint(matriz) {
+  for (let i = 0; i < matriz.length; i += 1) {
+    for (let x = 0; x < matriz[i].length; x += 1) {
+      const celda = matriz[i][x];
+      ctx.beginPath();
+      ctx.rect(i * resolution, x * resolution, resolution, resolution);
+      ctx.fillStyle = celda ? 'purple' : 'pink';
+      ctx.fill();
+    }
+  }
 }
 function checkNeighbour(matriz) {
   const matrizCopy = matriz.map((arr) => [...arr]);
@@ -94,15 +88,40 @@ function checkNeighbour(matriz) {
   return matrizCopy;
 }
 
-function paint(matriz) {
-  for (let i = 0; i < matriz.length; i += 1) {
-    for (let x = 0; x < matriz[i].length; x += 1) {
-      const celda = matriz[i][x];
-      ctx.beginPath();
-      ctx.rect(i * resolution, x * resolution, resolution, resolution);
-      ctx.fillStyle = celda ? 'purple' : 'yellow';
-      ctx.fill();
-      ctx.stroke();
-    }
+let matriz = buildMatriz();
+paint(matriz);
+
+function getMousePosition(canvasS, event) {
+  const rect = canvasS.getBoundingClientRect();
+  let x = event.clientX - rect.left + window.scrollX;
+  let y = event.clientY - rect.top + window.scrollY;
+  x /= (rect.right / COLS);
+  y /= (rect.bottom / ROWS);
+  if (matriz[Math.floor(x)][Math.floor(y)] === 1) {
+    matriz[Math.floor(x)][Math.floor(y)] = 0;
+  } else {
+    matriz[Math.floor(x)][Math.floor(y)] = 1;
   }
+  paint(matriz);
 }
+
+canvas.addEventListener('mousedown', (e) => {
+  getMousePosition(canvas, e);
+});
+
+function update() {
+  matriz = checkNeighbour(matriz);
+  paint(matriz);
+  requestAnimationFrame(update);
+}
+
+start.onclick = function play() {
+  requestAnimationFrame(update);
+};
+reset.onclick = function resetF() {
+  matriz = buildMatriz();
+};
+clear.onclick = function clearF() {
+  matriz = clearMatriz();
+  paint(matriz);
+};
