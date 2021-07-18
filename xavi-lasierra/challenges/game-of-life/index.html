@@ -10,9 +10,66 @@
 </head>
 <body class="hello">
     <header class="header">
-        <div class="header__open">
-            <nav>
-                <button id="start-button">START</button>
+        <div>
+            <nav class="header__open">
+                <div class="sliders-wrapper">
+                    <select name="cell-creator" id="cell-creator">
+                        <option value="single">Single</option>
+                        <option value="blinker">Blinker</option>
+                        <option value="glider">Glider</option>
+                    </select>
+                    <div class="slidecontainer">
+                        <label for="number-of-cells">
+                            <span>Size</span>
+                            <input type="range" min="0" max="10" value="5" class="slider" id="number-of-cells" name="number-of-cells">
+                        </label>
+                    </div>
+                    <div class="slidecontainer">
+                        <label for="generation-velocity">
+                            <span>Velocity</span>
+                            <input type="range" min="10" max="2000" value="1000" class="slider" id="generation-velocity" name="generation-velocity">
+                        </label>
+                    </div>
+                </div>
+                <div class="buttons-wrapper">
+                    <div class="buttons__generation">
+                        <button id="previous-button"><i class="fas fa-angle-left fa-lg"></i></button>
+                        <button id="start-button"><i class="fas fa-play fa-lg"></i></button>
+                        <button id="next-button"><i class="fas fa-angle-right fa-lg"></i></button>
+                    </div>
+                    <button id="reset-button"><i class="fas fa-trash"></i></button>
+
+                </div>
+                <div class="style-wrapper">
+                    <div class="style-type-selector">
+                        <label class="switch">
+                            <input id="style-custom" type="checkbox">
+                            <span class="slider-checkbox"></span>
+                        </label>
+                        <span>Custom style:</span>
+                    </div>
+                    <div class="custom-style" id="user-style">
+                        <label class="custom-style__background-color" for="background-color">
+                            <span>Background color</span>
+                            <input type="color" id="background-color" name="background-color" value="#FFFFFF">
+                        </label>
+                        <label class="custom-style__grid-color" for="grid-color">
+                            <span>Grid color</span>
+                            <input type="color" id="grid-color" name="grid-color" value="#808080">
+                        </label>
+                        <label class="custom-style__cell-color" for="cell-color">
+                            <span>Cell color</span>
+                            <input type="color" id="cell-color" name="cell-color" value="#000000">
+                        </label>
+                    </div>
+                    <div class="preset-style hide" id="choose-style">
+                        <select name="style" id="style">
+                            <option value="grey">Grey</option>
+                            <option value="rainbow">Rainbow</option>
+                            <option value="changer">Changer</option>
+                        </select>
+                    </div>
+                </div>
             </nav>
         </div>
         <div class="header__closed">
