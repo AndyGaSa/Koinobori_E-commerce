@@ -3,6 +3,7 @@ const ctx = canvas.getContext('2d');
 const startButton = document.getElementById('start-button');
 const stopButton = document.getElementById('stop-button');
 const speedSlider = document.getElementById('speed-slider');
+const lightSlider = document.getElementById('light-slider');
 const resetButton = document.getElementById('reset-button');
 const clearButton = document.getElementById('clear-button');
 let wantedSpeed = 50;
@@ -26,7 +27,7 @@ function newArray(width, height) {
 }
 function paintArray(arr = []) {
   const printedArray = newArray(arraySize, arraySize / 2);
-  ctx.clearRect(0, 0, 800, 400);
+  ctx.clearRect(0, 0, arraySize * 10, (arraySize / 2) * 10);
   for (let i = 0; i < arr.length; i += 1) {
     printedArray[arr[i][0]][arr[i][1]] = 1;
     ctx.fillStyle = 'orange';
@@ -34,6 +35,10 @@ function paintArray(arr = []) {
       (arr[i][0] * parcelSize) + 0.5, parcelSize - 1, parcelSize - 1);
   }
   return printedArray;
+}
+function lightChange() {
+  document.getElementById('body-light').style.backgroundColor = `rgba(78, 78, 78,${lightSlider.value})`;
+  console.log(`rgba(78, 78, 78,${lightSlider.value})`);
 }
 function clear() {
   aliveCells = [];
@@ -184,3 +189,4 @@ resetButton.addEventListener('click', reset);
 clearButton.addEventListener('click', clear);
 canvas.addEventListener('click', updateCellsArray);
 speedSlider.addEventListener('change', speedChange);
+lightSlider.addEventListener('change', lightChange);

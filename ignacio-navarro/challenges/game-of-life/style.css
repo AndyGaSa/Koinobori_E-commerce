@@ -2,14 +2,25 @@
     display: flex;
     flex-direction: column;
 }
+#body-light{
+    background-color: rgba(78, 78, 78,0)}
+a{
+    color: tomato;
+    cursor: pointer;
+}
+a:hover{
+    color: orange;
+}
 label{
+    color: #c5c5c5;
     font-size: 0.6em;
     font-weight: 300;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .slider {
-    width: 200px;
-    margin: 100px auto;
+    cursor: pointer;
+    width: 100px;
+    margin: 10px auto;
   }
   
 input[type="range"] {
@@ -45,7 +56,7 @@ input[type="range"]::-moz-range-thumb {
 }
 .nav-bar__buttons-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 input[type="range"]::-ms-thumb {
   width: 40px;
@@ -55,13 +66,15 @@ input[type="range"]::-ms-thumb {
   background-image: linear-gradient(to bottom, orange 0, #C98301 100%); /* W3C */
 }
 .nav-bar__header{
-    background-color: grey;
+    background-color: #3c3c3c;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .nav-bar__webs{
+    display: flex;
+    flex-direction: column;
     margin: 10px 40px;
     font-size: 2em;
     text-transform: uppercase;
@@ -74,15 +87,23 @@ input[type="range"]::-ms-thumb {
     text-transform: uppercase;
     font-weight: 600;
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: flex-start;
+}
+.slider__container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
 }
 main {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 }
 .canvas{
+    cursor:pointer;
     border-radius: 20px;
     background-color: tomato;
     margin: 20px auto;
@@ -96,20 +117,80 @@ footer{
     justify-content: center;
     flex-wrap: nowrap;
 }
-.footer__button{
-    margin: 40px;
+.game__button{
+    cursor:pointer;
+    margin: 25px;
+    border-radius: 5px;
     font-size: 2em;
     text-transform: uppercase;
     font-weight: 700;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: tomato;
-    color: orange;
+    color: #444444;
 }
-.footer__button:hover{
+.game-buttons__group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.game__button:hover{
     background-color: orange;
-    color: tomato;
+    color: #444444;
     
 }
-.slider{
-    margin: 10px;
+
+@media screen and (min-width : 600px) {
+
+    .nav-bar__link{
+        margin: 10px;
+    }
+
+    .game-buttons__group{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .slider {
+        width: 100px;
+        margin: 100px auto;
+      }
+    .nav-bar__webs{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width : 860px) {
+    .nav-bar__buttons-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .game-buttons__group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .slider {
+        width: 150px;
+        margin: 100px auto;
+      }
+      .nav-bar__sliders-container{
+        margin: 10px 40px;
+        font-size: 2em;
+        text-transform: uppercase;
+        font-weight: 600;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .nav-bar__webs{
+        display: flex;
+        flex-direction: row;
+    }
 }

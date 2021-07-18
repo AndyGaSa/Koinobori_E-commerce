@@ -8,32 +8,36 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="body">
+<body class="body" id="body-light">
     <header>
         <nav class="nav-bar__header">
             <nav class="nav-bar__sliders-container">
-                <div>
+                <div class="slider__container">
                     <label for="speed">speed</label>
                     <input class="slider" id="speed-slider" type="range" name="Speed">
                 </div>
-                <div>
-                    <label for="Size">Size</label>
-                    <input class="slider" id="Size-slider" type="range" name="Size">
+                <div class="slider__container">
+                    <label for="darkmode">darkmode</label>
+                    <input class="slider" id="light-slider" type="range" name="light">
                 </div>
             </nav>
             <nav class="nav-bar__webs">
                 <a class="nav-bar__link" href="#">home</a>
-                <a class="nav-bar__link" href="draw/draw.html">references</a>
-                <a class="nav-bar__link" href="#">wiki</a>
+                <a class="nav-bar__link" href="draw/draw.html">Draw</a>
+                <a class="nav-bar__link" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">wiki</a>
             </nav>
         </nav>
     </header>
     <main>
         <nav class="nav-bar__buttons-container">
-            <button class="footer__button" id="start-button">start</button>
-            <button class="footer__button" id="stop-button">stop</button>
-            <button class="footer__button" id="reset-button">reset</button>
-            <button class="footer__button" id="clear-button">clear</button>
+            <div class="game-buttons__group">
+                <button class="game__button" id="start-button">start</button>
+                <button class="game__button" id="stop-button">stop</button>
+            </div>
+            <div class="game-buttons__group">
+                <button class="game__button" id="reset-button">reset</button>
+                <button class="game__button" id="clear-button">clear</button>
+            </div>
         </nav>
         <canvas class="canvas" id="canvas-container" width="800" height="400">
         </canvas>

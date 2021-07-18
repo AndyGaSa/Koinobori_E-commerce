@@ -11,25 +11,38 @@
 </head>
 <body class="body">
     <header>
-        <nav class="nav-bar">
-            <a class="nav-bar__link" href="../index.html">home</a>
-            <a class="nav-bar__link" href="#">references</a>
-            <a class="nav-bar__link" href="#">wiki</a>
+        <nav class="nav-bar__header">
+            <nav class="nav-bar__sliders-container">
+                <div class="slider__container">
+                    <label for="speed">speed</label>
+                    <input class="slider" id="speed-slider" type="range" name="Speed">
+                </div>
+                <div class="slider__container">
+                    <label for="darkmode">darkmode</label>
+                    <input class="slider" id="light-slider" type="range" name="light">
+                </div>
+            </nav>
+            <nav class="nav-bar__webs">
+                <a class="nav-bar__link" href="../index.html">home</a>
+                <a class="nav-bar__link" href="draw.html">Draw</a>
+                <a class="nav-bar__link" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">wiki</a>
+            </nav>
         </nav>
-        <h1>Game of life "Drawing"</h1>
     </header>
     <main>
+        <nav class="nav-bar__buttons-container">
+            <div class="game-buttons__group">
+                <button class="game__button" id="start-button">start</button>
+                <button class="game__button" id="stop-button">stop</button>
+            </div>
+            <div class="game-buttons__group">
+                <button class="game__button" id="reset-button">reset</button>
+                <button class="game__button" id="clear-button">clear</button>
+            </div>
+        </nav>
         <canvas class="canvas--drawing" id="canvas-container" width="800" height="400">
         </canvas>
     </main>
-    <footer>
-        <button class="footer__button" id="start-button">start</button>
-        <button class="footer__button" id="stop-button">stop</button>
-        <button class="footer__button" id="reset-button">reset</button>
-        <button class="footer__button" id="clear-button">clear</button>
-        <input class="footer__slider" id="speed-slider" type="range" name="Speed">
-        <input class="footer__slider" id="size-slider" type="range" name="Size">
-    </footer>
     <script src="draw.js"></script>
 </body>
 </html>
