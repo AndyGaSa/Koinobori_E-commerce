@@ -2,7 +2,14 @@
     margin: 0;
     padding: 0;
 }
-
+body{
+    background-color: #547EF0;
+}
+h1{
+    color: #F0B930;
+    margin: 30px auto 20px;
+    width: fit-content;
+}
 .matrix-container{
 display: flex;
 flex-direction: column;
@@ -21,11 +28,11 @@ height: fit-content;
 .matrix-container__button{
 width: 25px;
 height: 25px;
-border: 1px #000 solid;
-background-color: #fff;
+border: 1px #F0B930 solid;
+background-color: #3DF04C
 }
 .alive{
-    background-color: #fff000;
+    background-color: #F0246C;
 }
 
 .button-container{
