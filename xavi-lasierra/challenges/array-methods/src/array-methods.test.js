@@ -124,4 +124,134 @@ describe('SkylabArray class', () => {
       });
     });
   });
+
+  describe('Given a some method', () => {
+    describe('When is invoked', () => {
+      describe('And array has at least 1 element mola', () => {
+        beforeEach(() => {
+          myArray.push('mola');
+        });
+        test('Then the return of some === mola will be true', () => {
+          const result = myArray.some((value) => value === 'mola');
+          expect(result).toBe(true);
+        });
+        test('Then the return of some === algo will be true', () => {
+          const result = myArray.some((value) => value === 'algo');
+          expect(result).toBe(false);
+        });
+      });
+    });
+  });
+
+  describe('Given a find method', () => {
+    describe('When is invoked', () => {
+      describe('And array has at least 2 elements [mola,skylab]', () => {
+        beforeEach(() => {
+          myArray.push('mola');
+          myArray.push('skylab');
+        });
+        test('Then the return of find mola will be mola', () => {
+          const result = myArray.find((value) => value === 'mola');
+          expect(result).toBe('mola');
+        });
+        test('Then the return of find skylab will be skylab', () => {
+          const result = myArray.find((value) => value === 'skylab');
+          expect(result).toBe('skylab');
+        });
+        test('Then the return of find algo will be undefined', () => {
+          const result = myArray.find((value) => value === 'algo');
+          expect(result).toBe(undefined);
+        });
+      });
+    });
+  });
+
+  describe('Given a filter method', () => {
+    describe('When is invoked', () => {
+      describe('And array has 5 elements [1,2,3,4,5]', () => {
+        beforeEach(() => {
+          myArray.push(1);
+          myArray.push(2);
+          myArray.push(3);
+          myArray.push(4);
+          myArray.push(5);
+        });
+        test('Then the return[0] of filter > 2 will be 3', () => {
+          const result = myArray.filter((value) => value > 2);
+          expect(result[0]).toBe(3);
+        });
+        test('Then the return[2] of filter > 2 will be 5', () => {
+          const result = myArray.filter((value) => value > 2);
+          expect(result[2]).toBe(5);
+        });
+        test('Then the return of filter > 5 will be an empty skylabArray', () => {
+          const result = myArray.filter((value) => value > 5);
+          const aux = new SkylabArray();
+          expect(result).toEqual(aux);
+        });
+      });
+    });
+  });
+
+  describe('Given a reverse method', () => {
+    describe('When is invoked', () => {
+      describe('And array has 5 elements [1,2,3,4,5]', () => {
+        beforeEach(() => {
+          myArray.push(1);
+          myArray.push(2);
+          myArray.push(3);
+          myArray.push(4);
+          myArray.push(5);
+        });
+        test('Then the return[0] will be 5', () => {
+          const result = myArray.reverse();
+          expect(result[0]).toBe(5);
+        });
+        test('Then the return[4] will be 1', () => {
+          const result = myArray.reverse();
+          expect(result[4]).toBe(1);
+        });
+        test('Then the return will be equal to my array', () => {
+          const result = myArray.reverse();
+          expect(result).toEqual(myArray);
+        });
+      });
+    });
+  });
+
+  describe('Given a concat method', () => {
+    describe('When is invoked', () => {
+      describe('And array has 3 elements [0,1,2]', () => {
+        beforeEach(() => {
+          myArray.push(0);
+          myArray.push(1);
+          myArray.push(2);
+        });
+        describe('And newArray has 3 elements [3,4,5]', () => {
+          beforeEach(() => {
+            newArray = new SkylabArray();
+            newArray.push(3);
+            newArray.push(4);
+            newArray.push(5);
+          });
+          test('Then the return will be equal to [0,1,2,3,4,5]', () => {
+            const result = myArray.concat(newArray);
+            expect(result).toEqual(new SkylabArray(0, 1, 2, 3, 4, 5));
+          });
+        });
+        describe('And the parameter is empty', () => {
+          test('Then the return will be equal to [0,1,2]', () => {
+            const result = myArray.concat();
+            expect(result).toEqual(new SkylabArray(0, 1, 2));
+          });
+        });
+        describe('And the parameter is a string skylab', () => {
+          test('Then the return will be equal to [0,1,2,skylab]', () => {
+            const result = myArray.concat('skylab');
+            expect(result).toEqual(new SkylabArray(0, 1, 2, 'skylab'));
+          });
+        });
+      });
+    });
+  });
 });

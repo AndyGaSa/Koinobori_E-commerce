@@ -30,6 +30,14 @@ class SkylabArray {
     return aux;
   }
 
+  map(callback) {
+    const newArray = new SkylabArray();
+    for (let i = 0; i < this.length; i += 1) {
+      newArray.push(callback(this[i]));
+    }
+    return newArray;
+  }
+
   some(callback) {
     for (let i = 0; i < this.length; i += 1) {
       if (callback(this[i])) return true;
@@ -52,14 +60,6 @@ class SkylabArray {
     return aux;
   }
 
-  map(callback) {
-    const newArray = new SkylabArray();
-    for (let i = 0; i < this.length; i += 1) {
-      newArray.push(callback(this[i]));
-    }
-    return newArray;
-  }
-
   reverse() {
     const aux = new SkylabArray();
     // eslint-disable-next-line for-direction
@@ -77,7 +77,8 @@ class SkylabArray {
     for (let i = 0; i < this.length; i += 1) {
       aux.push(this[i]);
     }
-    if (sArr.constructor === SkylabArray) {
+    if (sArr === undefined) return aux;
+    if (sArr !== null && sArr.constructor === SkylabArray) {
       for (let i = 0; i < sArr.length; i += 1) {
         aux.push(sArr[i]);
       }
