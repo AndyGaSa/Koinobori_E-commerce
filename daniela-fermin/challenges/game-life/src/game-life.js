@@ -1,4 +1,5 @@
 let matrix = [];
+let newMatrix;
 class Button {
   constructor(id, status, element) {
     this.id = id;
@@ -6,63 +7,67 @@ class Button {
     this.element = element;
   }
 }
+let generations;
 function generateMatrix(rows, columns) {
   for (let i = 0; i < rows; i += 1) {
     matrix[i] = [];
     for (let j = 0; j < columns; j += 1) {
-      matrix[i][j] = new Button(`button${i}${j}`, 0, null);
+      matrix[i][j] = new Button(`button${i}-${j}`, 0, null);
     }
   }
 }
-const markLife = (event) => {
-    const {id} = event.target;
-    const uniMatrix = matrix.reduce((a, b) => a.concat(b))
-    const targetButton = matrix.find((element) => element.id === id);
-    if (targetButton.status === 1){
-        targetButton.status = 0;
-        targetButton.element.classList.remove('alive')
-    } else {
-        targetButton.status = 1;
-        targetButton.element.classList.add('alive')
-    }
+function markLife(event) {
+  const { id } = event.target;
+  const uniMatrix = matrix.reduce((a, b) => a.concat(b));
+  const targetButton = uniMatrix.find((element) => element.id === id);
+  if (targetButton.status === 1) {
+    targetButton.status = 0;
+    targetButton.element.classList.remove('alive');
+  } else {
+    targetButton.status = 1;
+    targetButton.element.classList.add('alive');
+  }
 }
 const generateHtmlMatrix = () => {
-    const matrixContainer  = document.querySelector('.matrix-container')  
-    let row;
-    for (let i = 1; i < matrix.length - 1; i += 1) {
-        row = document.createElement('DIV')
-        row.classList.add('matrix-container__row')
-        for (let j = 1; j < matrix[i].length - 1; j += 1) {
-            const visualButton = document.createElement('INPUT;BUTTON')
-            matrix[i][j].element = visualButton;
-            visualButton.id = `button${i}${j}`
-            visualButton.classList.add('matrix-container__button')
-            visualButton.addEventListener('click', markLife)
-            row.appendChild(visualButton)
-        }
-        matrixContainer.appendChild(row)
+  const matrixContainer = document.querySelector('.matrix-container');
+  let row;
+  for (let i = 1; i < matrix.length - 1; i += 1) {
+    row = document.createElement('DIV');
+    row.classList.add('matrix-container__row');
+    for (let j = 1; j < matrix[i].length - 1; j += 1) {
+      const visualButton = document.createElement('INPUT:BUTTON');
+      matrix[i][j].element = visualButton;
+      visualButton.id = `button${i}-${j}`;
+      visualButton.classList.add('matrix-container__button');
+      visualButton.addEventListener('click', markLife);
+      row.appendChild(visualButton);
+    }
+    matrixContainer.appendChild(row);
+  }
+};
+function initialUniverse() {
+  matrix[2][3].status = 1;
+  matrix[3][3].status = 1;
+  matrix[4][3].status = 1;
+  matrix[5][7].status = 1;
+  matrix[2][6].status = 1;
+  matrix[6][6].status = 1;
+  matrix[4][6].status = 1;
+  matrix[5][6].status = 1;
+  matrix[4][3].status = 1;
 }
-const initialUniverse = () => {
-    matrix[2][3].status = 1;
-    matrix[3][3].status = 1;
-    matrix[4][3].status = 1;
-    matrix[5][7].status = 1;
-    matrix[2][6].status = 1;
-    matrix[6][6].status = 1;
-    matrix[4][6].status = 1;
-    matrix[5][6].status = 1;
-    matrix[4][3].status = 1;
-}
-
 
 const isItAlive = () => {
-    for (let i = 1; i < matrix.length - 1; i += 1) {
-        for (let j = 1; j < matrix[i].length - 1; j += 1) {
- if (matrix[i][j].status === 1){
-     matrix[i][j].element
- }
-        }
-}
+  for (let i = 1; i < matrix.length - 1; i += 1) {
+    for (let j = 1; j < matrix[i].length - 1; j += 1) {
+      if (matrix[i][j].status === 1) {
+        matrix[i][j].element.classList.add('alive');
+      } else {
+        matrix[i][j].element.classList.remove('alive');
+      }
+    }
+  }
+};
 function bff() {
   for (let i = 1; i < matrix.length - 1; i += 1) {
     for (let j = 1; j < matrix[i].length - 1; j += 1) {
@@ -85,39 +90,43 @@ function bff() {
     }
   }
 }
+
+const copyWorld = () => {
+  newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => [x]));
+  for (let i = 1; i < matrix.length - 1; i += 1) {
+    for (let j = 1; j < matrix[i].length - 1; j += 1) {
+      newMatrix[i][j].element = matrix[i][j].element;
+    }
+  }
+};
 function evolution() {
-    const generations = setInterval(() => {
-    let newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => x));
+  generations = setInterval(() => {
+    copyWorld();
     bff();
-    [matrix, newMatrix] = [newMatrix, matrix];
-  }, 1000);
+    matrix = [...newMatrix];
+    isItAlive();
+  }, 500);
 }
 
-
-
-clearInterval(generations)
-
-const theBeginning = () =>{
-generateMatrix (20,20);
-generateHtmlMatrix();
-initialUniverse();
-isItAlive();
+const buttonStart = () => {
+  const startButton = document.querySelector('#start');
+  startButton.addEventListener('click', evolution);
+};
+function stop() {
+  clearInterval(generations);
 }
+const buttonStop = () => {
+  const startButton = document.querySelector('#stop');
+  startButton.addEventListener('click', stop);
+};
 
-theBeginning()
+const theBeginning = () => {
+  generateMatrix(20, 20);
+  generateHtmlMatrix();
+  buttonStart();
+  initialUniverse();
+  isItAlive();
+  buttonStop();
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-module.exports =; 
+theBeginning();

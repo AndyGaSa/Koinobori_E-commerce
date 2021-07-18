@@ -16,7 +16,8 @@
 .matrix-container__row{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: fit-content;
+    height: fit-content;
 
 }
 
