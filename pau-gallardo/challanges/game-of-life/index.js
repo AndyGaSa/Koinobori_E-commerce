@@ -154,9 +154,11 @@ function update() {
 // Function that initiates the bucle and stops it
 function startStop() {
   if (play === true) {
+    document.getElementById('start').innerHTML = 'Play';
     play = false;
     clearTimeout(bucle);
   } else {
+    document.getElementById('start').innerHTML = 'Stop';
     play = true;
     update();
   }
@@ -167,12 +169,42 @@ function resetWindow() {
   location.reload();
 }
 
+// Function that creates a random Generation
+function randomGeneration() {
+  let rowArray = [];
+  let id = '';
+  let randomState;
+  for (let i = 0; i < tableFirst.length; i += 1) {
+    for (let j = 0; j < tableFirst[0].length; j += 1) {
+      id = `${i}_${j}`;
+      randomState = Math.floor(Math.random() * 15);
+      if (randomState < 14) {
+        randomState = 0;
+      } else {
+        randomState = 1;
+      }
+      if (randomState === 1) {
+        document.getElementById(id).setAttribute('class', 'alive');
+      } else {
+        document.getElementById(id).setAttribute('class', 'dead');
+      }
+      rowArray.push(randomState);
+    }
+    tableNext.push(rowArray);
+    rowArray = [];
+  }
+  tableFirst = tableNext;
+  tableNext = [];
+}
+
 function gameOfLife() {
   createTable(40, 100);
   const startStopBtn = document.getElementById('start');
   startStopBtn.addEventListener('click', startStop);
   const resetBtn = document.getElementById('reset');
   resetBtn.addEventListener('click', resetWindow);
+  const randomBtn = document.getElementById('random');
+  randomBtn.addEventListener('click', randomGeneration);
 }
 
 window.onload = () => { gameOfLife(); };
