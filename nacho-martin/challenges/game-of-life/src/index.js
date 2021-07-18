@@ -1,4 +1,6 @@
 let matrix = [];
+let newMatrix;
+
 class Button {
   constructor(id, status, element) {
     this.id = id;
@@ -29,6 +31,7 @@ function life(event) {
     targetButton.element.classList.add('alive');
   }
 }
+
 function generateHTML() {
   const container = document.querySelector('.matrix-container');
   for (let i = 1; i < matrix.length - 1; i += 1) {
@@ -45,7 +48,6 @@ function generateHTML() {
     container.appendChild(row);
   }
 }
-generateMatrix(11, 11);
 function initialUniverse() {
   matrix[2][3].status = 1;
   matrix[3][3].status = 1;
@@ -69,7 +71,6 @@ function isAlive() {
     }
   }
 }
-let newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => x));
 
 function bff() {
   for (let i = 1; i < matrix.length - 1; i += 1) {
@@ -94,7 +95,7 @@ function bff() {
   }
 }
 function copyWorld() {
-  newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => x));
+  newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => [x]));
   for (let i = 1; i < matrix.length - 1; i += 1) {
     for (let j = 1; j < matrix[i].length; j += 1) {
       newMatrix[i][j].element = matrix[i][j].element;
@@ -106,9 +107,9 @@ function evolution() {
   generation = setInterval(() => {
     copyWorld();
     bff();
-    [matrix] = [newMatrix];
+    matrix = [...newMatrix];
     isAlive();
-  }, 1500);
+  }, 500);
 }
 
 function buttonStart() {
@@ -126,7 +127,7 @@ function buttonStop() {
 }
 
 function bigBang() {
-  generateMatrix(20, 20);
+  generateMatrix(20, 30);
   generateHTML();
   buttonStart();
   initialUniverse();
