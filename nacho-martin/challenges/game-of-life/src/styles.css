@@ -27,3 +27,13 @@ background-color: #fff;
 .alive{
     background-color: #fff000;
 }
+
+.button-container{
+ margin: 50px auto;
+
+ width: 220px; 
+}
+
+.button-container__button{
+    width: 100px
+}

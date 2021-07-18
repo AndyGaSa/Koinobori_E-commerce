@@ -16,6 +16,18 @@ function generateMatrix(rows, columns) {
   }
 }
 
+function life(event) {
+  const { id } = event.target;
+  const uniMatrix = matrix.reduce((a, b) => a.concat(b));
+  const targetButton = uniMatrix.find((element) => element.id === id);
+  if (targetButton.status === 1) {
+    targetButton.status = 0;
+    targetButton.element.classList.remove('alive');
+  } else {
+    targetButton.status = 1;
+    targetButton.element.classList.add('alive');
+  }
+}
 function generateHTML() {
   const container = document.querySelector('.matrix-container');
   for (let i = 1; i < matrix.length - 1; i += 1) {
@@ -25,6 +37,7 @@ function generateHTML() {
       const visualButton = document.createElement('INPUT:BUTTON');
       visualButton.id = `button${i}${j}`;
       visualButton.classList.add('matrix-conatiner__button');
+      visualButton.addEventListener('click', life);
       matrix[i][j].element = visualButton;
       row.appendChild(visualButton);
     }
@@ -86,7 +99,6 @@ function evolution() {
     isAlive();
   }, 1000);
 }
-evolution();
 
 function bigBang() {
   generateMatrix(20, 20);
