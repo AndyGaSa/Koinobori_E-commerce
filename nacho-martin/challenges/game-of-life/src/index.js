@@ -6,12 +6,13 @@ class Button {
     this.element = element;
   }
 }
+let generation;
 
 function generateMatrix(rows, columns) {
   for (let i = 0; i < rows; i += 1) {
     matrix[i] = [];
     for (let j = 0; j < columns; j += 1) {
-      matrix[i][j] = new Button(`button${i}${j}`, 0, null);
+      matrix[i][j] = new Button(`button${i}-${j}`, 0, null);
     }
   }
 }
@@ -33,9 +34,9 @@ function generateHTML() {
   for (let i = 1; i < matrix.length - 1; i += 1) {
     const row = document.createElement('DIV');
     row.classList.add('matrix-container__row');
-    for (let j = 0; j < matrix[i].length - 1; j += 1) {
+    for (let j = 1; j < matrix[i].length - 1; j += 1) {
       const visualButton = document.createElement('INPUT:BUTTON');
-      visualButton.id = `button${i}${j}`;
+      visualButton.id = `button${i}-${j}`;
       visualButton.classList.add('matrix-conatiner__button');
       visualButton.addEventListener('click', life);
       matrix[i][j].element = visualButton;
@@ -58,10 +59,12 @@ function initialUniverse() {
 }
 
 function isAlive() {
-  for (let i = 0; i < matrix.length - 1; i += 1) {
-    for (let j = 1; j < matrix[i].length; j += 1) {
+  for (let i = 1; i < matrix.length - 1; i += 1) {
+    for (let j = 1; j < matrix[i].length - 1; j += 1) {
       if (matrix[i][j].status === 1) {
         matrix[i][j].element.classList.add('alive');
+      } else {
+        matrix[i][j].element.classList.remove('alive');
       }
     }
   }
@@ -90,21 +93,45 @@ function bff() {
     }
   }
 }
+function copyWorld() {
+  newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => x));
+  for (let i = 1; i < matrix.length - 1; i += 1) {
+    for (let j = 1; j < matrix[i].length; j += 1) {
+      newMatrix[i][j].element = matrix[i][j].element;
+    }
+  }
+}
 
 function evolution() {
-  setInterval(() => {
-    newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => x));
+  generation = setInterval(() => {
+    copyWorld();
     bff();
-    [matrix, newMatrix] = [newMatrix, matrix];
+    [matrix] = [newMatrix];
     isAlive();
-  }, 1000);
+  }, 1500);
+}
+
+function buttonStart() {
+  const startButton = document.querySelector('#start');
+  startButton.addEventListener('click', evolution);
+}
+
+function stop() {
+  clearInterval(generation);
+}
+
+function buttonStop() {
+  const stopButton = document.querySelector('#stop');
+  stopButton.addEventListener('click', stop);
 }
 
 function bigBang() {
   generateMatrix(20, 20);
   generateHTML();
+  buttonStart();
   initialUniverse();
   isAlive();
+  buttonStop();
 }
 
 bigBang();
