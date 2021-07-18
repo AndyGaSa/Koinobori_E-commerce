@@ -13,11 +13,14 @@
         <div>
             <nav class="header__open">
                 <div class="sliders-wrapper">
-                    <select name="cell-creator" id="cell-creator">
-                        <option value="single">Single</option>
-                        <option value="blinker">Blinker</option>
-                        <option value="glider">Glider</option>
-                    </select>
+                    <label class="cell-selector" for="cell-creator">
+                        <span>Cell type</span>
+                        <select name="cell-creator" id="cell-creator">
+                            <option value="single">Single</option>
+                            <option value="blinker">Blinker</option>
+                            <option value="glider">Glider</option>
+                        </select>
+                    </label>
                     <div class="slidecontainer">
                         <label for="number-of-cells">
                             <span>Size</span>
@@ -38,7 +41,6 @@
                         <button id="next-button"><i class="fas fa-angle-right fa-lg"></i></button>
                     </div>
                     <button id="reset-button"><i class="fas fa-trash"></i></button>
-
                 </div>
                 <div class="style-wrapper">
                     <div class="style-type-selector">
@@ -46,7 +48,7 @@
                             <input id="style-custom" type="checkbox">
                             <span class="slider-checkbox"></span>
                         </label>
-                        <span>Custom style:</span>
+                        <span id="style-type-selector__text">Custom style:</span>
                     </div>
                     <div class="custom-style" id="user-style">
                         <label class="custom-style__background-color" for="background-color">
@@ -64,9 +66,9 @@
                     </div>
                     <div class="preset-style hide" id="choose-style">
                         <select name="style" id="style">
-                            <option value="grey">Grey</option>
+                            <option value="default">Default</option>
                             <option value="rainbow">Rainbow</option>
-                            <option value="changer">Changer</option>
+                            <option value="changer">Changer (Epilepsy Warning)</option>
                         </select>
                     </div>
                 </div>
