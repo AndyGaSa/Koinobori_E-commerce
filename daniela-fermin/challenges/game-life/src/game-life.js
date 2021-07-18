@@ -14,7 +14,18 @@ function generateMatrix(rows, columns) {
     }
   }
 }
-
+const markLife = (event) => {
+    const {id} = event.target;
+    const uniMatrix = matrix.reduce((a, b) => a.concat(b))
+    const targetButton = matrix.find((element) => element.id === id);
+    if (targetButton.status === 1){
+        targetButton.status = 0;
+        targetButton.element.classList.remove('alive')
+    } else {
+        targetButton.status = 1;
+        targetButton.element.classList.add('alive')
+    }
+}
 const generateHtmlMatrix = () => {
     const matrixContainer  = document.querySelector('.matrix-container')  
     let row;
@@ -23,8 +34,10 @@ const generateHtmlMatrix = () => {
         row.classList.add('matrix-container__row')
         for (let j = 1; j < matrix[i].length - 1; j += 1) {
             const visualButton = document.createElement('INPUT;BUTTON')
-            visualButton.classList.add('matrix-container__button')
             matrix[i][j].element = visualButton;
+            visualButton.id = `button${i}${j}`
+            visualButton.classList.add('matrix-container__button')
+            visualButton.addEventListener('click', markLife)
             row.appendChild(visualButton)
         }
         matrixContainer.appendChild(row)

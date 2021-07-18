@@ -1,3 +1,41 @@
+*, * ::after, * ::before{
+    margin: 0;
+    padding: 0;
+}
+
 .matrix-container{
-    
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 50px auto;
+    background-color: black;
+    align-items: center;
+
+}
+
+.matrix-container__row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.matrix-container__button{
+width: 25px;
+height: 25px;
+border: 1px solid white;
+}
+
+.alive{
+    background-color: yellow;
+}
+
+.button-container{
+margin: 50px auto;
+width: 250px;
+}
+
+.button-container input{
+    width: 100px;
+
 }
