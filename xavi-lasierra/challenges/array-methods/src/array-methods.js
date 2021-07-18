@@ -94,5 +94,29 @@ class SkylabArray {
     }
     return -1;
   }
+
+  indexOf(value) {
+    for (let i = 0; i < this.length; i += 1) {
+      if (value === this[i]) return i;
+    }
+    return -1;
+  }
+
+  join(value) {
+    let result = '';
+    if (value === undefined) {
+      for (let i = 0; i < this.length - 1; i += 1) {
+        result += `${this[i]},`;
+      }
+      result += this[this.length - 1];
+    } else {
+      for (let i = 0; i < this.length - 1; i += 1) {
+        result += `${this[i]}${value}`;
+      }
+      result += this[this.length - 1];
+    }
+
+    return result;
+  }
 }
 module.exports = SkylabArray;

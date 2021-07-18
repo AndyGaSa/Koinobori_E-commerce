@@ -293,4 +293,58 @@ describe('SkylabArray class', () => {
       });
     });
   });
+
+  describe('Given an indexOf method', () => {
+    describe('When is invoked', () => {
+      describe('And array has at least 5 element [a,b,c,d,e]', () => {
+        beforeEach(() => {
+          myArray.push('a');
+          myArray.push('b');
+          myArray.push('c');
+          myArray.push('d');
+          myArray.push('e');
+        });
+        test('Then the return of indexOf of c will be 2', () => {
+          const result = myArray.indexOf('c');
+          expect(result).toBe(2);
+        });
+        test('Then the return of indexOf of e will be 4', () => {
+          const result = myArray.indexOf('e');
+          expect(result).toBe(4);
+        });
+        test('Then the return of indexOf of f will be -1', () => {
+          const result = myArray.indexOf('f');
+          expect(result).toBe(-1);
+        });
+      });
+    });
+  });
+
+  describe('Given a join method', () => {
+    describe('When is invoked', () => {
+      describe('And array has 3 elements [a,b,c]', () => {
+        beforeEach(() => {
+          myArray.push('a');
+          myArray.push('b');
+          myArray.push('c');
+        });
+        test('Then the return of join() will be a,b,c', () => {
+          const result = myArray.join();
+          expect(result).toBe('a,b,c');
+        });
+        test('Then the return of join("-") will be a,b,c', () => {
+          const result = myArray.join('-');
+          expect(result).toBe('a-b-c');
+        });
+        test('Then the return of join("") will be a,b,c', () => {
+          const result = myArray.join('');
+          expect(result).toBe('abc');
+        });
+        test('Then the return of join(null) will be a,b,c', () => {
+          const result = myArray.join(null);
+          expect(result).toBe('anullbnullc');
+        });
+      });
+    });
+  });
 });
