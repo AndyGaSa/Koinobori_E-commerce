@@ -1,4 +1,4 @@
-const matrix = [];
+let matrix = [];
 class Button {
   constructor(id, status, element) {
     this.id = id;
@@ -15,12 +15,18 @@ function generateMatrix(rows, columns) {
     }
   }
 }
-generateMatrix(5, 5);
+generateMatrix(11, 11);
 matrix[2][3].status = 1;
 matrix[3][3].status = 1;
 matrix[4][3].status = 1;
+matrix[5][7].status = 1;
+matrix[2][6].status = 1;
+matrix[6][6].status = 1;
+matrix[4][6].status = 1;
+matrix[5][6].status = 1;
+matrix[4][3].status = 1;
 
-const newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => x));
+let newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => x));
 
 function bff() {
   for (let i = 1; i < matrix.length - 1; i += 1) {
@@ -44,3 +50,13 @@ function bff() {
     }
   }
 }
+
+function evolution() {
+  setInterval(() => {
+    newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => x));
+    bff();
+    [matrix, newMatrix] = [newMatrix, matrix];
+  }, 1000);
+}
+
+evolution();
