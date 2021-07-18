@@ -105,7 +105,6 @@ describe('SkylabArray class', () => {
       });
       describe('With no argument', () => {
         test('Then throw a TypeError', () => {
-          // const t = myArray.some();
           expect(() => { myArray.some(); }).toThrow(TypeError);
         });
       });
@@ -152,22 +151,59 @@ describe('SkylabArray class', () => {
     });
   });
 
-  // describe('Given a shift method', () => {
-  //   describe('When is invoked', () => {
-  //     test('Then return undefined for an empty array.', () => {
-  //       const myNewArray = new SkylabArray();
+  describe('Given a shift method', () => {
+    describe('When is invoked', () => {
+      describe('And the array is empty', () => {
+        test('Then return undefined.', () => {
+          const myNewArray = new SkylabArray();
 
-  //       expect(myNewArray.shift()).toEqual(undefined);
-  //     });
+          expect(myNewArray.shift()).toEqual(undefined);
+        });
+      });
+      describe('And the array has one element', () => {
+        test('Then return the first element and the array has a length of 0.', () => {
+          const myNewArray = new SkylabArray();
+          myNewArray.push('First Element');
+          expect(myNewArray.shift()).toEqual('First Element');
+          expect(myNewArray.length).toEqual(0);
+        });
+      });
+      describe('And the array has 9 elements', () => {
+        test('Then return "First Element", reduce the array length from 9 to 8 and myArray[0] = "Skylab".', () => {
+          expect(myArray.shift()).toEqual('first element');
+          expect(myArray.length).toEqual(8);
+        });
+      });
+    });
+  });
 
-  //     test('Then return "First Element".', () => {
-  //       expect(myArray.shift()).toEqual('First Element');
-  //     });
-
-  //     test('Then an original array of 3 element should finish with a length of 2.', () => {
-  //       myArray.shift();
-  //       expect(myArray.length).toEqual(2);
-  //     });
-  //   });
-  // });
+  describe('Given a unshift method', () => {
+    const newArray = new SkylabArray();
+    describe('When is invoked with one value', () => {
+      describe('And the array is empty', () => {
+        test('Then return 1', () => {
+          expect(newArray.unshift('first')).toBe(1);
+        });
+      });
+      describe('And the array has already 1 value', () => {
+        test('Then myArray[0] = second and length is 2', () => {
+          expect(newArray.unshift('second')).toBe(2);
+          expect(newArray[0]).toBe('second');
+        });
+      });
+    });
+    describe('When is invoked with 3 values', () => {
+      describe('And the array has 2 values', () => {
+        test('Then return 5 and myArray[3] is "second"', () => {
+          expect(newArray.unshift('third', 'fourth', 'fifth')).toBe(5);
+          expect(newArray[3]).toBe('second');
+        });
+      });
+    });
+    describe('When is invoked with no arguments', () => {
+      test('Then return array length', () => {
+        expect(newArray.unshift()).toBe(5);
+      });
+    });
+  });
 });

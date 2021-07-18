@@ -68,5 +68,54 @@ class SkylabArray {
     }
     return newArray;
   }
+
+  shift() {
+    let elementShifted;
+    // let elementShifted1;
+
+    if (this.length <= 0) {
+      return elementShifted;
+      // return elementShifted1;
+    }
+    elementShifted = this[0];
+    //
+    // [elementShifted] = this;
+    // const [elementShifted] = this;
+    //
+    // ({ elementShifted } = this);
+    // const { elementShifted } = this;
+    //
+    if (this.length === 1) {
+      this.pop();
+    }
+    for (let i = 0; i < this.length - 1; i += 1) {
+      this[i] = this[i + 1];
+    }
+    this.pop();
+    return elementShifted;
+  }
+
+  unshift(newValue, ...moreValues) {
+    const tempArray = new SkylabArray();
+    if (arguments.length <= 0) {
+      console.log('no arguments');
+      return this.length;
+    }
+    for (let i = 0; i < this.length; i += 1) {
+      tempArray[i] = this[i];
+      tempArray.length += 1;
+    }
+    while (this.length > 0) {
+      this.pop();
+    }
+    this.push(newValue);
+    for (let i = 0; i < moreValues.length; i += 1) {
+      this.push(moreValues[i]);
+    }
+    for (let i = 0; i < tempArray.length; i += 1) {
+      this.push(tempArray[i]);
+    }
+    return this.length;
+  }
 }
 module.exports = SkylabArray;
