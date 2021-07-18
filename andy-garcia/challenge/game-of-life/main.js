@@ -1,3 +1,5 @@
+const reset = document.querySelector('.reset');
+const start = document.querySelector('.start');
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -14,10 +16,12 @@ function buildMatriz() {
       .map(() => Math.floor(Math.random() * 2)));
 }
 
+start.onclick = function play() {
+  requestAnimationFrame(update);
+};
+
 let matriz = buildMatriz();
-
-requestAnimationFrame(update);
-
+paint(matriz);
 function update() {
   matriz = checkNeighbour(matriz);
   paint(matriz);
