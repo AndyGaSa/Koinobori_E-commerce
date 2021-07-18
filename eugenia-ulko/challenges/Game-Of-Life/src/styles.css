@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
 
+@font-face {
+  font-family: 'Otomanopee One', sans-serif;
+  src: url(https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap);
+}
 body {
     background-color: rgb(26, 1, 31);
     display: flex;
@@ -32,7 +36,8 @@ header {
 
 h1 {
   color: rgb(41, 1, 32);
-  font-size:x-large;
+  font-size: 45px;
+  font-family: 'Otomanopee One', sans-serif;
 }
 
 /* MATRIX PLAYGROUND */
@@ -46,12 +51,33 @@ h1 {
   background-color: rgb(234, 216, 247);
   border: rgb(89, 50, 124) 5px;
   width: 1000px;
-  height: 400px;
+  height: 500px;
   border-radius: 10px;
 }
 
+#gol-canvas {
+  width: 400px;
+  height: 400px;
+  border: 3px solid black;
+  margin: 40px;
+}
+
 .grid {
-  
+  padding: 10px;
+  border: black;
+}
+
+.grid__row {
+  border: blueviolet 3px;
+  color: aliceblue;
+}
+
+.grid__column {
+  padding: 2px;
+  width: 5px;
+  color: aliceblue;
+  border-color: blue;
+  background-color: rgb(207, 167, 245);
 }
 
 /* NAVIGATION BAR */
@@ -67,16 +93,17 @@ h1 {
     color: blanchedalmond;
 }
 
-.navigation-bar__controlbutton {
+
+#start, #reset {
     width: 80px;
     height: 40px;
     background-color: chartreuse;
     color: rgb(26, 49, 3);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     border-radius: 10px;
-    border: 5px
+    border: 5px;
+    font-family: 'Otomanopee One', sans-serif;
 }
-.navigation-bar__controlbutton:hover {
+#start:hover, #reset:hover {
   background-color: rgb(255, 206, 235); 
 }

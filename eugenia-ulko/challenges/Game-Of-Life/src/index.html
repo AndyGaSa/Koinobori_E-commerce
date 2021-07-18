@@ -7,7 +7,7 @@
   <title>The Game of Life - John Conway</title>
 
 <link rel="stylesheet" href="styles.css">
-<script src="gameoflife.js"></script>
+
 
 </head>
 <body>
@@ -20,15 +20,16 @@
     <!-- MATRIX PLAYGROUND -->
 
     <div class="grid-container">
-
-  fffffffffff
-
-</div>
+        <canvas id="gol-canvas" width="400" height="400"></canvas>
+    </div>
 
     <!-- NAVIGATION BAR -->
 
     <nav class="navigation-bar"> 
-        <button class="navigation-bar__controlbutton" onclick="enableElement()">PLAY</button>
-        <button class="navigation-bar__controlbutton" onclick="enableElement()">RESET</button>
+        <button id="start">PLAY</button>
+        <button id="reset">RESET</button>
     </nav>
+
+<script src="gameoflife.js"></script>
+
 </body>
