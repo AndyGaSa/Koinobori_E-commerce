@@ -209,4 +209,36 @@ describe('SkylabArray class', () => {
       });
     });
   });
+
+  describe('Given a reduce method', () => {
+    describe('When is invoked', () => {
+      describe('And the array is empty', () => {
+        test('Then return a TypeError', () => {
+          const reduceCallback = (acumulator, currentValue) => acumulator + currentValue;
+          const result = myArray.reduce(reduceCallback);
+          expect(result).toBe(TypeError);
+        });
+      });
+      describe('And the array has only one value', () => {
+        test('Then return the value without executing the callback', () => {
+          myArray.push(5);
+          const reduceCallback = (acumulator, currentValue) => acumulator + currentValue;
+          const result = myArray.reduce(reduceCallback);
+          expect(result).toBe(5);
+        });
+      });
+      describe('And the array has more than one value', () => {
+        test('Then execute the callback on each element of the array, resulting in a single output value.', () => {
+          myArray.push(1);
+          myArray.push(2);
+          myArray.push(3);
+          myArray.push(4);
+          myArray.push(5);
+          const reduceCallback = (acumulator, currentValue) => acumulator * currentValue;
+          const result = myArray.reduce(reduceCallback);
+          expect(result).toBe(120);
+        });
+      });
+    });
+  });
 });
