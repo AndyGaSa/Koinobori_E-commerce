@@ -1,0 +1,69 @@
+/* Browser Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* GAME OF LIFE CSS */
+html, body {
+    /* width: 100%; */
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    /* align-items: stretch; */
+    justify-content: space-between;
+
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header,.footer {
+    background-color: rgb(253, 160, 160);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__cell {
+    width: 30px;
+    height: 30px;
+    border: solid 1px black;
+    text-align: center;
+    line-height: 30px;    
+    /* background-color: blue; */
+}
+
+.footer {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__button{
+    width: 150px;
+    height: 50px;
+    margin: 25px;
+    align-content: center;
+}
