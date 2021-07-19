@@ -25,11 +25,11 @@ h1{
 }
 
 .main-container{
-    width: 50vw;
-    height: 50vh;
+    width: 600px;
+    height: 270px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(11,1fr);
+    grid-template-rows: repeat(8,1fr);
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -63,17 +63,30 @@ h1{
 }
 .dead{
     background: darkgray;
-    width: 70px;
-    height: 55px;
+    width: 50px;
+    height: 30px;
     border: 1px solid darkgray;
     text-align: center;
     
 }
 .live{
     background:lightpink;
-    width: 70px;
-    height: 55px;
+    width: 50px;
+    height: 30px;
     border: 1px solid darkgray;
     align-content: center;
     
+}
+
+#f1c1{
+    border-radius: 15px 0 0 0;
+}
+#f1c11{
+    border-radius: 0 15px 0 0;
+}
+#f8c11{
+    border-radius: 0 0 15px 0;
+}
+#f8c1{
+    border-radius: 0 0 0 15px;
 }
