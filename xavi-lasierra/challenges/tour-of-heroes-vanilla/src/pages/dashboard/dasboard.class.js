@@ -2,7 +2,7 @@ class DashboardPage {
   constructor(heroes, startPosition, numberOfHeroes) {
     this.heroDashBoardList = [];
     for (let i = startPosition; i < startPosition + numberOfHeroes; i += 1) {
-      this.heroDashBoardList.push(heroes[i]);
+      this.heroDashBoardList.push({ id: heroes[i].id, superhero: heroes[i].superhero });
     }
   }
 
