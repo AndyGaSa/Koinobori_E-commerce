@@ -1,12 +1,14 @@
 let genOne = [
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 1, 0, 0, 0, 0],
-  [0, 0, 0, 1, 0, 0, 0, 0],
-  [0, 0, 0, 1, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0]
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ];
 
 function changeStatus() {
@@ -58,7 +60,7 @@ function gameOfLife() {
       if (genOne[rows][columns] === 0 && neighbourFlat.reduce(reducer) === 3) {
         genOneClone[rows][columns] = 1;
       } else if (genOne[rows][columns] === 1 && (neighbourFlat.reduce(reducer) < 2
-      || neighbourFlat.reduce(reducer) > 3)) {
+        || neighbourFlat.reduce(reducer) > 3)) {
         genOneClone[rows][columns] = 0;
       } else {
         genOne[rows][columns] = genOneClone[rows][columns];
