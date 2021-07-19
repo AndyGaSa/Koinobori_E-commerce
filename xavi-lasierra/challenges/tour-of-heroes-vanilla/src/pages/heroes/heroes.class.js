@@ -1,19 +1,19 @@
 class HeroesPage {
   constructor(heroes) {
     this.heroList = [];
-    for (let i = 0; i < heroes.length; i += 1) {
-      this.heroList.push({ id: heroes[i].id, superhero: heroes[i].superhero });
-    }
+    heroes.forEach((hero) => {
+      this.heroList.push({ id: hero.id, superhero: hero.superhero });
+    });
   }
 
   setView() {
-    for (let i = 0; i < this.heroList.length; i += 1) {
+    this.heroList.forEach((hero) => {
       const element = document.createElement('a');
-      element.setAttribute('href', `../details/details.html?id=${this.heroList[i].id}`);
+      element.setAttribute('href', `../details/details.html?id=${hero.id}`);
       element.setAttribute('class', 'heroes');
-      element.innerHTML = `<span class="badge">${this.heroList[i].id}</span>${this.heroList[i].superhero}`;
+      element.innerHTML = `<span class="badge">${hero.id}</span>${hero.superhero}`;
       document.getElementById('hero-list').append(element);
-    }
+    });
   }
 }
 

@@ -7,12 +7,12 @@ class DashboardPage {
   }
 
   setView() {
-    for (let i = 0; i < this.heroDashBoardList.length; i += 1) {
+    this.heroDashBoardList.forEach((hero) => {
       const element = document.createElement('a');
-      element.setAttribute('href', `../details/details.html?id=${this.heroDashBoardList[i].id}`);
-      element.innerHTML = this.heroDashBoardList[i].superhero;
+      element.setAttribute('href', `../details/details.html?id=${hero.id}`);
+      element.innerHTML = hero.superhero;
       document.getElementById('hero-list').append(element);
-    }
+    });
   }
 }
 
