@@ -10,7 +10,8 @@ class HeroesPage {
     for (let i = 0; i < this.heroList.length; i += 1) {
       const element = document.createElement('a');
       element.setAttribute('href', `../details/details.html?id=${this.heroList[i].id}`);
-      element.innerHTML = `<span>${this.heroList[i].id}</span>${this.heroList[i].superhero}`;
+      element.setAttribute('class', 'heroes');
+      element.innerHTML = `<span class="badge">${this.heroList[i].id}</span>${this.heroList[i].superhero}`;
       document.getElementById('hero-list').append(element);
     }
   }
