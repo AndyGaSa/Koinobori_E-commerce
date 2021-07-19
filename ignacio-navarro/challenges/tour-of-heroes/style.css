@@ -1,0 +1,39 @@
+.header__title{
+        font-family: sans-serif;
+        color: grey;
+}
+.header__link {
+    background-color: #dedede;
+    padding: 6px 11px;
+    font-family: sans-serif;
+    text-decoration: none;
+    border-radius: 5px;
+    color: dimgrey;
+}
+.header__link:hover {
+    color: rgb(0, 173, 196);
+}
+.dashboard{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.dashboard__title{
+    font-family: sans-serif;
+    color: grey;
+}
+#dashboard__cards{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    
+}
+.dashboard__card{
+    width: 20vw;
+    height: 20vw;
+    background-color: lightgrey;
+    text-align: center;
+    line-height: 20vw;
+}
