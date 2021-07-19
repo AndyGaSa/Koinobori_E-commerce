@@ -18,6 +18,10 @@ class DetailsPage {
     document.getElementById('hero__id').innerHTML = this.currentHero.id;
     document.getElementById('hero__name').value = this.currentHero.superhero;
     document.getElementById('hero__title').innerHTML = this.currentHero.superhero;
+    document.getElementById('hero__publisher').innerHTML = this.currentHero.publisher;
+    document.getElementById('hero__ego').innerHTML = this.currentHero.alter_ego;
+    document.getElementById('hero__first').innerHTML = this.currentHero.first_appearance;
+    document.getElementById('hero__characters').innerHTML = this.currentHero.characters;
   }
 }
 

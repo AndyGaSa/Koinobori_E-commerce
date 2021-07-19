@@ -160,4 +160,3 @@ const heroes = [
     characters: 'Norrin Radd',
   },
 ];
-console.log(heroes);

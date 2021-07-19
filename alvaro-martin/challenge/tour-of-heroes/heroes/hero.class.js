@@ -12,7 +12,7 @@ class HeroesButtons {
     document.getElementById(this.htmlId).setAttribute('href', this.href);
   }
 }
-for (let id = 0; id < 4; id += 1) {
+for (let id = 0; id < 20; id += 1) {
   const button = new HeroesButtons(id);
   button.getInfo();
 }
