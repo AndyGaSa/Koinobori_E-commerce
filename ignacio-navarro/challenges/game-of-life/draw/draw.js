@@ -31,7 +31,7 @@ function paintArray(arr = []) {
   for (let i = 0; i < arr.length; i += 1) {
     printedArray[arr[i][0]][arr[i][1]] = 1;
     ctx.fillStyle = 'orange';
-    ctx.fillRect((arr[i][1] * parcelSize), arr[i][0] * parcelSize, parcelSize, parcelSize);
+    ctx.fillRect((arr[i][1] * parcelSize) - parcelSize, (arr[i][0] * parcelSize) - parcelSize, parcelSize * 2, parcelSize * 2);
   }
   return printedArray;
 }
