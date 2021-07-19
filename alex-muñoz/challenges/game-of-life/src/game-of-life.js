@@ -10,11 +10,12 @@ let genOne = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ];
+let start;
 
 function changeStatus() {
-  const di = this.id.split('');
-  const rows = Number(di[1]);
-  const columns = Number(di[3]);
+  const idCell = this.id.split('');
+  const rows = Number(idCell[1]);
+  const columns = Number(idCell[3]);
   if (genOne[rows][columns] === 1) {
     this.setAttribute('class', 'dead');
     genOne[rows][columns] = 0;
@@ -69,10 +70,7 @@ function gameOfLife() {
   }
   changeColor();
   [genOne] = [genOneClone];
-  console.table(genOne);
 }
-
-let start;
 
 function startGame() {
   start = setInterval(() => {
