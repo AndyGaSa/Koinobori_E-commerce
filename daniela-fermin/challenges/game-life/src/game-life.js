@@ -1,5 +1,6 @@
 let matrix = [];
 let newMatrix;
+let time;
 class Button {
   constructor(id, status, element) {
     this.id = id;
@@ -71,10 +72,12 @@ const isItAlive = () => {
 function bff() {
   for (let i = 1; i < matrix.length - 1; i += 1) {
     for (let j = 1; j < matrix[i].length - 1; j += 1) {
-      const p = [matrix[i - 1][j - 1].status, matrix[i - 1][j].status, matrix[i - 1][j + 1].status];
-      const c = [matrix[i][j - 1].status, matrix[i][j + 1].status];
-      const n = [matrix[i + 1][j - 1].status, matrix[i + 1][j].status, matrix[i + 1][j + 1].status];
-      const neighbours = [p, c, n].reduce((a, b) => a.concat(b));
+      const previous = [matrix[i - 1][j - 1].status, matrix[i - 1][j].status,
+        matrix[i - 1][j + 1].status];
+      const current = [matrix[i][j - 1].status, matrix[i][j + 1].status];
+      const next = [matrix[i + 1][j - 1].status, matrix[i + 1][j].status,
+        matrix[i + 1][j + 1].status];
+      const neighbours = [previous, current, next].reduce((a, b) => a.concat(b));
       const sumAlive = neighbours.reduce((a, b) => a + b);
       if (matrix[i][j].status === 1) {
         if (sumAlive > 1 && sumAlive < 4) {
@@ -92,7 +95,7 @@ function bff() {
 }
 
 const copyWorld = () => {
-  newMatrix = matrix.map((subMatrix) => subMatrix.map((x) => [x]));
+  newMatrix = matrix.map((subMatrix) => subMatrix.map(() => new Button()));
   for (let i = 1; i < matrix.length - 1; i += 1) {
     for (let j = 1; j < matrix[i].length - 1; j += 1) {
       newMatrix[i][j].element = matrix[i][j].element;
@@ -106,6 +109,7 @@ function evolution() {
     [matrix, newMatrix] = [newMatrix, matrix];
     isItAlive();
   }, 500);
+  time = true;
 }
 
 const buttonStart = () => {
@@ -114,14 +118,27 @@ const buttonStart = () => {
 };
 function stop() {
   clearInterval(generations);
+  time = false;
 }
 const buttonStop = () => {
   const startButton = document.querySelector('#stop');
   startButton.addEventListener('click', stop);
 };
+
+const allToZero = (button) => {
+  button.status = 0;
+};
+
+const resetUniverse = () => {
+  stop();
+  const bigCrash = matrix.flat();
+  bigCrash.forEach((element) = allToZero(element));
+  initialUniverse();
+  isItAlive();
+};
 const buttonReset = () => {
   const startButton = document.querySelector('#reset');
-  startButton.addEventListener('click', theBeginning);
+  startButton.addEventListener('click', resetUniverse);
 };
 const theBeginning = () => {
   generateMatrix(20, 20);
