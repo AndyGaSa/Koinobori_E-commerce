@@ -177,8 +177,8 @@ function randomGeneration() {
   for (let i = 0; i < tableFirst.length; i += 1) {
     for (let j = 0; j < tableFirst[0].length; j += 1) {
       id = `${i}_${j}`;
-      randomState = Math.floor(Math.random() * 15);
-      if (randomState < 14) {
+      randomState = Math.floor(Math.random() * 18);
+      if (randomState < 17) {
         randomState = 0;
       } else {
         randomState = 1;
@@ -206,5 +206,11 @@ function gameOfLife() {
   const randomBtn = document.getElementById('random');
   randomBtn.addEventListener('click', randomGeneration);
 }
+
+//
+const slider = document.getElementById('myRange');
+slider.oninput = () => {
+  document.getElementById('footer__button').style.width = '100px';
+};
 
 window.onload = () => { gameOfLife(); };
