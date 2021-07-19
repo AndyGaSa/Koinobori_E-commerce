@@ -1,0 +1,16 @@
+{
+  "name": "Tour-Of-Heroes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll --collect-coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^7.31.0",
+    "jest": "^27.0.6"
+  }
+}
