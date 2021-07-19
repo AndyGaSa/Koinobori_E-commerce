@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+
+.nav__items{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+background-color: black;
+width: 100%; 
+position:fixed;
+
+}
+
+.nav__rigth{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 1em;
+}
+
+.nav--text{
+text-decoration: none;
+color: white;
+font-size: 20px;
+
+}
+
+.nav--text:hover{
+    color: yellow;
+    content:'&#9660';
+}
+
+
+
+.nav__menu{  
+    display: flex;
+    justify-content: space-around;
+    width: 20em;
+}
+
+.nav__login{
+    display: flex;
+    justify-content: space-around;
+    width: 25em;
+}
+
+.search__box{  
+      padding-left: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 2px;
+    border: none;
+}
+
+.login__section{
+    width: 30px;
+    padding: 4px;
+}
+
+.color--yellow{
+    background-color: yellow;
+    color:black;
+}
+.color--yellow:hover{
+    background-color: #f0d500;
+    color:black;
+}
+
+.slide{
+    background-repeat: no-repeat;
+    height: 26em;
+    background-image: url(https://images-2.wuaki.tv/system/images/8563/original/bvb-dortmund-1622099617-width1920-quality80.png);
+}
+
+.section__movies{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background-color: black;
+}
+
+.items__facemovies{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search__movies{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+.search__box:hover{
+    background-color: white;
+}
+
+.facemovies{
+    display: flex;
+    margin: 1em;
+    position: absolut;
+}
+.facemovies--img{
+    border: solid 1px transparent;
+}
+.facemovies--img:hover{
+    border: solid 1px yellow;
+}
+
+.triangulo{
+    color: white;
+    
+}
+
+.tarjetmovie{
+    position: absolute;
+    background-color: red;
+    margin-left: 14em;
+    width: 20em;
+    height: 19em;
+    display: none;
+}
+
+.tarjetmovie:hover{
+    position: absolute;
+    background-color: red;
+    margin-left: 14em;
+    width: 20em;
+    height: 19em;
+    display: inline-block;
+}
+
+
+
