@@ -11,4 +11,8 @@ class DetailsPage {
   }
 }
 
+const id = location.search.split('?')[1];
+const a = new DetailsPage(id);
+window.onload(a);
+
 module.exports = DetailsPage;
