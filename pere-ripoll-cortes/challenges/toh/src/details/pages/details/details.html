@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero details</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Hero Details</title>
 </head>
 <body>
     <header>
-        <h1>Tour of heores</h1>
+        <h1>Tour of Heroes</h1>
         <nav>
-            <a href="">Dashboard</a>
-            <a href="">Heroes</a>
+            <a href="../Dashboard/dashboard.html">Dashboard</a>
+            <a href="../Heroes/heroes.html">Heroes</a>
         </nav>
     </header>
     <section>
-        <h2> <span id="hero_title"></span> details!</h2>
-        <p>id: <span id="hero_id"></span></p>
+        <h2><span id="hero__title"></span> details!</h2>
+        <p>id: <span id="hero__id"></span></p>
         <label>
-            name:
-            <input id="hero_name" type="text" value="Magneta">
+            name: 
+            <input type="text" id="hero__name">
         </label>
     </section>
-    <script src="../heroes.const.js"></script>
+
+    <script src="../../heroes.const.js"></script>
+    <script src="./details.class.js"></script>
     <script src="./details.js"></script>
 </body>
 </html>
