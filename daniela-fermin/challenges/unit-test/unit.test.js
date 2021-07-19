@@ -53,5 +53,5 @@ function(){
 test("Function strict equals of true and false is false", 
 function(){
     const result = strictEquals(false, false)
+
     expect(result).toBe(true)
-})
