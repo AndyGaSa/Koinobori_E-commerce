@@ -7,7 +7,7 @@ describe('Give DetailsPage', () => {
     let properties;
 
     beforeEach(() => {
-      page = new DetailsPage(11, [{ id: 11, name: 'Dr Nice' }]);
+      page = new DetailsPage('dc-superman', [{ id: 'dc-superman', superhero: 'Superman' }]);
       properties = Object.keys(page);
     });
 
@@ -15,8 +15,16 @@ describe('Give DetailsPage', () => {
       expect(properties?.some((key) => key === 'id')).toBe(true);
     });
 
-    test('Then should have name property', () => {
+    test('Then should have superhero property', () => {
       expect(properties.some((key) => key === 'hero')).toBe(true);
+    });
+
+    test('Then id property should be dc-superman', () => {
+      expect(page.id).toBe('dc-superman');
+    });
+
+    test('Then hero.superhero property should be dc-superman', () => {
+      expect(page.hero.superhero).toBe('Superman');
     });
   });
 });
