@@ -8,6 +8,6 @@
 })()
 */
 
-const heroId = 12;
+const heroId = getIdFromUrl();
 const details = new DetailsPage(heroId, heroes);
 details.setView();
