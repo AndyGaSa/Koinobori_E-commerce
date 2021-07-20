@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="heroes.css">
+  
 </head>
 <body>
     <header >
         <h1>Tour of Heroes</h1>
         <nav>
-            <a class="header-link" href="../dashboard/index.html">Dashboard</a>
-            <a class="header-link" href="../heroes/heroes.html">Heroes</a>
+          <a class="header-link" href="../../index.html">Dashboard</a>
+          <a class="header-link" href="../heroes-list/heroes-list.html">Heroes</a>
         </nav>
     </header>
-    <main>
+    <main id="page-content">
         <h2>My Heroes</h2>
         <div>
           <label for="new-hero">Hero name: </label>
@@ -25,13 +24,14 @@
         
         <ul class="heroes">
           <li id="heroes__html-List">
-            <a href="#">
+            <a href="../heroes-details/details.html?hero-id=4">
               <span class="badge">id</span> name
             </a>
             <button class="delete" title="delete hero">x</button>
           </li>
         </ul>
     </main>
-    
+    <script src="../../../heroes-list.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
