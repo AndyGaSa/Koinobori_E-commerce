@@ -15,26 +15,56 @@ class DetailsPage {
   setSlug() {
     document.getElementById('hero__slug').innerHTML = this.hero.slug;
   }
-  setApperance() {
-    document.getElementById('hero__appearance').innerHTML = this.hero.appearence;
-  }
+  
   setPowerstats() {
-    document.getElementById('hero__powerstats').innerHTML = this.hero.powerstats;
+    const parentElement = document.getElementById("hero__powerstats");
+    for (const key in this.hero.powerstats) {
+      const element = document.createElement("li");
+      parentElement.appendChild(element);
+      element.innerHTML = key + ": " + this.hero.powerstats[key];
+    }
+  }
+  setApperance() {
+    const parentElement = document.getElementById("hero__appearance");
+    for (const key in this.hero.appearance) {
+      const element = document.createElement("li");
+      parentElement.appendChild(element);
+      element.innerHTML = key + ": " + this.hero.appearance[key];
+    }
   }
 
   setBiography() {
-    document.getElementById('hero__biography').innerHTML = this.hero.biography;
+    const parentElement = document.getElementById("hero__biography");
+    for (const key in this.hero.biography) {
+      const element = document.createElement("li");
+      parentElement.appendChild(element);
+      element.innerHTML = key + ": " + this.hero.biography[key];
+    }
   }
 
   setWork() {
-    document.getElementById('hero__work').innerHTML = this.hero.work;
+    const parentElement = document.getElementById("hero__work");
+    for (const key in this.hero.work) {
+      const element = document.createElement("li");
+      parentElement.appendChild(element);
+      element.innerHTML = key + ": " + this.hero.work[key];
+    }
   }
   setConnections() {
-    document.getElementById('hero__connections').innerHTML = this.hero.connections;
+    const parentElement = document.getElementById("hero__connections");
+    for (const key in this.hero.connections) {
+      const element = document.createElement("li");
+      parentElement.appendChild(element);
+      element.innerHTML = key + ": " + this.hero.connections[key];
+    }
   }
 
   setImages() {
-    document.getElementById('hero__images').innerHTML = this.hero.images;
+    const parentElement = document.getElementById("hero__images");
+      const element = document.createElement("img");
+      parentElement.appendChild(element);
+      element.src =  this.hero.images.sm;
+    
   }
   setView() {
     this.setId();
