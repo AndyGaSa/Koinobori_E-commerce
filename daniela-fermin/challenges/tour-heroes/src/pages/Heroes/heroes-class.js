@@ -13,7 +13,7 @@ class HeroesPage {
       heroNewIndex < this.heroList.length; heroNewIndex += 1) {
       const allHeroesDiv = document.getElementById('heroes-list--total');
       const heroesLink = document.createElement('a');
-      heroesLink.innerHTML = `<span class='badge'>${this.heroList[heroNewIndex].id},</span>${this.heroList[heroNewIndex].id}`;
+      heroesLink.innerHTML = `<span class='badge'>${this.heroList[heroNewIndex].id},</span>${this.heroList[heroNewIndex].superhero}`;
       heroesLink.setAttribute('href', `../Details/details.html?id=${this.heroList[heroNewIndex].id}`);
       heroesLink.setAttribute('class', 'heroes');
       allHeroesDiv.append(heroesLink);
