@@ -1,5 +1,5 @@
 (function detailsPageModel() {
-  const heroId = transformUrlQuerytoObject(location.search);
-  const details = new DetailsPage(+heroId, heroes);
+  const hero = transformUrlQueryToObject(location.search);
+  const details = new DetailsPage(+hero.id, hero.slug, heroes);
   details.setView();
 }());
