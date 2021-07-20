@@ -1,3 +1,3 @@
-const id = getId(window.location.search); // create getId(location.search)
+const id = transformUrlQueryToObject(location.search); // create getId(location.search)
 const detail = new DetailsPage(id, heroes);
 detail.setView();
