@@ -1,2 +1,4 @@
-const heroesPage = new HeroesPage(heroes);
-heroesPage.setView();
+(function heroes() {
+  const heroesPage = new HeroesPage(heroes);
+  heroesPage.setView();
+}());
