@@ -4,8 +4,10 @@ class DetailsPage {
     this.hero = heroes?.find((hero) => hero.id === id);
   }
 
-  setId() {
+  setTitle() {
     document.getElementById('hero__title').innerHTML = this.hero.name;
+  }
+  setId() {
     document.getElementById('hero__id').innerHTML = this.hero.id;
   }
 
@@ -67,6 +69,7 @@ class DetailsPage {
     
   }
   setView() {
+    this.setTitle()
     this.setId();
     this.setName();
     this.setSlug();
