@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>super Her Details</title>
+</head>
+<body>
+    <div class="hero">
+        <h2>{{hero.name | uppercase}} Details</h2>
+        <div><span>id: </span>{{hero.id}}</div>
+        <div>
+          <label for="hero-name">Hero name: </label>
+          <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
+        </div>
+        <button (click)="goBack()">go back</button>
+        <button (click)="save()">save</button>
+      </div>
+
+      <script src="../../../super-hero.class.js"></script>
+      <script src="./detailspage.class.js"></script>
+      <script src="./paintdetailspage.js"></script>
+</body>
+</html>
