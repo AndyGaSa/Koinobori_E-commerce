@@ -1,5 +1,5 @@
 (function detailsPageModel() {
-  const { id } = transformUrlQueryToObject(window.location.search);
-  const detail = new DetailsPage(id, heroes);
+  const { id, slug } = transformUrlQueryToObject(window.location.search);
+  const detail = new DetailsPage(id, slug, heroes);
   detail.setView();
 }());
