@@ -38,6 +38,7 @@ document.getElementById("hero__name").value = this.Hero.name;
     }
 }
 
+const heroId = getIdfromUrl(location.search);
 const heroId = getId(location.searchconst details   //11
 const details = new DetailsPage(heroId, heroes);
 details.setView();

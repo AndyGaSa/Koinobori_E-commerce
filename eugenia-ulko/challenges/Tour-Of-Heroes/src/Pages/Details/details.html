@@ -5,25 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Of Heroes</title>
+    <link rel="stylesheet" href="../Dashboard/dashboard.css">
+    <script src="details.js"></script>
 </head>
 <body>   
     <header>
         <h1>Tour Of Heroes</h1>
         <nav>
-            <a href="">Dashboard</a>
-            <a href="">Heroes</a>
+            <a href="/src/Pages/Dashboard/dashboard.html" class="header-button">Dashboard</a>
+            <a href="/src/Pages/heroes/heroes.html" class="header-button">Heroes</a>
         </nav>
+    </header>
         <section>
             <h2><span id="hero__title"></span> details!</h2>          
                 <p>id: <span id="hero__id"></span></p>
                 <label for="">
                     name:
                     <input type="text" value="Magneta" id="hero__name">
-                </label>           
+                </label> 
+               
         </section>
-    </header>
-
+    <form method="get" action="../dashboard/dashboard.html">
+            <button type="submit">Back</button>
+   </form> 
+    
     <script src="../heroes.const.js"></script>
-<script src="details.js"></script>
+<script src="details."></script>
+<script src="../Details/getIdfromUrl.js"></script>
+<script src="../Details/details.class.js"></script>
+
+
 </body>
 </html>

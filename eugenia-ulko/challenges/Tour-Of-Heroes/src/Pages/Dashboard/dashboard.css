@@ -1,0 +1,202 @@
+body {
+  margin: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+  font-size: 1.2em;
+  color: #999;
+  margin-bottom: 0;
+}
+
+.header-button {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header-button:visited,
+a:link {
+  color: #607D8B;
+}
+
+.header-button:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+
+.header-button.active {
+  color: #039be5;
+}
+
+.dashboard__h3 {
+  text-align: center;
+  margin-bottom: 0;
+  color: #444;
+  font-weight: lighter;
+}
+
+.dashboard__h4 {
+  position: relative;
+}
+
+.dashboard-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.dashboard-button {
+  flex: 1 1 120px;
+  margin: 8px;
+  padding: 20px;
+  text-align: center;
+  color: #eee;
+  max-height: 120px;
+  background-color: #607D8B;
+  border-radius: 2px;
+}
+
+.dashboard-button:hover {
+  background-color: #EEE;
+  cursor: pointer;
+  color: #607d8b;
+}
+
+@media (min-width: 600px) {
+  body {
+    padding: 2rem;
+  }
+} 
+
+.hero__title {
+  color: #888;
+}
+
+# {
+  font-size: 1em;
+  padding: .2em .4em;
+  width: 12em;
+}
+
+.hero__name {
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  font-size: 1em;
+  width: 12em;
+  padding: .2em .4em;
+  background-color: white;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+
+hero-list h2 {
+  color: #444;
+  font-weight: lighter;
+}
+
+hero-list label {
+  display: inline-block;
+  margin: .5em 0;
+  color: #607D8B;
+  font-weight: bold;
+  width: 6em;
+}
+
+hero-list input {
+  font-size: 1em;
+  padding: .2em .4em;
+}
+
+.hero-list__ul {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+
+.hero-list__item {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  color: #888;
+}
+
+hero-list li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+
+hero-list li.selected:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+
+hero-list .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+hero-list button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-right: .8em;
+  background-color: gray !important;
+  color: white;
+}
+
+hero-list button:hover {
+  background-color: #cfd8dc;
+}
+
+hero-detail label {
+  display: inline-block;
+  width: 3em;
+  margin: .5em 0;
+  color: #607D8B;
+  font-weight: bold;
+}
+
+hero-detail input {
+  font-size: 1em;
+  padding: .2em .4em;
+}
+
+hero-detail button {
+  margin-top: 20px;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+hero-detail button:hover {
+  background-color: #cfd8dc;
+}git :-moz-loading

@@ -1,4 +1,4 @@
-class Hero {
+class DetailsPage {
   constructor(id, name) {
     this.id = id;
     this.name = name;
