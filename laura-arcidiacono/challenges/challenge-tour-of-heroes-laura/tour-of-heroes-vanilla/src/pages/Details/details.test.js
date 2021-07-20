@@ -1,13 +1,12 @@
 const DetailsPage = require('./details.class');
 
-describe('Give DetailsPage', () => {
+describe('Give a class DetailsPage', () => {
   let page;
-
   describe('When an instance is created', () => {
     let properties;
 
     beforeEach(() => {
-      page = new DetailsPage(11, [{ id: 11, name: 'Dr Nice' }]);
+      page = new DetailsPage();
       properties = Object.keys(page);
     });
 
