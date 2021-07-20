@@ -33,6 +33,8 @@ class DetailsPage {
     }
 }
 
-const heroId = 11;
+const heroId = transformUrlQueryToObject(location.search);
 const details = new DetailsPage(heroId, heroes);
 details.setView();
+
+
