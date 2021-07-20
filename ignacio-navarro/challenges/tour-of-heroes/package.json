@@ -2,7 +2,7 @@
   "name": "tour-of-heroes",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "heroes-list.js",
   "scripts": {
     "test": "jest --watchAll --collect-coverage"
   },

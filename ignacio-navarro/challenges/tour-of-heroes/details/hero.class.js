@@ -9,3 +9,5 @@ class HeroDetailsClass {
     document.getElementById('hero-card__name').value = this.name;
   }
 }
+
+module.exports = HeroDetailsClass;

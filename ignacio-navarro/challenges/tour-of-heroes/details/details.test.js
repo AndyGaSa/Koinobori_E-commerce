@@ -1,13 +1,13 @@
-const DetailsPage = require('./hero.class');
+const HeroDetailsClass = require('./hero.class');
 
-describe('Give DetailsPage', () => {
+describe('Given HeroDetailsClass', () => {
   let page;
 
   describe('When an instance is created', () => {
     let properties;
 
     beforeEach(() => {
-      page = new DetailsPage(11, [{ id: 11, name: 'Dr Nice' }]);
+      page = new HeroDetailsClass('dc-superman', [{ id: 'dc-superman', name: 'Dr Nice' }]);
       properties = Object.keys(page);
     });
 
@@ -16,7 +16,14 @@ describe('Give DetailsPage', () => {
     });
 
     test('Then should have name property', () => {
-      expect(properties.some((key) => key === 'hero')).toBe(true);
+      expect(properties.some((key) => key === 'name')).toBe(true);
+    });
+    test('Then should id should be 11', () => {
+      expect(page.id).toEqual('dc-superman');
+    });
+
+    test('Then should have name property', () => {
+      expect(page.name).toEqual('superman');
     });
   });
 });
