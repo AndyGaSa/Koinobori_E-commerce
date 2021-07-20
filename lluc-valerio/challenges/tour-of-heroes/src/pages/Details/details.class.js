@@ -12,4 +12,3 @@ class DetailsPage {
 }
 
 module.exports = DetailsPage;
-// export default DetailsPage;
