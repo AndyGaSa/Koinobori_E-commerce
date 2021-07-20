@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Sarpanch:900');
+
+body {
+  background-image: url("https://i.redd.it/0hx6fe1ctevz.jpg");
+  background-size: cover;
+}
+
+*{
+  font-family: 'Sarpanch', sans-serif;
+  color: #05ffa1;
+}
+
+h1 {
+  font-size: 7vmin;
+  margin:0;
+  padding: 0;
+  text-shadow: 1vmin 1vmin 0 #ff71ce, -1vmin -1vmin 0 #b967ff;
+}
+
+h2{
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 15px;
+    font-size: 2vmin;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar button {
+    text-align:center;
+    width: 18vw;
+    margin-top: 3vh;
+    font-size: 3.5vmin;
+    border-color:transparent;
+    background-color: transparent;
+    text-shadow: 0.25vmin 0.25vmin 0 #ff71ce, -0.25vmin -0.25vmin 0 #b967ff;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas{
+    border-radius:5%;
+}
+
