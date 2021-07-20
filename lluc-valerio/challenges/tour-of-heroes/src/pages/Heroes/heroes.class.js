@@ -22,7 +22,7 @@ class HeroesPage {
       domButton.innerText = 'x';
       //
       domElementA.appendChild(domSpan);
-      domElementA.append(`     ${hero.name}`);
+      domElementA.append(` ${hero.name}`);
       //
       domElementLi.appendChild(domElementA);
       domElementLi.appendChild(domButton);
