@@ -1,7 +1,16 @@
 class DetailsPage {
-  constructor(id, heroes) {
+  constructor(id, slug, heroes) {
     this.id = id;
-    this.hero = heroes.find((hero) => hero.id === id);
+    this.slug = slug;
+    this.setHero(heroes);
+  }
+
+  setHero() {
+    if (this.id) {
+      this.hero = heroes.find((hero) => hero.id === this.id);
+    } else if (this.slug) {
+      this.hero = heroes.find((hero) => hero.slug === this.slug);
+    }
   }
 
   setView() {
