@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../heroes/heroes.css">
-    <title>List of heroes</title>
+    <title>Heroes</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="./heroes.css">
 </head>
 <body>
     <header>
         <h1>Tour of Heroes</h1>
         <nav>
-            <a href="../dashboard/dashboard.html">Dashboard</a>
-            <a href="../heroes/heroes.html">Heroes</a>
+            <a href="../Dashboard/dashboard.html">Dashboard</a>
+            <a href="#">Heroes</a>
         </nav>
     </header>
-    <section>
-        <h2>My Heroes</h2>
-        <div id="heroes__list"></div>
-    </section>
-    <ul class="heroes">
-      <li *ngFor="let hero of heroes">
-        <a routerLink="/detail/{{hero.id}}">
-          <span class="badge">{{hero.id}}</span> {{hero.name}}
-        </a>
-      </li>
+    <h2>My Heroes</h2>
+
+    <div>
+        <label for="new-hero">Hero name: </label>
+        <input id="new-hero" />
+
+        <button class="add-button">
+            Add hero
+        </button>
+    </div>
+
+    <ul class="heroes" id="heroes__list">
     </ul>
-    <script src="../../heroesconst.js"></script>
-    <script src="../../heroclass.js"></script>
+
+    <script src="../../heroes.const.js"></script>
+    <script src="./heroes.class.js"></script>
     <script src="./heroes.js"></script>
 </body>
 </html>
