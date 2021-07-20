@@ -10,9 +10,9 @@ describe('Given a transformUrlQueryToObject function', () => {
     });
   });
 
-  describe('When is invoked with id=dc-batman', () => {
+  describe('When is invoked with id=1', () => {
     beforeEach(() => {
-      query = '?id=dc-batman';
+      query = '?id=1';
       response = transformUrlQueryToObject(query);
     });
 
@@ -21,14 +21,14 @@ describe('Given a transformUrlQueryToObject function', () => {
       expect(keys.some((key) => key === 'id')).toBe(true);
     });
 
-    test('Then id should point to dc-batman', () => {
-      expect(response.id).toBe('dc-batman');
+    test('Then id should point to 1', () => {
+      expect(response.id).toBe('1');
     });
   });
 
-  describe('When is invoked with id=dc-batman and superhero=Batman', () => {
+  describe('When is invoked with id=1 and slug=1-batman', () => {
     beforeEach(() => {
-      query = '?id=dc-batman&superhero=Batman';
+      query = '?id=1&slug=1-batman';
       response = transformUrlQueryToObject(query);
     });
     test('Then id should be a key in the returned object', () => {
@@ -36,13 +36,13 @@ describe('Given a transformUrlQueryToObject function', () => {
       expect(keys.some((key) => key === 'id')).toBe(true);
     });
 
-    test('Then superhero should be a key in the returned object', () => {
+    test('Then slug should be a key in the returned object', () => {
       const keys = Object.keys(response);
-      expect(keys.some((key) => key === 'superhero')).toBe(true);
+      expect(keys.some((key) => key === 'slug')).toBe(true);
     });
 
-    test('Then superhero should point to Batman', () => {
-      expect(response.superhero).toBe('Batman');
+    test('Then slug should point to 1-batman', () => {
+      expect(response.slug).toBe('1-batman');
     });
   });
 });

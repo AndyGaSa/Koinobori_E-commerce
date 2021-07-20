@@ -8,10 +8,10 @@ describe('Give DashboardPage', () => {
 
     beforeEach(() => {
       page = new DashboardPage([
-        { id: 'dc-superman', superhero: 'Superman' },
-        { id: 'dc-flash', superhero: 'Flash' },
-        { id: 'dc-green', superhero: 'Green Lantern' },
-        { id: 'dc-arrow', superhero: 'Green Arrow' }
+        { id: '1', superhero: 'Superman' },
+        { id: '2', superhero: 'Flash' },
+        { id: '3', superhero: 'Green Lantern' },
+        { id: '4', superhero: 'Green Arrow' }
       ]);
       properties = Object.keys(page);
     });
@@ -21,7 +21,7 @@ describe('Give DashboardPage', () => {
     });
 
     test('Then heroDashBoardList[0].id  should be dc-superman', () => {
-      expect(page.heroDashBoardList[0].id).toBe('dc-superman');
+      expect(page.heroDashBoardList[0].id).toBe('1');
     });
 
     test('Then heroDashBoardList[3].superhero  should be Green Arrow', () => {
