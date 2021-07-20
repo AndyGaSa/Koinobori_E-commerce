@@ -358,4 +358,48 @@ const heroes = [
       lg: 'https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/lg/8-adam-strange.jpg',
     },
   },
+  {
+    id: 10,
+    name: 'Agent Bob',
+    slug: '10-agent-bob',
+    powerstats: {
+      intelligence: 10,
+      strength: 8,
+      speed: 13,
+      durability: 5,
+      power: 5,
+      combat: 20,
+    },
+    appearance: {
+      gender: 'Male',
+      race: 'Human',
+      height: ["5'10", '178 cm'],
+      weight: ['181 lb', '81 kg'],
+      eyeColor: 'Brown',
+      hairColor: 'Brown',
+    },
+    biography: {
+      fullName: 'Bob',
+      alterEgos: 'No alter egos found.',
+      aliases: ['Bob', 'agent of Hydra', 'Bob', 'agent of A.I.M'],
+      placeOfBirth: '-',
+      firstAppearance: 'Cable & Deadpool #38 (May, 2007)',
+      publisher: 'Marvel Comics',
+      alignment: 'good',
+    },
+    work: {
+      occupation: 'Mercenary, janitor; former pirate, terrorist',
+      base: 'Mobile; formerly Manhattan, Hellcarrier',
+    },
+    connections: {
+      groupAffiliation: 'A.I.M., Deadpool; formerly Agency X, Hydra',
+      relatives: 'Allison (ex-wife); Terry and Howie (sons)',
+    },
+    images: {
+      xs: 'https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/xs/10-agent-bob.jpg',
+      sm: 'https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/sm/10-agent-bob.jpg',
+      md: 'https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/md/10-agent-bob.jpg',
+      lg: 'https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/lg/10-agent-bob.jpg',
+    },
+  },
 ];
