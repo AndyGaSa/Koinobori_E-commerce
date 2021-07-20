@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../heroes/heroes.css">
     <title>List of heroes</title>
 </head>
 <body>
@@ -19,6 +20,13 @@
         <h2>My Heroes</h2>
         <div id="heroes__list"></div>
     </section>
+    <ul class="heroes">
+      <li *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}">
+          <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </a>
+      </li>
+    </ul>
     <script src="../../heroesconst.js"></script>
     <script src="../../heroclass.js"></script>
     <script src="./heroes.js"></script>
