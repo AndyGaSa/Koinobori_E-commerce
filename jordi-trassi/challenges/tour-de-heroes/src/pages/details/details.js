@@ -1,4 +1,9 @@
 // acceder a los heroes
+(function detailsPageModel() {
+    const { heroId } = transformUrlQueryToObject(location.search);
+    const details = new DetailsPage(+heroId, heroes);
+    details.setView();
+  }());
 
 
 // (function details() {
@@ -20,21 +25,19 @@
 
 // selecciono donde pinter el nombre y pinto
 
-class DetailsPage {
-    constructor(id, heroes) {
-        this.id = id;
-        this.hero = heroes.find((hero) => hero.id === id)
-    }
+// class DetailsPage {
+//     constructor(id, heroes) {
+//         this.id = id;
+//         this.hero = heroes.find((hero) => hero.id === id)
+//     }
 
-    setView(){
-        document.getElementById('hero__title').innerHTML = currentHero.name;
-        document.getElementById('hero__id').innerHTML = currentHero.id;
-        document.getElementById('hero__name').value = currentHero.name;
-    }
-}
+//     setView(){
+//         document.getElementById('hero__title').innerHTML = currentHero.name;
+//         document.getElementById('hero__id').innerHTML = currentHero.id;
+//         document.getElementById('hero__name').value = currentHero.name;
+//     }
+// }
 
-const heroId = transformUrlQueryToObject(location.search);
-const details = new DetailsPage(heroId, heroes);
-details.setView();
+
 
 

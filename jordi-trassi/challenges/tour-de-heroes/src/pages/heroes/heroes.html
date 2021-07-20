@@ -14,14 +14,24 @@
             <a href="../Dashboard/dashboard.html">Dashboard</a>
             <a href="#">Heroes</a>
         </nav>
-        <section>
-            <h2>My Heroes</h2>
-        </section>
     </header>
+    <h2>My Heroes</h2>
+    <div>
+        <label for="new-hero">Hero name: </label>
+        <input id="new-hero" />
 
-        
+        <button class="add-button">
+            Add hero
+        </button>
+    </div>
+
+    <ul class="heroes" id="heroes__list">
+    </ul>
+
     <script src="../../heroes.const.js"></script>
-    <script src="heroes.js"></script>
+    <script src="./heroes.class.js"></script>
+    <script src="./heroes.js"></script>
+        
 </body>
 </html>
 
