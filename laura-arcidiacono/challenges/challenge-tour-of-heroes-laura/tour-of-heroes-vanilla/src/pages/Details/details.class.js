@@ -4,18 +4,48 @@ class DetailsPage {
     this.hero = heroes?.find((hero) => hero.id === id);
   }
 
-  setView() {
+  setId() {
     document.getElementById('hero__title').innerHTML = this.hero.name;
     document.getElementById('hero__id').innerHTML = this.hero.id;
+  }
+
+  setName() {
     document.getElementById('hero__name').value = this.hero.name;
-    document.getElementById('hero__slug').value = this.hero.slug;
-    document.getElementById('hero__appearance').value = this.hero.appearence;
-    document.getElementById('hero__powerstats').value = this.hero.powerstats;
-    document.getElementById('hero__biography').value = this.hero.biography;
-    document.getElementById('hero__work').value = this.hero.work;
-    document.getElementById('hero__connections').value = this.hero.connections;
-    document.getElementById('hero__images').value = this.hero.images;
-    
+  }
+  setSlug() {
+    document.getElementById('hero__slug').innerHTML = this.hero.slug;
+  }
+  setApperance() {
+    document.getElementById('hero__appearance').innerHTML = this.hero.appearence;
+  }
+  setPowerstats() {
+    document.getElementById('hero__powerstats').innerHTML = this.hero.powerstats;
+  }
+
+  setBiography() {
+    document.getElementById('hero__biography').innerHTML = this.hero.biography;
+  }
+
+  setWork() {
+    document.getElementById('hero__work').innerHTML = this.hero.work;
+  }
+  setConnections() {
+    document.getElementById('hero__connections').innerHTML = this.hero.connections;
+  }
+
+  setImages() {
+    document.getElementById('hero__images').innerHTML = this.hero.images;
+  }
+  setView() {
+    this.setId();
+    this.setName();
+    this.setSlug();
+    this.setPowerstats();
+    this.setApperance();
+    this.setBiography();
+    this.setWork();
+    this.setConnections();
+    this.setImages();    
   }
 }
 
