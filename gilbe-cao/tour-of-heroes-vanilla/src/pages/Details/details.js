@@ -9,6 +9,6 @@
 })()
 */
 
-const heroId = 12;
-const details = new DetailsPage(heroId, heroes);
+const { heroId } = transformUrlQueryToObject(location.search);
+const details = new DetailsPage(+heroId, heroes);
 details.setView();
