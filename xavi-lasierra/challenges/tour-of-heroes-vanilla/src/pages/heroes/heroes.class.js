@@ -1,9 +1,6 @@
 class HeroesPage {
   constructor(heroes) {
-    this.heroList = [];
-    heroes.forEach((hero) => {
-      this.heroList.push({ id: hero.id, superhero: hero.superhero });
-    });
+    this.heroList = heroes;
   }
 
   setView() {
