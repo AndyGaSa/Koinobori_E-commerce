@@ -1,2 +1,4 @@
-const dashboard = new DashboardPage(heroes, 1, 4);
-dashboard.setView();
+(function dashboardPageModel() {
+  const dashboard = new DashboardPage(heroes, 1, 4);
+  dashboard.setView();
+}());
