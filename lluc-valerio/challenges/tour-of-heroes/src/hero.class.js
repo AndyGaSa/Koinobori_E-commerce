@@ -1,6 +1,6 @@
-class Hero {
-    constructor (id, name) {
-        this.id = id;
-        this.name = name;
-    }
+class Hero {
+  constructor(id, name) {
+    this.id = id;
+    this.name = name;
+  }
 }

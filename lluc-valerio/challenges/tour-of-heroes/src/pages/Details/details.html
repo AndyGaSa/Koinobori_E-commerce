@@ -5,27 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hero Details</title>
+    <link rel="stylesheet" href="./details.css">
 </head>
 <body>
     <header>
-        <h1>Tour Of Heroes</h1>
+        <h1>Tour of Heroes</h1>
         <nav>
-            <a href="">Dashboard</a>
-            <a href="">Heroes</a>
+            <a href="../Dashboard/dashboard.html">Dashboard</a>
+            <a href="../Heroes/heroes.html">Heroes</a>
         </nav>
     </header>
-    <section>
-        <h2><span id="hero__title"></span> details!</h2>
-        <p>id: <span id="hero__id"></span></p>
-        <label for="">
-            name:
-            <input type="text" name="" id="hero__name">
-        </label>
-    </section>
-    <footer>
-        <button>Back</button>
-    </footer>
-    <script src="../heroes.const.js"></script>
-    <script src="../details/details.js"></script>
+    <div>
+        <h2><span id="hero__title"></span> Details</h2>
+        <div><span>id: </span><span id="hero__id"></span></div>
+        <div>
+            <label for="hero-name">Hero name: </label>
+            <input id="hero-name" type="text" placeholder="Hero name" >
+        </div>
+        <button>go back</button>
+    </div>
+
+    <script src="../../heroes.const.js"></script>
+    <script src="./details.class.js"></script>
+    <script src="./details.js"></script>
 </body>
 </html>
