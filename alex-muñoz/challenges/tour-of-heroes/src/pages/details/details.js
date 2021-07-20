@@ -1,6 +1,6 @@
 // acceder a los heroes y buscar el que tiene el id 15
-
-(function details() {
+//*
+/* (function details() {
   const id = 13; // Todo hacer en el challange
   const currentHero = heroes.find((hero) => hero.id === id);
   // pintar el nombre y el id
@@ -8,7 +8,7 @@
   document.getElementById('hero__title').innerHTML = currentHero.name;
   document.getElementById('hero__id').innerHTML = currentHero.id;
   document.getElementById('hero__name').value = currentHero.name;
-}());
+}()) */
 /* Segunda manera de hacer lo mismo que lo anterior.
 //'location' para acceder a la url y todos los datos.
 class DetailsPage(){
@@ -26,3 +26,6 @@ const heroId = getId(location.search)
 const details = new DetailsPage(heroId,heroes);
 details.setView();
 */
+const heroId = getIdFromUrl();
+const details = new DetailsPage(heroId, heroes);
+details.setView();
