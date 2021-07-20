@@ -6,8 +6,8 @@ class DashboardPage {
   setView() {
     this.heroDashBoardList.forEach((hero) => {
       const element = document.createElement('a');
-      element.href = `../details/details.html?id=${hero.id}`;
-      element.innerText = hero.superhero;
+      element.href = `../details/details.html?slug=${hero.slug}`;
+      element.innerText = hero.name;
       document.getElementById('hero-list').appendChild(element);
     });
   }

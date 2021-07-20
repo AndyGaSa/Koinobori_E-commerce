@@ -14,9 +14,9 @@ class DetailsPage {
   }
 
   setView() {
-    document.getElementById('hero__title').innerHTML = this.hero.superhero;
+    document.getElementById('hero__title').innerHTML = this.hero.name;
     document.getElementById('hero__id').innerHTML = this.hero.id;
-    document.getElementById('hero__name').value = this.hero.superhero;
+    document.getElementById('hero__name').value = this.hero.name;
   }
 }
 

@@ -7,7 +7,7 @@ class HeroesPage {
     this.heroList.forEach((hero) => {
       const element = `<li *ngFor="let hero of heroes">
           <a href="../details/details.html?id=${hero.id}">
-            <span class="badge">${hero.id}</span> ${hero.superhero}
+            <span class="badge">${hero.id}</span> ${hero.name}
           </a>
           <button class="delete" title="delete hero"">x</button>
         </li>`;
