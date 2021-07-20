@@ -7,7 +7,7 @@ describe('Give DetailsPage', () => {
     let properties;
 
     beforeEach(() => {
-      page = new DetailsPage('dc-superman', [{ id: 'dc-superman', superhero: 'Superman' }]);
+      page = new DetailsPage('dc-superman', '1-dc-superman', [{ id: 'dc-superman', superhero: 'Superman' }]);
       properties = Object.keys(page);
     });
 

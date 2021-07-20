@@ -5,7 +5,7 @@ class DetailsPage {
     this.setHero(heroes);
   }
 
-  setHero() {
+  setHero(heroes) {
     if (this.id) {
       this.hero = heroes.find((hero) => hero.id === this.id);
     } else if (this.slug) {

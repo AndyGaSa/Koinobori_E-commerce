@@ -8,12 +8,11 @@ describe('Give DashboardPage', () => {
 
     beforeEach(() => {
       page = new DashboardPage([
-        { id: 'dc-batman', superhero: 'Batman' },
         { id: 'dc-superman', superhero: 'Superman' },
         { id: 'dc-flash', superhero: 'Flash' },
         { id: 'dc-green', superhero: 'Green Lantern' },
         { id: 'dc-arrow', superhero: 'Green Arrow' }
-      ], 1, 4);
+      ]);
       properties = Object.keys(page);
     });
 
