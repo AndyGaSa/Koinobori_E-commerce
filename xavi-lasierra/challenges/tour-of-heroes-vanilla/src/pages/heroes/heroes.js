@@ -13,3 +13,8 @@ document.getElementById('add-hero-button').addEventListener('click', () => {
     heroesPage.setNewView(newHero);
   }
 });
+
+function deleteHeroFromList(id) {
+  deleteHero(id);
+  document.getElementById(`hero-list${id}`).remove();
+}

@@ -5,11 +5,11 @@ class HeroesPage {
 
   setView() {
     this.heroList.forEach((hero) => {
-      const element = `<li *ngFor="let hero of heroes">
+      const element = `<li id="hero-list${hero.id}">
           <a href="../details/details.html?id=${hero.id}">
             <span class="badge">${hero.id}</span> ${hero.name}
           </a>
-          <button class="delete" title="delete hero"">x</button>
+          <button class="delete" onclick="deleteHeroFromList(${hero.id})">x</button>
         </li>`;
 
       document.getElementById('hero-list').innerHTML += element;
@@ -18,11 +18,11 @@ class HeroesPage {
 
   setNewView(newHero) {
     this.heroList.push(newHero);
-    const element = `<li *ngFor="let hero of heroes">
+    const element = `<li id="hero-list${newHero.id}">
         <a href="../details/details.html?id=${newHero.id}">
           <span class="badge">${newHero.id}</span> ${newHero.name}
         </a>
-        <button class="delete" title="delete hero"">x</button>
+        <button class="delete" onclick="deleteHeroFromList(${newHero.id})">x</button>
       </li>`;
 
     document.getElementById('hero-list').innerHTML += element;

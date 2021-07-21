@@ -31,10 +31,13 @@ function createNewHero(heroName) {
     name: heroName,
     slug: `${id}-${heroName.toLowerCase().replace(' ', '-')}`
   };
-  const heroesSaved = getHeroes();
-  heroesSaved.push(newHero);
-  saveHeroes(heroesSaved);
+  heroes.push(newHero);
+  saveHeroes(heroes);
   saveMaxId(id);
-  heroes = getHeroes();
   return newHero;
+}
+
+function deleteHero(heroId) {
+  heroes = heroes.filter((hero) => hero.id !== heroId);
+  saveHeroes(heroes);
 }
