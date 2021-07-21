@@ -1,4 +1,4 @@
-const heroes = [
+const heroesPredefined = [
   {
     id: 1,
     name: 'A-Bomb',
