@@ -1,3 +1,6 @@
+const DetailsPage = require('./details.class');
+
+
 'Given a transformUrlQuerytoObject function';
 'When is invoked with a valid search string';
 'Then returns an object';
@@ -13,3 +16,9 @@
 
 'And heroId=14 is included';
 'Then heroId should be a key in the returned object';
+
+
+// THEN - testes
+// given and when são descrição
+
+

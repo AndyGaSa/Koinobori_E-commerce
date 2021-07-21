@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Of Heroes</title>
-    <link rel="stylesheet" href="../Dashboard/dashboard.css">
+    <link rel="stylesheet" href="heroes.css">
     <script src="details.js"></script>
 </head>
 <body>   
@@ -17,23 +17,32 @@
         </nav>
     </header>
 
-    <script src="../heroes.const.js"></script>
-<script src="details.js"></script>
-
 <h2>My Heroes</h2>
-    <ul id='heroes' class="hero-list__ul">
-        <li><a id="hero-list__item" href="/src/Pages/Details/details.html">Mr. Nice</a></li>
-        <li><a id="hero-list__item" href="/src/Pages/Details/details.html">Narco</a></li>
-        <li><a id="hero-list__item" href="/src/Pages/Details/details.html">Bombasto</a></li>
-        <li><a id="hero-list__item" href="/src/Pages/Details/details.html">Celeritas</a></li> 
-        <li><a id="hero-list__item" href="/src/Pages/Details/details.html">Magneta</a></li>
-        <li><a id="hero-list__item" href="/src/Pages/Details/details.html">RubberMan</a></li>
-        <li><a id="hero-list__item" href="/src/Pages/Details/details.html">Dynama</a></li>
-        <li><a id="hero-list__item" href="/src/Pages/Details/details.html">Dr IQ</a></li> 
-        <li><a id="hero-list__item" href="/src/Pages/Details/details.html">Magma</a></li>
-        <li><a id="hero-list__item" href="/src/Pages/Details/details.html">Tornado</a></li>
+
+
+    <ul id='heroes' class="heroes">
+
+        <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+    <button class="delete" title="delete hero"
+      (click)="delete(hero)">x</button>
+  </li>
+        <li><a id="hero-list__item" href="/Pages/Details/details.html"><span class="badge">`${hero.id}`</span> `${hero.name}`</a></li>
+        <li><a id="hero-list__item" href="/Pages/Details/details.html"><span class="badge">`${hero.id}`</span>`${hero.name}`</a></li>
+        <li><a id="hero-list__item" href="/Pages/Details/details.html"><span class="badge">`${hero.id}`</span>`${hero.name}`</a></li>
+        <li><a id="hero-list__item" href="/Pages/Details/details.html"><span class="badge">`${hero.id}`</span>`${hero.name}`</a></li> 
+        <li><a id="hero-list__item" href="/Pages/Details/details.html"><span class="badge">`${hero.id}`</span>`${hero.name}`</a></li>
+        <li><a id="hero-list__item" href="/Pages/Details/details.html"><span class="badge">`${hero.id}`</span>`${hero.name}`</a></li>
+        <li><a id="hero-list__item" href="/Pages/Details/details.html"><span class="badge">`${hero.id}`</span>`${hero.name}`</a></li>
+        <li><a id="hero-list__item" href="/Pages/Details/details.html"><span class="badge">`${hero.id}`</span>`${hero.name}`</a></li> 
+        <li><a id="hero-list__item" href="/Pages/Details/details.html"><span class="badge">`${hero.id}`</span>`${hero.name}`</a></li>
+        <li><a id="hero-list__item" href="/Pages/Details/details.html"><span class="badge">`${hero.id}`</span>`${hero.name}`</a></li>
         </ul>
     <script src="./heroes.js"></script>
     <script src="./hero.class.js"></script> 
+    <script src="../heroes.const.js"></script>
+<script src="details.js"></script>
 </body>
 </html>

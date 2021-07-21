@@ -1,3 +1,15 @@
-function transformUrlQueryToObject() {
-  return 11;
+function transformUrlQueryToObject(searchString) {
+  const response = {};
+
+  if (searchString) {
+    const queryWithoutQuestionMark = searchString(1, searchString.length);
+    const entries = queryWithoutQuestionMark.split('&');
+    entries.forEach(entry) => {
+      const [key, value] = entry.split('=');
+      response[key] = value;
+    });
+  }
+  return response;
 }
+
+module.exports = transformUrlQueryToObject;

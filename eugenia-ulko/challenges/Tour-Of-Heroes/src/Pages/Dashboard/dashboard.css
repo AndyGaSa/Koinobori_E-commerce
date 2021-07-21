@@ -7,6 +7,7 @@ h1, h2 {
   font-size: 1.2em;
   color: #999;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .header-button {
@@ -71,132 +72,69 @@ a:link {
   body {
     padding: 2rem;
   }
-} 
 
-.hero__title {
-  color: #888;
+.dashboard-button {
+    width: 18%;
+    box-sizing: content-box;
+  }
+
+.dashboard-button:hover {
+  background-color: black;
+}
 }
 
-# {
-  font-size: 1em;
-  padding: .2em .4em;
-  width: 12em;
-}
+/* DashboardComponent's private CSS styles */
 
-.hero__name {
-  border-bottom: 1px solid gray;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
-  font-size: 1em;
-  width: 12em;
-  padding: .2em .4em;
-  background-color: white;
-  cursor: pointer;
-}
-
-a {
-  cursor: pointer;
-
-hero-list h2 {
-  color: #444;
-  font-weight: lighter;
-}
-
-hero-list label {
-  display: inline-block;
-  margin: .5em 0;
-  color: #607D8B;
-  font-weight: bold;
-  width: 6em;
-}
-
-hero-list input {
-  font-size: 1em;
-  padding: .2em .4em;
-}
-
-.hero-list__ul {
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  padding: 0;
-  width: 15em;
-}
-
-.hero-list__item {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
-  color: #888;
-}
-
-hero-list li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
-}
-
-hero-list li.selected:hover {
-  background-color: #BBD8DC !important;
-  color: white;
-}
-
-hero-list .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #607D8B;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
-}
-
-hero-list button {
-  border: none;
-  padding: 6px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-  margin-right: .8em;
-  background-color: gray !important;
-  color: white;
-}
-
-hero-list button:hover {
-  background-color: #cfd8dc;
-}
-
-hero-detail label {
-  display: inline-block;
-  width: 3em;
-  margin: .5em 0;
-  color: #607D8B;
-  font-weight: bold;
-}
-
-hero-detail input {
-  font-size: 1em;
-  padding: .2em .4em;
-}
-
-hero-detail button {
-  margin-top: 20px;
-  background-color: #eee;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-hero-detail button:hover {
-  background-color: #cfd8dc;
-}git :-moz-loading
+h2 {
+    text-align: center;
+  }
+  
+  .heroes-menu {
+    padding: 0;
+    margin: auto;
+    max-width: 1000px;
+  
+    /* flexbox */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  /* a {
+    background-color: #3f525c;
+    border-radius: 2px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    min-width: 70px;
+    margin: .5rem auto;
+    box-sizing: border-box;
+  
+    /* flexbox */
+    /*order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+  } 
+  
+  @media (min-width: 600px) {
+    {
+      width: 18%;
+      box-sizing: content-box;
+    }
+  }
+  
+  :hover {
+    background-color: black;
+  }*/
+  
