@@ -8,7 +8,7 @@ class DashboardButtons {
   }
 
   getInfo() {
-    document.getElementById(this.htmlId).innerHTML = this.currentHeroName;
+    document.getElementById(this.htmlId).innerHTML = this.currentHero;
     document.getElementById(this.htmlId).setAttribute('href', this.href);
   }
 }

@@ -12,18 +12,32 @@ class DetailsPage {
   constructor(id, heroes) {
     this.id = id;
     this.currentHero = heroes.find((hero) => hero.id === id);
+    this.powerstatsValues = Object.entries(this.currentHero.powerstats);
+    this.appearance = Object.entries(this.currentHero.appearance);
   }
 
   updatePage() {
     document.getElementById('hero__id').innerHTML = this.currentHero.id;
-    document.getElementById('hero__name').value = this.currentHero.superhero;
-    document.getElementById('hero__title').innerHTML = this.currentHero.superhero;
-    document.getElementById('hero__publisher').innerHTML = this.currentHero.publisher;
-    document.getElementById('hero__ego').innerHTML = this.currentHero.alter_ego;
-    document.getElementById('hero__first').innerHTML = this.currentHero.first_appearance;
-    document.getElementById('hero__characters').innerHTML = this.currentHero.characters;
+    document.getElementById('hero__name').value = this.currentHero.name;
+    document.getElementById('hero__slug').innerHTML = this.currentHero.slug;
+    const fatherPower = document.getElementById('hero__description__power');
+    for (let index = 0; index < this.powerstatsValues.length; index += 1) {
+      const newLi = document.createElement('li');
+      const newContect = document.createTextNode(`${this.powerstatsValues[index][0]}: ${this.powerstatsValues[index][1]}`);
+      console.log(this.powerstatsValues[index]);
+      newLi.appendChild(newContect);
+      fatherPower.appendChild(newLi);
+    }
+    const fatherApperance = document.getElementById('hero__description__apperance');
+    for (let index = 0; index < this.appearance.length; index += 1) {
+      const newLi2 = document.createElement('li');
+      const newContect2 = document.createTextNode(`${this.appearance[index][0]}: ${this.appearance[index][1]}`);
+      console.log(this.appearance[index]);
+      newLi2.appendChild(newContect2);
+      fatherApperance.appendChild(newLi2);
+    }
   }
 }
 
-const details = new DetailsPage(id, heroes);
+const details = new DetailsPage(+id, heroes);
 details.updatePage();
