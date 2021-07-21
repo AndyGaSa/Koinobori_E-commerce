@@ -90,7 +90,6 @@ class DetailsPage {
     let { relatives } = this.hero.connections;
     if (relatives.indexOf(';') !== -1) {
       relatives = relatives.split('; ');
-      console.log('hello');
     } else {
       relatives = relatives.split(', ');
     }
