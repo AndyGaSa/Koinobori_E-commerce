@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="heroes.css">
+</head>
+<body>
+    <header >
+        <h1>Tour of Heroes</h1>
+        <nav>
+            <a class="header-link" href="../dashboard/dashboard.html">Dashboard</a>
+            <a class="header-link" href="../heroes/heroes.html">Heroes</a>
+        </nav>
+    </header>
+    <main>
+        <h2>My Heroes</h2>
+        
+        <div>
+          <label for="new-hero">Create your own hero: </label>
+          <input id="new-hero" placeholder="your Hero name"/>
+        </div>
+        <button id="save-hero">save</button>
+        <div>
+          <label for="search-hero">Hero name: </label>
+          <input id="search-hero" placeholder="Search Hero"/>
+        </div>
+        <ul class="heroes" id="hero-list-DOM">
+        </ul>
+    </main>
+    <script src="../heroes-list.js"></script>
+    <script src="../local-storage.js"></script>
+    <script src="./heroes.class.js"></script>
+    <script src="./heroes.js"></script>
+</body>
+</html>
