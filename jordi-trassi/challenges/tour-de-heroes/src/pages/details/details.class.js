@@ -11,6 +11,7 @@ class DetailsPage {
       this.setImage();
       this.setTitleHero();
       this.setPowerstats();
+      this.setAppearence();
       
     }
 
@@ -34,8 +35,23 @@ class DetailsPage {
       document.getElementById('hero__powerstats--combat').innerHTML = this.hero.powerstats.combat;
     }
 
+    setAppearence() {      
+      const entriAppearance = Object.entries(this.hero.appearance);
 
-  }
+      const parentElement = document.getElementById('hero__appearance');
+
+      for (let i = 0; i < entriAppearance.length; i += 1) {
+        const li = document.createElement('li');
+        const arrAppearance = entriAppearance[i];
+        li.innerText = `${arrAppearance[0]}: ${arrAppearance[1]}`;
+        parentElement.appendChild(li);
+      } 
+    }
+
+}
+
+
+  
   
   module.exports = DetailsPage;
   
