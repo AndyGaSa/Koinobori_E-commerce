@@ -193,34 +193,54 @@ let nameValue = params.get('name') // 'pepe'
 
 [API resource](https://akabab.github.io/superhero-api/api/)
 
+### Jest manual mock for http request
+Para crear un mock de forma manual creamos el directorio __mocks__ dentro de este directorio creamos el archivo de la funcion que queremos mockear.
 
 
 ### Ejemplo de la llamada cors asincrona
 ~~~javascript
-window.onload = function(){
-  localStorage.dataSenJson!==undefined
-  ?(dataSenJson=JSON.parse(localStorage.getItem("dataSenJson")),
-  document.body.replaceChild(new drawTable(enDatSen, dataSenJson),
-  document.getElementById("tabla0")))
-  
-  :Promise.all([newXHR("http://congress.api.sunlightfoundation.com/legislators?apikey=837ea94f520b43a0825be5db3b44a39b&chamber=senate&per_page=all"),newXHR("https://nytimes-ubiqum.herokuapp.com/congress/113/senate")])
-  .then(
-    function(value){
-      dataSenJson=new crearObjetoDatatable(JSON.parse(value[0]),
-      JSON.parse(value[1]));localStorage.setItem("dataSenJson",
-      JSON.stringify(dataSenJson));
-      document.body.replaceChild(new drawTable(enDatSen, dataSenJson),
-      document.getElementById("tabla0"));});
-  localStorage.Data!==undefined
-  
-  ?Data=JSON.parse(localStorage.getItem("Data"))
-   
-   Draw function here
-    
-  document.body.replaceChild())
-  :Promise.all(newXHR(["http://api.myjson.com/bins/1gbooz"])).then(function(value){
-    Data=JSON.parse(value),
-    localStorage.setItem("Data", JSON.stringify(Data))
+// With XMLHttpRequest
+/**
+ * Funcion que crea una promesa con una Peticion XML contra la API que indiquemos en 'url'
+ * @param {String} url Indicamos la direccion del recurso que queremos pedir a la API
+ */
+function newXHR(url){
+    return new Promise(function(resolve, reject){
+        let xhr=new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.onloadend=function(){resolve(this.response)};
+        xhr.onerror=function(){reject(console.error("La solicitud no a podido ser resuelta"))};
+        xhr.send();
+    });
+}
+// Use case
+  Promise.all(newXHR(["URI"])).then(function(value){
+   //Do stuff
   });
 }
+// with fetch API
+/**
+ * https://developer.mozilla.org/es/docs/Web/API/Fetch_API
+ * https://akabab.github.io/superhero-api/
+ * @param { Number || String } heroId Id number || 'all' => to obtain all heroes json
+ * @param { String } heroInfo id, powerstat, apparence, biography, connections, work
+ * @returns { Object } promise
+ */
+const callHeroe = async (heroId, heroInfo) => {
+  const consult = heroId === 'all' ? `${heroId}.json` : `${heroInfo}/${heroId}.json`;
+  const response = await fetch(`https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/${consult}`);
+  return response.json()
+    .then((hero) => { response.json = hero; return response; })
+    .catch((error) => new Error(error));
+};
+
+export default callHeroe;
+/* use case
+newCall = await callHeroe( id, 'info' )
+*/
 ~~~
+
+
+# Challenge 21/7
+Poder filtrar heroes y despues hacer un CRUD
+esto debe de implementarse en la pagina de heroes
