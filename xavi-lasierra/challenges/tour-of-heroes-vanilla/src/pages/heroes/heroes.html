@@ -20,13 +20,18 @@
         <h2>My Heroes</h2>
         <div>
             <label for="new-hero">Hero name: </label>
-            <input id="new-hero" #heroName />
-          
-            <!-- (click) passes input value to add() and then clears the input -->
-            <button class="add-button" (click)="add(heroName.value); heroName.value=''">
+            <input id="new-hero" name="new-hero">
+            <button id="add-hero-button" class="add-button">
               Add hero
             </button>
-          </div>
+        </div>
+        <div>
+            <label for="filter-hero">Search heroes: </label>
+            <input id="filter-hero" name="filter-hero">
+            <button id="filter-hero-button" class="filter-button">
+              Search
+            </button>
+        </div>
         <ul id="hero-list" class="heroes">
                 
         </ul>

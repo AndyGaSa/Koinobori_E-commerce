@@ -15,6 +15,18 @@ class HeroesPage {
       document.getElementById('hero-list').innerHTML += element;
     });
   }
+
+  setNewView(newHero) {
+    this.heroList.push(newHero);
+    const element = `<li *ngFor="let hero of heroes">
+        <a href="../details/details.html?id=${newHero.id}">
+          <span class="badge">${newHero.id}</span> ${newHero.name}
+        </a>
+        <button class="delete" title="delete hero"">x</button>
+      </li>`;
+
+    document.getElementById('hero-list').innerHTML += element;
+  }
 }
 
 module.exports = HeroesPage;

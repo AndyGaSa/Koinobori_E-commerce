@@ -62,12 +62,14 @@ input {
   border-radius: 4px 0 0 4px;
 }
 
+.filter-button,
 .add-button {
  padding: .5rem 1.5rem;
  font-size: 1rem;
  margin-bottom: 2rem;
 }
 
+.filter-button:hover,
 .add-button:hover {
   color: white;
   background-color: #42545C;
