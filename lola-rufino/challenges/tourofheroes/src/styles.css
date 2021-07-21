@@ -2,6 +2,17 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  hr{
+    border-top: 2px dashed #264d73
+  }
+
+ li{
+    list-style-type: circle;
+    color: #264d73;
+    text-transform: uppercase;
+  }
+
   h1 {
     color: #264D73;
     font-size: 2.5rem;

@@ -1,6 +1,6 @@
 const DetailsPage = require('./details.class');
 
-describe('Give DetailsPage', () => {
+describe('Given DetailsPage', () => {
   let page;
 
   describe('When an instance is created', () => {
