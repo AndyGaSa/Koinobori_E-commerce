@@ -1,4 +1,4 @@
-const DetailsPage = require('./details.class');
+const DetailsPage = require('./details.class', '../../heroes.const');
 
 describe('Give a class DetailsPage', () => {
   let page;
