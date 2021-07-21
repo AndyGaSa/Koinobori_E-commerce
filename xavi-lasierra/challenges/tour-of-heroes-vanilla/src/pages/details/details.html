@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="details.css">
+    <title>Hero Details</title>
+</head>
+<body>
+    <header>
+        <h1>Tour of Heroes</h1>
+        <nav>
+            <a href="../dashboard/dashboard.html">Dashboard</a>
+            <a href="../heroes/heroes.html">Heroes</a>
+        </nav>
+    </header>
+    <section>
+        <h2><span id="hero__title"></span> details!</h2>
+        <div>
+            <p>id: <span id="hero__id"></span></p>
+            <label>
+                Hero name:
+                <input type="text" value="" id="hero__name">
+            </label>
+        </div>
+    </section>
+
+    <script src="../../hero.const.js"></script>
+    <script src="./id-getter.js"></script>
+    <script src="./details.class.js"></script>
+    <script src="./details.js"></script>
+</body>
+</html>
