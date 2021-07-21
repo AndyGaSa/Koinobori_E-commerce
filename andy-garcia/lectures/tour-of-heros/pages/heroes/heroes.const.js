@@ -403,3 +403,8 @@ const heroesArray = [
     },
   },
 ];
+const cont = localStorage.getItem('cont');
+if (cont === null) {
+  localStorage.setItem('heroes', JSON.stringify(heroesArray));
+  localStorage.setItem('cont', 0);
+}

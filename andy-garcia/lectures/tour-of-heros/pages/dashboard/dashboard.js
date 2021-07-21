@@ -1,4 +1,3 @@
-localStorage.setItem('heroes', JSON.stringify(heroesArray));
 let heroes = localStorage.getItem('heroes');
 heroes = JSON.parse(heroes);
 class DashboardButtons {

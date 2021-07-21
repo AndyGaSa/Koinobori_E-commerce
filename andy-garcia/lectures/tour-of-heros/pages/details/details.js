@@ -1,6 +1,6 @@
-localStorage.setItem('heroes', JSON.stringify(heroesArray));
 let heroes = localStorage.getItem('heroes');
 heroes = JSON.parse(heroes);
+console.log(heroes);
 const id = getParameterByName('id');
 
 class DetailsPage {
