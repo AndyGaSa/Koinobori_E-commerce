@@ -16,11 +16,10 @@ document.getElementById('add-hero-button').addEventListener('click', () => {
 
 document.getElementById('filter-hero-button').addEventListener('click', () => {
   const input = document.getElementById('filter-hero').value;
-  if (input) {
-    const callbackFunction = (hero) => JSON.stringify(hero).toLowerCase()
-      .includes(input.toLowerCase());
-    heroesPage.resetPage(heroes.filter(callbackFunction));
-  }
+
+  const callbackFunction = (hero) => JSON.stringify(hero).toLowerCase()
+    .includes(input.toLowerCase());
+  heroesPage.resetPage(heroes.filter(callbackFunction));
 });
 
 function deleteHeroFromList(id) {
