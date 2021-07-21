@@ -1,0 +1,10 @@
+
+.canvas--drawing{
+    cursor:pointer;
+    border-radius: 20px;
+    background-color: tomato;
+    margin: 20px auto;
+    width: 80vw;
+     filter: drop-shadow(11px 10px 17px #363636e0);
+     cursor:pointer;
+}
