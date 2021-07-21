@@ -4,10 +4,6 @@ function getMaxId(heroesObject) {
   return Math.max(...heroesObject.map((hero) => +hero.id));
 }
 
-function getHeroes() {
-  return JSON.parse(localStorage.getItem('heroes'));
-}
-
 function saveHeroes(newHeroes) {
   localStorage.setItem('heroes', JSON.stringify(newHeroes));
 }
@@ -21,7 +17,7 @@ function saveMaxId(newMaxId) {
     saveHeroes(heroesPredefined);
     saveMaxId(getMaxId(heroesPredefined));
   }
-  heroes = getHeroes();
+  heroes = JSON.parse(localStorage.getItem('heroes'));
 }());
 
 function createNewHero(heroName) {
@@ -39,5 +35,13 @@ function createNewHero(heroName) {
 
 function deleteHero(heroId) {
   heroes = heroes.filter((hero) => hero.id !== heroId);
+  saveHeroes(heroes);
+}
+
+function updateHero(heroId, heroName) {
+  const newHeroProperties = {
+    name: heroName
+  };
+  heroes = heroes.map((hero) => (hero.id === heroId ? { ...hero, ...newHeroProperties } : hero));
   saveHeroes(heroes);
 }
