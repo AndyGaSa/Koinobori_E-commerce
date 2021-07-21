@@ -1,9 +1,12 @@
+localStorage.setItem('heroes', JSON.stringify(heroesArray));
+let heroes = localStorage.getItem('heroes');
+heroes = JSON.parse(heroes);
 class DashboardButtons {
   constructor(id) {
     this.id = heroes[id].id;
     this.href = `../details/details.html?id=${this.id}`;
     this.htmlId = `h2__link${id}`;
-    this.currentHeroName = heroes[id].superhero;
+    this.currentHeroName = heroes[id].name;
     console.log(this.currentHeroName);
   }
 
