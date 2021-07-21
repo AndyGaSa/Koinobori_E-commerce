@@ -13,6 +13,7 @@ class DetailsPage {
       this.setPowerstats();
       this.setAppearence();
       this.setBiography();
+      this.setWork()
       
     }
 
@@ -56,9 +57,20 @@ class DetailsPage {
         li.innerText = `${arrBiography[0]}: ${arrBiography[1]}`;
         parentElement.appendChild(li);
       } 
-
     }
 
+    setWork() {
+      const entriWork = Object.entries(this.hero.work);
+      const parentElement = document.getElementById('hero__work');
+      for (let i = 0; i < entriWork.length; i += 1) {
+        const li = document.createElement('li');
+        const arrWork = entriWork[i];
+        li.innerText = `${arrWork[0]}: ${arrWork[1]}`;
+        parentElement.appendChild(li);
+      } 
+    }
+
+    
 }
 
 
