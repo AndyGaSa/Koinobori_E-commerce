@@ -27,6 +27,12 @@ class HeroesPage {
 
     document.getElementById('hero-list').innerHTML += element;
   }
+
+  resetPage(newHeroes) {
+    this.heroList = newHeroes;
+    document.getElementById('hero-list').innerHTML = '';
+    this.setView();
+  }
 }
 
 module.exports = HeroesPage;
