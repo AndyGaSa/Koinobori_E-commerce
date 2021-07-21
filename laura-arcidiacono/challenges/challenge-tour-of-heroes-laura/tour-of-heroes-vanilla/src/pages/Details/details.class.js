@@ -22,7 +22,7 @@ class DetailsPage {
 
   setPowerstats() {
     const parentElement = document.getElementById('hero__powerstats');
-    for (const key in this.hero.powerstat) {
+    for (const key in this.hero.powerstats) {
       const element = document.createElement('li');
       parentElement.appendChild(element);
       element.innerHTML = `${key}: ${this.hero.powerstats[key]}`;
@@ -56,7 +56,6 @@ class DetailsPage {
     }
   }
 
-}
   setConnections() {
     const parentElement = document.getElementById('hero__connections');
     for (const key in this.hero.connections) {
