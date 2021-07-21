@@ -12,6 +12,7 @@ class DetailsPage {
       this.setTitleHero();
       this.setPowerstats();
       this.setAppearence();
+      this.setBiography();
       
     }
 
@@ -37,15 +38,25 @@ class DetailsPage {
 
     setAppearence() {      
       const entriAppearance = Object.entries(this.hero.appearance);
-
       const parentElement = document.getElementById('hero__appearance');
-
       for (let i = 0; i < entriAppearance.length; i += 1) {
         const li = document.createElement('li');
         const arrAppearance = entriAppearance[i];
         li.innerText = `${arrAppearance[0]}: ${arrAppearance[1]}`;
         parentElement.appendChild(li);
       } 
+    }
+
+    setBiography() {
+      const entriBiography = Object.entries(this.hero.biography);
+      const parentElement = document.getElementById('hero__biography');
+      for (let i = 0; i < entriBiography.length; i += 1) {
+        const li = document.createElement('li');
+        const arrBiography = entriBiography[i];
+        li.innerText = `${arrBiography[0]}: ${arrBiography[1]}`;
+        parentElement.appendChild(li);
+      } 
+
     }
 
 }

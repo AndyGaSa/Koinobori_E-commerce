@@ -36,3 +36,9 @@ main {
   flex-direction: column;
 }
 
+#hero__appearance, #hero__biography {
+  text-transform: capitalize;
+}
+
+
+
