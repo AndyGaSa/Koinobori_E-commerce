@@ -403,4 +403,3 @@ const heroes = [
     }
   }
 ];
-module.exports = DetailsPage;
