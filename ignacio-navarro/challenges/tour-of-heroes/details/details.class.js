@@ -18,15 +18,27 @@ class HeroDetails {
 
 function printHeroSections(details) {
   const heroProperties = Object.entries(details);
-  console.log(heroProperties);
   const profileDOM = document.getElementById('hero-profile');
   heroProperties.forEach((element) => {
-    const parent = document.createElement('h2');
-    const child = document.createElement('p');
-    parent.innerHTML = element[0];
-    child.innerHTML = Object.entries(element[1]);
-    profileDOM.appendChild(parent);
-    parent.appendChild(child);
+    if (typeof element[1] === 'object') {
+      const parent = document.createElement('ul');
+      parent.innerHTML = element[0];
+      profileDOM.appendChild(parent);
+      Object.entries(element[1]).forEach((stat) => {
+        const child = document.createElement('li');
+        parent.appendChild(child);
+        if (stat[1].length > 50) {
+          debugger;
+          const longString = stat[1].split(';');
+          longString.forEach((substat) => {
+            const grandchild = document.createElement('p');
+            child.appendChild(grandchild);
+            grandchild.innerHTML = substat;
+          });
+        }
+        child.innerHTML = `${stat[0]}: ${stat[1]}`;
+      });
+    }
   });
   printHeroSectionsContents(heroProperties);
 }
