@@ -1,12 +1,12 @@
 class HeroesPage {
-  constructor(heroes) {
-    this.heroes = heroes;
+  constructor(superHeroes) {
+    this.superHeroes = superHeroes;
   }
 
-  setView() {
-    this.heroes.forEach((hero) => {
+  paintAllHeroes() {
+    this.superHeroes.forEach((hero) => {
       const element = `<li>
-            <a href="../Details/details.html?heroId=${hero.id}">
+            <a href="../details/details.html?slug=${hero.slug}">
             <span class="badge">${hero.id}</span> ${hero.name}
             </a>
             <button class="delete" title="delete hero">x</button>
