@@ -27,8 +27,8 @@ class HeroesPage {
     this.heroes.forEach((hero) => {
       const element = `<li>
         <a href=../Details/details.html?id=${hero.id}
-        <span class='badge'> ${hero.id}</span> ${hero.name} </a>
-        <button class='delete'>x</button>
+        <span class='badge' > ${hero.id}</span> ${hero.name} </a>
+        <button id='${hero.id}' class='delete' onclick=delete(${hero.id})>x</button>
         </li>`;
       const parentElement = document.getElementById('heroes__list');
       parentElement.innerHTML += element;
