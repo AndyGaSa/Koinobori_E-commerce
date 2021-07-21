@@ -1,18 +1,40 @@
+
+* {
+    margin: 0; 
+}
+
+body {
+    background-color: rgb(40, 40, 40);
+}
+table {
+    border-collapse: collapse;
+    position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 td {
-    width: 50px; 
-    height: 50px;
+    border: 1px solid rgb(40, 40, 40);
+    width: 10px; 
+    height: 10px;
+}
+
+
+.alive {
+    background-color: rgb(20, 20, 255);
 }
 
 .dead {
-    background-color: gray;
+    background-color: rgb(60, 60, 60)
 }
-
-.alive {
-    background-color: blue;
-}
-
 .play {
-    width: 50px; 
-    height: 50px;
-    background-color: red;
+    font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+    font-weight: bold;
+    margin-left: 1px;
+    margin-right: 1px;
+    width: 100px; 
+    height: 100px;
+    background-color: rgb(60, 60, 60)
 }

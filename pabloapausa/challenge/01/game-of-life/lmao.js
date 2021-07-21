@@ -1,142 +1,92 @@
+
 class Life {
-    constructor() {
-        cell0 = this.matrix();
-        cell1 = this.matrix();
-        this.otro();
-    }
-
-    matrix() {
-        let array = [];
-        for (let xAxis = 0; xAxis <= row; xAxis++) {
-            array[xAxis] = [];  
-            for (let yAxis = 0; yAxis <= column; yAxis++) {
-                array[xAxis][yAxis] = '.';
-            }
-        }
-        return array;
-    }
-
-    otro() {
-        let table = document.querySelector('.table');
-        for (let xAxis = 0; xAxis <= row; xAxis++) {
+    constructor() { 
+        let table = document.querySelector('table');
+        for (let x = 0; x <= row; x++) {
             let tr = document.createElement('tr'); 
-            // tr.setAttribute("class", `table__row-${xAxis} row-${xAxis}`);
-            // tr.setAttribute("class", `table__row-${xAxis} row-${xAxis}`);
-            for (let yAxis = 0; yAxis <= column; yAxis++) {
+            [first[x], second[x]] = [[], []]
+            for (let y = 0; y <= column; y++) {
                 let td = document.createElement('td');
-                // td.setAttribute("class", `row-${xAxis} row-${xAxis}__column-${yAxis}`);
+                td.setAttribute('id', `${x}-${y}`);
+                td.setAttribute('class', `dead`);
+                [first[x][y], second[x][y]] = [0, 0];
                 tr.appendChild(td);
             }
             table.appendChild(tr);
         }
     }
 
-    execute() {
-        let neighbours; 
+    user(cell) {
+        this.cell = cell; 
+        let [x, y] = this.cell.id.split("-");
+        if (first[x][y] === 0) return this.isAlive(first, x, y); 
+        return this.isDead(first, x, y); 
+    }
+
+    computer() {
         for (let x = 1; x < row; x++) {
             for (let y = 1; y < column; y++) {
-                neighbours = 0;
-                neighbours += (cell0[x - 1][y - 1] === 1) ? 1 : 0; // Top left position.
-                neighbours += (cell0[x][y - 1] === 1) ? 1 : 0; // Top center position.
-                neighbours += (cell0[x + 1][y - 1] === 1) ? 1 : 0; // Top right position.
-                neighbours += (cell0[x - 1][y] === 1) ? 1 : 0; // Center left position.
-                neighbours += (cell0[x + 1][y] === 1) ? 1 : 0; // Center right position. 
-                neighbours += (cell0[x - 1][y + 1] === 1) ? 1 : 0; // Bottom left position. 
-                neighbours += (cell0[x][y + 1] === 1) ? 1 : 0; // Bottom center position.
-                neighbours += (cell0[x + 1][y + 1] === 1) ? 1 : 0; // Bottom right position. 
-                cell1[x][y] = ((neighbours === 3) || (neighbours === 2 && cell0[x][y] === 1)) ? 1 : '.'; 
+                let neighbours = this.find(first, x, y);
+                (neighbours === 3 || (neighbours === 2 && first[x][y] === 1))
+                ? this.isAlive(second, x, y) : this.isDead(second, x, y);
             }
         }
-        return cell1;
+        return [first, second] = [second, first];
     }
+
+    isAlive(array, x, y) { // Closure function. 
+        [this.array, this.x, this.y] = [array, x, y];
+        let cell = document.getElementById(`${this.x}-${this.y}`);
+        cell.setAttribute('class', 'alive');  
+        return this.array[this.x][this.y] = 1; 
+    }
+
+    isDead(array, x, y) { // Closure function. 
+        [this.array, this.x, this.y] = [array, x, y];
+        let cell = document.getElementById(`${this.x}-${this.y}`); 
+        cell.setAttribute('class', 'dead');
+        return this.array[this.x][this.y] = 0; 
+    }
+
+    find(array, x, y) { // Closure function. 
+        [this.array, this.x, this.y] = [array, x, y];
+        let neighbours = 0;
+        neighbours += (first[x - 1][y - 1] === 1) ? 1 : 0; // Top left. 
+        neighbours += (first[x][y - 1] === 1) ? 1 : 0; // Top center. 
+        neighbours += (first[x + 1][y - 1] === 1) ? 1 : 0; // Top right. 
+        neighbours += (first[x - 1][y] === 1) ? 1 : 0; // Middle left. 
+        neighbours += (first[x + 1][y] === 1) ? 1 : 0; // Middle right.  
+        neighbours += (first[x - 1][y + 1] === 1) ? 1 : 0; // Bottom left. 
+        neighbours += (first[x][y + 1] === 1) ? 1 : 0; // Bottom center. 
+        neighbours += (first[x + 1][y + 1] === 1) ? 1 : 0; // Bottom right. 
+        return neighbours;
+    }
+
+    //Execute. 
+
 }
 
-let cell0;
-let cell1;
-const [row, column] = [12, 12];
+let [first, second] = [[], []];
+let [interval, status] = [null, false];  
+const [row, column] = [50, 50];
 const life = new Life();
+const cell = document.querySelectorAll("td");
+const play = document.querySelector(".play"); 
 
-function hello() {
-    cell0[6][5] = 1; 
-    cell0[6][6] = 1; 
-    cell0[6][7] = 1; 
-    console.table(cell0);
-    for (let i = 0; i < 5; i++) {
-        life.execute();
-        //Pasar el resto a funciones de la clase.
-        console.table(cell1);
-        [cell0, cell1] = [cell1, cell0];  
+cell.forEach((cell) => {
+    cell.addEventListener("click", () => {
+        life.user(cell);
+    })
+})
+
+play.addEventListener("click", () => {
+    if (status === false) {
+        status = true; 
+        interval = setInterval(() => {
+            life.computer(); 
+        }, 100);
+    } else {
+        status = false;
+        clearInterval(interval);
     }
-}
-
-hello();
-
-
-
-/* 
-    neighbours = 1;
-    neighbours += ((((x - 1) > 0) && ((y - 1) > 0)) && (cell0[x - 1][y - 1] === 1)) ? 1 : 0; // Top left position.
-    neighbours += (((y - 1) > 0) && (cell0[x][y - 1] === 1)) ? 1 : 0; // Top center position.
-    neighbours += ((((x + 1) < row) && ((y - 1) > 0)) && (cell0[x + 1][y - 1] === 1)) ? 1 : 0; // Top right position.
-    neighbours += (((x - 1) > 0) && (cell0[x - 1][y] === 1)) ? 1 : 0; // Center left position.
-    neighbours += (((x + 1) < row) && (cell0[x + 1][y] === 1)) ? 1 : 0; // Center right position. 
-    neighbours += ((((x - 1) > 0) && ((y + 1) < column)) && (cell0[x - 1][y + 1] === 1)) ? 1 : 0; // Bottom left position. 
-    neighbours += (((y + 1) < column) && cell0[x][y + 1] === 1) ? 1 : 0; // Bottom center position.
-    neighbours += ((((x + 1) < row) && ((y + 1) < column)) && (cell0[x + 1][y + 1] === 1)) ? 1 : 0; // Bottom right position. 
-    cell0[x][y] = ((neighbours === 3) || (neighbours === 2 && cell0[x][y] === 1)) ? 1 : 0; // Chooses which cells live and which ones die.
-
-
-    if (cell0[x - 1][y - 1] === 1) neighbours += 1; // Top left position.
-    if (cell0[x][y - 1] === 1) neighbours += 1; // Top center position.
-    if (cell0[x + 1][y - 1] === 1) neighbours += 1; // Top right position.
-    if (cell0[x - 1][y] === 1) neighbours += 1; // Center left position.
-    if (cell0[x + 1][y] === 1) neighbours += 1; // Center right position. 
-    if (cell0[x - 1][y + 1] === 1) neighbours += 1; // Bottom left position. 
-    if (cell0[x][y + 1] === 1) neighbours += 1; // Bottom center position.
-    if (cell0[x + 1][y + 1] === 1) neighbours += 1; // Bottom right position. 
-
-
-
-
-
-
-function generaTabla(f, c) { // Obtener la referencia del elemento body
-    const body = document.getElementsByTagName('div')[0]; // Crea un elemento <table> y un elemento <tbody>
-    const tabla = document.createElement('table');
-    const tblBody = document.createElement('tbody'); // Crea las celdas
-
-
-
-
-    for (let i = 0; i < f; i += 1) {       // Crea las hileras de la tabla
-        const hilera = document.createElement('tr');
-        hilera.className = `fila${i.toString()}`;
-        for (let j = 0; j < c; j += 1) { // Crea un elemento <td> y un nodo de texto, haz que el nodo de texto sea el contenido de <td>, ubica el elemento <td> al finalde la hilera de la tabla
-          const celda = document.createElement('td');
-          celda.className = `fila_${i.toString()}_column_${j.toString()}`;
-          celda.id = 'c';
-          const textoCelda = document.createTextNode(`${i}, columna ${j}`);
-          celda.appendChild(textoCelda); 
-          hilera.appendChild(celda);
-        } // agrega la hilera al final de la tabla (al final del elemento tblbody)
-        tblBody.appendChild(hilera);
-      } // posiciona el <tbody> debajo del elemento <table>
-      tabla.appendChild(tblBody); // appends <table> into <body>
-      body.appendChild(tabla);  // modifica el atributo "border" de la tabla y lo fija a "2"; tabla.setAttribute('border', '2'); assignValue(arr);
-    }
-    generaTabla(rows, columns);
-    function assignValue(arr) {
-      for (let f = 0; f < arr.length; f += 1) {
-        for (let c = 0; c < arr.length; c += 1) {
-          const a = document.querySelector(`.fila_${f.toString()}_column_${c.toString()}`);
-          if (arr[f][c] === 1) {
-            a.style.background = 'white';
-          } else {
-            a.style.background = 'black';
-          }
-        }
-      }
-    }
-
-
-  */
+});

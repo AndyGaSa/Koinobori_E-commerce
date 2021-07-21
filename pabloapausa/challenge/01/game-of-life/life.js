@@ -1,104 +1,99 @@
+
 class Life {
-    constructor() {
-        this.matrix();
-        console.log(cell0);
-        console.log(cell1);
+    constructor() { 
+        first = this.matrix();
+        second = this.matrix();
+        this.displayInHtml();
+
     }
+
+    displayInHtml
 
     matrix() {
-        let table = document.querySelector('.table');
-        for (let xAxis = 0; xAxis <= row; xAxis++) {
-            let tr = document.createElement('tr'); 
-            cell0[xAxis] = []; 
-            cell1[xAxis] = [];
-            for (let yAxis = 0; yAxis <= column; yAxis++) {
-                let td = document.createElement('td');
-                td.setAttribute('id', `${xAxis}-${yAxis}`);
-                td.setAttribute('class', `dead`);
-                cell0[xAxis][yAxis] = 0;
-                cell1[xAxis][yAxis] = 0;
-                tr.appendChild(td);
+        let array = []; 
+        for (let x = 0; x <= row; x++) {
+            array[x] = [];
+            for (let y = 0; y <= column; y++) {
+                array[x][y] = 0; 
             }
-            table.appendChild(tr);
         }
+        return array;
     }
 
-    execute() {
-        let neighbours; 
+    user(cell) {
+        this.cell = cell; 
+        let [x, y] = this.cell.id.split("-");
+        if (first[x][y] === 0) return this.isAlive(first, x, y); 
+        return this.isDead(first, x, y); 
+    }
+
+    computer() {
         for (let x = 1; x < row; x++) {
             for (let y = 1; y < column; y++) {
-                neighbours = 0;
-                neighbours += (cell0[x - 1][y - 1] === 1) ? 1 : 0; // Top left position.
-                neighbours += (cell0[x][y - 1] === 1) ? 1 : 0; // Top center position.
-                neighbours += (cell0[x + 1][y - 1] === 1) ? 1 : 0; // Top right position.
-                neighbours += (cell0[x - 1][y] === 1) ? 1 : 0; // Center left position.
-                neighbours += (cell0[x + 1][y] === 1) ? 1 : 0; // Center right position. 
-                neighbours += (cell0[x - 1][y + 1] === 1) ? 1 : 0; // Bottom left position. 
-                neighbours += (cell0[x][y + 1] === 1) ? 1 : 0; // Bottom center position.
-                neighbours += (cell0[x + 1][y + 1] === 1) ? 1 : 0; // Bottom right position. 
-                cell1[x][y] = ((neighbours === 3) || (neighbours === 2 && cell0[x][y] === 1)) ? 1 : 0;
-                let nuevo = document.getElementById(`${x}-${y}`); 
-                (cell1[x][y] === 1) ? nuevo.setAttribute('class', `alive`) : nuevo.setAttribute('class', `dead`);
+                let neighbours = this.find(first, x, y);
+                (neighbours === 3 || (neighbours === 2 && first[x][y] === 1))
+                ? this.isAlive(second, x, y) : this.isDead(second, x, y);
             }
         }
-        [cell0, cell1] = [cell1, cell0];
-        return cell1;
+        return [first, second] = [second, first];
     }
 
-    html(button) {
-        this.button = button; 
-        let x; 
-        let y; 
-        [x, y] = this.button.id.split("-");
-        if (cell0[x][y] === 0) {
-            cell0[x][y] = 1;
-            this.button.setAttribute('class', `alive`);
-        } else {
-            cell0[x][y] = 0;
-            this.button.setAttribute('class', `dead`);
-        } 
+    isAlive(array, x, y) { // Closure function. 
+        [this.array, this.x, this.y] = [array, x, y];
+        let cell = document.getElementById(`${this.x}-${this.y}`);
+        cell.setAttribute('class', 'alive');  
+        return this.array[this.x][this.y] = 1; 
     }
+
+    isDead(array, x, y) { // Closure function. 
+        [this.array, this.x, this.y] = [array, x, y];
+        let cell = document.getElementById(`${this.x}-${this.y}`); 
+        cell.setAttribute('class', 'dead');
+        return this.array[this.x][this.y] = 0; 
+    }
+
+    find(array, x, y) { // Closure function. 
+        [this.array, this.x, this.y] = [array, x, y];
+        let neighbours = 0;
+        neighbours += (first[x - 1][y - 1] === 1) ? 1 : 0; // Top left. 
+        neighbours += (first[x][y - 1] === 1) ? 1 : 0; // Top center. 
+        neighbours += (first[x + 1][y - 1] === 1) ? 1 : 0; // Top right. 
+        neighbours += (first[x - 1][y] === 1) ? 1 : 0; // Middle left. 
+        neighbours += (first[x + 1][y] === 1) ? 1 : 0; // Middle right.  
+        neighbours += (first[x - 1][y + 1] === 1) ? 1 : 0; // Bottom left. 
+        neighbours += (first[x][y + 1] === 1) ? 1 : 0; // Bottom center. 
+        neighbours += (first[x + 1][y + 1] === 1) ? 1 : 0; // Bottom right. 
+        return neighbours;
+    }
+
+    //Execute. 
+
 }
 
-let cell0 = [];
-let cell1 = [];
-let aux = [];
-
-let status = false;
-const [row, column] = [12, 12];
+let [first, second] = [[], []];
+let [interval, status] = [null, false];  
+const [row, column] = [50, 50];
 const life = new Life();
-const square = document.querySelectorAll("td");
+const cell = document.querySelectorAll("td");
 const play = document.querySelector(".play"); 
 
-square.forEach((button) => {
-    button.addEventListener("click", () => {
-        life.html(button);
+cell.forEach((cell) => {
+    cell.addEventListener("click", () => {
+        life.user(cell);
     })
 })
-
-let interval; 
 
 play.addEventListener("click", () => {
     if (status === false) {
         status = true; 
         interval = setInterval(() => {
-            life.execute(); 
-        }, 500);
+            life.computer(); 
+        }, 100);
     } else {
         status = false;
         clearInterval(interval);
     }
 });
 
-/*
-    neighbours = 1;
-    neighbours += ((((x - 1) > 0) && ((y - 1) > 0)) && (cell0[x - 1][y - 1] === 1)) ? 1 : 0; // Top left position.
-    neighbours += (((y - 1) > 0) && (cell0[x][y - 1] === 1)) ? 1 : 0; // Top center position.
-    neighbours += ((((x + 1) < row) && ((y - 1) > 0)) && (cell0[x + 1][y - 1] === 1)) ? 1 : 0; // Top right position.
-    neighbours += (((x - 1) > 0) && (cell0[x - 1][y] === 1)) ? 1 : 0; // Center left position.
-    neighbours += (((x + 1) < row) && (cell0[x + 1][y] === 1)) ? 1 : 0; // Center right position. 
-    neighbours += ((((x - 1) > 0) && ((y + 1) < column)) && (cell0[x - 1][y + 1] === 1)) ? 1 : 0; // Bottom left position. 
-    neighbours += (((y + 1) < column) && cell0[x][y + 1] === 1) ? 1 : 0; // Bottom center position.
-    neighbours += ((((x + 1) < row) && ((y + 1) < column)) && (cell0[x + 1][y + 1] === 1)) ? 1 : 0; // Bottom right position. 
-    cell0[x][y] = ((neighbours === 3) || (neighbours === 2 && cell0[x][y] === 1)) ? 1 : 0; // Chooses which cells live and which ones die.
-*/
+
+//CÓMO SE INDICAN POSICIONES EN CANVAS? 
