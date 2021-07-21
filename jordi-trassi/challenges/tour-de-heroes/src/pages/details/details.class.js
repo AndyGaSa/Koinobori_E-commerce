@@ -13,7 +13,8 @@ class DetailsPage {
       this.setPowerstats();
       this.setAppearence();
       this.setBiography();
-      this.setWork()
+      this.setWork();
+      this.setConnections();
       
     }
 
@@ -66,6 +67,17 @@ class DetailsPage {
         const li = document.createElement('li');
         const arrWork = entriWork[i];
         li.innerText = `${arrWork[0]}: ${arrWork[1]}`;
+        parentElement.appendChild(li);
+      } 
+    }
+
+    setConnections() {
+      const entriConnections = Object.entries(this.hero.connections);
+      const parentElement = document.getElementById('hero__connections');
+      for (let i = 0; i < entriConnections.length; i += 1) {
+        const li = document.createElement('li');
+        const arrConnections = entriConnections[i];
+        li.innerText = `${arrConnections[0]}: ${arrConnections[1]}`;
         parentElement.appendChild(li);
       } 
     }
