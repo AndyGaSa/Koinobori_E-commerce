@@ -1,20 +1,12 @@
-const heroesList = document.getElementById('heroes__list');
+const getValue = () => {
+  const input = document.getElementById('new-hero');
+  return input.value;
+};
 
-for (let i = 10; i < heroes.length; i += 1) {
-  const btn = document.createElement('button');
-  heroesList.appendChild(btn);
-  const heroLink = document.createElement('a');
-  btn.appendChild(heroLink);
-  heroLink.innerHTML = heroes[i].superhero;
-  heroLink.setAttribute('href', `../Details/details.html?${heroes[i].id}`);
-  btn.style.display = 'flex';
-}
+(function heroesPageModel() {
+  const heroesPage = new HeroesPage(heroes);
+  heroesPage.setView();
 
-const addHero = document.querySelector('.addHero');
-
-function myFunction() {
-  const x = document.getElementById('myForm').value;
-  heroes[heroes.length].push(x);
-}
-console.log(heroes[heroes.length]);
-addHero.addEventListener('click', myFunction);
+  const btn = document.getElementById('btnAdd');
+  btn.addEventListener('click', () => heroesPage.addHeroes(document.getElementById('new-hero').value));
+}());

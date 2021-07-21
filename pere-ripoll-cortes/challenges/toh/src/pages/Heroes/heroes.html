@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
     <title>Heroes</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="./heroes.css">
 </head>
 <body>
     <header>
@@ -14,24 +15,23 @@
             <a href="../Dashboard/dashboard.html">Dashboard</a>
             <a href="#">Heroes</a>
         </nav>
-        <section>
-            <h2>My Heroes</h2>
-            <p>Hero name:</p>
-            <form action="">
-                <input id="myForm" type="text" value="">
-                <button class="addHero">Add hero</button>
-            </form>
-            <div id="heroes__list">
-
-            </div>
-        </section>
-        <footer>
-            <p>Messages</p>
-            <div></div>
-        </footer>
     </header>
+    <h2>My Heroes</h2>
+
+    <div>
+        <label for="new-hero">Hero name: </label>
+        <input id="new-hero" />
+
+        <button class="add-button" id="btnAdd">
+            Add hero
+        </button>
+    </div>
+
+    <ul class="heroes" id="heroes__list">
+    </ul>
+
     <script src="../../heroes.const.js"></script>
-    <script src="../../hero.class.js"></script>
+    <script src="./heroes.class.js"></script>
     <script src="./heroes.js"></script>
 </body>
 </html>

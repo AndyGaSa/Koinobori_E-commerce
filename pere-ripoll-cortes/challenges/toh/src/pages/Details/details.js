@@ -1,8 +1,8 @@
-(function details() {
-  const id = location.search.split('?')[1];
-  const currentHero = heroes.find((hero) => hero.id === id);
+(function detailsPageModel() {
+  const { heroId } = transformUrlQueryToObject(location.search);
+  const details = new DetailsPage(+heroId, heroes);
+  details.setView();
 
-  document.getElementById('hero__title').innerHTML = currentHero.superhero;
-  document.getElementById('hero__id').innerHTML = currentHero.id;
-  document.getElementById('hero__name').value = currentHero.superhero;
+  const btn = document.getElementById('btn_save');
+  btn.addEventListener('click', () => details.readValues(document.getElementById('hero__name').value));
 }());
