@@ -5,7 +5,7 @@ class HeroDetails {
   }
 
   getHeroDetails(heroesList) {
-    const result = heroesList.find((obj) => obj.id === this.id);
+    const result = heroesList.find((obj) => obj.id === Number(this.id));
     return result;
   }
 

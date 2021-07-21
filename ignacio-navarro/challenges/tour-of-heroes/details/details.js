@@ -1,6 +1,6 @@
 (function detailsFromHero() {
   const url = window.location.search;
-  const id = 2;
-  const printHero = new HeroDetails(id, heroesList);
+  const id = getIdFromUrl(url).heroId;
+  const printHero = new HeroDetails(id, HEROES_LIST);
   printHero.setViews();
 }());
