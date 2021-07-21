@@ -73,7 +73,11 @@ class DetailsPage {
       const element = `<li>${occupation}</li>`;
       document.getElementById('work__occupation').innerHTML += element;
     });
-    document.getElementById('work__base').innerText = this.hero.work.base;
+    const bases = this.hero.work.base.split('; ');
+    bases.forEach((base) => {
+      const element = `<li>${base}</li>`;
+      document.getElementById('work__base').innerHTML += element;
+    });
   }
 
   setConnections() {
@@ -82,7 +86,14 @@ class DetailsPage {
       const element = `<li>${affiliation}</li>`;
       document.getElementById('connections__groupAffiliation').innerHTML += element;
     });
-    const relatives = this.hero.connections.relatives.split('; ');
+
+    let { relatives } = this.hero.connections;
+    if (relatives.indexOf(';') !== -1) {
+      relatives = relatives.split('; ');
+      console.log('hello');
+    } else {
+      relatives = relatives.split(', ');
+    }
     relatives.forEach((relative) => {
       const element = `<li>${relative.replace(';', '')}</li>`;
       document.getElementById('connections__relatives').innerHTML += element;

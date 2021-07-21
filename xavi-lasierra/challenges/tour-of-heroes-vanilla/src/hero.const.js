@@ -78,7 +78,7 @@ const heroes = [
     },
     connections: {
       groupAffiliation: 'Bureau for Paranormal Research and Defense',
-      relatives: 'Edith Howard (wife, deceased)'
+      relatives: 'Edith Howard (wife - deceased)'
     },
     images: {
       xs: 'https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/xs/2-abe-sapien.jpg',
