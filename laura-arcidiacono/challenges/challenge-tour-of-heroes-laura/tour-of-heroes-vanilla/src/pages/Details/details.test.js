@@ -6,7 +6,7 @@ describe('Give a class DetailsPage', () => {
     let properties;
 
     beforeEach(() => {
-      page = new DetailsPage();
+      page = new DetailsPage(4);
       properties = Object.keys(page);
     });
 

@@ -9,7 +9,7 @@ function transformUrlQueryToObject(searchString) {
       response[key] = value;
     });
   }
-
+  console.log(response);
   return response;
 }
 
