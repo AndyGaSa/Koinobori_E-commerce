@@ -22,4 +22,15 @@ label {
     color: #ccc;
     cursor: auto;
   }
+
   
+main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+#details__main {
+  display: flex;
+  flex-direction: column;
+}

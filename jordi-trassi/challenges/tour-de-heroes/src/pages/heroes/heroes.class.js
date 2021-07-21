@@ -17,4 +17,5 @@ class HeroesPage {
       });
     }
   }
-  
+
+module.exports = HeroesPage;

@@ -17,24 +17,36 @@
         </nav>
     </header>
     <main>
-        <div>
+        <img src="" id="hero__image" width="400"></img>
+        
+        <div id="details__main">
             <h2><span id="hero__title"></span> details!</h2>
-            <div><span>Id:</span></div> <span id="hero__id"></span></div>
+            <div><span>Id:</span> <span id="hero__id" ></span></div>
             <div>
                 <label>
-                    Name:
+                    Hero name:
                 </label>
                 <input type="text" id="hero__name">
+                <div><h3>Powerstats:</h3> <span id="hero__powerstats" ></span>
+                <ul>
+                    <li>Intelligence: <span id="hero__powerstats--intelligence" ></span></li>
+                    <li>Strength: <span id="hero__powerstats--strength" ></span></li>
+                    <li>Speed: <span id="hero__powerstats--speed" ></span></li>
+                    <li>Durability: <span id="hero__powerstats--durability" ></span></li>
+                    <li>Power: <span id="hero__powerstats--power" ></span></li>
+                    <li>Combat: <span id="hero__powerstats--combat" ></span></li>
+                </ul>
+                </div>
             </div>
             <button>go back</button>
-            <button>go back</button>
+            <button>save</button>
         </div>
     </main>
     
     
-    <script src="../heroes.const.js"></script>
-    <script src="./details.class.js"></script>
+    <script src="../../heroes.const.js"></script>
     <script src="./transformUrlQueryToObject.js"></script>
+    <script src="./details.class.js"></script>
     <script src="./details.js"></script>
     
 </body>
