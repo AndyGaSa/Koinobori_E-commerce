@@ -1,4 +1,4 @@
 (function dashboardPageModel() {
-  const dashboardPage = new DashboardPage(heroes.slice(1, 5));
+  const dashboardPage = new DashboardPage(heroes);
   dashboardPage.setView();
 }());

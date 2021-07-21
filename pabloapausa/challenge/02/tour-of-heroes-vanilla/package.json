@@ -1,8 +1,8 @@
 {
-  "name": "heroes",
+  "name": "tour-of-heroes-vanilla",
   "version": "1.0.0",
   "description": "",
-  "main": "hero.class.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --watchAll --collect-coverage"
   },

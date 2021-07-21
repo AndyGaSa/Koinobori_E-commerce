@@ -1,7 +1,7 @@
 class DetailsPage {
   constructor(id, heroes) {
     this.id = id;
-    this.hero = heroes.find((hero) => hero.id === id);
+    this.hero = heroes?.find((hero) => hero.id === id);
   }
 
   setView() {
