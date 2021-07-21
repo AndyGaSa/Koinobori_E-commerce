@@ -4,77 +4,82 @@ class DetailsPage {
     this.hero = heroes?.find((hero) => hero.id === id);
   }
 
-
-
-  setId(){
+  setId() {
     document.getElementById('hero__id').innerHTML = this.hero.id;
   }
-  setName(){
+
+  setName() {
     document.getElementById('hero__title').innerHTML = this.hero.name;
     document.getElementById('hero__name').value = this.hero.name;
   }
-  setSlug(){
+
+  setSlug() {
     document.getElementById('hero__slug').innerHTML = this.hero.slug;
   }
-  setPowerstats(){
+
+  setPowerstats() {
     const parentElement = document.getElementById('hero__powerstats');
-
-    for (const property in this.hero.powerstats){
+    const { powerstats } = this.hero;
+    const stats = Object.entries(powerstats);
+    stats.forEach((stat) => {
       const elements = document.createElement('li');
-      elements.innerText = `${property}:${this.hero.powerstats[property]}`;
+      elements.innerHTML = `${stat[0]}: ${stat[1]}`;
       parentElement.appendChild(elements);
-
-    };
+    });
   }
-  setAppearance(){
+
+  setAppearance() {
     const parentElement = document.getElementById('hero__appearance');
-
-    for (const property in this.hero.appearance){
+    const { appearance } = this.hero;
+    const stats = Object.entries(appearance);
+    stats.forEach((stat) => {
       const elements = document.createElement('li');
-      elements.innerText = `${property}:${this.hero.appearance[property]}`;
+      elements.innerHTML = `${stat[0]}: ${stat[1]}`;
       parentElement.appendChild(elements);
-
-    };
+    });
   }
-  setBiography(){
+
+  setBiography() {
     const parentElement = document.getElementById('hero__biography');
-
-    for (const property in this.hero.biography){
+    const { biography } = this.hero;
+    const stats = Object.entries(biography);
+    stats.forEach((stat) => {
       const elements = document.createElement('li');
-      elements.innerText = `${property}:${this.hero.biography[property]}`;
+      elements.innerHTML = `${stat[0]}: ${stat[1]}`;
       parentElement.appendChild(elements);
-
-    };
+    });
   }
-  setWork(){
+
+  setWork() {
     const parentElement = document.getElementById('hero__work');
-
-    for (const property in this.hero.work){
+    const { work } = this.hero;
+    const stats = Object.entries(work);
+    stats.forEach((stat) => {
       const elements = document.createElement('li');
-      elements.innerText = `${property}:${this.hero.work[property]}`;
+      elements.innerHTML = `${stat[0]}: ${stat[1]}`;
       parentElement.appendChild(elements);
-
-    };
+    });
   }
-  setConnections(){
+
+  setConnections() {
     const parentElement = document.getElementById('hero__connections');
-
-    for (const property in this.hero.connections){
+    const { connections } = this.hero;
+    const stats = Object.entries(connections);
+    stats.forEach((stat) => {
       const elements = document.createElement('li');
-      elements.innerText = `${property}:${this.hero.connections[property]}`;
+      elements.innerHTML = `${stat[0]}: ${stat[1]}`;
       parentElement.appendChild(elements);
-
-    };
+    });
   }
-  setImages(){
+
+  setImages() {
     const parentElement = document.getElementById('hero__images');
 
-      const elements = document.createElement('img');
-      elements.src = this.hero.images.md;
-      parentElement.appendChild(elements);
-    
+    const elements = document.createElement('img');
+    elements.src = this.hero.images.sm;
+    elements.alt = `${this.hero.name}image`;
+    parentElement.appendChild(elements);
   }
-
 
   setView() {
     this.setId();

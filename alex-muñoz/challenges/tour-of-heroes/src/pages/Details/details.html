@@ -18,25 +18,29 @@
     </header>
     <div>
         <h2><span id="hero__title"></span> details!</h2>
-        <div><span>id: </span><span id="hero__id"></span></div>
+        <div id="hero__images">           
+        </div>
         <div>
-            <label>
-                name: 
-            </label>
-            <input type="text" id="hero__name">
+            <label>Id:</label>
+            <span id="hero__id"></span>
         </div>
         <div>
             <label>
+                Name: 
+            </label>
+            <input type="text"  id="hero__name"></input>
+        </div>
+        <div class = 'hero-slug'>
+            <label >
                 Slug: 
             </label>
-            <input type="text" id="hero__slug">
+            <span id="hero__slug"></span>
         </div>
         <div>
             <label>
                 Powerstats: 
             </label>
-            <ul
-            id="hero__powerstats"></ul>
+            <ul id="hero__powerstats"></ul>
         </div>
         <div>
             <label>
@@ -63,14 +67,8 @@
             <ul id="hero__connections"></ul>
 
         </div>
-        <div>
-            <label>
-                Images: 
-            </label>
-            <picture id="hero__images"></picture>
-        </div>
-        <button>go back</button>
-        <button>save</button>
+        <button>Go back</button>
+        <button>Save</button>
     </div>
 
     <script src="../../heroes.const.js"></script>
