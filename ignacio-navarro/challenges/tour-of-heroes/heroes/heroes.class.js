@@ -9,15 +9,16 @@ class HeroesCard {
       const linkElement = document.createElement('a');
       const spanElement = document.createElement('span');
       const buttonElement = document.createElement('button');
-      linkElement.appendChild(spanElement);
-      listElement.appendChild(linkElement);
-      listElement.appendChild(buttonElement);
       spanElement.classList.add('badge');
       buttonElement.classList.add('delete');
-      spanElement.innerHTML = hero.id;
+      buttonElement.innerHTML = 'X';
       linkElement.href = (`../details/details.html?heroId=${hero.id}`);
-      linkElement.innerHTML = hero.name;
       const dashboardDOM = document.getElementById('hero-list-DOM');
+      spanElement.innerHTML = hero.id;
+      listElement.appendChild(linkElement);
+      linkElement.appendChild(spanElement);
+      linkElement.append(`${hero.name}`);
+      listElement.appendChild(buttonElement);
       dashboardDOM.appendChild(listElement);
     });
   }
