@@ -23,7 +23,12 @@ label {
     color: #ccc;
     cursor: auto;
   }
-  
+
+  .section__presentation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   
   /*
   Copyright Google LLC. All Rights Reserved.
