@@ -13,22 +13,6 @@ class DetailsPage {
     }
   }
 
-  paintId() {
-    document.getElementById('hero__id').innerHTML = this.hero.id;
-  }
-
-  paintTitle() {
-    document.getElementById('hero__title').innerHTML = this.hero.name;
-  }
-
-  paintName() {
-    document.getElementById('hero__name').value = this.hero.name;
-  }
-
-  paintSlug() {
-    document.getElementById('hero__slug').value = this.hero.slug;
-  }
-
   paintPowerStats() {
     document.getElementById('powerstats__intelligence-bar').value = this.hero.powerstats.intelligence;
     document.getElementById('powerstats__intelligence-text').innerText = this.hero.powerstats.intelligence;
@@ -54,25 +38,25 @@ class DetailsPage {
   }
 
   paintBiography() {
-    document.getElementById('biograbphy__full-name').innerText = this.hero.biography.fullName;
-    document.getElementById('biograbphy__alter-egos').innerText = this.hero.biography.alterEgos;
-
-    this.aliases.forEach((alias) => {
+    document.getElementById('biography__full-name').innerText = this.hero.biography.fullName;
+    document.getElementById('biography__alter-egos').innerText = this.hero.biography.alterEgos;
+    this.hero.biography.aliases.forEach((alias) => {
       const element = document.createElement('li');
-      element.innerText = { alias };
-      const parentElement = document.getElementById('biograbphy__aliases');
+      element.innerText = `${alias}`;
+      const parentElement = document.getElementById('biography__aliases');
       parentElement.appendChild(element);
     });
-    document.getElementById('biograbphy__place-birth').innerText = this.hero.biography.placeOfBirth;
-    document.getElementById('biograbphy__first-appearance').innerText = this.hero.biography.firstApperance;
-    document.getElementById('biograbphy__publisher').innerText = this.hero.biography.publisher;
-    document.getElementById('biograbphy__alignment').innerText = this.hero.biography.alignment;
+    document.getElementById('biography__place-birth').innerText = this.hero.biography.placeOfBirth;
+    document.getElementById('biography__first-appearance').innerText = this.hero.biography.firstApperance;
+    document.getElementById('biography__publisher').innerText = this.hero.biography.publisher;
+    document.getElementById('biography__alignment').innerText = this.hero.biography.alignment;
   }
 
   paintWork() {
-    this.ocuppation.forEach((job) => {
+    const workOccupation = this.hero.work.occupation.split(', ');
+    workOccupation.forEach((job) => {
       const element = document.createElement('li');
-      element.innerText = { job };
+      element.innerText = `${job}`;
       const parentElement = document.getElementById('work__occupation');
       parentElement.appendChild(element);
     });
@@ -83,7 +67,7 @@ class DetailsPage {
     const groupAffiliations = this.hero.connections.groupAffiliation.split('; ');
     groupAffiliations.forEach((affiliation) => {
       const element = `<li>${affiliation}</li>`;
-      document.getElementById('connections__groupAffiliation').innerHTML += element;
+      document.getElementById('connections__group-affiliation').innerHTML += element;
     });
     const relatives = this.hero.connections.relatives.split('; ');
     relatives.forEach((relative) => {
@@ -99,10 +83,10 @@ class DetailsPage {
   }
 
   paintHeroDetails() {
-    this.paintTitle();
-    this.paintId();
-    this.paintName();
-    this.paintSlug();
+    document.getElementById('hero__id').innerHTML = this.hero.id;
+    document.getElementById('hero__title').innerHTML = this.hero.name;
+    document.getElementById('hero__name').value = this.hero.name;
+    document.getElementById('hero__slug').innerText = this.hero.slug;
     this.paintPowerStats();
     this.paintAppearance();
     this.paintBiography();
