@@ -21,7 +21,7 @@ function heroesContents() {
       heroList = new HeroesPage(heroes);
       heroList.setView();
     } else {
-      alert('There was a problem with the request.');
+      alert('Could not get superHeroes data.');
     }
   }
 }
