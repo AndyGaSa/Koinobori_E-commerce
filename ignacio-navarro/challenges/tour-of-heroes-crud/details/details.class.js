@@ -12,11 +12,28 @@ class HeroDetails {
   setViews() {
     document.getElementById('details__hero-id').innerHTML = this.id;
     document.getElementById('create-hero').value = this.heroDetails.name;
-    printHeroSections(this.heroDetails);
+  }
+
+  setPowerstats() {
+    const detailsSection = document.querySelector('#hero-profile');
+    const parent = document.createElement('ul');
+    const powerstats = Object.keys(this.heroDetails.powerstats);
+    detailsSection.appendChild(parent);
+    powerstats.forEach((element) => {
+      const childProgressBar = this.heroDetails.powerstats[element];
+      const child = document.createElement('li');
+      const grandchild = document.createElement('progress');
+      child.innerHTML = element;
+      grandchild.innerText = childProgressBar;
+      grandchild.value = this.heroDetails.powerstats[element];
+      grandchild.max = 100;
+      parent.appendChild(child);
+      child.appendChild(grandchild);
+    });
   }
 }
 
-function printHeroSections(details) {
+/* function printHeroSections(details) {
   const heroProperties = Object.entries(details);
   const profileDOM = document.getElementById('hero-profile');
   heroProperties.forEach((element) => {
@@ -40,6 +57,6 @@ function printHeroSections(details) {
     }
   });
   printHeroSectionsContents(heroProperties);
-}
+} */
 
 module.exports = HeroDetails;

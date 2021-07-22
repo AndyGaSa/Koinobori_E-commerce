@@ -9,11 +9,11 @@ class HeroesCard {
       const linkElement = document.createElement('a');
       const spanElement = document.createElement('span');
       const buttonElement = document.createElement('button');
-      buttonElement.addEventListener("click", removeHero)
+      buttonElement.addEventListener('click', removeHero);
       spanElement.classList.add('badge');
       buttonElement.classList.add('delete');
       buttonElement.innerHTML = 'X';
-      buttonElement.id = `delete-hero`
+      buttonElement.id = 'delete-hero';
       linkElement.href = (`../details/details.html?heroId=${hero.id}`);
       const dashboardDOM = document.getElementById('hero-list-DOM');
       spanElement.innerHTML = hero.id;
@@ -23,6 +23,5 @@ class HeroesCard {
       listElement.appendChild(buttonElement);
       dashboardDOM.appendChild(listElement);
     });
-
   }
 }
