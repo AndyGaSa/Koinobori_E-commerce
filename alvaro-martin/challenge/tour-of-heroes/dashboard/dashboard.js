@@ -1,18 +1,18 @@
-class DashboardButtons {
-  constructor(id) {
-    this.id = heroes[id].id;
-    this.href = `../details/details.html?id=${this.id}`;
-    this.htmlId = `h2__link${id}`;
-    this.currentHeroName = heroes[id].superhero;
-    console.log(this.currentHeroName);
+class Dashboard {
+  constructor(arrayHero) {
+    this.arrayHero = arrayHero;
   }
 
-  getInfo() {
-    document.getElementById(this.htmlId).innerHTML = this.currentHero;
-    document.getElementById(this.htmlId).setAttribute('href', this.href);
+  setView() {
+    for (let i = 0; i <= this.arrayHero.length; i += 1) {
+      const element = document.createElement('a');
+      element.setAttribute('href', `../Details/details.html?id=${this.arrayHero[i].id}`);// element.href=`../Details/details.html?id=${heroes.id}`
+      element.innerText = this.arrayHero[i].name;
+      const parentElement = document.getElementById('menu');
+      parentElement.appendChild(element);
+    }
   }
 }
-for (let id = 0; id < 4; id += 1) {
-  const button = new DashboardButtons(id);
-  button.getInfo();
-}
+const heroList = JSON.parse(localStorage.getItem('heroes'));
+const dashboardPage = new Dashboard(heroList.slice(1, 5));
+dashboardPage.setView();

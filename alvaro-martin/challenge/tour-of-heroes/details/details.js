@@ -7,11 +7,11 @@ function getParameterByName(name, url = window.location.href) {
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 const id = getParameterByName('id');
-
+her = JSON.parse(localStorage.getItem('heroes'));
 class DetailsPage {
-  constructor(id, heroes) {
+  constructor(id, her) {
     this.id = id;
-    this.currentHero = heroes.find((hero) => hero.id === id);
+    this.currentHero = her.find((hero) => hero.id === id);
     this.powerstatsValues = Object.entries(this.currentHero.powerstats);
     this.appearance = Object.entries(this.currentHero.appearance);
   }
@@ -39,5 +39,5 @@ class DetailsPage {
   }
 }
 
-const details = new DetailsPage(+id, heroes);
+const details = new DetailsPage(+id, her);
 details.updatePage();
