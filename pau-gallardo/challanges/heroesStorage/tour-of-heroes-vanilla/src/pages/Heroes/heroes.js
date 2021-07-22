@@ -1,3 +1,3 @@
-(function heroesPageModel() {
+// (function heroesPageModel() {
 
-}());
+// }());

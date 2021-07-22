@@ -18,6 +18,7 @@ function alertContents() {
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
     if (httpRequest.status === 200) {
       heroes = JSON.parse(httpRequest.responseText);
+      localStorage.setItem('heroes', JSON.stringify(heroes));
       const heroesPage = new HeroesPage(heroes);
       heroesPage.setView();
     } else {
@@ -25,6 +26,8 @@ function alertContents() {
     }
   }
 }
+
+heroes = JSON.parse(localStorage.getItem('heroes'));
 
 /*
 (function localStorageFunction() {
