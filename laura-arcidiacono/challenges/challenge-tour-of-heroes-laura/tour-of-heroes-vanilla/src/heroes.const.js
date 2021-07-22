@@ -1,4 +1,4 @@
-const heroes = [
+const heroes1 = [
   {
     id: 1,
     name: 'A-Bomb',
