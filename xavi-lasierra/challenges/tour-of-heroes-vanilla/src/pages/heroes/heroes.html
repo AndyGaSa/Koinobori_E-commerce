@@ -21,26 +21,28 @@
         <div>
             <label for="new-hero">Hero name: </label>
             <input id="new-hero" name="new-hero">
-            <button id="add-hero-button" class="add-button">
+            <button id="add-hero-button" class="button">
               Add hero
             </button>
         </div>
         <div>
             <label for="filter-hero">Search heroes: </label>
             <input id="filter-hero" name="filter-hero">
-            <button id="filter-hero-button" class="filter-button">
+            <button id="filter-hero-button" class="button">
               Search
             </button>
         </div>
+        <button class="button" onclick="getHeroes()">Get Heroes</button>
         <ul id="hero-list" class="heroes">
                 
         </ul>
         <button id="reset-button" class="reset-button">Reset</button>
     </section>
 
-    <script src="../../hero.const.js"></script>
+    <script src="../../superHeroData.json"></script>
     <script src="../../heroes-local-storage.js"></script>
     <script src="./heroes.class.js"></script>
+    <script src="./get-ajax-heroes.js"></script>
     <script src="./heroes.js"></script>
     <script src="./heroes-buttons.js"></script>
 </body>

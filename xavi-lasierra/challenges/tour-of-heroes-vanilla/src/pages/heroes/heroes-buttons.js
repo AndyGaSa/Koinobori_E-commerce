@@ -24,3 +24,7 @@ function deleteHeroFromList(id) {
   deleteHero(id);
   document.getElementById(`hero-list${id}`).remove();
 }
+
+function getHeroes() {
+  makeRequest();
+}

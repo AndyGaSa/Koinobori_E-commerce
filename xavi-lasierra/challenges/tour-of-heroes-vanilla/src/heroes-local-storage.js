@@ -14,8 +14,8 @@ function saveMaxId(newMaxId) {
 
 (function heroesLocalStorage() {
   if (localStorage.getItem('heroes') === null) {
-    saveHeroes(heroesPredefined);
-    saveMaxId(getMaxId(heroesPredefined));
+    saveHeroes([]);
+    saveMaxId(0);
   }
   heroes = JSON.parse(localStorage.getItem('heroes'));
 }());
@@ -53,7 +53,7 @@ function updateHero(heroObject) {
 }
 
 function resetLocalSaveData() {
-  saveHeroes(heroesPredefined);
-  saveMaxId(getMaxId(heroesPredefined));
+  saveHeroes([]);
+  saveMaxId(0);
   heroes = JSON.parse(localStorage.getItem('heroes'));
 }
