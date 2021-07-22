@@ -38,15 +38,16 @@ function deleteHero(heroId) {
   saveHeroes(heroes);
 }
 
-function updateHero(heroId, heroSlug, heroName) {
+function updateHero(heroObject) {
   const newHeroProperties = {
-    name: heroName
+    name: heroObject.name
   };
-  if (heroId) {
-    heroes = heroes.map((hero) => (hero.id === heroId ? { ...hero, ...newHeroProperties } : hero));
-  } else if (heroSlug) {
+  if (heroObject.id) {
     heroes = heroes
-      .map((hero) => (hero.slug === heroSlug ? { ...hero, ...newHeroProperties } : hero));
+      .map((hero) => (hero.id === heroObject.id ? { ...hero, ...newHeroProperties } : hero));
+  } else if (heroObject.slug) {
+    heroes = heroes
+      .map((hero) => (hero.slug === heroObject.slug ? { ...hero, ...newHeroProperties } : hero));
   }
   saveHeroes(heroes);
 }
