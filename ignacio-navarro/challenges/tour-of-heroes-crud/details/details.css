@@ -23,4 +23,14 @@ label {
     color: #ccc;
     cursor: auto;
   }
+  .ul-title{
+    font-size: 2em;
+    color: #264D73;
+    padding-inline-start: 14px;
+  }
+  .ul-title > li{
+    width: 80%;
+    font-size: 0.5em;
+    color: #435960;
+  }
   

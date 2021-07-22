@@ -17,6 +17,8 @@ class HeroDetails {
   setPowerstats() {
     const detailsSection = document.querySelector('#hero-profile');
     const parent = document.createElement('ul');
+    parent.innerText = 'powerstats';
+    parent.classList.add('ul-title');
     const powerstats = Object.keys(this.heroDetails.powerstats);
     detailsSection.appendChild(parent);
     powerstats.forEach((element) => {
@@ -30,6 +32,28 @@ class HeroDetails {
       parent.appendChild(child);
       child.appendChild(grandchild);
     });
+  }
+
+  setNormalBlock(section) {
+    const detailsSection = document.querySelector('#hero-profile');
+    const parent = document.createElement('ul');
+    parent.innerText = `${section}`;
+    parent.classList.add('ul-title');
+    const sectionTitle = Object.keys(this.heroDetails[section]);
+    detailsSection.appendChild(parent);
+    sectionTitle.forEach((element) => {
+      const child = document.createElement('li');
+      child.innerHTML = `<strong>${element}</strong>: ${this.heroDetails[section][element]}`;
+      parent.appendChild(child);
+    });
+    setImage() {
+      const detailsSection = document.querySelector('#hero-profile');
+      sectionTitle.forEach((element) => {
+        const img = document.createElement('img');
+        srcRoute = 
+        img.src = ("")
+        detailsSection.appendChild(img);
+      });
   }
 }
 

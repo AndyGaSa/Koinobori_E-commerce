@@ -1,5 +1,28 @@
+let httpRequest;
+function makeRequest() {
+  httpRequest = new XMLHttpRequest();
+
+  if (!httpRequest) {
+    alert('Giving up :( Cannot create an XMLHTTP instance');
+    return false;
+  }
+  httpRequest.onreadystatechange = alertContents;
+  httpRequest.open('GET', '../superHeroData.json');
+  httpRequest.send();
+}
+
+function alertContents() {
+  if (httpRequest.readyState === XMLHttpRequest.DONE) {
+    if (httpRequest.status === 200) {
+      localStorage.setItem('heroes', (httpRequest.responseText));
+    } else {
+      alert('There was a problem with the request.');
+    }
+  }
+}
+
 let storage = JSON.parse(localStorage.getItem('heroes'));
-let heroIdCounter = 10;
+let heroIdCounter = 731;
 let backupStorage = [];
 const searchbox = document.getElementById('search-hero');
 const createHeroInput = document.getElementById('new-hero');
@@ -32,7 +55,7 @@ function removeHero(e) {
 }
 
 function resetHeroes() {
-  localStorage.setItem('heroes', JSON.stringify(HEROES_LIST));
+  makeRequest();
   storage = JSON.parse(localStorage.getItem('heroes'));
   document.getElementById('hero-list-DOM').innerHTML = '';
   const refresh = new HeroesCard(storage);

@@ -1,6 +1,5 @@
-
 (function printDashboardCard() {
-  if(!localStorage.getItem("heroes")){localStorage.setItem("heroes", JSON.stringify(HEROES_LIST))}
+  if (!localStorage.getItem('heroes')) { makeRequest(); }
   const print = new DashboardCard(storage);
   print.setViews();
 }());
