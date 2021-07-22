@@ -7,12 +7,23 @@
   }
 }());
 
+function buttonTextCheck() {
+  const button = document.getElementById('get-reset-button');
+  if (heroes.length > 0) {
+    button.innerText = 'Reset';
+  } else {
+    button.innerText = 'Get Heroes';
+  }
+}
+
 function addHeroButton() {
   const input = document.getElementById('new-hero').value;
   if (input) {
     const newHero = createNewHero(input);
     document.getElementById('new-hero').value = '';
     heroesPage.setNewView(newHero);
+
+    buttonTextCheck();
   }
 }
 
@@ -27,6 +38,7 @@ function filterHeroesButton() {
 function deleteHeroFromList(id) {
   deleteHero(id);
   document.getElementById(`hero-list${id}`).remove();
+  buttonTextCheck();
 }
 
 function getResetHeroes() {
