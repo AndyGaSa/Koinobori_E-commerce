@@ -16,6 +16,7 @@ class HeroesPage {
       parentElement.innerHTML += element;
     });
   }
+}
 /*
   addNewHero() {
     const heroName = document.getElementById('new-hero').value;
@@ -27,4 +28,3 @@ class HeroesPage {
     heroes = JSON.parse(localStorage.getItem('heroes'));
   }
   */
-}
