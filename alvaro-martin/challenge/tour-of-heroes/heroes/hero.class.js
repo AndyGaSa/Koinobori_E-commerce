@@ -18,6 +18,7 @@ for (let id = 0; id < 10; id += 1) {
   button.getInfo();
 }
 */
+
 class HeroesPage {
   constructor(heroes) {
     this.heroes = heroes;

@@ -6,10 +6,3 @@ function filter(heroes) {
     console.log(filterResult);
   }
 }
-
-const deleteButton = document.getElementsByClassName('delete');
-deleteButton.addEventListener('click', logEvent);
-
-function logEvent(event) {
-  console.log(event);
-}
