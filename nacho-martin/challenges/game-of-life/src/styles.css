@@ -1,0 +1,53 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #547EF0;
+}
+h1{
+    color: #F0B930;
+    margin: 30px auto 20px;
+    width: fit-content;
+}
+.matrix-container{
+display: flex;
+flex-direction: column;
+width: 90%;
+height: 50%;
+margin: 50px auto;
+align-items: center;
+overflow: hidden;
+}
+.matrix-container__row{
+display: flex;
+width: fit-content;
+height: fit-content;
+
+}
+
+.matrix-container__button{
+width: 20px;
+height: 20px;
+border: 1px #F0B930 solid;
+background-color: #3DF04C
+}
+.alive{
+    background-color: #F0246C;
+}
+
+.button-container{
+ margin: 50px auto;
+
+ width: 330px; 
+ height: 35px;
+}
+
+.button-container__button{
+    width: 100px;
+    height: 35px;
+    background-color: #F0B930;
+    color: #F0246C;
+    font-weight: 700;
+    border: none;
+}
