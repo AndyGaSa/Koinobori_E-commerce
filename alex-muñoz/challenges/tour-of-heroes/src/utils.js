@@ -4,12 +4,26 @@
 const findHero = heroesStorage.filter((hero) => {
   JSON.stringify(hero).contains(inputValue);
 }); */
+// this.addEventListener('click', () => { console.log(`${this.id}`); });
 
 // function for delete an hero
-const deleteButton = document.getElementById('delete');
-this.addEventListener('click', () => { console.log(`${this.id}`); });
-function deleteHero() {
-  return console.log('hola');
+function printNewHeroList() {
+  const newStoredHeroes = JSON.parse(localStorage.getItem('heroes'));
+  const oldHeroList = document.getElementById('heroes__list');
+  oldHeroList.innerHTML = '';
+  const newHeroListToPrint = new HeroesPage(newStoredHeroes);
+  newHeroListToPrint.setView();
+  return newHeroListToPrint.setDeleteButtonId();
 }
 
-// necesito poder acceder al elemento padre para poder luego acceder al hijo que contiene el objeto, o acceder al hermano.
+function deleteHero(e) {
+  const heroStorage = JSON.parse(localStorage.getItem('heroes'));
+  const { id } = e.target;
+  const newHeroesList = heroStorage.filter((hero) => hero.id !== parseFloat(id));
+  return localStorage.setItem('heroes', JSON.stringify(newHeroesList));
+}
+
+function eraseHero(e) {
+  deleteHero(e);
+  printNewHeroList();
+}

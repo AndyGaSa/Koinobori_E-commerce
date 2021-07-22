@@ -5,7 +5,7 @@ class HeroesPage {
 
   setView() {
     this.heroes.forEach((hero) => {
-      const element = `<li>
+      const element = `<li class='hero-list-items'>
             <a href="../Details/details.html?heroId=${hero.id}">
             <span class="badge">${hero.id}</span> ${hero.name}
             </a>
@@ -15,5 +15,10 @@ class HeroesPage {
       const parentElement = document.getElementById('heroes__list');
       parentElement.innerHTML += element;
     });
+  }
+
+  setDeleteButtonId() {
+    const deleteButtons = document.querySelectorAll('.delete');
+    deleteButtons.forEach((button) => { button.addEventListener('click', eraseHero); });
   }
 }

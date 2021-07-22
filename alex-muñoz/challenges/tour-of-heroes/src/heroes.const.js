@@ -410,7 +410,7 @@ function areThereHeroes() {
 
 function noHeroes() {
   if (!localStorage.heroes) {
-    return JSON.parse(areThereHeroes());
+    return areThereHeroes();
   }
 }
 noHeroes();
