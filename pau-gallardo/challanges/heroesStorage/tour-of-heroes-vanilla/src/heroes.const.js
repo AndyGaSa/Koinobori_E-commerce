@@ -1,4 +1,4 @@
-const heroes = [
+const heroesMyPc = [
   {
     id: 1,
     name: 'A-Bomb',

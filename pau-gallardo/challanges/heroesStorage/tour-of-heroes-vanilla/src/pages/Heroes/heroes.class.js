@@ -16,4 +16,15 @@ class HeroesPage {
       parentElement.innerHTML += element;
     });
   }
+/*
+  addNewHero() {
+    const heroName = document.getElementById('new-hero').value;
+    lastId += 1;
+    const newHero = new Hero(lastId, heroName);
+    this.heroes.push(newHero);
+    localStorage.setItem('lastId', JSON.stringify(lastId));
+    localStorage.setItem('heroes', JSON.stringify(this.heroes));
+    heroes = JSON.parse(localStorage.getItem('heroes'));
+  }
+  */
 }
