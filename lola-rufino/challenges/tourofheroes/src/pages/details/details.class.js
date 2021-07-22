@@ -1,7 +1,7 @@
 class DetailsPage {
-  constructor(id, heroes) {
+  constructor(id, newSuperHeroes) {
     this.id = id;
-    this.hero = heroes?.find((hero) => hero.id === id);
+    this.hero = newSuperHeroes?.find((hero) => hero.id === id);
   }
 
   setId() {

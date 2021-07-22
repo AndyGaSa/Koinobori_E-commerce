@@ -1,7 +1,4 @@
 (function dashboardPageModel() {
-  if (!localStorage.setItem('heroes', JSON.stringify(heroes))) {
-    localStorage.setItem('heroes', JSON.stringify(heroes));
-  }
-  const dashboardPage = new DashboardPage(heroes.slice(1, 5));
+  const dashboardPage = new DashboardPage(newSuperHeroes.slice(1, 5));
   dashboardPage.setView();
 }());

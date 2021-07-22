@@ -1,1 +1,6 @@
-document.getElementById('add-hero').addEventListener('click', () => { console.log(document.getElementById('new-hero').value); });
+/* document.getElementById('add-hero').addEventListener('click', addHeroFn);
+
+function addHeroFn (){
+
+    console.log(document.getElementById('new-hero').value);
+} */

@@ -1,10 +1,10 @@
 class DashboardPage {
-  constructor(heroes) {
-    this.heroes = heroes;
+  constructor(newSuperHeroes) {
+    this.newSuperHeroes = newSuperHeroes;
   }
 
   setView() {
-    this.heroes.forEach((hero) => {
+    this.newSuperHeroes.forEach((hero) => {
       const element = document.createElement('a');
       element.href = `../Details/details.html?heroId=${hero.id}`;
       element.innerText = hero.name;

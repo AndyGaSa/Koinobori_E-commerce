@@ -1,4 +1,4 @@
 (function heroesPageModel() {
-  const heroesPage = new HeroesPage(heroes);
-  heroesPage.setView();
+  const heroesPage = new HeroesPage(newSuperHeroes);
+  // heroesPage.setView();
 }());
