@@ -128,7 +128,21 @@ Nuestros componentes de forma automatica generan unos callback durante los sigui
   }
 ~~~
 
+### Creando un componente desde otro
+Cuando queremos crear una nueva intancia de nuestro compoenente debemos de extender el mismo en uno nuevo en vez de hacer una copia del mismo
+
+Cuando extendemos tenemos tres eventos fisponibles
+
+ - construtor() : cuando intanciamos una nueva clase de nuestro elemento
+
+ - connectedCallback() : este evento se dispara al definir el componente con el metodo define de customElements 
+
+ - disconnectedCallback() : cuando nuestro custom elemento se desconecta de la pagina
+
 # notas:
+## Generar un HTML template
+Es mejor usar un template string y el metodo createElement()
+estos ficheros se pueden denominar .mjs
 ## Consultas:
  - MVC repasar conecptos de los controladores.
 ## test:
@@ -240,7 +254,36 @@ newCall = await callHeroe( id, 'info' )
 */
 ~~~
 
+### call(), bind(), apply()
+Sirven para cambiar el contexto de una funcion, por el contexto que se le pasa como argumento
+
+### Llamar una funcion con destructuracion
+~~~javascript
+const Obj = { id: 12, name: 'qwerety'}
+const destruc = ({id}) => id;
+const result = destruc(Obj);
+console.log(result); // 12
+~~~
+
+### closure 
+una funcion que se declara dentro de otra ser llama closure, este closure mantiene el scope en el momento que es invocada
+ > No confundir con una funcion de callback (una funcion que se pasa como un argumento a otra funcion)
+ ~~~javascript
+ const totalPrice = (unitPrice) => {
+   const amount = 5;
+   return resultPrice = () => unitPrice * amount;
+ }
+ const calc = totalPrice(10)
+ console.log( calc ) // function resultPrice() with unitPrice = 10
+ const result = calc(); // 50; Resolve calc scoope 
+ ~~~
 
 # Challenge 21/7
 Poder filtrar heroes y despues hacer un CRUD
 esto debe de implementarse en la pagina de heroes
+
+# Challenge 22/7
+Usar callbacks para recuperar datos con XMLHttpRequest
+Dashboard 
+ - Call heroes from XMLHttpRequest
+ - Call heroes from fetch
