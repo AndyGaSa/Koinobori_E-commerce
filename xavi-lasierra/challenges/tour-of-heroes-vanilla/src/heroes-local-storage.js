@@ -34,7 +34,7 @@ function createNewHero(heroName) {
 }
 
 function deleteHero(heroId) {
-  heroes = heroes.filter((hero) => hero.id !== heroId);
+  heroes = heroes.filter(({ id }) => id !== heroId);
   saveHeroes(heroes);
 }
 
