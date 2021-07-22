@@ -74,7 +74,7 @@ class DetailsPage {
   }
 
   setWork() {
-    if (this.hero.occupation) {
+    if (this.hero.work) {
       const occupations = this.hero.work.occupation.split('; ');
       occupations.forEach((occupation) => {
         const element = `<li>${occupation}</li>`;
@@ -89,7 +89,7 @@ class DetailsPage {
   }
 
   setConnections() {
-    if (this.hero.groupAffiliations) {
+    if (this.hero.connections) {
       const groupAffiliations = this.hero.connections.groupAffiliation.split('; ');
       groupAffiliations.forEach((affiliation) => {
         const element = `<li>${affiliation}</li>`;
