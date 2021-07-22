@@ -359,7 +359,7 @@ const heroes = [
     }
   },
   {
-    id: 10,
+    id: 9,
     name: 'Agent Bob',
     slug: '10-agent-bob',
     powerstats: {

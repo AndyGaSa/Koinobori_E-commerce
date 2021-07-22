@@ -20,9 +20,9 @@
 
     <div>
         <label for="new-hero">Hero name: </label>
-        <input id="new-hero" />
+        <input class="new-hero" onchange="writeHeroProperty(event)"/>
 
-        <button class="add-button">
+        <button class="add-button" onclick='addHero()'>
             Add hero
         </button> 
     </div>
