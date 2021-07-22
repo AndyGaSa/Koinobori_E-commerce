@@ -7,9 +7,9 @@ class DetailsPage {
 
   setHero(heroes) {
     if (this.id) {
-      this.hero = heroes.find((hero) => hero.id === this.id);
+      this.hero = heroes.find(({ id }) => id === this.id);
     } else if (this.slug) {
-      this.hero = heroes.find((hero) => hero.slug === this.slug);
+      this.hero = heroes.find(({ slug }) => slug === this.slug);
     }
   }
 
