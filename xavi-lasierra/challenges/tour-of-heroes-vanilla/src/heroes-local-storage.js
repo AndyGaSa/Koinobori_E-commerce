@@ -51,3 +51,9 @@ function updateHero(heroObject) {
   }
   saveHeroes(heroes);
 }
+
+function resetLocalSaveData() {
+  saveHeroes(heroesPredefined);
+  saveMaxId(getMaxId(heroesPredefined));
+  heroes = JSON.parse(localStorage.getItem('heroes'));
+}

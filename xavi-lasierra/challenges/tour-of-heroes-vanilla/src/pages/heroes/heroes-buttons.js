@@ -15,6 +15,11 @@ document.getElementById('filter-hero-button').addEventListener('click', () => {
   heroesPage.resetPage(heroes.filter(callbackFunction));
 });
 
+document.getElementById('reset-button').addEventListener('click', () => {
+  resetLocalSaveData();
+  heroesPage.resetPage(heroes);
+});
+
 function deleteHeroFromList(id) {
   deleteHero(id);
   document.getElementById(`hero-list${id}`).remove();
