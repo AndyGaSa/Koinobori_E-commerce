@@ -28,7 +28,6 @@ function printHeroSections(details) {
         const child = document.createElement('li');
         parent.appendChild(child);
         if (stat[1].length > 50) {
-          debugger;
           const longString = stat[1].split(';');
           longString.forEach((substat) => {
             const grandchild = document.createElement('p');
