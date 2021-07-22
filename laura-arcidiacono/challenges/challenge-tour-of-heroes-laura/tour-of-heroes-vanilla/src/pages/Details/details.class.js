@@ -4,6 +4,11 @@ class DetailsPage {
     this.hero = heroes?.find((hero) => hero.id === id);
   }
 
+  getHeroDetails(heroes) {
+    const result = heroes.find((obj) => obj.id === Number(this.id));
+    return result;
+  }
+
   setTitle() {
     document.getElementById('hero__title').innerHTML = this.hero.name;
   }
