@@ -9,7 +9,7 @@ class HeroesPage {
             <a href="../Details/details.html?heroId=${hero.id}">
             <span class="badge">${hero.id}</span> ${hero.name}
             </a>
-            <button class="delete" title="delete hero">x</button>
+            <button id=${hero.id} class='delete' onclick="HeroesPage.deleteHero(this.id)" title="delete hero">x</button>
         </li>`;
 
       const parentElement = document.getElementById('heroes__list');
@@ -18,10 +18,15 @@ class HeroesPage {
   }
 
   addHeroes(name) {
-    console.log(name);
     const maxId = (this.heroes.length) + 2;
     this.heroes.push({ id: maxId, name });
-    localStorage.setItem('heroesLocal', JSON.stringify(this.heroes));
-    heroes = JSON.parse(localStorage.getItem('heroesLocal'));
+    localStorage.setItem('superHeroData', JSON.stringify(this.heroes));
+    heroes = JSON.parse(localStorage.getItem('superHeroData'));
+  }
+
+  static deleteHero(id) {
+    const arr = heroes.filter((x) => x.id !== parseInt(id));
+    localStorage.setItem('superHeroData', JSON.stringify(arr));
+    window.location.reload();
   }
 }

@@ -408,4 +408,4 @@ if (!localStorage.getItem('heroesLocal')) {
   localStorage.setItem('heroesLocal', JSON.stringify(heroesLocal));
 }
 // eslint-disable-next-line
-let heroes = JSON.parse(localStorage.getItem('heroesLocal'));
+let heroes = JSON.parse(localStorage.getItem('superHeroData'));

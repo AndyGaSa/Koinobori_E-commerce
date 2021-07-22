@@ -2,6 +2,7 @@ class DetailsPage {
   constructor(id, heroes) {
     this.id = id;
     this.hero = heroes?.find((hero) => hero.id === id);
+    this.herocomplete = heroes;
   }
 
   setId() {
@@ -84,17 +85,12 @@ class DetailsPage {
   }
 
   readValues(value) {
-    for (const key in this.hero) {
-      if (this.hero[key] === value) {
-        const { id } = this.hero;
-        const a = new DetailsPage(id, heroes);
+    this.herocomplete.forEach((element) => {
+      if (element.name === value) {
+        const a = new DetailsPage(element.id, this.herocomplete);
         a.setView();
-        console.log(a);
-        console.log('hola');
-        localStorage.setItem('heroesLocal', JSON.stringify(this.hero));
-        heroes = JSON.parse(localStorage.getItem('heroesLocal'));
       }
-    }
+    });
   }
 
   setView() {
