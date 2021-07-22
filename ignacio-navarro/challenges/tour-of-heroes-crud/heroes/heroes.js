@@ -31,11 +31,8 @@ function addHero () {
   } else {
     heroIdCounter += 1
   }
-console.log(heroIdCounter)
 storage.push({id: heroIdCounter, name: createHeroInput.value})
-console.log(storage)
 localStorage.setItem("heroes", JSON.stringify(storage))
-storage = JSON.parse(localStorage.getItem("heroes"))
 document.getElementById('hero-list-DOM').innerHTML=""
 let refresh = new HeroesCard(storage);
 refresh.setViews()
