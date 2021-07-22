@@ -9,7 +9,7 @@ class HeroesPage {
             <a href="../Details/details.html?heroId=${hero.id}">
             <span class="badge">${hero.id}</span> ${hero.name}
             </a>
-            <button class="delete" title="delete hero">x</button>
+            <button class="delete" id="${hero.id}" title="delete hero">x</button>
         </li>`;
 
       const parentElement = document.getElementById('heroes__list');
