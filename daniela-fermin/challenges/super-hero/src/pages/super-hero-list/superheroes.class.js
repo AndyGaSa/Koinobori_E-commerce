@@ -3,7 +3,7 @@ class HeroesPage {
     this.superHeroes = superHeroes;
   }
 
-  paintAllHeroes() {
+  paintAllHeroes(superHeroes) {
     this.superHeroes.forEach((hero) => {
       const element = `<li>
             <a href="../details/details.html?slug=${hero.slug}">

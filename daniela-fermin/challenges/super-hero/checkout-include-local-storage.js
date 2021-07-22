@@ -4,9 +4,10 @@ function getMaxId(array) {
 }
 
 (function checkOrIncludeInLocalStorage() {
-  if (localStorage.getItem('superHeroes' === null)) {
+  if (localStorage.getItem('superHeroes') === null) {
     localStorage.setItem('superHeroes', JSON.stringify(superHeroesPredefined));
-    localStorage.setItem('superHeroesMaxId', JSON.stringify(getMaxId(superHeroesPredefined)));
+
+    localStorage.setItem('superHeroesMaxId', getMaxId(superHeroesPredefined));
   }
   superHeroes = JSON.parse(localStorage.getItem('superHeroes'));
 }());
