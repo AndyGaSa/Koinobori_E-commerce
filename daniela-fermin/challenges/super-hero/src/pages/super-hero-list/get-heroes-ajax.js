@@ -1,5 +1,6 @@
 let httpRequest;
 function getHeroes() {
+  document.getElementById('new-hero').value = ('');
   makeRequest();
 }
 
@@ -19,7 +20,6 @@ function alertContents() {
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
     if (httpRequest.status === 200) {
       superHeroes = (JSON.parse(httpRequest.responseText));
-      document.getElementById('new-hero').value = ('');
       heroesPage.paintAllHeroes(superHeroes);
       uploadToLocalStorage();
     } else {
@@ -35,5 +35,6 @@ function uploadToLocalStorage() {
 
     localStorage.setItem('superHeroesMaxId', getMaxId(superHeroesPredefined));
   }
-  superHeroes = JSON.parse(localStorage.getItem('superHeroes'));
+  superHeroes = JSON.parse(localStorage.getItem('superHeroes')) || [];
+  const heroesPage = new HeroesPage(superHeroes);
 }
