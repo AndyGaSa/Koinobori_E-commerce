@@ -16,4 +16,17 @@ class HeroesPage {
       parentElement.innerHTML += element;
     });
   }
+
+  paintNewHero(newHero) {
+    this.superHeroes.push(newHero);
+    const element = `<li>
+              <a href="../details/details.html?slug=${newHero.slug}">
+              <span class="badge">${newHero.id}</span> ${newHero.name}
+              </a>
+              <button class="delete" title="delete hero">x</button>
+          </li>`;
+
+    const parentElement = document.getElementById('heroes__list');
+    parentElement.innerHTML += element;
+  }
 }

@@ -1,6 +1,12 @@
+let superHeroes;
+
 function getMaxId(array) {
-  const arrayOfIds = array.map((hero) => this.hero.id);
-  Math.max(...arrayOfIds);
+  const arrayOfIds = array.map((hero) => hero.id);
+  return Math.max(...arrayOfIds);
+}
+
+function saveMaxId() {
+
 }
 
 (function checkOrIncludeInLocalStorage() {
