@@ -1,2 +1,2 @@
-const heroesList = new HeroesList(heroes);
+const heroesList = new HeroesList(hostedHeroes);
 heroesList.setView();

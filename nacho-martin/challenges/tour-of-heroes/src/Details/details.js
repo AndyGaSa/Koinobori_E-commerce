@@ -1,4 +1,4 @@
-const detailsPage = new DetailsPage(getIdFromURL(location.search), heroes);
+const detailsPage = new DetailsPage(getIdFromURL(location.search), hostedHeroes);
 
 detailsPage.setView();
 detailsPage.setPowerStats();

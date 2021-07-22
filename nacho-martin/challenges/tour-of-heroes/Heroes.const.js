@@ -403,3 +403,13 @@ const heroes = [
     }
   }
 ];
+function areThereHeroes() {
+  return localStorage.setItem('heroes', JSON.stringify(heroes));
+}
+
+function noHeroes() {
+  if (!localStorage.heroes) {
+    return JSON.parse(areThereHeroes());
+  }
+}
+noHeroes();
