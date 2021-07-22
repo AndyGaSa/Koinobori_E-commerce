@@ -7,7 +7,7 @@ function getHeroFromHtml() {
 
 const addButton = document.getElementById('add-button');
 addButton.addEventListener('click', (event) => {
-  const newHero = getHeroFromHtml();
+  newHero = getHeroFromHtml();
   heroesPage.paintNewHero(newHero);
   localStorage.setItem('superHeroes', JSON.stringify(superHeroes));
   document.getElementById('new-hero').value = ('');

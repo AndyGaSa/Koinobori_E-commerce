@@ -2,5 +2,5 @@ let heroesPage;
 
 (function heroesPageModel() {
   heroesPage = new HeroesPage(superHeroes);
-  heroesPage.paintAllHeroes();
+  heroesPage.paintAllHeroes(superHeroes);
 }());
