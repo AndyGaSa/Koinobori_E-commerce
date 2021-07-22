@@ -1,7 +1,6 @@
 class DashboardPage {
   constructor(heroes) {
     this.heroes = heroes;
-
   }
 
   setView() {
