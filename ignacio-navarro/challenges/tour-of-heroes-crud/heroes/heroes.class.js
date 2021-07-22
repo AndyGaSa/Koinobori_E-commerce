@@ -9,6 +9,7 @@ class HeroesCard {
       const linkElement = document.createElement('a');
       const spanElement = document.createElement('span');
       const buttonElement = document.createElement('button');
+      buttonElement.addEventListener("click", removeHero)
       spanElement.classList.add('badge');
       buttonElement.classList.add('delete');
       buttonElement.innerHTML = 'X';
