@@ -1,0 +1,6 @@
+class DetailsPage(){
+    constructor(){
+        
+    }
+
+}
