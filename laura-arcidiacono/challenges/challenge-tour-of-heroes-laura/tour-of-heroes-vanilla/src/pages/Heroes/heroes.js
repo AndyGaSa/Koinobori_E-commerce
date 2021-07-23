@@ -18,14 +18,8 @@ function makeRequest() {
 function alertContents() {
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
     if (httpRequest.status === 200) {
-      debugger;
-      // alert(httpRequest.responseText);
       const heroes = JSON.parse(httpRequest.responseText);
       localStorage.setItem('heroes', JSON.stringify(heroes));
-      /*
-      if (!localStorage.setItem('heroes', JSON.stringify(heroes))) {
-        localStorage.setItem('patata', JSON.stringify(heroes));
-      } */
       const heroesPage = new HeroesPage(heroes);
       heroesPage.setView();
     } else {
