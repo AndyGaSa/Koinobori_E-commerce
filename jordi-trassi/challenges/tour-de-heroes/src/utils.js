@@ -55,8 +55,11 @@ function updateHero() {
   let heroesStorage = JSON.parse(localStorage.getItem('heroes'));
   const heroId = document.getElementById('hero__id').innerHTML;
   const heroToUpdate = heroesStorage.find((hero) => hero.id === +heroId);
-  heroToUpdate.name = heroNewName;
-  heroToUpdate.slug = `${heroId}-${heroNewName}`;
+  if (heroNewName) {
+    heroToUpdate.name = heroNewName;
+    heroToUpdate.slug = `${heroId}-${heroNewName}`;
+  }
+
   localStorage.setItem('heroes', JSON.stringify(heroesStorage));
   heroesStorage = JSON.parse(localStorage.getItem('heroes'));
   const newDetailsPage = new DetailsPage(+heroId, heroesStorage);
@@ -66,5 +69,7 @@ function updateHero() {
 }
 
 function writeHeroNewName(event) {
-  heroNewName = event.target.value;
+  if (event) {
+    heroNewName = event.target.value;
+  }
 }
