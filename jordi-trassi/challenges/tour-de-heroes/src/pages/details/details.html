@@ -28,7 +28,7 @@
             <label>
                 Name: 
             </label>
-            <input type="text"  id="hero__name"></input>
+            <input type="text"  id="hero__name" onchange="writeHeroNewName(event)">
         </div>
         <div class = 'hero-slug'>
             <label >
@@ -68,11 +68,12 @@
 
         </div>
         <button>Go back</button>
-        <button>Save</button>
+        <button onclick="updateHero()">Save</button>
     </div>
 
     <script src="../../heroes.const.js"></script>
     <script src = '../../getStorage.js'></script>
+    <script src='../../utils.js'></script>
     <script src="./details.class.js"></script>
     <script src="./transformUrlQueryToObject.js"></script>
     <script src="./details.js"></script>
