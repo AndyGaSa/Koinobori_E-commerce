@@ -4,6 +4,12 @@
 }());
 */
 
+/* if (!localStorage.getItem('heroes')) {
+  localStorage.setItem('heroes', JSON.stringify(heroesLocal));
+}
+const heroes = JSON.parse(localStorage.getItem('heroes'));
+*/
+
 let httpRequest;
 function makeRequest() {
   httpRequest = new XMLHttpRequest();
