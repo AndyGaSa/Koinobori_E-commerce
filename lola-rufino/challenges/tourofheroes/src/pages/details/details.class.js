@@ -19,52 +19,57 @@ class DetailsPage {
 
   setPowerStats() {
     const parentElement = document.getElementById('hero__powerstats');
+    const powerstatProperty = Object.keys(this.hero.powerstats);
 
-    for (const property in this.hero.powerstats) {
+    powerstatProperty.forEach((powerstatKey) => {
       const element = document.createElement('li');
-      element.innerText = `${property}: ${this.hero.powerstats[property]}`;
+      element.innerText = `${powerstatKey}: ${this.hero.powerstats[powerstatKey]}`;
       parentElement.appendChild(element);
-    }
+    });
   }
 
   setAppearance() {
     const parentElement = document.getElementById('hero__appearance');
+    const appearanceProperty = Object.keys(this.hero.appearance);
 
-    for (const property in this.hero.appearance) {
+    appearanceProperty.forEach((appearanceKey) => {
       const element = document.createElement('li');
-      element.innerText = `${property}: ${this.hero.appearance[property]}`;
+      element.innerText = `${appearanceKey}: ${this.hero.appearance[appearanceKey]}`;
       parentElement.appendChild(element);
-    }
+    });
   }
 
   setBiography() {
     const parentElement = document.getElementById('hero__biography');
+    const biographyProperty = Object.keys(this.hero.biography);
 
-    for (const property in this.hero.biography) {
+    biographyProperty.forEach((biographyKey) => {
       const element = document.createElement('li');
-      element.innerText = `${property}: ${this.hero.biography[property]}`;
+      element.innerText = `${biographyKey}: ${this.hero.biography[biographyKey]}`;
       parentElement.appendChild(element);
-    }
+    });
   }
 
   setWork() {
     const parentElement = document.getElementById('hero__work');
+    const workProperty = Object.keys(this.hero.work);
 
-    for (const property in this.hero.work) {
+    workProperty.forEach((workKey) => {
       const element = document.createElement('li');
-      element.innerText = `${property}: ${this.hero.work[property]}`;
+      element.innerText = `${workKey}: ${this.hero.work[workKey]}`;
       parentElement.appendChild(element);
-    }
+    });
   }
 
   setConnections() {
     const parentElement = document.getElementById('hero__connections');
+    const connectionsProperty = Object.keys(this.hero.connections);
 
-    for (const property in this.hero.connections) {
+    connectionsProperty.forEach((connectionsKey) => {
       const element = document.createElement('li');
-      element.innerText = `${property}: ${this.hero.connections[property]}`;
+      element.innerText = `${connectionsKey}: ${this.hero.connections[connectionsKey]}`;
       parentElement.appendChild(element);
-    }
+    });
   }
 
   setImage() {
