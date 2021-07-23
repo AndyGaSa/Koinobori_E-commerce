@@ -1,4 +1,4 @@
-(function heroesPageModel() {
-  const heroesPage = new HeroesPage(heroes);
-  heroesPage.setView();
-}());
+getHeroes().then((heroes) => {
+  localStorage.setItem('heroes', JSON.stringify(heroes));
+  setHeroesView();
+});
