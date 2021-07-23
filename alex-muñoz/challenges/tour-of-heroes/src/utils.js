@@ -34,7 +34,7 @@ function addHero(e) {
   const heroStorage = JSON.parse(localStorage.getItem('heroes'));
   const addHeroButton = document.getElementsByClassName('add-button');
   maxId += 1;
-  const newHero = { name: inputTextHero, id: maxId };
+  const newHero = { name: inputTextHero, id: maxId, slug: `${maxId}-${inputTextHero}` };
   heroStorage.push(newHero);
   const element = `<li class='hero-list-items'>
     <a href="../Details/details.html?heroId=${newHero.id}">
