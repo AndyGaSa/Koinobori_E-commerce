@@ -27,11 +27,18 @@ class DetailsPage {
 
   setPowerstats() {
     const parentElement = document.getElementById('hero__powerstats');
+    const powerstatPropierty = Object.keys(this.hero.powerstats);
+    powerstatPropierty.forEach((powerstatKeys) => {
+      const element = document.createElement('li');
+      parentElement.appendChild(element);
+      element.innerHTML = `${powerstatKeys}: ${this.hero.powerstats[powerstatKeys]}`;
+    });
+    /*
     for (const key in this.hero.powerstats) {
       const element = document.createElement('li');
       parentElement.appendChild(element);
       element.innerHTML = `${key}: ${this.hero.powerstats[key]}`;
-    }
+    } */
   }
 
   setApperance() {
