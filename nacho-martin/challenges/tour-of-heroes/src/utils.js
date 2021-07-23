@@ -1,7 +1,12 @@
-// Variables
 let inputTextHero = document.getElementsByClassName('new-hero');
 let maxId = JSON.parse(localStorage.getItem('heroes')).length;
-// function for delete an hero
+let heroNewName;
+let heroStorage;
+
+function setItems() {
+  return localStorage.setItem('heroes', JSON.stringify(newHeroesList));
+}
+
 function deleteHero(e) {
   const heroStorage = JSON.parse(localStorage.getItem('heroes'));
   const { id } = e.target;
@@ -13,7 +18,7 @@ function eraseHero(e) {
   deleteHero(e);
   printNewHeroList();
 }
-// funcion para printerar heroes
+
 function printNewHeroList() {
   const newStoredHeroes = JSON.parse(localStorage.getItem('heroes'));
   const oldHeroList = document.getElementById('heroes__list');
@@ -23,13 +28,10 @@ function printNewHeroList() {
   return newHeroListToPrint.setDeleteButtonId();
 }
 
-/// /////Funcion añadir Heroe/////////////////
-// funcion que almacenara los cambios realizados en el cambio de texto
 function writeHeroProperty(event) {
   inputTextHero = event.target.value;
-  console.log(inputTextHero);
 }
-// funcion añadir heroe
+
 function addHero(e) {
   const heroStorage = JSON.parse(localStorage.getItem('heroes'));
   const addHeroButton = document.getElementsByClassName('add-button');
@@ -47,4 +49,27 @@ function addHero(e) {
   parentElement.innerHTML += element;
   const deleteButtons = document.querySelectorAll('.delete');
   deleteButtons.forEach((button) => { button.addEventListener('click', eraseHero); });
+}
+
+function updateHero() {
+  let heroesStorage = JSON.parse(localStorage.getItem('heroes'));
+  const heroId = document.getElementById('hero__id').innerHTML;
+  const heroToUpdate = heroesStorage.find((hero) => hero.id === +heroId);
+  if (heroNewName) {
+    heroToUpdate.name = heroNewName;
+    heroToUpdate.slug = `${heroId}-${heroNewName}`;
+  }
+
+  localStorage.setItem('heroes', JSON.stringify(heroesStorage));
+  heroesStorage = JSON.parse(localStorage.getItem('heroes'));
+  const newDetailsPage = new DetailsPage(+heroId, heroesStorage);
+  newDetailsPage.setId();
+  newDetailsPage.setName();
+  newDetailsPage.setSlug();
+}
+
+function writeHeroNewName(event) {
+  if (event) {
+    heroNewName = event.target.value;
+  }
 }
