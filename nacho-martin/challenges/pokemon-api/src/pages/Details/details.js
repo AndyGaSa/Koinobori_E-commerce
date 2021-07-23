@@ -1,0 +1,1 @@
+const newDetailsPage = new DetailsPage();

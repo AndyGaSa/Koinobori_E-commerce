@@ -1,0 +1,1 @@
+const pokemonList = new PokemonList();
