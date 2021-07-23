@@ -1,6 +1,12 @@
-/* document.getElementById('add-hero').addEventListener('click', addHeroFn);
+function setIdNewHero() {
+  const heroesArraySorted = newSuperHeroes.sort((heroeOne, heroeSecond) => heroeOne.id - heroeSecond.id);
+  console.log(heroesArraySorted);
+}
 
-function addHeroFn (){
+function addHeroFn() {
+  const newHero = {};
+  newHero.name = document.getElementById('new-hero').value.trim();
+  setIdNewHero();
+}
 
-    console.log(document.getElementById('new-hero').value);
-} */
+document.getElementById('add-hero').addEventListener('click', addHeroFn);
