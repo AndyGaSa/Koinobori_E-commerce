@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Ignacio's life</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="draw.css">
+</head>
+<body class="body">
+    <header>
+        <nav class="nav-bar__header">
+            <nav class="nav-bar__sliders-container">
+                <div class="slider__container">
+                    <label for="speed">speed</label>
+                    <input class="slider" id="speed-slider" type="range" name="Speed">
+                </div>
+                <div class="slider__container">
+                    <label for="darkmode">darkmode</label>
+                    <input class="slider" id="light-slider" type="range" name="light">
+                </div>
+            </nav>
+            <nav class="nav-bar__webs">
+                <a class="nav-bar__link" href="../index.html">home</a>
+                <a class="nav-bar__link" href="draw.html">Draw</a>
+                <a class="nav-bar__link" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">wiki</a>
+            </nav>
+        </nav>
+    </header>
+    <main>
+        <nav class="nav-bar__buttons-container">
+            <div class="game-buttons__group">
+                <button class="game__button" id="start-button">start</button>
+                <button class="game__button" id="stop-button">stop</button>
+            </div>
+            <div class="game-buttons__group">
+                <button class="game__button" id="reset-button">reset</button>
+                <button class="game__button" id="clear-button">clear</button>
+            </div>
+        </nav>
+        <canvas class="canvas--drawing" id="canvas-container" width="800" height="400">
+        </canvas>
+    </main>
+    <script src="draw.js"></script>
+</body>
+</html>

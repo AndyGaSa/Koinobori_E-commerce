@@ -1,6 +1,10 @@
 class DashboardPage {
-  constructor(heroes) {
-    this.heroes = heroes;
+  constructor() {
+    this.heroes = [];
+  }
+
+  setHeroes() {
+    this.heroes = JSON.parse(localStorage.getItem('heroes')).slice(1, 5);
   }
 
   setView() {
