@@ -41,7 +41,7 @@ a:link {
   font-weight: lighter;
 }
 
-.dashboard__h4 {
+.dashboard__h4, .dashboard__hero {
   position: relative;
 }
 

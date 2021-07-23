@@ -8,14 +8,13 @@ setView() {  //
     this.heroes.forEach(hero) => {
         const element = document.createElement('a');
         element.href = `../Details/details.html?slug=${hero.slug}`;
-        element.innerText = hero.name;
+        element.innerText = hero.slug;
 
         const parentElement = document.getElementById('dashboard__hero')
         parentElement.appendChild(element);
         
-    });
-    
-    }
+    }); 
+  }
 }
 
 /*

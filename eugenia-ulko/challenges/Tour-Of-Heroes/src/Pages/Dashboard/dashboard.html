@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Of Heroes - Dashboard</title>
     <link rel="stylesheet" href="../Dashboard/dashboard.css">
-    <script src="dashboard.js"></script>
 </head>
 <body>   
     <header>
@@ -18,16 +17,18 @@
     </header>
     <section>
         <h2 class="dashboard__h3">Top Heroes</h2> 
-        <div class="dashboard-grid">
-            <div class="dashboard-button"><h4 class="dashboard__h4">Narco</h4></div>
-            <div class="dashboard-button"><h4 class="dashboard__h4">Bombasto</h4></div>
-            <div class="dashboard-button"><h4 class="dashboard__h4">Celeritas</h4></div>
-            <div class="dashboard-button"><h4 class="dashboard__h4">Magneta</h4></div>
+        <div class="dashboard-grid" id="dashboard__hero">
+            <div class="dashboard-button"><h4 id="dashboard__hero"></h4></div>
+            <div class="dashboard-button"><h4 id="dashboard__hero">Bombasto</h4></div>
+            <div class="dashboard-button"><h4 id="dashboard__hero">Celeritas</h4></div>
+            <div class="dashboard-button"><h4 id="dashboard__hero">Magneta</h4></div>
         </div>      
                    
     </section>
     
-    <script src="../heroes.const.js"></script>
-<script src="dashboard.js"></script>
+<script src="/heroes.const.js"></script>
+<script src="/Pages/Dashboard/dashboard.class.js"></script>
+<script src="/Pages/Dashboard/dashboard.js"></script>
+
 </body>
 </html>

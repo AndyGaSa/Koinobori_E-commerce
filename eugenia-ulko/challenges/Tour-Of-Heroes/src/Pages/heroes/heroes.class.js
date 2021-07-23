@@ -6,7 +6,7 @@ class HeroesPage {
   setView() {
     this.heroes.forEach((hero) => {
       const element = `<li>
-            <a href="../Details/details.html?heroId=${hero.id}">
+            <a href="../Details/details.html?slug=${hero.slug}">
             <span class="badge">${hero.id}</span> ${hero.name}
             </a>
             <button class="delete" title="delete hero">x</button>

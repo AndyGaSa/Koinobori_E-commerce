@@ -3,8 +3,14 @@ const transformUrlQueryToObject = require('./transformUrlQueryToObject');
 // IIRF
 (function detailsPageModel() {
   //  const id = 15;   ///
+  const { heroId, slug } = transformUrlQueryToObject(location.search);
+  const details = new DetailsPage(+heroId, slug, heroes);
+  details.setView();
+}());
 
-  /* // acceder a los heroes
+module.exports = DetailsPage;
+
+/* // acceder a los heroes
     const currentHero = heroes.find((hero) => hero.id === id);
 
       //   const findCallback = (hero) => hero.id === id;
@@ -33,13 +39,6 @@ const transformUrlQueryToObject = require('./transformUrlQueryToObject');
         }
     }
     */
-  const { heroId, slug } = transformUrlQueryToObject(location.search);
-  const details = new DetailsPage(+heroId, slug, heroes);
-  details.setView();
-}());
-
-module.exports = DetailsPage;
-
 /*
 (function detailsPageModel() {
   const { heroId } = transformUrlQueryToObject(location.search);
