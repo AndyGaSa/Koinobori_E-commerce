@@ -61,51 +61,110 @@ class DetailsPage {
     domParent.appendChild(domDiv);
   }
 
-  setSlug(domParent) {}
+  setSlug(domParent) {
+    const domDiv = document.createElement('div');
+    //
+    domDiv.classList.add('detail-element');
+    domDiv.innerText = `slug: ${this.hero.slug}`;
+    //
+    domParent.appendChild(domDiv);
+  }
 
-  setpowerStats() {
-    // intelligence: 38,
-    // strength: 100,
-    // speed: 17,
-    // durability: 80,
-    // power: 24,
-    // combat: 64
+  setpowerStats(domParent) {
+    const domDiv = document.createElement('ul');
+    const objectKeys = Object.keys(this.hero.powerstats);
+    //
+    domDiv.classList.add('detail-element');
+    domDiv.innerText = 'powerstats: ';
+    //
+    objectKeys.forEach((key) => {
+      const domParagraph = document.createElement('li');
+      domParagraph.classList.add('detail-sub-element');
+      domParagraph.innerText = (`${key}: ${this.hero.powerstats[key]}`);
+      domDiv.appendChild(domParagraph);
+    });
+    //
+    domParent.appendChild(domDiv);
   }
 
   setAppearance(domParent) {
-  // gender: 'Male',
-  // race: 'Human',
-  // height: ["6'8", '203 cm'],
-  // weight: ['980 lb', '441 kg'],
-  // eyeColor: 'Yellow',
-  // hairColor: 'No Hair'
+    const domDiv = document.createElement('ul');
+    const objectKeys = Object.keys(this.hero.appearance);
+    //
+    domDiv.classList.add('detail-element');
+    domDiv.innerText = 'appearance: ';
+    //
+    objectKeys.forEach((key) => {
+      const domParagraph = document.createElement('li');
+      domParagraph.classList.add('detail-sub-element');
+      domParagraph.innerText = (`${key}: ${this.hero.appearance[key]}`);
+      domDiv.appendChild(domParagraph);
+    });
+    //
+    domParent.appendChild(domDiv);
   }
 
   setBiography(domParent) {
-  // fullName: 'Richard Milhouse Jones',
-  // alterEgos: 'No alter egos found.',
-  // aliases: ['Rick Jones'],
-  // placeOfBirth: 'Scarsdale, Arizona',
-  // firstAppearance: 'Hulk Vol 2 #2 (April, 2008) (as A-Bomb)',
-  // publisher: 'Marvel Comics',
-  // alignment: 'good'
+    const domDiv = document.createElement('ul');
+    const objectKeys = Object.keys(this.hero.biography);
+    //
+    domDiv.classList.add('detail-element');
+    domDiv.innerText = 'biography: ';
+    //
+    objectKeys.forEach((key) => {
+      const domParagraph = document.createElement('li');
+      domParagraph.classList.add('detail-sub-element');
+      domParagraph.innerText = (`${key}: ${this.hero.biography[key]}`);
+      domDiv.appendChild(domParagraph);
+    });
+    //
+    domParent.appendChild(domDiv);
   }
 
   setWork(domParent) {
-  // occupation: 'Musician, adventurer, author; formerly talk show host',
-  // base: '-'
+    const domDiv = document.createElement('ul');
+    const objectKeys = Object.keys(this.hero.work);
+    //
+    domDiv.classList.add('detail-element');
+    domDiv.innerText = 'work: ';
+    //
+    objectKeys.forEach((key) => {
+      const domParagraph = document.createElement('li');
+      domParagraph.classList.add('detail-sub-element');
+      domParagraph.innerText = (`${key}: ${this.hero.work[key]}`);
+      domDiv.appendChild(domParagraph);
+    });
+    //
+    domParent.appendChild(domDiv);
   }
 
   setConnections(domParent) {
-  // groupAffiliation: 'Hulk Family; Excelsior (sponsor), Avengers (honorary member); formerly partner of the Hulk, Captain America and Captain Marvel; Teen Brigade; ally of Rom',
-  // relatives: 'Marlo Chandler-Jones (wife); Polly (aunt); Mrs. Chandler (mother-in-law); Keith Chandler, Ray Chandler, three unidentified others (brothers-in-law); unidentified father (deceased); Jackie Shorr (alleged mother; unconfirmed)'
+    const domDiv = document.createElement('ul');
+    const objectKeys = Object.keys(this.hero.connections);
+    //
+    domDiv.classList.add('detail-element');
+    domDiv.innerText = 'connections: ';
+    //
+    objectKeys.forEach((key) => {
+      const domParagraph = document.createElement('li');
+      domParagraph.classList.add('detail-sub-element');
+      domParagraph.innerText = (`${key}: ${this.hero.connections[key]}`);
+      domDiv.appendChild(domParagraph);
+    });
+    //
+    domParent.appendChild(domDiv);
   }
 
   setImages(domParent) {
-    //   xs: 'https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/xs/1-a-bomb.jpg',
-    //   sm: 'https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/sm/1-a-bomb.jpg',
-    //   md: 'https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/md/1-a-bomb.jpg',
-    //   lg: 'https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/lg/1-a-bomb.jpg'
+    const domImg = document.createElement('img');
+    const objectKeys = Object.keys(this.hero.images);
+    //
+    // debugger;
+
+    domImg.classList.add('detail-img');
+    domImg.src = this.hero.images[objectKeys[3]];
+    //
+    domParent.appendChild(domImg);
   }
 
   setView(domParent) {

@@ -15,13 +15,24 @@
             <a href="../Dashboard/dashboard.html">Dashboard</a>
             <a href="#">Heroes</a>
         </nav>
-        <section>
-            <h2>My Heroes</h2>
+    </header>
+    <main>
+        <h2>My Heroes</h2>
+            <label for="new-hero">Hero name: </label>
+            <input id="new-hero" placeholder="Add hero">
+            <button class="add-button" onclick="addHero()">
+              Add hero
+            </button>
+            <button class="add-button" onclick="jsonRequest()">
+                Load Heroes
+            </button>
+         </div>
+          <section>
             <ul id="heroes-list" class="heroes">
             </ul>
         </section>
-    </header>
-    <script src="../../heroes.const.js"></script>
+    </main>
+    <script src="../../ajaxRequest.js"></script>
     <script src="heroes.class.js"></script>
     <script src="heroes.js"></script>
 </body>
