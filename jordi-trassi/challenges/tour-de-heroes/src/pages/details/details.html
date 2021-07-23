@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Details</title>
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="./details.css">
-    <title>Hero Details</title>
 </head>
 <body>
     <header>
@@ -16,54 +16,66 @@
             <a href="../Heroes/heroes.html">Heroes</a>
         </nav>
     </header>
-    <main>
-        <img src="" id="hero__image" width="400"></img>
-        
-        <div id="details__main">
-            <h2><span id="hero__title"></span> details!</h2>
-            <div><span>Id:</span> <span id="hero__id" ></span></div>
-            <div>
-                <label>
-                    Hero name:
-                </label>
-                <input type="text" id="hero__name">
-                <div>
-                    <h3>Powerstats:</h3> <span id="hero__powerstats" ></span>
-                    <ul>
-                        <li>Intelligence: <span id="hero__powerstats--intelligence" ></span></li>
-                        <li>Strength: <span id="hero__powerstats--strength" ></span></li>
-                        <li>Speed: <span id="hero__powerstats--speed" ></span></li>
-                        <li>Durability: <span id="hero__powerstats--durability" ></span></li>
-                        <li>Power: <span id="hero__powerstats--power" ></span></li>
-                        <li>Combat: <span id="hero__powerstats--combat" ></span></li>
-                    </ul>
-
-                    <h3>Appearance:</h3> 
-                    <ul id="hero__appearance">
-                    </ul>
-                    <h3>Biography:</h3> 
-                    <ul id="hero__biography">
-                    </ul>
-                    <h3>Work:</h3> 
-                    <ul id="hero__work">
-                    </ul>
-                    <h3>Connections:</h3> 
-                    <ul id="hero__connections">
-                    </ul>
-                </div>
-            </div>
-           <hr>
-            <button>go back</button><button>save</button>
-                
-            
+    <div>
+        <h2><span id="hero__title"></span> details!</h2>
+        <div id="hero__images">           
         </div>
-    </main>
-    
-    
+        <div>
+            <label>Id:</label>
+            <span id="hero__id"></span>
+        </div>
+        <div>
+            <label>
+                Name: 
+            </label>
+            <input type="text"  id="hero__name"></input>
+        </div>
+        <div class = 'hero-slug'>
+            <label >
+                Slug: 
+            </label>
+            <span id="hero__slug"></span>
+        </div>
+        <div>
+            <label>
+                Powerstats: 
+            </label>
+            <ul id="hero__powerstats"></ul>
+        </div>
+        <div>
+            <label>
+                Appearance: 
+            </label>
+            <ul id="hero__appearance"></ul>
+        </div>
+        <div>
+            <label>
+                Biography: 
+            </label>
+            <ul id="hero__biography"></ul>
+        </div>
+        <div>
+            <label>
+                Work: 
+            </label>
+            <ul id="hero__work"></ul>
+        </div>
+        <div>
+            <label>
+                Connections: 
+            </label>
+            <ul id="hero__connections"></ul>
+
+        </div>
+        <button>Go back</button>
+        <button>Save</button>
+    </div>
+
     <script src="../../heroes.const.js"></script>
-    <script src="./transformUrlQueryToObject.js"></script>
+    <script src = '../../getStorage.js'></script>
     <script src="./details.class.js"></script>
+    <script src="./transformUrlQueryToObject.js"></script>
     <script src="./details.js"></script>
-    
 </body>
 </html>
+

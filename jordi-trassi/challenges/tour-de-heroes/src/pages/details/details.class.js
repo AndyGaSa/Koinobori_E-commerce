@@ -1,92 +1,97 @@
 class DetailsPage {
-    
-    constructor(id, slug, heroes) {
-      this.id = id;
-      this.slug = slug;
-      this.hero = heroes?.find((hero) => hero.id === id);
-      
-    }
-  
-    setView() {
-      this.setImage();
-      this.setTitleHero();
-      this.setPowerstats();
-      this.setAppearence();
-      this.setBiography();
-      this.setWork();
-      this.setConnections();
-      
-    }
+  constructor(id, heroes) {
+    this.id = id;
+    this.hero = heroes?.find((hero) => hero.id === id);
+  }
 
-    setImage() {
-      document.getElementById('hero__image').src = this.hero.images.sm;
-    }
+  setId() {
+    document.getElementById('hero__id').innerHTML = this.hero.id;
+  }
 
+  setName() {
+    document.getElementById('hero__title').innerHTML = this.hero.name;
+    document.getElementById('hero__name').value = this.hero.name;
+  }
 
-    setTitleHero() {
-      document.getElementById('hero__title').innerHTML = this.hero.name;
-      document.getElementById('hero__id').innerHTML = this.hero.id;
-      document.getElementById('hero__name').value = this.hero.name;
-    }
+  setSlug() {
+    document.getElementById('hero__slug').innerHTML = this.hero.slug;
+  }
 
-    setPowerstats() {
-      document.getElementById('hero__powerstats--intelligence').innerHTML = this.hero.powerstats.intelligence;
-      document.getElementById('hero__powerstats--strength').innerHTML = this.hero.powerstats.strength;
-      document.getElementById('hero__powerstats--speed').innerHTML = this.hero.powerstats.speed;
-      document.getElementById('hero__powerstats--durability').innerHTML = this.hero.powerstats.durability;
-      document.getElementById('hero__powerstats--power').innerHTML = this.hero.powerstats.power;
-      document.getElementById('hero__powerstats--combat').innerHTML = this.hero.powerstats.combat;
-    }
+  setPowerstats() {
+    const parentElement = document.getElementById('hero__powerstats');
+    const { powerstats } = this.hero;
+    const stats = Object.entries(powerstats);
+    stats.forEach((stat) => {
+      const elements = document.createElement('li');
+      elements.innerHTML = `${stat[0]}: ${stat[1]}`;
+      parentElement.appendChild(elements);
+    });
+  }
 
-    setAppearence() {      
-      const entriAppearance = Object.entries(this.hero.appearance);
-      const parentElement = document.getElementById('hero__appearance');
-      for (let i = 0; i < entriAppearance.length; i += 1) {
-        const li = document.createElement('li');
-        const arrAppearance = entriAppearance[i];
-        li.innerText = `${arrAppearance[0]}: ${arrAppearance[1]}`;
-        parentElement.appendChild(li);
-      } 
-    }
+  setAppearance() {
+    const parentElement = document.getElementById('hero__appearance');
+    const { appearance } = this.hero;
+    const stats = Object.entries(appearance);
+    stats.forEach((stat) => {
+      const elements = document.createElement('li');
+      elements.innerHTML = `${stat[0]}: ${stat[1]}`;
+      parentElement.appendChild(elements);
+    });
+  }
 
-    setBiography() {
-      const entriBiography = Object.entries(this.hero.biography);
-      const parentElement = document.getElementById('hero__biography');
-      for (let i = 0; i < entriBiography.length; i += 1) {
-        const li = document.createElement('li');
-        const arrBiography = entriBiography[i];
-        li.innerText = `${arrBiography[0]}: ${arrBiography[1]}`;
-        parentElement.appendChild(li);
-      } 
-    }
+  setBiography() {
+    const parentElement = document.getElementById('hero__biography');
+    const { biography } = this.hero;
+    const stats = Object.entries(biography);
+    stats.forEach((stat) => {
+      const elements = document.createElement('li');
+      elements.innerHTML = `${stat[0]}: ${stat[1]}`;
+      parentElement.appendChild(elements);
+    });
+  }
 
-    setWork() {
-      const entriWork = Object.entries(this.hero.work);
-      const parentElement = document.getElementById('hero__work');
-      for (let i = 0; i < entriWork.length; i += 1) {
-        const li = document.createElement('li');
-        const arrWork = entriWork[i];
-        li.innerText = `${arrWork[0]}: ${arrWork[1]}`;
-        parentElement.appendChild(li);
-      } 
-    }
+  setWork() {
+    const parentElement = document.getElementById('hero__work');
+    const { work } = this.hero;
+    const stats = Object.entries(work);
+    stats.forEach((stat) => {
+      const elements = document.createElement('li');
+      elements.innerHTML = `${stat[0]}: ${stat[1]}`;
+      parentElement.appendChild(elements);
+    });
+  }
 
-    setConnections() {
-      const entriConnections = Object.entries(this.hero.connections);
-      const parentElement = document.getElementById('hero__connections');
-      for (let i = 0; i < entriConnections.length; i += 1) {
-        const li = document.createElement('li');
-        const arrConnections = entriConnections[i];
-        li.innerText = `${arrConnections[0]}: ${arrConnections[1]}`;
-        parentElement.appendChild(li);
-      } 
-    }
+  setConnections() {
+    const parentElement = document.getElementById('hero__connections');
+    const { connections } = this.hero;
+    const stats = Object.entries(connections);
+    stats.forEach((stat) => {
+      const elements = document.createElement('li');
+      elements.innerHTML = `${stat[0]}: ${stat[1]}`;
+      parentElement.appendChild(elements);
+    });
+  }
 
-    
+  setImages() {
+    const parentElement = document.getElementById('hero__images');
+
+    const elements = document.createElement('img');
+    elements.src = this.hero.images.sm;
+    elements.alt = `${this.hero.name}image`;
+    parentElement.appendChild(elements);
+  }
+
+  setView() {
+    this.setId();
+    this.setName();
+    this.setSlug();
+    this.setPowerstats();
+    this.setAppearance();
+    this.setBiography();
+    this.setWork();
+    this.setConnections();
+    this.setImages();
+  }
 }
 
-
-  
-  
-  module.exports = DetailsPage;
-  
+module.exports = DetailsPage;
