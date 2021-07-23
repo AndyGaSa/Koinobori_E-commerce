@@ -1,3 +1,8 @@
+function clearView() {
+  const parentElement = document.getElementById('heroes__list');
+  parentElement.innerHTML = '';
+}
+
 function setHeroesView() {
   const heroes = JSON.parse(localStorage.getItem('heroes'));
   heroes.forEach((hero) => {
