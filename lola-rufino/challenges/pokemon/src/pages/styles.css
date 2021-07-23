@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+}
+
+a{
+    color: #FFCC01;
+    text-decoration: none;
+}
+
+.header{
+    background-color: #EF5350;
+    display: flex;
+    padding: 10px;
+    font-family: 'Viga', sans-serif;
+    font-size: 20px;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.header__logo{
+    width: 300px;
+}
