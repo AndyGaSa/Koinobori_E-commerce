@@ -16,7 +16,7 @@ class pokedexPage{
         
         this.pokemonsList.forEach((pokemon) => {
             const element = 
-            `<div class="pokecontainer__card">
+            `<a class="pokecontainer__card" href="../Details/details.html?pokemonId=${pokemon.id}">
                 <img src="${pokemon.sprites}" class="pokecontainer__card__img"alt="pokemon ${pokemon.name}"></img>
                 <div class="pokecontainer__card__stats">
                     <div class="pokecontainer__card__stats__text">
@@ -27,7 +27,7 @@ class pokedexPage{
                         <span class="pokecontainer__card__stats__type-container__type">${pokemon.types}</span>
                     </div>
                 </div>
-            </div>`;
+            </a>`;
             let pokemonContainer = document.querySelector('.main__nav__pokemons-container');
             pokemonContainer.innerHTML += element;
         });
