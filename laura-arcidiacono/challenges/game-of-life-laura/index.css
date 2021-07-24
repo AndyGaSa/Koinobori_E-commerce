@@ -1,0 +1,77 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+body {
+    background-color: rgb(64, 64, 64);
+    color: black;
+}
+header {
+    background: linear-gradient(180deg, #64aeff, #bbdcff);
+}
+h1 {
+    font-size: 3vh;
+    color: rgb(136, 58, 129);
+    margin-block-start: 0.05em;
+    margin-block-end: 0.05em;
+    margin-inline-start: 4vh;
+    margin-inline-end: 4vh;
+}
+h2 {
+    font-size: 8vh;
+    color: rgb(42, 78, 151);
+    margin-block-start: 0.05em;
+    margin-block-end: 0.05em;
+    margin-inline-start: 4vh;
+    margin-inline-end: 4vh;
+}
+h3 {
+    font-size: 3vh;
+    color: rgb(136, 58, 129);
+    margin-block-start: 0.05em;
+    margin-block-end: 0.05em;
+    margin-inline-start: 4vh;
+    margin-inline-end: 4vh;
+}
+main {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    background-color: rgb(64, 64, 64);
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    margin-top: 3vh;
+    justify-content: center;
+}
+tr,th {
+    border: 1px solid rgb(153, 153, 153);
+    width: 5vh;
+    height: 5vh;
+    background-color: rgb(126, 126, 126);
+}
+
+footer {
+    display: flex;
+    background-color: rgb(179, 179, 179);
+    justify-content: space-evenly;
+    margin-top: 3vh;
+}
+button {
+    width: 30vh;
+    height: 15vh;
+    font-size: 5vh;
+    color: white;
+    border-style: none;
+    margin: 2vh;
+}
+#startButton {
+    background-color: rgb(42, 78, 151);
+}
+#clearButton {
+    background-color: rgb(42, 78, 151);
+}
