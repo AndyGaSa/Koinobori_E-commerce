@@ -1,7 +1,7 @@
 class pokedexPage{
     constructor(){
         this.pokemonsList;
-        this.pokemonsShown = 100;
+        this.pokemonsShown = 5;
         this.pokemonsPage = 0;
     }
 

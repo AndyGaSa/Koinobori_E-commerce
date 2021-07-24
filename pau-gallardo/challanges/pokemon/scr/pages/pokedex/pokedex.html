@@ -16,22 +16,22 @@
     <main class = "main">
         <section class = "main__nav">
             <nav class="main__nav__pokemons-page">
-                <ul class="main__nav__pokemons-page__number">
-                    <li>5</li>
-                    <li>10</li>
-                    <li>20</li>
-                    <li>50</li>
-                </ul>
-                <ul class="main__nav__pokemons-page-selector">
-                    <li>Prev</li>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>Next</li>
-                </ul>
+                <div class="main__nav__pokemons-page__number">
+                    <a onclick="printPokemons(5)">5</a>
+                    <a onclick="printPokemons(10)">10</a>
+                    <a onclick="printPokemons(20)">20</a>
+                    <a onclick="printPokemons(50)">50</a>
+                </div>
+                <div class="main__nav__pokemons-page-selector">
+                    <a>Prev</a>
+                    <a>1</a>
+                    <a>2</a>
+                    <a>3</a>
+                    <a>Next</a>
+                </div>
             </nav>
         </section>
-        <section class = "main__nav__pokemons-container"> 
+        <section class = "main__nav__pokemons-container pokecontainer"> 
 
         </section>
     </main>
@@ -40,6 +40,7 @@
     </footer>
     <script src="../../../services/getpokemons.js"></script>
     <script src="../pokedex/pokedexPage.class.js"></script>
+    <script src="../../../services/pagination.js"></script>
     <script src="../pokedex/pokedex.js"></script>
 </body>
 </html>
