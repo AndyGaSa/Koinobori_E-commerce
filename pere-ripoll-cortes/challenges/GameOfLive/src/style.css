@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+section{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 31em;
+    display: flex;
+}
+
+tbody{
+    background-color: black;
+}
+
+td {
+    width: 1em;
+    height: 1em;
+    
+    background-color: black;
+}
