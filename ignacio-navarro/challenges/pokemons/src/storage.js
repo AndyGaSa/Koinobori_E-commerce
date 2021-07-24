@@ -3,7 +3,7 @@ function getPokemonList(offset, quantity) {
     .then((response) => response.json())
     .then((pokemons) => pokemons);
 }
-function getPokemonDetails(searchInput) {
+function getPokemonFromApi(searchInput) {
   return fetch(`https://pokeapi.co/api/v2/pokemon/${searchInput}`)
     .then((response) => response.json())
     .then((pokemonDetail) => pokemonDetail);
