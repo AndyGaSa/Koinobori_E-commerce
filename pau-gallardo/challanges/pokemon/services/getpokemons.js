@@ -1,6 +1,5 @@
-let pokemonsList = [];
-function getPokemons(howManyPokemons, howManyPokemons) {
-    fetch(`https://pokeapi.co/api/v2/pokemon?limit=${howManyPokemons}&offset=${howManyPokemons}`)
+function getPokemons(howManyPokemons, whatPage) {
+    return fetch(`https://pokeapi.co/api/v2/pokemon?limit=${howManyPokemons}&offset=${whatPage}`)
       .then((response) => response.json())
       .then((pokemons) => pokemons)
         .then(({results}) => 
@@ -9,7 +8,7 @@ function getPokemons(howManyPokemons, howManyPokemons) {
             .then((response2) => response2.json())
             .then((allPokemonStuff) => allPokemonStuff))))
         .then((pokemons2) => {
-            pokemonsList = pokemons2.map(({
+            let pokemonsList = pokemons2.map(({
                 id, name, sprites, types
             }) => {
                 const pokemonObj = {
@@ -20,8 +19,6 @@ function getPokemons(howManyPokemons, howManyPokemons) {
                 }
                 return pokemonObj;
             })
+            return pokemonsList;
         })
-    }
-
-    pokemons = getPokemons(100,100);
-
+}
