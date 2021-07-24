@@ -1,13 +1,14 @@
-class PokemonPage {
+class PokemonsPage {
     constructor() {
         this.pokemons;
-        this.page = 0;
-        this.limit = 5;
-        this.offset= this.limit * this.page;
+    }
+
+    clearView() {
+        document.getElementById("pokedex").innerHTML = ('');
     }
 
     setView() {
-        const pokeapi = `https://pokeapi.co/api/v2/pokemon?limit=${this.limit}&offset=${this.offset}`;
+        const pokeapi = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
         retrievePokemons(pokeapi)
         .then(({ results }) => Promise.all(results.map(({ url }) => {
             return retrievePokemons(url)})))
@@ -20,7 +21,6 @@ class PokemonPage {
     };
 
     print() {
-        //Modificar la forma en la que hago esto. 
         this.pokemons.forEach(({ id, name, sprites }) => {
             let pokemon = `<li class="pokemon>
                 <a class="pokemon__anchor" "href="https://pokeapi.co/api/v2/pokemon/${name}">
@@ -36,12 +36,4 @@ class PokemonPage {
             document.getElementById("pokedex").innerHTML += pokemon;
         });
     };
-
-    last() {
-        
-    }
 }
-
-const pokemonPage = new PokemonPage()
-
-pokemonPage.setView()
