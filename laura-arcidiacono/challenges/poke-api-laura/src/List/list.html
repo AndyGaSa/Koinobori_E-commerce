@@ -5,26 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="list.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Poke-Api Laura</title>
 </head>
 <body>
     <header>
-        <nav id="nav-movile">
-            <div>Menu</div>
+        <nav id="nav-mobile">
+            <img class="img__logo" src="https://lh3.googleusercontent.com/3TSaKxXGo2wT0lu0AyNUBnkk6wkCC2AzOhJyy3JXIPm-AmZ1k9DSAroWeBUyePswCZSs5lVp3mPF7HzUpY9VPlyOV5eddITONINr3WSqLNLm=e365-w600" alt="Logo PokemonGo">
             <ul>
                 <li><a href="">Lista</a></li>
                 <li><a href="">Detalles</a></li>
                 <li><a href="">My Poke</a></li>
             </ul>
-            <div>Logo</div>
-        </nav>
+           </nav>
         <nav id="nav-desktop">
-            <div>Logo</div>
+            <img class="img__logo" src="https://lh3.googleusercontent.com/3TSaKxXGo2wT0lu0AyNUBnkk6wkCC2AzOhJyy3JXIPm-AmZ1k9DSAroWeBUyePswCZSs5lVp3mPF7HzUpY9VPlyOV5eddITONINr3WSqLNLm=e365-w600" alt="Logo PokemonGo">
             <a href="">Lista</a>
             <a href="">Detalles</a>
             <a href="">My Poke</a>
-            
         </nav>
+        <figure ><img class="desktop__img" src="https://assets.pokemon.com/assets//cms2-es-es/img/video-games/_tiles/pokemon-unite/launch/pokemon-unite-169.jpg" alt="Imagen de Pokemons en batalla"></figure>
+            
     </header>
     <main>
         <section id="section__top-main">
@@ -32,35 +37,34 @@
             <div>
                 <ul>
                    <button class="top-main__button" onclick="createPokeCard(5)">Show Pokemons</button>
-                   <button class="top-main__button" onclick="reatePokeCard(10)">Show 10 Pokemons</button>
+                   <button class="top-main__button" onclick="createPokeCard(10)">Show 10 Pokemons</button>
                    <button class="top-main__button" onclick="createPokeCard(20)">Show 20 Pokemons</button>
                    <button class="top-main__button" onclick="createPokeCard(50)">Show 50 Pokemons</button>
                 </ul>
             </div>
         </section>
         <section id="section__list">
-        
         </section>
         <section id="section__pagination">
-            <div>
+            
                 <button><a href="">Anterior</a></button>
                 <a href=""> <i class="fas fa-angle-double-left"></i></a>
                 <div>pagina actual</div>
                 <a href=""> <i class="fas fa-angle-double-right"></i></a>
-                <button><a href="">Sigiente</a></button>
-            </div>
+                <button><a href="">Siguiente</a></button>
+            
         </section>
     </main>
     <footer>
-        <div>Logo</div>
-        <div>
-        <div>
-            <i class="fab fa-twitter-square"></i>
-            <i class="fab fa-instagram-square"></i>
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-youtube"></i>
+        <div class="footer__info">
+            <img class="img__logo" src="https://lh3.googleusercontent.com/3TSaKxXGo2wT0lu0AyNUBnkk6wkCC2AzOhJyy3JXIPm-AmZ1k9DSAroWeBUyePswCZSs5lVp3mPF7HzUpY9VPlyOV5eddITONINr3WSqLNLm=e365-w600" alt="Logo PokemonGo">    
+            <span>by Laura Arcidiacono</span>
         </div>
-        <span>by Laura Arcidiacono</span>
+        <div class="footer__net">
+            <i class="fab fa-twitter-square fa-2x"></i>
+            <i class="fab fa-instagram-square fa-2x"></i>
+            <i class="fab fa-facebook-square fa-2x"></i>
+            <i class="fab fa-youtube fa-2x"></i>
         </div>
     </footer>
     
