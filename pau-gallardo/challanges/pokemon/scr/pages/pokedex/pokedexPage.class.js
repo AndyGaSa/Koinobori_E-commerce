@@ -1,7 +1,7 @@
 class pokedexPage{
     constructor(){
         this.pokemonsList;
-        this.pokemonsShown = 1;
+        this.pokemonsShown = 100;
         this.pokemonsPage = 0;
     }
 
@@ -13,13 +13,20 @@ class pokedexPage{
         this.pokemonsList = JSON.parse(localStorage.getItem('pokemons'));
         
         this.pokemonsList.forEach((pokemon) => {
-            const element = `<li>
-            <a href="../Details/details.html?heroId=${pokemon.id}">
-            <span class="badge">${pokemon.id}</span> ${pokemon.name}
-            </a>
-            <button class="delete" title="delete hero">x</button>
-            </li>`;
-            let pokemonContainer = document.getElementById('main__nav__pokemons-container');
+            const element = 
+            `<div class="pokecontainer__card">
+                <img src="${pokemon.sprites}" class="pokecontainer__card__img"alt="pokemon ${pokemon.name}"></img>
+                <div class="pokecontainer__card__stats">
+                    <div class="pokecontainer__card__stats__text">
+                        <span class="pokecontainer__card__stats__text__name">${pokemon.name}</span>
+                        <span class="pokecontainer__card__stats__text__id">${pokemon.id}</span>
+                    </div>
+                    <div class="pokecontainer__card__stats__type-container">
+                        <span class="pokecontainer__card__stats__type-container__type">${pokemon.types}</span>
+                    </div>
+                </div>
+            </div>`;
+            let pokemonContainer = document.querySelector('.main__nav__pokemons-container');
             pokemonContainer.innerHTML += element;
         });
     }
