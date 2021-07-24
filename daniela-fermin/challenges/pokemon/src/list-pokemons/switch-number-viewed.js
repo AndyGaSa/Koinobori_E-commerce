@@ -1,20 +1,35 @@
 const count = 1118;
-let currentPage = 0;
-const lastPage = count / numberOfPokemon;
+currentPage = 0;
+numberOfPokemons = 5;
+const lastPage = Math.floor(count / numberOfPokemons);
 
-function changeNumberOfPokemons() {}
+function printRefreshedPage() {
+  pokemonListPage = new PokemonList();
+  pokemonListPage.clearView();
+  pokemonListPage.setViewList(numberOfPokemons, currentPage);
+}
+
+function changeNumberOfPokemonsToFive() {
+  numberOfPokemons = 5;
+  printRefreshedPage();
+}
+function changeNumberOfPokemonsToTen() {
+  numberOfPokemons = 10;
+  printRefreshedPage();
+}
+function changeNumberOfPokemonsToFifty() {
+  numberOfPokemons = 50;
+  printRefreshedPage();
+}
 
 function previous() {
   if (currentPage === 0) return;
   currentPage -= 1;
-  clearView();
-  setViewList();
+  printRefreshedPage();
 }
 
 function next() {
-  if (currentPage >= 0) {
-    currentPage += 1;
-    clearView();
-    setViewList();
-  }
+  if (currentPage === lastPage) return;
+  currentPage += 1;
+  printRefreshedPage();
 }

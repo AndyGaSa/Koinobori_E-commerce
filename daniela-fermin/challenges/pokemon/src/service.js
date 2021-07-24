@@ -9,8 +9,3 @@ function getSinglePokemon(url) {
     .then((response) => response.json())
     .then((pokemons) => pokemons);
 }
-
-function getCount(numberOfPokemons, currentPage) {
-  getPokemons(numberOfPokemons, numberOfPokemons * currentPage)
-    .then(({ count }) => count);
-}

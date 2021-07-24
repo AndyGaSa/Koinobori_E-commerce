@@ -1,3 +1,7 @@
+header {
+    display: flex;
+    flex-direction: column;
+}
 header nav {
     display: inline-block;
     margin: 0 auto;
@@ -5,9 +9,13 @@ header nav {
     width: 100%;
     background-color: black;
     position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 h1{
     display: inline-block;
+    margin-top: 15%;
 }
 .top__buttons{
     display: flex;

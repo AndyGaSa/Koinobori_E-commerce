@@ -13,20 +13,21 @@
         <nav>
 
         </nav>
+        <h1>Pokemon List</h1>
     </header>
-    <h1>Pokemon List</h1>
+    
     <div class="top__buttons">
-        <button id="top__buttons--5" value="5">5</button>
-        <button id="top__buttons--10" value="10">10</button>
-        <button id="top__buttons--50" value="50">50</button>
+        <button onclick="changeNumberOfPokemonsToFive()" id="top__buttons--5" value="5">5</button>
+        <button onclick="changeNumberOfPokemonsToTen()"  id="top__buttons--10" value="10">10</button>
+        <button onclick="changeNumberOfPokemonsToFifty()" id="top__buttons--50" value="50">50</button>
     </div>
     <div class="screen-frame">
         <section class="screen-white" id="pokemon__list">
 
         </section>
         <div class="screen-frame__buttons buttons">
-            <button class="buttons__prev" value="previous">Prev</button>
-            <button class="buttons__next" value="next">Next</button>
+            <button class="buttons__prev" onclick="previous()" value="previous">Prev</button>
+            <button class="buttons__next" onclick="next()" value="next">Next</button>
         </div>
         
     </div>
