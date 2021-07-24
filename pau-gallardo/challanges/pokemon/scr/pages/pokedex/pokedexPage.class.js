@@ -9,6 +9,8 @@ class pokedexPage{
         getPokemons(this.pokemonsShown, this.pokemonsShown*this.pokemonsPage)
         .then((pokeArray) => {
             localStorage.setItem('pokemons',JSON.stringify(pokeArray));
+            localStorage.setItem('pokemonsShown',JSON.stringify(this.pokemonsShown));
+            localStorage.setItem('pokemonsPage',JSON.stringify(this.pokemonsPage));
         })
         this.pokemonsList = JSON.parse(localStorage.getItem('pokemons'));
         
@@ -29,9 +31,5 @@ class pokedexPage{
             let pokemonContainer = document.querySelector('.main__nav__pokemons-container');
             pokemonContainer.innerHTML += element;
         });
-    }
-
-    setPokemonsShown(numberPokemons){
-        this.pokemonsShown = numberPokemons;
     }
 }

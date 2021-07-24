@@ -1,20 +1,35 @@
-let howManyPokemonsSaved = 5;
 function clearPokemons(){
     const parentElement = document.querySelector('.main__nav__pokemons-container');
     parentElement.innerHTML = '';
 }
 
-function printPokemons(howManyPokemons = howManyPokemonsSaved){
+function printPokemons(howManyPokemons){
     clearPokemons();
     const pokedex = new pokedexPage();
     pokedex.pokemonsShown = howManyPokemons;
-    howManyPokemonsSaved = pokedex.pokemonsShown;
+    localStorage.setItem('pokemonsShown',JSON.stringify(pokedex.pokemonsShown));
     pokedex.setView();
 }
 
-function changePage(){
+function changePage(id){
     clearPokemons();
+    let pageNumber = JSON.parse(localStorage.getItem('pokemonsPage'));
     const pokedex = new pokedexPage();
-    pokedex.pokemonsShown = howManyPokemons;
-    pokedex.setView();
+    pokedex.pokemonsShown = JSON.parse(localStorage.getItem('pokemonsShown'));
+
+    switch(id){
+        case "prev":
+            pokedex.pokemonsPage = pageNumber - 1;
+            localStorage.setItem('pokemonsPage',pokedex.pokemonsPage)
+            pokedex.setView();
+            break
+
+        case "next":
+            pokedex.pokemonsPage = pageNumber + 1;
+            localStorage.setItem('pokemonsPage',pokedex.pokemonsPage)
+            console.log(pokedex.pokemonsShown);
+            console.log(pokedex.pokemonsPage);
+            pokedex.setView();
+            break
+    }
 }
