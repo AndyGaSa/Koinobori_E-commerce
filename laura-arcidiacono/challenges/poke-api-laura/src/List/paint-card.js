@@ -6,22 +6,22 @@ function createElementWithClass(type, className) {
 
 function createPokeCard(maxCards) {
   document.getElementById('section__list').innerHTML = '';
-  for (let i = 0; i < maxCards; i += 1) {
+  for (let item = 0; item < maxCards; item += 1) {
     const sectionList = document.getElementById('section__list');
-    const pokeCard = createElementWithClass('a', 'list__poke-card');
-    const pokeName = createElementWithClass('h3', 'list__poke-name');
-    const pokeId = createElementWithClass('h4', 'list__poke-id');
-    const pokeImg = createElementWithClass('img', 'list__poke-img');
+    const pokeCard = createElementWithClass('div', 'list__poke-card');
     sectionList.appendChild(pokeCard);
-    pokeCard.href = '#';
+    const pokeAnchor = createElementWithClass('a', 'list__poke-anchor');
+    pokeCard.appendChild(pokeAnchor);
+    pokeAnchor.href = '#';
+    const pokeName = createElementWithClass('h3', 'list__poke-name');
+    pokeName.innerHTML = `${pokeArray[item].name}`;
     pokeCard.appendChild(pokeName);
-    pokeName.innerHTML = `${pokeArray[i].name}`;
-    pokeCard.appendChild(pokeId);
-    pokeId.innerHTML = `${pokeArray[i].id}`;
+    const pokeImg = createElementWithClass('img', 'list__poke-img');
+    pokeImg.src = `${pokeArray[item].sprites.front_default}`;
+    pokeImg.alt = `Imagen de ${pokeArray[item].name}`;
     pokeCard.appendChild(pokeImg);
-    pokeImg.src = `${pokeArray[i].sprites.front_default}`;
+    const pokeId = createElementWithClass('h4', 'list__poke-id');
+    pokeId.innerHTML = `Id: ${pokeArray[item].id}`;
+    pokeCard.appendChild(pokeId);
   }
-}
-function deleteCard() {
-
 }
