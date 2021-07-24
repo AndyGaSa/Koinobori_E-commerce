@@ -19,7 +19,7 @@ class pokedexPage{
             </a>
             <button class="delete" title="delete hero">x</button>
             </li>`;
-            let pokemonContainer = document.getElementById('main__pokemons-container');
+            let pokemonContainer = document.getElementById('main__nav__pokemons-container');
             pokemonContainer.innerHTML += element;
         });
     }
