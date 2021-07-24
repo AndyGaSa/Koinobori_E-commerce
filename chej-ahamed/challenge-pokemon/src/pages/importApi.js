@@ -8,6 +8,4 @@ const pokemonsArray = [];
         .catch((err) => console.log(err));
     }
   }
-
-  console.log(pokemonsArray);
 }());

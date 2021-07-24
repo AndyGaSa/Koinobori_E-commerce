@@ -1,4 +1,5 @@
 function showPokemons(num) {
+  document.getElementById('pokemon__list').innerHTML = (' ');
   for (let i = 0; i < num; i += 1) {
     const cardContainer = document.getElementById('pokemon__list');
     const cardItem = document.createElement('a');
@@ -21,5 +22,4 @@ function showPokemons(num) {
     cardItem.appendChild(typeOfPokemon);
     typeOfPokemon.innerHTML = `${pokemonsArray[i].type}`;
   }
-  cardContainer.append(cardItem);
 }
