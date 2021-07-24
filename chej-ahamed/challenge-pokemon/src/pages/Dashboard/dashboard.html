@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body></body>
 <header>
@@ -16,26 +17,37 @@
 </nav>
 </header>
 <main>
-    <div>
-        <label for="new-pokemon">Pokemon name: </label>
-        <input id="new-pokemon"/>
+    <nav>
+        <button class="show-pokemon" id="show-pokemon" onclick="showPokemons(4)">
+            Show Pokemon
+        </button>
+        <button class="show-pokemon" id="show-pokemon__10" onclick="showPokemons(9)">
+            Show 10 Pokemon 
+        </button>
+        <button class="show-pokemon" id="show-pokemon__20" onclick="showPokemons(19)">
+            Show 20 Pokemon
+        </button>
+        <button class="show-pokemon" id="show-pokemon" onclick="showPokemons(49)">
+            Show 50 Pokemon
+        </button>
 
-        <button class="add-button" id="add-pokemon">
-            Add Pokemon
-        </button>
-        <button class="add-button" >
-            Get Pokemon
-        </button>
-    </div>
-    <div>
+    
+
         
 
-    </div>
+    </nav>
+
+
+    <section id="pokemon__list">
+       
+
+    </section>
 </main>
 <footer>
 
 </footer>
 
     <script src="../importApi.js"></script>
+    <script src="../Dashboard/dashboard.js"></script>
 </body>
 </html>
