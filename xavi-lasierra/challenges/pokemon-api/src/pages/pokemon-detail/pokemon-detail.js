@@ -1,5 +1,5 @@
 (function pokemonDetail() {
-  const { name } = transformUrlQueryToObject(location.search);
-  const pokemonDescription = new PokemonDetailPage(name);
+  const { id, name } = transformUrlQueryToObject(location.search);
+  const pokemonDescription = new PokemonDetailPage(id, name);
   pokemonDescription.setView();
 }());
