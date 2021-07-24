@@ -41,6 +41,14 @@ footer{
 .main__screen-stats{
     padding: 20px;
 }
+.pokemon-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 40px;
+    margin-top: 80px;
+    width: 170px;
+}
 .screen__top{
     display: flex;
     flex-direction: row;

@@ -1,5 +1,14 @@
 let currentPokemon = JSON.parse(localStorage.getItem('pokemonProfile'));
 
+(function defaultBehaviour() {
+  const url = window.location.search.split('=')[1];
+  getPokemonFromApi(url).then((pokemonProfileData) => {
+    localStorage.setItem('pokemonProfile', JSON.stringify(pokemonProfileData));
+    currentPokemon = JSON.parse(localStorage.getItem('pokemonProfile'));
+    printPokemonData(currentPokemon);
+  });
+}());
+
 function searchPokemon() {
   const searchInputDOM = document.getElementById('pokemon-search-input');
   const searchInput = searchInputDOM.value;

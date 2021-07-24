@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Index</title>
+    <link rel="stylesheet" href="../html-structure/main.css">
+</head>
+<body>
+    <header>
+        <button onclick="reset" class="header__reset-button">reset</button>
+    </header>
+    <main id="screen-content">
+       <li class="pokemon-list" id="pokemon-list">
+           
+       </li>
+    </main>
+    <footer>
+        <div id="footer__details-container">
+            <input type="text" placeholder="search" class="footer__input" id="pokemon-search-input">
+            <button onclick="nextPokemon()" class="footer__details-button--next">next</button>
+            <button onclick="previousPokemon()" class="footer__details-button--previous">previous</button>
+            <button onclick="searchPokemon()" class="footer__details-button--go">go</button>
+        </div>
+        <a href="../creation/creation.html" class="footer__filter-link">filter</a>
+        <a href="../creation/creation.html" class="footer__create-link">create</a>
+    </footer>
+    <script src="../storage.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
