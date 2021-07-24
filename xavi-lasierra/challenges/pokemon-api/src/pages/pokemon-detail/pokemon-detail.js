@@ -1,5 +1,15 @@
+let pokemonDescription;
+
 (function pokemonDetail() {
   const { id, name } = transformUrlQueryToObject(location.search);
-  const pokemonDescription = new PokemonDetailPage(id, name);
+  pokemonDescription = new PokemonDetailPage(id, name);
   pokemonDescription.setView();
 }());
+
+function shinyPhoto() {
+  pokemonDescription.printPhotoShiny();
+}
+
+function normalPhoto() {
+  pokemonDescription.printPhoto();
+}

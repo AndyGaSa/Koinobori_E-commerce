@@ -74,6 +74,21 @@ class PokemonDetailPage {
   }
 
   print() {
+    this.printTitle();
+    this.printPhoto();
+  }
 
+  printTitle() {
+    document.getElementById('pokemon__id').innerText = `#${this.pokemon.id}`;
+    document.getElementById('pokemon__name').innerText = capitalizeFirstLetter(this.pokemon.name);
+  }
+
+  printPhoto() {
+    document.getElementById('pokemon__photo').src = this.pokemon.sprite[0];
+    document.getElementById('pokemon__photo').alt = `${this.pokemon.sprite[0]} photo`;
+  }
+
+  printPhotoShiny() {
+    document.getElementById('pokemon__photo').src = this.pokemon.sprite[1];
   }
 }
