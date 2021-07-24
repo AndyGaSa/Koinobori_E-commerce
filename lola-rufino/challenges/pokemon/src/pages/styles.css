@@ -1,3 +1,4 @@
+ /**** General Styles ****/
  *{
     margin: 0;
 }
@@ -11,6 +12,7 @@
     justify-content: space-around;
     align-items: center;
     text-transform: uppercase;
+    flex-wrap: wrap;
 }
 
 .header a{
@@ -39,6 +41,7 @@
 .header__nav{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer{

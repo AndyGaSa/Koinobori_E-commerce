@@ -1,0 +1,45 @@
+/*** Pokemons list Styles ***/
+
+.main__title{
+    color: #FFCC01;
+    font-family: 'Viga', sans-serif;
+    padding: 30px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    background-color: #EF5350;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__poke-name{
+    color: #FFCC01;
+    font-family: 'Viga', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#main__pokelist{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main__poke{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10%;
+    padding: 20px;
+    -webkit-text-stroke: 1px black;
+    box-shadow: 2px 2px 2px #FFCC01;
+    margin: 10px;
+}
+
+.main__poke-img{
+    max-width: 150px;
+    margin: 5px;
+}

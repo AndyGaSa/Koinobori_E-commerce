@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="dashboard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
@@ -12,16 +13,27 @@
 </head>
 <body>
     <header class="header">
-        <section><img class="header__logo" src="../logo-pokemon.png"></section>
+        <h1><img class="header__logo" src="../../images/logo-pokemon.png"></h1>
         <nav class="header__nav">
             <a href="dashboard.html">Dashboard</a>
-            <img class="header__pikachu" src="../pikachu.png" />
+            <img class="header__pikachu" src="../../images/pikachu.png" />
             <a href="../Pokemons/pokemons.html">Pokemons list</a>
         </nav>
     </header>
+    <main class="main">
+        <img class="main___img" src="../../images/entrenador-pokemon.png" />
+        <h2 class="main__title">My favourite Pokemons</h2>
+        <section class="main__favpokes">
+            <div id="favpoke1"></div>
+            <div id="favpoke2"></div>
+            <div id="favpoke3"></div>
+            <div id="favpoke4"></div>
+        </section>
+    </main>
     <footer class="footer">
-        <img class="footer__img" src="../pokebola.png" />
+        <img class="footer__img" src="../../images/pokebola.png" />
         <section><span>&copy Skylab Coders Academy - 2021</span></section>
     </footer>
+    <script src="dashboard.js"></script>
 </body>
 </html>
