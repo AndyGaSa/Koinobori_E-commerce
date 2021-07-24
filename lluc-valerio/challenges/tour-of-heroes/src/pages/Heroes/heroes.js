@@ -17,9 +17,9 @@ function loadHeroes() {
 
 // Function threw when delete button used.
 function deleteItem(buttonHref) {
-  const [, slug] = buttonHref.split('=');
-  if (heroesPage.delete(slug)) {
-    alert(`Hero with slug ${slug} deleted.`);
+  const [, id] = buttonHref.split('=');
+  if (heroesPage.delete(+id)) {
+    alert(`Hero with id ${id} deleted.`);
     heroesPage.updateStorage();
     heroesPage.getStorage();
     heroesPage.setview();
@@ -34,8 +34,8 @@ function updateMaxId(maxId) {
 
 function addHero() {
   const domInput = document.getElementById('new-hero');
-  //
-  if (domInput.value.length <= 0) {
+
+  if (domInput.value.trim().length <= 0) {
     alert('You have to write a name to add a new hero.');
   } else {
     if (localStorage.getItem('heroMaxId') === null) {
@@ -56,7 +56,7 @@ function saveBiggestIndex() {
   // const newArray = heroesPage;
   // acc --> accumulator
   // cV --> currentValue
-  // reduce(callback, startIndex) <-- by default stats at index 1
+  // reduce(callback, startIndex) <-- by default starts at index 1
   // compare the values from accumulate and currentValue,
   // and applies the condition defined on callback
   // condition ? exprIfTrue : exprIfFalse

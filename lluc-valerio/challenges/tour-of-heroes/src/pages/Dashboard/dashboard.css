@@ -42,6 +42,14 @@ a {
   align-self: auto;
 }
 
+.search-result {
+  width: 100%;
+}
+
+.search-result-element {
+  width: auto;
+}
+
 @media (min-width: 600px) {
   a {
     width: 18%;
