@@ -8,7 +8,7 @@ class PokemonList {
   }
 
   setView(numberOfPokemons, currentPage) {
-    const pokemonNames = getPokemons(numberOfPokemons, numberOfPokemons * currentPage)
+    getPokemons(numberOfPokemons, numberOfPokemons * currentPage)
       .then(({ results }) => Promise.all(results.map(({ url }) => getSinglePokemon(url))))
       .then((pokemons) => {
         this.pokemons = pokemons.map(({
@@ -35,7 +35,7 @@ class PokemonList {
       types.forEach((type) => {
         typesElement += `<div class="type-${type}">${type}</div>`;
       });
-      const element = `<li><a>
+      const element = `<li><a href="../pokemon-detail/pokemon-detail.html?name=${name}">
             <div>
                 <span>${id}</span>
                 <span>${name}</span>
