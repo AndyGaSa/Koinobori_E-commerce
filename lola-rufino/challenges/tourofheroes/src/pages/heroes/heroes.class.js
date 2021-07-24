@@ -1,6 +1,6 @@
 class HeroesPage {
-  constructor(heroes) {
-    this.heroes = heroes;
+  constructor(newSuperHeroes) {
+    this.heroes = newSuperHeroes;
   }
 
   setView() {
@@ -9,7 +9,7 @@ class HeroesPage {
             <a href="../Details/details.html?heroId=${hero.id}">
             <span class="badge">${hero.id}</span> ${hero.name}
             </a>
-            <button class="delete" title="delete hero">x</button>
+            <button class="delete" title="delete hero" id="clickedDelete" onclick="deleteHeroFn()">x</button>
         </li>`;
 
       const parentElement = document.getElementById('heroes__list');
