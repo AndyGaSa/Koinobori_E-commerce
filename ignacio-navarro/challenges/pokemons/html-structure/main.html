@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body>
+    <header>
+        <button onclick="reset" class="header__reset-button">reset</button>
+    </header>
+    <main>
+        <section class="main__screen" id="screen">
+
+        </section>
+    </main>
+    <footer>
+        <div id="footer__details-container">
+            <input oninput="searchPokemons(this.value)" type="text" placeholder="search" class="footer__input">
+            <button onclick="nextPokemon" class="footer__details-button--next">next</button>
+            <button onclick="previousPokemon" class="footer__details-button--previous">previous</button>
+        </div>
+        <div id="footer__search-container">
+            <input oninput="searchPokemons(this.value)" type="text" placeholder="search" class="footer__input">
+                <button class="dropdown__button">items showed</button>
+                <div class="">
+                  <button onclick="results(5)" class="footer__dropdown-item">5</button>
+                  <button onclick="results(10)" class="footer__dropdown-item">10</button>
+                  <button onclick="results(20)" class="footer__dropdown-item">20</button>
+                  <button onclick="results(50)" class="footer__dropdown-item">50</button>
+                  <input oninput="results(this.value)" type="text" placeholder="you choose" class="footer__dropdown-item--input">
+                </div>
+        </div>
+        <a href="../creation/creation.html" class="footer__creation">create</a>
+    </footer>
+    <script src="../storage.js"></script>
+</body>
+</html>
