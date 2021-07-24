@@ -4,6 +4,7 @@ class PokemonList {
   }
 
   clearView() {
+    this.pokemon = [];
     document.getElementById('pokemon-list').innerHTML = '';
   }
 

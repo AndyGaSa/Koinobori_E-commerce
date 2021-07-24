@@ -1,7 +1,6 @@
 let pokemonList;
 let currentPage;
 let pokemonsPerPage;
-const NUMOFPOKE = 150;
 
 function setButtons(page, lastPage) {
   document.querySelectorAll('.navigation__previous').forEach((button) => {
