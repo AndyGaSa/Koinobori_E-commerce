@@ -16,18 +16,15 @@
     <main class = "main">
         <section class = "main__nav">
             <nav class="main__nav__pokemons-page">
-                <div class="main__nav__pokemons-page__number">
-                    <a onclick="printPokemons(5)">5</a>
-                    <a onclick="printPokemons(10)">10</a>
-                    <a onclick="printPokemons(20)">20</a>
-                    <a onclick="printPokemons(50)">50</a>
-                </div>
+                <ul class="main__nav__pokemons-page__number">
+                    <li class="" onclick="printPokemons(5)">5</li>
+                    <li onclick="printPokemons(10)">10</li>
+                    <li onclick="printPokemons(20)">20</li>
+                    <li onclick="printPokemons(50)">50</li>
+                </ul>
                 <div class="main__nav__pokemons-page-selector">
-                    <a onclick="changePage('prev')">Prev</a>
-                    <a>1</a>
-                    <a>2</a>
-                    <a>3</a>
-                    <a onclick="changePage('next')">Next</a>
+                    <a class="main__nav__pokemons-page-selector__prev" onclick="changePage('prev')">Previos</a>
+                    <a class="main__nav__pokemons-page-selector__next" onclick="changePage('next')">Next</a>
                 </div>
             </nav>
         </section>

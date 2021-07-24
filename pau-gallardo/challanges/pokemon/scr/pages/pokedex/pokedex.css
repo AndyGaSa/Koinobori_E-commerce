@@ -2,12 +2,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: rgb(178, 16, 37); */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(75, 73, 73);
+}
+
+.header{
+    display: flex;
+    background-color: rgba(218, 58, 30, 0.89);
+}
+
+.header__logo{
+    margin: 20px auto;
 }
 
 .header__logo__img{
@@ -23,17 +39,23 @@ flex-direction: column;
 }
 
 .main__nav__pokemons-page{
-    background-color: gold;
+    height: 40px;
+    background-color: black;
     display: flex;
     flex: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .main__nav__pokemons-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 18px;
+    margin: 0 auto;
+    width: 80vw;
     padding: 0px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .pokecontainer__card__img{
@@ -41,23 +63,55 @@ flex-direction: column;
 }
 
 .pokecontainer__card{
+    width: 250px;
+    height: 100px;
     display: flex;
     flex-direction: row;
+    align-content: center;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
+    text-transform: capitalize;
+    margin: 10px;
 }
 
 .pokecontainer__card__stats{
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px 0px 10px 10px;
+    flex: 1;
 }
 
 .pokecontainer__card__stats__text{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 5px;
+}
+
+.pokecontainer__card__stats__text__name{
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.pokecontainer__card__stats__text__id{
+    font-size: 100%;
+    margin-right: 25px;
+}
+
+.main__nav__pokemons-page-selector{
+    margin-right: 150px;
+}
+.main__nav__pokemons-page-selector__prev, .main__nav__pokemons-page-selector__next{
+    padding: 10px;
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.main__nav__pokemons-page-selector__prev:hover, .main__nav__pokemons-page-selector__next:hover{
+    opacity: 1;
 }
 
 

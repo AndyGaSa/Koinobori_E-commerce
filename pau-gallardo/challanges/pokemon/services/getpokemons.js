@@ -9,16 +9,26 @@ function getPokemons(howManyPokemons, whatPage) {
             .then((allPokemonStuff) => allPokemonStuff))))
         .then((pokemons2) => {
             let pokemonsList = pokemons2.map(({
-                id, name, sprites, types
+                id, name, sprites, types, stats
             }) => {
                 const pokemonObj = {
                     id,
                     name,
                     sprites: sprites.front_default,
                     types: types[0].type.name,
+                    stats,
                 }
                 return pokemonObj;
             })
             return pokemonsList;
         })
 }
+
+function getPokemonById(pokemonId) {
+    const pokemons = JSON.parse(localStorage.getItem('pokemons'));
+    const pokemon = pokemons.find((currentPokemon) => currentPokemon.id === pokemonId);
+  
+    return pokemon
+      ? Promise.resolve(pokemon)
+      : Promise.reject(new Error(`There is no hero with id: ${pokemonId}`));
+  }
