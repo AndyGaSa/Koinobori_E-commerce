@@ -3,6 +3,10 @@ class PokemonList {
     this.pokemons = [];
   }
 
+  clearView() {
+    document.getElementById('pokemon-list').innerHTML = '';
+  }
+
   setView(numberOfPokemons, currentPage) {
     const pokemonNames = getPokemons(numberOfPokemons, numberOfPokemons * currentPage)
       .then(({ results }) => Promise.all(results.map(({ url }) => getSinglePokemon(url))))
@@ -19,7 +23,6 @@ class PokemonList {
           };
           return pokemon;
         });
-
         this.print();
       });
   }

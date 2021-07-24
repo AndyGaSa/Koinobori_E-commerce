@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8b80b61e9.js" crossorigin="anonymous"></script>
     <title>Pokédex</title>
 </head>
 <body>
@@ -11,13 +12,28 @@
 
     </header>
     <main>
-        <nav>
+        <section>
             <form class="search">
                 <label for="search__bar"></label>
                 <input id="search__bar" name="search__bar" type="text">
-                <button></button>
+                <button><i class="fas fa-search fa-lg"></i></button>
             </form>
-        </nav>
+            <nav>
+                <div>
+                    <button onclick="changePage('first')"><i class="fas fa-angle-double-left fa-lg"></i></button>
+                    <button onclick="changePage('previous')"><i class="fas fa-angle-left fa-lg"></i></button>
+                    <p><input type="number" min="" max="" value=""> / <span></span></p>
+                    <button onclick="changePage('next')"><i class="fas fa-angle-right fa-lg"></i></button>
+                    <button onclick="changePage('last')"><i class="fas fa-angle-double-right fa-lg"></i></button>
+                </div>
+                <select onchange="changeNumerOfPokemons()" name="pokemons-per-page" id="pokemons-per-page">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                  </select>
+            </nav>
+        </section>
         <ul id='pokemon-list'>
         </ul>
     </main>
