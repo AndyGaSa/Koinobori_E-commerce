@@ -1,4 +1,4 @@
-const heroesLocal = [
+const heroes = [
   {
     id: 1,
     name: 'A-Bomb',
@@ -403,13 +403,3 @@ const heroesLocal = [
     },
   },
 ];
-
-if (!localStorage.getItem('superHeroData')) {
-  // localStorage.setItem('heroesLocal', JSON.stringify(heroesLocal));
-  makeRequest();
-}
-// eslint-disable-next-line
-let heroes = JSON.parse(localStorage.getItem('superHeroData'));
-// eslint-disable-next-line
-let heroes2 = getHeroes();
-console.log(heroes2);

@@ -15,9 +15,7 @@ function makeRequest() {
 function alertContents() {
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
     if (httpRequest.status === 200) {
-      // console.log(JSON.parse(httpRequest.responseText));
       JSON.parse(localStorage.setItem('superHeroData', httpRequest.responseText));
-      // localStorage.setItem('superHero', JSON.parse(httpRequest.responseText));
     } else {
       alert('There was a problem with the request.');
     }
