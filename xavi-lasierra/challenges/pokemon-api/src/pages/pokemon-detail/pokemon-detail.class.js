@@ -38,14 +38,14 @@ class PokemonDetailPage {
           description: effect_entries.find(({ language }) => language.name === 'en').effect
         }));
         moves = moves.map(({
-          name, type, power, pp, accuracy, effect_entries
+          name, type, power, pp, accuracy, flavor_text_entries
         }) => ({
           name,
           type: type.name,
           pp,
           power,
           accuracy,
-          description: effect_entries.find(({ language }) => language.name === 'en').effect
+          description: flavor_text_entries.find(({ language }) => language.name === 'en').flavor_text
         }));
 
         this.pokemon.abilities = abilities;
@@ -76,6 +76,9 @@ class PokemonDetailPage {
   print() {
     this.printTitle();
     this.printPhoto();
+    this.printMainInformation();
+    this.printStats();
+    this.printMoves();
   }
 
   printTitle() {
@@ -90,5 +93,49 @@ class PokemonDetailPage {
 
   printPhotoShiny() {
     document.getElementById('pokemon__photo').src = this.pokemon.sprite[1];
+  }
+
+  printMainInformation() {
+    const pokemonTypes = document.getElementById('pokemon__types');
+    pokemonTypes.innerHTML = 'Types: ';
+    this.pokemon.types.forEach((type) => {
+      const element = `<span class="${type}">${capitalizeFirstLetter(type)}</span>`;
+      pokemonTypes.innerHTML += element;
+    });
+
+    document.getElementById('pokemon__height').innerText = `${this.pokemon.height}'`;
+    document.getElementById('pokemon__weight').innerText = `${this.pokemon.weight} lbs`;
+
+    const pokemonAbilities = document.getElementById('pokemon__abilities');
+    pokemonAbilities.innerHTML = '';
+    this.pokemon.abilities.forEach((ability) => {
+      const element = `<li>${capitalizeFirstLetter(ability.name)}</li>`;
+      pokemonAbilities.innerHTML += element;
+    });
+  }
+
+  printStats() {
+    const pokemonStats = document.getElementById('pokemon__stats');
+    pokemonStats.innerHTML = '';
+    this.pokemon.stats.forEach(({ name, value }) => {
+      const element = `<li><span>${capitalizeFirstLetter(name)}</span>
+        <progress value="${value}" max="255"></progress><span>${value}</span></li>`;
+      pokemonStats.innerHTML += element;
+    });
+  }
+
+  printMoves() {
+    const pokemonMoves = document.getElementById('pokemon__moves');
+    pokemonMoves.innerHTML = `<tr>
+        <th>Name</th><th>Type</th><th>Power</th><th>Accuracy</th><th>PP</th><th>Description</th>
+    </tr>`;
+    this.pokemon.moves.forEach(({
+      name, type, power, accuracy, pp, description
+    }) => {
+      const element = `<tr>
+        <td>${capitalizeFirstLetter(name)}</td><td>${type}</td><td>${power || '-'}</td><td>${accuracy || '-'}</td><td>${pp}</td><td>${description}</td>
+        <tr>`;
+      pokemonMoves.innerHTML += element;
+    });
   }
 }
