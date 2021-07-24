@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Details</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="./details.css">
+</head>
+<body>
+    <header>
+        <h1>Tour of Heroes</h1>
+        <nav>
+            <a href="../Dashboard/dashboard.html">Dashboard</a>
+            <a href="../Heroes/heroes.html">Heroes</a>
+        </nav>
+    </header>
+    <div>
+        <h2><span id="hero__title"></span> details!</h2>
+        <hr>
+        <div><label>ID: </label><span id="hero__id"></span></div>
+        <hr>
+        <div>
+            <label>
+                Name: 
+            </label>
+            <input type="text" id="hero__name">
+        </div>
+        <hr>
+        <div><label>Slug: </label><span id="hero__slug"></span></div>
+        <hr>
+        <div><label>PowerStats: </label><span id="hero__powerstats"></span></div>
+        <hr>
+        <div><label>Appearance: </label><span id="hero__appearance"></span></div>
+        <hr>
+        <div><label>Biography: </label><span id="hero__biography"></span></div>
+        <hr>
+        <div><label>Work: </label><span id="hero__work"></span></div>
+        <hr>
+        <div><label>Connections: </label><span id="hero__connections"></span></div>
+        <hr>
+        <div><label>Image: </label><span id="hero__image"></span></div>
+        <hr>
+        <button>Go back</button>
+        <button>Save</button>
+    </div>
+
+    <script src="../Heroes/ajaxhero.js"></script>
+    <script src="./details.class.js"></script>
+    <script src="./transformUrlQueryToObject.js"></script>
+    <script src="./details.js"></script>
+    <script src="../Heroes/ajaxhero.js"></script>
+</body>
+</html>
