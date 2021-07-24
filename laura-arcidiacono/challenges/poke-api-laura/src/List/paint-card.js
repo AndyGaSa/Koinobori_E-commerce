@@ -5,6 +5,7 @@ function createElementWithClass(type, className) {
 }
 
 function createPokeCard(maxCards) {
+  document.getElementById('section__list').innerHTML = '';
   for (let i = 0; i < maxCards; i += 1) {
     const sectionList = document.getElementById('section__list');
     const pokeCard = createElementWithClass('a', 'list__poke-card');
@@ -20,4 +21,7 @@ function createPokeCard(maxCards) {
     pokeCard.appendChild(pokeImg);
     pokeImg.src = `${pokeArray[i].sprites.front_default}`;
   }
+}
+function deleteCard() {
+
 }
