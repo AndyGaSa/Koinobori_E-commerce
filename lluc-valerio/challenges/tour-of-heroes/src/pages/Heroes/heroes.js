@@ -60,6 +60,7 @@ function saveBiggestIndex() {
   // compare the values from accumulate and currentValue,
   // and applies the condition defined on callback
   // condition ? exprIfTrue : exprIfFalse
-  const maxId = heroesPage.heroes.reduce((acc, cV) => acc = acc > cV.id ? acc : cV.id, 0);
+  // const maxId = heroesPage.heroes.reduce((acc, cV) => acc = acc > cV.id ? acc : cV.id, 0);
+  const maxId = heroesPage.heroes.reduce((acc, cV) => (acc > cV.id ? acc : cV.id), 0);
   localStorage.setItem('heroMaxId', maxId);
 }

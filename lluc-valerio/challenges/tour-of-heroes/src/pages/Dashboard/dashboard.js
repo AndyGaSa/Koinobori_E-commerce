@@ -34,7 +34,6 @@ function searchHero() {
   const allHeroes = JSON.parse(localStorage.getItem('heroes'));
   const domInput = document.getElementById('search-hero');
   const foundElements = [];
-  // if (domInput.value.length <= 0) {
   if (domInput.value.trim().length <= 0) {
     alert('You have to write a name to search something.');
   } else {
