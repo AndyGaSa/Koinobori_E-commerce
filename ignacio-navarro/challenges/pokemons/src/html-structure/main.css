@@ -1,0 +1,18 @@
+body{
+    background-image: url(../assets/pokedex-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 380px;
+}
+header {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header__reset-button{
+    border: 3px black solid;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 10px;
+}
