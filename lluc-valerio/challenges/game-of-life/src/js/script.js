@@ -103,6 +103,7 @@ function game() {
 }
 function startBoard() {
   domResetButton.style.visibility = 'hidden';
+  domStartButton.style.visibility = 'hidden';
   domSizeButton.style.visibility = 'hidden';
   domSizeContainer.style.visibility = 'hidden';
   //
@@ -111,6 +112,7 @@ function startBoard() {
 function stopBoard() {
   clearInterval(IntervalId);
   domResetButton.style.visibility = 'visible';
+  domStartButton.style.visibility = 'visible';
   domSizeButton.style.visibility = 'visible';
   domSizeContainer.style.visibility = 'visible';
   //
