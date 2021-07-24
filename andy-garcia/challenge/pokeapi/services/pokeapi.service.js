@@ -5,7 +5,7 @@ function getPokemons(limit, offset) {
     }
 let pokemonList;
 let pokedexArray = [];
-const pokeApiCall = getPokemons(151,00)
+const pokeApiCall = getPokemons(10,00)
 .then((pokemons) => {pokemonList = pokemons;})
 .then(() => {
     pokemonList = pokemonList.results;

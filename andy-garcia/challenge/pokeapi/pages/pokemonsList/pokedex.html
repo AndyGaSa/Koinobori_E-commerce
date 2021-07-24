@@ -4,26 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heroes</title>
+    <title>Pokedex</title>
     <link rel="stylesheet" href="./heroes.css">
     <link rel="stylesheet" href="../styles.css">
 
 </head>
 <body>
-    <h1>Tour of heroes</h1>
+    <h1>Pokemon challenge</h1>
     <nav>
         <a href="../dashboard/dashboard.html">Dashboard</a>
-        <a href="./pokedex.html">Heroes</a>
+        <a href="./pokedex.html">Pokedex</a>
     </nav>
-    <h2>My Heroes</h2>
-    <div ><label  for="new-hero">Hero name: </label><input  id="new-hero__input"><button  id="add-button" class="add-button"> Add hero </button></div>
-    <ul id="pokedex__ul" class="heroes">
-
-    </ul>
-    <button  id="reset-button" class="add-button"> Reset array</button>
-    <p class="prueba"></p>
+    <h2>Pokedex</h2>
+    <div ><label  for="new-hero">Pokemon name: </label><input  id="new-pokemon__input"><button  id="add-button" class="add-button"> Add pokemon </button></div>
+    <ul id="pokedex__ul" class="heroes"></ul>
+    <button  id="reset-button" class="add-button"> Reset pokedex</button>
     <script src="../../services/pokeapi.service.js"></script>
-    <script src="./heroes.const.js"></script>
     <script src="./pokedex.js"></script>
 </body>
 </html> 

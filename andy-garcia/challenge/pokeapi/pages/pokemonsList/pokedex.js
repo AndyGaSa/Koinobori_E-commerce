@@ -1,16 +1,14 @@
+let pokedex;
 function getLocalStorage() {
-  let pokedex = localStorage.getItem('pokedex');
+  pokedex = localStorage.getItem('pokedex');
   pokedex = JSON.parse(pokedex);
-  const { url } = pokedex[0];
-  const id = url.split('/')[6];
-  createLis(+id, pokedex);
-  console.log(pokedex.length);
+  createLis(pokedex);
 }
-
 class Pokemon {
-  constructor(id, index, pokedex) {
-    this.idOnPokedex = id;
-    this.href = `../details/details.html?id=${this.index}`;
+  constructor(index, pokedex) {
+    this.url = pokedex[index].url;
+    this.idOnPokedex = this.url.split('/')[6] ;
+    this.href = `../details/details.html?id=${this.idOnPokedex - 1}`;
     this.currentPokemon = pokedex[index];
   }
 
@@ -30,51 +28,43 @@ class Pokemon {
     const buttonContent = document.createTextNode('x');
     newSpan.appendChild(spanContent);
     newButton.appendChild(buttonContent);
-    newButton.setAttribute('id', this.currentPokemon.id);
+    newButton.setAttribute('id', this.idOnPokedex);
+    newButton.setAttribute('onclick', 'deletePokemon(event)');
     newLi.appendChild(newA);
     newLi.appendChild(newButton);
     newA.setAttribute('href', this.href);
   }
 }
-function createLis(id, pokedex) {
+function createLis(pokedex) {
   for (let index = 0; index < pokedex.length; index += 1) {
-    const pokemonLi = new Pokemon(+id, index, pokedex);
+    const pokemonLi = new Pokemon(index, pokedex);
     pokemonLi.addContent();
-    id += 1;
   }
 }
 const addButton = document.getElementById('add-button');
 addButton.addEventListener('click', () => {
-  const addInput = document.getElementById('new-hero__input');
-  let { id } = heroes[heroes.length - 1];
-  id += 1;
+  const addInput = document.getElementById('new-pokemon__input');
+  let id = pokedex.length + 1;
+  const url = `https://pokeapi.co/api/v2/pokemon/${id}/`;
   const name = addInput.value;
-  const slug = '';
-  const powerstats = {};
-  const newHero = {
-    id, name, slug, powerstats,
+  const newPokemon = {
+    name, url,
   };
-  heroes.push(newHero);
-  console.log(heroes);
-  localStorage.setItem('heroes', JSON.stringify(heroes));
-  heroes = localStorage.getItem('heroes');
-  heroes = JSON.parse(heroes);
-  const heroLi = new Pokemon(heroes.length - 1, heroes);
-  heroLi.addContent();
+  pokedex.push(newPokemon);
+  localStorage.setItem('pokedex', JSON.stringify(pokedex));
+  location.reload();
 });
-const deleteButtons = document.getElementsByClassName('delete');
-for (let index = 0; index < deleteButtons.length; index += 1) {
-  deleteButtons[index].addEventListener('click', () => {
-    const clickedId = event.target.id;
-    heroes = heroes.filter((hero) => hero.id != clickedId);
-    localStorage.setItem('heroes', JSON.stringify(heroes));
-    heroes = localStorage.getItem('heroes');
-    heroes = JSON.parse(heroes);
-    location.reload();
-  });
+function deletePokemon(event) {
+  let clickedTargetName = event.path[1].firstChild.innerText;
+  clickedTargetName = clickedTargetName.replace(/\d+/g, '');
+  pokedex = pokedex.filter((pokemon) => pokemon.name != clickedTargetName);
+  localStorage.setItem('pokedex', JSON.stringify(pokedex));
+  pokedex = localStorage.getItem('pokedex');
+  pokedex = JSON.parse(pokedex);
+  location.reload();
 }
 const resetButton = document.getElementById('reset-button');
 resetButton.onclick = function resetArray() {
-  localStorage.removeItem('cont');
+  localStorage.removeItem('pokedex');
   location.reload();
 };
