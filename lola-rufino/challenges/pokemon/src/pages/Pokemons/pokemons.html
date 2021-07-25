@@ -23,17 +23,17 @@
     <main class="main">
         <h2 class="main__title">Pokemons List</h2>
         <section class="main__pagination">
-        <button onclick="setPaginationAndPaint(limit, offset)" > << Anterior</button>
-        <form class="main__form">
+        <button class="beforeFn()"> ⪻ Anterior</button>
+        <form class="main__form" onchange="getValue()">
             <label for="viewNum" class="form__view">Vista:</label>
             <select id="viewNum" name="viewNum" class="form__select">
-              <option value="five" class="form__selection">5 pokemons</option>
-              <option value="ten" class="form__selection">10 pokemons</option>
-              <option value="twenty" class="form__selection">20 pokemons</option>
-              <option value="fifty" class="form__selection">50 pokemons</option>
+              <option value="5" class="form__selection">5 pokemons</option>
+              <option value="10" class="form__selection">10 pokemons</option>
+              <option value="20" class="form__selection">20 pokemons</option>
+              <option value="50" class="form__selection">50 pokemons</option>
             </select>
           </form>
-        <button onclick="setPaginationAndPaint(limit, offset)">Siguiente >> </button>
+        <button class="nextFn()">Siguiente ⪼ </button>
         </section>
         <section id="main__pokelist"></section>
     </main>

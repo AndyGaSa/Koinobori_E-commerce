@@ -52,8 +52,18 @@
 progress[value] {
     -webkit-appearance: none;
     appearance: none;
-  }
+    color: white;
+}
 
-  progress[value]::-webkit-progress-bar {
+progress[value]::-webkit-progress-bar {
     background-color: #FFCC01;
-  }
+    color: white;
+}
+
+progress[value]::-webkit-progress-value{
+      background-color: #2B76B7;
+      color: white;
+}
+
+
+  
