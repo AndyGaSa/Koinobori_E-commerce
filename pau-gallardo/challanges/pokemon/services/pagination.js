@@ -31,3 +31,9 @@ function changePage(id) {
       break;
   }
 }
+
+module.exports = {
+  clearPokemons,
+  printPokemons,
+  changePage,
+};
