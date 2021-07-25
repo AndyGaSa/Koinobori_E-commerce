@@ -1,1 +1,1 @@
-const pokemonList = new PokemonList();
+const newPokemonList = new PokemonList();
