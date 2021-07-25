@@ -16,9 +16,9 @@ function showPokemons(num) {
     cardItem.appendChild(imgItem);
     imgItem.src = `${allPokemon[i].sprites.front_default}`;
     cardItem.appendChild(idOfPokemon);
-    idOfPokemon.innerHTML = `${allPokemon[i].id}`;
+    idOfPokemon.innerHTML = `Id: ${allPokemon[i].id}`;
     cardItem.appendChild(typeOfPokemon);
-    typeOfPokemon.innerHTML = `${allPokemon[i].types['0'].type.name}`;
+    typeOfPokemon.innerHTML = `Type: ${allPokemon[i].types['0'].type.name}`;
     cardContainer.append(cardItem);
   }
 }
