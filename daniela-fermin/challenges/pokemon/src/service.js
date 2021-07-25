@@ -9,3 +9,9 @@ function getSinglePokemon(url) {
     .then((response) => response.json())
     .then((pokemons) => pokemons);
 }
+
+function getDetailPokemon(name) {
+  return fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+    .then((response) => response.json())
+    .then((pokemon) => pokemon);
+}
