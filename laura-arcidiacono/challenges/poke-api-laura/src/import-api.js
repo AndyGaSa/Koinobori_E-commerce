@@ -2,64 +2,94 @@ const pokeArray = [];
 const firstPokesToShow = 5;
 const maxPokesInMyArray = 350;
 let currentPage = 1;
-const numberOfCardsToShowPerPage = 5;
+let numberOfCardsToShowPerPage = 5;
 
 function createElementWithClass(type, className) {
   const element = document.createElement(type);
   element.className = className;
   return element;
 }
+function getBackToPokemonList() {
+  createPokeCardForPage(numberOfCardsToShowPerPage, numberOfCardsToShowPerPage * (currentPage - 1));
+  document.getElementById('section__pagination').style.visibility = 'visible';
+}
 
-function createPokeCard(limit, offset) {
+function detailsPokeCard(item) {
+  const sectionList = document.getElementById('section__list');
+  sectionList.innerHTML = '';
+  const pokeName = createElementWithClass('h3', 'list__poke-name');
+  pokeName.innerHTML = `${pokeArray[item].name}`;
+  sectionList.appendChild(pokeName);
+  const pokeImg = createElementWithClass('img', 'list__poke-img');
+  pokeImg.src = `${pokeArray[item].sprites.front_default}`;
+  pokeImg.alt = `Imagen de ${pokeArray[item].name}`;
+  sectionList.appendChild(pokeImg);
+  const backButton = createElementWithClass('button', 'details__backButton');
+  backButton.innerHTML = 'Go back';
+  backButton.onclick = function () { getBackToPokemonList(); };
+  sectionList.appendChild(backButton);
+  document.getElementById('section__pagination').style.visibility = 'hidden';
+}
+
+function createPokeCard(item) {
+  const sectionList = document.getElementById('section__list');
+  const pokeCard = createElementWithClass('div', 'list__poke-card');
+  sectionList.appendChild(pokeCard);
+  pokeCard.onclick = function () { detailsPokeCard(item); };
+
+  const pokeName = createElementWithClass('h3', 'list__poke-name');
+  pokeName.innerHTML = `${pokeArray[item].name}`;
+  pokeCard.appendChild(pokeName);
+
+  const pokeImg = createElementWithClass('img', 'list__poke-img');
+  pokeImg.src = `${pokeArray[item].sprites.front_default}`;
+  pokeImg.alt = `Imagen de ${pokeArray[item].name}`;
+  pokeCard.appendChild(pokeImg);
+
+  const pokeId = createElementWithClass('h4', 'list__poke-id');
+  pokeId.innerHTML = `Id: ${pokeArray[item].id}`;
+  pokeCard.appendChild(pokeId);
+}
+
+function createPokeCardForPage(limit, offset) {
   document.getElementById('section__list').innerHTML = '';
-  /* TODO, si limit +offset > length, no ejecutar asi. */
-  for (let item = offset; item < limit + offset; item += 1) {
-    const sectionList = document.getElementById('section__list');
-
-    const pokeCard = createElementWithClass('div', 'list__poke-card');
-    sectionList.appendChild(pokeCard);
-
-    const pokeAnchor = createElementWithClass('a', 'list__poke-anchor');
-    pokeCard.appendChild(pokeAnchor);
-    pokeAnchor.href = '#';
-
-    const pokeName = createElementWithClass('h3', 'list__poke-name');
-    pokeName.innerHTML = `${pokeArray[item].name}`;
-    pokeCard.appendChild(pokeName);
-
-    const pokeImg = createElementWithClass('img', 'list__poke-img');
-    pokeImg.src = `${pokeArray[item].sprites.front_default}`;
-    pokeImg.alt = `Imagen de ${pokeArray[item].name}`;
-    pokeCard.appendChild(pokeImg);
-
-    const pokeId = createElementWithClass('h4', 'list__poke-id');
-    pokeId.innerHTML = `Id: ${pokeArray[item].id}`;
-    pokeCard.appendChild(pokeId);
+  pokeArray.sort((a, b) => (a.id - b.id));
+  let limitPlusOffset = limit + offset;
+  if (limitPlusOffset > pokeArray.length) {
+    limitPlusOffset = pokeArray.length;
+  }
+  for (let item = offset; item < limitPlusOffset; item += 1) {
+    createPokeCard(item);
   }
 }
-/* funcion que reciba el 5, 10, 20, 30, setee como nuevo limite de cartas porpagina y que despues llame a pokecard
 
-*/
-
-function limitOfCardsPerPage(maxCards) {
-
+function getValueSelected() {
+  numberOfCardsToShowPerPage = document.getElementById('form__view-num').value;
+  numberOfCardsToShowPerPage = Number(numberOfCardsToShowPerPage);
+  createPokeCardForPage(numberOfCardsToShowPerPage, 0);
+  currentPage = 1;
+  document.getElementById('currentPage').innerHTML = currentPage;
 }
 
 function nextPage() {
-  createPokeCard(numberOfCardsToShowPerPage, numberOfCardsToShowPerPage * currentPage);
-  currentPage += 1;
-  document.getElementById('currentPage').innerHTML = currentPage;
+  if (currentPage !== Math.ceil(maxPokesInMyArray / numberOfCardsToShowPerPage)) {
+    createPokeCardForPage(numberOfCardsToShowPerPage, numberOfCardsToShowPerPage * currentPage);
+    currentPage += 1;
+    document.getElementById('currentPage').innerHTML = currentPage;
+  }
 }
 function previousPage() {
-  createPokeCard(numberOfCardsToShowPerPage, numberOfCardsToShowPerPage * (currentPage - 1));
-  currentPage -= 1;
-  document.getElementById('currentPage').innerHTML = currentPage;
+  if (currentPage !== 1) {
+    createPokeCardForPage(numberOfCardsToShowPerPage, numberOfCardsToShowPerPage * (currentPage - 1));
+    currentPage -= 1;
+    document.getElementById('currentPage').innerHTML = currentPage;
+  }
 }
 
 function addPokeToArray(data) {
   pokeArray.push(data);
-  if (pokeArray.length === firstPokesToShow) {
-    createPokeCard(firstPokesToShow, 0);
+  if (pokeArray.length === maxPokesInMyArray) {
+    createPokeCardForPage(firstPokesToShow, 0);
   }
 }
 
