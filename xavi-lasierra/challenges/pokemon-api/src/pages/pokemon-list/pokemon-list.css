@@ -15,6 +15,7 @@
     height: 3rem;
     width: 14rem;
     padding-right: 2rem;
+    padding: 1rem;
 }
 
 .navigation__search input:focus {
@@ -97,6 +98,11 @@
     border-radius: 2rem;
     margin-bottom: 1rem;
     width: 90vw;
+    transition: .2s;
+}
+
+.pokemon-list li:hover {
+    background-color: lightgray;
 }
 
 .pokemon-list li a {
@@ -142,6 +148,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    transition: .2s;
 }
 
 .pokemon-list__types {
@@ -162,6 +169,11 @@
 
 .pokemon-list__types-photo img {
     width: 15rem;
+    transition: .2s;
+}
+
+.pokemon-list li:hover img {
+    transform: scale(1.2);
 }
 
 @media screen and (max-width: 490px) {

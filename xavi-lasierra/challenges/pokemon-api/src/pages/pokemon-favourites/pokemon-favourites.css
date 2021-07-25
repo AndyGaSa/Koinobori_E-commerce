@@ -1,0 +1,44 @@
+.pokemon__create {
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.pokemon__create input {
+    border: 1px solid gray;
+    background-color: #F4F4F4;
+    height: 2rem;
+    width: 14rem;
+    padding-right: 2rem;
+    padding: 0 1rem;
+}
+
+.pokemon__create input:focus {
+    background-color: lightgray;
+    outline: none;
+}
+
+.pokemon__create button {
+	border: none;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    appearance: none;
+    margin: 1px solid black;
+    height: 2rem;
+    width: 4rem;
+    background-color: white;
+    box-shadow: none;
+}
+
+.pokemon__create button:hover {
+    background-color: grey;
+    color: white;
+}
+
+.pokemon__create button:active {
+    background-color: #171717;
+    color: white;
+}

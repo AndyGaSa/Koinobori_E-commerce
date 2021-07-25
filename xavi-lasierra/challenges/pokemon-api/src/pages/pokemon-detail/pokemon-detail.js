@@ -1,8 +1,8 @@
 let pokemonDescription;
 
 (function pokemonDetail() {
-  const { id, name } = transformUrlQueryToObject(location.search);
-  pokemonDescription = new PokemonDetailPage(id, name);
+  const { id, name, from } = transformUrlQueryToObject(location.search);
+  pokemonDescription = new PokemonDetailPage(id, name, from);
   pokemonDescription.setView();
 }());
 

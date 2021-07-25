@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f8b80b61e9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../pokemon-list/pokemon-list.css">
+    <link rel="stylesheet" href="./pokemon-favourites.css">
     <title>Pokédex</title>
 </head>
 <body>
@@ -17,11 +19,19 @@
         </nav>
     </header>
     <main>
+        <h1 class="main-title">My Pokemons</h1>
+        <label class="pokemon__create" for="pokemon__create">
+            Create a pokemon: 
+            <input type="text" name="pokemon__create" id="pokemon__create-input" placeholder="New pokemon name">
+            <button class="pokemon__create-button" onclick="createPokemon()">Create</button>
+        </label>
         <ul class="pokemon-list" id='pokemon-list'>
         </ul>
     </main>
 
+    <script src="../../small-functions.js"></script>
     <script src="../../services/pokemon.service.js"></script>
-
+    <script src="./pokemon-favourite.class.js"></script>
+    <script src="./pokemon-favourite.js"></script>
 </body>
 </html>

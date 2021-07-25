@@ -1,8 +1,9 @@
 /* eslint-disable camelcase */
 class PokemonDetailPage {
-  constructor(id, name) {
+  constructor(id, name, from) {
     this.id = id;
     this.name = name;
+    this.from = from;
   }
 
   setView() {

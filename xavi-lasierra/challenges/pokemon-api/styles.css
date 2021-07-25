@@ -45,6 +45,12 @@
     color: #313131
 }
 
+.main-title {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.75rem;;
+}
+
 .grass {
     background-color: #9BCC50;
     font-weight: 600;

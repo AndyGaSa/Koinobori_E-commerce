@@ -105,7 +105,6 @@ function filterPokemons() {
 function addDeleteFavourites(id) {
   const button = event.path[1];
   if (button.classList.value.includes('active')) {
-    console.log(id);
     deleteFromLocalStorage(id);
     button.classList = 'pokemon-list__favourite';
   } else {
