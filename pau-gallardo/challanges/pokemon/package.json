@@ -1,7 +1,8 @@
 {
   "name": "pokemon",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": ".eslintrc.js",
   "scripts": {
     "test": "jest --watchAll --collect-coverage"
   },
@@ -9,12 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "get": "^1.4.0"
+    "jest": "^27.0.6"
   },
   "devDependencies": {
     "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4"
-  },
-  "description": ""
+  }
 }
