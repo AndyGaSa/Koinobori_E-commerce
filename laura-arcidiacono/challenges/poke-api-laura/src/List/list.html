@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="list.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,10 +37,10 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
             <h1>Pokes-List</h1>
             <div>
                 <ul>
-                   <button class="top-main__button" onclick="createPokeCard(5)">Show Pokemons</button>
-                   <button class="top-main__button" onclick="createPokeCard(10)">Show 10 Pokemons</button>
-                   <button class="top-main__button" onclick="createPokeCard(20)">Show 20 Pokemons</button>
-                   <button class="top-main__button" onclick="createPokeCard(50)">Show 50 Pokemons</button>
+                   <button class="top-main__button" onclick="createPokeCard(5, 0)">Show 5 Pokemons</button>
+                   <button class="top-main__button" onclick="createPokeCard(10, 0)">Show 10 Pokemons</button>
+                   <button class="top-main__button" onclick="createPokeCard(20, 0)">Show 20 Pokemons</button>
+                   <button class="top-main__button" onclick="createPokeCard(50, 0)">Show 50 Pokemons</button>
                 </ul>
             </div>
         </section>
@@ -47,11 +48,9 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
         </section>
         <section id="section__pagination">
             
-                <button><a href="">Anterior</a></button>
-                <a href=""> <i class="fas fa-angle-double-left"></i></a>
-                <div>pagina actual</div>
-                <a href=""> <i class="fas fa-angle-double-right"></i></a>
-                <button><a href="">Siguiente</a></button>
+                <button onclick="previousPage()">Anterior</button>
+                <div id="currentPage">1</div>
+                <button onclick="nextPage()">Siguiente</button>
             
         </section>
     </main>
@@ -69,6 +68,6 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
     </footer>
     
 <script src="../import-api.js"></script>
-<script src="../List/paint-card.js"></script>
+<!--<script src="../List/paint-card.js"></script>-->
 </body>
 </html>
