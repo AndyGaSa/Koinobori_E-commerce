@@ -19,9 +19,10 @@ header {
     flex-direction: row;
     align-items: center;
     width: 380px;
+    transform: translate(10px, 25px);
 }
 main{
-    height: 450px;
+    height: 500px;
     width: 380px;
 }
 h1,h2,p{
@@ -32,11 +33,14 @@ footer{
     width: 380px;
 }
 .header__reset-button{
-    border: 3px black solid;
     width: 70px;
     height: 70px;
     border-radius: 50%;
     margin: 10px;
+    text-decoration: none;
+    font-family: retrograde;
+    background-color: transparent;
+    border: none;
 }
 .main__screen-stats{
     padding: 20px;
@@ -56,7 +60,8 @@ footer{
     align-items: flex-start;
 }
 .screen__pokemon-pic-container {
-    margin-top: 60px;
+    margin-top: 70px;
+    margin-left: 18px;
     display: flex;
     flex-direction: column;
 }
@@ -70,15 +75,19 @@ footer{
     width: 300px;
     font-size: 0.9em;
     margin-left: 35px;
+    transform: translate(0px, -40px);
 }
 
-.footer__details-container{
-    display: flex;
-    flex-wrap: nowrap;
+#footer__details-container{
+        display: flex;
+        flex-direction: row;
 }
 .footer__input{
     height: 30px;
-    width: 200px;
+    width: 173px;
+    background-color: transparent;
+    border: none;
+    font-family: 'retrograde';
 }
 .footer__create-link {
     background-color: grey;

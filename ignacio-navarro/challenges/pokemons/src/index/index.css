@@ -23,7 +23,7 @@ main{
 .filter__type-element:hover{
     filter: saturate(1) brightness(1)
 }
-.filter__type-element:active{
+.active{
     filter: saturate(1) brightness(1);
 }
 .filter__type-element > img {

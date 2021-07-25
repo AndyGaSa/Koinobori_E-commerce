@@ -18,32 +18,32 @@
        </li>
        <section class="filters__container">
            <div class="filters__types">
-               <button class="filter__type-element" onClick="filterByType('type/1')"><img src="../assets/types/type__0000_normal.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/2')"><img src="../assets/types/type__0001_fighting.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/14')"><img src="../assets/types/type__0002_psychic.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/16')"><img src="../assets/types/type__0003_dragon.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/11')"><img src="../assets/types/type__0004_water.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/18')"><img src="../assets/types/type__0005_fairy.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/15')"><img src="../assets/types/type__0006_ice.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/3')"><img src="../assets/types/type__0007_flying.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/8')"><img src="../assets/types/type__0008_ghost.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/10')"><img src="../assets/types/type__0009_fire.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/9')"><img src="../assets/types/type__0010_steel.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/12')"><img src="../assets/types/type__0011_grass.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/5')"><img src="../assets/types/type__0012_ground.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/6')"><img src="../assets/types/type__0013_rock.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/17')"><img src="../assets/types/type__0014_dark.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/13')"><img src="../assets/types/type__0015_electric.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/4')"><img src="../assets/types/type__0016_poison.png" /></button>
-               <button class="filter__type-element" onClick="filterByType('type/7')"><img src="../assets/types/type__0017_bug.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/1',this)"><img src="../assets/types/type__0000_normal.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/2',this)"><img src="../assets/types/type__0001_fighting.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/14',this)"><img src="../assets/types/type__0002_psychic.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/16',this)"><img src="../assets/types/type__0003_dragon.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/11',this)"><img src="../assets/types/type__0004_water.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/18',this)"><img src="../assets/types/type__0005_fairy.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/15',this)"><img src="../assets/types/type__0006_ice.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/3',this)"><img src="../assets/types/type__0007_flying.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/8',this)"><img src="../assets/types/type__0008_ghost.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/10',this)"><img src="../assets/types/type__0009_fire.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/9',this)"><img src="../assets/types/type__0010_steel.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/12',this)"><img src="../assets/types/type__0011_grass.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/5',this)"><img src="../assets/types/type__0012_ground.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/6',this)"><img src="../assets/types/type__0013_rock.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/17',this)"><img src="../assets/types/type__0014_dark.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/13',this)"><img src="../assets/types/type__0015_electric.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/4',this)"><img src="../assets/types/type__0016_poison.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/7',this)"><img src="../assets/types/type__0017_bug.png" /></button>
            </div>
        </section>
     </main>
     <footer>
         <div id="footer__details-container">
             <input type="text" placeholder="search" class="footer__input" id="pokemon-search-input">
-            <button onclick="nextItems()" class="footer__details-button--next">next</button>
-            <button onclick="previousItems()" class="footer__details-button--previous">previous</button>
+            <button onclick="nextAndPreviousPokemonList('next')" class="footer__details-button--next">next</button>
+            <button onclick="nextAndPreviousPokemonList('previous')" class="footer__details-button--previous">previous</button>
             <button onclick="searchPokemon()" class="footer__details-button--go">go</button>
         </div>
         <a href="../creation/creation.html" class="footer__filter-link">filter</a>

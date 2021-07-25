@@ -13,3 +13,9 @@ function getPokemonFilter(filter) {
     .then((response) => response.json())
     .then((pokemons) => pokemons);
 }
+
+module.exports = {
+  getPokemonList,
+  getPokemonFromApi,
+  getPokemonFilter,
+};
