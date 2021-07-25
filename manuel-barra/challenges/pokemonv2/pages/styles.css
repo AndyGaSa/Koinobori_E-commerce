@@ -147,9 +147,11 @@ margin: 20px;
     #card-container {
         width: 90%;
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: row wrap;
         justify-content: center;
         align-items: center;
+    }#card-container>p {
+        text-align: center;
     }
     .main{
         width: 1280px;
@@ -158,7 +160,7 @@ margin: 20px;
     }
     .main__controls{
         flex-flow: row wrap;
-        width: 80%;
+        width: 90%;
     }
     .main__controls > a {
         color: #FFCC00;
