@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import catchPkmn from '../../modules/fetch-api.js';
 import giveSixRandomId from '../../modules/take-random-id.js';
 import pkcard from '../../modules/pkcard.js';
