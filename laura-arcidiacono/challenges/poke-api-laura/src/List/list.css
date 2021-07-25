@@ -24,11 +24,6 @@ ul{
     list-style-type: none;
     margin-block-start: 1em;
     margin-block-end: 1em;
-    display: flex;
-    list-style-type: none;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 li {
