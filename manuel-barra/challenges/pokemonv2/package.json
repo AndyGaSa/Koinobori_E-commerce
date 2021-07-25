@@ -7,7 +7,7 @@
     "test": "jest --watchAll --collect-coverage"
   },
   "keywords": [],
-  "author": "",
+  "author": "Manel",
   "license": "ISC",
   "dependencies": {
     

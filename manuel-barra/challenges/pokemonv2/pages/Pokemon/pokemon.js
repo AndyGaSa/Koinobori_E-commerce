@@ -10,8 +10,7 @@ function showPokemons(num) {
     const idOfPokemon = document.createElement('p');
     const typeOfPokemon = document.createElement('p');
     cardContainer.appendChild(cardItem);
-    cardItem.href = '#';
-    cardContainer.className = 'card-container';
+    cardItem.setAttribute('onclick', `runCommand(${i})`);
     cardItem.append(nameItem);
     nameItem.innerHTML = `${allPokemon[i].name}`;
     cardItem.appendChild(imgItem);
