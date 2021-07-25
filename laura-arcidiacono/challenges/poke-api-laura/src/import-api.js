@@ -12,6 +12,7 @@ function createElementWithClass(type, className) {
 function getBackToPokemonList() {
   createPokeCardForPage(numberOfCardsToShowPerPage, numberOfCardsToShowPerPage * (currentPage - 1));
   document.getElementById('section__pagination').style.visibility = 'visible';
+  document.getElementById('top-main__form').style.visibility = 'visible';
 }
 
 function detailsPokeCard(item) {
@@ -29,6 +30,7 @@ function detailsPokeCard(item) {
   backButton.onclick = function () { getBackToPokemonList(); };
   sectionList.appendChild(backButton);
   document.getElementById('section__pagination').style.visibility = 'hidden';
+  document.getElementById('top-main__form').style.visibility = 'hidden';
 }
 
 function createPokeCard(item) {
