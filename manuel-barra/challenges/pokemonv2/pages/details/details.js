@@ -11,7 +11,7 @@ function paintCard(i) {
   cardItem.append(nameItem);
   nameItem.innerHTML = `${allPokemon[i].name}`;
   cardItem.appendChild(imgItem);
-  imgItem.src = `${allPokemon[0].sprites.front_default}`;
+  imgItem.src = `${allPokemon[i].sprites.front_default}`;
   cardItem.appendChild(idOfPokemon);
   idOfPokemon.innerHTML = `${allPokemon[i].id}`;
   cardItem.appendChild(typeOfPokemon);
