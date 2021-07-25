@@ -18,15 +18,21 @@
                 <option value=5>5 por página</option>
                 <option value=10>10 por página</option>
                 <option value=25>25 por página</option>
-                <option value=50>50 por página</option>
+                <option selected value=50>50 por página</option>
             </select>
         </nav>
     </header>
     <main>
-    <ul id="poke-list"></ul>
-</main>
-<nav class="page-buttons"><input type="button" value="Previous" onclick="previousPage()"><input type="button" value="Next" onclick="nextPage()"></nav>
-    <footer></footer>
+        <ul class="pokemon-main">
+    </ul>
+    </main>
+<nav class="page-buttons">
+    <input type="button" value="Previous" onclick="previousPage()" class="page-button__previous">
+    <input type="button" value="Next" onclick="nextPage()" class="page-button__next">
+</nav>
+    <footer class="pokemon-footer">
+        <span>&copy The Other Pokemon Company (No Fake)</span>
+    </footer>
 </body>
 <script src="../../services/fetchData.js"></script>
 <script src="../List/list.class.js"></script>

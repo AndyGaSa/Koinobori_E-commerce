@@ -4,7 +4,7 @@ class PokemonList {
   }
 
   setView() {
-    const parentElement = document.getElementById('poke-list');
+    const parentElement = document.querySelector('.pokemon-main');
     this.pokemon.forEach((pokemon) => {
       const pokemonElementLi = document.createElement('li');
       const pokemonSlug = document.createElement('div');
@@ -22,7 +22,6 @@ class PokemonList {
       pokemonNumber.innerHTML = `#${pokemon.order}`;
       pokemonElementLi.appendChild(pokemonSlug);
       pokemonElementLi.appendChild(pokemonAnchor);
-
       parentElement.appendChild(pokemonElementLi);
     });
   }
