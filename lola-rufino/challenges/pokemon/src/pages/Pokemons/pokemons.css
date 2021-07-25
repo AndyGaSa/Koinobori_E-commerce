@@ -1,5 +1,9 @@
 /*** Pokemons list Styles ***/
 
+*{
+    font-family: 'Viga', sans-serif;
+}
+
 .main__form{
     margin: 5px 5px 20px 5px;
 }
@@ -73,4 +77,19 @@
 
 .main__pagination{
     display: flex;
+    align-items: center;
+}
+
+.main__pagination button{
+    border: 0px;
+    background: none;
+    color: #FFCC01;
+    text-shadow: 2px 2px #21386e;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.main__pagination button:hover{
+    color: #fde7aa;
 }
