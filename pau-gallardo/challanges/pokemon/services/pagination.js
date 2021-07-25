@@ -27,8 +27,6 @@ function changePage(id){
         case "next":
             pokedex.pokemonsPage = pageNumber + 1;
             localStorage.setItem('pokemonsPage',pokedex.pokemonsPage)
-            console.log(pokedex.pokemonsShown);
-            console.log(pokedex.pokemonsPage);
             pokedex.setView();
             break
     }
