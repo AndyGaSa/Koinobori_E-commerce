@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="header__h1"></h1>   
+        </header>
+        <main class="main">
+            <div class="main__controls">
+                <input type="text" class="main__controls__input">
+                <a href="#" class="main__controls__button" onclick="showPokemons(5)">View Pokemon</a>
+                <a href="#" onclick="" class="main-box__button" href="#">Add Pokemon</a>
+                <a href="#" onclick="" class="main-box__button" href="#">Search Pokemons</a>
+                <a href="#" onclick="" class="main-box__button" href="#">filter Pokemons</a> 
+            </div>
+            <div class="main__itemspPerPage-container">
+                <a href="#" onclick="showPokemons(10)" class="main__itemspPerPage-container__item">10</a>
+                <a href="#" onclick="showPokemons(50)" class="main__itemspPerPage-container__item">50</a>
+                <a href="#" onclick="showPokemons(100)" class="main__itemspPerPage-container__item">99</a>
+            </div>
+            <div id="card-container">
+
+            </div>
+        </main>
+        <footer class="footer">
+        </footer>
+    </div>
+    <script src="../createFetch.js"></script>
+    <script src="./pokemon.js"></script>
+</body>
+</html>
