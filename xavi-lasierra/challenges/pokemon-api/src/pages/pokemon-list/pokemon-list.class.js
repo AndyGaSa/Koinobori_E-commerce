@@ -8,22 +8,26 @@ class PokemonList {
     document.getElementById('pokemon-list').innerHTML = '';
   }
 
+  static getPokemonsInfo(pokemons) {
+    return pokemons.map(({
+      id, name, sprites, types
+    }) => {
+      const typesN = types.map(({ type }) => type.name);
+      const pokemon = {
+        id,
+        name,
+        sprite: sprites.front_default,
+        types: typesN
+      };
+      return pokemon;
+    });
+  }
+
   setView(numberOfPokemons, currentPage) {
     getPokemons(numberOfPokemons, numberOfPokemons * currentPage)
       .then(({ results }) => Promise.all(results.map(({ url }) => getSinglePokemon(url))))
       .then((pokemons) => {
-        this.pokemons = pokemons.map(({
-          id, name, sprites, types
-        }) => {
-          const typesN = types.map(({ type }) => type.name);
-          const pokemon = {
-            id,
-            name,
-            sprite: sprites.front_default,
-            types: typesN
-          };
-          return pokemon;
-        });
+        this.pokemons = this.constructor.getPokemonsInfo(pokemons);
         this.print();
       });
   }
@@ -48,5 +52,11 @@ class PokemonList {
         </a></li>`;
       document.getElementById('pokemon-list').innerHTML += element;
     });
+  }
+
+  setPokemons(pokemons) {
+    this.pokemons = this.constructor.getPokemonsInfo(pokemons);
+    this.clearView();
+    this.print();
   }
 }

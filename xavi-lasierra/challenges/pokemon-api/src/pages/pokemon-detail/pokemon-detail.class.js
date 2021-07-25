@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 class PokemonDetailPage {
   constructor(id, name) {
     this.id = id;
@@ -50,7 +51,6 @@ class PokemonDetailPage {
 
         this.pokemon.abilities = abilities;
         this.pokemon.moves = moves;
-        console.log(this.pokemon);
         this.print();
         this.setButtons();
       });

@@ -89,3 +89,15 @@ function changePageByNumber() {
     printPage(pokemonsPerPage, currentPage);
   }
 }
+
+function filterPokemons() {
+  const input = document.getElementById('search__bar').value.trim();
+
+  if (input) {
+    const result = filterPokemonsApi(input)
+      .then((pokemons) => Promise.all(pokemons.map(({ url }) => getSinglePokemon(url)))
+        .then((pokemonsInfo) => pokemonList.setPokemons(pokemonsInfo)));
+  } else {
+    printPage(pokemonsPerPage, currentPage);
+  }
+}
