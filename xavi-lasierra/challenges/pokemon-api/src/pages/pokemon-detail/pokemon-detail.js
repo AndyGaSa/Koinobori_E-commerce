@@ -13,3 +13,11 @@ function shinyPhoto() {
 function normalPhoto() {
   pokemonDescription.printPhoto();
 }
+
+function showAbility(name) {
+  pokemonDescription.printAbilityDescription(name);
+}
+
+function closeAbility() {
+  pokemonDescription.constructor.closeAbilityDescription();
+}

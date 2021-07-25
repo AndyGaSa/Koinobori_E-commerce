@@ -109,7 +109,7 @@ class PokemonDetailPage {
     const pokemonAbilities = document.getElementById('pokemon__abilities');
     pokemonAbilities.innerHTML = '';
     this.pokemon.abilities.forEach((ability) => {
-      const element = `<li>${capitalizeFirstLetter(ability.name)}</li>`;
+      const element = `<li onclick="showAbility('${ability.name}')">${capitalizeFirstLetter(ability.name)}</li>`;
       pokemonAbilities.innerHTML += element;
     });
   }
@@ -118,8 +118,8 @@ class PokemonDetailPage {
     const pokemonStats = document.getElementById('pokemon__stats');
     pokemonStats.innerHTML = '';
     this.pokemon.stats.forEach(({ name, value }) => {
-      const element = `<li><span>${capitalizeFirstLetter(name)}</span>
-        <progress value="${value}" max="255"></progress><span>${value}</span></li>`;
+      const element = `<li><span class="pokemon__stats__name">${capitalizeFirstLetter(name)}</span>
+        <progress value="${value}" max="255"></progress><span class="pokemon__stats__value">${value}</span></li>`;
       pokemonStats.innerHTML += element;
     });
   }
@@ -133,9 +133,22 @@ class PokemonDetailPage {
       name, type, power, accuracy, pp, description
     }) => {
       const element = `<tr>
-        <td>${capitalizeFirstLetter(name)}</td><td>${type}</td><td>${power || '-'}</td><td>${accuracy || '-'}</td><td>${pp}</td><td>${description}</td>
+        <th>${capitalizeFirstLetter(name)}</th><td>${type}</td><td>${power || '-'}</td><td>${accuracy || '-'}</td><td>${pp}</td><td>${description}</td>
         <tr>`;
       pokemonMoves.innerHTML += element;
     });
+  }
+
+  printAbilityDescription(name) {
+    document.getElementById('pokemon__resume__default').classList = 'delete';
+    const ability = this.pokemon.abilities.find((abilityF) => abilityF.name === name);
+    document.getElementById('pokemon__resume__ability__title').innerText = capitalizeFirstLetter(ability.name);
+    document.getElementById('pokemon__resume__ability__description').innerText = ability.description;
+    document.getElementById('pokemon__resume__ability').classList = 'pokemon__resume__ability';
+  }
+
+  static closeAbilityDescription() {
+    document.getElementById('pokemon__resume__default').classList = 'pokemon__resume__default';
+    document.getElementById('pokemon__resume__ability').classList = 'delete';
   }
 }

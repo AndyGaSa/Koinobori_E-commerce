@@ -2,9 +2,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Myriad Pro", "Myriad Web", "Tahoma", "Helvetica", "Arial", sans-serif;
+    list-style: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: #313131;
+    height: 4rem;
+}
+
+.header__logo {
+    width: 8rem;
+}
+
+.header__navigator {
+    display: flex;
+    align-items: center;
+    height: 100%;;
+}
+
+.header__navigator a {
+    display: block;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    height: 100%;
+    line-height: 3.5rem;
+    border-right: 0.1rem solid white;
+    border-left: 0.1rem solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: .2s;
+}
+
+.header__navigator a:hover {
+    background-color: lightgray;
+    color: #313131
+}
+
+.grass {
+    background-color: #9BCC50;
+    font-weight: 600;
+}
+
+.poison {
+    background-color: #B97FC9;
+    font-weight: 600;
+}
+
+.fire {
+    background-color: red;
+    font-weight: 600;
 }
 
 .hide {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.delete {
     pointer-events: none;
     display: none;
 }
