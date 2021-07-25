@@ -1,31 +1,28 @@
-let pokemon;
-
-const pokeList = async (offset, limit) => {
-  const data = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
-  const pokemons = await data.json();
-  const pokeArray = pokemons.results;
-  const pokeUrls = pokeArray.map((pokemon) => pokemon.url);
-  return pokeUrls;
+const pokemonArray = [];
+const fetchPokemon = async (srcToFind, typeFind = 'pokemon') => {
+  const response = await fetch(`https://pokeapi.co/api/v2/${typeFind}/${srcToFind}`);
+  const obj = await response.json();
+  return {
+    name: obj.name,
+    order: obj.id,
+    habilities: obj.abilities,
+    img: obj.sprites.other.dream_world.front_default,
+    type: obj.types[0].type.name
+  };
 };
 
-async function pokemonFetched(offset, limit) {
-  pokemon = await pokeList(offset, limit);
-  return pokemon;
-}
+const storePokemons = async () => {
+  for (let pokemonId = 1; pokemonId <= 150; pokemonId += 1) {
+    const pokemonObject = await fetchPokemon(pokemonId);
+    localStorage.setItem(`${pokemonId}`, JSON.stringify(pokemonObject));
+  }
+};
+storePokemons();
 
-const pokeObj = [];
-async function printPokemon() {
-  await pokemonFetched(0, 20);
-  await pokemon.forEach((element) => {
-    fetch(`${element}`)
-      .then((response) => response.json())
-      .then((data) => pokeObj.push({
-        name: data.name,
-        order: data.order,
-        img: data.sprites.other.dream_world.front_default
-      }));
-  });
-  return pokeObj;
+function arrayPokemons() {
+  for (let pokemonId = 1; pokemonId <= 150; pokemonId += 1) {
+    pokemonArray.push(JSON.parse(localStorage.getItem(`${pokemonId}`)));
+  }
 }
-
-printPokemon();
+arrayPokemons();
+console.log(pokemonArray);
