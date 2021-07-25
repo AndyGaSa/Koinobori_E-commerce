@@ -13,13 +13,12 @@ class PokemonFavourites {
       id, name, sprites, types
     }) => {
       const typesN = types.map(({ type }) => type.name);
-      const pokemon = {
+      return {
         id,
         name,
         sprite: sprites[0] || sprites.front_default,
         types: typesN
       };
-      return pokemon;
     });
   }
 
