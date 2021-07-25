@@ -26,7 +26,7 @@ class PokemonDetails {
       .then((abilitiesList) => {
         const abilities = abilitiesList.map(({ name, effect_entries }) => ({
           name,
-          description: effect_entries[0].effect
+          description: effect_entries.find(({ language }) => language.name === 'en').effect
         }));
         this.detailPokemon.abilities = abilities;
         this.printPokemonDetail();
