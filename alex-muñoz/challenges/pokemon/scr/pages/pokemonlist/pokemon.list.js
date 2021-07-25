@@ -1,1 +1,0 @@
-const newPokemonList = new PokemonList;

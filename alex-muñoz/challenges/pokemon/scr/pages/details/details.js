@@ -1,4 +1,3 @@
-let eslint = pepepe;
-function (){
-    eslint = pepepe
-}
+const newDetailsPage = new DetailsPage(getIdFromURL());
+
+newDetailsPage.getPokemonDetails();
