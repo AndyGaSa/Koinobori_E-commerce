@@ -75,14 +75,14 @@ function nextPage() {
   if (currentPage !== Math.ceil(maxPokesInMyArray / numberOfCardsToShowPerPage)) {
     createPokeCardForPage(numberOfCardsToShowPerPage, numberOfCardsToShowPerPage * currentPage);
     currentPage += 1;
-    document.getElementById('currentPage').innerHTML = currentPage;
+    document.getElementById('currentPage').innerHTML = `Pagina: ${currentPage} / ${maxPokesInMyArray} Pokemons to visit`;
   }
 }
 function previousPage() {
   if (currentPage !== 1) {
     createPokeCardForPage(numberOfCardsToShowPerPage, numberOfCardsToShowPerPage * (currentPage - 1));
     currentPage -= 1;
-    document.getElementById('currentPage').innerHTML = currentPage;
+    document.getElementById('currentPage').innerHTML = `Pagina: ${currentPage} / ${maxPokesInMyArray} Pokemons to visit`;
   }
 }
 
