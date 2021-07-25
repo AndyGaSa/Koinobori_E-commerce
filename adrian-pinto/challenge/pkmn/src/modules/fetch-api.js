@@ -11,7 +11,3 @@ const catchPkmn = async (srcToFind, typeFind = 'pokemon') => {
 };
 
 export default catchPkmn;
-/* use case
-newCall = await catchPkmn( id, 'info' )
-*/
-// initial limit 151 and 0 offset

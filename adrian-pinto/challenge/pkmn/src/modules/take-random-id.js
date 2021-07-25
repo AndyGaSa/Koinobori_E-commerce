@@ -1,12 +1,14 @@
 const getNumber = (maxNumber) => Math.floor(Math.random() * (maxNumber - 0)) + 0;
 
-const giveRandomId = (maxValue) => {
+const giveSixRandomId = () => {
   const resultArray = [];
-  const numbersToTake = [...Array(maxValue).keys()];
+  const pkmnToTake = JSON.parse(localStorage.getItem('pkmnList'));
   do {
-    resultArray.push(Number.parseInt(numbersToTake.splice(getNumber(numbersToTake.length), 1), 10));
+    const pkArray = pkmnToTake.splice(getNumber(pkmnToTake.length), 1);
+    const { id } = pkArray[0];
+    resultArray.push(id);
   } while (resultArray.length < 6);
   return resultArray;
 };
 
-export default giveRandomId;
+export default giveSixRandomId;
