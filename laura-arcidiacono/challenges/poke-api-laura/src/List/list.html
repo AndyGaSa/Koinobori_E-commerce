@@ -29,19 +29,23 @@ integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2
             <a href="">Detalles</a>
             <a href="">My Poke</a>
         </nav>
-        <figure ><img class="desktop__img" src="https://assets.pokemon.com/assets//cms2-es-es/img/video-games/_tiles/pokemon-unite/launch/pokemon-unite-169.jpg" alt="Imagen de Pokemons en batalla"></figure>
+        <figure ><img class="desktop__img" src="https://people.emich.edu/jhe5/fall16COSC231/project1/banner.jpg" alt="Imagen de Pokemons en batalla"></figure>
             
     </header>
     <main>
         <section id="section__top-main">
             <h1>Pokes-List</h1>
             <div>
-                <ul>
-                   <button class="top-main__button" onclick="createPokeCard(5, 0)">Show 5 Pokemons</button>
-                   <button class="top-main__button" onclick="createPokeCard(10, 0)">Show 10 Pokemons</button>
-                   <button class="top-main__button" onclick="createPokeCard(20, 0)">Show 20 Pokemons</button>
-                   <button class="top-main__button" onclick="createPokeCard(50, 0)">Show 50 Pokemons</button>
-                </ul>
+                <form class="top-main__form" onchange="getValueSelected()">             
+                    <label for="form__view-num" class="form__view-num">Ver:</label>             
+                    <select id="form__view-num" name="form__view-num" class="form__select">               
+                        <option value="5" class="form__selection">5 pokemons</option>               
+                        <option value="10" class="form__selection">10 pokemons</option>               
+                        <option value="20" class="form__selection">20 pokemons</option>               
+                        <option value="50" class="form__selection">50 pokemons</option>             
+                    </select>           
+                </form>
+
             </div>
         </section>
         <section id="section__list">
