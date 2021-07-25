@@ -1,17 +1,3 @@
-// let pokeList;
-
-// async function getPokemon() {
-//   pokeList = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100&offset=200')
-//     .then((response) => response.json())
-//     .then((data) => data.results);
-//   return pokeList;
-// }
-// let pokePrueba;
-// async function gimmeMyFuckongPokemon() {
-//   return pokePrueba = await getPokemon();
-// }
-
-// console.log(pokePrueba);
 let pokemon;
 
 const pokeList = async (offset, limit) => {
@@ -26,6 +12,20 @@ async function pokemonFetched(offset, limit) {
   pokemon = await pokeList(offset, limit);
   return pokemon;
 }
-pokemonFetched(0, 20);
 
-// Todo: mapear pokemon que realice un fetch de la url y devuelva un array con objetos que tengan directamente las propiedades a pintar
+const pokeObj = [];
+async function printPokemon() {
+  await pokemonFetched(0, 20);
+  await pokemon.forEach((element) => {
+    fetch(`${element}`)
+      .then((response) => response.json())
+      .then((data) => pokeObj.push({
+        name: data.name,
+        order: data.order,
+        img: data.sprites.other.dream_world.front_default
+      }));
+  });
+  return pokeObj;
+}
+
+printPokemon();
