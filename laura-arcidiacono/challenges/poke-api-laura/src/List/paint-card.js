@@ -1,4 +1,4 @@
-function createElementWithClass(type, className) {
+/* function createElementWithClass(type, className) {
   const element = document.createElement(type);
   element.className = className;
   return element;
@@ -6,6 +6,7 @@ function createElementWithClass(type, className) {
 
 function createPokeCard(limit, offset) {
   document.getElementById('section__list').innerHTML = '';
+  pokeArray.sort((a, b) => (a.id - b.id));
   for (let item = offset; item < limit + offset; item += 1) {
     const sectionList = document.getElementById('section__list');
     const pokeCard = createElementWithClass('div', 'list__poke-card');
@@ -26,4 +27,6 @@ function createPokeCard(limit, offset) {
   }
 }
 
-createPokeCard(5, 0);
+createPokeCard(5, 0); */
+
+// TODO find the wai to use this functions from this file.
