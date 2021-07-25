@@ -22,13 +22,14 @@ class PokemonsPage {
 
     print() {
         this.pokemons.forEach(({ id, name, sprites }) => {
-            let pokemon = `<li class="pokemon>
-                <a class="pokemon__anchor" "href="https://pokeapi.co/api/v2/pokemon/${name}">
+            let Name = name.charAt(0).toUpperCase() + name.slice(1);
+            let pokemon = `<li class="pokedex__pokemon">
+                <a class="pokemon__anchor" href="../details/details.html?pokemonId=${id}">
                     <figure class="pokemon__figure">
-                        <img class="pokemon__image" src="${sprites}" alt="${name}">
+                        <img class="pokemon__image" src="${sprites}" alt="${Name}">
                         <figcaption class="pokemon__caption">
                             <h2 class="pokemon__id">#${id}</h2>
-                            <h3 class="pokemon__name">${name}</h3>
+                            <h3 class="pokemon__name">${Name}</h3>
                         </figcaption>
                     <figure>
                 </a>

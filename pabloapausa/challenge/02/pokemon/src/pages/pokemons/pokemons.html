@@ -5,21 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon</title>
-    <!-- link rel="stylesheet" href="../../styles.css" -->
-    <!-- link rel="stylesheet" href="pokemon.css" -->
+    <link rel="stylesheet" href="pokemons.css">
 </head>
-<body>
-    <h1>Pokédex</h1>
-    <nav>
-        <a onclick="before()">Previous</a>
-        <a onclick="after()">Next</a>
-    </nav>
-    <ul id="pokedex">
+<body class="pokemon">
+    <header class="pokemon__header">
+        <h1 class="header__title">Pokédex</h1>
+        <nav class="header__navigation">
+            <div class="">
+                <a class="navigation__left" onclick="before()">Before</a>
+                <a class="navigation__left" onclick="after()">Next</a>
+            </div>
+            <div>
+                <a class="navigation__right" onclick="pagination(5)">5</a>
+                <a class="navigation__right"  onclick="pagination(10)">10</a>
+                <a class="navigation__right"  onclick="pagination(20)">20</a>
+                <a class="navigation__right"  onclick="pagination(50)">50</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <ul id="pokedex">
 
-    </ul>
-    <script src="../../services/pokemons.service.js"></script>
+        </ul>
+    </main>
     <script src="pokemonsNavigation.class.js"></script>
-    <script src="../../services/pokeapi.const.js"></script>
+    <script src="../../services/pokemons.service.js"></script>
     <script src="pokemonsPage.class.js"></script>
     <script src="pokemons.js"></script>
 </body>
