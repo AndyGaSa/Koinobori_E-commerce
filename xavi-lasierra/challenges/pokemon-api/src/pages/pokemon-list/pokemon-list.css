@@ -134,6 +134,10 @@
     color:grey;
 }
 
+.pokemon-list__favourite--active i {
+    color: #FFD700;
+}
+
 .pokemon-list__types-photo {
     display: flex;
     justify-content: space-between;

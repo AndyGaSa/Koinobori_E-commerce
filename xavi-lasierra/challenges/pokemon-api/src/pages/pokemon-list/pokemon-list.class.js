@@ -40,8 +40,12 @@ class PokemonList {
       types.forEach((type) => {
         typesElement += `<span class="${type}">${type}</span>`;
       });
+      let favouriteClass = 'pokemon-list__favourite';
+      if (findInFavourites(id)) {
+        favouriteClass += ' pokemon-list__favourite--active';
+      }
       const element = `<li>
-        <button class="pokemon-list__favourite"><i class="fas fa-star fa-lg"></i></button>
+        <button class="${favouriteClass}" onclick=addDeleteFavourites('${id}')><i class="fas fa-star fa-lg"></i></button>
         <a href="../pokemon-detail/pokemon-detail.html?name=${name}">
             <section class="pokemon-list__top">
                 <div class="pokemon-list__title">

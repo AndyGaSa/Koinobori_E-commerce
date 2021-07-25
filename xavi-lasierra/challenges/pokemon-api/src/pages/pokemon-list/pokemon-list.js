@@ -101,3 +101,19 @@ function filterPokemons() {
     printPage(pokemonsPerPage, currentPage);
   }
 }
+
+function addDeleteFavourites(id) {
+  const button = event.path[1];
+  if (button.classList.value.includes('active')) {
+    console.log(id);
+    deleteFromLocalStorage(id);
+    button.classList = 'pokemon-list__favourite';
+  } else {
+    addToLocalStorage(id);
+    button.classList = 'pokemon-list__favourite pokemon-list__favourite--active';
+  }
+}
+
+function findInFavourites(idFind) {
+  return favouritePokemons.find(({ id }) => id === idFind);
+}
