@@ -1,8 +1,14 @@
+
+* {
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
 header {
     display: flex;
     flex-direction: column;
 }
 header nav {
+    color: floralwhite;
     display: inline-block;
     margin: 0 auto;
     height: 60px;
@@ -13,6 +19,12 @@ header nav {
     left: 0;
     z-index: 1;
 }
+
+.top__main-nav a{
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    padding: 1%;
+}
 h1{
     display: inline-block;
     margin-top: 15%;
@@ -20,14 +32,15 @@ h1{
 .top__buttons{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 button{
+    margin: 2%;
     display: inline-block;
     position: relative;
     text-decoration: none;
-    color: #f9a9ae;
+    color: #5a5a5a;
     width: 120px;
     height: 50px;
     line-height: 50px;
@@ -36,26 +49,29 @@ button{
     vertical-align: middle;
     overflow: hidden;
     font-weight: bold;
-    background-image: -webkit-linear-gradient(#fed6e3 0%, #ffaaaa 100%);
-    background-image: linear-gradient(#fed6e3 0%, #ffaaaa 100%);
+    background-image: -webkit-linear-gradient(#d4ced0 0%, #797777 100%);
+    background-image: linear-gradient(#d4ced0 0%, #797777 100%);
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
 }
 
-button:active{/*on click*/
+button:active{
     -ms-transform: translateY(2px);
     -webkit-transform: translateY(2px);
     transform: translateY(2px);
+    border: rgb(2, 116, 192) solid 2px;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-    background-image: -webkit-linear-gradient(#fed6e3 0%, #ffbcbc 100%);
-    background-image: linear-gradient(#fed6e3 0%, #ffbcbc 100%);
+    background-image: -webkit-linear-gradient(#f7f5b0 0%, #fdf141 100%);
+    background-image: linear-gradient(#f7f5b0 0%, #fdf141 100%);
 }
 
 .screen-frame{
+    background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: visible;
     margin-top: 10%;
     border-radius: 5%;
-    background-image: -webkit-linear-gradient(#fed6e3 0%, #f54545 100%);
-    background-image: linear-gradient(#fed6e3 0%, #f54545 100%);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
     padding: 10%;
     display: flex;
@@ -65,15 +81,52 @@ button:active{/*on click*/
 }
 
 .screen-white{
-    width: 80%;
-    height: 80%;
+    border: darkslategray solid 4px;
+    width: 70%;
+    height: 85%;
     background-color: white;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    overflow: visible;
+}
+.screen-white li {
+    list-style-type: none;
+}
+.screen-white li a {
+    width: 95%;
+    height: 90%;
+    padding: 2%;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    margin: 5%;
+    background: #2a2b2f;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.screen-white li a div{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20%;
+}
+.screen-white span{
+    color: floralwhite;
+    text-decoration: none;
 }
 
 .screen-frame__buttons{
+    display: flex;
     margin: 3%;
 }
+
+
 

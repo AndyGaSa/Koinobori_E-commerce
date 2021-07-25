@@ -1,6 +1,6 @@
-class PokemonList {
+class PokemonDetails {
     constructor() {
-      this.pokemons = [];
+      this.pokemon = {};
     }
   
     clearView() {

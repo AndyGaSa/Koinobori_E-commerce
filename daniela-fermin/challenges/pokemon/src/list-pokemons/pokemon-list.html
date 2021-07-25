@@ -7,13 +7,20 @@
     <title>Pokémon</title>
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="./pokemon-list.css">
+    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+        </style>
+                
 </head>
 <body>
     <header>
-        <nav>
-
+        <nav class="top__main-nav">
+            <img src="../International_Pokémon_logo.svg" alt="Pokemon Logo">
+            <a href="">Dashboard</a>
+            <a href="">Pokemons' List</a>
         </nav>
-        <h1>Pokemon List</h1>
+        <h1>Pokemons' List</h1>
     </header>
     
     <div class="top__buttons">
@@ -22,6 +29,7 @@
         <button onclick="changeNumberOfPokemonsToFifty()" id="top__buttons--50" value="50">50</button>
     </div>
     <div class="screen-frame">
+
         <section class="screen-white" id="pokemon__list">
 
         </section>
