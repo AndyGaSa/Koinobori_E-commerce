@@ -14,7 +14,6 @@
     background-color: #F4F4F4;
     height: 3rem;
     width: 14rem;
-    padding-right: 2rem;
     padding: 1rem;
 }
 
@@ -98,6 +97,7 @@
     border-radius: 2rem;
     margin-bottom: 1rem;
     width: 90vw;
+    max-width: 30rem;
     transition: .2s;
 }
 
@@ -185,5 +185,16 @@
     .navigation__navigator {
         margin-top: 1rem;
         justify-content: space-between;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .pokemon-list {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
     }
 }
