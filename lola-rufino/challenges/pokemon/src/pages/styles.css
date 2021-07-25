@@ -1,6 +1,11 @@
  /**** General Styles ****/
  *{
     margin: 0;
+    cursor: url(../images/gam1191.cur), auto;
+}
+
+a{
+    text-decoration: none;
 }
 
 .header{

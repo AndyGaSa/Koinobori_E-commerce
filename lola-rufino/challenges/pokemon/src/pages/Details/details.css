@@ -1,0 +1,59 @@
+/*** Details Styles ***/
+
+*{
+    font-family: 'Viga', sans-serif;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EF5350;
+    padding: 20px;
+}
+
+.main__poke-name{
+    color: #FFCC01;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main__poke-img{
+    max-width: 250px;
+    margin: 5px;
+}
+
+#main-container__stats{
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10%;
+    padding: 20px;
+    box-shadow: 2px 2px 2px #FFCC01;
+    margin: 20px;
+    flex-direction: column;
+}
+
+.main-container__stats-poke{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-poke{
+    color: #FFCC01;
+    font-family: 'Viga', sans-serif;
+    margin: 5px;
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  progress[value]::-webkit-progress-bar {
+    background-color: #FFCC01;
+  }

@@ -1,5 +1,28 @@
 /*** Pokemons list Styles ***/
 
+.main__form{
+    margin: 5px 5px 20px 5px;
+}
+
+.form__view{
+    color: #FFCC01;
+    font-family: 'Viga', sans-serif;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.form__select{
+    background-color: #FFCC01;
+    color: white;
+    border: 2px solid #2B76B7;
+}
+
+.form__select:selected{
+    background-color: #FFCC01;
+    color: white;
+    border: 2px solid #2B76B7;
+}
+
 .main__title{
     color: #FFCC01;
     font-family: 'Viga', sans-serif;
@@ -39,7 +62,15 @@
     margin: 10px;
 }
 
+.main__poke:hover{
+    background-color: #fde7aa;
+}
+
 .main__poke-img{
     max-width: 150px;
     margin: 5px;
+}
+
+.main__pagination{
+    display: flex;
 }

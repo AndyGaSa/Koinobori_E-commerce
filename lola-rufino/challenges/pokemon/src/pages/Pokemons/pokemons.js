@@ -1,21 +1,45 @@
-const parentElement = document.getElementById('main__pokelist');
+/* const parentElement = document.getElementById('main__pokelist');
+const url = 'https://pokeapi.co/api/v2/pokemon/';
 
 for (let poke = 1; poke < 51; poke += 1) {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${poke}`)
+  fetch(`${url}${poke}`)
     .then((response) => response.json())
     .then((data) => {
-      const newElementDiv = document.createElement('div');
+      const newElementAnchor = document.createElement('a');
       const newElementName = document.createElement('h3');
       const newElementImage = document.createElement('img');
-      newElementDiv.className = 'main__poke';
+      newElementAnchor.className = 'main__poke';
       newElementName.className = 'main__poke-name';
       newElementImage.className = 'main__poke-img';
       newElementName.innerHTML = `${data.name}`;
       newElementImage.src = `${data.sprites.other.dream_world.front_default}`;
-      // newElementImage.href = `` una vez creado el details, pasar el link con el número del poke
-      parentElement.appendChild(newElementDiv);
-      newElementDiv.appendChild(newElementName);
-      newElementDiv.appendChild(newElementImage);
+      newElementAnchor.href = `../Details/details.html?pokemonId=${data.id}`;
+      parentElement.appendChild(newElementAnchor);
+      newElementAnchor.appendChild(newElementName);
+      newElementAnchor.appendChild(newElementImage);
+    })
+    .catch(new Error('Something went wrong'));
+} */
+
+const parentElement = document.getElementById('main__pokelist');
+const url = 'https://pokeapi.co/api/v2/pokemon/';
+
+for (let poke = 1; poke < 51; poke += 1) {
+  fetch(`${url}${poke}`)
+    .then((response) => response.json())
+    .then((data) => {
+      const newElementAnchor = document.createElement('a');
+      const newElementName = document.createElement('h3');
+      const newElementImage = document.createElement('img');
+      newElementAnchor.className = 'main__poke';
+      newElementName.className = 'main__poke-name';
+      newElementImage.className = 'main__poke-img';
+      newElementName.innerHTML = `${data.name}`;
+      newElementImage.src = `${data.sprites.other.dream_world.front_default}`;
+      newElementAnchor.href = `../Details/details.html?pokemonId=${data.id}`;
+      parentElement.appendChild(newElementAnchor);
+      newElementAnchor.appendChild(newElementName);
+      newElementAnchor.appendChild(newElementImage);
     })
     .catch(new Error('Something went wrong'));
 }
