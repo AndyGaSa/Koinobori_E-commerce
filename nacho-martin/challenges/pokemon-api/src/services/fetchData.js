@@ -17,7 +17,9 @@ let pokemon;
 const pokeList = async (offset, limit) => {
   const data = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
   const pokemons = await data.json();
-  return pokemons.results;
+  const pokeArray = pokemons.results;
+  const pokeUrls = pokeArray.map((pokemon) => pokemon.url);
+  return pokeUrls;
 };
 
 async function pokemonFetched(offset, limit) {
