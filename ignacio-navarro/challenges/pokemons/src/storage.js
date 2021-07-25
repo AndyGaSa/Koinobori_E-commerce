@@ -8,3 +8,8 @@ function getPokemonFromApi(searchInput) {
     .then((response) => response.json())
     .then((pokemonDetail) => pokemonDetail);
 }
+function getPokemonFilter(filter) {
+  return fetch(`https://pokeapi.co/api/v2/${filter}`)
+    .then((response) => response.json())
+    .then((pokemons) => pokemons);
+}
