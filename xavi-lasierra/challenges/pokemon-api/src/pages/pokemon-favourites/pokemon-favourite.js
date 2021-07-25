@@ -24,6 +24,7 @@ function createPokemon() {
 
   if (input) {
     createNewPokemon(input);
+    pokemonFavourites.clearView();
     pokemonFavourites.setView();
   }
   document.getElementById('pokemon__create-input').value = '';

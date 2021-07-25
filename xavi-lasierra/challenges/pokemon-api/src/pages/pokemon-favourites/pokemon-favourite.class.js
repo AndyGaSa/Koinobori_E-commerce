@@ -16,7 +16,7 @@ class PokemonFavourites {
       const pokemon = {
         id,
         name,
-        sprite: sprites.front_default,
+        sprite: sprites[0] || sprites.front_default,
         types: typesN
       };
       return pokemon;

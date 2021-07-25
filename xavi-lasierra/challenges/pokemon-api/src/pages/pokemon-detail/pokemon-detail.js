@@ -21,3 +21,8 @@ function showAbility(name) {
 function closeAbility() {
   pokemonDescription.constructor.closeAbilityDescription();
 }
+
+function saveChanges() {
+  const input = document.getElementById('pokemon__name-input').value.trim();
+  updatePokemon(pokemonDescription.pokemon.id, { name: input.toLowerCase() });
+}

@@ -179,3 +179,48 @@ progress {
     background-color: #F2F2F2;
     font-size: 0.8rem;
 }
+
+.pokemon__create {
+    display: flex;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.pokemon__create input {
+    margin-left: 0.5rem;
+    border: 1px solid gray;
+    background-color: #F4F4F4;
+    height: 2.5rem;
+    width: 14rem;
+    padding-right: 2rem;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
+
+.pokemon__create input:focus {
+    background-color: lightgray;
+    outline: none;
+}
+
+.pokemon__create button {
+	border: none;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    appearance: none;
+    margin: 1px solid black;
+    height: 2.5rem;
+    width: 4rem;
+    background-color: white;
+    box-shadow: none;
+}
+
+.pokemon__create button:hover {
+    background-color: grey;
+    color: white;
+}
+
+.pokemon__create button:active {
+    background-color: #171717;
+    color: white;
+}

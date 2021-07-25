@@ -7,6 +7,23 @@ class PokemonDetailPage {
   }
 
   setView() {
+    if (!this.from) {
+      this.setFromApi();
+    } else {
+      this.setFromLocalStorage();
+    }
+  }
+
+  setFromLocalStorage() {
+    this.pokemon = favouritePokemons.find(({ name }) => name === this.name);
+    if (this.pokemon?.created) {
+      this.printFavourite();
+    } else {
+      this.setFromApi();
+    }
+  }
+
+  setFromApi() {
     let searchInfo;
     if (this.id) {
       searchInfo = this.id;
@@ -26,7 +43,7 @@ class PokemonDetailPage {
           weight,
           height,
           stats: statsN,
-          sprite: [sprites.front_default, sprites.front_shiny]
+          sprites: [sprites.front_default, sprites.front_shiny]
         };
         const abilitiesPromises = abilities.map(({ ability }) => getSinglePokemon(ability.url));
         const movesPromises = moves.map(({ move }) => getSinglePokemon(move.url));
@@ -74,6 +91,19 @@ class PokemonDetailPage {
     }
   }
 
+  static deleteFromFavorites() {
+    document.getElementsByClassName('pokemon__navigator')[0].classList = 'delete';
+    document.getElementsByClassName('pokemon__resume')[0].classList = 'delete';
+    document.getElementsByClassName('pokemon__stats')[0].classList = 'delete';
+    document.getElementsByClassName('pokemon__moves')[0].classList = 'delete';
+  }
+
+  printFavourite() {
+    this.printTitleFavourite();
+    this.printPhoto();
+    this.constructor.deleteFromFavorites();
+  }
+
   print() {
     this.printTitle();
     this.printPhoto();
@@ -82,18 +112,24 @@ class PokemonDetailPage {
     this.printMoves();
   }
 
+  printTitleFavourite() {
+    document.getElementById('pokemon__create').classList = 'pokemon__create';
+    document.getElementById('pokemon__id-input').innerText = `#${this.pokemon.id}`;
+    document.getElementById('pokemon__name-input').value = capitalizeFirstLetter(this.pokemon.name);
+  }
+
   printTitle() {
     document.getElementById('pokemon__id').innerText = `#${this.pokemon.id}`;
     document.getElementById('pokemon__name').innerText = capitalizeFirstLetter(this.pokemon.name);
   }
 
   printPhoto() {
-    document.getElementById('pokemon__photo').src = this.pokemon.sprite[0];
-    document.getElementById('pokemon__photo').alt = `${this.pokemon.sprite[0]} photo`;
+    document.getElementById('pokemon__photo').src = this.pokemon.sprites[0] || this.pokemon.sprites.front_default;
+    document.getElementById('pokemon__photo').alt = `${this.pokemon.sprites[0] || this.pokemon.sprites.front_default} photo`;
   }
 
   printPhotoShiny() {
-    document.getElementById('pokemon__photo').src = this.pokemon.sprite[1];
+    document.getElementById('pokemon__photo').src = this.pokemon.sprites[1] || this.pokemon.sprites.front_shiny;
   }
 
   printMainInformation() {

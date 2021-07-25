@@ -48,11 +48,19 @@ function deleteFromLocalStorage(idRemove) {
 function createNewPokemon(name) {
   const nextId = +localStorage.getItem('nextId');
   favouritePokemons.push({
+    created: true,
     id: nextId,
     name: name.toLowerCase(),
     types: [],
-    sprites: { front_default: 'https://wiki.p-insurgence.com/images/0/09/722.png' }
+    sprites: ['https://wiki.p-insurgence.com/images/0/09/722.png', 'https://wiki.p-insurgence.com/images/0/09/722.png']
   });
   saveFavouritesToLocalStorage(favouritePokemons);
   localStorage.setItem('nextId', nextId + 1);
+}
+
+function updatePokemon(idChange, newProperties) {
+  favouritePokemons = favouritePokemons
+    .map((pokemon) => (pokemon.id === +idChange ? { ...pokemon, ...newProperties }
+      : pokemon));
+  saveFavouritesToLocalStorage(favouritePokemons);
 }

@@ -25,6 +25,11 @@
         <article class="pokemon__information">
             <section>
                 <h2 class="pokemon__title"><span id="pokemon__id"></span> <span id="pokemon__name"></span></h2>
+                <div id="pokemon__create" class="delete">
+                    <span class="pokemon__title" id="pokemon__id-input"></span> 
+                    <input id="pokemon__name-input" type="text" value="">
+                    <button id="pokemon__save" onclick="saveChanges()">Save</button>
+                </div>
             </section>
             <section id ="pokemon__main-information" class="pokemon__main-information">
                 <img class="pokemon__photo" id="pokemon__photo" src="" alt="" onmouseover="shinyPhoto()" onmouseout="normalPhoto()">
