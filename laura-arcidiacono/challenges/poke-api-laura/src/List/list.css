@@ -24,6 +24,12 @@ ul{
     list-style-type: none;
     margin-block-start: 1em;
     margin-block-end: 1em;
+    display: flex;
+    list-style-type: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 li {
     list-style: none;
@@ -77,12 +83,15 @@ nav ul a{
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    width: 100%;
 }
-
 #section__list{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+}
+h1 {
+    text-align: center;
 }
 h3, h4 {
     font-family: 'Encode Sans Semi Condensed', sans-serif;
