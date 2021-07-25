@@ -1,3 +1,8 @@
+main {
+    margin: auto;
+    max-width: 60rem;
+}
+
 h3{
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
@@ -130,6 +135,12 @@ h3{
 
 .pokemon__resume__ability button:hover {
     transform: scale(1.2);
+}
+
+.pokemon__resume__ability p {
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .pokemon__stats {

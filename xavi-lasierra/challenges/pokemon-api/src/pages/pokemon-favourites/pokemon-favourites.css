@@ -1,9 +1,10 @@
 .pokemon__create {
     padding: 0 4rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: 1rem;
+    max-width: 35rem;
+    margin: 1rem auto;
 }
 
 .pokemon__create input {
@@ -13,6 +14,7 @@
     width: 14rem;
     padding-right: 2rem;
     padding: 0 1rem;
+    margin-left: 0.5rem;
 }
 
 .pokemon__create input:focus {

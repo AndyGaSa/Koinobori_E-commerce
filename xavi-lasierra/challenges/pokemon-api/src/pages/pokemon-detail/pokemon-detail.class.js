@@ -84,7 +84,7 @@ class PokemonDetailPage {
       previous.classList = 'navigation__previous hide';
     }
 
-    if (this.pokemon.id + 1 <= NUMOFPOKE + 1) {
+    if (this.pokemon.id + 1 <= NUMOFPOKE) {
       next.href = `./pokemon-detail.html?id=${this.pokemon.id + 1}`;
     } else {
       next.classList = 'navigation__next hide';

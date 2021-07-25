@@ -96,10 +96,24 @@ function filterPokemons() {
   if (input) {
     const result = filterPokemonsApi(input)
       .then((pokemons) => Promise.all(pokemons.map(({ url }) => getSinglePokemon(url)))
-        .then((pokemonsInfo) => pokemonList.setPokemons(pokemonsInfo)));
+        .then((pokemonsInfo) => {
+          pokemonList.setPokemons(pokemonsInfo);
+          hideButtons();
+        }));
   } else {
     printPage(pokemonsPerPage, currentPage);
+    showButtons();
   }
+}
+
+function showButtons() {
+  document.getElementById('navigation__navigator').classList = 'navigation__navigator';
+  document.getElementById('navigation__bottom').classList = 'navigation navigation--center';
+}
+
+function hideButtons() {
+  document.getElementById('navigation__navigator').classList = 'navigation__buttons hide';
+  document.getElementById('navigation__bottom').classList = 'navigation navigation--center hide';
 }
 
 function addDeleteFavourites(id) {

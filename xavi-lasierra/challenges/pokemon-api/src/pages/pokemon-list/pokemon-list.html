@@ -24,7 +24,7 @@
                 <input id="search__bar" name="search__bar" type="text">
                 <button onclick="filterPokemons()"><i class="fas fa-search fa-lg"></i></button>
             </div>
-            <nav class="navigation__navigator">
+            <nav id="navigation__navigator" class="navigation__navigator">
                 <div class="navigation__buttons">
                     <button class="navigation__previous" onclick="changePage('first')"><i class="fas fa-angle-double-left fa-2x"></i></button>
                     <button class="navigation__previous" onclick="changePage('previous')"><i class="fas fa-angle-left fa-2x"></i></button>
@@ -42,7 +42,7 @@
         </section>
         <ul class="pokemon-list" id='pokemon-list'>
         </ul>
-        <nav class="navigation navigation--center">
+        <nav id="navigation__bottom" class="navigation navigation--center">
             <div class="navigation__buttons">
                 <button class="navigation__previous" onclick="changePage('first')"><i class="fas fa-angle-double-left fa-2x"></i></button>
                 <button class="navigation__previous" onclick="changePage('previous')"><i class="fas fa-angle-left fa-2x"></i></button>

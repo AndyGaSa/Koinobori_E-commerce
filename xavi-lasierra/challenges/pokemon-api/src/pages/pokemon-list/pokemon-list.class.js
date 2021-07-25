@@ -24,7 +24,7 @@ class PokemonList {
   }
 
   setView(numberOfPokemons, currentPage) {
-    getPokemons(numberOfPokemons, numberOfPokemons * currentPage)
+    getPokemons(+numberOfPokemons, +(numberOfPokemons * currentPage))
       .then(({ results }) => Promise.all(results.map(({ url }) => getSinglePokemon(url))))
       .then((pokemons) => {
         this.pokemons = this.constructor.getPokemonsInfo(pokemons);

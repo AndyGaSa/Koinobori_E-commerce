@@ -1,7 +1,9 @@
-const NUMOFPOKE = 150;
+const NUMOFPOKE = 151;
+const ALLPOKE = 900;
 let favouritePokemons;
 
 function saveFavouritesToLocalStorage(element) {
+  favouritePokemons.sort((a, b) => a.id - b.id);
   localStorage.setItem('favouritePokemons', JSON.stringify(element));
 }
 
@@ -10,12 +12,17 @@ function saveFavouritesToLocalStorage(element) {
   if (!favouritePokemons) {
     favouritePokemons = [];
     saveFavouritesToLocalStorage(favouritePokemons);
-    localStorage.setItem('nextId', NUMOFPOKE + 2);
+    localStorage.setItem('nextId', NUMOFPOKE + 1);
   }
 }());
 
 function getPokemons(limit, offset) {
-  return fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
+  let number = limit;
+  if (limit + offset >= NUMOFPOKE - 1) {
+    number = NUMOFPOKE - offset;
+  }
+
+  return fetch(`https://pokeapi.co/api/v2/pokemon?limit=${number}&offset=${offset}`)
     .then((response) => response.json())
     .then((pokemons) => pokemons);
 }
@@ -46,13 +53,14 @@ function deleteFromLocalStorage(idRemove) {
 }
 
 function createNewPokemon(name) {
+  const randomNumber = Math.floor(Math.random() * ALLPOKE);
   const nextId = +localStorage.getItem('nextId');
   favouritePokemons.push({
     created: true,
     id: nextId,
     name: name.toLowerCase(),
     types: [],
-    sprites: ['https://wiki.p-insurgence.com/images/0/09/722.png', 'https://wiki.p-insurgence.com/images/0/09/722.png']
+    sprites: [`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomNumber}.png`, `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${randomNumber}.png`]
   });
   saveFavouritesToLocalStorage(favouritePokemons);
   localStorage.setItem('nextId', nextId + 1);
