@@ -1,4 +1,4 @@
-const NUMOFPOKE = 1118;
+const NUMOFPOKE = 493;
 
 function getPokemons(limit, offset) {
   return fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)

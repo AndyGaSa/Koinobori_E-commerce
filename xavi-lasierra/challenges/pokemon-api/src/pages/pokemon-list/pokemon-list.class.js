@@ -38,17 +38,25 @@ class PokemonList {
     }) => {
       let typesElement = '';
       types.forEach((type) => {
-        typesElement += `<div class="type-${type}">${type}</div>`;
+        typesElement += `<span class="${type}">${type}</span>`;
       });
-      const element = `<li><a href="../pokemon-detail/pokemon-detail.html?name=${name}">
-            <div>
-                <span>${id}</span>
-                <span>${name}</span>
-            </div>
-            <div>
-            ${typesElement}
-            </div>
-            <img src="${sprite}" alt="${name} photo">
+      const element = `<li>
+        <button class="pokemon-list__favourite"><i class="fas fa-star fa-lg"></i></button>
+        <a href="../pokemon-detail/pokemon-detail.html?name=${name}">
+            <section class="pokemon-list__top">
+                <div class="pokemon-list__title">
+                  <span class="pokemon-list__id">#${id}</span>
+                  <span>${capitalizeFirstLetter(name)}</span>
+                </div>
+                <div>
+                </div>
+            </section>
+            <section class="pokemon-list__types-photo">
+              <div class="pokemon-list__types">
+                ${typesElement}
+              </div>
+              <img src="${sprite}" alt="${name} photo">
+            </section>
         </a></li>`;
       document.getElementById('pokemon-list').innerHTML += element;
     });

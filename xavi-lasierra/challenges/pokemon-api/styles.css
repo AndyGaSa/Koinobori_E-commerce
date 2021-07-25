@@ -26,10 +26,11 @@
 }
 
 .header__navigator a {
-    display: block;
+    display: flex;
+    align-items: center;
     margin: 0.2rem;
-    padding: 0.2rem;
-    height: 100%;
+    padding: 0.25rem;
+    height: 80%;
     line-height: 3.5rem;
     border-right: 0.1rem solid white;
     border-left: 0.1rem solid white;
