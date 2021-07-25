@@ -1,4 +1,4 @@
-(function pokedexPageModel(){
-     const pokedex = new pokedexPage();
-     pokedex.setView();
-})()
+(function pokedexPageModel() {
+  const pokedex = new pokedexPage();
+  pokedex.setView();
+}());

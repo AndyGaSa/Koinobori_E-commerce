@@ -1,15 +1,14 @@
 class DetailsPage {
-    constructor(pokemon) {
-      this.pokemon = pokemon;
-    }
-  
-    setHero(pokemon) {
-      this.pokemon = pokemon;
-    }
-  
-    setView(){
-          const element = 
-          `<div class="main__pokestats__container">
+  constructor(pokemon) {
+    this.pokemon = pokemon;
+  }
+
+  setHero(pokemon) {
+    this.pokemon = pokemon;
+  }
+
+  setView() {
+    const element = `<div class="main__pokestats__container">
             <figure class="main__pokestats__container__figure">
               <img class = "header__logo__img" src="${this.pokemon.sprites}" alt="${this.pokemon.name}">
             </figure>
@@ -35,7 +34,7 @@ class DetailsPage {
             </section>
             </section>
           </div>`;
-          let pokemonContainer = document.querySelector('.main__pokestats');
-          pokemonContainer.innerHTML += element;
-    }
+    const pokemonContainer = document.querySelector('.main__pokestats');
+    pokemonContainer.innerHTML += element;
   }
+}
