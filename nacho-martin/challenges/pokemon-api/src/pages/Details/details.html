@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./details.css">
+    <title>Pokemon Details</title>
 </head>
 <body>
-    
+    <main>
+        <div>
+        <h1 class="pokemon-title"></h1>
+        <img class='pokemon-img'alt="pokemon-img">
+        </div>
+        <div>
+            <h2>Tipe:</h2>
+            <ul class="pokemon-type"></ul>
+        </div>
+        <ul class='pokemon-abilities'><h2>Abilities:</h2></ul>
+    </main>
 </body>
+
+<script src="../../services/fetchData.js"></script>
+<script src="./details.class.js"></script>
+<script src="./transformURLQueryToObject.js"></script>
+<script src="./details.js"></script>
 </html>

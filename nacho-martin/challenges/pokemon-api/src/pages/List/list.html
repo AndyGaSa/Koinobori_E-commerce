@@ -8,14 +8,28 @@
     <link rel="stylesheet" href="./list.css">
 </head>
 <body>
-    <header>
+    <header class='header-container'>
+        <div class='header-container__main-logo'>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="">
+            <h1>Gotta catch'em all!</h1>
+        </div>
+        <nav>
+            <select onchange = 'changePagination(value)'>
+                <option value=5>5 por página</option>
+                <option value=10>10 por página</option>
+                <option value=25>25 por página</option>
+                <option value=50>50 por página</option>
+            </select>
+        </nav>
     </header>
-    <section>
+    <main>
     <ul id="poke-list"></ul>
-</section>
+</main>
+<nav class="page-buttons"><input type="button" value="Previous" onclick="previousPage()"><input type="button" value="Next" onclick="nextPage()"></nav>
     <footer></footer>
 </body>
 <script src="../../services/fetchData.js"></script>
 <script src="../List/list.class.js"></script>
+<script src="./pagination.js"></script>
 <script src="../List/list.js"></script>
 </html>

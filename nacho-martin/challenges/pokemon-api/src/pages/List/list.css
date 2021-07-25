@@ -3,11 +3,36 @@
     margin: 0;
     padding:0;
 }
-body>section{
+body>main{
     margin: 0 auto;
-    padding: 0 auto;
+    padding: 0 100px;
 }
-
+.header-container{
+    width: 100%;
+    height: 90px;
+    background-color:#EF5350;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-container__main-logo{
+    display: flex;
+    align-items: center;
+}
+.header-container__main-logo>img{
+    height:100%;
+    border:none;
+    background: transparent;
+}
+.header-container__main-logo>h1{
+    color: white;
+    font-family: fantasy;
+    
+}
+.header-container>nav{
+    padding: 50px;
+    border: none;
+}
 ul{
     display: grid;
     grid-template-columns: repeat(3, 33%);
@@ -21,23 +46,32 @@ li{
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    border: 3px gold solid;
+    border: 4px gold solid;
 }
 img{
     height: 140px;
     width: 140px;
-    background-color: aquamarine;
+    background-color: white;
     border-radius: 10px;
+    padding: 10px;
     border: 2px gold solid;
 }
 .pokeSlug{
     display:flex;
     align-items: center;
     justify-content: center;
+    background-color: whitesmoke;
+    border: 2px gold solid;
+    border-radius: 10px;
+    height: 30px;
+    margin-top: 5px;
 
 }
 .pokeSlug>span{
     margin-right: 5px;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 1px;
 }
 .pokeSlug>h3{
 text-transform: capitalize;
@@ -45,3 +79,12 @@ text-transform: capitalize;
 a:hover{
 
 cursor: pointer;}
+
+.page-buttons{
+    display:flex;
+    margin:0 auto;
+    width:50px;
+    height: 20px;
+    
+
+}

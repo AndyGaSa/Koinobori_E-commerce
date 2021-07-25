@@ -25,4 +25,3 @@ function arrayPokemons() {
   }
 }
 arrayPokemons();
-console.log(pokemonArray);

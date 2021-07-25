@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body>main{
+    margin: 0 auto;
+    padding: 0 100px;
+    background-color: lightpink;
+    display: flex;
+    flex-direction: column;
+}
+.pokemon-title{
+    text-transform: capitalize;
+    font-size: 40px;
+
+}
+img{
+    height: 270px;
+    width: 400px;
+    padding: 20px;
+}
+ul>h2{
+    text-transform: capitalize;
+    background-color: lightyellow;
+}
+ul>li{
+    list-style: none;
+    text-transform: capitalize;
+    font-weight: bold;
+
+
+}

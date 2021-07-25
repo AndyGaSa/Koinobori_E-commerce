@@ -1,1 +1,3 @@
-const newDetailsPage = new DetailsPage();
+const newDetailsPage = new DetailsPage(getIdFromURL());
+
+newDetailsPage.getPokemonDetails();
