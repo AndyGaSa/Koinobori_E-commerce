@@ -26,7 +26,7 @@ describe('SkylabArray class', () => {
         });
       });
     });
-    describe('When is invoked with a and string', () => {
+    describe('When is invoked with a and b string', () => {
       describe('And the array is empty', () => {
         beforeEach(() => {
           myArray = new SkylabArray();
@@ -43,20 +43,22 @@ describe('SkylabArray class', () => {
   });
   describe('Given a map method', () => {
     describe('When is invoked', () => {
-      let newArray;
-      beforeEach(() => {
-        myArray.push('mola');
-        const mapCallback = (value) => 'Skylab: ${value}';
-        newArray = myArray.map(mapCallback);
-      });
-      test('Then return a new array', () => {
-        expect(myArray).not.toEqual(newArray);
-      });
-      test('Then return a new array with same length', () => {
-        expect(myArray.length).toEqual(newArray.length);
-      });
-      test('Then newArray[0] should contain MyArray[0]', () => {
-        expect(newArray[0]).toMatch(myArray[0]);
+      describe('And array has at least one element', () => {
+        let newArray;
+        beforeEach(() => {
+          myArray.push('mola');
+          const mapCallback = (value) => 'Skylab: ${value}';
+          newArray = myArray.map(mapCallback);
+        });
+        test('Then return a new array', () => {
+          expect(myArray).not.toEqual(newArray);
+        });
+        test('Then return a new array with same length', () => {
+          expect(myArray.length).toEqual(newArray.length);
+        });
+        test('Then newArray[0] should contain MyArray[0]', () => {
+          expect(newArray[0]).toMatch(myArray[0]);
+        });
       });
     });
   });
