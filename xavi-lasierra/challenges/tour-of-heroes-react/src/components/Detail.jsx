@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-function Detail({ hero }) {
+function Detail({ hero, changePage }) {
   return (
     <main>
       <h2>
@@ -20,7 +20,7 @@ function Detail({ hero }) {
           <input id="hero-name" placeholder="Hero name" value={hero.name} />
         </label>
       </div>
-      <button type="button">go back</button>
+      <button type="button" onClick={() => changePage(1)}>go back</button>
       <button type="button">save</button>
     </main>
 

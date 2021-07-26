@@ -23,7 +23,7 @@ input {
   left: .1em;
 }
 
-.heroes a {
+.heroes .heroes__heroe {
   color: #333;
   text-decoration: none;
   background-color: #EEE;
@@ -35,12 +35,12 @@ input {
   width: 100%;
 }
 
-.heroes a:hover {
+.heroes .heroes__heroe:hover {
   color: #2c3a41;
   background-color: #e6e6e6;
 }
 
-.heroes a:active {
+.heroes .heroes__heroe:active {
   background-color: #525252;
   color: #fafafa;
 }
@@ -52,10 +52,10 @@ input {
   padding: 0.8em 0.7em 0 0.7em;
   background-color:#405061;
   line-height: 1.2em;
-  position: relative;
+  position: absolute;
   left: 0px;
-  top: -4px;
-  height: 1.8em;
+  top: 0px;
+  height: 1.6em;
   min-width: 16px;
   text-align: right;
   margin-right: .8em;

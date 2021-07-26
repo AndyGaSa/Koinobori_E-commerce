@@ -26,22 +26,22 @@ function App() {
     changeDetailPage(heroes[index]);
   }
 
-  const page = [
-    <Dashboard heroes={heroes.slice(1, 5)} heroDetail={changeHero} />,
-    <List heroes={heroes} heroDetail={changeHero} />,
-    <Detail hero={currentDetail} />
-  ];
-
-  const [currentPage, changeCurrentPage] = useState(page[0]);
+  const [currentPage, changeCurrentPage] = useState(0);
 
   function changePage(pageNumber) {
-    changeCurrentPage(page[pageNumber]);
+    changeCurrentPage(pageNumber);
   }
+
+  const page = [
+    <Dashboard heroes={heroes.slice(1, 5)} heroDetail={changeHero} changePage={changePage} />,
+    <List heroes={heroes} heroDetail={changeHero} changePage={changePage} />,
+    <Detail hero={currentDetail} changePage={changePage} />
+  ];
 
   return (
     <>
       <Header changePage={changePage} />
-      {currentPage}
+      {page[currentPage]}
     </>
   );
 }
