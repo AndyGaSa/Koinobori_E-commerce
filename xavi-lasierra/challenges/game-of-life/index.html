@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8b80b61e9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Game of Life</title>
+</head>
+<body class="hello">
+    <header class="header">
+        <div>
+            <nav class="header__open">
+                <h2 class="hide">Conway's Game of Life modifier</h2>
+                <div class="sliders-wrapper">
+                    <label class="cell-selector" for="cell-creator">
+                        <span>Cell type</span>
+                        <select name="cell-creator" id="cell-creator">
+                            <option value="single">Single</option>
+                            <option value="blinker-v">Blinker │ [3,1]</option>
+                            <option value="blinker-h">Blinker ━━ [1,3]</option>
+                            <option value="glider-ld">Glider →↓ [3,3]</option>
+                            <option value="glider-rd">Glider ←↓ [3,3]</option>
+                            <option value="r-pentomino">R-Pentomino [3,3]</option>
+                            <option value="diehard">Diehard [3,8]</option>
+                            <option value="acorn">Acorn [3,7]</option>
+                            <option value="infinite-growth">infinite growth [5,5]</option>
+                            <option value="glider-gun-rd">Glider gun →↓ [9,36]</option>
+                            <option value="glider-gun-ld">Glider gun ←↓ [9,36]</option>
+                        </select>
+                    </label>
+                    <div class="slidecontainer">
+                        <label for="number-of-cells">
+                            <span>Size</span>
+                            <input type="range" min="0" max="10" value="5" class="slider" id="number-of-cells" name="number-of-cells">
+                        </label>
+                    </div>
+                    <div class="slidecontainer">
+                        <label for="generation-velocity">
+                            <span>Velocity</span>
+                            <input type="range" min="10" max="2000" value="1000" class="slider" id="generation-velocity" name="generation-velocity">
+                        </label>
+                    </div>
+                </div>
+                <div class="buttons-wrapper">
+                    <div class="buttons__generation">
+                        <button id="previous-button"><i class="fas fa-angle-left fa-lg"></i></button>
+                        <button id="start-button"><i class="fas fa-play fa-lg"></i></button>
+                        <button id="next-button"><i class="fas fa-angle-right fa-lg"></i></button>
+                    </div>
+                    <button id="reset-button"><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="style-wrapper">
+                    <div class="style-type-selector">
+                        <label class="switch">
+                            <input id="style-custom" type="checkbox">
+                            <span class="slider-checkbox"></span>
+                        </label>
+                        <span id="style-type-selector__text">Custom style:</span>
+                    </div>
+                    <div class="custom-style" id="user-style">
+                        <label class="custom-style__background-color" for="background-color">
+                            <span>Background color</span>
+                            <input type="color" id="background-color" name="background-color" value="#FFFFFF">
+                        </label>
+                        <label class="custom-style__grid-color" for="grid-color">
+                            <span>Grid color</span>
+                            <input type="color" id="grid-color" name="grid-color" value="#808080">
+                        </label>
+                        <label class="custom-style__cell-color" for="cell-color">
+                            <span>Cell color</span>
+                            <input type="color" id="cell-color" name="cell-color" value="#000000">
+                        </label>
+                    </div>
+                    <div class="preset-style hide" id="choose-style">
+                        <select name="style" id="style">
+                            <option value="default">Default</option>
+                            <option value="rainbow">Rainbow</option>
+                            <option value="changer">Changer (Epilepsy Warning)</option>
+                        </select>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="header__closed">
+            <div class="header__opener">
+                <div class="triangle triangle--left"></div>
+                <div class="rectangle">
+                    <i class="far fa-arrow-alt-circle-down fa-lg"></i>
+                </div>
+                <div class="triangle triangle--right"></div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <h1 class="main__title">CONWAY'S GAME OF LIFE</h1>
+        <div class="canvas-wrapper">
+            <canvas id="gameBoard" class="board"></canvas>
+        </div>
+    </main>
+    <script src="src/game-of-life.js"></script>
+</body>
+</html>

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heroes</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="./heroes.css">
 </head>
 <body>
     <header>
@@ -13,9 +15,23 @@
             <a href="../Dashboard/dashboard.html">Dashboard</a>
             <a href="#">Heroes</a>
         </nav>
-        <section>
-            <h2>My Heroes</h2>
-        </section>
     </header>
+    <h2>My Heroes</h2>
+
+    <div>
+        <label for="new-hero">Hero name: </label>
+        <input id="new-hero" />
+
+        <button class="add-button" onclick="addHero()">
+            Add hero
+        </button>
+    </div>
+
+    <ul class="heroes" id="heroes__list">
+    </ul>
+
+    <script src="../../services/hero.service.js"></script>
+    <script src="./setHeroesView.js"></script>
+    <script src="./heroes.js"></script>
 </body>
 </html>

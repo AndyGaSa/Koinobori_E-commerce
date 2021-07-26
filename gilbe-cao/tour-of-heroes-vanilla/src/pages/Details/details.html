@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hero Details</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="./details.css">
 </head>
 <body>
     <header>
@@ -14,17 +16,22 @@
             <a href="../Heroes/heroes.html">Heroes</a>
         </nav>
     </header>
-    <section>
+    <div>
         <h2><span id="hero__title"></span> details!</h2>
-        <p>id: <span id="hero__id"></span></p>
-        <label>
-            name: 
+        <div><span>id: </span><span id="hero__id"></span></div>
+        <div>
+            <label>
+                name: 
+            </label>
             <input type="text" id="hero__name">
-        </label>
-    </section>
+        </div>
+        <button>go back</button>
+        <button>save</button>
+    </div>
 
-    <script src="../../heroes.const.js"></script>
+    <script src="../../services/hero.service.js"></script>
     <script src="./details.class.js"></script>
+    <script src="./transformUrlQueryToObject.js"></script>
     <script src="./details.js"></script>
 </body>
 </html>
