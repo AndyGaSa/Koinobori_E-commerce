@@ -10,6 +10,8 @@ export default function Books({ books, validate }) {
   //   </ul>
   // );
   return (
-    <ul className="books" />
+    <ul className="books">
+      {books.map}
+    </ul>
   );
 }
