@@ -23,4 +23,4 @@ function getPokemonList(limit, offset) {
       });
     });
 }
-getPokemonList(151, 0);
+getPokemonList(150, 0);
