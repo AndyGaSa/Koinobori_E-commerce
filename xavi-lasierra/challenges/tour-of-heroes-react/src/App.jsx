@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
 import List from './components/List';
+import Detail from './components/Detail';
+import './styles.css';
 
 function App() {
   const heroes = [
@@ -17,17 +19,28 @@ function App() {
     { id: 20, name: 'Tornado' }
   ];
 
+  const [currentDetail, changeDetailPage] = useState(heroes[0]);
+
+  function changeHero(heroId) {
+    const index = heroes.map(({ id }) => id).indexOf(heroId);
+    changeDetailPage(heroes[index]);
+  }
+
   const page = [
-    <Dashboard heroes={heroes.slice(1, 5)} />,
-    <List heroes={heroes} />
+    <Dashboard heroes={heroes.slice(1, 5)} heroDetail={changeHero} />,
+    <List heroes={heroes} heroDetail={changeHero} />,
+    <Detail hero={currentDetail} />
   ];
 
-  // eslint-disable-next-line no-unused-vars
-  const [currentPage, changeCurrentPage] = useState(page[1]);
+  const [currentPage, changeCurrentPage] = useState(page[0]);
+
+  function changePage(pageNumber) {
+    changeCurrentPage(page[pageNumber]);
+  }
 
   return (
     <>
-      <Header />
+      <Header changePage={changePage} />
       {currentPage}
     </>
   );

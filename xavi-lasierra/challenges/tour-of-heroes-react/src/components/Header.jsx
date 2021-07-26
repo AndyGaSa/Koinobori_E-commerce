@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import '../styles.css';
 
-function Header() {
+function Header({ changePage }) {
   return (
     <header>
       <h1>Tour of Heroes</h1>
       <nav>
-        <button type="button" onClick="">Dashboard</button>
-        <button type="button" onClick="">Heroes</button>
+        <button type="button" onClick={() => changePage(0)}>Dashboard</button>
+        <button type="button" onClick={() => changePage(1)}>Heroes</button>
+        <button type="button" onClick={() => changePage(2)}>Detail</button>
       </nav>
     </header>
   );

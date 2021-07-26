@@ -33,7 +33,6 @@ input {
   border-radius: 4px;
   display: block;
   width: 100%;
-  line-height: 1.6em;
 }
 
 .heroes a:hover {
@@ -52,11 +51,11 @@ input {
   color: white;
   padding: 0.8em 0.7em 0 0.7em;
   background-color:#405061;
-  line-height: 1.6em;
-  position: absolute;
-  left: 10px;
-  top: 0px;
-  height: 2.4em;
+  line-height: 1.2em;
+  position: relative;
+  left: 0px;
+  top: -4px;
+  height: 1.8em;
   min-width: 16px;
   text-align: right;
   margin-right: .8em;

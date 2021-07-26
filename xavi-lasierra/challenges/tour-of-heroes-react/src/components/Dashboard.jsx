@@ -3,11 +3,15 @@
 import React from 'react';
 import './dashboard.css';
 
-function Dashboard({ heroes }) {
+function Dashboard({ heroes, heroDetail }) {
   return (
-    <div className="heroes-menu">
-      {heroes.map((hero) => <a>{hero.name}</a>)}
-    </div>
+    <main>
+      <h2>Top Heroes</h2>
+      <div className="heroes-menu">
+        {heroes.map((hero) => <button className="detail" type="button" onClick={() => heroDetail(hero.id)}>{hero.name}</button>)}
+      </div>
+    </main>
+
   );
 }
 

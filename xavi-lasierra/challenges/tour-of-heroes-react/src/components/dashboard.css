@@ -22,7 +22,7 @@ h2 {
     align-items: flex-start;
   }
   
-  a {
+  .detail {
     background-color: #3f525c;
     border-radius: 2px;
     padding: 1rem;
@@ -43,7 +43,7 @@ h2 {
   }
   
   @media (min-width: 600px) {
-    a {
+    .detail {
       width: 18%;
       box-sizing: content-box;
     }
