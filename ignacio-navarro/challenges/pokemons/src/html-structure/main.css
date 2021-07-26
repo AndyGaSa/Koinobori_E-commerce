@@ -81,30 +81,46 @@ footer{
 #footer__details-container{
         display: flex;
         flex-direction: row;
+        margin-bottom: 11px;
 }
 .footer__input{
     height: 30px;
-    width: 173px;
+    width: 184px;
     background-color: transparent;
     border: none;
     font-family: 'retrograde';
+        margin-left: 30px;
+        margin-top: 6px;
 }
 .footer__create-link {
-    background-color: grey;
     height: 40px;
     width: 80px;
     text-align: center;
     line-height: 40px;
     text-decoration: none;
     color: black;
+    margin-left: 150px;
+}
+.footer__details-button--next,
+.footer__details-button--previous{
+    background-color: transparent;
+    width: 36px;
+    border: none;
+}
+
+.footer__details-button--go{
+        margin-left: 13px;
+        font-family: 'retrograde';
+        background-color: transparent;
+        margin-top: 7px;
+        font-size: 1em;
+        border: none;
 }
 .footer__filter-link {
-    background-color: grey;
-    height: 40px;
-    width: 80px;
-    text-align: center;
-    line-height: 40px;
-    text-decoration: none;
-    color: black;
+       height: 40px;
+       width: 80px;
+       text-decoration: none;
+       color: black;
+       margin-left: 44px;
 }
 
