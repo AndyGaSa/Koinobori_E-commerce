@@ -4,7 +4,7 @@ const clear = document.querySelector('.clear');
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-const resolution = 10;
+const resolution = 20;
 canvas.width = 600;
 canvas.height = 600;
 
@@ -87,10 +87,8 @@ function checkNeighbour(matriz) {
 
   return matrizCopy;
 }
-
 let matriz = buildMatriz();
 paint(matriz);
-
 function getMousePosition(canvasS, event) {
   const rect = canvasS.getBoundingClientRect();
   let x = event.clientX - rect.left + window.scrollX;
@@ -104,17 +102,14 @@ function getMousePosition(canvasS, event) {
   }
   paint(matriz);
 }
-
 canvas.addEventListener('mousedown', (e) => {
   getMousePosition(canvas, e);
 });
-
 function update() {
   matriz = checkNeighbour(matriz);
   paint(matriz);
   requestAnimationFrame(update);
 }
-
 start.onclick = function play() {
   requestAnimationFrame(update);
 };

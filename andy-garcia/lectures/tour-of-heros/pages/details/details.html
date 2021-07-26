@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tourofheros</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+    <header>
+        <h1>Tour of Heroes</h1>
+        <nav>
+            <a href="../dashboard/dashboard.html">Dashboard</a>
+            <a href="../heroes/pokedex.html">Heroes</a>
+        </nav>
+    </header>
+    <div>
+        <h2> <span id="hero__title">Magneta</span>  details!</h2>
+        <div>id: <span id='hero__id'></span></div>
+        <label>
+            name:
+            <input type="text" id="hero__name" value="Magneta">
+        </label &nbsp;>
+        <div><span>Slug: </span><span id="hero__slug"></span></div>
+        <div><span>Powerstats: </span> <ul id="hero__powerstats__ul"></ul></div>
+        <div><span>Appearance: </span><span id="hero__appearance"></span></div>
+        <div><span>Biography: </span><span id="hero__biography"></span></div>
+        <div><span>Work: </span><span id="hero__work"></span></div>
+        <div><span>Connections: </span><span id="hero__connections"></span></div>
+        <div><span>Images: </span><span id="hero__images"></span></div>
+        <form method="get" action="../dashboard/dashboard.html">
+            <button type="submit">Back</button>
+        </form>
+    </div>
+    <script src="../../heroes.request.js"></script>
+    <script src="./getFormUrl.js"></script>
+    <script src="./details.js"></script>
+</body>
+</html>
