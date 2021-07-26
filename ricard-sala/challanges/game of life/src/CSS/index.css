@@ -1,0 +1,77 @@
+*{
+    margin: 0 auto;
+    font-family: 'Tourney', cursive;
+    background-color:#0D2340;
+    padding:0;
+    color:  #165873;
+    font-size: 50px;
+}
+h1{
+    font-size: 80px;
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+}
+.header-container>h1{
+    display:flex;
+    padding:20px 40px;
+    border: 5px solid #165873;
+    border-radius: 40px;
+    margin-top:30px;
+    margin-bottom: 30px;
+    background-color:#1BF2CB;
+}
+
+.main-container{
+    width: 434px;
+    height: 435px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . . . . ."
+        ". . . . . ."
+        ". . . . . ."
+        ". . . . . ."
+        ". . . . . ."
+        ". . . . . .";     
+    border: 5px solid #165873;
+    border-radius: 10px;
+    align-items: center;
+
+}
+
+.footer-container{
+    display:flex;
+    margin-top: 40px;
+}
+.footer-container__start-button,.footer-container__stop-button{
+    background-color:#1BF2CB;
+    font-size: 40px;
+    padding:10px 20px;
+    border-radius: 15px;
+    border: 5px solid #165873;
+}
+
+.footer-container__start-button:hover,.footer-container__stop-button:hover{
+    cursor:pointer;
+    background-color: #1BF2CB;
+}
+.dead{
+    background: #055050;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #0BBFAD;
+    text-align: center;
+    justify-content: space-around;
+
+}
+.live{
+    background:#1BF2CB;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #0BBFAD;
+    align-content: center;
+    justify-content: space-around;
+}

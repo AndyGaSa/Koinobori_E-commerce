@@ -1,0 +1,39 @@
+# PREGUNTA 1 - Ignoring some returned values - ARRAYS
+You can also ignore all returned values:
+
+[,,] = f();
+
+En quina circumstància serveix això?
+
+# PREGUNTA 2 - Assignment without declaration - OBJECTS
+Your ( ... ) expression needs to be preceded by a semicolon or it may be used to execute a function on the previous line.
+
+No entenc què vol dir!!
+
+# PREGUNTA 3 - Setting a function parameter's default value - OBJECTS
+{size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}
+
+L'objecte buit de la dreta permet cridar la funció SENSE passar-li paràmetres?¿? CONFRIMAR
+
+# PREGUNTA 4 - // Invalid JavaScript identifier as a property name - OBJECTS
+// Destructuring can be used with property names that are not valid JavaScript identifiers by providing an alternative identifier that is valid.
+function invalid() {
+    const foo = { 'fizz-buzz': true };
+    const { 'fizz-buzz': fizzBuzz } = foo;
+    //
+    console.log(fizzBuzz); // "true"
+}
+
+Perquè nom invàlid?¿? És pel guió?
+
+# PREGUNTA 5 - // The prototype chain is looked up when the object is deconstructed - OBJECTS
+// When deconstructing an object, if a property is not accessed in itself, it will continue to look up along the prototype chain.
+function protoObject() {
+    let obj = { self: '123' };
+    obj.__proto__.prot = '456';
+    const { self, prot } = obj;
+}
+// self "123"
+// prot "456" (Access to the prototype chain)
+
+Crec entendre lo del prototype, però en quin cas necessitem això? És per quan definim objectes de classe amb prototips heredables?¿?
