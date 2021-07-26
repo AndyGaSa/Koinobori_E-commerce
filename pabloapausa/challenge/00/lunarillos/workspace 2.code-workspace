@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../rakuten"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "00"
+	}
+}
