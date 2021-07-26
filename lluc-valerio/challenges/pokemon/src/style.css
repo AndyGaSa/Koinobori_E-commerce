@@ -1,0 +1,45 @@
+/* 2021 - LLuc Valério */
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+/* Browser Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pokemon', sans-serif;
+    letter-spacing: 2px;
+}
+/* POKEMON - HTML Styles */
+.header {
+    width: 100%;
+    height: 150px;
+    background-color: #ffcc01;
+    background-image: url(../assets/poke_logo_1200px.png);
+    background-repeat: no-repeat;
+    background-size:300px;
+
+
+    /* background-size:     cover;                      <------ */
+    background-position: center center; 
+}
+
+.header__title {
+    display: none;
+}
+
+.main {
+    margin-top: 20px;
+}
+
+button {
+    padding: 0 5px;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: #ffcc01;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
