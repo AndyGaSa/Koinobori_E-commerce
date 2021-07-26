@@ -28,6 +28,13 @@
     font-weight: normal;
     background-color: #7a7878;
 }
+.card-subtitle {
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: normal;
+    background-color: #7a7878;
+}
 .card-image {
     height: 180px;
 }
