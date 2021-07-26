@@ -1,8 +1,13 @@
 import React from 'react';
-import Header from '../Header/Header';
+import './Details.css';
+import '../Styles.css';
 
 export default function Details() {
   return (
-    <Header />
+    <>
+      <h3>Magneta details</h3>
+      <p>id: 15</p>
+      <p>Magneta</p>
+    </>
   );
 }
