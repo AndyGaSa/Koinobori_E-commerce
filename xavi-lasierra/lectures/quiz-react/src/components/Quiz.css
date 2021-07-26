@@ -1,0 +1,11 @@
+.img-thumbnail {
+    width: 200px;
+}
+
+.quiz--error {
+    background-color: red;
+}
+
+.quiz--success {
+    background-color: green;
+}
