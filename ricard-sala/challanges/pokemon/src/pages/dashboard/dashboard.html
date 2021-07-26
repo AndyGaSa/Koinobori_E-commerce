@@ -15,10 +15,19 @@
     <h1>  POKÉDEX</h1>
     <div class="dropdown">
       <nav class="header__buttons">
+        <div>
           <button onclick="dropdownbutton()" class="drop__btn" >
               <img src="https://img.icons8.com/color/48/000000/pokeball--v1.png"/>
               FILTRAR
           </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">5</a>
+            <a href="#">10</a>
+            <a href="#">20</a>
+            <a href="#">50</a>
+          </div>
+        
+        </div>
           <div class="header__buttons">
               <a href="#" class="dashboard__btn">
                   <img src="https://img.icons8.com/color/48/000000/pokedex.png"/>
@@ -35,6 +44,9 @@
 </header>
 <h2>ENTRADAS
 </h2>
+<ul id="pokedex"></ul>
+<script src="../../services/dropdown.btn.js"></script>
+<script src="../../services/pokemon.js"></script>
 <script src="../dashboard/dashboard.js"></script>
 </body>
 </html>
