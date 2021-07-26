@@ -2,8 +2,8 @@ const pokeListArray = [];
 function getPokemonList(limit, offset) {
   return fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
     .then((response) => response.json())
-    .then((pokemon) => {
-      pokemon.results.forEach((element) => {
+    .then(({ results }) => {
+      const pokePromises = results.map((element) => {
         fetch(element.url).then((response) => response.json())
           .then((obj) => pokeListArray.push({
             name: obj.name,
