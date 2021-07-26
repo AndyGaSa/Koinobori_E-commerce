@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 class Pokemon {
   constructor() {
     this.allPokemons = 0;

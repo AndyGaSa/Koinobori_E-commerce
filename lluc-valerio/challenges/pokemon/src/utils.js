@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 function checkStorage(storageKey) {
   // Check if we have something on the storage. If not, we send a warning to the user.
   if (localStorage.getItem(storageKey) === null) {

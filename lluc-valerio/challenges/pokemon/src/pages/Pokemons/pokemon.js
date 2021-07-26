@@ -1,27 +1,11 @@
+/* eslint-disable no-alert */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 // ************** GLOBAL VARS ***********
 const pokemon = new Pokemon();
 const foundElements = [];
 let numElementPage = 8;
 // ************** FUNCTIONS ************
-function actualPageCalculation() {
-  const actualPage = getStorage('currentPage');
-  return (+numElementPage * (+actualPage - 1));
-}
-
-function nextPage() {
-  const actualPage = getStorage('currentPage');
-  setStorage('currentPage', +actualPage + 1);
-
-  setView(actualPageCalculation());
-}
-
-function previousPage() {
-  const actualPage = getStorage('currentPage');
-  setStorage('currentPage', +actualPage - 1);
-
-  setView(actualPageCalculation());
-}
-
 async function pokemonDetail(url) {
   try {
     const pokeInfo = await getPokemonInfo(url);
@@ -70,6 +54,7 @@ async function setView(currentPokemon, currentArray = []) {
     domNextButton.style.visibility = 'visible';
     domNextButtonBottom.style.visibility = 'visible';
   }
+  // eslint-disable-next-line no-param-reassign
   for (currentPokemon; currentPokemon < +numElementPage * +currentPage; currentPokemon += 1) {
     // debugger;
     const domPoke = document.createElement('div');
@@ -81,6 +66,7 @@ async function setView(currentPokemon, currentArray = []) {
     domPokePicture.classList.add('pokemon-item__picture');
     domPokeInfo.classList.add('pokemon-item__info');
 
+    // eslint-disable-next-line no-await-in-loop
     const pictureUrl = await pokemonDetail(pokeArray[currentPokemon].url);
     // const pictureUrl = await pokemonDetail(pokemon.allPokemons[currentPokemon].url);
     domPicture.src = pictureUrl;
@@ -96,6 +82,25 @@ async function setView(currentPokemon, currentArray = []) {
     domPoke.appendChild(domPokeInfo);
     domParent.appendChild(domPoke);
   }
+}
+
+function actualPageCalculation() {
+  const actualPage = getStorage('currentPage');
+  return (+numElementPage * (+actualPage - 1));
+}
+
+function nextPage() {
+  const actualPage = getStorage('currentPage');
+  setStorage('currentPage', +actualPage + 1);
+
+  setView(actualPageCalculation());
+}
+
+function previousPage() {
+  const actualPage = getStorage('currentPage');
+  setStorage('currentPage', +actualPage - 1);
+
+  setView(actualPageCalculation());
 }
 
 function loadPage() {
@@ -133,9 +138,9 @@ function searchPokemon() {
     alert('You have to write a name to search something.');
     setView(actualPageCalculation());
   } else {
-    pokemon.allPokemons.forEach((pokemon) => {
-      if (pokemon.name.includes(domInput.value)) {
-        foundElements.push(pokemon);
+    pokemon.allPokemons.forEach((poke) => {
+      if (poke.name.includes(domInput.value)) {
+        foundElements.push(poke);
       }
     });
     if (foundElements.length <= 0) {
