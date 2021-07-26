@@ -29,7 +29,7 @@ class PokemonList {
     }) => {
       const pokemonElement = `<li class="pokemon__card"><a href="../pokemon-detail/pokemon-detail.html?name=${name}">
             <div>
-                <span>${id}  </span>
+                <span># ${id}  </span>
                 <span>${name}</span>
             </div>
             <img src="${sprite}" alt="${name} photo">
