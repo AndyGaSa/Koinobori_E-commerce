@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body></body>
-<header>
-
+<header id="header_backround">
+<div class="logos"></div>
 <h1>Pokemon</h1>
 <nav>
     <a href="#">Dashboard</a>
@@ -18,17 +18,17 @@
 </nav>
 </header>
 <main>
-    <nav>
-        <button class="show-pokemon" id="show-pokemon" onclick="showPokemons(4)">
+    <nav class="pokemon__nav">
+        <button class="show-pokemon" id="show-pokemon" onclick="showPokemons(4,0)">
             Show Pokemon
         </button>
-        <button class="show-pokemon" id="show-pokemon__10" onclick="showPokemons(9)">
+        <button class="show-pokemon" id="show-pokemon__10" onclick="showPokemons(9,0)">
             Show 10 Pokemon 
         </button>
-        <button class="show-pokemon" id="show-pokemon__20" onclick="showPokemons(19)">
+        <button class="show-pokemon" id="show-pokemon__20" onclick="showPokemons(19,0)">
             Show 20 Pokemon
         </button>
-        <button class="show-pokemon" id="show-pokemon" onclick="showPokemons(49)">
+        <button class="show-pokemon" id="show-pokemon" onclick="showPokemons(49,0)">
             Show 50 Pokemon
         </button>
 
