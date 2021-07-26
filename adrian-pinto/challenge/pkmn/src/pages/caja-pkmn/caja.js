@@ -6,8 +6,8 @@ import pkbadge from '../../modules/pkbadge.js';
  *     Options y el offset llamado con anterioridad
  * - Añadir los eventos en los botones
  * *    Anterior
- *     Siguiente
- * *    Details
+ * *    Siguiente
+ *     Details
  * *    Equipo pkmn
  *     Filtros - despliega los filtros
  * *- Crear un nuevo badge por cada pkmn recibido

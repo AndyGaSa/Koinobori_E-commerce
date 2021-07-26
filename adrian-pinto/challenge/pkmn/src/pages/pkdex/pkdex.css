@@ -12,4 +12,9 @@
   display: flex;
 }
 .pkdex__info { grid-area: pkdex__info; }
+
+.pkdex__info img {
+  width: 10em;
+}
+
 .pkdex__data { grid-area: pkdex__data; }

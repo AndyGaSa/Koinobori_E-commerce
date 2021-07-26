@@ -13,6 +13,7 @@ const onclickBadage = (trigger, element) => {
     type.classList.add(`type--${pokemon.dataset[`type${index}`]}`);
     type.textContent = pokemon.dataset[`type${index}`];
   });
+  pkinfoContainer.querySelector('.pkmon-info__details-btn').href = `../pkdex/pkdex.html?name=${pokemon.dataset.name}`;
 };
 
 const pkbadge = async (pkmn, element) => {
