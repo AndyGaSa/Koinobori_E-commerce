@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import HeroCOntainer from '../../components/HeroContainer/HeroContainer';
+import '../../Styles/Style.css';
+import './Style.css';
 
 export default function Heroes() {
   const heroesList = [
@@ -19,7 +21,7 @@ export default function Heroes() {
   return (
     <>
       <Header />
-      <HeroCOntainer />
+      <HeroCOntainer heroesList={heroesList} />
     </>
 
   );
