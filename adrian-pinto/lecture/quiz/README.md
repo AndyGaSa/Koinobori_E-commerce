@@ -21,3 +21,21 @@ $npx eslint --init
 ~~~bash
 npm start
 ~~~
+
+Creamos un componente 
+- author quiz
+    - header
+    - quiz 
+        - books
+            - book
+
+los Eventos en React se llaman elementos sinteticos
+
+Challenge de 26/7
+Hacer con react una pagina que pueda pintar varios componentes segun el estado para simular asi que se esta cambiando de pagina
+
+27/7 react routes
+
+28/7 redux
+
+Object maping
