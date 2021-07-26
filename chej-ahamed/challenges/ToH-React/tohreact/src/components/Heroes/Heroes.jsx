@@ -1,6 +1,8 @@
 import React from 'react';
-export default function Heroes(){
-    return(
+import Header from '../Header/Header';
 
-    )
-};
+export default function Heroes() {
+  return (
+    <Header />
+  );
+}

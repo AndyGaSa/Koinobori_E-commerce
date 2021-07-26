@@ -1,6 +1,8 @@
 import React from 'react';
-export default function Details(){
-    return(
+import Header from '../Header/Header';
 
-    )
-};
+export default function Details() {
+  return (
+    <Header />
+  );
+}
