@@ -39,6 +39,7 @@ body {
   }
   a {
     cursor: pointer;
+    text-decoration: none
   }
   button {
     background-color:#7a7878;
@@ -141,3 +142,7 @@ body {
 .show {
     display:block;
   }
+ul{
+  margin: 10px;
+  list-style-type: none;
+}
