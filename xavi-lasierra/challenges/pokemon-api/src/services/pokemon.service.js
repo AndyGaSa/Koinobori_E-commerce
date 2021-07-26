@@ -24,13 +24,15 @@ function getPokemons(limit, offset) {
 
   return fetch(`https://pokeapi.co/api/v2/pokemon?limit=${number}&offset=${offset}`)
     .then((response) => response.json())
-    .then((pokemons) => pokemons);
+    .then((pokemons) => pokemons)
+    .catch(() => alert(new Error('Failed to get pokemons')));
 }
 
 function getSinglePokemon(url) {
   return fetch(url)
     .then((response) => response.json())
-    .then((pokemons) => pokemons);
+    .then((pokemons) => pokemons)
+    .catch(() => alert(new Error('Failed to get pokemon information')));
 }
 
 function filterPokemonsApi(input) {
@@ -72,3 +74,7 @@ function updatePokemon(idChange, newProperties) {
       : pokemon));
   saveFavouritesToLocalStorage(favouritePokemons);
 }
+
+module.exports = {
+  getPokemons
+};
