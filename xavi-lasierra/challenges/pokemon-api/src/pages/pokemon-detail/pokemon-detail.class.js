@@ -23,6 +23,45 @@ class PokemonDetailPage {
     }
   }
 
+  addMainInfo({
+    id, name, types, height, weight, sprites, stats, abilities, moves
+  }) {
+    const typesN = types.map(({ type }) => type.name);
+    const statsN = stats.map((stat) => ({ name: stat.stat.name, value: stat.base_stat }));
+    this.pokemon = {
+      id,
+      name,
+      types: typesN,
+      weight,
+      height,
+      stats: statsN,
+      sprites: [sprites.front_default, sprites.front_shiny]
+    };
+  }
+
+  addAbilities(abilitiesList) {
+    const abilities = abilitiesList.map(({ name, effect_entries }) => ({
+      name,
+      description: effect_entries.find(({ language }) => language.name === 'en').effect
+    }));
+    this.pokemon.abilities = abilities;
+  }
+
+  addMoves(movesList) {
+    const moves = movesList.map(({
+      name, type, power, pp, accuracy, flavor_text_entries
+    }) => ({
+      name,
+      type: type.name,
+      pp,
+      power,
+      accuracy,
+      description: flavor_text_entries.find(({ language }) => language.name === 'en').flavor_text
+    }));
+
+    this.pokemon.moves = moves;
+  }
+
   setFromApi() {
     let searchInfo;
     if (this.id) {
@@ -31,44 +70,17 @@ class PokemonDetailPage {
       searchInfo = this.name;
     }
     getSinglePokemon(`https://pokeapi.co/api/v2/pokemon/${searchInfo}`)
-      .then(({
-        id, name, types, height, weight, sprites, stats, abilities, moves
-      }) => {
-        const typesN = types.map(({ type }) => type.name);
-        const statsN = stats.map((stat) => ({ name: stat.stat.name, value: stat.base_stat }));
-        this.pokemon = {
-          id,
-          name,
-          types: typesN,
-          weight,
-          height,
-          stats: statsN,
-          sprites: [sprites.front_default, sprites.front_shiny]
-        };
-        const abilitiesPromises = abilities.map(({ ability }) => getSinglePokemon(ability.url));
-        const movesPromises = moves.map(({ move }) => getSinglePokemon(move.url));
+      .then((pokemon) => {
+        this.addMainInfo(pokemon);
+        const abilitiesPromises = pokemon.abilities
+          .map(({ ability }) => getSinglePokemon(ability.url));
+        const movesPromises = pokemon.moves.map(({ move }) => getSinglePokemon(move.url));
         return Promise.all([...abilitiesPromises, ...movesPromises]);
       })
       .then((abilitiesMovesList) => {
-        let abilities = abilitiesMovesList.filter((element) => !element?.type);
-        let moves = abilitiesMovesList.filter((element) => element?.type);
-        abilities = abilities.map(({ name, effect_entries }) => ({
-          name,
-          description: effect_entries.find(({ language }) => language.name === 'en').effect
-        }));
-        moves = moves.map(({
-          name, type, power, pp, accuracy, flavor_text_entries
-        }) => ({
-          name,
-          type: type.name,
-          pp,
-          power,
-          accuracy,
-          description: flavor_text_entries.find(({ language }) => language.name === 'en').flavor_text
-        }));
+        this.addAbilities(abilitiesMovesList.filter((element) => !element?.type));
+        this.addMoves(abilitiesMovesList.filter((element) => element?.type));
 
-        this.pokemon.abilities = abilities;
-        this.pokemon.moves = moves;
         this.print();
         this.setButtons();
       });
