@@ -1,0 +1,24 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    list-style-type: none;
+    text-decoration: blink; 
+    margin: 0;
+    padding: 0;
+}
+
+.body__header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    background-color: black;
+}
+
+.header {
+    display: flex; 
+    color: white;
+}
+
+
+/* height="42" viewBox="0 0 187 42" width="187"  */

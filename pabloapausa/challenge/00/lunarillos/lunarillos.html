@@ -1,96 +1,116 @@
 <!DOCTYPE html>
 <html lang="es_ES">
     <head>
+        <meta charset="UTF-8">
+        <title>Lunarillos</title>
         <link href="lunarillos.css" rel="stylesheet">
     </head>
     <body>
         <header>
-            <ul class="header-top">
-                <li>
-                    <ul class="header-top__main-icon main-icon">
-                        <li class="main-icon__maria">
+            <nav class="header-top">
+                <ul class="header-top__navigation navigation">
+                    <ul class="navigation__left-side left-side">
+                        <li class="left-side__icon icon__maria">
                             <a></a>
                         </li>
-                        <li class="main-icon__cucute">
+                        <li class="left-side__icon icon__cucute">
                             <a></a>
                         </li>
-                        <li class="main-icon__mumuchu">
+                        <li class="left-side__icon icon__mumuchu">
                             <a></a>
                         </li>
                     </ul>
-                </li>
-                <li class="header-top__sign-in">
-                    <a href=""></a>
-                </li>
-                <li>
-                    <ul class="header-top__social-media social-media">
-                        <li class="social-media__facebook">
-                            <a href=""></a>
+                    <ul class="navigation__right-side right-side">
+                        <li class="right-side__sign-in">
+                            <a href="">REGISTRARSE</a>
                         </li>
-                        <li class="social-media__twitter">
-                            <a href=""></a>
+                        <li>
+                            <ul class="right-side__social-media social-media">
+                                <li class="social-media__icon icon__facebook">
+                                    <a href=""></a>
+                                </li>
+                                <li class="social-media__icon icon__twitter">
+                                    <a href=""></a>
+                                </li>
+                                <li class="social-media__icon icon__instagram">
+                                    <a href=""></a>
+                                </li>
+                                <li class="social-media__icon icon__pinterest">
+                                    <a href=""></a>
+                                </li>
+                                <li class="social-media__icon icon__youtube">
+                                    <a href=""></a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="social-media__instagram">
-                            <a href=""></a>
-                        </li>
-                        <li class="social-media__pinterest">
-                            <a href=""></a>
-                        </li>
-                        <li class="social-media__youtube">
-                            <a href=""></a>
+                        <li>
+                            <ul class="right-side__shopping-cart shopping-cart">
+                                <li class="shopping-cart__icon">
+                                    <a href=""></a>
+                                </li>
+                                <li class="shopping-cart__items"></li>
+                            </ul>
                         </li>
                     </ul>
-                </li>
-                <li>
-                    <ul class="header-top__shopping-cart shopping-cart">
-                        <li class="shopping-cart__link">
-                            <a href=""></a>
-                        </li>
-                        <li class="shopping-cart__items"></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="header-bottom">
-                <a class="header-bottom__logo">
-                    <img src="logo.svg">
-                </a>
-                <nav class="header-bottom__quick-access quick-access">
-                    <div class="quick-access__navigation-top navigation-top">
-                        <ul class="navigation-top__search-by search-by">
-                            <li class="search-by__novelties" >
-                                <a href=""></a>
-                            </li>
-                            <li class="search-by__offers" >
-                                <a href=""></a>
+                </ul>
+            </nav>
+            <nav class="header-bottom">
+                <ul class="header-bottom__lunarillos lunarillos">
+                    <li class="lunarillos__icon">
+                        <a>
+                            <img src="logo.svg">
+                        </a>
+                    </li>
+                    <li class="lunarillos__quick-access quick-access">
+                        <ul>
+                            <li class="quick-access__top-side top-side">
+                                <ul class="top-side__search-by search-by">
+                                    <li class="search-by__categories" >
+                                        <a href="">NOVEDADES</a>
+                                    </li>
+                                    <li class="search-by__categories" >
+                                        <a href="">OFERTAS</a>
+                                    </li>
+                                    <form class="top-side__text-form text-form">
+                                        <input class="text-form__input" type="text" placeholder="¿QUÉ BUSCAS?">
+                                        <button class="text-form__button" type="submit">
+                                    </form>
+                                </ul>
                             </li>
                         </ul>
-                        <form class="navigation-top__text-form text-form">
-                            <input class="text-form__input" type="text">
-                            <button class="text-form__button" type="submit">
-                        </form>
-                    </div>
-                    <ul class="quick-access__navigation-bottom navigation-bottom">
-                        <li class="navigation-bottom__utensils">
-                            <a href=""></a>
-                        </li>
-                        <li class="navigation-bottom__ingredients">
-                            <a href=""></a>
-                        </li>
-                        <li class="navigation-bottom__party">
-                            <a href=""></a>
-                        </li>
-                        <li class="navigation-bottom__brands">
-                            <a href=""></a>
-                        </li>
-                        <li class="navigation-bottom__blog">
-                            <a href=""></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+                        <ul class="quick-access__bottom-side bottom-side">
+                            <li class="bottom-side__categories">
+                                <a href="">UTENSILIOS</a>
+                            </li>
+                            <li class="bottom-side__categories">
+                                <a href="">INGREDIEN</a>
+                            </li>
+                            <li class="bottom-side__categories">
+                                <a href="">FIESTA</a>
+                            </li>
+                            <li class="bottom-side__categories categories__brands">
+                                <a href="">MARCAS</a>
+                            </li>
+                            <li class="bottom-side__categories categories__blog">
+                                <a href="">BLOG</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <main>
-
+            <ul class="carrousel">
+                <li>
+                    <input type="radio">
+                </li>
+                <li>
+                    <input type="radio">
+                </li>
+                <li>
+                    <input type="radio">
+                </li>
+            </ul>
         </main>
         <footer>
 
