@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { heroes } from '../../components/constants/HeroesConst';
+import heroes from '../../components/constants/HeroesConst';
 import './Details.css';
 
 export default function Details() {
