@@ -1,14 +1,10 @@
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AuthorQuiz from './pages/AuthorQuiz';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <AuthorQuiz />,
   document.getElementById('root')
 );
 

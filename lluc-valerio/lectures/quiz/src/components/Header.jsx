@@ -4,8 +4,10 @@ import './Header.css';
 export default function Header() {
   return (
     <header className="Header">
-      <h2>Author Quiz</h2>
-      <p>Select the book written by the author shown</p>
+      <div className="Header__title">
+        <h1>Author Quiz</h1>
+        <p>Select the book written by the author shown</p>
+      </div>
     </header>
   );
 }
