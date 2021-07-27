@@ -1,8 +1,8 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable max-len */
-const HeroList = JSON.parse(localStorage.getItem('heroes'));
 
 export default function update(he, id) {
+  const HeroList = JSON.parse(localStorage.getItem('heroes'));
   const newHero = {
     name: he,
   };
