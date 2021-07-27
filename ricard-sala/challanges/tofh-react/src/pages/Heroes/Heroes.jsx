@@ -1,10 +1,13 @@
-import React from 'react';
-import Header from '../../components/Header/Header';
+import React, { useState } from 'react';
 import HeroCOntainer from '../../components/HeroContainer/HeroContainer';
 import '../../Styles/Styles.css';
 import './heroes.css';
 
-export default function Heroes() {
+// eslint-disable-next-line react/prop-types
+export default function Heroes({ currentView }) {
+  const [currentId, setCurrentId] = useState(null);
+  const [currentName, setCurrentName] = useState(null);
+
   const heroesList = [
     { id: 11, name: 'Dr Nice' },
     { id: 12, name: 'Narco' },
@@ -20,8 +23,15 @@ export default function Heroes() {
 
   return (
     <>
-      <Header />
-      <HeroCOntainer heroesList={heroesList} />
+
+      <HeroCOntainer
+        heroesList={heroesList}
+        heroesId={currentId}
+        heroesName={currentName}
+        setCurrentId={setCurrentId}
+        setCurrentName={setCurrentName}
+        setCurrentView={() => currentView('details')}
+      />
     </>
 
   );

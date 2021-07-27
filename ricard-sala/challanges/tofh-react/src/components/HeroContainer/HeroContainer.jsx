@@ -6,7 +6,12 @@ export default function HeroCOntainer({ heroesList }) {
   return (
     <>
       <h2>My Heroes</h2>
-      {heroesList.map((hero) => (<a>{hero.name}</a>))}
+      {heroesList.map((hero) => (
+        <button type="button">
+          {hero.name}
+          {' '}
+        </button>
+      ))}
     </>
   );
 }

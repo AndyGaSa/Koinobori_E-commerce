@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
 import DashboardContainer from '../../components/DashboardContainer/DashboardContainer';
 import './dashboard.css';
 
@@ -10,10 +9,9 @@ export default function Dashboard() {
     'Celeritas',
     'Magneta',
   ];
-
   return (
     <>
-      <Header />
+
       <DashboardContainer heroes={heroes} />
     </>
 
