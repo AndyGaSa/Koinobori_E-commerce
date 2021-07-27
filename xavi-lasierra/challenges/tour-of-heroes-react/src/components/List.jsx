@@ -21,7 +21,6 @@ function List({ heroes, heroDetail }) {
             </button>
             <button className="delete" type="button">x</button>
           </li>
-
         ))}
       </ul>
     </main>

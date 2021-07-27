@@ -23,7 +23,6 @@ function Detail({ hero, changePage }) {
       <button type="button" onClick={() => changePage('list')}>go back</button>
       <button type="button">save</button>
     </main>
-
   );
 }
 

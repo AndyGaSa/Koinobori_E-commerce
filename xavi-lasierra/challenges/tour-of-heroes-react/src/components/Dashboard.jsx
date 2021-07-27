@@ -11,7 +11,6 @@ function Dashboard({ heroes, heroDetail }) {
         {heroes.map((hero) => <button className="detail" type="button" onClick={() => heroDetail(hero.id)}>{hero.name}</button>)}
       </div>
     </main>
-
   );
 }
 
