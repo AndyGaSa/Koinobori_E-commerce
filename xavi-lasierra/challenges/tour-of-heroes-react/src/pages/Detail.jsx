@@ -1,12 +1,22 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import './detail.css';
 
-function Detail({ heroes }) {
+function Detail({ heroes, setHeroes }) {
   const { heroId } = useParams();
   const hero = heroes.find(({ id }) => id === +heroId);
+
+  const [updatedHeroName, setUpdatedHeroName] = useState(hero.name);
+  const updateNameInput = useRef();
+
+  function updateHero(heroName) {
+    const newProperties = { name: heroName.trim() };
+    const updatedHeroes = heroes
+      .map((oneHero) => (oneHero.id === hero.id ? { ...oneHero, ...newProperties } : oneHero));
+    setHeroes(updatedHeroes);
+  }
 
   return (
     <main>
@@ -23,11 +33,11 @@ function Detail({ heroes }) {
       <div>
         <label htmlFor="hero-name">
           Hero name:
-          <input id="hero-name" placeholder="Hero name" value={hero.name} />
+          <input ref={updateNameInput} id="hero-name" placeholder="Hero name" defaultValue={hero.name} onChange={() => setUpdatedHeroName(updateNameInput.current.value)} />
         </label>
       </div>
       <button type="button">go back</button>
-      <button type="button">save</button>
+      <button type="button" onClick={() => updateHero(updatedHeroName)}>save</button>
     </main>
   );
 }

@@ -12,10 +12,15 @@ function List({
   function addNewHero(heroName) {
     const newHero = {
       id: maxId,
-      name: heroName
+      name: heroName.trim()
     };
     setHeroes([...heroes, newHero]);
     setMaxId(maxId + 1);
+  }
+
+  function deleteHero(heroId) {
+    const newHeroes = heroes.filter(({ id }) => id !== heroId);
+    setHeroes(newHeroes);
   }
 
   return (
@@ -39,7 +44,7 @@ function List({
               <span className="badge">{hero.id}</span>
               {hero.name}
             </Link>
-            <button className="delete" type="button">x</button>
+            <button onClick={() => deleteHero(hero.id)} className="delete" type="button">x</button>
           </li>
         ))}
       </ul>

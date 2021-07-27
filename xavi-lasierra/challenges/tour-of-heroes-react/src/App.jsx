@@ -31,7 +31,7 @@ function App() {
         <Route path="/" exact component={() => <Dashboard heroes={heroes.slice(1, 5)} />} />
         <Redirect path="/dashboard" to="/" />
         <Route path="/list" component={() => <List heroes={heroes} setHeroes={setHeroes} maxId={maxId} setMaxId={setMaxId} />} />
-        <Route path="/detail/:heroId?" component={() => <Detail heroes={heroes} />} />
+        <Route path="/detail/:heroId?" component={() => <Detail heroes={heroes} setHeroes={setHeroes} />} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
