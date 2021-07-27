@@ -9,7 +9,15 @@ function heroesLocalStorage() {
     localStorage.setItem('heroes', JSON.stringify(heroesPredefined));
     localStorage.setItem('heroesMaxId', getMaxId(heroesPredefined) + 1);
   }
-  JSON.parse(localStorage.getItem('heroes'));
 }
 
-export default heroesLocalStorage;
+function resetLocalStorage() {
+  localStorage.setItem('heroes', JSON.stringify(heroesPredefined));
+  localStorage.setItem('heroesMaxId', getMaxId(heroesPredefined) + 1);
+  return heroesPredefined;
+}
+
+export {
+  heroesLocalStorage,
+  resetLocalStorage
+};

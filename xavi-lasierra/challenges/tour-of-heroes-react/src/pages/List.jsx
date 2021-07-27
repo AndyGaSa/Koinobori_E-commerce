@@ -2,6 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './list.css';
+import { resetLocalStorage } from '../services/heroes-local-storage';
 
 function List({
   heroes, setHeroes, maxId, setMaxId
@@ -33,6 +34,10 @@ function List({
     setListHeroes(filteredHeroes);
   }
 
+  function resetHeroes() {
+    setHeroes(resetLocalStorage());
+  }
+
   return (
     <main>
       <h2>My Heroes</h2>
@@ -58,6 +63,7 @@ function List({
           </li>
         ))}
       </ul>
+      <button type="button" onClick={() => resetHeroes()}>Reset Local Storage</button>
     </main>
   );
 }

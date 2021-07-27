@@ -8,7 +8,7 @@ import List from './pages/List';
 import Detail from './pages/Detail';
 import NotFound from './pages/NotFound';
 import './styles.css';
-import heroesLocalStorage from './services/heroes-local-storage';
+import { heroesLocalStorage } from './services/heroes-local-storage';
 
 function App() {
   (function localStorageCheck() {
