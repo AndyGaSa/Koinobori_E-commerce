@@ -11,6 +11,7 @@ export default function Details() {
 
   useEffect(() => {
     if (heroId) {
+      localStorage.setItem('heroId', heroId);
       const foundHero = heroes.find((currentHero) => currentHero.id === +heroId);
       setHero(foundHero);
     }
