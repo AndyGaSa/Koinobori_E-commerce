@@ -9,8 +9,8 @@ export default function Heroes({ heroes }) {
     <>
       <ul className="heroes">
         {heroes.map((hero) => (
-          <li key={hero}>
-            {hero}
+          <li key={hero.id}>
+            {hero.name}
           </li>
         ))}
       </ul>
