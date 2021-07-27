@@ -1,3 +1,4 @@
+getHeroesJson();
 let heroes = localStorage.getItem('heroes');
 heroes = JSON.parse(heroes);
 console.log(heroes);

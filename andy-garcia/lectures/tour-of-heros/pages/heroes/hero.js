@@ -1,5 +1,6 @@
+getHeroesJson();
+
 let heroes = localStorage.getItem('heroes');
-heroes = JSON.parse(heroes);
 
 class Hero {
   constructor(id, heroes) {
@@ -38,8 +39,8 @@ function createLis() {
 }
 createLis();
 const addButton = document.getElementById('add-button');
+const addInput = document.getElementById('new-hero__input');
 addButton.addEventListener('click', () => {
-  const addInput = document.getElementById('new-hero__input');
   let { id } = heroes[heroes.length - 1];
   id += 1;
   const name = addInput.value;
@@ -49,7 +50,6 @@ addButton.addEventListener('click', () => {
     id, name, slug, powerstats,
   };
   heroes.push(newHero);
-  console.log(heroes);
   localStorage.setItem('heroes', JSON.stringify(heroes));
   heroes = localStorage.getItem('heroes');
   heroes = JSON.parse(heroes);
