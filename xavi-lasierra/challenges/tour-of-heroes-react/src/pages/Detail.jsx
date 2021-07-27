@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useRef, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 import './detail.css';
 
@@ -36,7 +36,7 @@ function Detail({ heroes, setHeroes }) {
           <input ref={updateNameInput} id="hero-name" placeholder="Hero name" defaultValue={hero.name} onChange={() => setUpdatedHeroName(updateNameInput.current.value)} />
         </label>
       </div>
-      <button type="button">go back</button>
+      <button type="button" onClick={useHistory().goBack}>go back</button>
       <button type="button" onClick={() => updateHero(updatedHeroName)}>save</button>
     </main>
   );
