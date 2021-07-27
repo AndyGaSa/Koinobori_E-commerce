@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
 import Details from './pages/Details';
 import Heroes from './pages/Heroes';
+import './App.css';
 
 export default function App() {
   return (
