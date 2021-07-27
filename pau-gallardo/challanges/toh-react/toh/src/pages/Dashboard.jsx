@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
-import heroes from '../assets/heroes';
 
 export default function Dashboard() {
+  const heroes = JSON.parse(localStorage.getItem('heroes'));
   const heroesList = heroes.slice(1, 5);
   return (
     <>

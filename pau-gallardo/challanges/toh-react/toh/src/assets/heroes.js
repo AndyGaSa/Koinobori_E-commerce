@@ -14,6 +14,7 @@ const heroes = [
 const localStorageCreated = localStorage.getItem('heroes', JSON.stringify(heroes));
 if (localStorageCreated === null) {
   localStorage.setItem('heroes', JSON.stringify(heroes));
+  localStorage.setItem('lastId', JSON.stringify(heroes.reverse()[0].id));
 }
 
 export default heroes;
