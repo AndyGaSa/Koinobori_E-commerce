@@ -36,6 +36,28 @@ Hacer con react una pagina que pueda pintar varios componentes segun el estado p
 
 27/7 react routes
 
+# React routes
+En el directorio donde guardamos las paginas añadimos un archivo 'Routes.jsx' en el vamos a importar todas las paginas que queremos enrutar y instalamos el paquete 'react-router'.
+~~~javascript
+//Router.js
+import React from 'react';
+import { Route, IndexRoute } from 'react-router';
+import App from '/app/App';
+import Dashboard from '../dashboard/dashboard';
+import Header from '../../modules/Header';
+import Details from '../details/Details';
+
+export default (
+    <Route path='/' component={App}>
+        <IndexRoute component={Header} />
+        <Route path='/dashboard' component={Dashboard}/>
+        <Route path='/list' component={List}/>
+    </Route>
+)
+~~~
+
+
+
 28/7 redux
 
 Object maping
