@@ -6,8 +6,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Heroes.css';
+import heroes from '../assets/heroes';
+import deleteHeroes from '../assets/deleteHero';
 
-export default function Heroes({ heroes }) {
+export default function Heroes() {
   return (
     <>
       <h2>My Heroes</h2>
@@ -28,7 +30,7 @@ export default function Heroes({ heroes }) {
                 <span className="badge">{hero.id}</span>
                 {hero.name}
               </Link>
-              <button type="button" className="delete" title="delete hero">x</button>
+              <button type="button" className="delete" id={hero.id} onClick={() => deleteHeroes(hero.id)} title="delete hero">x</button>
             </li>
           ))
         }

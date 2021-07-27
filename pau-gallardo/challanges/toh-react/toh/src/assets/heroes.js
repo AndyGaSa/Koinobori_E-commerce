@@ -1,4 +1,4 @@
-const heroesListConst = [
+const heroes = [
   { id: 11, name: 'Dr Nice' },
   { id: 12, name: 'Narco' },
   { id: 13, name: 'Bombasto' },
@@ -11,4 +11,9 @@ const heroesListConst = [
   { id: 20, name: 'Tornado' },
 ];
 
-export default heroesListConst;
+const localStorageCreated = localStorage.getItem('heroes', JSON.stringify(heroes));
+if (localStorageCreated === null) {
+  localStorage.setItem('heroes', JSON.stringify(heroes));
+}
+
+export default heroes;
