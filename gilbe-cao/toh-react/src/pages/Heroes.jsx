@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Heroes.css';
 
 export default function Heroes() {
@@ -19,11 +20,26 @@ export default function Heroes() {
 
       <ul className="heroes">
         <li>
-          <a href="/detail/11">
+          <Link href="/detail/11">
             <span className="badge">11</span>
             {' '}
             Dr Nice
-          </a>
+          </Link>
+          <button
+            className="delete"
+            title="delete hero"
+            type="button"
+          >
+            x
+
+          </button>
+        </li>
+        <li>
+          <Link href="/detail/12">
+            <span className="badge">12</span>
+            {' '}
+            Narco
+          </Link>
           <button
             className="delete"
             title="delete hero"

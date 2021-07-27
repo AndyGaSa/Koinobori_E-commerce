@@ -2,11 +2,12 @@ import React from 'react';
 import {
   BrowserRouter, Route, Redirect, Switch,
 } from 'react-router-dom';
+import './styles.css';
 import Dashboard from './pages/Dashboard';
 import Heroes from './pages/Heroes';
 import Header from './components/Header';
 import Details from './pages/Details';
-import './styles.css';
+
 import NotFound from './pages/NotFound';
 
 function App() {

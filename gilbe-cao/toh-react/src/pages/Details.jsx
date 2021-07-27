@@ -24,15 +24,18 @@ export default function Details() {
 
   useEffect(() => {
     if (heroId) {
-      localStorage.setItem('heroId', heroId);
       const foundHero = heroes.find((currentHero) => currentHero.id === +heroId);
       setHero(foundHero);
     }
   }, [heroId]);
 
   return (
-    <div>
-      <h2>name Details</h2>
+    <div className="details">
+      <h2>
+        {hero?.name.toUpperCase()}
+        {' '}
+        Details
+      </h2>
       <div>
         <span>
           id:
