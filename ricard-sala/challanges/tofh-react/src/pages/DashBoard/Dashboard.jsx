@@ -1,23 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './dashboard.css';
-import heroesList from '../../assets/Heroes.const';
 
 export default function Dashboard() {
-  const heroes = heroesList.slice(1, 5);
+  const heroes = JSON.parse(localStorage.getItem('heroList'));
   return (
     <>
       <h2>Top Heroes</h2>
-      {heroes.map((hero) => (
-        <Link
-          to={`/details/${hero.id}`}
-          key={hero.id}
-        >
-          {hero.name}
+      <div className="heroes-menu">
+        { heroes.slice(1, 5).map((hero) => (
+          <Link
+            to={`/details/${hero.id}`}
+            key={hero.id}
+            className="fourHeroes"
+          >
+            {hero.name}
 
-        </Link>
-      ))}
+          </Link>
+        ))}
+      </div>
     </>
-
   );
 }
