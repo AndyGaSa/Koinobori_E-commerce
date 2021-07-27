@@ -1,11 +1,14 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import './Header.css';
 
-export default function Header({ setCurrentPage }) {
+export default function Header() {
   return (
-    <div>
-      <button type="button" onClick={() => setCurrentPage('dashboard')}>Dashboard</button>
-      <button type="button" onClick={() => setCurrentPage('heroes')}>Heroes</button>
-    </div>
+    <header>
+      <h1>Tour of Heroes</h1>
+      <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/heroes">Heroes</a>
+      </nav>
+    </header>
   );
 }
