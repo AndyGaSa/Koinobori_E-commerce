@@ -12,3 +12,7 @@ const heroes = [
 ];
 
 export default heroes;
+const localStorageCreated = localStorage.getItem('heroes', JSON.stringify(heroes));
+if (localStorageCreated === null) {
+  localStorage.setItem('heroes', JSON.stringify(heroes));
+}

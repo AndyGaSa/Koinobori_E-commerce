@@ -3,13 +3,16 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Header({ setCurrentPage }) {
+export default function Header() {
   return (
     <>
       <h1>Tour of Heroes</h1>
-      <button type="button" onClick={()=>setCurrentPage('dashboard')}>Dashboard</button>
-      <button type="button" onClick={() => setCurrentPage('heroes')}>Heroes</button>
+      <nav>
+        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/heroes">Heroes</Link>
+      </nav>
     </>
   );
 }

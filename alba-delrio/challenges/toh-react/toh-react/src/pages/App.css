@@ -28,6 +28,7 @@ body, input[text] {
 }
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 button {
   background-color: #eee;
@@ -50,7 +51,6 @@ button:disabled {
   color: #aaa;
   cursor: auto;
 }
-
 /* Navigation link styles */
 nav a {
   padding: 5px 10px;
@@ -58,11 +58,10 @@ nav a {
   margin-right: 10px;
   margin-top: 10px;
   display: inline-block;
-  background-color: #e8e8e8;
-  color: #3d3d3d;
+  background-color: #E8E8E8;
+  color: #3D3D3D;
   border-radius: 4px;
 }
-
 nav a:hover {
   color: white;
   background-color:  #42545C;
@@ -79,3 +78,10 @@ input[type="text"] {
   width: 100%;
   padding: .5rem;
 }
+
+
+
+
+
+
+
