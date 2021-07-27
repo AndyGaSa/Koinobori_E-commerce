@@ -3,7 +3,7 @@
 import React from 'react';
 import './list.css';
 
-function List({ heroes, heroDetail, changePage }) {
+function List({ heroes, heroDetail }) {
   return (
     <main>
       <h2>My Heroes</h2>
@@ -15,7 +15,7 @@ function List({ heroes, heroDetail, changePage }) {
       <ul className="heroes">
         {heroes.map((hero) => (
           <li>
-            <button className="heroes__heroe" type="button" onClick={() => { heroDetail(hero.id); changePage(2); }}>
+            <button className="heroes__heroe" type="button" onClick={() => heroDetail(hero.id)}>
               <span className="badge">{hero.id}</span>
               {hero.name}
             </button>

@@ -6,8 +6,8 @@ function Header({ changePage }) {
     <header>
       <h1>Tour of Heroes</h1>
       <nav>
-        <button type="button" onClick={() => changePage(0)}>Dashboard</button>
-        <button type="button" onClick={() => changePage(1)}>Heroes</button>
+        <button type="button" onClick={() => changePage('dashboard')}>Dashboard</button>
+        <button type="button" onClick={() => changePage('list')}>Heroes</button>
       </nav>
     </header>
   );

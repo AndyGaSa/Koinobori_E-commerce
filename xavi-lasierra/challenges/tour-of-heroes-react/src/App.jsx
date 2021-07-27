@@ -20,23 +20,27 @@ function App() {
   ];
 
   const [currentDetail, changeDetailPage] = useState(heroes[0]);
+  const [currentPage, setCurrentPage] = useState('dashboard');
 
+  function changePage(pageNumber) {
+    setCurrentPage(pageNumber);
+  }
   function changeHero(heroId) {
     const index = heroes.map(({ id }) => id).indexOf(heroId);
     changeDetailPage(heroes[index]);
+    changePage('detail');
   }
 
-  const [currentPage, changeCurrentPage] = useState(0);
-
-  function changePage(pageNumber) {
-    changeCurrentPage(pageNumber);
-  }
-
-  const page = [
-    <Dashboard heroes={heroes.slice(1, 5)} heroDetail={changeHero} changePage={changePage} />,
-    <List heroes={heroes} heroDetail={changeHero} changePage={changePage} />,
-    <Detail hero={currentDetail} changePage={changePage} />
-  ];
+  const page = {
+    dashboard: <Dashboard
+      heroes={heroes
+        .slice(1, 5)}
+      heroDetail={changeHero}
+      changePage={changePage}
+    />,
+    list: <List heroes={heroes} heroDetail={changeHero} />,
+    detail: <Detail hero={currentDetail} />
+  };
 
   return (
     <>

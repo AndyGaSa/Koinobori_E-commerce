@@ -3,12 +3,12 @@
 import React from 'react';
 import './dashboard.css';
 
-function Dashboard({ heroes, heroDetail, changePage }) {
+function Dashboard({ heroes, heroDetail }) {
   return (
     <main>
       <h2>Top Heroes</h2>
       <div className="heroes-menu">
-        {heroes.map((hero) => <button className="detail" type="button" onClick={() => { heroDetail(hero.id); changePage(2); }}>{hero.name}</button>)}
+        {heroes.map((hero) => <button className="detail" type="button" onClick={() => heroDetail(hero.id)}>{hero.name}</button>)}
       </div>
     </main>
 

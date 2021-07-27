@@ -20,7 +20,7 @@ function Detail({ hero, changePage }) {
           <input id="hero-name" placeholder="Hero name" value={hero.name} />
         </label>
       </div>
-      <button type="button" onClick={() => changePage(1)}>go back</button>
+      <button type="button" onClick={() => changePage('list')}>go back</button>
       <button type="button">save</button>
     </main>
 
