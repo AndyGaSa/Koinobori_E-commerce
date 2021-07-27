@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import './Heroes.css';
+import { Link } from 'react-router-dom';
+import heroes from '../../components/constants/HeroesConst';
 
 export default function Heroes() {
   return (
@@ -19,21 +21,25 @@ export default function Heroes() {
       </div>
 
       <ul className="heroes">
-        <li>
-          <a href="/detail/11">
-            <span className="badge">11</span>
-            {' '}
-            Dr Nice
-          </a>
-          <button
-            className="delete"
-            title="delete hero"
-            type="button"
-          >
-            x
+        {heroes.map((hero) => (
+          <li>
+            <Link
+              to="/details"
+              key={hero.id}
+            >
+              <span className="badge">{hero.id}</span>
 
-          </button>
-        </li>
+              {hero.name}
+            </Link>
+            <button
+              className="delete"
+              type="button"
+              title="delete hero"
+            >
+              x
+            </button>
+          </li>
+        ))}
       </ul>
     </>
   );
