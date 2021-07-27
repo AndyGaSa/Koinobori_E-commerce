@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Books from './Books';
 import './Main.css';
 
-// Qué significa 'useState'.
-
 export default function Main() {
   const [quiz] = useState({
     books: ['The shining', 'The Adventures of Huckleberry Finn', 'Macbeth', 'IT'],
@@ -13,6 +11,7 @@ export default function Main() {
   });
   const [userAnswer, setUserAnswer] = useState(null);
   const [showButton, setShowButton] = useState(false);
+  // setUserAnswer se utiliza para modificar el valor de userAnswer.
 
   function isRightAnswer(book) {
     const isEquals = quiz.rightAnswer.toLowerCase() === book.toLowerCase();
@@ -21,14 +20,13 @@ export default function Main() {
       : 'quiz--error';
     setUserAnswer(userAnswerClass);
     setShowButton(isEquals);
-    // 'setUserAnswer' y 'setShownButton' dónde se declaran.
   }
 
   return (
     <section className="container">
       <div className={`quiz ${userAnswer}`}>
         <img className="img-thumbnail" src={quiz.authorImage} alt={quiz.authorName} />
-        <Books books={quiz.books} />
+        <Books books={quiz.books} validate={isRightAnswer} />
       </div>
       {showButton && (
       <div className="">
