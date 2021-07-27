@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header setCurrentView={setCurrentPage} />
       {
         pages[currentPage]
       }
