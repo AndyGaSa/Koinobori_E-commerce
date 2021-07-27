@@ -2,8 +2,11 @@ import React from 'react';
 
 export default function Dashboard() {
   return (
-    <section className="dashboard">
-      <div>myDashboard</div>
-    </section>
+    <>
+      <h2>Top Heroes</h2>
+      <div className="heroes-menu" id="dashboard__heroes">
+        <a href="details">Mr Nice</a>
+      </div>
+    </>
   );
 }
