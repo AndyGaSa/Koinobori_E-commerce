@@ -1,14 +1,18 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../Styles.css';
+import './Header.css';
 
-export default function Header({ setCurrentView }) {
+export default function Header() {
   return (
     <header>
+      <nav>
+        <h1>Tour of Heroes</h1>
+        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/heroes">Heroes</Link>
 
-      <h1>Tour of Heroes</h1>
-      <button type="button" onClick={() => setCurrentView('dashboard')}>Dashboard</button>
-      <button type="button" onClick={() => setCurrentView('heroes')}>Heroes</button>
+      </nav>
     </header>
   );
 }
