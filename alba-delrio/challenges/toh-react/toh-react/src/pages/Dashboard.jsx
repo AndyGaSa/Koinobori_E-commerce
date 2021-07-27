@@ -1,12 +1,13 @@
 import React from 'react';
 import './Dashboard.css';
+import heroes from '../assets/constants';
 
 export default function Dashboard() {
-  const topHeroes = ['Narco', 'Bombasto', 'Celeritas', 'Magneta'];
+  const topHeroes = heroes.slice(1, 5);
   return (
     <>
       <h2>Top Heroes</h2>
-      <ul>{topHeroes.map((hero) => <li>{hero}</li>)}</ul>
+      <ul className="topHeroes">{topHeroes.map(({ name }) => <li>{name}</li>)}</ul>
 
     </>
   );

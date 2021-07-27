@@ -9,8 +9,8 @@ function App() {
   const [currentPage, setCurrentPage] = useState('dashboard');
   const pages = {
     dashboard: <Dashboard />,
-    heroes: <Heroes />,
-    details: <Details />
+    heroes: <Heroes setCurrentPage={setCurrentPage} />,
+    details: <Details setCurrentPage={setCurrentPage} />
   };
   return (
 

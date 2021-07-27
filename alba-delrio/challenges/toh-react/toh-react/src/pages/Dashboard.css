@@ -21,10 +21,10 @@ h2 {
     align-content: flex-start;
     align-items: flex-start;
   }
-  ul {
+  .topHeroes {
     display:flex;
     flex-direction: row;
-    align-items: center;
+    
     
   }
   ul li {

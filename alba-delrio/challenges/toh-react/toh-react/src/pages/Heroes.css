@@ -13,32 +13,28 @@
     margin: 1rem 0;
     box-sizing: border-box;
   }
-  
-  .heroes li {
+  ul {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  ul li {
     position: relative;
     cursor: pointer;
+    width:300px;
   }
   
-  .heroes li:hover {
+  ul li:hover {
     left: .1em;
-  }
-  
-  .heroes a {
-    color: #333;
-    text-decoration: none;
-    background-color: #EEE;
-    margin: .5em;
-    padding: .3em 0;
-    height: 1.6em;
-    border-radius: 4px;
-    display: block;
-    width: 100%;
-  }
-  
-  .heroes a:hover {
     color: #2c3a41;
     background-color: #e6e6e6;
+  
   }
+  
+  
+  
+  
   
   .heroes a:active {
     background-color: #525252;
