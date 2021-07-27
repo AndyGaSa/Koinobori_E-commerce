@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroes from '../../assets/heroes';
 import './style-heroes.css';
 
 export default function Heroes() {
+  const heroes = JSON.parse(localStorage.getItem('heroes'));
   return (
 
     <ul className="heroes">
