@@ -1,28 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
+import {
+  BrowserRouter, Route, Switch, Redirect
+} from 'react-router-dom';
 import Header from './components/Header/Header';
-import Heroes from './components/Heroes/Heroes';
-import Dashboard from './components/Dashboard/Dashboard';
-import Details from './components/Details/Details';
 import './components/Styles.css';
+import Dashboard from './components/Dashboard/Dashboard';
+import Heroes from './components/Heroes/Heroes';
+import Details from './components/Details/Details';
+import NotFound from './components/NotFound';
 
 function App() {
-  // eslint-disable-next-line no-unused-vars
-  const [currentPage, setCurrentPage] = useState('dashboard');
-
-  const pages = {
-    dashboard: <Dashboard />,
-    heroes: <Heroes />,
-    details: <Details />
-  };
-
   return (
-    <>
-      <Header setCurrentView={setCurrentPage} />
-      {
-        pages[currentPage]
-      }
-    </>
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route path="/" exact component={Dashboard} />
+        <Redirect path="/dashboard" to="/" />
+        <Route path="/heroes" component={Heroes} />
+        <Route path="/details/:heroId" component={Details} />
+        <Route component={NotFound} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
