@@ -1,9 +1,12 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+import React, { useState } from 'react';
 import '../styles.css';
 import './heroes.css';
+import { Link } from 'react-router-dom';
 import heroes from '../heroes.const';
 
-export default function Heroes() {
+export default function Heroes({ match }) {
+  const [heroId] = useState(match.params.heroId);
   return (
     <>
       <h2>My Heroes</h2>
@@ -17,8 +20,11 @@ export default function Heroes() {
       <ul className="heroes">
         {heroes.map((hero) => (
           <li>
-            <span className="badge">{hero.id}</span>
-            {hero.name}
+            <Link to={`/details/${hero.id}`} key={hero.id}>
+              <span className="badge">{hero.id}</span>
+              {heroId}
+              {hero.name}
+            </Link>
             <button type="button" className="delete">x</button>
           </li>
         ))}
