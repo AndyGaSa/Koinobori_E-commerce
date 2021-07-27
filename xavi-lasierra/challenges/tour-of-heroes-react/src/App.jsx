@@ -22,13 +22,10 @@ function App() {
   const [currentDetail, changeDetailPage] = useState(heroes[0]);
   const [currentPage, setCurrentPage] = useState('dashboard');
 
-  function changePage(pageNumber) {
-    setCurrentPage(pageNumber);
-  }
   function changeHero(heroId) {
     const index = heroes.map(({ id }) => id).indexOf(heroId);
     changeDetailPage(heroes[index]);
-    changePage('detail');
+    setCurrentPage('detail');
   }
 
   const page = {
@@ -36,15 +33,14 @@ function App() {
       heroes={heroes
         .slice(1, 5)}
       heroDetail={changeHero}
-      changePage={changePage}
     />,
     list: <List heroes={heroes} heroDetail={changeHero} />,
-    detail: <Detail hero={currentDetail} />
+    detail: <Detail hero={currentDetail} changePage={setCurrentPage} />
   };
 
   return (
     <>
-      <Header changePage={changePage} />
+      <Header changePage={setCurrentPage} />
       {page[currentPage]}
     </>
   );
