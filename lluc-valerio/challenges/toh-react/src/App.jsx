@@ -1,9 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter, Switch, Route, Redirect
+} from 'react-router-dom';
 import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
 import Details from './pages/Details';
 import Heroes from './pages/Heroes';
+import NotFound from './pages/NotFound';
+
 import './App.css';
 
 export default function App() {
@@ -11,9 +15,11 @@ export default function App() {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/" exact component={Dashboard} />
+        <Redirect path="/dashboard" to="/" />
         <Route path="/heroes" component={Heroes} />
-        <Route path="/details" component={Details} />
+        <Route path="/details/:heroId" component={Details} />
+        <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
 
