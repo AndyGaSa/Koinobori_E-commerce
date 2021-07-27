@@ -86,3 +86,8 @@
     background-color: #525252;
     color: white;
   }
+
+li{
+    list-style-type: none;
+    margin: 10px;
+  }

@@ -1,12 +1,13 @@
 import React from 'react';
 import '../styles.css';
 
-export default function Nav() {
-  const url = '';
+// eslint-disable-next-line react/prop-types
+export default function Nav({ setCurrentView }) {
   return (
     <nav>
-      <a href={url}>Dashboard</a>
-      <a href={url}>Heroes</a>
+      { setCurrentView }
+      <button type="button" onClick={() => setCurrentView('dashboard')}>Dashboard</button>
+      <button type="button" onClick={() => setCurrentView('heroes')}>Heroes</button>
     </nav>
   );
 }

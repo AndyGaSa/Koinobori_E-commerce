@@ -31,7 +31,7 @@ h2 {
     text-align: center;
     width: 100%;
     min-width: 70px;
-    margin: .5rem auto;
+    margin: 10px;
     box-sizing: border-box;
   
     /* flexbox */
