@@ -1,19 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Heroes from '../components/Main/Heroes';
 
 export default function HeroesList() {
-  const [heroesList] = useState({
-    heroes: [
-      'Hero1',
-      'Hero2',
-      'Hero3',
-      'Hero4',
-      'Hero5',
-    ],
-  });
+  const heroesList = [
+    'Hero1',
+    'Hero2',
+    'Hero3',
+    'Hero4',
+    'Hero5',
+  ];
   return (
     <>
-      <Heroes heroes={heroesList.heroes} />
+      <Heroes heroes={heroesList} />
     </>
   );
 }
