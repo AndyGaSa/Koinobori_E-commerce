@@ -1,13 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles.css';
+import './dashboard.css';
 
-// eslint-disable-next-line react/prop-types
-export default function Nav({ setCurrentView }) {
+export default function Nav() {
   return (
     <nav>
-      { setCurrentView }
-      <button type="button" onClick={() => setCurrentView('dashboard')}>Dashboard</button>
-      <button type="button" onClick={() => setCurrentView('heroes')}>Heroes</button>
+      <Link to="/dashboard">Dashboard</Link>
+      <Link to="/heroes">Heroes</Link>
     </nav>
   );
 }
