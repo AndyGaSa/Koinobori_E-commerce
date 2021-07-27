@@ -1,13 +1,12 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
-import
-function Header() {
+import './Header.css';
+
+export default function Header() {
   return (
-    <div>
+    <header className="p-4 p-md-5 mb-4 text-black rounded bg-light">
       <h1>Author Quiz</h1>
-      <h3>Select the book written by the author shown</h3>
-    </div>
+      <p>Select the book written by the author shown</p>
+    </header>
   );
 }
-
-export default Header;

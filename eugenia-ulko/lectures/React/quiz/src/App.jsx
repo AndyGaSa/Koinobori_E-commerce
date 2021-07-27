@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
+import AuthorQuiz from './components/Body/AuthorQuiz';
 import Header from './components/Header/Header';
 
 function App() {
   return (
     <>
-      <AuthorQuiz />
+      <div className="container">
+        <Header />
+        <AuthorQuiz />
+      </div>
     </>
   );
 }
