@@ -19,10 +19,10 @@ export default function Dashboard() {
   const actualHeroes = heroes.slice(1, 5);
   return (
     <>
-      <h2>Top Heroes</h2>
-      <div className="heroes-menu" id="dashboard__heroes">
+      <h2 className="dashboard-h2">Top Heroes</h2>
+      <div className="heroes-menu">
         {
-             actualHeroes.map((hero) => <Link to={`details/${hero.id}`}>{hero.name}</Link>)
+             actualHeroes.map((hero) => <Link className="dashboard-link" key={hero.id} to={`details/${hero.id}`}>{hero.name}</Link>)
         }
       </div>
     </>

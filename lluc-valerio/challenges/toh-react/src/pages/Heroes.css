@@ -45,7 +45,7 @@
     color: #fafafa;
   }
   
-  .heroes .badge {
+ .badge {
     display: inline-block;
     font-size: small;
     color: white;
