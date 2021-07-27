@@ -1,8 +1,7 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
-import DashboardContainer from '../../components/DashboardContainer/DashboardContainer';
 import '../../Styles/Style.css';
 import './Style.css';
+import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
   const heroes = [
@@ -14,8 +13,15 @@ export default function Dashboard() {
 
   return (
     <>
-      <Header />
-      <DashboardContainer heroes={heroes} />
+      <h2>Top Heroes</h2>
+      {heroes.map((hero, index) => (
+        <Link
+          to={`/details/${heroes[index]}`}
+          // key={heroesList.id}
+        >
+          {heroes[index]}
+        </Link>
+      ))}
     </>
 
   );
