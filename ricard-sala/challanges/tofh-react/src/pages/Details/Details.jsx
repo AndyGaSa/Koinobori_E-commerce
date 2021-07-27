@@ -1,8 +1,9 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './details.css';
-
+import update from '../../assets/HeroListParsed';
 import heroesList from '../../assets/Heroes.const';
 
 export default function Details() {
@@ -23,19 +24,28 @@ export default function Details() {
         {' '}
         details!
       </h2>
-      <p>
+      <span className="hero-id">
         Id:
         {heroId}
 
-      </p>
-      <p>
-        Name:
-        {' '}
-        <input type="text" value={hero?.name} />
-      </p>
-      <nav>
-        <Link to="/">go back</Link>
-      </nav>
+      </span>
+      <div>
+        <label>
+          name:
+          <input
+            type="text"
+            placeholder="name"
+            value={hero?.name}
+            onChange={(event) => setHero({
+              ...hero,
+              name: event.target.value,
+            })}
+            className="hero-name"
+          />
+        </label>
+      </div>
+      <Link to="/heroes" className="goback">go back</Link>
+      <button type="button" onClick={(() => update(hero.name, hero.id))} key="peter">save</button>
     </>
   );
 }
