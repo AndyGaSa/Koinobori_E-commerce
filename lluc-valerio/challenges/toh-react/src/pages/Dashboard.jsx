@@ -4,18 +4,7 @@ import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
 export default function Dashboard() {
-  const heroes = [
-    { id: 11, name: 'Dr Nice' },
-    { id: 12, name: 'Narco' },
-    { id: 13, name: 'Bombasto' },
-    { id: 14, name: 'Celeritas' },
-    { id: 15, name: 'Magneta' },
-    { id: 16, name: 'RubberMan' },
-    { id: 17, name: 'Dynama' },
-    { id: 18, name: 'Dr IQ' },
-    { id: 19, name: 'Magma' },
-    { id: 20, name: 'Tornado' }
-  ];
+  const heroes = JSON.parse(localStorage.getItem('heroes'));
   const actualHeroes = heroes.slice(1, 5);
   return (
     <>
@@ -25,6 +14,20 @@ export default function Dashboard() {
              actualHeroes.map((hero) => <Link className="dashboard-link" key={hero.id} to={`details/${hero.id}`}>{hero.name}</Link>)
         }
       </div>
+      <div id="search-component">
+        <label className="label-dashboard" htmlFor="search-box">
+          Hero Search
+          <input className="input-dashboard" id="search-box" type="text" />
+        </label>
+        <ul className="search-result">
+          {/* <li *ngFor="let hero of heroes$ | async" >
+               <a routerLink="/detail/{{hero.id}}">
+                  {{hero.name}}
+                </a>
+              </li> */}
+        </ul>
+      </div>
+
     </>
   );
 }

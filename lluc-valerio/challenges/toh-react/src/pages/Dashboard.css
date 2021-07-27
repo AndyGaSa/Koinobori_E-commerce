@@ -4,6 +4,23 @@
   text-align: center;
 }
 
+.input-dashboard {
+  padding: .5rem;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.label-dashboard {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  color: #333;
+}
+
 .heroes-menu {
   padding: 0;
   margin: auto;
@@ -43,7 +60,7 @@
 }
 
 @media (min-width: 600px) {
-  a {
+  .dashboard-link {
     width: 18%;
     box-sizing: content-box;
   }

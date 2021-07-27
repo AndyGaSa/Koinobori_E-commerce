@@ -18,7 +18,7 @@ export default function Header() {
     { id: 20, name: 'Tornado' }
   ];
 
-  localStorage.setItem(heroes, JSON.stringify(heroes));
+  localStorage.setItem('heroes', JSON.stringify(heroes));
 
   return (
     <>
