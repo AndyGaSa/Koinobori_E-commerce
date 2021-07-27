@@ -1,37 +1,19 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import HeroCreate from '../components/HeroCreate';
+import HeroFilter from '../components/HeroFilter';
 import './list.css';
 import { resetLocalStorage } from '../services/heroes-local-storage';
 
 function List({
   heroes, setHeroes, maxId, setMaxId
 }) {
-  const [newHeroName, setNewHeroName] = useState('');
-  const newHeroInput = useRef();
-
   const [listHeroes, setListHeroes] = useState(heroes);
-  const [filter, setFilter] = useState('');
-  const filterInput = useRef();
-
-  function addNewHero(heroName) {
-    const newHero = {
-      id: maxId,
-      name: heroName.trim()
-    };
-    setHeroes([...heroes, newHero]);
-    setMaxId(maxId + 1);
-  }
 
   function deleteHero(heroId) {
     const newHeroes = heroes.filter(({ id }) => id !== heroId);
     setHeroes(newHeroes);
-  }
-
-  function filterHeroes(filterValue) {
-    const filteredHeroes = heroes.filter(({ id, name }) => (id + name.toLowerCase())
-      .includes(filterValue.trim().toLowerCase()));
-    setListHeroes(filteredHeroes);
   }
 
   function resetHeroes() {
@@ -41,17 +23,9 @@ function List({
   return (
     <main>
       <h2>My Heroes</h2>
-      <label htmlFor="hero__create">
-        Hero name:
-        <input ref={newHeroInput} type="text" name="hero__create" id="hero__create" onChange={() => setNewHeroName(newHeroInput.current.value)} />
-        <button type="button" onClick={() => addNewHero(newHeroName)}>Add hero</button>
-      </label>
+      <HeroCreate heroes={heroes} setHeroes={setHeroes} maxId={maxId} setMaxId={setMaxId} />
       <br />
-      <label htmlFor="hero__filter">
-        Filter heroes:
-        <input ref={filterInput} type="text" name="hero__filter" id="hero__filter" onChange={() => setFilter(filterInput.current.value)} />
-        <button type="button" onClick={() => filterHeroes(filter)}>Filter heroes</button>
-      </label>
+      <HeroFilter heroes={heroes} setListHeroes={setListHeroes} />
       <ul className="heroes">
         {listHeroes.map((hero) => (
           <li key={hero.id}>
