@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import HeroCOntainer from '../../components/HeroContainer/HeroContainer';
-import '../../Styles/Styles.css';
 import './heroes.css';
 
 // eslint-disable-next-line react/prop-types
