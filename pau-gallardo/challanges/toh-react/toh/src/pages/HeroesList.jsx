@@ -1,5 +1,5 @@
 import React from 'react';
-import Heroes from '../components/Main/Heroes';
+import Heroes from '../components/Heroes/Heroes';
 import heroesListConst from '../assets/heroes';
 
 export default function HeroesList() {

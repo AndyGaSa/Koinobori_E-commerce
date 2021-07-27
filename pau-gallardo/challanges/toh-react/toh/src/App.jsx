@@ -17,7 +17,7 @@ export default function App() {
         <Route path="/" exact component={Dashboard} />
         <Redirect path="/dashboard" to="/" />
         <Route path="/heroes" component={HeroesList} />
-        <Route path="/heroes/:heroId" component={Details} />
+        <Route path="/details/:heroId" component={Details} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
