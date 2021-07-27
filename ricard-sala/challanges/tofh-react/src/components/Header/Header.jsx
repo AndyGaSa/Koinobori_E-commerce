@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../Styles/Styles.css';
 
 export default function Header({ setCurrentView }) {
@@ -8,8 +9,8 @@ export default function Header({ setCurrentView }) {
     <header className="header">
       <h1>Tour of Heroes</h1>
       <nav>
-        <button type="button" onClick={() => setCurrentView('dashboard')}>Dashboard</button>
-        <button type="button" onClick={() => setCurrentView('heroes')}>Heroes</button>
+        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/heroes">Heroes</Link>
       </nav>
     </header>
   );
