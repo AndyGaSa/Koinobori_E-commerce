@@ -15,6 +15,8 @@ export default function Heroes() {
           {hero.superhero}
         </Link>
       ))}
+      <input type="text" />
+      <button type="button">Add Hero</button>
     </>
 
   );
