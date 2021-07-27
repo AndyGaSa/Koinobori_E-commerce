@@ -9,7 +9,7 @@ export default function Heroes({ heroes }) {
     <>
       <ul className="heroes">
         {heroes.map((hero) => (
-          <li>
+          <li key={hero}>
             {hero}
           </li>
         ))}

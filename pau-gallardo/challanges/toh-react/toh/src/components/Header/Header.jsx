@@ -9,7 +9,7 @@ export default function Header({ validate }) {
     <>
       <h1>Tour of Heroes</h1>
       <button type="button" onClick={() => validate('dashboard')}>Dashboard</button>
-      <button type="button" onClick={() => validate('heroes')}>Heroes</button>
+      <button type="button" onClick={() => validate('heroesList')}>Heroes</button>
     </>
   );
 }
