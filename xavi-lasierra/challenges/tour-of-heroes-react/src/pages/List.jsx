@@ -9,6 +9,10 @@ function List({
   const [newHeroName, setNewHeroName] = useState('');
   const newHeroInput = useRef();
 
+  const [listHeroes, setListHeroes] = useState(heroes);
+  const [filter, setFilter] = useState('');
+  const filterInput = useRef();
+
   function addNewHero(heroName) {
     const newHero = {
       id: maxId,
@@ -23,6 +27,12 @@ function List({
     setHeroes(newHeroes);
   }
 
+  function filterHeroes(filterValue) {
+    const filteredHeroes = heroes.filter(({ id, name }) => (id + name.toLowerCase())
+      .includes(filterValue.trim().toLowerCase()));
+    setListHeroes(filteredHeroes);
+  }
+
   return (
     <main>
       <h2>My Heroes</h2>
@@ -34,11 +44,11 @@ function List({
       <br />
       <label htmlFor="hero__filter">
         Filter heroes:
-        <input type="text" name="hero__filter" id="hero__filter" />
-        <button type="button">Filter heroes</button>
+        <input ref={filterInput} type="text" name="hero__filter" id="hero__filter" onChange={() => setFilter(filterInput.current.value)} />
+        <button type="button" onClick={() => filterHeroes(filter)}>Filter heroes</button>
       </label>
       <ul className="heroes">
-        {heroes.map((hero) => (
+        {listHeroes.map((hero) => (
           <li key={hero.id}>
             <Link to={`/detail/${hero.id}`}>
               <span className="badge">{hero.id}</span>
