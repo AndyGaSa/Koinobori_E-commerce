@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroes from '../../assets/heroes';
 import './style-Dashboard.css';
 
 export default function Dashboard() {
+  const heroes = JSON.parse(localStorage.getItem('heroes'));
+
   return (
     <>
       <h2>Top Heroes</h2>
