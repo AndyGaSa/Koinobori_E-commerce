@@ -13,4 +13,4 @@ const heroesList = [
 
 export default heroesList;
 
-localStorage.setItem('heroList', heroesList);
+localStorage.setItem('heroList', JSON.stringify(heroesList));
