@@ -1,19 +1,29 @@
 import React from 'react';
+import {
+  BrowserRouter, Switch, Route, Redirect
+} from 'react-router-dom';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Heroes from './pages/Heroes/Heroes';
+import Details from './pages/Details/Details';
+import NotFound from './pages/NotFound';
+
 import './App.css';
 import Header from './components/Header/Header';
-import Heroes from './components/Heroes/Heroes';
-import Dashboard from './components/Dashboard/Dashboard';
-import Details from './components/Details/Details';
-import './components/Styles.css';
+import './pages/Styles.css';
 
 function App() {
   return (
-    <>
+
+    <BrowserRouter>
       <Header />
-      <Heroes />
-      <Dashboard />
-      <Details />
-    </>
+      <Switch>
+        <Route path="/" exact component={Dashboard} />
+        <Redirect path="/dashboard" to="/" />
+        <Route path="/heroes" component={Heroes} />
+        <Route path="/details/:heroId" component={Details} />
+        <Route component={NotFound} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
