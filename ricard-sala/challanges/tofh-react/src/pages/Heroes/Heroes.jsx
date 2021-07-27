@@ -1,25 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import heroeList from '../../assets/Heroes.const';
 import './heroes.css';
-import heroesList from '../../assets/Heroes.const';
-// eslint-disable-next-line react/prop-types
+
 export default function Heroes() {
+  const [heroes, setHeroes] = useState(JSON.parse(localStorage.getItem('heroes')));
+  function deleteHero(id) {
+    const deletedHero = heroeList.filter((hero) => hero.id !== id);
+    localStorage.setItem('heroes', JSON.stringify(deleteHero));
+    setHeroes(deletedHero);
+  }
   return (
-    <>
-      <h2>My Heroes</h2>
-      {heroesList.map((hero) => (
+    <ul className="heroes">
+      {heroes.map((hero) => (
         <li>
           <Link
             to={`/details/${hero.id}`}
             key={hero.id}
           >
+            <span className="badge">{hero.id}</span>
             {hero.name}
-            {' '}
           </Link>
-          <button title="delete hero" type="button">X</button>
+          <button
+            onClick={() => deleteHero(hero.id)}
+            className="delete"
+            type="button"
+            title="delete hero"
+          >
+            x
+          </button>
         </li>
       ))}
-    </>
-
+    </ul>
   );
 }
