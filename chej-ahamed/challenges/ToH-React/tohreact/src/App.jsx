@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Header from './components/Header/Header';
 import Heroes from './components/Heroes/Heroes';
@@ -7,16 +7,22 @@ import Details from './components/Details/Details';
 import './App.css';
 import './components/Styles.css';
 
-function App() {
+export default function App() {
+  const [currentPage, setCurrentPage] = useState('dashboard');
+  const pages = {
+    dashboard: <Dashboard />,
+    heroes: <Heroes />,
+    details: <Details />
+
+  };
   return (
     <>
-      <Header />
-      <Heroes />
-      <Dashboard />
-      <Details />
+
+      <Header setCurrentView={setCurrentPage} />
+      {
+        pages[currentPage]
+      }
 
     </>
   );
 }
-
-export default App;
