@@ -1,16 +1,21 @@
 import React from 'react';
-import '../styles.css';
+import { Link } from 'react-router-dom';
+import heroes from '../heroes.const';
 import './dashboard.css';
 
 export default function Dashboard() {
-  const url = '';
   return (
     <>
       <h2>Top Heroes</h2>
-      <a href={url}>Abe Sapien</a>
-      <a href={url}>Abin Sur</a>
-      <a href={url}>Abomination</a>
-      <a href={url}>Abraxas</a>
+      <div className="heroes-menu">
+        {
+          heroes.slice(1, 5).map((hero) => (
+            <Link to={`/details/${hero.id}`} key={hero.id}>
+              {hero.name}
+            </Link>
+          ))
+        }
+      </div>
     </>
   );
 }
