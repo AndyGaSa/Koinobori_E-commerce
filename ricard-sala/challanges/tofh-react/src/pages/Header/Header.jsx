@@ -2,11 +2,11 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../Styles/Styles.css';
+import './header.css';
 
-export default function Header({ setCurrentView }) {
+export default function Header() {
   return (
-    <header className="header">
+    <header>
       <h1>Tour of Heroes</h1>
       <nav>
         <Link to="/dashboard">Dashboard</Link>
