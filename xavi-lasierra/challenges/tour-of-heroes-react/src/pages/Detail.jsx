@@ -1,7 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
-function Detail({ hero, changePage }) {
+import './detail.css';
+
+function Detail({ heroes }) {
+  const { heroId } = useParams();
+  const hero = heroes.find(({ id }) => id === +heroId);
+
   return (
     <main>
       <h2>
@@ -20,7 +26,7 @@ function Detail({ hero, changePage }) {
           <input id="hero-name" placeholder="Hero name" value={hero.name} />
         </label>
       </div>
-      <button type="button" onClick={() => changePage('list')}>go back</button>
+      <button type="button">go back</button>
       <button type="button">save</button>
     </main>
   );

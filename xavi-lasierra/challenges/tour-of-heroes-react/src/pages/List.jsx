@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './list.css';
 
-function List({ heroes, heroDetail }) {
+function List({ heroes }) {
   return (
     <main>
       <h2>My Heroes</h2>
@@ -15,10 +16,10 @@ function List({ heroes, heroDetail }) {
       <ul className="heroes">
         {heroes.map((hero) => (
           <li>
-            <button className="heroes__heroe" type="button" onClick={() => heroDetail(hero.id)}>
+            <Link key={hero.id} to={`/detail/${hero.id}`}>
               <span className="badge">{hero.id}</span>
               {hero.name}
-            </button>
+            </Link>
             <button className="delete" type="button">x</button>
           </li>
         ))}

@@ -1,32 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
+import {
+  BrowserRouter, Switch, Route, Redirect
+} from 'react-router-dom';
 import Header from './components/Header';
-import Dashboard from './components/Dashboard';
-import List from './components/List';
-import Detail from './components/Detail';
+import Dashboard from './pages/Dashboard';
+import List from './pages/List';
+import Detail from './pages/Detail';
+import NotFound from './pages/NotFound';
 import './styles.css';
 import heroes from './heroes-const';
 
 function App() {
-  const [currentDetail, changeDetailPage] = useState(heroes[0]);
-  const [currentPage, setCurrentPage] = useState('dashboard');
-
-  function changeHero(heroId) {
-    const index = heroes.map(({ id }) => id).indexOf(heroId);
-    changeDetailPage(heroes[index]);
-    setCurrentPage('detail');
-  }
-
-  const page = {
-    dashboard: <Dashboard heroes={heroes.slice(1, 5)} heroDetail={changeHero} />,
-    list: <List heroes={heroes} heroDetail={changeHero} />,
-    detail: <Detail hero={currentDetail} changePage={setCurrentPage} />
-  };
-
   return (
-    <>
-      <Header changePage={setCurrentPage} />
-      {page[currentPage]}
-    </>
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route path="/" exact component={() => <Dashboard heroes={heroes.slice(1, 5)} />} />
+        <Redirect path="/dashboard" to="/" />
+        <Route path="/list" component={() => <List heroes={heroes} />} />
+        <Route path="/detail/:heroId?" component={() => <Detail heroes={heroes} />} />
+        <Route component={NotFound} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
