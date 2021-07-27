@@ -1,4 +1,4 @@
-const heroes = [
+const heroesPredefined = [
   { id: 11, name: 'Dr Nice' },
   { id: 12, name: 'Narco' },
   { id: 13, name: 'Bombasto' },
@@ -11,4 +11,4 @@ const heroes = [
   { id: 20, name: 'Tornado' }
 ];
 
-export default heroes;
+export default heroesPredefined;
