@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/prefer-default-export
-export const heroes = [
+const heroes = [
   { id: 11, name: 'Dr Nice' },
   { id: 12, name: 'Narco' },
   { id: 13, name: 'Bombasto' },
@@ -11,3 +11,4 @@ export const heroes = [
   { id: 19, name: 'Magma' },
   { id: 20, name: 'Tornado' }
 ];
+export default heroes;
