@@ -21,8 +21,13 @@ h2 {
     align-content: flex-start;
     align-items: flex-start;
   }
-  
-  a {
+  ul {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    
+  }
+  ul li {
     background-color: #3f525c;
     border-radius: 2px;
     padding: 1rem;
@@ -33,7 +38,7 @@ h2 {
     text-align: center;
     width: 100%;
     min-width: 70px;
-    margin: .5rem auto;
+    margin: 5px;
     box-sizing: border-box;
   
     /* flexbox */

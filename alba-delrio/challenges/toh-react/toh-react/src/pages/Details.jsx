@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
-export default function Details() {
+export default function Details({ setCurrentPage }) {
   return (
     <>
       <h2>Magenta details!</h2>
@@ -9,7 +10,7 @@ export default function Details() {
         name:
         <input type="text" className="hero-name" />
       </span>
-      <button type="button">Back</button>
+      <button type="button" onClick={() => setCurrentPage('heroes')}>Back</button>
     </>
   );
 }
