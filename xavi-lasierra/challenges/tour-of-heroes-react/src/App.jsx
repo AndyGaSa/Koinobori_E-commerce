@@ -17,11 +17,7 @@ function App() {
   }
 
   const page = {
-    dashboard: <Dashboard
-      heroes={heroes
-        .slice(1, 5)}
-      heroDetail={changeHero}
-    />,
+    dashboard: <Dashboard heroes={heroes.slice(1, 5)} heroDetail={changeHero} />,
     list: <List heroes={heroes} heroDetail={changeHero} />,
     detail: <Detail hero={currentDetail} changePage={setCurrentPage} />
   };
