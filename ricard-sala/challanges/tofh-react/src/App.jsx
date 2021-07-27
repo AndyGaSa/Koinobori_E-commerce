@@ -5,7 +5,7 @@ import {
 import Dashboard from './pages/DashBoard/Dashboard';
 import Details from './pages/Details/Details';
 import Heroes from './pages/Heroes/Heroes';
-import Header from './components/Header/Header';
+import Header from './pages/Header/Header';
 import Notfound from './pages/Notfound';
 
 function App() {
