@@ -1,16 +1,40 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Heroes.css';
-import '../Styles.css';
-import '../constants.js/HeroesConst.js';
 
-export default function Heroes({ heroes }) {
+export default function Heroes() {
   return (
     <>
       <h2>My Heroes</h2>
 
-      <ul>
-        {heroes.map((hero) => <li>{hero.name}</li>)}
+      <div>
+        <label htmlFor="new-hero">
+          Hero name:
+          <input id="new-hero" />
+        </label>
+
+        <button className="add-button" type="button">
+          Add hero
+        </button>
+      </div>
+
+      <ul className="heroes">
+        <li>
+          <a href="/detail/11">
+            <span className="badge">11</span>
+            {' '}
+            Dr Nice
+          </a>
+          <button
+            className="delete"
+            title="delete hero"
+            type="button"
+          >
+            x
+
+          </button>
+        </li>
       </ul>
     </>
   );
