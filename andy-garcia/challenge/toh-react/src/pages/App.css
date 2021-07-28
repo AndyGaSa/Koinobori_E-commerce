@@ -28,6 +28,7 @@ body, input[text] {
 }
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 button {
   background-color: #eee;
