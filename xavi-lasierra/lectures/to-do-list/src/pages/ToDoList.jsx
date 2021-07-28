@@ -8,19 +8,27 @@ function ToDoList() {
   const dispatch = useDispatch();
   const [newToDo, setNewToDo] = useState('');
 
-  return (
-    <main>
-      <input type="text" name="todo" value={newToDo} onChange={(event) => setNewToDo(event.target.value)} />
-      <button
-        type="button"
-        onClick={() => dispatch({
-          type: actionTypes.CREATE_TODO,
-          newToDo
-        })}
-      >
-        Add
+  function createUpdate() {
+    if (newToDo.trim() === '') return;
 
-      </button>
+    dispatch({
+      type: actionTypes.CREATE_TODO,
+      newToDo
+    });
+    setNewToDo('');
+  }
+
+  return (
+    <main className="to-do">
+      <form className="to-do__create-update">
+        <input type="text" name="todo" value={newToDo} onChange={(event) => setNewToDo(event.target.value)} />
+        <button
+          type="button"
+          onClick={createUpdate}
+        >
+          Add
+        </button>
+      </form>
       <ul>
         {toDoList.map((toDo) => <li>{toDo}</li>)}
       </ul>

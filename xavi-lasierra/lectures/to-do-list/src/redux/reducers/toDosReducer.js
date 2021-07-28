@@ -1,10 +1,10 @@
 import actionTypes from '../actions/action.types';
 
 function toDosReducer(toDoList = [], action) {
-  const newToDoList = toDoList;
+  let newToDoList = toDoList;
   switch (action.type) {
     case actionTypes.CREATE_TODO:
-
+      newToDoList = [...newToDoList, action.newToDo];
       break;
     case actionTypes.DELETE_TODO:
       break;

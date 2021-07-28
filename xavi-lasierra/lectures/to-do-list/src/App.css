@@ -14,9 +14,15 @@ header {
   margin-bottom: 2rem;
 }
 
-main {
+.to-do{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.to-do__create-update {
+  display: flex;
+  margin-bottom: 2rem;
 }
 
 input {
