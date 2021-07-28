@@ -6,7 +6,7 @@ export function update(heroId, name) {
     name
   };
   const actualHeroList = heroList
-    .map((hero) => (hero.id === +heroId ? { ...hero, ...newHero } : hero));
+    .map((hero) => (hero.id === heroId ? { ...hero, ...newHero } : hero));
   localStorage.setItem('heroes', JSON.stringify(actualHeroList));
 }
 

@@ -1,16 +1,24 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
-import './Details.css';
 import { Link } from 'react-router-dom';
+
 import heroes from '../assets/constants';
 import { update } from '../assets/utils';
+import HeroForm from '../components/HeroForm';
+
+import './Details.css';
 
 function Details({ match }) {
   const [heroId] = useState(match.params.heroId);
 
-  const [hero, setHero] = useState(heroes.find(({ id }) => id === +heroId));
-
+  const [hero, setHero] = useState(heroes.find(({ id }) => id === heroId));
+  function heroChange(event) {
+    setHero({
+      ...hero,
+      [event.target.name]: event.target.value
+    });
+  }
   return (
     <>
       <h2>
@@ -37,8 +45,9 @@ function Details({ match }) {
           />
         </label>
       </div>
+      <HeroForm hero={hero} heroChanges={heroChange} />
       <Link to="/heroes" className="goback">go back</Link>
-      <button type="button" className="save" onClick={() => update(+heroId, hero.name)}>save</button>
+      <button type="button" className="save" onClick={() => update(heroId, hero.name)}>save</button>
     </>
   );
 }
