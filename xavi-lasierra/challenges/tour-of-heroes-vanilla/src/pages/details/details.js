@@ -1,3 +1,7 @@
-const id = getId(window.location.search); // create getId(location.search)
-const detail = new DetailsPage(id, heroes);
-detail.setView();
+let detail;
+
+(function detailsPageModel() {
+  const { id, slug } = transformUrlQueryToObject(window.location.search);
+  detail = new DetailsPage(+id, slug, heroes);
+  detail.setView();
+}());

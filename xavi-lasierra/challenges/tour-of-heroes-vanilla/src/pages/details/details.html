@@ -16,20 +16,97 @@
             <a href="../heroes/heroes.html">Heroes</a>
         </nav>
     </header>
-    <section>
-        <h2><span id="hero__title"></span> details!</h2>
-        <div>
-            <p>id: <span id="hero__id"></span></p>
-            <label>
-                Hero name:
-                <input type="text" value="" id="hero__name">
-            </label>
-        </div>
-    </section>
+    <article> 
+        <hr>
+        <section class="hero__main-info">
+            <div>
+                <h2><span id="hero__title"></span> details!</h2>
+                <p>id: <span id="hero__id"></span></p>
+                <p>slug: <span id="hero__slug"></span></p>
+            </div>
+            <img id="hero__image" src="" alt="">
+        </section>
+        <label>
+            Hero name:
+            <input type="text" value="" id="hero__name">
+        </label>
+        <section class="hero__powerstats powerstats">
+            <h3>Power stats</h3>
+            <ul>
+                <li>Intelligence: <progress id="powerstats__intelligence-bar" value="" max="100"></progress> <span id="powerstats__intelligence-text"></span></li>
+                <li>Strenght: <progress id="powerstats__strength-bar" value="" max="100"></progress> <span id="powerstats__strength-text"></span></li>
+                <li>Speed: <progress id="powerstats__speed-bar" value="" max="100"></progress> <span id="powerstats__speed-text"></span></li>
+                <li>Durability: <progress id="powerstats__durability-bar" value="" max="100"></progress> <span id="powerstats__durability-text"></span></li>
+                <li>Power: <progress id="powerstats__power-bar" value="" max="100"></progress> <span id="powerstats__power-text"></span></li>
+                <li>Combat: <progress id="powerstats__combat-bar" value="" max="100"></progress> <span id="powerstats__combat-text"></span></li>
+            </ul>
+        </section>
+        <section class="hero__appearance appearance">
+            <h3>Appearance</h3>
+            <ul>
+                <li>Gender: <span id="appearance__gender"></span></li>
+                <li>Race: <span id="appearance__race"></span></li>
+                <li>Height: <span id="appearance__height"></span></li>
+                <li>Weight: <span id="appearance__weight"></span></li>
+                <li>Eye Color: <span id="appearance__eye-color"></span></li>
+                <li>Hair Color: <span id="appearance__hair-color"></span></li>
+            </ul>
+        </section>
+        <section class="hero__biography biography">
+            <h3>Biography</h3>
+            <ul>
+                <li>Full Name: <span id="biography__fullName"></span></li>
+                <li>Alter Egos: <span id="biography__alterEgos"></span></li>
+                <li>Aliases: 
+                    <ul id="biography__aliases">
+                    </ul>
+                </li>
+                <li>Place of Birth: <span id="biography__placeOfBirth"></span></li>
+                <li>First Appearance: <span id="biography__firstAppearance"></span></li>
+                <li>Publisher: <span id="biography__publisher"></span></li>
+                <li>Alignment: <span id="biography__alignment"></span></li>
+            </ul>
+        </section>
+        <section class="hero__work work">
+            <h3>Work</h3>
+            <ul>
+                <li>Occupation:
+                    <ul id="work__occupation">
 
-    <script src="../../hero.const.js"></script>
-    <script src="./id-getter.js"></script>
+                    </ul>
+                </li>
+                <li>Base:
+                    <ul id="work__base">
+
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="hero__connections connections">
+            <h3>Connections</h3>
+            <ul>
+                <li>Group Affiliation:
+                    <ul id="connections__groupAffiliation">
+                    </ul>
+                </li>
+                <li>Relatives:
+                    <ul id="connections__relatives">
+
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <br>
+    </article>
+    <form action="../heroes/heroes.html">
+        <button>go back</button>
+    </form>
+    <button id="save-button">save</button>
+
+    <script src="../../heroes-local-storage.js"></script>
+    <script src="./transformUrlQueryToObject.js"></script>
     <script src="./details.class.js"></script>
     <script src="./details.js"></script>
+    <script src="./details-save-button.js"></script>
 </body>
 </html>
