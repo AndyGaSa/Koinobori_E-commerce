@@ -1,6 +1,7 @@
 import actionTypes from '../actions/action.types';
+import heroesMock from '../../constants/heroes.mock';
 
-export default function heroesReducer(heroes, action) {
+export default function heroesReducer(heroes = heroesMock, action) {
   let newState;
 
   switch (action.type) {
@@ -19,7 +20,6 @@ export default function heroesReducer(heroes, action) {
     case actionTypes.UPDATE_HERO:
       newState = heroes.map((hero) => ((hero.id === action.hero.id)
         ? {
-
           ...hero,
           ...action.hero,
         }

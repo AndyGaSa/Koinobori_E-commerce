@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroes from '../constants/heroes.mock';
+import { useSelector } from 'react-redux';
+
 import './Heroes.css';
 
 export default function Heroes() {
+  const heroes = useSelector((store) => store.heroes);
+
   return (
     <>
       <h2>My Heroes</h2>

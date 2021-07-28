@@ -1,13 +1,17 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import actionTypes from '../redux/actions/action.types';
 
 import HeroForm from '../components/HeroForm';
-import heroes from '../constants/heroes.mock';
 
 import './Details.css';
 
 export default function Details() {
+  const heroes = useSelector((store) => store.heroes);
+  const dispatch = useDispatch();
+
   const { heroId } = useParams();
   const [hero, setHero] = useState();
 
@@ -40,7 +44,16 @@ export default function Details() {
       </div>
       <HeroForm hero={hero} heroChange={heroChange} />
       <button type="button">go back</button>
-      <button type="button">save</button>
+      <button
+        type="button"
+        onClick={() => dispatch({
+          type: actionTypes.UPDATE_HERO,
+          hero,
+        })}
+      >
+        save
+
+      </button>
     </div>
   );
 }
