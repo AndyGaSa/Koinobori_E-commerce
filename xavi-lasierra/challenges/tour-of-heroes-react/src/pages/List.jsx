@@ -1,20 +1,22 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import HeroCreate from '../components/HeroCreate';
 import HeroFilter from '../components/HeroFilter';
+import actionTypes from '../redux/actions/action.types';
 
 import './list.css';
 
 function List() {
   const heroes = useSelector((store) => store.heroes);
+  const dispatch = useDispatch();
 
   return (
     <main>
       <h2>My Heroes</h2>
-      <HeroCreate heroes={heroes} />
+      <HeroCreate />
       <br />
       <HeroFilter heroes={heroes} />
       <ul className="heroes">
@@ -24,11 +26,19 @@ function List() {
               <span className="badge">{hero.id}</span>
               {hero.name}
             </Link>
-            <button onClick="" className="delete" type="button">x</button>
+            <button
+              onClick={() => dispatch({
+                type: actionTypes.DELETE_HERO,
+                heroId: hero.id
+              })}
+              className="delete"
+              type="button"
+            >
+              x
+            </button>
           </li>
         ))}
       </ul>
-      <button type="button" onClick="">Reset Local Storage</button>
     </main>
   );
 }

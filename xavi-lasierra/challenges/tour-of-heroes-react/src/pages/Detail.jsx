@@ -42,7 +42,6 @@ function Detail() {
         })}
       >
         save
-
       </button>
     </main>
   );
