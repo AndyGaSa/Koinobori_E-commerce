@@ -1,14 +1,20 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import HeroForm from '../components/HeroForm';
 
-import hero from '../constants/heroes.mock';
+import heroes from '../constants/heroes.mock';
 import './Details.css';
 
 export default function Details({ match }) {
   const [heroId] = useState(match.params.heroId);
   const heroIdDetail = heroes.find((hero) => hero.id === +heroId);
+
+  useEffect(() => {
+    if (heroId) {
+      const foundHero = heroes.find((currentHero) => cu);
+    }
+  });
 
   function heroChange(event) {
     setHero({
