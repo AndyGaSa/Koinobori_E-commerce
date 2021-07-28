@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./details.css">
+    <title>Pokemon Details</title>
+</head>
+<body>
+    <header class='header-container'>
+        <div class='header-container__main-logo'>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="">
+            <h1>Gotta catch'em all!</h1>
+        </div>
+       
+    </header>
+    <main>
+        <div>
+        <h1 class="pokemon-title"></h1>
+        <img class='pokemon-img'alt="pokemon-img">
+        </div>
+        <div>
+            <h2>Tipe:</h2>
+            <ul class="pokemon-type"></ul>
+        </div>
+        <ul class='pokemon-abilities'><h2>Abilities:</h2></ul>
+
+        
+    </main>
+    
+    <a href="../List/list.html"> <input type="button" value="Back" class="back-button"></a>
+
+</body>
+
+<script src="../../services/fetchData.js"></script>
+<script src="./details.class.js"></script>
+<script src="./transformURLQueryToObject.js"></script>
+<script src="./details.js"></script>
+</html>
