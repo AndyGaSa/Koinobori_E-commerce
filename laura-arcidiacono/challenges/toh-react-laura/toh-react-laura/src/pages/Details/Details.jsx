@@ -1,41 +1,53 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useRef, useState } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
 import heroes from '../../components/constants/HeroesConst';
 import './Details.css';
 
 export default function Details() {
   const { heroId } = useParams();
-  const [hero, setHero] = useState();
+  const hero = hero.find(({ id }) => id === +heroId);
 
-  useEffect(() => {
-    if (heroId) {
-      localStorage.setItem('heroId', heroId);
-      const foundHero = heroes.find((currentHero) => currentHero.id === +heroId);
-      setHero(foundHero);
-    }
-  }, [heroId]);
+  const [updatedHeroName, setUpdatedHeroName] = useState(hero.name);
+  const updateNameInput = useRef();
+
+  function updateHero(heroName) {
+    const newProperties = { name: heroName.trim() };
+    const updatedHeroes = heroes.map((oneHero) => (oneHero.id === hero.id ? { ...oneHero, ...newProperties } : oneHero));
+    setHeroes(updatedHeroes);
+  }
 
   return (
-    <div>
-      <h2>name Details</h2>
-      <div>
+    <main>
+      <h2>
+        {hero.name}
+
+        Details!
+      </h2>
+      <p>
+        id:
+
         <span>
-          id:
+          {hero?.id}
+          {' '}
         </span>
-        {hero?.id}
-      </div>
+      </p>
       <div>
-        <label htmlFor="hero-name">Hero name: </label>
-        <input
-          id="hero-name"
-          placeholder="Hero name"
-          value={hero?.name}
-        />
+        <label htmlFor="hero-name">
+          Hero name:
+
+          <input
+            ref={updateNameInput}
+            id="hero-name"
+            placeholder="Hero name"
+            defaultValue={hero.name}
+            onChange={() => setUpdatedHeroName(updateNameInput.current.value)}
+          />
+        </label>
       </div>
-      <button type="button">go back</button>
-      <button type="button">save</button>
-    </div>
+      <button type="button" onClick={useHistory().goBack}>go back</button>
+      <button type="button" onClick={() => updateHero(updatedHeroName)}>save</button>
+    </main>
   );
 }
