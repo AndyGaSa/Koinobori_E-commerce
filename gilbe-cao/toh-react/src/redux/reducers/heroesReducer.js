@@ -4,6 +4,10 @@ export default function heroesReducer(heroes, action) {
   let newState;
 
   switch (action.type) {
+    case actionTypes.LOAD_HEROES:
+      newState = actionTypes.heroes;
+      break;
+
     case actionTypes.ADD_HERO:
       newState = [...heroes, action.hero];
       break;
