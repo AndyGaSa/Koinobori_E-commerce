@@ -1,6 +1,6 @@
 import React from 'react';
 
-import heroes from '../heroes.mock';
+import heroes from '../constants/heroes.mock';
 
 function HeroForm() {
 
