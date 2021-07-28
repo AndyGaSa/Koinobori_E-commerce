@@ -21,6 +21,7 @@ label {
     background-color: #eee;
     color: #ccc;
     cursor: auto;
+<<<<<<< HEAD
   }
 
   .details__container{
@@ -42,4 +43,6 @@ label {
     display: flex;
     margin: 10px;
     align-items: center;
+=======
+>>>>>>> 1fda93b0ad71b02840dcfd5efba7408ab955bcb6
   }
