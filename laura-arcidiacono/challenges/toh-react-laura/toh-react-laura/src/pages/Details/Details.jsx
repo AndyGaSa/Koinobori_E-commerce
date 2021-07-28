@@ -2,19 +2,20 @@
 /* eslint-disable react/prop-types */
 import React, { useRef, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import heroes from '../../components/constants/HeroesConst';
 import './Details.css';
 
-export default function Details() {
+export default function Detail({ heroes, setHeroes }) {
   const { heroId } = useParams();
-  const hero = hero.find(({ id }) => id === +heroId);
+  const hero = heroes.find(({ id }) => id === +heroId);
 
   const [updatedHeroName, setUpdatedHeroName] = useState(hero.name);
   const updateNameInput = useRef();
 
   function updateHero(heroName) {
     const newProperties = { name: heroName.trim() };
-    const updatedHeroes = heroes.map((oneHero) => (oneHero.id === hero.id ? { ...oneHero, ...newProperties } : oneHero));
+    const updatedHeroes = heroes.map(
+      (oneHero) => (oneHero.id === hero.id ? { ...oneHero, ...newProperties } : oneHero)
+    );
     setHeroes(updatedHeroes);
   }
 
