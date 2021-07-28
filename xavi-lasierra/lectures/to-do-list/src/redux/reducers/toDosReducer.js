@@ -7,8 +7,12 @@ function toDosReducer(toDoList = [], action) {
       newToDoList = [...newToDoList, action.newToDo];
       break;
     case actionTypes.DELETE_TODO:
+      newToDoList.splice(action.toDoIndex, 1);
+      newToDoList = [...newToDoList];
       break;
     case actionTypes.UPDATE_TODO:
+      newToDoList = newToDoList
+        .map((toDo, index) => (index === +action.toDoIndex ? action.newToDo : toDo));
       break;
     default:
       break;

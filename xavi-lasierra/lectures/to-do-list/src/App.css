@@ -9,9 +9,13 @@
 header {
   height: 4rem;
   line-height: 4rem;
-  background-color: lightgray;
+  background-color: #212121;
   text-align: center;
   margin-bottom: 2rem;
+}
+
+h1 {
+  color: white;
 }
 
 .to-do{
@@ -20,9 +24,34 @@ header {
   align-items: center;
 }
 
+.to-do__inputs {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .to-do__create-update {
   display: flex;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.to-do__cancel-update {
+  background-color: #B53737;
+  border: 1px solid black;
+  width: auto;
+  font-size: 0.6rem;
+  font-weight: bold;
+  padding: 0.2rem;
+}
+
+.to-do__cancel-update:hover {
+  background-color: #851400;
+  color: black;
+}
+
+.to-do__cancel-update:active {
+  font-size: 0.55rem;
 }
 
 input {
@@ -48,4 +77,34 @@ button:hover{
 button:active {
   background-color: grey;
   font-size: 0.75rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.to-do__task {
+  width: 25rem;
+  border: 1px solid grey;
+  font-size: 0.8rem;
+}
+
+.to-do__task:hover {
+  background-color: rgb(245, 245, 245);
+  color: black;
+}
+
+.to-do__task:active {
+  background-color: rgb(248, 253, 255);
+  font-size: 0.8rem;
+}
+
+.to-do__delete {
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  left: -1.9rem;
 }
