@@ -2,13 +2,13 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <header>
+    <footer>
       <span>
         Copyright &copy; Ignacio Navarro
         {' '}
         {new Date().getFullYear()}
         {' '}
       </span>
-    </header>
+    </footer>
   );
 }
