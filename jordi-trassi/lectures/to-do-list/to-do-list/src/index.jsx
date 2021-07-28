@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
-import ToDo from './component/ToDo';
-import configureStore from './redux/store';
+import ToDo from './pages/ToDo';
+import configureStore from './Redux/store';
 
 ReactDOM.render(
   <React.StrictMode>
