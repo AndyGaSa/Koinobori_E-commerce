@@ -7,7 +7,7 @@ label {
     font-size: 1em;
     padding: .5rem;
   }
-  button {
+  .details button {
     margin-top: 20px;
     margin-right: .5rem;
     background-color: #eee;
@@ -15,10 +15,10 @@ label {
     border-radius: 4px;
     font-size: 1rem;
   }
-  button:hover {
+  .details button:hover {
     background-color: #cfd8dc;
   }
-  button:disabled {
+  .details button:disabled {
     background-color: #eee;
     color: #ccc;
     cursor: auto;
