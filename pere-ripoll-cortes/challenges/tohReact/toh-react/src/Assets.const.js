@@ -160,7 +160,9 @@ const heroesListLocal = [
     characters: 'Norrin Radd',
   }];
 
-localStorage.setItem('superheroes', JSON.stringify(heroesListLocal));
+if (!localStorage.getItem('superheroes')) {
+  localStorage.setItem('superheroes', JSON.stringify(heroesListLocal));
+}
 
 const heroesList = JSON.parse(localStorage.getItem('superheroes'));
 
