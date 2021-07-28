@@ -5,6 +5,8 @@ import Details from '../components/details/Details';
 import Header from '../components/Header';
 import './App.css';
 
+// This exercise was done Object Mapping.
+
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard');
 
