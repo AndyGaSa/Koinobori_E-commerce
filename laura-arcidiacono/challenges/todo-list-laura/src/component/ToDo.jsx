@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import actionTypes from '../redux/actions/action.types';
 
+import './ToDo.css';
+
 function ToDo() {
   const toDos = useSelector((store) => store.toDos);
   const dispatch = useDispatch();
@@ -32,30 +34,34 @@ function ToDo() {
   }
 
   return (
-    <>
+    <main>
       <h1>ToDo List</h1>
-
-      <input
-        type="text"
-        name="todo"
-        value={inputValue}
-        onChange={((event) => setInputValue(event.target.value))}
-      />
-
-      <button
-        type="button"
-        onClick={create}
-      >
-        create
-      </button>
-      <button
-        type="button"
-        onClick={update}
-      >
-        update
-      </button>
-      <ul>
-        {
+      <section className="toDo-actions">
+        <div className="toDo-actions__input">
+          <input
+            type="text"
+            name="todo"
+            value={inputValue}
+            onChange={((event) => setInputValue(event.target.value))}
+          />
+          <button
+            type="button"
+            className="toDo-Actions__buttons"
+            onClick={create}
+          >
+            Create Task
+          </button>
+          <button
+            type="button"
+            className="toDo-Actions__buttons"
+            onClick={update}
+          >
+            Update Task
+          </button>
+        </div>
+        <div className="toDo-actions__list">
+          <ul>
+            {
             toDos.map((toDo, toDoIndex) => (
               <li>
                 <button
@@ -75,13 +81,15 @@ function ToDo() {
                     toDo
                   })}
                 >
-                  x
+                  Delete
                 </button>
               </li>
             ))
         }
-      </ul>
-    </>
+          </ul>
+        </div>
+      </section>
+    </main>
   );
 }
 
