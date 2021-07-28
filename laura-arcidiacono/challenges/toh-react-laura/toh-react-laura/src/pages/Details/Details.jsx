@@ -14,7 +14,7 @@ export default function Details() {
 
   useEffect(() => {
     if (heroId) {
-      const foundHero = heroes.find((currentHero) => currentHero.id === heroId);
+      const foundHero = heroes.find((currentHero) => currentHero.id === +heroId);
       setHero(foundHero);
     }
   }, [heroId]);

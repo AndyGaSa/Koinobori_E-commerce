@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/prefer-default-export
 const heroes = [
+<<<<<<< HEAD
   {
     id: 'dc-batman',
     name: 'Batman',
@@ -160,4 +161,17 @@ const heroes = [
     first_appearance: 'The Fantastic Four #48',
     characters: 'Norrin Radd'
   }];
+=======
+  { id: 11, name: 'Dr Nice' },
+  { id: 12, name: 'Narco' },
+  { id: 13, name: 'Bombasto' },
+  { id: 14, name: 'Celeritas' },
+  { id: 15, name: 'Magneta' },
+  { id: 16, name: 'RubberMan' },
+  { id: 17, name: 'Dynama' },
+  { id: 18, name: 'Dr IQ' },
+  { id: 19, name: 'Magma' },
+  { id: 20, name: 'Tornado' }
+];
+>>>>>>> 27a4fc2195c34c8bec54a0fbe172d8108b58e9b8
 export default heroes;
