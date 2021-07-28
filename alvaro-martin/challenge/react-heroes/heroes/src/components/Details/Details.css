@@ -6,18 +6,25 @@ label {
     font-size: 1em;
     padding: .5rem;
   }
-  button {
+  .options {
     margin-top: 20px;
     margin-right: .5rem;
     background-color: #eee;
     padding: 1rem;
     border-radius: 4px;
     font-size: 1rem;
+    text-decoration: none;
+    color: black;
   }
-  button:hover {
+  .options:hover {
     background-color: #cfd8dc;
   }
   button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+  }
+  .options:disabled {
     background-color: #eee;
     color: #ccc;
     cursor: auto;
