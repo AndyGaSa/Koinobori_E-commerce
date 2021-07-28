@@ -1,0 +1,27 @@
+
+#button_create{
+    background-color: #4CAF50;
+}
+
+
+#button_update{
+
+    background-color: #008CBA;
+    
+}
+#input{
+    background-color: #e7e7e7; color: black;
+
+}
+#input:hover{
+    font-size: 150%;
+}
+#button__delete{
+    background-color: #f44336;
+}
+h1{
+    color: #7c795d; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0;
+}
+.main__container{
+    
+}
