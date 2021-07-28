@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8b80b61e9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../pokemon-list/pokemon-list.css">
+    <link rel="stylesheet" href="./pokemon-favourites.css">
+    <title>Pokédex</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__logo" src="https://images.wikidexcdn.net/mwuploads/esssbwiki/7/77/latest/20111028181540/TituloUniversoPok%C3%A9mon.png" alt="Pokemon logo">
+        <nav class="header__navigator">
+            <a href="../pokemon-list/pokemon-list.html">Pokemon List</a>
+            <a href="#">My Pokemons</a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="main-title">My Pokemons</h1>
+        <label class="pokemon__create" for="pokemon__create">
+            Create a pokemon: 
+            <input type="text" name="pokemon__create" id="pokemon__create-input" placeholder="New pokemon name">
+            <button class="pokemon__create-button" onclick="createPokemon()">Create</button>
+        </label>
+        <ul class="pokemon-list" id='pokemon-list'>
+        </ul>
+    </main>
+
+    <script src="../../small-functions.js"></script>
+    <script src="../../services/pokemon.service.js"></script>
+    <script src="./pokemon-favourite.class.js"></script>
+    <script src="./pokemon-favourite.js"></script>
+</body>
+</html>

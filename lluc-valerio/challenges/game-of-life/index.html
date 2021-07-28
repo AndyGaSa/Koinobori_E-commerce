@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lluc Valério 's Game Of Life</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/js/script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">GAME OF LIFE</h1>
+    </header>
+    <main id="main" class="main">
+    </main>
+    <footer class="footer">
+        <button id="start-button" class="footer__button">START</button>
+        <button id="stop-button" class="footer__button">STOP</button>
+        <button id="reset-button" class="footer__button">RESET</button>
+        <button id="size-button" class="footer__button">CHANGE BOARD SIZE</button>
+        <div id="size-container" class="size__container">
+            <div class="size__labelContainer">
+                <label class="size__text-label" id="rows-label" for="rows">ROWS:</label>
+                <input class="size__text-input" type="number" name="rows" id="rows">
+            </div>
+            <div class="size__labelContainer">
+                <label class="size__text-label" id="cols-label" for="cols">COLUMNS:</label>
+                <input class="size__text-input" type="number" name="cols" id="cols">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
