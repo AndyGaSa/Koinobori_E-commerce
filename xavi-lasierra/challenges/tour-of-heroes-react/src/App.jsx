@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter, Switch, Route, Redirect
 } from 'react-router-dom';
+
 import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
 import List from './pages/List';
 import Detail from './pages/Detail';
 import NotFound from './pages/NotFound';
-import './styles.css';
 import { heroesLocalStorage } from './services/heroes-local-storage';
+
+import './styles.css';
 
 function App() {
   (function localStorageCheck() {
@@ -31,7 +33,7 @@ function App() {
         <Route path="/" exact component={() => <Dashboard heroes={heroes.slice(1, 5)} />} />
         <Redirect path="/dashboard" to="/" />
         <Route path="/list" component={() => <List heroes={heroes} setHeroes={setHeroes} maxId={maxId} setMaxId={setMaxId} />} />
-        <Route path="/detail/:heroId?" component={() => <Detail heroes={heroes} setHeroes={setHeroes} />} />
+        <Route path="/detail/:heroId" component={() => <Detail heroes={heroes} setHeroes={setHeroes} />} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>

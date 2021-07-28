@@ -1,43 +1,43 @@
+/* eslint-disable camelcase */
 /* eslint-disable react/prop-types */
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
+
+import HeroForm from '../components/HeroForm';
 
 import './detail.css';
 
 function Detail({ heroes, setHeroes }) {
   const { heroId } = useParams();
-  const hero = heroes.find(({ id }) => id === +heroId);
 
-  const [updatedHeroName, setUpdatedHeroName] = useState(hero.name);
-  const updateNameInput = useRef();
+  const [currentHero, setCurrentHero] = useState(heroes.find(({ id }) => id === heroId));
 
-  function updateHero(heroName) {
-    const newProperties = { name: heroName.trim() };
+  function modifyHero(event) {
+    setCurrentHero({ ...currentHero, [event.target.name]: event.target.value.trim() });
+  }
+
+  function updateHero(newHero) {
     const updatedHeroes = heroes
-      .map((oneHero) => (oneHero.id === hero.id ? { ...oneHero, ...newProperties } : oneHero));
+      .map((oneHero) => (oneHero.id === currentHero.id
+        ? { ...oneHero, ...newHero } : oneHero));
     setHeroes(updatedHeroes);
   }
 
   return (
     <main>
       <h2>
-        {hero.name}
+        {currentHero.name}
         {' '}
         Details!
       </h2>
       <p>
         id:
         {' '}
-        <span>{hero.id}</span>
+        <span>{currentHero.id}</span>
       </p>
-      <div>
-        <label htmlFor="hero-name">
-          Hero name:
-          <input ref={updateNameInput} id="hero-name" placeholder="Hero name" defaultValue={hero.name} onChange={() => setUpdatedHeroName(updateNameInput.current.value)} />
-        </label>
-      </div>
+      <HeroForm currentHero={currentHero} modifyHero={modifyHero} />
       <button type="button" onClick={useHistory().goBack}>go back</button>
-      <button type="button" onClick={() => updateHero(updatedHeroName)}>save</button>
+      <button type="button" onClick={() => updateHero(currentHero)}>save</button>
     </main>
   );
 }

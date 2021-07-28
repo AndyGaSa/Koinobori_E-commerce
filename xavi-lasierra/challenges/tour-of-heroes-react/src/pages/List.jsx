@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import HeroCreate from '../components/HeroCreate';
 import HeroFilter from '../components/HeroFilter';
-import './list.css';
 import { resetLocalStorage } from '../services/heroes-local-storage';
+
+import './list.css';
 
 function List({
   heroes, setHeroes, maxId, setMaxId
