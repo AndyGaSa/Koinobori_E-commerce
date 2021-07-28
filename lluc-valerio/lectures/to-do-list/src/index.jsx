@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
-import FormToDoList from './page/FormToDoList';
-
-import './index.css';
+import ToDo from './component/ToDo';
+import configureStore from './redux/store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <FormToDoList />
+    <Provider store={configureStore()}>
+      <ToDo />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
