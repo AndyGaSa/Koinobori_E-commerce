@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
+import ToDo from './components/ToDo/ToDo';
+import configureStore from './redux/store';
 
 ReactDOM.render(
-  // eslint-disable-next-line react/jsx-filename-extension
   <React.StrictMode>
-    <App />
+    <Provider store={configureStore()}>
+      <ToDo />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
