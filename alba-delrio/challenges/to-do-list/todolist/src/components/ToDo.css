@@ -1,0 +1,28 @@
+.title{
+    display:flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.todo {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.inputList{
+    border:0px;
+}
+
+li{
+    list-style: none;
+}
+
+.updateButton{
+    display:none;
+}
+
+.button{
+    display:none;
+}
