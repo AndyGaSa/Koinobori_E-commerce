@@ -10,23 +10,26 @@ function ToDoList() {
   const [buttonName, setButtonName] = useState('Add');
   let updatingIndex = null;
 
+  function create() {
+    dispatch({
+      type: actionTypes.CREATE_TODO,
+      newToDo
+    });
+  }
+
+  function update() {
+    dispatch({
+      type: actionTypes.UPDATE_TODO,
+      newToDo,
+      toDoIndex: updatingIndex
+    });
+    setButtonName('Add');
+  }
+
   function createUpdate() {
     if (newToDo.trim() === '') return;
 
-    if (buttonName === 'Add') {
-      dispatch({
-        type: actionTypes.CREATE_TODO,
-        newToDo
-      });
-    } else {
-      dispatch({
-        type: actionTypes.UPDATE_TODO,
-        newToDo,
-        toDoIndex: updatingIndex
-      });
-      setButtonName('Add');
-    }
-
+    if (buttonName === 'Add') { create(); } else { update(); }
     setNewToDo('');
   }
 

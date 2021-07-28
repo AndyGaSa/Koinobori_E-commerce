@@ -58,6 +58,7 @@ input {
   height: 2rem;
   border: 2px solid black;
   padding: 1rem;
+  outline: none;
 }
 
 button {
@@ -83,10 +84,15 @@ ul {
   list-style: none;
 }
 
+li {
+  margin-bottom: 0.5rem;
+}
+
 .to-do__task {
   width: 25rem;
   border: 1px solid grey;
   font-size: 0.8rem;
+  border-radius: 0.2rem;
 }
 
 .to-do__task:hover {

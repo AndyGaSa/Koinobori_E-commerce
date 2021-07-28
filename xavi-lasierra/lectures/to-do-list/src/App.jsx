@@ -11,10 +11,8 @@ import './App.css';
 function App() {
   return (
     <Provider store={configureStore()}>
-      <div>
-        <Header />
-        <ToDoList />
-      </div>
+      <Header />
+      <ToDoList />
     </Provider>
 
   );
