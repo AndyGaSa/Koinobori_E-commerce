@@ -46,6 +46,7 @@ h2 {
     .heroes-menu a {
       width: 18%;
       box-sizing: content-box;
+      border-radius: 5px;
     }
   }
   
