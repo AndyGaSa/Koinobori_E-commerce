@@ -1,0 +1,24 @@
+{
+  "name": "tour-of-heroes-vanilla",
+  "version": "1.0.0",
+  "description": "Este challenge nos enseña a modulizar un proyecto simple con principios solid.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --watchAll --collect-coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.0.6"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.7",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  }
+}

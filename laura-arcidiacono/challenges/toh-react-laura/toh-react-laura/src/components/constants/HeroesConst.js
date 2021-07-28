@@ -1,7 +1,9 @@
+// eslint-disable-next-line import/prefer-default-export
 const heroes = [
+<<<<<<< HEAD
   {
     id: 'dc-batman',
-    superhero: 'Batman',
+    name: 'Batman',
     publisher: 'DC Comics',
     alter_ego: 'Bruce Wayne',
     first_appearance: 'Detective Comics #27',
@@ -9,7 +11,7 @@ const heroes = [
   },
   {
     id: 'dc-superman',
-    superhero: 'Superman',
+    name: 'Superman',
     publisher: 'DC Comics',
     alter_ego: 'Kal-El',
     first_appearance: 'Action Comics #1',
@@ -17,7 +19,7 @@ const heroes = [
   },
   {
     id: 'dc-flash',
-    superhero: 'Flash',
+    name: 'Flash',
     publisher: 'DC Comics',
     alter_ego: 'Jay Garrick',
     first_appearance: 'Flash Comics #1',
@@ -25,7 +27,7 @@ const heroes = [
   },
   {
     id: 'dc-green',
-    superhero: 'Green Lantern',
+    name: 'Green Lantern',
     publisher: 'DC Comics',
     alter_ego: 'Alan Scott',
     first_appearance: 'All-American Comics #16',
@@ -33,7 +35,7 @@ const heroes = [
   },
   {
     id: 'dc-arrow',
-    superhero: 'Green Arrow',
+    name: 'Green Arrow',
     publisher: 'DC Comics',
     alter_ego: 'Oliver Queen',
     first_appearance: 'More Fun Comics #73',
@@ -41,7 +43,7 @@ const heroes = [
   },
   {
     id: 'dc-wonder',
-    superhero: 'Wonder Woman',
+    name: 'Wonder Woman',
     publisher: 'DC Comics',
     alter_ego: 'Princess Diana',
     first_appearance: 'All Star Comics #8',
@@ -49,7 +51,7 @@ const heroes = [
   },
   {
     id: 'dc-martian',
-    superhero: 'Martian Manhunter',
+    name: 'Martian Manhunter',
     publisher: 'DC Comics',
     alter_ego: 'J\'onn J\'onzz',
     first_appearance: 'Detective Comics #225',
@@ -57,7 +59,7 @@ const heroes = [
   },
   {
     id: 'dc-robin',
-    superhero: 'Robin/Nightwing',
+    name: 'Robin/Nightwing',
     publisher: 'DC Comics',
     alter_ego: 'Dick Grayson',
     first_appearance: 'Detective Comics #38',
@@ -65,7 +67,7 @@ const heroes = [
   },
   {
     id: 'dc-blue',
-    superhero: 'Blue Beetle',
+    name: 'Blue Beetle',
     publisher: 'DC Comics',
     alter_ego: 'Dan Garret',
     first_appearance: 'Mystery Men Comics #1',
@@ -73,7 +75,7 @@ const heroes = [
   },
   {
     id: 'dc-black',
-    superhero: 'Black Canary',
+    name: 'Black Canary',
     publisher: 'DC Comics',
     alter_ego: 'Dinah Drake',
     first_appearance: 'Flash Comics #86',
@@ -81,7 +83,7 @@ const heroes = [
   },
   {
     id: 'marvel-spider',
-    superhero: 'Spider Man',
+    name: 'Spider Man',
     publisher: 'Marvel Comics',
     alter_ego: 'Peter Parker',
     first_appearance: 'Amazing Fantasy #15',
@@ -89,7 +91,7 @@ const heroes = [
   },
   {
     id: 'marvel-captain',
-    superhero: 'Captain America',
+    name: 'Captain America',
     publisher: 'Marvel Comics',
     alter_ego: 'Steve Rogers',
     first_appearance: 'Captain America Comics #1',
@@ -97,7 +99,7 @@ const heroes = [
   },
   {
     id: 'marvel-iron',
-    superhero: 'Iron Man',
+    name: 'Iron Man',
     publisher: 'Marvel Comics',
     alter_ego: 'Tony Stark',
     first_appearance: 'Tales of Suspense #39',
@@ -105,7 +107,7 @@ const heroes = [
   },
   {
     id: 'marvel-thor',
-    superhero: 'Thor',
+    name: 'Thor',
     publisher: 'Marvel Comics',
     alter_ego: 'Thor Odinson',
     first_appearance: 'Journey into Myster #83',
@@ -113,7 +115,7 @@ const heroes = [
   },
   {
     id: 'marvel-hulk',
-    superhero: 'Hulk',
+    name: 'Hulk',
     publisher: 'Marvel Comics',
     alter_ego: 'Bruce Banner',
     first_appearance: 'The Incredible Hulk #1',
@@ -121,7 +123,7 @@ const heroes = [
   },
   {
     id: 'marvel-wolverine',
-    superhero: 'Wolverine',
+    name: 'Wolverine',
     publisher: 'Marvel Comics',
     alter_ego: 'James Howlett',
     first_appearance: 'The Incredible Hulk #180',
@@ -129,7 +131,7 @@ const heroes = [
   },
   {
     id: 'marvel-daredevil',
-    superhero: 'Daredevil',
+    name: 'Daredevil',
     publisher: 'Marvel Comics',
     alter_ego: 'Matthew Michael Murdock',
     first_appearance: 'Daredevil #1',
@@ -137,7 +139,7 @@ const heroes = [
   },
   {
     id: 'marvel-hawkeye',
-    superhero: 'Hawkeye',
+    name: 'Hawkeye',
     publisher: 'Marvel Comics',
     alter_ego: 'Clinton Francis Barton',
     first_appearance: 'Tales of Suspense #57',
@@ -145,7 +147,7 @@ const heroes = [
   },
   {
     id: 'marvel-cyclops',
-    superhero: 'Cyclops',
+    name: 'Cyclops',
     publisher: 'Marvel Comics',
     alter_ego: 'Scott Summers',
     first_appearance: 'X-Men #1',
@@ -153,10 +155,23 @@ const heroes = [
   },
   {
     id: 'marvel-silver',
-    superhero: 'Silver Surfer',
+    name: 'Silver Surfer',
     publisher: 'Marvel Comics',
     alter_ego: 'Norrin Radd',
     first_appearance: 'The Fantastic Four #48',
     characters: 'Norrin Radd'
-  }
+  }];
+=======
+  { id: 11, name: 'Dr Nice' },
+  { id: 12, name: 'Narco' },
+  { id: 13, name: 'Bombasto' },
+  { id: 14, name: 'Celeritas' },
+  { id: 15, name: 'Magneta' },
+  { id: 16, name: 'RubberMan' },
+  { id: 17, name: 'Dynama' },
+  { id: 18, name: 'Dr IQ' },
+  { id: 19, name: 'Magma' },
+  { id: 20, name: 'Tornado' }
 ];
+>>>>>>> 27a4fc2195c34c8bec54a0fbe172d8108b58e9b8
+export default heroes;
