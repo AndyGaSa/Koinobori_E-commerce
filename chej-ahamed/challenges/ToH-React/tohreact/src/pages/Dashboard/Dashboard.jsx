@@ -2,20 +2,17 @@ import React from 'react';
 import './Dashboard.css';
 import '../../Styles.css';
 import { Link } from 'react-router-dom';
+import heroes from '../../components/constHeroes';
 
 export default function Dashboard() {
-  const heroes = [
-    { id: 12, name: 'Narco' },
-    { id: 13, name: 'Bombasto' },
-    { id: 14, name: 'Celeritas' },
-    { id: 15, name: 'Magneta' }
-  ];
+  const topheroes = heroes.slice(1, 5);
   return (
+
     <>
       <h2>Top Heroes</h2>
       <div className="heroes-menu">
         {
-          heroes.map((hero) => (
+          topheroes.map((hero) => (
             <Link
               to={`/details/${hero.id}`}
               key={hero.id}

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import heroes from '../../components/constHeroes';
 import './Heroes.css';
 import '../../Styles.css';
 
@@ -19,22 +19,19 @@ export default function Heroes() {
         </button>
       </div>
 
-      <ul className="heroes">
-        <li>
-          <a href="/detail/11">
-            <span className="badge">11</span>
-            {' '}
-            Dr Nice
-          </a>
-          <button
-            className="delete"
-            title="delete hero"
-            type="button"
-          >
-            x
+      <ul>
+        {heroes.map((hero) => (
+          <li>
 
-          </button>
-        </li>
+            <span className="hero_id">{hero.id}</span>
+            <button type="button" className="hero_button">
+              {hero.name}
+            </button>
+            <button type="button" className="hero_deleteButton">
+              X
+            </button>
+          </li>
+        ))}
       </ul>
     </>
   );

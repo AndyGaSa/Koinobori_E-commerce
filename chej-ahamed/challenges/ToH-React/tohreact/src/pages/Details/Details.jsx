@@ -7,51 +7,56 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './Details.css';
 import '../../Styles.css';
+import heroes from '../../components/constHeroes';
+import Form from '../Form/Form';
 
 export default function Details() {
-  const heroes = [
-    { id: 11, name: 'Dr Nice' },
-    { id: 12, name: 'Narco' },
-    { id: 13, name: 'Bombasto' },
-    { id: 14, name: 'Celeritas' },
-    { id: 15, name: 'Magneta' },
-    { id: 16, name: 'RubberMan' },
-    { id: 17, name: 'Dynama' },
-    { id: 18, name: 'Dr IQ' },
-    { id: 19, name: 'Magma' },
-    { id: 20, name: 'Tornado' }
-  ];
-
   const { heroId } = useParams();
   const [hero, setHero] = useState();
 
   useEffect(() => {
     if (heroId) {
       localStorage.setItem('heroId', heroId);
-      const foundHero = heroes.find((currentHero) => currentHero.id === +heroId);
+      const foundHero = heroes.find((currentHero) => currentHero.id === heroId);
       setHero(foundHero);
     }
   }, [heroId]);
+  function heroChange(event) {
+    setHero({
+      ...hero,
+      [event.target.name]: event.target.value
 
+    });
+  }
   return (
-    <div>
-      <h2>name Details</h2>
+    <div className="details">
+
       <div>
-        <span>
-          id:
-        </span>
-        {hero?.id}
+        <h2>
+          {hero?.name.toUpperCase()}
+          {' '}
+          Details
+        </h2>
+        <div>
+          <span>
+            id:
+          </span>
+          {hero?.id}
+        </div>
+        <div>
+          <label htmlFor="hero-name">Hero name: </label>
+          <input
+            id="hero-name"
+            placeholder="Hero name"
+            value={hero?.name}
+          />
+        </div>
+        <button type="button">go back</button>
+        <button type="button">save</button>
       </div>
-      <div>
-        <label htmlFor="hero-name">Hero name: </label>
-        <input
-          id="hero-name"
-          placeholder="Hero name"
-          value={hero?.name}
-        />
-      </div>
-      <button type="button">go back</button>
-      <button type="button">save</button>
+
+      <Form hero={hero} heroChange={heroChange} />
     </div>
+
   );
 }

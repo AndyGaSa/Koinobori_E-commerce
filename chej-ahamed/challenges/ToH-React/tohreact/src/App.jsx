@@ -18,15 +18,11 @@ export default function App() {
       <Header />
 
       <Switch>
-        <Redirect path="/dashboard" to="/" />
         <Route path="/" exact component={Dashboard} />
-        <Route path="/dashboard" component={Dashboard} />
-
-        <Route path="/heroes" component={Heroes} />
-
-        <Route path="/details/:heroId" component={Details} />
+        <Redirect path="/Dashboard" to="/" />
+        <Route path="/Heroes" component={Heroes} />
+        <Route path="/Details/:heroId" component={Details} />
         <Route component={NotFound} />
-
       </Switch>
 
     </BrowserRouter>
