@@ -3,8 +3,9 @@
 import React, { useRef, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import './Details.css';
+import heroes from '../../components/constants/HeroesConst';
 
-export default function Detail({ heroes, setHeroes }) {
+export default function Details({ setHeroes }) {
   const { heroId } = useParams();
   const hero = heroes.find(({ id }) => id === +heroId);
 
