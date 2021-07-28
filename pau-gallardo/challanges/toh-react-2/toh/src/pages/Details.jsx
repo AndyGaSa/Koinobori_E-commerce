@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import heroesListConst from '../assets/heroes';
-// import HeroForm from '../components/Header/HeroForm';
+import HeroForm from '../components/Header/HeroForm';
 import './Details.css';
 
 // eslint-disable-next-line react/prop-types
@@ -11,7 +11,6 @@ export default function Details() {
   // eslint-disable-next-line no-console
   const { heroId } = useParams();
   const [hero, setHero] = useState();
-  const [heroName, setHeroName] = useState();
 
   useEffect(() => {
     if (heroId) {
@@ -20,10 +19,17 @@ export default function Details() {
     }
   }, [heroId]);
 
+  function heroChange(event) {
+    setHero({
+      ...hero,
+      [event.target.name]: event.target.value,
+    });
+  }
+
   return (
     <div>
       <h2>
-        {heroName}
+        {hero?.name}
         {' '}
         Details
       </h2>
@@ -34,12 +40,7 @@ export default function Details() {
         {hero?.id}
       </div>
       <div>
-        <label htmlFor="hero-name">Hero name: </label>
-        <input
-          onChange={(event) => setHeroName(event.target.value)}
-          id="hero-name"
-          placeholder="Hero name"
-        />
+        <HeroForm hero={hero} heroChange={heroChange} />
       </div>
       <button type="button">go back</button>
       <button type="button">save</button>

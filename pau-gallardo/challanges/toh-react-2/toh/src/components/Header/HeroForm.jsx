@@ -2,14 +2,15 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-export default function HeroForm() {
+export default function HeroForm({ hero, heroChange }) {
   return (
     <>
       <label htmlFor="hero-name">Hero name: </label>
       <input
-        onChange={(event) => event.target.value}
-        id="hero-name"
+        name="name"
         placeholder="Hero name"
+        value={hero?.name}
+        onChange={heroChange}
       />
     </>
   );
