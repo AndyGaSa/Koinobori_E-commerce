@@ -5,45 +5,17 @@ import { useParams, Link } from 'react-router-dom';
 import './details.css';
 import update from '../../assets/HeroListParsed';
 import heroesList from '../../assets/Heroes.const';
+import HeroesForm from '../../components/HeroesForm';
 
-export default function Details() {
-  const { heroId } = useParams();
-  const [hero, setHero] = useState();
-  useEffect(() => {
-    if (heroId) {
-      localStorage.setItem('heroId', heroId);
-      const foundHero = heroesList.find((currentHero) => currentHero.id === +heroId);
-      setHero(foundHero);
-    }
-  }, [heroId]);
+export default function heroChange(event) {
+  setHeroe({
+    ...hero
+    [event.target.name]: event.target.value,
+  });
 
   return (
     <>
-      <h2>
-        {hero?.name}
-        {' '}
-        details!
-      </h2>
-      <span className="hero-id">
-        Id:
-        {heroId}
-
-      </span>
-      <div>
-        <label>
-          name:
-          <input
-            type="text"
-            placeholder="name"
-            value={hero?.name}
-            onChange={(event) => setHero({
-              ...hero,
-              name: event.target.value,
-            })}
-            className="hero-name"
-          />
-        </label>
-      </div>
+      <HeroesForm hero={hero} heroChange={heroChange} />
       <Link to="/heroes" className="goback">go back</Link>
       <button type="button" onClick={(() => update(hero.name, hero.id))} key="peter">save</button>
     </>
