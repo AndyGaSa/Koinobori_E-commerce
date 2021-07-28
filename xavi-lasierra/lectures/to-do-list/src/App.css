@@ -1,38 +1,45 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Myriad Pro", "Myriad Web", "Tahoma", "Helvetica", "Arial", sans-serif;
+  border-radius: none;
+}
+
+header {
+  height: 4rem;
+  line-height: 4rem;
+  background-color: lightgray;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  height: 2rem;
+  border: 2px solid black;
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  background-color: transparent;
+  border: 2px solid black;
+  border-left: none;
+  width: 3rem;
+  padding: 0.5rem 0;
+  transition: .1s;
+}
+
+button:hover{
+  background-color: black;
+  color: white
+}
+
+button:active {
+  background-color: grey;
+  font-size: 0.75rem;
 }
