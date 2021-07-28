@@ -54,14 +54,13 @@
   
   /* Navigation link styles */
   nav a {
-    padding: 5px 10px;
+    padding: 16px 22px;
     text-decoration: none;
     margin-right: 10px;
     margin-top: 10px;
     display: inline-block;
     background-color: #e8e8e8;
     color: #3d3d3d;
-    border-radius: 4px;
   }
   
   nav a:hover {
