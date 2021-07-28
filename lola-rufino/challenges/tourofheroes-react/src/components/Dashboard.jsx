@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroes from '../heroes.const';
+import heroes from '../heroes.mock';
 import './dashboard.css';
 
 export default function Dashboard() {
