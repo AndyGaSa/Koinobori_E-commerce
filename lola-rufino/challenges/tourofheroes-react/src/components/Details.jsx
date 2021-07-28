@@ -16,6 +16,13 @@ export default function Details() {
     }
   }, [heroId]);
 
+  function heroChange(event) {
+    setHero({
+      ...hero,
+      [event.target.name]: event.target.value
+    });
+  }
+
   return (
     <div>
       <h2>
@@ -27,7 +34,7 @@ export default function Details() {
         ID:
       </span>
       {hero?.id}
-      <HeroForm hero={hero} />
+      <HeroForm hero={hero} heroChange={heroChange} />
       <button type="submit">Go back</button>
       <button type="submit">Save</button>
     </div>
