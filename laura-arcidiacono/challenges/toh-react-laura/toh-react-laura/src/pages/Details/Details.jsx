@@ -1,55 +1,40 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/prop-types */
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
+
 import './Details.css';
+
 import heroes from '../../components/constants/HeroesConst';
 
-export default function Details({ setHeroes }) {
+export default function Details() {
   const { heroId } = useParams();
-  const hero = heroes.find(({ id }) => id === +heroId);
+  const [hero, setHero] = useState();
 
-  const [updatedHeroName, setUpdatedHeroName] = useState(hero.name);
-  const updateNameInput = useRef();
-
-  function updateHero(heroName) {
-    const newProperties = { name: heroName.trim() };
-    const updatedHeroes = heroes.map(
-      (oneHero) => (oneHero.id === hero.id ? { ...oneHero, ...newProperties } : oneHero)
-    );
-    setHeroes(updatedHeroes);
-  }
+  useEffect(() => {
+    if (heroId) {
+      const foundHero = heroes.find((currentHero) => currentHero.id === heroId);
+      setHero(foundHero);
+    }
+  }, [heroId]);
 
   return (
-    <main>
+    <div className="details">
       <h2>
-        {hero.name}
-
+        {hero?.name.toUpperCase()}
+        {' '}
         Details!
       </h2>
-      <p>
+      <div>
         id:
 
         <span>
           {hero?.id}
           {' '}
         </span>
-      </p>
-      <div>
-        <label htmlFor="hero-name">
-          Hero name:
-
-          <input
-            ref={updateNameInput}
-            id="hero-name"
-            placeholder="Hero name"
-            defaultValue={hero.name}
-            onChange={() => setUpdatedHeroName(updateNameInput.current.value)}
-          />
-        </label>
       </div>
       <button type="button" onClick={useHistory().goBack}>go back</button>
       <button type="button" onClick={() => updateHero(updatedHeroName)}>save</button>
-    </main>
+    </div>
   );
 }
