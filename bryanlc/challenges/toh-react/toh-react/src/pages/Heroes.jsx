@@ -3,10 +3,13 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Heroes.css';
+
 import { deleteHero } from '../services/utils';
-// import heroes from '../Heroes';
-const heroes = JSON.parse(localStorage.getItem('heroes'));
+// const heroes = JSON.parse(localStorage.getItem('heroes'));
+import heroes from '../Heroes';
+
+import './Heroes.css';
+
 export default function Heroes() {
   return (
     <div>
