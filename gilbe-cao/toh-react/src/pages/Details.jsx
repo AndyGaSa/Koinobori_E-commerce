@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -17,6 +18,13 @@ export default function Details() {
     }
   }, [heroId]);
 
+  function heroChange(event) {
+    setHero({
+      ...hero,
+      [event.target.name]: event.target.value,
+    });
+  }
+
   return (
     <div className="details">
       <h2>
@@ -30,7 +38,7 @@ export default function Details() {
         </span>
         {hero?.id}
       </div>
-      <HeroForm hero={hero} />
+      <HeroForm hero={hero} heroChange={heroChange} />
       <button type="button">go back</button>
       <button type="button">save</button>
     </div>
