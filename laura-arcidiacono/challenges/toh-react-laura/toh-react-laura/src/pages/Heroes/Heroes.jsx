@@ -24,7 +24,7 @@ export default function Heroes() {
         {heroes.map((hero) => (
           <li>
             <Link
-              to="/details"
+              to={`/details/${hero.id}`}
               key={hero.id}
             >
               <span className="badge">{hero.id}</span>
