@@ -1,11 +1,20 @@
 /* HeroDetailComponent's private CSS styles */
 label {
+  display: flex;
+    color: #435960;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .hero-id{
     color: #435960;
     font-weight: bold;
   }
+ 
   input {
     font-size: 1em;
     padding: .5rem;
+    width: 90%;
   }
   button {
     margin-top: 20px;
