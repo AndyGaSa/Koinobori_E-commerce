@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import heroes from '../constants/heroes.mock';
 
-function HeroForm({ hero }) {
+// eslint-disable-next-line react/prop-types
+export default function HeroForm({ hero }) {
   const [selectedHero, setSelectHero] = useState(hero);
 
   return (

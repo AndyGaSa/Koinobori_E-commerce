@@ -74,12 +74,7 @@
   
   button.delete {
     position: absolute;
-<<<<<<< HEAD
     left: 190px;
-=======
-    left: 210px;
-    top: 5px;
->>>>>>> 1fda93b0ad71b02840dcfd5efba7408ab955bcb6
     background-color: white;
     color:  #525252;
     font-size: 1.1rem;

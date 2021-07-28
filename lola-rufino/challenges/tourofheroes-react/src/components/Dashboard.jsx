@@ -11,7 +11,7 @@ export default function Dashboard() {
         {
           heroes.slice(1, 5).map((hero) => (
             <Link to={`/details/${hero.id}`} key={hero.id}>
-              {hero.name}
+              {hero.superhero}
             </Link>
           ))
         }

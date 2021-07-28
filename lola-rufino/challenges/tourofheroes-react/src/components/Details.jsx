@@ -19,7 +19,7 @@ export default function Details() {
   return (
     <div>
       <h2>
-        {hero?.name}
+        {hero?.superhero}
         {' '}
         name details!
       </h2>
@@ -28,7 +28,6 @@ export default function Details() {
       </span>
       {hero?.id}
       <HeroForm hero={hero} />
-      <input type="text" id="hero__name" />
       <button type="submit">Go back</button>
       <button type="submit">Save</button>
     </div>

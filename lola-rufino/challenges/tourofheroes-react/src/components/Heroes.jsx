@@ -21,7 +21,7 @@ export default function Heroes() {
           <li>
             <Link to={`/details/${hero.id}`} key={hero.id}>
               <span className="badge">{hero.id}</span>
-              {hero.name}
+              {hero.superhero}
             </Link>
             <button type="button" className="delete">x</button>
           </li>
