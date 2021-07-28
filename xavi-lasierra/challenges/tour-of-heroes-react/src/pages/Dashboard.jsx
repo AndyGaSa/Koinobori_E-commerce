@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import './dashboard.css';
 
 function Dashboard() {
-  const heroes = useSelector((store) => store.heroes).slice(1, 4);
+  const heroes = useSelector((store) => store.heroes).slice(1, 5);
 
   return (
     <main>

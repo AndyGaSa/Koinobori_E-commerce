@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 
-function HeroFilter({ heroes, setListHeroes }) {
+function HeroFilter({ heroes, setFilteredHeroes }) {
   const [filter, setFilter] = useState('');
 
   function filterHeroes(filterValue) {
     const filteredHeroes = heroes.filter(({ id, name }) => (id + name.toLowerCase())
       .includes(filterValue.trim().toLowerCase()));
-    setListHeroes(filteredHeroes);
+    setFilteredHeroes(filteredHeroes);
   }
 
   return (

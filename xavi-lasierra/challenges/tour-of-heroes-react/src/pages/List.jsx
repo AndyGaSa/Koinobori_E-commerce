@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -11,6 +11,7 @@ import './list.css';
 
 function List() {
   const heroes = useSelector((store) => store.heroes);
+  const [filteredHeroes, setFilteredHeroes] = useState(heroes);
   const dispatch = useDispatch();
 
   return (
@@ -18,9 +19,9 @@ function List() {
       <h2>My Heroes</h2>
       <HeroCreate />
       <br />
-      <HeroFilter heroes={heroes} />
+      <HeroFilter heroes={heroes} setFilteredHeroes={setFilteredHeroes} />
       <ul className="heroes">
-        {heroes.map((hero) => (
+        {filteredHeroes.map((hero) => (
           <li key={hero.id}>
             <Link to={`/detail/${hero.id}`}>
               <span className="badge">{hero.id}</span>
