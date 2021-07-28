@@ -4,10 +4,10 @@ import heroeList from '../../assets/Heroes.const';
 import './heroes.css';
 
 export default function Heroes() {
-  const [heroes, setHeroes] = useState(JSON.parse(localStorage.getItem('heroes')));
+  const [heroes, setHeroes] = useState(JSON.parse(localStorage.getItem('heroList')));
   function deleteHero(id) {
     const deletedHero = heroeList.filter((hero) => hero.id !== id);
-    localStorage.setItem('heroes', JSON.stringify(deleteHero));
+    localStorage.setItem('heroList', JSON.stringify(deleteHero));
     setHeroes(deletedHero);
   }
   return (
