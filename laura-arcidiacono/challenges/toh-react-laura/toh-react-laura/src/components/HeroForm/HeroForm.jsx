@@ -1,70 +1,52 @@
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
+import React from 'react';
 
-import heroes from '../constants/HeroesConst';
-
-export default function HeroForm() {
-  const [selectedHero, setSelectHero] = useState(hero);
-
+export default function HeroForm({ hero, heroChange }) {
   return (
     <div>
-      <label htmlFor="hero__id">
-        Hero id
-        <input
-          type="text"
-          id="hero-id"
-          placeholder="Hero id"
-          defaultValue={hero.id}
-        />
-      </label>
       <label htmlFor="hero__name">
         Hero name
         <input
-          type="text"
-          name="hero__name"
-          id="hero-name"
+          name="name"
           placeholder="Hero name"
-          defaultValue={hero.name}
-          // onChange=""
+          value={hero?.name}
+          onChange={heroChange}
         />
       </label>
       <label htmlFor="hero__publisher">
         Hero publisher
         <input
-          type="text"
-          name="hero__publisher"
-          id="hero-publisher"
+          name="publisher"
           placeholder="Hero publisher"
-          defaultValue={hero.publisher}
-          // onChange=""
+          value={hero?.publisher}
+          onChange={heroChange}
         />
       </label>
       <label htmlFor="hero__alter_ego">
         Hero alter_ego
         <input
-          type="text"
-          name="hero__alter_ego"
-          id="hero__alter_ego"
-          placeholder={hero.alter_ego}
-          defaultValue={hero.alter_ego}
+          name="alter_ego"
+          placeholder="Alter ego"
+          value={hero?.alter_ego}
+          onChange={heroChange}
         />
       </label>
-      <label htmlFor="first_apperance">
+      <label htmlFor="first_appearance">
         Hero first_appearance
         <input
-          type="text"
-          name="first_apperance"
-          id="hero-first_apperance"
+          name="first_appearance"
           placeholder={hero.first_appearance}
-          defaultValue={hero.first_appearance}
+          value={hero?.first_appearance}
+          onChange={heroChange}
         />
       </label>
       <label htmlFor="characters">
         Hero characters
         <input
-          type="text"
           name="characters"
-          id="characters"
           placeholder={hero.characters}
+          value={hero?.characters}
+          onChange={heroChange}
         />
       </label>
 
