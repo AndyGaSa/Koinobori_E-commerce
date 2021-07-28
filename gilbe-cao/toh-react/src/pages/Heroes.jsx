@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import heroes from '../constants/heroes.mock';
 import './Heroes.css';
 
 export default function Heroes() {
@@ -19,35 +20,22 @@ export default function Heroes() {
       </div>
 
       <ul className="heroes">
-        <li>
-          <Link to="/detail/11">
-            <span className="badge">11</span>
-            {' '}
-            Dr Nice
-          </Link>
-          <button
-            className="delete"
-            title="delete hero"
-            type="button"
-          >
-            x
-          </button>
-        </li>
-        <li>
-          <Link to="/detail/12">
-            <span className="badge">12</span>
-            {' '}
-            Narco
-          </Link>
-          <button
-            className="delete"
-            title="delete hero"
-            type="button"
-          >
-            x
-
-          </button>
-        </li>
+        {heroes.map((hero) => (
+          <li>
+            <Link to={`/details/${hero.id}`}>
+              <span className="badge">{hero.id}</span>
+              {' '}
+              {hero.name}
+            </Link>
+            <button
+              className="delete"
+              title="delete hero"
+              type="button"
+            >
+              x
+            </button>
+          </li>
+        ))}
       </ul>
     </>
   );
