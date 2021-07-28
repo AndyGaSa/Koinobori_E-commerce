@@ -20,7 +20,7 @@ export default function Heroes() {
 
       <ul className="heroes">
         <li>
-          <Link href="/detail/11">
+          <Link to="/detail/11">
             <span className="badge">11</span>
             {' '}
             Dr Nice
@@ -31,11 +31,10 @@ export default function Heroes() {
             type="button"
           >
             x
-
           </button>
         </li>
         <li>
-          <Link href="/detail/12">
+          <Link to="/detail/12">
             <span className="badge">12</span>
             {' '}
             Narco
