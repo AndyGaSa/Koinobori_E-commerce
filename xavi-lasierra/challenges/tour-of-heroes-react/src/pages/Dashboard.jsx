@@ -2,10 +2,13 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import './dashboard.css';
 
-function Dashboard({ heroes }) {
+function Dashboard() {
+  const heroes = useSelector((store) => store.heroes).splice(1, 4);
+
   return (
     <main>
       <h2>Top Heroes</h2>

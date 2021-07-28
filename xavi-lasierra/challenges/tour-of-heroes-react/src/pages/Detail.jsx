@@ -1,26 +1,23 @@
 /* eslint-disable camelcase */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useHistory } from 'react-router-dom';
 
 import HeroForm from '../components/HeroForm';
+import actionTypes from '../redux/actions/action.types';
 
 import './detail.css';
 
-function Detail({ heroes, setHeroes }) {
+function Detail() {
+  const dispatch = useDispatch();
   const { heroId } = useParams();
 
-  const [currentHero, setCurrentHero] = useState(heroes.find(({ id }) => id === heroId));
+  const currentHero = useSelector((store) => store.heroes).find(({ id }) => id === heroId);
+  const [updatedHero, setUpdatedHero] = useState(currentHero);
 
   function modifyHero(event) {
-    setCurrentHero({ ...currentHero, [event.target.name]: event.target.value.trim() });
-  }
-
-  function updateHero(newHero) {
-    const updatedHeroes = heroes
-      .map((oneHero) => (oneHero.id === currentHero.id
-        ? { ...oneHero, ...newHero } : oneHero));
-    setHeroes(updatedHeroes);
+    setUpdatedHero({ ...currentHero, [event.target.name]: event.target.value.trim() });
   }
 
   return (
@@ -35,9 +32,18 @@ function Detail({ heroes, setHeroes }) {
         {' '}
         <span>{currentHero.id}</span>
       </p>
-      <HeroForm currentHero={currentHero} modifyHero={modifyHero} />
+      <HeroForm currentHero={updatedHero} modifyHero={modifyHero} />
       <button type="button" onClick={useHistory().goBack}>go back</button>
-      <button type="button" onClick={() => updateHero(currentHero)}>save</button>
+      <button
+        type="button"
+        onClick={() => dispatch({
+          type: actionTypes.UPDATE_HERO,
+          updatedHero
+        })}
+      >
+        save
+
+      </button>
     </main>
   );
 }
