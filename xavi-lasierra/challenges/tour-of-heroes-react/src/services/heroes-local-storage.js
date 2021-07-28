@@ -1,4 +1,4 @@
-import heroesPredefined from '../heroes-const';
+import heroesPredefined from '../heroesPredefined';
 
 function getMaxId(heroesObject) {
   return Math.max(...heroesObject.map((hero) => +hero.id));
