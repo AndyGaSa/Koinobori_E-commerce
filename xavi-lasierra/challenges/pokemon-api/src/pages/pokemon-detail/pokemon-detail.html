@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8b80b61e9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="./pokemon-detail.css">
+    <title>Pokemon detail</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__logo" src="https://images.wikidexcdn.net/mwuploads/esssbwiki/7/77/latest/20111028181540/TituloUniversoPok%C3%A9mon.png" alt="Pokemon logo">
+        <nav class="header__navigator" aria-label="Navigation menu">
+            <a href="../pokemon-list/pokemon-list.html">Pokemon List</a>
+            <a href="../pokemon-favourites/pokemon-favourites.html">My Pokemons</a>
+        </nav>
+    </header>
+    <main>
+        <nav class="pokemon__navigator" aria-label="Navigation menu">
+            <a id="navigation__previous" class="navigation__previous" href=""><i class="fas fa-angle-left fa-2x"></i></a>
+            <a id="navigation__next" class="navigation__next" herf=""><i class="fas fa-angle-right fa-2x"></i></a>
+        </nav>
+        <article class="pokemon__information">
+            <section>
+                <h2 class="pokemon__title"><span id="pokemon__id"></span> <span id="pokemon__name"></span></h2>
+                <div id="pokemon__create" class="delete">
+                    <span class="pokemon__title" id="pokemon__id-input"></span> 
+                    <input id="pokemon__name-input" type="text" value="">
+                    <button id="pokemon__save" onclick="saveChanges()">Save</button>
+                </div>
+            </section>
+            <section id ="pokemon__main-information" class="pokemon__main-information">
+                <img class="pokemon__photo" id="pokemon__photo" src="" alt="" onmouseover="shinyPhoto()" onmouseout="normalPhoto()">
+                <aside class="pokemon__resume">
+                    <div id="pokemon__resume__default" class="pokemon__resume__default">
+                        <p class="pokemon__types" id="pokemon__types"></p>
+                        <div class="pokemon__measures">
+                            <p>Height: <span id="pokemon__height"></span></p>
+                            <p>Weight: <span id="pokemon__weight"></span></p>
+                        </div>
+                        <div class="pokemon__abilities">
+                            <p>Abilities:</p>
+                            <ul id="pokemon__abilities">
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="pokemon__resume__ability" class="delete">
+                        <button onclick="closeAbility()"><i class="fas fa-times fa-lg"></i></button>
+                        <h3 id="pokemon__resume__ability__title"></h3>
+                        <p id="pokemon__resume__ability__description"></p>
+                    </div>
+                </aside>
+            </section>
+            <section class="pokemon__stats">
+                <h3>Stats: </h3>
+                <ul id="pokemon__stats">
+                </ul>
+            </section>
+            <section class="pokemon__moves">
+                <h3>Moves: </h3>
+                <table id="pokemon__moves" aria-describedby="List of this pokemon moves">
+                </table>
+            </section>
+        </article>
+    </main>
+
+    <script src="../../small-functions.js"></script>
+    <script src="../../services/pokemon.service.js"></script>
+    <script src="./transform-url-query-to-object.js"></script>
+    <script src="./pokemon-detail.class.js"></script>
+    <script src="./pokemon-detail.js"></script>
+</body>
+</html>
