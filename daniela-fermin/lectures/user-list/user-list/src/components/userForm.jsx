@@ -1,9 +1,8 @@
 import React from 'react';
 
-export default function UserForm() {
+export default function UserForm(user, userChange) {
   return (
     <div>
-
       <span>
         Id:
       </span>
