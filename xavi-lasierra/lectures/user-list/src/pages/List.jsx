@@ -32,7 +32,7 @@ function List() {
         {users.map((user) => (
           <li key={user.id}>
             <Link to={`/detail/${user.id}`}>
-              <span>
+              <span className="users__id">
                 #
                 {user.id}
               </span>

@@ -18,21 +18,26 @@ header {
 
 .header__navigation-button {
   color: white;
-  font-size: 1.5rem;
-  padding: 0 0.5rem;
+  font-size: 1rem;
+  text-align: center;
   border-right: 2px solid white;
   border-left: 2px solid white;
+  height: 1.5rem;
+  width: 3rem;
+  line-height: 1.5rem;
   transition: .2s;
 }
 
 .header__navigation-button:hover {
   background-color: lightgray;
   color: #212121;
+  line-height: 1.75rem;
+  height: 1.75rem;
 }
 
 .header__navigation-button:active {
   background-color: white;
-  font-size: 1.45rem;
+  font-size: 0.9rem;
 }
 
 a {

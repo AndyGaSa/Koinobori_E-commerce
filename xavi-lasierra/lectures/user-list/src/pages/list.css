@@ -1,3 +1,29 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.users__list {
+    width: 80vw;
+    max-width: 80rem;
+    list-style: none;
+}
+
+.users__list li {
+    background-color: #F4F4F4;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
 .users__list li a {
     color: black;
 }
+
+.users__id {
+    color: grey;
+    margin-right: 0.5rem;
+}
+
