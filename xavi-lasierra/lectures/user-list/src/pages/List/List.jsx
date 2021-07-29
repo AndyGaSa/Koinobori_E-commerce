@@ -37,7 +37,7 @@ function List() {
       </form>
       <ul className="users__list">
         {users.map((user) => (
-          <li key={user.id}>
+          <li data-testid={`${user.id}-user`} key={user.id}>
             <Link to={`/detail/${user.id}`}>
               <span className="users__id">
                 #

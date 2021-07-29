@@ -64,7 +64,7 @@ function UserForm({
         <label htmlFor="bs">
           Business Services:
           <br />
-          <input name="bs" type="text" value={user?.company?.bs} onChange={changeCompanyUser} />
+          <input data-testid={`${user?.username}-bs`} name="bs" type="text" value={user?.company?.bs} onChange={changeCompanyUser} />
         </label>
       </div>
     </form>
