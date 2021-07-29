@@ -9,7 +9,7 @@ import configureStore from './redux/store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={configureStore}>
+    <Provider store={configureStore()}>
       <ToDoList />
     </Provider>
   </React.StrictMode>,

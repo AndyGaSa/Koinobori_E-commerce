@@ -16,7 +16,7 @@ export default function todosReducer(toDoList = [], action) {
 
       break;
     case actionTypes.DELETE_TODO:
-      newToDoList = toDoList.filter((toDo) => toDo === action.toDo);
+      newToDoList = toDoList.filter((toDo) => toDo !== action.toDo);
 
       break;
 
