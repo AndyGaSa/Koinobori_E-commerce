@@ -18,9 +18,12 @@ export default function Details() {
 
   return (
     <>
-      <label htmlFor="">
-        <input type="text" />
-      </label>
+      <h2>
+        {user.name}
+        {' '}
+        Details
+      </h2>
+
     </>
 
   );
