@@ -16,7 +16,7 @@ function render(
   // eslint-disable-next-line react/prop-types
   function Wrapper({ children }) {
     return (
-      <Provider store={configureStore(initialState)}>
+      <Provider store={configureStore()}>
         <BrowserRouter>
           {children}
         </BrowserRouter>

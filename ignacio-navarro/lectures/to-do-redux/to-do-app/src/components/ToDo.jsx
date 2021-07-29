@@ -28,6 +28,7 @@ export default function ToDo() {
       <input type="text" name="addTask" value={titleValue} onChange={((event) => setTitleValue(event.target.value))} placeholder="Add Task" />
       <input type="text" name="addTask" value={descriptionValue} onChange={((event) => setDescriptionValue(event.target.value))} placeholder="Add Description" />
       <button
+        data-testid="btn-create"
         className="ToDo__button"
         type="button"
         onClick={create}

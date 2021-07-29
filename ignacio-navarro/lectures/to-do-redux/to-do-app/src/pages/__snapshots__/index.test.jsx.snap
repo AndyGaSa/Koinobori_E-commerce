@@ -31,6 +31,7 @@ Object {
           />
           <button
             class="ToDo__button"
+            data-testid="btn-create"
             type="button"
           >
             Add
@@ -77,6 +78,7 @@ Object {
         />
         <button
           class="ToDo__button"
+          data-testid="btn-create"
           type="button"
         >
           Add
