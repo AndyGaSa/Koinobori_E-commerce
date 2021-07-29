@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import actionTypes from '../redux/actions/action.types';
 
+import './list.css';
+
 function List() {
   const dispatch = useDispatch();
   const users = useSelector((store) => store.users);
@@ -26,11 +28,14 @@ function List() {
           Create
         </button>
       </form>
-      <ul>
+      <ul className="users__list">
         {users.map((user) => (
           <li key={user.id}>
             <Link to={`/detail/${user.id}`}>
-              <span>{user.id}</span>
+              <span>
+                #
+                {user.id}
+              </span>
               <span>{user.username}</span>
             </Link>
             <button
