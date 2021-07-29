@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Myriad Pro", "Myriad Web", "Tahoma", "Helvetica", "Arial", sans-serif;
+    list-style: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: #313131;
+    height: 4rem;
+}
+
+.header__logo {
+    width: 8rem;
+}
+
+.header__navigator {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header__navigator a {
+    display: flex;
+    align-items: center;
+    margin: 0.2rem;
+    padding: 0.25rem;
+    height: 80%;
+    line-height: 3.5rem;
+    border-right: 0.1rem solid white;
+    border-left: 0.1rem solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: .2s;
+}
+
+.header__navigator a:hover {
+    background-color: lightgray;
+    color: #313131;
+    height: 100%;
+}
+
+.main-title {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.75rem;
+}
+
+.grass {
+    background-color: #9BCC50;
+    font-weight: 600;
+}
+
+.poison {
+    background-color: #B97FC9;
+    font-weight: 600;
+}
+
+.fire {
+    background-color: #FE7E25;
+    font-weight: 600;
+}
+
+.flying {
+    background-color: lightblue;
+    font-weight: 600;
+}
+
+.water {
+    background-color: #4592C4;
+    font-weight: 600;
+}
+
+.bug {
+    background-color: #729F3F;
+    font-weight: 600;
+}
+
+.normal {
+    background-color: #A4ACAF;
+    font-weight: 600;
+}
+
+.electric {
+    background-color: #EED535;
+    font-weight: 600;
+}
+
+.ground {
+    background-color: #DCA85C;
+    font-weight: 600;
+}
+
+.fairy {
+    background-color: #FDB9E9;
+    font-weight: 600;
+}
+
+.fighting {
+    background-color: #D56724;
+    font-weight: 600;
+}
+
+.psychic {
+    background-color: #F366B9;
+    font-weight: 600;
+}
+
+.steel {
+    background-color: #9EB7B8;
+    font-weight: 600;
+}
+
+.rock {
+    background-color: #A38C21;
+    font-weight: 600;
+}
+
+.ice {
+    background-color: #51C4E7;
+    font-weight: 600;
+}
+
+.ghost {
+    background-color: #7B62A3;
+    font-weight: 600;
+}
+
+.dragon {
+    background-color: #F16E57;
+    font-weight: 600;
+}
+
+.hide {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.delete {
+    pointer-events: none;
+    display: none;
+}
+
