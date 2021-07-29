@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import actionTypes from '../redux/actions/action.types';
+// eslint-disable-next-line no-unused-vars
+import styles from '../styles/ToDo.css';
 
 function ToDo() {
   const toDos = useSelector((store) => store.toDos);
@@ -34,27 +36,29 @@ function ToDo() {
   return (
     <>
       <h1>ToDo List</h1>
+      <div className="main-container">
 
-      <input
-        type="text"
-        name="todo"
-        value={inputValue}
-        onChange={((event) => setInputValue(event.target.value))}
-      />
+        <input
+          type="text"
+          name="todo"
+          value={inputValue}
+          onChange={((event) => setInputValue(event.target.value))}
+        />
 
-      <button
-        type="button"
-        onClick={create}
-      >
-        create
-      </button>
-      <button
-        type="button"
-        onClick={update}
-      >
-        update
-      </button>
-      <ul>
+        <button
+          type="button"
+          onClick={create}
+        >
+          Add Task
+        </button>
+        <button
+          type="button"
+          onClick={update}
+        >
+          Update Task
+        </button>
+      </div>
+      <ul className="todo-list">
         {
             toDos.map((toDo, toDoIndex) => (
               <li>
