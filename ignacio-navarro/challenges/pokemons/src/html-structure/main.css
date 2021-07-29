@@ -1,0 +1,126 @@
+body{
+    background-image: url(../assets/pokedex-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 380px;
+    background-position: center;
+    background-position-y: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: retrograde;
+}
+@font-face{
+    font-family: "retrograde";
+    src: url("../assets/Retrograde-Font/Retrograde-Regular.otf") format("Opentype");
+  }
+header {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 380px;
+    transform: translate(10px, 25px);
+}
+main{
+    height: 500px;
+    width: 380px;
+}
+h1,h2,p{
+    margin-block-end: 0.23em;
+    margin-block-start: 0.23em
+}
+footer{
+    width: 380px;
+}
+.header__reset-button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 10px;
+    text-decoration: none;
+    font-family: retrograde;
+    background-color: transparent;
+    border: none;
+}
+.main__screen-stats{
+    padding: 20px;
+}
+.pokemon-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 40px;
+    margin-top: 80px;
+    width: 170px;
+}
+.screen__top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.screen__pokemon-pic-container {
+    margin-top: 70px;
+    margin-left: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen__pokemon-picture{
+    transform: scale(2);
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.screen__pokemon-description{
+    width: 300px;
+    font-size: 0.9em;
+    margin-left: 35px;
+    transform: translate(0px, -40px);
+}
+
+#footer__details-container{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 11px;
+}
+.footer__input{
+    height: 30px;
+    width: 184px;
+    background-color: transparent;
+    border: none;
+    font-family: 'retrograde';
+        margin-left: 30px;
+        margin-top: 6px;
+}
+.footer__create-link {
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    color: black;
+    margin-left: 150px;
+}
+.footer__details-button--next,
+.footer__details-button--previous{
+    background-color: transparent;
+    width: 36px;
+    border: none;
+}
+
+.footer__details-button--go{
+        margin-left: 13px;
+        font-family: 'retrograde';
+        background-color: transparent;
+        margin-top: 7px;
+        font-size: 1em;
+        border: none;
+}
+.footer__filter-link {
+       height: 40px;
+       width: 80px;
+       text-decoration: none;
+       color: black;
+       margin-left: 44px;
+}
+
