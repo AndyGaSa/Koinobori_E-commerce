@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable react/prop-types */
 import React from 'react';
 
@@ -8,8 +9,48 @@ export default function HeroForm({ hero, heroChange }) {
         Hero name:
         <input
           name="name"
+          data-testid="input-publisher"
           placeholder="Hero name"
           value={hero?.name}
+          onChange={heroChange}
+        />
+      </label>
+
+      <label htmlFor="hero-name">
+        Publisher:
+        <input
+          name="publisher"
+          placeholder="Hero publisher"
+          value={hero?.publisher}
+          onChange={heroChange}
+        />
+      </label>
+
+      <label htmlFor="hero-name">
+        Hero Alter Ego:
+        <input
+          name="alter_ego"
+          placeholder="Hero Alter Ego"
+          value={hero?.alter_ego}
+          onChange={heroChange}
+        />
+      </label>
+
+      <label htmlFor="hero-name">
+        Hero First Appearance:
+        <input
+          name="first_appearance"
+          placeholder="Hero First Appearance"
+          value={hero?.first_appearance}
+          onChange={heroChange}
+        />
+      </label>
+      <label htmlFor="hero-name">
+        Hero Characters:
+        <input
+          name="characters"
+          placeholder="Hero Characters"
+          value={hero?.characters}
           onChange={heroChange}
         />
       </label>

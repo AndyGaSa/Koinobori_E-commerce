@@ -1,18 +1,19 @@
 import React from 'react';
 import {
-  BrowserRouter, Switch, Route, Redirect
+  BrowserRouter, Route, Redirect, Switch
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
-
-import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
-import Details from './pages/Details';
 import Heroes from './pages/Heroes';
+import Header from './components/Header';
+import Details from './pages/Details';
+import configureStore from './redux/store';
+
 import NotFound from './pages/NotFound';
 
 import './App.css';
 
-export default function App() {
+function App() {
   return (
     <Provider store={configureStore()}>
       <BrowserRouter>
@@ -28,3 +29,5 @@ export default function App() {
     </Provider>
   );
 }
+
+export default App;

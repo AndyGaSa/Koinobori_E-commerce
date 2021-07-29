@@ -8,6 +8,6 @@ describe('Given a Header component', () => {
     render(
       <Header />
     );
-    expect(screen.getByText(/Tour/i)).toBeInTheDocument();
+    expect(screen.getByText(/Dashboard/i)).toBeInTheDocument();
   });
 });
