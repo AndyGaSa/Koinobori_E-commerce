@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/store';
 import UsersView from './pages/UsersView';
+import DetailsView from './pages/DetailsView';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={configureStore()}>
-      <UsersView />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={UsersView} />
+          <Route path="/DetailsView/:userId" component={DetailsView} />
+        </Switch>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
