@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
+import ToDo from './App';
 import reportWebVitals from './reportWebVitals';
+import configureStore from './Redux/store/index';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={configureStore()}>
+      <ToDo />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
