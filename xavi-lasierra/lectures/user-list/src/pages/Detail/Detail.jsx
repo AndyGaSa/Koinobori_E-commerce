@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import UserForm from '../components/UserForm';
+import UserForm from '../../components/UserForm/UserForm';
 
-import actionTypes from '../redux/actions/action.types';
+import actionTypes from '../../redux/actions/action.types';
+import './detail.css';
 
 function Detail() {
   const dispatch = useDispatch();
@@ -20,14 +21,24 @@ function Detail() {
     setUser({ ...user, address: { [event.target.name]: event.target.value } });
   }
 
+  function changeCompanyUser(event) {
+    setUser({ ...user, company: { [event.target.name]: event.target.value } });
+  }
+
   return (
     <main>
       <h2>
         <span>{`#${user.id}`}</span>
         {user.username}
       </h2>
-      <UserForm user={user} changeUser={changeUser} changeAddressUser={changeAddressUser} />
+      <UserForm
+        user={user}
+        changeUser={changeUser}
+        changeAddressUser={changeAddressUser}
+        changeCompanyUser={changeCompanyUser}
+      />
       <button
+        className="user__update"
         type="button"
         onClick={() => dispatch({
           type: actionTypes.UPDATE_USER,

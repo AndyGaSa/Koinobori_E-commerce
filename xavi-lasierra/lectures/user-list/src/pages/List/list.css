@@ -8,6 +8,9 @@ main {
     padding: 2rem;
     margin-bottom: 1rem;
     font-size: 0.8rem;
+    position: relative;
+    margin: auto;
+    width: 23rem;
 }
 
 .users__create input {
@@ -29,6 +32,8 @@ main {
     border: 2px solid black;
     border-left: none;
     font-size: 0.9rem;
+    position: absolute;
+    bottom: 2rem;
     transition: .2s;
 }
 

@@ -4,10 +4,10 @@ import {
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import Header from './components/Header';
-import List from './pages/List';
-import Detail from './pages/Detail';
-import NotFound from './pages/NotFound';
+import Header from './components/Header/Header';
+import List from './pages/List/List';
+import Detail from './pages/Detail/Detail';
+import NotFound from './pages/NotFound/NotFound';
 
 import configureStore from './redux/store';
 import './App.css';

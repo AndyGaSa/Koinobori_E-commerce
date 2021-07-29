@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import actionTypes from '../redux/actions/action.types';
+import actionTypes from '../../redux/actions/action.types';
 
 import './list.css';
 
