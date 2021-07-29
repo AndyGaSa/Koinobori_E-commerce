@@ -1,19 +1,19 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Users from '../constants/heroes.mock';
 
-export default function Dashboard() {
+function Lista() {
+  const users = useSelector((store) => store.users);
   return (
     <>
       <h1>User List</h1>
       <ul>
         {
-              Users.map((user) => (
-                <li>
+              users.map((user) => (
+                <li key={user.name}>
                   <Link to={`/detail/${user.id}`}>
                     <span>{user?.name}</span>
                   </Link>
-
                 </li>
               ))
           }
@@ -21,3 +21,5 @@ export default function Dashboard() {
     </>
   );
 }
+
+export default Lista;
