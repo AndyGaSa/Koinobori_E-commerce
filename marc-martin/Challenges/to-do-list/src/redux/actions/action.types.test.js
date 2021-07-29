@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-filename-extension */
+import React from 'react';
 import actionTypes from './actions.types';
 
 describe('Given an action types object', () => {

@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-filename-extension */
+import React from 'react';
 import todosReducer from './toDosReducer';
 
 describe('Given a todos reducer function', () => {
