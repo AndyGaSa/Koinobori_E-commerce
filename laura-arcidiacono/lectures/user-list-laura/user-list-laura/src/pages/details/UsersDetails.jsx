@@ -26,31 +26,53 @@ export default function UsersDetails() {
   }
 
   return (
-    <div className="details">
-      <h2>
+    <main>
+      <div className="details">
+        <h2>
 
-        {user?.name.toUpperCase()}
+          {user?.name.toUpperCase()}
 
-        Details
-      </h2>
-      <div>
-        <span>
-          id:
-        </span>
-        {user?.id}
+          Details
+        </h2>
+        <div className="details__id">
+          <span>
+            id:
+          </span>
+          {user?.id}
+        </div>
+        <div className="details__data">
+          <span>
+            Email:
+            {' '}
+            {user?.email}
+
+          </span>
+          <span>
+            Phone:
+            {' '}
+            {user?.phone}
+
+          </span>
+          <span>
+            Website:
+            {' '}
+            {user?.website}
+
+          </span>
+        </div>
+        <UserForm user={user} userChange={userChange} />
+        <button type="button">Volver</button>
+        <button
+          type="button"
+          onClick={() => dispatch({
+            type: actionTypes.UPDATE_USER,
+            user
+          })}
+        >
+          Guardar
+        </button>
+
       </div>
-      <UserForm user={user} userChange={userChange} />
-      <button type="button">Volver</button>
-      <button
-        type="button"
-        onClick={() => dispatch({
-          type: actionTypes.UPDATE_USER,
-          user
-        })}
-      >
-        Guardar
-      </button>
-
-    </div>
+    </main>
   );
 }
