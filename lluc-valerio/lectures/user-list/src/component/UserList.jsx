@@ -1,19 +1,30 @@
 /* eslint-disable no-alert */
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 // import mockUsers from '../constants/users.mock';
+// import UserForm from './UserForm';
 import actionTypes from '../redux/actions/action.types';
 
 export default function UserList() {
   const dispatch = useDispatch();
   const users = useSelector((store) => store.users);
   const [inputValue, setInputValue] = useState('');
+  // const [user, setUser] = useState();
 
-  // const [usersList, setUsersList] = useState(users);
+  // eslint-disable-next-line no-unused-vars
+  // const details = <UserForm user={user} userChange={userChange} />;
+
+  // function userChange(event) {
+  //   setUser({
+  //     ...user,
+  //     [event.target.name]: event.target.value
+  //   });
+  // }
+
   function addUser() {
     if (inputValue.trim().length > 0) {
-      // eslint-disable-next-line no-debugger
       dispatch({
         type: actionTypes.ADD_USER,
         userName: inputValue
@@ -51,15 +62,9 @@ export default function UserList() {
           users.map((user) => (
             <>
               <li className="users-list__element">
-                <button
-                  className="users-lists__add-button"
-                  type="button"
-                  onClick={() => {
-
-                  }}
-                >
-                  {user.name}
-                </button>
+                <Link to={`/userForm/${user.id}`}>
+                  <span className="user-list__name">{user.name}</span>
+                </Link>
                 <button
                   className="users-list__delete-button"
                   type="button"

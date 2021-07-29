@@ -1,17 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import {
+  BrowserRouter, Route, Switch
+} from 'react-router-dom';
 
 import reportWebVitals from './reportWebVitals';
 import UserList from './component/UserList';
 import configureStore from './redux/store';
+import UserForm from './component/UserForm';
+import EmptyForm from './component/EmptyForm';
+import NotFound from './page/NotFound';
 
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={configureStore()}>
-      <UserList />
+      <BrowserRouter>
+        <UserList />
+        <Switch>
+          <Route path="/" exact component={EmptyForm} />
+          <Route path="/userFormm/:userId" component={UserForm} />
+          <Route component={NotFound} />
+        </Switch>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

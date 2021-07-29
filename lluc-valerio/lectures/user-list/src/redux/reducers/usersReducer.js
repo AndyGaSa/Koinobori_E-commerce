@@ -5,9 +5,11 @@ export default function usersReducer(users = usersMock, action) {
   let newState;
 
   switch (action.type) {
-    case actionTypes.ADD_USER:
-      newState = [...users, { name: action.userName }];
+    case actionTypes.ADD_USER: {
+      const newId = (users.reduce((acc, cV) => (acc > cV.id ? acc : cV.id), 0)) + 1;
+      newState = [...users, { id: newId, name: action.userName }];
       break;
+    }
     case actionTypes.DELETE_USER:
       newState = users.filter((user) => user.id !== action.user.id);
       break;
