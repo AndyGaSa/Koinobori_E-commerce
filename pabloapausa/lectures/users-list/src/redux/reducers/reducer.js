@@ -1,6 +1,7 @@
 import crud from '../actions/action.types';
+import mock from '../../constants/users.mock';
 
-export default function reducer(oldUsers = [], action) {
+export default function reducer(oldUsers = mock, action) {
   let newUsers = oldUsers;
   switch (action.type) {
     case crud.CREATE_USER:
