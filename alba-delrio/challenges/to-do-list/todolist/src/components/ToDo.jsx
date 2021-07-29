@@ -9,7 +9,10 @@ export default function ToDo() {
   const dispatch = useDispatch();
   const toDos = useSelector((store) => store.toDos);
   const [newToDo, setToDo] = useState('');
-  const [button, setButton] = useState('');
+  const [button, setButton] = useState('button-showed');
+  const [updateButton, setUpdateButton] = useState('updateButton');
+  const [index, setIndex] = useState('');
+  const [updateValue, setUpdateValue] = useState('');
   function create() {
     if (!newToDo.trim()) return;
     dispatch({
@@ -20,6 +23,11 @@ export default function ToDo() {
   }
   function modify() {
     setButton('button');
+    setUpdateButton('show-button');
+  }
+  function update() {
+    setUpdateButton('updateButton');
+    setButton('show-button');
   }
 
   return (
@@ -37,9 +45,9 @@ export default function ToDo() {
         />
         <button type="button" onClick={create}>Add</button>
       </div>
-      <ul />
-      {
-            toDos.map((toDo) => (
+      <ul>
+        {
+            toDos.map((toDo, toDoIndex) => (
               <li>
 
                 <input
@@ -48,7 +56,11 @@ export default function ToDo() {
                   defaultValue={toDo}
                   className="inputList"
                   placeHolder="name"
-                  onClick={modify}
+                  onChange={((event) => setUpdateValue(event.target.value))}
+                  onClick={() => {
+                    modify();
+                    setIndex(toDoIndex);
+                  }}
                 />
                 <button
                   className={button}
@@ -62,10 +74,25 @@ export default function ToDo() {
                 >
                   x
                 </button>
-                <button type="button" className="updateButton">Update</button>
+                <button
+                  type="button"
+                  className={updateButton}
+                  onClick={() => {
+                    dispatch({
+                      type: actionTypes.UPDATE_TODO,
+                      toDo: updateValue,
+                      index
+                    });
+                    update();
+                  }}
+                >
+                  Update
+
+                </button>
               </li>
             ))
         }
+      </ul>
     </>
   );
 }

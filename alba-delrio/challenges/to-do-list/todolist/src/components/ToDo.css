@@ -23,6 +23,12 @@ li{
     display:none;
 }
 
+
 .button{
     display:none;
+    
+}
+
+.show-button{
+    display: block;
 }
