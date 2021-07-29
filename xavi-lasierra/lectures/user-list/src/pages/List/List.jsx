@@ -26,9 +26,10 @@ function List() {
         <label htmlFor="newUsername">
           Create a new User
           <br />
-          <input name="newUsername" type="text" placeholder="Username" value={newUsername} onChange={(event) => setNewUsername(event.target.value)} />
+          <input data-testid="create-input" name="newUsername" type="text" placeholder="Username" value={newUsername} onChange={(event) => setNewUsername(event.target.value)} />
         </label>
         <button
+          data-testid="create-button"
           type="button"
           onClick={createUser}
         >
