@@ -1,0 +1,15 @@
+ul{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+h2{
+  display: none;
+}
+.card-title{
+  display: none;
+}
+.card{
+  border: none;
+  text-decoration: none
+}

@@ -1,0 +1,57 @@
+
+.container {
+    padding: 40px;
+    margin: 0 auto;
+}
+#pokedex {
+    display: flex;
+   flex-wrap: wrap;
+    padding-inline-start: 0;
+    justify-content: space-evenly;
+}
+.card {
+    list-style: none;
+    color: #222;
+    text-align:center;
+     width: 222.5px;
+     border-radius: 4%;
+    cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOIAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOMAAAD/AAAA/wAAAP8AAAD/p6en////////////////////////////39/f/6ysrP8AAAD/AAAA/wAAAP8AAAD/AAAAzwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD//////////////////////////////////////////////////////9/f3//f39//AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD//////////////////////////////////////////////////////////////////////+Li4v/f39//39/f/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/////////////////////////////////////////////////////////////////////////////////+Dg4P/f39//39/f/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP///////////////////////////////////////////////////////////////////////////////////////////9/f3//f39//39/f/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5QAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////9/f3//f39//39/f/wAAAP8AAAD/AAAA5gAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////4eHh/9/f3//f39//39/f/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAA8AAAAP8FBQX/////////////////////////////////////////////////////////////////////////////////////////////////////////////////39/f/9/f3//f39//EBAQ/wAAAP8AAAD6AAAAAAAAAAAAAAD/AAAA////////////////////////////////////////////////////////////AAAA/wAAAP8AAAD/EhIS///////////////////////////////////////f39//39/f/9/f3//f39//AAAA/wAAAP8AAAAAAAAAAAAAAP8AAAD/////////////////////////////////////////////////AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/xoaGv/////////////////////////////////f39//39/f/9/f3/8AAAD/AAAA/wAAAAAAAAD/AAAA//X19f///////////////////////////////////////////wAAAP8AAAD/AAAA/////////////////87Ozv8AAAD/AAAA/wkJCf///////////////////////////9/f3//f39//39/f/9jY2P8AAAD/AAAA/wAAAP8AAAD/////////////////////////////////////////////////AAAA/wAAAP////////////////////////////////8AAAD/AAAA////////////////////////////39/f/9/f3//f39//39/f/wAAAP8AAAD/AAAA/wAAAP///////////////////////////////////////////wAAAP8AAAD////////////9/f3/DAAK/wwACv/b2dv//////83Nzf8AAAD/BgYG///////////////////////f39//39/f/9/f3//f39//AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP///////////wwACv8MAAr/DAAK/wwACv///////////wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA////////////DAAK/wwACv8MAAr/DAAK////////////AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//wAAAP8AAAD///////////+opKj/DAAK/wwACv8/Nj7///////39/f8AAAD/AAAD/xwc//8cHP//HBz//xwc//8YGN//GBjf/xgY3/8YGN//AAAA/wAAAP8AAAD/AAAA/xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//GRnn/wAAAP8AAAD/////////////////////////////////AAAA/wAAAP8cHP//HBz//xwc//8cHP//HBz//xgY3/8YGN//GBjf/xgY3v8AAAD/AAAA/wAAAP8AAAD/Gxt9/xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//AAAA/wAAAP8AAAD//////////////////////wAAAP8AAAD/AAAA/xwc//8cHP//HBz//xwc//8cHP//GBjf/xgY3/8YGN//FxcX/wAAAP8AAAD/AAAAAAAAAP8AAAD/HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8cHP//HBz//xwc//8cHP//HBz//xwc//8YGN//GBjf/xgY3/8AAAD/AAAA/wAAAAAAAAAAAAAA/wAAAP8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//GBjd/wAAAP8AAAD/AAAA/wAAAP8bG/r/HBz//xwc//8cHP//HBz//xwc//8cHP//GRnm/xgY3/8YGN//GBjf/wAAAP8AAAD/AAAAAAAAAAAAAAD7AAAA/wEBAf8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8YGN//GBjf/xgY3/8BAQH/AAAA/wAAAPYAAAAAAAAAAAAAAAAAAAD/AAAA/xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xgY3/8YGN//GBjf/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAOIAAAD/AAAA/xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8YGN//GBjf/xgY3/8AAAD/AAAA/wAAAO0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz+/xgY3/8YGN//AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8YGN//GBjf/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//GBjf/xgY3/8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//HBz//xwc//8cHP//GRnm/xgY3/8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAMcAAAD/AAAA/wAAAP8AAAD/FRUX/xwc//8cHP//HBz//xwc//8cHP//GBji/w8PGP8AAAD/AAAA/wAAAP8AAAD/AAAA5wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD8AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA5gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//AP//+AAf/+AAB//AAAP/gAAB/wAAAP4AAAB8AAAAPAAAADgAAAAYAAAAGAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAABgAAAAYAAAAHAAAADwAAAA+AAAAfwAAAPuAAAH5wAAD+OAAB/h4AB///wD/8='), auto;
+}
+.card:hover {
+    animation: bounce 0.5s linear;
+    background-color: #b3b0b0c0
+}
+.card-title {
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    font-size: 32px;
+    font-weight: normal;
+    background-color: #7a7878;
+}
+.card-subtitle {
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: normal;
+    background-color: #7a7878;
+}
+.card-image {
+    height: 180px;
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-6px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+
+    80% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
