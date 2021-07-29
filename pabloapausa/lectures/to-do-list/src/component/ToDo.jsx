@@ -5,7 +5,6 @@ import actionTypes from '../redux/actions/action.types';
 function ToDo() {
   // Accede a Store, hasta encontrar 'toDos'.
   const toDos = useSelector((store) => store.toDos);
-  // Ejecuta acciones en Redux.
   const dispatch = useDispatch();
 
   const [input, setInput] = useState();
@@ -15,14 +14,15 @@ function ToDo() {
     // Si el input no está vacío.
     if (!input.trim()) return;
 
+    // Ejecuta acciones de Redux.
     dispatch({
-      // Llama a la función en type.
+      // Llamando a la función en type.
       type: actionTypes.CREATE_TODO,
       // Con 'input' como parámetro.
       toDo: input,
     });
 
-    // Y resetea el input.
+    // Resetea el input.
     setInput('');
   }
 
@@ -30,15 +30,16 @@ function ToDo() {
     // Si el input no está vacío.
     if (!input.trim()) return;
 
+    // Ejecuta acciones de Redux.
     dispatch({
-      // Llama a la función en type.
+      // Llamando a la función en type.
       type: actionTypes.UPDATE_TODO,
       // Con 'input' como parámetro.
       toDo: input,
       index,
     });
 
-    // Y resetea el input.
+    // Resetea el input.
     setInput('');
   }
 
