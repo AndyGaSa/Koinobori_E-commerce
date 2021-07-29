@@ -1,0 +1,95 @@
+/*** Pokemons list Styles ***/
+
+*{
+    font-family: 'Viga', sans-serif;
+}
+
+.main__form{
+    margin: 5px 5px 20px 5px;
+}
+
+.form__view{
+    color: #FFCC01;
+    font-family: 'Viga', sans-serif;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.form__select{
+    background-color: #FFCC01;
+    color: white;
+    border: 2px solid #2B76B7;
+}
+
+.form__select:selected{
+    background-color: #FFCC01;
+    color: white;
+    border: 2px solid #2B76B7;
+}
+
+.main__title{
+    color: #FFCC01;
+    font-family: 'Viga', sans-serif;
+    padding: 30px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    background-color: #EF5350;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__poke-name{
+    color: #FFCC01;
+    font-family: 'Viga', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#main__pokelist{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main__poke{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10%;
+    padding: 20px;
+    -webkit-text-stroke: 1px black;
+    box-shadow: 2px 2px 2px #FFCC01;
+    margin: 10px;
+}
+
+.main__poke:hover{
+    background-color: #fde7aa;
+}
+
+.main__poke-img{
+    max-width: 150px;
+    margin: 5px;
+}
+
+.main__pagination{
+    display: flex;
+    align-items: center;
+}
+
+.main__pagination button{
+    border: 0px;
+    background: none;
+    color: #FFCC01;
+    text-shadow: 2px 2px #21386e;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.main__pagination button:hover{
+    color: #fde7aa;
+}

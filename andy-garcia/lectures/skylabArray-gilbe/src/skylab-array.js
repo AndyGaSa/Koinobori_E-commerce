@@ -3,9 +3,9 @@ class SkylabArray {
     this.length = 0;
   }
 
-  push(...newValue) {
-    for (let i = 0; i < newValue.length; i += 1) {
-      this[this.length] = newValue[i];
+  push(...values) {
+    for (let i = 0; i < values.length; i += 1) {
+      this[this.length] = values[i];
       this.length += 1;
     }
 

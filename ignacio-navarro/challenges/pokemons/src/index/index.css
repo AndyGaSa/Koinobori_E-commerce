@@ -1,0 +1,31 @@
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.filters__container{
+    width: 130px;
+    height: 270px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 37px;
+}
+.filter__type-element{
+    width: 26%;
+    background-color: transparent;
+    appearance: none;
+    margin: 0;
+    border: none;
+    padding: 0;
+    filter: saturate(0) brightness(0);
+}
+.filter__type-element:hover{
+    filter: saturate(1) brightness(1)
+}
+.active{
+    filter: saturate(1) brightness(1);
+}
+.filter__type-element > img {
+    width: 100%;
+}
