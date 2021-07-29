@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url("https://www.xtrafondos.com/wallpapers/atardecer-en-la-playa-con-palmas-6908.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    width: 100%;
+    height: 100%;
+}
+main{
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+    margin-top: 9vh;
+}
+.toDo-actions {
+    display: flex;
+    margin-top: 20vh;
+}
+input {
+    width: 50vh;
+    height: 5vh;
+}
+.toDo-actions__input{
+    display: grid;
+    align-items: center;
+    margin-left: 4vh;
+}
+.toDo-Actions__buttons{
+    background-color: rgb(247, 0, 74, 0.5);
+    height: 4vh;
+    width: 20vh;
+    border: none;
+    border-radius: 00.5vh;
+    font-size: 2vh;
+    color:aliceblue;
+    margin: 2vh;
+    padding: 0.5vh;
+}
+.toDo-actions__list li{
+    list-style: none;
+    background-color: aliceblue;
+    margin-left: 4vh;
+}
+.toDo-actions__list button {
+        background-color: rgb(224, 167, 167);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: black;
+        font-size: 2vh;
+        padding: 1rem;
+        margin: 1vh;
+      }
+.button:hover {
+        background-color: black;
+        color: white;
+}
