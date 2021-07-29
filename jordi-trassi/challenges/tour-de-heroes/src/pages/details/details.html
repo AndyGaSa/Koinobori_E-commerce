@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Details</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="./details.css">
+</head>
+<body>
+    <header>
+        <h1>Tour of Heroes</h1>
+        <nav>
+            <a href="../Dashboard/dashboard.html">Dashboard</a>
+            <a href="../Heroes/heroes.html">Heroes</a>
+        </nav>
+    </header>
+    <div>
+        <h2><span id="hero__title"></span> details!</h2>
+        <div id="hero__images">           
+        </div>
+        <div>
+            <label>Id:</label>
+            <span id="hero__id"></span>
+        </div>
+        <div>
+            <label>
+                Name: 
+            </label>
+            <input type="text"  id="hero__name" onchange="writeHeroNewName(event)">
+        </div>
+        <div class = 'hero-slug'>
+            <label >
+                Slug: 
+            </label>
+            <span id="hero__slug"></span>
+        </div>
+        <div>
+            <label>
+                Powerstats: 
+            </label>
+            <ul id="hero__powerstats"></ul>
+        </div>
+        <div>
+            <label>
+                Appearance: 
+            </label>
+            <ul id="hero__appearance"></ul>
+        </div>
+        <div>
+            <label>
+                Biography: 
+            </label>
+            <ul id="hero__biography"></ul>
+        </div>
+        <div>
+            <label>
+                Work: 
+            </label>
+            <ul id="hero__work"></ul>
+        </div>
+        <div>
+            <label>
+                Connections: 
+            </label>
+            <ul id="hero__connections"></ul>
+
+        </div>
+        <button>Go back</button>
+        <button onclick="updateHero()">Save</button>
+    </div>
+
+    <script src="../../heroes.const.js"></script>
+    <script src="../../getStorage.js"></script>
+    <script src="../../utils.js"></script>
+    <script src="./details.class.js"></script>
+    <script src="./transformUrlQueryToObject.js"></script>
+    <script src="./details.js"></script>
+</body>
+</html>
+
