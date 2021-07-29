@@ -1,0 +1,135 @@
+body {
+  display: flex;
+}
+
+.pkmon-info img {
+  width: 8em;
+}
+
+.type {
+  max-width: 4em;
+  text-align: center;
+  height: 1.5em;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+}
+
+.type--steel {
+  background-color: #b8b6ce;
+}
+
+.type--water {
+  background-color: #788fc4;
+}
+
+.type--bug {
+  background-color: #aab71e;
+}
+
+.type--dragon {
+  background-color: #6e3be6;
+}
+
+.type--electric {
+  background-color: #f0d051;
+}
+
+.type--ghost {
+  background-color: #705a98;
+}
+
+.type--fire {
+  background-color: #f07e30;
+}
+
+.type--ice {
+  background-color: #9ad8d5;
+}
+
+.type--fight {
+  background-color: #bd3123;
+}
+
+.type--normal {
+  background-color: #a6a97b;
+}
+
+.type--grass {
+  background-color: #89ba67;
+}
+
+.type--psychic {
+  background-color: #d96684;
+}
+
+.type--rock {
+  background-color: #b69e36;
+}
+
+.type--dark {
+  background-color: #735647;
+}
+
+.type--ground {
+  background-color: #d5bd84;
+}
+
+.type--poison {
+  background-color: #884d8a;
+}
+
+.type--flying {
+  background-color: #a794cd;
+}
+
+
+.cajaPkmn {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  width: 100%; 
+  height: 100%; 
+}
+ 
+.cajaPkmn imgsx {
+  width: 1em;
+  height: 1em;
+  background-color: wheat;
+  margin: .3em;
+}
+
+.c01 { grid-area: 1 / 1 / 2 / 2; }
+.c02 { grid-area: 1 / 2 / 2 / 3; }
+.c03 { grid-area: 1 / 3 / 2 / 4; }
+.c04 { grid-area: 1 / 4 / 2 / 5; }
+.c05 { grid-area: 1 / 5 / 2 / 6; }
+.c06 { grid-area: 1 / 6 / 2 / 7; }
+.c07 { grid-area: 2 / 1 / 3 / 2; }
+.c08 { grid-area: 2 / 2 / 3 / 3; }
+.c09 { grid-area: 2 / 3 / 3 / 4; }
+.c10 { grid-area: 2 / 4 / 3 / 5; }
+.c11 { grid-area: 2 / 5 / 3 / 6; }
+.c12 { grid-area: 2 / 6 / 3 / 7; }
+.c13 { grid-area: 3 / 1 / 4 / 2; }
+.c14 { grid-area: 3 / 2 / 4 / 3; }
+.c15 { grid-area: 3 / 3 / 4 / 4; }
+.c16 { grid-area: 3 / 4 / 4 / 5; }
+.c17 { grid-area: 3 / 5 / 4 / 6; }
+.c18 { grid-area: 3 / 6 / 4 / 7; }
+.c19 { grid-area: 4 / 1 / 5 / 2; }
+.c20 { grid-area: 4 / 2 / 5 / 3; }
+.c21 { grid-area: 4 / 3 / 5 / 4; }
+.c22 { grid-area: 4 / 4 / 5 / 5; }
+.c23 { grid-area: 4 / 5 / 5 / 6; }
+.c24 { grid-area: 4 / 6 / 5 / 7; }
+.c25 { grid-area: 5 / 1 / 6 / 2; }
+.c26 { grid-area: 5 / 2 / 6 / 3; }
+.c27 { grid-area: 5 / 3 / 6 / 4; }
+.c28 { grid-area: 5 / 4 / 6 / 5; }
+.c29 { grid-area: 5 / 5 / 6 / 6; }
+.c30 { grid-area: 5 / 6 / 6 / 7; }
