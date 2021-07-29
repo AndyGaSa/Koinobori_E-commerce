@@ -4,6 +4,43 @@ main {
     align-items: center;
 }
 
+.users__create {
+    padding: 2rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+.users__create input {
+    height: 2rem;
+    width: 15rem;
+    border: 2px solid black;
+    padding: 0 1rem;
+    outline: none;
+}
+
+.users__create input:focus {
+    background-color: #F4F4F4;
+}
+
+.users__create button {
+    height: 2rem;
+    width: 4rem;
+    background-color: transparent;
+    border: 2px solid black;
+    border-left: none;
+    font-size: 0.9rem;
+    transition: .2s;
+}
+
+.users__create button:hover {
+    background-color: #212121;
+    color: white;
+}
+
+.users__create button:active {
+    background-color: gray;
+}
+
 .users__list {
     width: 80vw;
     max-width: 20rem;
@@ -12,6 +49,7 @@ main {
 
 .users__list li {
     background-color: #F4F4F4;
+    border-radius: 0.2rem;
     display: flex;
     justify-content: space-between;
     padding: 0.25rem 1rem;
