@@ -8,11 +8,11 @@ describe('Given HeroesPage', () => {
 
     beforeEach(() => {
       page = new HeroesPage([
-        { id: 'dc-batman', superhero: 'Batman' },
-        { id: 'dc-superman', superhero: 'Superman' },
-        { id: 'dc-flash', superhero: 'Flash' },
-        { id: 'dc-green', superhero: 'Green Lantern' },
-        { id: 'dc-arrow', superhero: 'Green Arrow' }
+        { id: '1', name: 'Batman' },
+        { id: '2', name: 'Superman' },
+        { id: '3', name: 'Flash' },
+        { id: '4', name: 'Green Lantern' },
+        { id: '5', name: 'Green Arrow' }
       ]);
       properties = Object.keys(page);
     });
@@ -22,11 +22,11 @@ describe('Given HeroesPage', () => {
     });
 
     test('Then heroList[0].id  should be dc-superman', () => {
-      expect(page.heroList[0].id).toBe('dc-batman');
+      expect(page.heroList[0].id).toBe('1');
     });
 
-    test('Then heroList[3].superhero  should be Green Lantern', () => {
-      expect(page.heroList[3].superhero).toBe('Green Lantern');
+    test('Then heroList[3].name  should be Green Lantern', () => {
+      expect(page.heroList[3].name).toBe('Green Lantern');
     });
   });
 });

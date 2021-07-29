@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+  
+}
+body{
+    min-height: 100vh;
+}
+.header-container{
+    width: 100%;
+    height: fit-content;
+    background-color:#EF5350;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-container__main-logo{
+    display: flex;
+    align-items: center;
+}
+.header-container__main-logo>img{
+    height:100%;
+    border:none;
+    background: transparent;
+}
+.header-container__main-logo>h1{
+    color: #fff;
+    font-family: fantasy;
+    
+}
+.header-container>nav{
+    padding: 50px;
+    border: none;
+}
+h1{
+    padding: 10px 0 30px;
+}
+h2{
+    color:#F5F5DC;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body>main{
+    margin: 50px auto;
+    padding: 10px 15px;
+    width: fit-content;  
+      background-color: lightpink;
+    border: 5px #FFD700 solid;
+    border-radius: 10px;
+
+}
+.pokemon-title{
+    text-transform: capitalize;
+    font-size: 40px;
+
+}
+img{
+    height: 270px;
+    padding: 20px;
+    background-color: #F5F5DC;
+    border: 2px #FFD700 solid;
+    border-radius: 10px;
+}
+ul>h2{
+    text-transform: capitalize;
+     width: fit-content;
+}
+ul>li{
+    list-style: none;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.type-gorup{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:150px;
+    justify-self: left;
+    margin: unset;
+}
+.type-gorup li{
+    color: #fff;
+}
+
+.back-button{
+    margin-bottom: 10px;
+    padding: 10px 30px;
+    background-color: #EF5350;
+    color: #fff;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.back-button:hover{
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-footer{
+    height: 50px;
+    margin-top:20px;
+    margin-bottom: 0;
+    width: 100%;
+    background-color: #EF5350;
+    color:#fff;
+    text-transform: capitalize;
+    
+}
