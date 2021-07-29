@@ -18,13 +18,31 @@
     </header>
     <section>
         <h2>My Heroes</h2>
+        <div>
+            <label for="new-hero">Hero name: </label>
+            <input id="new-hero" name="new-hero">
+            <button class="button" onclick="addHeroButton()">
+              Add hero
+            </button>
+        </div>
+        <div>
+            <label for="filter-hero">Search heroes: </label>
+            <input id="filter-hero" name="filter-hero">
+            <button class="button" onclick="filterHeroesButton()">
+              Search
+            </button>
+        </div>
         <ul id="hero-list" class="heroes">
                 
         </ul>
+        <button id="get-reset-button" onclick="getResetHeroes()" class="button">Reset</button>
     </section>
 
-    <script src="../../hero.const.js"></script>
+    <script src="../../superHeroData.json"></script>
+    <script src="../../heroes-local-storage.js"></script>
     <script src="./heroes.class.js"></script>
+    <script src="./get-ajax-heroes.js"></script>
     <script src="./heroes.js"></script>
+    <script src="./heroes-buttons.js"></script>
 </body>
 </html>

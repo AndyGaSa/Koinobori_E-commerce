@@ -1,0 +1,17 @@
+.main-quiz{
+    display: flex;
+    padding: 30px;
+}
+
+.quiz--wrong{
+    background-color: red;
+}
+
+.quiz--success{
+    background-color: green;
+}
+
+.img{
+    max-height: 400px;
+    height: auto;
+}

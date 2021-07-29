@@ -1,0 +1,17 @@
+
+.img-thumbnail {
+    width: 200px;
+}
+
+.quiz {
+    display: flex;
+    padding: 30px;
+}
+
+.quiz--error {
+    background-color: red;
+}
+
+.quiz--success {
+    background-color: green;
+}

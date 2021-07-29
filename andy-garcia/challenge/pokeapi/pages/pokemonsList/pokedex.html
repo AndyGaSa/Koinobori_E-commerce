@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    
+    <link rel="stylesheet" href="./pokedex.css">
+
+</head>
+<body>
+    <h1>Pokemon challenge</h1>
+    <nav>
+        <a href="../dashboard/dashboard.html">Dashboard</a>
+        <a href="./pokedex.html">Pokedex</a>
+    </nav>
+    <h2>Pokedex</h2>
+    <div ><label  for="new-hero">Pokemon name: </label><input  id="new-pokemon__input"><button  id="add-button" class="add-button"> Add pokemon </button></div>
+    <ul id="pokedex__ul" class="heroes"></ul>
+    <button  id="reset-button" class="add-button"> Reset pokedex</button>
+    <script src="../../services/pokeapi.service.js"></script>
+    <script src="./pokedex.js"></script>
+</body>
+</html> 
