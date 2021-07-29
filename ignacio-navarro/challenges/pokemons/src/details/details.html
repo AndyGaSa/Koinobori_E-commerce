@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Details</title>
+    <link rel="stylesheet" href="../html-structure/main.css">
+</head>
+<body>
+    <header>
+        <button onclick="reset" class="header__reset-button">reset</button>
+    </header>
+    <main id="screen-content">
+        <section class="screen__top">
+            <section class="screen__pokemon-pic-container">
+                <h1>Bulbasaur</h1>
+                <span>number</span>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="" class="screen__pokemon-picture">
+            </section>
+            <section class="main__screen-stats" id="screen">      
+                <h2>type</h2>
+                <p>type 1</p>
+                <p>type 2</p>
+                <h2>moves</h2>
+                <p>move 1</p>
+                <p>move 1</p>
+                <p>move 1</p>
+                <p>move 1</p>
+                <h2>stats</h2>
+                <p>stat 1</p>
+                <p>stat 1</p>
+                <p>stat 1</p>
+                <p>stat 1</p>
+            </section>
+        </section>
+        <article class="screen__pokemon-description">
+            <h2>description</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, excepturi molestias eligendi labore cumque iure! Doloremque porro possimus aspernatur unde. Reiciendis</p>
+        </article>
+    </main>
+    <footer>
+        <div id="footer__details-container">
+            <input type="text" placeholder="search" class="footer__input" id="pokemon-search-input">
+            <button onclick="nextPokemon()" class="footer__details-button--next"></button>
+            <button onclick="previousPokemon()" class="footer__details-button--previous"></button>
+            <button onclick="searchPokemon()" class="footer__details-button--go">go</button>
+        </div>
+        <a href="../index/index.html" class="footer__filter-link">filter</a>
+        <a href="../creation/creation.html" class="footer__create-link">create</a>
+    </footer>
+    <script src="../storage.js"></script>
+    <script src="details.js"></script>
+</body>
+</html>
