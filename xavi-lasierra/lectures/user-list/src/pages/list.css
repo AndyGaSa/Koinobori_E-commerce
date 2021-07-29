@@ -6,7 +6,7 @@ main {
 
 .users__list {
     width: 80vw;
-    max-width: 80rem;
+    max-width: 20rem;
     list-style: none;
 }
 
@@ -16,14 +16,37 @@ main {
     justify-content: space-between;
     padding: 0.25rem 1rem;
     margin-bottom: 0.5rem;
+    transition: .2s;
 }
 
 .users__list li a {
     color: black;
+    transition: .2s;
+}
+
+.users__list li:hover {
+    background-color: #212121;
+}
+
+.users__list li:hover button,
+.users__list li:hover a {
+    color: white;
 }
 
 .users__id {
     color: grey;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
+}
+
+.users__list button {
+    border: none;
+    font-size: 0.75rem;
+    transition: .2s;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.users__list button:hover {
+    font-size: 0.9rem;
 }
 
