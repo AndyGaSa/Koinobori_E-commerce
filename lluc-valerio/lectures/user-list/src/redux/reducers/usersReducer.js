@@ -6,11 +6,9 @@ export default function usersReducer(users = usersMock, action) {
 
   switch (action.type) {
     case actionTypes.ADD_USER:
-      newState = [...users, action.user];
+      newState = [...users, { name: action.userName }];
       break;
     case actionTypes.DELETE_USER:
-      // eslint-disable-next-line no-debugger
-      // debugger;
       newState = users.filter((user) => user.id !== action.user.id);
       break;
     case actionTypes.UPDATE_USER:
