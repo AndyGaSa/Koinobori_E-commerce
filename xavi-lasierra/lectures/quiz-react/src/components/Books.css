@@ -1,0 +1,16 @@
+.books {
+    margin-left: 5vw;
+    flex: 1;
+}
+
+.books li {
+    background-color: rgb(206, 227, 235);
+    margin-bottom: 15px;
+    padding: 10px;
+    border-left: 5px solid lightblue;
+    transition: .2s;
+}
+
+.books li:hover {
+    background-color: lightblue;
+}
