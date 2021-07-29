@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/store';
+import UsersView from './pages/UsersView';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={configureStore()} />
+    <Provider store={configureStore()}>
+      <UsersView />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
