@@ -24,6 +24,25 @@ label {
     cursor: auto;
   }
   
+  .hero__powerstats ul {
+    position: relative;
+    width: 300px;
+  }
+
+  .hero__powerstats li span {
+    position: absolute;
+    right: 0
+  }
+
+  .hero__powerstats li progress {
+    position: absolute;
+    right: 30px;
+  }
+  
+  .hero__main-info {
+    display: flex;
+    justify-content: space-between;
+  }
   
   /*
   Copyright Google LLC. All Rights Reserved.

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./pokemons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <title>Pokemons List</title>
+</head>
+<body>
+    <header class="header">
+        <section><img class="header__logo" src="../../images/logo-pokemon.png"></section>
+        <nav class="header__nav">
+            <a href="../Dashboard/dashboard.html">Dashboard</a>
+            <img class="header__pikachu" src="../../images/pikachu.png" />
+            <a href="pokemons.html">Pokemons list</a>
+        </nav>
+    </header>
+    <main class="main">
+        <h2 class="main__title">Pokemons List</h2>
+        <section class="main__pagination">
+        <button class="beforeFn()"> ⪻ Anterior</button>
+        <form class="main__form" onchange="getValue()">
+            <label for="viewNum" class="form__view">Vista:</label>
+            <select id="viewNum" name="viewNum" class="form__select">
+              <option value="5" class="form__selection">5 pokemons</option>
+              <option value="10" class="form__selection">10 pokemons</option>
+              <option value="20" class="form__selection">20 pokemons</option>
+              <option value="50" class="form__selection">50 pokemons</option>
+            </select>
+          </form>
+        <button class="nextFn()">Siguiente ⪼ </button>
+        </section>
+        <section id="main__pokelist"></section>
+    </main>
+    <footer class="footer">
+        <img class="footer__img" src="../../images/pokebola.png" />
+        <section><span>&copy Skylab Coders Academy - 2021</span></section>
+    </footer>
+    <script src="pokemons.js"></script>
+</body>
+</html>
