@@ -9,14 +9,14 @@ import './list.css';
 function List() {
   const dispatch = useDispatch();
   const users = useSelector((store) => store.users);
-  const [newUsername, setNewUserName] = useState('');
+  const [newUsername, setNewUsername] = useState('');
 
   return (
     <main>
       <form>
         <label htmlFor="newUsername">
           Create a new User
-          <input name="newUsername" type="text" placeholder="Write the username" value={newUsername} onChange={(event) => setNewUserName(event.target.value)} />
+          <input name="newUsername" type="text" placeholder="Write the username" value={newUsername} onChange={(event) => setNewUsername(event.target.value)} />
         </label>
         <button
           type="button"
@@ -46,7 +46,6 @@ function List() {
               })}
             >
               x
-
             </button>
           </li>
         ))}
