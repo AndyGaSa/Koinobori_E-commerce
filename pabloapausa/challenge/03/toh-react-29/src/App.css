@@ -1,36 +1,45 @@
 /* Global Styles */
+
 * {
     font-family: Arial, Helvetica, sans-serif;
-  }
+}
+
   h1 {
     color: #264D73;
     font-size: 2.5rem;
-  }
+}
+
   h2, h3 {
     color: #444;
     font-weight: lighter;
-  }
+}
+
   h3 {
     font-size: 1.3rem;
-  }
-  body {
+}
+
+body {
     padding: .5rem;
     max-width: 1000px;
     margin: auto;
-  }
-  @media (min-width: 600px) {
+}
+
+@media (min-width: 600px) {
     body {
       padding: 2rem;
     }
-  }
-  body, input[text] {
+}
+
+body, input[text] {
     color: #333;
     font-family: Cambria, Georgia, serif;
-  }
-  a {
+}
+
+a {
     cursor: pointer;
-  }
-  button {
+}
+
+button {
     background-color: #eee;
     border: none;
     border-radius: 4px;
@@ -40,19 +49,23 @@
     padding: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
-  }
-  button:hover {
+    margin-top: 1rem;
+}
+
+button:hover {
     background-color: black;
     color: white;
-  }
-  button:disabled {
+}
+
+button:disabled {
     background-color: #eee;
     color: #aaa;
     cursor: auto;
-  }
+}
   
-  /* Navigation link styles */
-  nav a {
+/* Navigation link styles */
+
+nav a {
     padding: 5px 10px;
     text-decoration: none;
     margin-right: 10px;
@@ -61,28 +74,30 @@
     background-color: #e8e8e8;
     color: #3d3d3d;
     border-radius: 4px;
-  }
+}
   
-  nav a:hover {
+nav a:hover {
     color: white;
     background-color:  #42545C;
-  }
-  nav a.active {
+}
+
+nav a.active {
     background-color: black;
     color: white;
-  }
-  hr {
+}
+
+hr {
     margin: 1.5rem 0;
-  }
-  input[type="text"] {
+}
+
+input[type="text"] {
     box-sizing: border-box;
     width: 100%;
     padding: .5rem;
-  }
+}
   
-  
-  /*
-  Copyright Google LLC. All Rights Reserved.
-  Use of this source code is governed by an MIT-style license that
-  can be found in the LICENSE file at https://angular.io/license
-  */
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

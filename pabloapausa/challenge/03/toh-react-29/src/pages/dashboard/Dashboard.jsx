@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroes from '../constants/heroes.mock';
+
+import heroes from '../../constants/heroes.mock';
 import './Dashboard.css';
 
 export default function Dashboard() {
@@ -11,10 +12,10 @@ export default function Dashboard() {
         {
           heroes.slice(1, 5).map((hero) => (
             <Link
-              to={`/details/${hero.id}`}
-              key={hero.id}
+              to={`/details/${hero.superhero}`}
+              key={hero.superhero}
             >
-              {hero.name}
+              {hero.superhero}
             </Link>
           ))
         }

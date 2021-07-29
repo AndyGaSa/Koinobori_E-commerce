@@ -1,7 +1,7 @@
 export default [
   {
     id: 'dc-batman',
-    name: 'Batman',
+    superhero: 'Batman',
     publisher: 'DC Comics',
     alter_ego: 'Bruce Wayne',
     first_appearance: 'Detective Comics #27',
@@ -9,7 +9,7 @@ export default [
   },
   {
     id: 'dc-superman',
-    name: 'Superman',
+    superhero: 'Superman',
     publisher: 'DC Comics',
     alter_ego: 'Kal-El',
     first_appearance: 'Action Comics #1',
@@ -17,7 +17,7 @@ export default [
   },
   {
     id: 'dc-flash',
-    name: 'Flash',
+    superhero: 'Flash',
     publisher: 'DC Comics',
     alter_ego: 'Jay Garrick',
     first_appearance: 'Flash Comics #1',
@@ -25,7 +25,7 @@ export default [
   },
   {
     id: 'dc-green',
-    name: 'Green Lantern',
+    superhero: 'Green Lantern',
     publisher: 'DC Comics',
     alter_ego: 'Alan Scott',
     first_appearance: 'All-American Comics #16',
@@ -33,7 +33,7 @@ export default [
   },
   {
     id: 'dc-arrow',
-    name: 'Green Arrow',
+    superhero: 'Green Arrow',
     publisher: 'DC Comics',
     alter_ego: 'Oliver Queen',
     first_appearance: 'More Fun Comics #73',
@@ -41,7 +41,7 @@ export default [
   },
   {
     id: 'dc-wonder',
-    name: 'Wonder Woman',
+    superhero: 'Wonder Woman',
     publisher: 'DC Comics',
     alter_ego: 'Princess Diana',
     first_appearance: 'All Star Comics #8',
@@ -49,7 +49,7 @@ export default [
   },
   {
     id: 'dc-martian',
-    name: 'Martian Manhunter',
+    superhero: 'Martian Manhunter',
     publisher: 'DC Comics',
     alter_ego: 'J\'onn J\'onzz',
     first_appearance: 'Detective Comics #225',
@@ -57,7 +57,7 @@ export default [
   },
   {
     id: 'dc-robin',
-    name: 'Robin/Nightwing',
+    superhero: 'Robin/Nightwing',
     publisher: 'DC Comics',
     alter_ego: 'Dick Grayson',
     first_appearance: 'Detective Comics #38',
@@ -65,7 +65,7 @@ export default [
   },
   {
     id: 'dc-blue',
-    name: 'Blue Beetle',
+    superhero: 'Blue Beetle',
     publisher: 'DC Comics',
     alter_ego: 'Dan Garret',
     first_appearance: 'Mystery Men Comics #1',
@@ -73,7 +73,7 @@ export default [
   },
   {
     id: 'dc-black',
-    name: 'Black Canary',
+    superhero: 'Black Canary',
     publisher: 'DC Comics',
     alter_ego: 'Dinah Drake',
     first_appearance: 'Flash Comics #86',
@@ -81,7 +81,7 @@ export default [
   },
   {
     id: 'marvel-spider',
-    name: 'Spider Man',
+    superhero: 'Spider Man',
     publisher: 'Marvel Comics',
     alter_ego: 'Peter Parker',
     first_appearance: 'Amazing Fantasy #15',
@@ -89,7 +89,7 @@ export default [
   },
   {
     id: 'marvel-captain',
-    name: 'Captain America',
+    superhero: 'Captain America',
     publisher: 'Marvel Comics',
     alter_ego: 'Steve Rogers',
     first_appearance: 'Captain America Comics #1',
@@ -97,7 +97,7 @@ export default [
   },
   {
     id: 'marvel-iron',
-    name: 'Iron Man',
+    superhero: 'Iron Man',
     publisher: 'Marvel Comics',
     alter_ego: 'Tony Stark',
     first_appearance: 'Tales of Suspense #39',
@@ -105,7 +105,7 @@ export default [
   },
   {
     id: 'marvel-thor',
-    name: 'Thor',
+    superhero: 'Thor',
     publisher: 'Marvel Comics',
     alter_ego: 'Thor Odinson',
     first_appearance: 'Journey into Myster #83',
@@ -113,7 +113,7 @@ export default [
   },
   {
     id: 'marvel-hulk',
-    name: 'Hulk',
+    superhero: 'Hulk',
     publisher: 'Marvel Comics',
     alter_ego: 'Bruce Banner',
     first_appearance: 'The Incredible Hulk #1',
@@ -121,7 +121,7 @@ export default [
   },
   {
     id: 'marvel-wolverine',
-    name: 'Wolverine',
+    superhero: 'Wolverine',
     publisher: 'Marvel Comics',
     alter_ego: 'James Howlett',
     first_appearance: 'The Incredible Hulk #180',
@@ -129,7 +129,7 @@ export default [
   },
   {
     id: 'marvel-daredevil',
-    name: 'Daredevil',
+    superhero: 'Daredevil',
     publisher: 'Marvel Comics',
     alter_ego: 'Matthew Michael Murdock',
     first_appearance: 'Daredevil #1',
@@ -137,7 +137,7 @@ export default [
   },
   {
     id: 'marvel-hawkeye',
-    name: 'Hawkeye',
+    superhero: 'Hawkeye',
     publisher: 'Marvel Comics',
     alter_ego: 'Clinton Francis Barton',
     first_appearance: 'Tales of Suspense #57',
@@ -145,7 +145,7 @@ export default [
   },
   {
     id: 'marvel-cyclops',
-    name: 'Cyclops',
+    superhero: 'Cyclops',
     publisher: 'Marvel Comics',
     alter_ego: 'Scott Summers',
     first_appearance: 'X-Men #1',
@@ -153,9 +153,10 @@ export default [
   },
   {
     id: 'marvel-silver',
-    name: 'Silver Surfer',
+    superhero: 'Silver Surfer',
     publisher: 'Marvel Comics',
     alter_ego: 'Norrin Radd',
     first_appearance: 'The Fantastic Four #48',
     characters: 'Norrin Radd',
   }];
+// Se exporta un valor del módulo.

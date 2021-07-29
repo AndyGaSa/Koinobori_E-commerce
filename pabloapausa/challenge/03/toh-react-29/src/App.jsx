@@ -1,30 +1,30 @@
 import React from 'react';
 import {
-  BrowserRouter, Route, Redirect, Switch,
+  BrowserRouter, Switch, Redirect, Route,
 } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import Dashboard from './pages/Dashboard';
-import Heroes from './pages/Heroes';
+
+import Dashboard from './pages/dashboard/Dashboard';
+import Heroes from './pages/heroes/Heroes';
+import Details from './pages/details/Details';
 import Header from './components/Header';
-import Details from './pages/Details';
-import configureStore from './redux/store';
 
 import NotFound from './pages/NotFound';
 
+import './App.css';
+
 function App() {
   return (
-    <Provider store={configureStore()}>
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route path="/" exact component={Dashboard} />
-          <Redirect path="/dashboard" to="/" />
-          <Route path="/heroes" component={Heroes} />
-          <Route path="/details/:heroId" component={Details} />
-          <Route component={NotFound} />
-        </Switch>
-      </BrowserRouter>
-    </Provider>
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route path="/" exact component={Dashboard} />
+        <Redirect path="/Dashboard" to="/" />
+        <Route path="/Dashboard" component={Dashboard} />
+        <Route path="/Heroes" component={Heroes} />
+        <Route path="/Details/:heroId" component={Details} />
+        <Route component={NotFound} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

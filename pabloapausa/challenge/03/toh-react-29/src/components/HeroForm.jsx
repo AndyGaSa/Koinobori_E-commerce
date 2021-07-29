@@ -1,16 +1,17 @@
 /* eslint-disable no-console */
 /* eslint-disable react/prop-types */
+
 import React from 'react';
 
 export default function HeroForm({ hero, heroChange }) {
   return (
     <div>
       <label htmlFor="hero-name">
-        Hero name:
+        Superhero:
         <input
-          name="name"
-          placeholder="Hero name"
-          value={hero?.name}
+          name="superhero"
+          placeholder="Superhero"
+          value={hero?.superhero}
           onChange={heroChange}
         />
       </label>
@@ -19,37 +20,48 @@ export default function HeroForm({ hero, heroChange }) {
         Publisher:
         <input
           name="publisher"
-          placeholder="Hero publisher"
+          placeholder="Publisher"
           value={hero?.publisher}
           onChange={heroChange}
         />
       </label>
 
       <label htmlFor="hero-name">
-        Hero Alter Ego:
+        ID:
         <input
-          name="alter_ego"
-          placeholder="Hero Alter Ego"
-          value={hero?.alter_ego}
+          name="id"
+          placeholder="ID"
+          value={hero?.id}
           onChange={heroChange}
         />
       </label>
 
       <label htmlFor="hero-name">
-        Hero First Appearance:
+        First appearance:
         <input
           name="first_appearance"
-          placeholder="Hero First Appearance"
+          placeholder="First appearance"
           value={hero?.first_appearance}
           onChange={heroChange}
         />
       </label>
+
       <label htmlFor="hero-name">
-        Hero Characters:
+        Characters:
         <input
           name="characters"
-          placeholder="Hero Characters"
+          placeholder="Characters"
           value={hero?.characters}
+          onChange={heroChange}
+        />
+      </label>
+
+      <label htmlFor="hero-name">
+        Alter ego:
+        <input
+          name="alter_ego"
+          placeholder="Alter ego"
+          value={hero?.alter_ego}
           onChange={heroChange}
         />
       </label>
