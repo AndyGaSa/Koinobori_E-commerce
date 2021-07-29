@@ -11,19 +11,26 @@ function List() {
   const users = useSelector((store) => store.users);
   const [newUsername, setNewUsername] = useState('');
 
+  function createUser() {
+    if (newUsername.trim() === '') return;
+    dispatch({
+      type: actionTypes.CREATE_USER,
+      newUsername
+    });
+    setNewUsername('');
+  }
+
   return (
     <main>
-      <form>
+      <form className="users__create">
         <label htmlFor="newUsername">
           Create a new User
-          <input name="newUsername" type="text" placeholder="Write the username" value={newUsername} onChange={(event) => setNewUsername(event.target.value)} />
+          <br />
+          <input name="newUsername" type="text" placeholder="Username" value={newUsername} onChange={(event) => setNewUsername(event.target.value)} />
         </label>
         <button
           type="button"
-          onClick={() => dispatch({
-            type: actionTypes.CREATE_USER,
-            newUsername
-          })}
+          onClick={createUser}
         >
           Create
         </button>
