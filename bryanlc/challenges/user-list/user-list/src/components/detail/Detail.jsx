@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import DetailForm from './DetailForm';
+import './Detail.css';
 
 export default function Detail() {
   const users = useSelector((store) => store.users);

@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function DetailForm({ user }) {
   return (
-    <div>
+    <div className="wikipedia">
       <label htmlFor="hero-name">
         <span>Id :</span>
         {' '}

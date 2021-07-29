@@ -1,0 +1,4 @@
+.wikipedia{
+    display: flex;
+    flex-direction: column;
+}
