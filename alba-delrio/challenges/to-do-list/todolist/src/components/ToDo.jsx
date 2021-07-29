@@ -9,7 +9,7 @@ export default function ToDo() {
   const dispatch = useDispatch();
   const toDos = useSelector((store) => store.toDos);
   const [newToDo, setToDo] = useState('');
-  const [button, setButton] = useState('button-showed');
+  const [button, setButton] = useState('show-button');
   const [updateButton, setUpdateButton] = useState('updateButton');
   const [index, setIndex] = useState('');
   const [updateValue, setUpdateValue] = useState('');
@@ -32,7 +32,7 @@ export default function ToDo() {
 
   return (
 
-    <>
+    <div className="list">
       <div className="title">
         <h1>To_Do_List</h1>
       </div>
@@ -43,7 +43,7 @@ export default function ToDo() {
           value={newToDo}
           onChange={(event) => setToDo(event.target.value)}
         />
-        <button type="button" onClick={create}>Add</button>
+        <button type="button" className="addButton" onClick={create}>+</button>
       </div>
       <ul>
         {
@@ -93,6 +93,6 @@ export default function ToDo() {
             ))
         }
       </ul>
-    </>
+    </div>
   );
 }
