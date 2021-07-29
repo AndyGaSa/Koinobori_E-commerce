@@ -10,6 +10,8 @@ function ToDo() {
   const toDos = useSelector((store) => store.toDos);
   const dispatch = useDispatch();
   const [input, setInput] = useState('');
+  const [index, setIndex] = useState();
+  const [updateValue, setUpdateValue] = useState('');
 
   function create() {
     if (!input.trim()) return;
@@ -20,8 +22,16 @@ function ToDo() {
     setInput('');
   }
   const [deleteClass, SetDeleteClass] = useState('');
-  function updateInput() {
-    SetDeleteClass('deleteButtonHide');
+  const [updateClass, SetUpdateClass] = useState('updateButton');
+  function updateClasses() {
+    function updateInput() {
+      SetDeleteClass('deleteButtonHide');
+    }
+    function changeUpdateClass() {
+      SetUpdateClass('showUpdate');
+    }
+    updateInput();
+    changeUpdateClass();
   }
   return (
     <>
@@ -30,15 +40,19 @@ function ToDo() {
       <button type="button" onClick={create}>Save</button>
 
       <ul>
-        {toDos.map((toDo) => (
+        {toDos.map((toDo, toDoIndex) => (
           <li>
             <input
               placeholder="name"
               name="name"
               type="text"
+              onChange={((event) => setUpdateValue(event.target.value))}
               defaultValue={toDo}
               className="inputLista"
-              onClick={updateInput}
+              onClick={() => {
+                updateClasses();
+                setIndex(toDoIndex);
+              }}
             />
             <button
               type="button"
@@ -47,14 +61,26 @@ function ToDo() {
                   type: actionTypes.DELETE_TODO,
                   toDo,
                 });
-                updateInput();
               }}
               className={deleteClass}
             >
               x
 
             </button>
-            <button type="button" className="updateButton">Update</button>
+            <button
+              type="button"
+              className={updateClass}
+              onClick={() => {
+                dispatch({
+                  type: actionTypes.UPDATE_TODO,
+                  toDo: updateValue,
+                  index,
+                });
+              }}
+            >
+              Update
+
+            </button>
           </li>
         ))}
       </ul>
