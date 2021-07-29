@@ -24,7 +24,7 @@ export default function Heroes() {
 
       <ul className="heroes">
         {heroes.map((hero) => (
-          <li>
+          <li data-testid={`list-item-${hero.id}`}>
             <Link to={`/details/${hero.id}`}>
               <span className="badge">{hero.id}</span>
               {' '}

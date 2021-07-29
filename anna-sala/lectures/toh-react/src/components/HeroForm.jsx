@@ -19,6 +19,7 @@ export default function HeroForm({ hero, heroChange }) {
         Publisher:
         <input
           name="publisher"
+          data-testid="input-publisher"
           placeholder="Hero publisher"
           value={hero?.publisher}
           onChange={heroChange}
