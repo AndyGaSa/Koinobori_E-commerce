@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Header from './Header';
-import { createToDo, deleteToDo, updateToDo } from '../redux/actions/to-do.creators';
+import {
+  createToDo,
+  deleteToDo,
+  loadToDos,
+  updateToDo,
+} from '../redux/actions/to-do.creators';
 
 function ToDo() {
   const toDos = useSelector((store) => store.toDos);
   const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState();
   const [index, setIndex] = useState();
+
+  useEffect(() => {
+    dispatch(loadToDos());
+  }, []);
 
   function create() {
     if (!inputValue.trim()) return;
