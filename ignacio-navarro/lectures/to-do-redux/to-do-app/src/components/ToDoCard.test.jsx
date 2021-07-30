@@ -11,8 +11,8 @@ describe('Given the ToDoCard element', () => {
     expect(screen.getByText(/delete/i)).toBeInTheDocument;
   });
 
-  describe('When pressed delete button', () => {
-    test('Should call delete function', () => {
+  describe('When pressed edit button', () => {
+    test('Should call edit function', () => {
       render(<ToDoCard />);
       expect(true).toBe(false);
     });
