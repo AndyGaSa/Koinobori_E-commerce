@@ -1,4 +1,4 @@
-import actionTypes from '../actions/action.types';
+import actionTypes from '../actions/to-do.types';
 
 export default function todosReducer(toDoList = [], action) {
   let newToDoList = toDoList;

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import actionTypes from '../redux/actions/action.types';
+import actionTypes from '../redux/actions/to-do.types';
 import Header from './Header';
+import { createToDo, deleteToDo } from '../redux/actions/to-do.creators';
 
 function ToDo() {
   const toDos = useSelector((store) => store.toDos);
@@ -12,10 +13,7 @@ function ToDo() {
   function create() {
     if (!inputValue.trim()) return;
 
-    dispatch({
-      type: actionTypes.CREATE_TODO,
-      toDo: inputValue,
-    });
+    dispatch(createToDo(inputValue));
 
     setInputValue('');
   }
@@ -75,10 +73,7 @@ function ToDo() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => dispatch({
-                    type: actionTypes.DELETE_TODO,
-                    toDo,
-                  })}
+                  onClick={() => dispatch(deleteToDo(toDo))}
                   data-testid={`delete-button-${toDoIndex}`}
                 >
                   x
