@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import actionTypes from '../redux/actions/action.types';
+import Header from './Header';
 
 function ToDo() {
   // Accede a Store, hasta encontrar 'toDos'.
@@ -45,8 +46,7 @@ function ToDo() {
 
   return (
     <>
-      <h1>To-do List</h1>
-
+      <Header />
       <input
         type="text"
         name="todo"
