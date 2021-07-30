@@ -1,6 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import actionTypes from '../redux/actions/action.types';
+import Header from './Header';
+import {
+  createToDo,
+  deleteToDo,
+  loadToDos,
+  updateToDo,
+} from '../redux/actions/to-do.creators';
 
 function ToDo() {
   const toDos = useSelector((store) => store.toDos);
@@ -8,13 +14,14 @@ function ToDo() {
   const [inputValue, setInputValue] = useState();
   const [index, setIndex] = useState();
 
+  useEffect(() => {
+    dispatch(loadToDos());
+  }, []);
+
   function create() {
     if (!inputValue.trim()) return;
 
-    dispatch({
-      type: actionTypes.CREATE_TODO,
-      toDo: inputValue,
-    });
+    dispatch(createToDo(inputValue));
 
     setInputValue('');
   }
@@ -22,22 +29,19 @@ function ToDo() {
   function update() {
     if (!inputValue.trim()) return;
 
-    dispatch({
-      type: actionTypes.UPDATE_TODO,
-      toDo: inputValue,
-      index,
-    });
+    dispatch(updateToDo(inputValue, index));
 
     setInputValue('');
   }
 
   return (
     <>
-      <h1>ToDo List</h1>
+      <Header />
 
       <input
         type="text"
         name="todo"
+        data-testid="taskInput"
         value={inputValue}
         onChange={((event) => setInputValue(event.target.value))}
       />
@@ -45,20 +49,23 @@ function ToDo() {
       <button
         type="button"
         onClick={create}
+        data-testid="create-button"
       >
         create
       </button>
       <button
         type="button"
         onClick={update}
+        data-testid="update-button"
       >
         update
       </button>
       <ul>
         {
             toDos.map((toDo, toDoIndex) => (
-              <li>
+              <li data-testid={`list-item-${toDoIndex}`} key={`list-item-${toDo}`}>
                 <button
+                  data-testid={`item-${toDoIndex}`}
                   type="button"
                   onClick={() => {
                     setInputValue(toDo);
@@ -70,10 +77,8 @@ function ToDo() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => dispatch({
-                    type: actionTypes.DELETE_TODO,
-                    toDo,
-                  })}
+                  onClick={() => dispatch(deleteToDo(toDo))}
+                  data-testid={`delete-button-${toDoIndex}`}
                 >
                   x
                 </button>
