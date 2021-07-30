@@ -16,11 +16,10 @@ export default function UserList() {
         <Header />
         <Switch>
           <Route path="/" exact component={ListOfUsers} />
-          <Redirect path={ListOfUsers} to="/" />
-          <Route path="../components/details/details/:userId" component={Details} />
+          <Redirect path="/listofusers" to="/" />
+          <Route path="/details/:userId" component={Details} />
         </Switch>
       </BrowserRouter>
     </Provider>
-
   );
 }

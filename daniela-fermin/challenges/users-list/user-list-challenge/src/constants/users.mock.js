@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-[
+export default [
   {
     id: 1,
     name: 'Leanne Graham',

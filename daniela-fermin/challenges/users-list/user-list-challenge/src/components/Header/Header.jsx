@@ -6,7 +6,7 @@ export default function Header() {
     <header>
       <h1>User List</h1>
       <nav>
-        <Link to="ListOfUsers\ListOfUsers">Users</Link>
+        <Link to="/listofusers">Users</Link>
       </nav>
     </header>
   );

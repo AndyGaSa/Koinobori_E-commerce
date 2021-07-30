@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -11,40 +12,45 @@ export default function Details() {
 
   const { userId } = useParams();
   const [user, setUser] = useState();
+
   useEffect(() => {
     if (userId) {
-      const foundUser = users.find((currentUser) => currentUser.id === userId);
+      const foundUser = users.find((currentUser) => currentUser.id === +userId);
       setUser(foundUser);
     }
-  },
-  [userId]);
+  }, [userId]);
 
-  const userChange = (event) => {
-    const { name, value } = event.target;
-
-    setUser({ ...user, [name]: value });
-  };
+  function userChange(event) {
+    setUser({
+      ...user,
+      [event.target.name]: event.target.value
+    });
+  }
 
   return (
-    <>
+    <div className="details">
       <h2>
-        {user.name}
+        {user?.name.toUpperCase()}
         {' '}
         Details
       </h2>
       <div>
-        <UserForm user={user} userChange={userChange} />
+        <span>
+          id:
+        </span>
+        {user?.id}
       </div>
+      <UserForm user={user} userChange={userChange} />
       <button
         type="button"
-        onClick={dispatch({
+        onClick={() => dispatch({
           type: actionTypes.UPDATE_USER,
           user
         })}
       >
-        Save
-      </button>
+        save
 
-    </>
+      </button>
+    </div>
   );
 }

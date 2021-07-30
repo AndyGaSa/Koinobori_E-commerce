@@ -1,14 +1,14 @@
+/* eslint-disable no-debugger */
 /* eslint-disable react/prop-types */
 import React from 'react';
 
 export default function UserForm({ user, userChange }) {
   return (
     <div>
-
       <span>
         Id:
       </span>
-      {user.id}
+      {user?.id}
       <label htmlFor="user-name">
         Name:
         <input
@@ -130,7 +130,7 @@ export default function UserForm({ user, userChange }) {
             type="text"
             name="company.bs"
             placeholder="Company bs"
-            value={user?.companybs.catchPhrase}
+            value={user?.company.bs}
             onChange={userChange}
           />
         </label>
