@@ -1,10 +1,13 @@
 import actionTypes from '../actions/action.types';
+import usersMock from '../store/usersmock';
 
-export default function usersReducer(userList = ['hello'], action) {
+export default function usersReducer(userList = usersMock, action) {
   let newUserList = userList;
+  const newUser = { name: action.user };
+
   switch (action.type) {
     case actionTypes.CREATE_USER:
-      newUserList = [...userList, action.user];
+      newUserList = [...userList, newUser];
       break;
 
     case actionTypes.UPDATE_USER:
@@ -14,7 +17,7 @@ export default function usersReducer(userList = ['hello'], action) {
       ];
       break;
 
-    case actionTypes.DELETE_TODO:
+    case actionTypes.DELETE_USER:
       newUserList = userList.filter((user) => user !== action.user);
       break;
 

@@ -45,3 +45,8 @@ h2 {
   width: 100px;
 }
 
+.delete-button {
+  color: red;
+  background-color: white;
+}
+

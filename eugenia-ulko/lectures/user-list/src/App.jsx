@@ -19,6 +19,13 @@ function User() {
     setInputValue('');
   }
 
+  function deleteUser(user) {
+    dispatch({
+      type: actionTypes.DELETE_USER,
+      user
+    });
+  }
+
   function updateUser() {
     if (!inputValue.trim()) return;
     dispatch({
@@ -62,11 +69,9 @@ function User() {
                 </button>
 
                 <button
+                  className="delete-button"
                   type="button"
-                  onClick={() => dispatch({
-                    type: actionTypes.DELETE_USER,
-                    user
-                  })}
+                  onClick={() => deleteUser(user)}
                 >
                   x
 
