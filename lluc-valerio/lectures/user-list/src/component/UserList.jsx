@@ -11,17 +11,6 @@ export default function UserList() {
   const dispatch = useDispatch();
   const users = useSelector((store) => store.users);
   const [inputValue, setInputValue] = useState('');
-  // const [user, setUser] = useState();
-
-  // eslint-disable-next-line no-unused-vars
-  // const details = <UserForm user={user} userChange={userChange} />;
-
-  // function userChange(event) {
-  //   setUser({
-  //     ...user,
-  //     [event.target.name]: event.target.value
-  //   });
-  // }
 
   function addUser() {
     if (inputValue.trim().length > 0) {

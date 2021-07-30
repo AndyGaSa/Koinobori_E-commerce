@@ -11,6 +11,7 @@ import configureStore from './redux/store';
 import UserForm from './component/UserForm';
 import EmptyForm from './component/EmptyForm';
 import NotFound from './page/NotFound';
+import UserSearch from './component/UserSearch';
 
 import './index.css';
 
@@ -18,12 +19,14 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={configureStore()}>
       <BrowserRouter>
+        <h1>User&apos;s Data</h1>
         <UserList />
         <Switch>
           <Route path="/" exact component={EmptyForm} />
-          <Route path="/userFormm/:userId" component={UserForm} />
+          <Route path="/userForm/:userId" component={UserForm} />
           <Route component={NotFound} />
         </Switch>
+        <UserSearch />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

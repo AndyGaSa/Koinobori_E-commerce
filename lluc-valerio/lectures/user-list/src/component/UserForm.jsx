@@ -1,8 +1,30 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams, Link } from 'react-router-dom';
+import actionTypes from '../redux/actions/action.types';
 
-export default function UserForm({ user, userChange }) {
+export default function UserForm() {
+  const users = useSelector((store) => store.users);
+  const dispatch = useDispatch();
+
+  const { userId } = useParams();
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    if (userId) {
+      const foundUser = users.find((currentUser) => currentUser.id === +userId);
+      setUser(foundUser);
+    }
+  }, [userId]);
+
+  function userChange(event) {
+    setUser({
+      ...user,
+      [event.target.name]: event.target.value
+    });
+  }
+
   return (
     <div className="users__details">
       <label htmlFor="user-id">
@@ -71,7 +93,7 @@ export default function UserForm({ user, userChange }) {
         <input
           name="zipcode"
           placeholder="Zip Code"
-          value={user?.address.city.zipcode}
+          value={user?.address.zipcode}
           onChange={userChange}
         />
         <span className="user-address_attribut">geo</span>
@@ -132,8 +154,8 @@ export default function UserForm({ user, userChange }) {
       <button
         type="button"
         onClick={() => dispatch({
-          type: actionTypes.UPDATE_HERO,
-          hero
+          type: actionTypes.UPDATE_USER,
+          user
         })}
       >
         save

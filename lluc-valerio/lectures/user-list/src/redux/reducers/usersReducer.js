@@ -21,9 +21,13 @@ export default function usersReducer(users = usersMock, action) {
             ...user,
             ...action.user
           };
+          return userModified;
         }
-        return userModified;
+        return user;
       });
+      break;
+    case actionTypes.SEARCH_USER:
+      newState = users.filter((user) => user.id !== action.user.id);
       break;
     default:
       newState = users;
