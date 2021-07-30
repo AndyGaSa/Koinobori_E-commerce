@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import actionTypes from '../redux/actions/action.types';
+import Header from './Header';
 
 function ToDo() {
   const toDos = useSelector((store) => store.toDos);
@@ -33,11 +34,12 @@ function ToDo() {
 
   return (
     <>
-      <h1>ToDo List</h1>
+      <Header />
 
       <input
         type="text"
         name="todo"
+        data-testid="taskInput"
         value={inputValue}
         onChange={((event) => setInputValue(event.target.value))}
       />
@@ -45,20 +47,23 @@ function ToDo() {
       <button
         type="button"
         onClick={create}
+        data-testid="create-button"
       >
         create
       </button>
       <button
         type="button"
         onClick={update}
+        data-testid="update-button"
       >
         update
       </button>
       <ul>
         {
             toDos.map((toDo, toDoIndex) => (
-              <li>
+              <li data-testid={`list-item-${toDoIndex}`} key={`list-item-${toDo}`}>
                 <button
+                  data-testid={`item-${toDoIndex}`}
                   type="button"
                   onClick={() => {
                     setInputValue(toDo);
@@ -74,6 +79,7 @@ function ToDo() {
                     type: actionTypes.DELETE_TODO,
                     toDo,
                   })}
+                  data-testid={`delete-button-${toDoIndex}`}
                 >
                   x
                 </button>
