@@ -16,7 +16,7 @@ export default function ListOfUsers() {
     debugger;
     const ids = users.map(({ id }) => id);
     ids.sort((a, b) => a - b);
-    lastId = ids[ids.length];
+    lastId = ids[ids.length - 1];
     return lastId;
   }
 
@@ -27,7 +27,7 @@ export default function ListOfUsers() {
       type: actionTypes.ADD_USER,
       user: {
         name: inputValue,
-        id: getLastId()
+        id: getLastId() + 1
       }
 
     });

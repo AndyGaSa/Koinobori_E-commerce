@@ -47,7 +47,7 @@ export default function UserForm({ user, userChange }) {
             type="text"
             name="address.street"
             placeholder="Street"
-            value={user?.address.street}
+            value={user?.address?.street}
             onChange={userChange}
           />
         </label>
@@ -57,7 +57,7 @@ export default function UserForm({ user, userChange }) {
             type="text"
             name="address.suite"
             placeholder="Suite"
-            value={user?.address.suite}
+            value={user?.address?.suite}
             onChange={userChange}
           />
         </label>
@@ -67,7 +67,7 @@ export default function UserForm({ user, userChange }) {
             type="text"
             name="address.city"
             placeholder="City"
-            value={user?.address.city}
+            value={user?.address?.city}
             onChange={userChange}
           />
         </label>
@@ -77,7 +77,7 @@ export default function UserForm({ user, userChange }) {
             type="text"
             name="address.zipcode"
             placeholder="Zipcode"
-            value={user?.address.zipcode}
+            value={user?.address?.zipcode}
             onChange={userChange}
           />
         </label>
@@ -110,7 +110,7 @@ export default function UserForm({ user, userChange }) {
             type="text"
             name="company.name"
             placeholder="Company name"
-            value={user?.company.name}
+            value={user?.company?.name}
             onChange={userChange}
           />
         </label>
@@ -120,7 +120,7 @@ export default function UserForm({ user, userChange }) {
             type="text"
             name="company.catchPhrase"
             placeholder="Company name"
-            value={user?.company.catchPhrase}
+            value={user?.company?.catchPhrase}
             onChange={userChange}
           />
         </label>
@@ -130,7 +130,7 @@ export default function UserForm({ user, userChange }) {
             type="text"
             name="company.bs"
             placeholder="Company bs"
-            value={user?.company.bs}
+            value={user?.company?.bs}
             onChange={userChange}
           />
         </label>
