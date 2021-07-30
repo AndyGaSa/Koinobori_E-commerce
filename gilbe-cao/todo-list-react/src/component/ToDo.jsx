@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import actionTypes from '../redux/actions/to-do.types';
 import Header from './Header';
-import { createToDo, deleteToDo } from '../redux/actions/to-do.creators';
+import { createToDo, deleteToDo, updateToDo } from '../redux/actions/to-do.creators';
 
 function ToDo() {
   const toDos = useSelector((store) => store.toDos);
@@ -21,11 +20,7 @@ function ToDo() {
   function update() {
     if (!inputValue.trim()) return;
 
-    dispatch({
-      type: actionTypes.UPDATE_TODO,
-      toDo: inputValue,
-      index,
-    });
+    dispatch(updateToDo(inputValue, index));
 
     setInputValue('');
   }

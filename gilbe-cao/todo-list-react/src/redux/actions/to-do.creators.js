@@ -13,3 +13,11 @@ export function deleteToDo(toDo) {
     toDo,
   };
 }
+
+export function updateToDo(toDo, index) {
+  return {
+    type: actionTypes.UPDATE_TODO,
+    toDo,
+    index,
+  };
+}
