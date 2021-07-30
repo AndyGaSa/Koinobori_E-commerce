@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-filename-extension */
-// test-utils.js
 import React from 'react';
 import { render as rtlRender } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import configureStore from '../redux/store/store';
 
 function render(
-  ui,
+  component,
   {
     initialState,
     ...renderOptions
@@ -23,7 +22,7 @@ function render(
       </Provider>
     );
   }
-  return rtlRender(ui, { wrapper: Wrapper, ...renderOptions });
+  return rtlRender(component, { wrapper: Wrapper, ...renderOptions });
 }
 
 // re-export everything

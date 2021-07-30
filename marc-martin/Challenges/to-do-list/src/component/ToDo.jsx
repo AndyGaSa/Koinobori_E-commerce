@@ -36,7 +36,6 @@ function ToDo() {
       <h1>ToDo List</h1>
 
       <input
-        data-testid={`list-item-${inputValue}`}
         type="text"
         name="todo"
         value={inputValue}
@@ -46,6 +45,7 @@ function ToDo() {
       <button
         type="button"
         onClick={create}
+        data-testid="create-button"
       >
         create
       </button>
