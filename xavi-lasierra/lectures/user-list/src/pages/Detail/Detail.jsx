@@ -38,6 +38,7 @@ function Detail() {
         changeCompanyUser={changeCompanyUser}
       />
       <button
+        data-testid="update-button"
         className="user__update"
         type="button"
         onClick={() => dispatch({

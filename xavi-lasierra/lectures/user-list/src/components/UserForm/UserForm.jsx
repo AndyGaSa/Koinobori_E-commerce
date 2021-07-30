@@ -9,7 +9,7 @@ function UserForm({
       <label htmlFor="username">
         Username:
         <br />
-        <input name="username" type="text" value={user?.username} onChange={changeUser} />
+        <input data-testid="username-input" name="username" type="text" value={user?.username} onChange={changeUser} />
       </label>
       <label htmlFor="name">
         Complete name:

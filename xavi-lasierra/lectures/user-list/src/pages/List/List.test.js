@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import { fireEvent, screen } from '@testing-library/dom';
+import { fireEvent } from '@testing-library/dom';
 import * as reactRedux from 'react-redux';
 
-import { render } from '../../utils/test-utils';
+import { render, screen } from '../../utils/test-utils';
 import List from './List';
 
 import users from '../../constants/users.mock';
@@ -19,14 +19,14 @@ describe('Given a List component', () => {
     expect(screen.getByTestId('10-user')).toBeInTheDocument();
   });
   describe('When newUsername input value is changed', () => {
-    test('Then should call setNewUsername function', () => {
+    test('Then should render that value', () => {
       render(
         <List />, {
           initialState: { users }
         }
       );
-      fireEvent.change(screen.getByTestId('create-input'), { target: { value: 'a' } });
-      expect(screen.getByTestId('create-input').value).toBe('a');
+      fireEvent.change(screen.getByTestId('create-input'), { target: { value: 'abc' } });
+      expect(screen.getByTestId('create-input').value).toBe('abc');
     });
   });
   describe('When create user button is clicked with a userName in the input', () => {
