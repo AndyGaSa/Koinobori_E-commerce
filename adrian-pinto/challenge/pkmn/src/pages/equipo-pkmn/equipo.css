@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+}
+
+main {
+  padding: 5vw;
+}
+
+.pkteam {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "a b"
+    "c d"
+    "f g"; 
+  width: 100%; 
+  height: 100%; 
+  padding-bottom: 2em;
+}
+
+.pkteam__pkcard {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  border-radius: 50px;
+  border-style: double;
+  overflow: hidden;
+}
+
+.pkteam__pkcard aside {
+  flex: 0 1 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: thistle;
+  padding: .5em 20%;
+}
+
+.pkteam__pkcard img {
+  padding-left: 3vw;
+}
+
+.pkteam__pkcard h3 {
+  display: flex;
+  align-items: center;
+}
+
+.info-panel {
+  padding: 0 5em;
+  height: 3em;
+  border-style: groove;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-panel p {
+  width: 20em;
+  background-color: violet;
+  height: 2em;
+}
+
+.info-panel a {
+  text-decoration: none;
+}
+
+.info-panel a button {
+
+}
