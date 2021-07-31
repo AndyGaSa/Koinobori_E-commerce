@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import actionTypes from '../redux/actions/action.types';
+import Header from './Header';
 import './ToDo.css';
 
 export default function ToDo() {
@@ -33,9 +34,7 @@ export default function ToDo() {
   return (
 
     <div className="list">
-      <div className="title">
-        <h1>To_Do_List</h1>
-      </div>
+      <Header />
       <div className="todo">
         <input
           type="text"
@@ -48,7 +47,7 @@ export default function ToDo() {
       <ul>
         {
             toDos.map((toDo, toDoIndex) => (
-              <li>
+              <li data-testid="list-item-&{toDo}">
 
                 <input
                   type="text"
