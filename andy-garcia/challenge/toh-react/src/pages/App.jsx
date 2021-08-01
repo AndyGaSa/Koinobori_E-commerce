@@ -1,4 +1,5 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import './App.css';
 import {
   BrowserRouter, Switch, Route, Redirect,
@@ -8,12 +9,11 @@ import Dashboard from './Dashboard';
 import Details from './Details';
 import Heroes from './Heroes';
 import NotFound from './NotFound';
+import configureStore from '../redux/store';
 
 function App() {
   return (
-
-    <>
-
+    <Provider store={configureStore()}>
       <BrowserRouter>
         <Header />
         <Switch>
@@ -22,11 +22,9 @@ function App() {
           <Route path="/heroes" component={Heroes} />
           <Route path="/details/:heroId" component={Details} />
           <Route component={NotFound} />
-
         </Switch>
-
       </BrowserRouter>
-    </>
+    </Provider>
   );
 }
 
