@@ -1,0 +1,19 @@
+ul.books {
+list-style: none;
+margin-left: 0px;
+padding-left: 0px;
+flex: 1;
+
+}
+.books li{
+    list-style: none;
+    padding: 15px;
+    background-color: lightcyan;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    border-left: 5px solid lightskyblue;
+}
+
+ul.books li:hover{
+    background-color: lightsteelblue;
+}
