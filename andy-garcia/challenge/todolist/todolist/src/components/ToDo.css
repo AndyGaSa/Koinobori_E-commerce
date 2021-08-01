@@ -1,0 +1,15 @@
+.inputLista{
+    border: 0px;
+}
+ul{
+    list-style:none;
+}
+.updateButton{
+    display: none;
+}
+.deleteButtonHide{
+    display: none;
+}
+.showUpdate{
+    display: block;
+}
