@@ -22,7 +22,7 @@ h2 {
     align-items: flex-start;
   }
   
-  .detail {
+  .heroes-menu a {
     background-color: #3f525c;
     border-radius: 2px;
     padding: 1rem;
@@ -43,9 +43,10 @@ h2 {
   }
   
   @media (min-width: 600px) {
-    .detail {
+    .heroes-menu a {
       width: 18%;
       box-sizing: content-box;
+      border-radius: 5px;
     }
   }
   
