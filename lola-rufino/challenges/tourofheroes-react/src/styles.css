@@ -2,6 +2,16 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  hr{
+    border-top: 2px dashed #264d73
+  }
+
+ li{
+    list-style-type: circle;
+    color: #264d73;
+  }
+
   h1 {
     color: #264D73;
     font-size: 2.5rem;
@@ -54,21 +64,21 @@
   
   /* Navigation link styles */
   nav a {
-    padding: 16px 22px;
+    padding: 5px 10px;
     text-decoration: none;
     margin-right: 10px;
     margin-top: 10px;
     display: inline-block;
     background-color: #e8e8e8;
     color: #3d3d3d;
-    border-radius: 5px;
+    border-radius: 4px;
   }
   
   nav a:hover {
     color: white;
     background-color:  #42545C;
   }
-  nav a:active {
+  nav a.active {
     background-color: black;
     color: white;
   }
@@ -80,8 +90,3 @@
     width: 100%;
     padding: .5rem;
   }
-  /*
-  Copyright Google LLC. All Rights Reserved.
-  Use of this source code is governed by an MIT-style license that
-  can be found in the LICENSE file at https://angular.io/license
-  */

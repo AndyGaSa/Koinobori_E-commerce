@@ -1,5 +1,5 @@
 {
-  "name": "tour-of-heroes-react",
+  "name": "userslist",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll --collect-coverage",
+    "test": "react-scripts test jest --watchAll --collect-coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
