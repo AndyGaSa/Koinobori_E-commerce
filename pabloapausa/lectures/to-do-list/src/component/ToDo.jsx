@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import actionTypes from '../redux/actions/action.types';
+import actionTypes from '../redux/actions/todo.types';
 import Header from './Header';
 
 function ToDo() {
@@ -12,37 +12,6 @@ function ToDo() {
   const [index, setIndex] = useState();
 
   function create() {
-    // Si el input no está vacío.
-    if (!input.trim()) return;
-
-    // Ejecuta acciones de Redux.
-    dispatch({
-      // Llamando a la función en type.
-      type: actionTypes.CREATE_TODO,
-      // Con 'input' como parámetro.
-      toDo: input,
-    });
-
-    // Resetea el input.
-    setInput('');
-  }
-
-  function update() {
-    // Si el input no está vacío.
-    if (!input.trim()) return;
-
-    // Ejecuta acciones de Redux.
-    dispatch({
-      // Llamando a la función en type.
-      type: actionTypes.UPDATE_TODO,
-      // Con 'input' como parámetro.
-      toDo: input,
-      index,
-    });
-
-    // Resetea el input.
-    setInput('');
-  }
 
   return (
     <>
