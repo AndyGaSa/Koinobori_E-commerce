@@ -2,16 +2,33 @@
 
 $side-menu-title-color: #707070;
 
+.side-menu__container {
+    height: 0;
+    position: fixed;
+    transform: translateX(-500px);
+    transition: .5s;
+}
+
+.side-menu__container--active {
+    transform: translateX(0);
+}
 
 .side-menu {
     font-family: $main-font;
     background-color: $side-menu-background-color;
-    position: static;
+    position: absolute;
+    z-index: 1;
     width: 80vw;
     max-width: 400px;
     height: 100vh;
-    padding: 0.5rem 0.5rem 0 0;
+    padding: 5rem 0.5rem 0 0;
     color: white;
+    animation: slide-in 0.5s;
+
+    &::after {
+        transform: translateX(0);
+    }
+
 
     .fa-star {
         margin-right: 5px;
@@ -24,6 +41,7 @@ $side-menu-title-color: #707070;
         background-color: #707070;
         width: 100%;
         padding: 0.5rem 1rem;
+        margin-bottom: 0.25rem;
     }
 
     ul {

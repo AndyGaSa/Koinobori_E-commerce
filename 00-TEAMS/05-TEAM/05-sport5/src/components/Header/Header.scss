@@ -1,12 +1,14 @@
 @import '../../styles/styles.const';
 
 .header{
-
+    position: fixed;
+    width: 100%;
     background-color: $header-background-color;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 4rem;
+    z-index: 2;
 
     .header__navigation-menu{
         background-color: transparent;
