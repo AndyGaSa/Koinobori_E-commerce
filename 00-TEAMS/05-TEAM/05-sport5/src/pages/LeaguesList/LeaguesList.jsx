@@ -10,10 +10,6 @@ export default function LeaguesList() {
     dispatch(getLeagues('Soccer'));
   }, []);
 
-  useEffect(() => {
-    console.log(allLeagues);
-  }, [allLeagues]);
-
   return (
     <ul>
       {
