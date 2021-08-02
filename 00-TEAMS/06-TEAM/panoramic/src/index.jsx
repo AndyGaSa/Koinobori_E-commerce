@@ -4,10 +4,11 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Switch } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
+import configureStore from './redux/reducers';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider>
+    <Provider store={configureStore()}>
       <BrowserRouter>
         <Switch>
           <Header />
