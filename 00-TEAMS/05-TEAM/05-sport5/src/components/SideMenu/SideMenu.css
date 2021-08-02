@@ -1,12 +1,34 @@
+.side-menu__container {
+  height: 0;
+  position: fixed;
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.side-menu__container--active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 .side-menu {
   font-family: "Rubik", sans-serif;
   background-color: #363636;
-  position: static;
+  position: absolute;
+  z-index: 1;
   width: 80vw;
   max-width: 400px;
   height: 100vh;
-  padding: 0.5rem 0.5rem 0 0;
+  padding: 5rem 0.5rem 0 0;
   color: white;
+  -webkit-animation: slide-in 0.5s;
+          animation: slide-in 0.5s;
+}
+
+.side-menu::after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .side-menu .fa-star {
@@ -20,6 +42,7 @@
   background-color: #707070;
   width: 100%;
   padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
 }
 
 .side-menu ul {
