@@ -1,0 +1,69 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "auth_name": "Name",
+      "name": "name",
+      "email": "email",
+      "avatar": "Url_image",
+      "user_events":
+          {
+            "id": 2,
+            "url": "./events/2"
+          }
+    },
+    {
+      "id": 2,
+      "auth_name": "Name",
+      "name": "name",
+      "email": "email",
+      "avatar": "Url_image",
+      "user_events": [
+        {
+          "id": 1,
+          "url": "./events/1"
+        },
+        {
+          "id": 3,
+          "url": "./events/3"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "user":{
+        "id": 1,
+        "url": "./users/1"
+      },
+      "title": "Event",
+      "activity": "sports",
+      "description": "description",
+      "max_childs": 2,
+      "childs": 0
+    },
+    {
+      "id": 2,
+      "title": "Event",
+      "activity": "coocking",
+      "description": "description",
+      "max_childs": 5,
+      "childs": 0
+    },
+    {
+      "id": 3,
+      "title": "Event",
+      "activity": "dancing",
+      "description": "description",
+      "max_childs": 1,
+      "childs": 0
+    }
+  ],
+  "activities": [
+    "sports",
+    "coocking",
+    "dancing",
+    "etc"
+  ]
+}
