@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "json-server": "^0.16.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
@@ -16,7 +17,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run server & react-scripts start",
+    "server": "json-server ./api/db.json --config ./api/json-server.json",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll --collect-coverage",
     "eject": "react-scripts eject"

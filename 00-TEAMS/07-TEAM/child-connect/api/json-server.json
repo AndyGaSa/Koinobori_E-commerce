@@ -1,0 +1,7 @@
+{
+  "watch": true,
+  "static": "./api",
+  "no-cors": true,
+  "port": 3001,
+  "delay": 300
+}
