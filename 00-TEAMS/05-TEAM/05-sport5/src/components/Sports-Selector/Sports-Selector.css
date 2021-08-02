@@ -34,8 +34,8 @@
   -webkit-transition: .2s;
   transition: .2s;
   font-size: 1.5rem;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -45,5 +45,17 @@
   font-size: 2.2rem;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+.sportSelector .sport-selector__navigation-menu svg {
+  width: 1.6rem;
+  fill: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sportSelector .sport-selector__navigation-menu svg:hover {
+  fill: #187890;
+  width: 2.3rem;
 }
 /*# sourceMappingURL=Sports-Selector.css.map */
