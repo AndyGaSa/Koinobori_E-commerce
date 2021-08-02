@@ -1,29 +1,21 @@
 .leagues__container {
-  background-color: #212121;
   padding-top: 5rem;
 }
 
-nav {
+.leagues__container nav {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
 }
 
-li {
+.leagues__container .leagues {
+  width: 90vw;
+  margin: 0 auto;
   list-style: none;
 }
 
-.leagues {
-  width: 70%;
-  margin: 0 auto;
-}
-
-.leagues__all-leagues {
-  padding: 0;
-}
-
-.leagues__block {
+.leagues__container .leagues .leagues__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,34 +23,55 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 2rem;
   color: white;
-  font-family: "Rubik", sans-serif;
 }
 
-.leagues__country {
+.leagues__container .leagues .leagues__block .leagues__country {
   width: 100%;
-  padding: 0.5rem;
+  padding: 1.2rem 0.5rem;
   text-align: center;
   background-color: #B7B7B7;
+  list-style: none;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  margin-bottom: 0.2rem;
 }
 
-.leagues__name {
+.leagues__container .leagues .leagues__block .leagues__all-leagues {
+  width: 80%;
+  padding: 0;
+  list-style: none;
+}
+
+.leagues__container .leagues .leagues__block .leagues__all-leagues .leagues__league {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #B7B7B7;
-  margin: 10px 0;
+  background-color: #636363;
+  margin-bottom: 0.3rem;
   font-weight: 700;
-  padding: 0 20px;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.leagues__badge {
-  height: 20px;
-  width: 20px;
-  padding-right: 20px;
+.leagues__container .leagues .leagues__block .leagues__all-leagues .leagues__league .leagues__badge {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.leagues__container .leagues .leagues__block .leagues__all-leagues .leagues__league .leagues__name {
+  width: 70%;
+  text-align: center;
 }
 /*# sourceMappingURL=LeaguesList.css.map */
