@@ -1,7 +1,8 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-unused-vars */
 import { combineReducers } from 'redux';
-import todosReducer from './todos.reducer';
+import sonaryReducer from './sonary.reducer';
 
 export default combineReducers({
+  chart: sonaryReducer
 });

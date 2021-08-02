@@ -1,12 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 import './index.css';
-import App from './App';
+// import App from './App';
+import configureStore from './redux/store/index';
+import Dashboard from './components/main/dashboard/Dashboard';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+render(
   <React.StrictMode>
-    <App />
+    <Provider store={configureStore()}>
+      <Dashboard />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
