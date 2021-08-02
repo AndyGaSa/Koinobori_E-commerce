@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 import {
   BrowserRouter, Redirect, Route, Switch
 } from 'react-router-dom';
-import './styles/App.css';
 
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -13,6 +12,7 @@ import TeamDetail from './pages/TeamDetail/TeamDetail';
 import NotFound from './pages/NotFound/NotFound';
 
 import configureStore from './redux/store';
+import './styles/App.css';
 
 function App() {
   return (

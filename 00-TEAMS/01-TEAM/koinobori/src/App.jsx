@@ -1,20 +1,26 @@
-import React from 'react';
-import { Provider } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import configureStore from './redux/store';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import { loadStocks } from './redux/actions/action.creators';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadStocks());
+  }, []);
+
   return (
-    <Provider store={configureStore()}>
+    <>
       <BrowserRouter>
         <Header />
         <Main />
         <Footer />
       </BrowserRouter>
-    </Provider>
+    </>
+
   );
 }
 
