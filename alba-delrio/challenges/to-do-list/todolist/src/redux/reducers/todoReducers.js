@@ -1,6 +1,6 @@
 import actionTypes from '../actions/action.types';
 
-export default function todosReducer(toDoList = [] , action) {
+export default function todosReducer(toDoList = [], action) {
   let newToDoList = toDoList;
   switch (action.type) {
     case actionTypes.CREATE_TODO:
@@ -16,7 +16,7 @@ export default function todosReducer(toDoList = [] , action) {
       newToDoList = toDoList.filter((toDo) => toDo !== action.toDo);
       break;
     case actionTypes.LOAD_TODO:
-      newToDoList = action.toDos?.map(({ data }) => data);
+      newToDoList = action.toDos?.map(({ driverId }) => driverId);
       break;
     default:
       break;
