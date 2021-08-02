@@ -30,6 +30,10 @@ export default function SportSelector() {
         <i className="fas fa-hockey-puck" />
       </button>
 
+      <button type="button" className="sport-selector__navigation-menu">
+        Rugby aqui
+      </button>
+
     </nav>
 
   );
