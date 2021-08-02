@@ -1,10 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import render from 'react-dom';
+import { BrowserRouter, Switch, Link } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import configureStore from './redux/store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Hola Mundo</h1>
+    <Provider store={configureStore()}>
+      <BrowserRouter>
+        <Switch>
+          <h1>Hola mundo</h1>
+        </Switch>
+      </BrowserRouter>
+
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
