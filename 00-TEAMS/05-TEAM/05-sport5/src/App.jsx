@@ -4,7 +4,7 @@ import {
   BrowserRouter, Redirect, Route, Switch
 } from 'react-router-dom';
 
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import LeaguesList from './pages/LeaguesList/LeaguesList';
 import TeamsList from './pages/TeamsList/TeamsList';
 import TeamDetail from './pages/TeamDetail/TeamDetail';
@@ -21,7 +21,7 @@ function App() {
           <Route path="/" exact component={LeaguesList} />
           <Redirect path="/countries/:sportId" to="/" />
           <Route path="/league/:leagueId" component={TeamsList} />
-          <Route pathe="/team/:teamId" component={TeamDetail} />
+          <Route path="/team/:teamId" component={TeamDetail} />
           <Route component={NotFound} />
         </Switch>
       </BrowserRouter>
