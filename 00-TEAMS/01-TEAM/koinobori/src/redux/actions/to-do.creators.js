@@ -4,14 +4,14 @@ import actionTypes from './to-do.types';
 export function createToDo(toDo) {
   return {
     type: actionTypes.CREATE_TODO,
-    toDo,
+    toDo
   };
 }
 
 export function deleteToDo(toDo) {
   return {
     type: actionTypes.DELETE_TODO,
-    toDo,
+    toDo
   };
 }
 
@@ -19,7 +19,7 @@ export function updateToDo(toDo, index) {
   return {
     type: actionTypes.UPDATE_TODO,
     toDo,
-    index,
+    index
   };
 }
 
@@ -29,7 +29,7 @@ export function loadToDos() {
 
     dispatch({
       type: actionTypes.LOAD_TODOS,
-      toDos: data,
+      toDos: data
     });
   };
 }
@@ -41,7 +41,7 @@ export function loadToDosWithAsync() {
 
     dispatch({
       type: actionTypes.LOAD_TODOS,
-      toDos,
+      toDos
     });
   };
 }
@@ -52,7 +52,7 @@ export function loadToDosWithPromise() {
       .then((response) => response.json())
       .then((toDos) => dispatch({
         type: actionTypes.LOAD_TODOS,
-        toDos,
+        toDos
       }));
   };
 }
