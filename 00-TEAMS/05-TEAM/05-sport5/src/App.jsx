@@ -1,9 +1,16 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import configureStore from './redux/store';
+import {
+  BrowserRouter, Redirect, Route, Switch
+} from 'react-router-dom';
+
 import Header from './components/Header';
 import LeaguesList from './pages/LeaguesList/LeaguesList';
+import TeamsList from './pages/TeamsList/TeamsList';
+import TeamDetail from './pages/TeamDetail/TeamDetail';
+import NotFound from './pages/NotFound/NotFound';
+
+import configureStore from './redux/store';
 
 function App() {
   return (
@@ -12,9 +19,11 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact component={LeaguesList} />
-
+          <Redirect path="/countries/:sportId" to="/" />
+          <Route path="/league/:leagueId" component={TeamsList} />
+          <Route pathe="/team/:teamId" component={TeamDetail} />
+          <Route component={NotFound} />
         </Switch>
-
       </BrowserRouter>
     </Provider>
   );
