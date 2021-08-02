@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import todosReducer from './todosReducer';
+import artistReducer from './artistReducer';
 
 export default combineReducers({
-  toDos: todosReducer
+  artist: artistReducer
 });

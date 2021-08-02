@@ -1,3 +1,3 @@
 export default {
-  LOAD_TODOS: 'LOAD_TODOS'
+  LOAD_ARTIST: 'LOAD_ARTIST'
 };
