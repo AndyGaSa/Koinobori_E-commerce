@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemons</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="pokemon.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Pokemon's Site</h1>
+    </header>
+    <main class="main">
+        <section id="pokemon-list" class="pokemon-list">
+            <div class="pokemon-list__search">
+                <input id="pokemon-list__search-input"  type="text">
+                <button onclick="searchPokemon()">Search By Name</button>                
+            </div>
+            <div class="pokemon-list__controls-top">
+                <div class="controls__num-per-page">
+                    <input id="controls__num-per-page-input"  type="number" min="4" max="50">
+                    <button onclick="numPokesPerPage()">pag</button>
+                </div>
+                <span id="controls__actual-page"></span>
+                <div class="controls__buttons">
+                    <button id="prev-button-top" class="controls__buttons previous" onclick="previousPage()">Previous</button>
+                    <button id="next-button-top" class="controls__buttons next" onclick="nextPage()">Next</button>
+                </div>
+            </div>
+            <div id="pokemon-list__items" class="pokemon-list__items"></div>
+            <div class="pokemon-list__controls-bottom">
+                <button id="add-button-bottom" class="controls__buttons add">Add</button>
+                <div class="controls__buttons">
+                    <button id="prev-button-bottom" class="controls__buttons previous" onclick="previousPage()">Previous</button>
+                    <button id="next-button-bottom" class="controls__buttons next" onclick="nextPage()">Next</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <button onclick="reloadPokeEvent()">Reload PokeApi</button>
+    </footer>
+    <script src="../../pokemon-class.js"></script>
+    <script src="../../pokemon-api-request.js"></script>
+    <script src="../../utils.js"></script>
+    <script src="pokemon.js"></script>
+</body>
+</html>
