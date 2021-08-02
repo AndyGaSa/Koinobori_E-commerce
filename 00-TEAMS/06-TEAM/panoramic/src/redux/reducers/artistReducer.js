@@ -1,6 +1,6 @@
 import actionTypes from '../actions/actionTypes';
 
-export default function artistReducer(artistList = [], action) {
+export default function artistReducer(artistList = ['appa'], action) {
   let newArtistList = artistList;
   switch (action.type) {
     case actionTypes.LOAD_ARTIST:

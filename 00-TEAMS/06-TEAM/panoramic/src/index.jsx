@@ -5,13 +5,15 @@ import { BrowserRouter, Switch } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import configureStore from './redux/store';
+import Home from './pages/Home/Home';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={configureStore()}>
       <BrowserRouter>
+        <Header />
         <Switch>
-          <Header />
+          <Home />
         </Switch>
       </BrowserRouter>
     </Provider>
