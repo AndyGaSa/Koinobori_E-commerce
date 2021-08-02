@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 import {
   BrowserRouter, Redirect, Route, Switch
 } from 'react-router-dom';
-import './styles/App.css';
 
 import Header from './components/Header/Header';
 import LeaguesList from './pages/LeaguesList/LeaguesList';
