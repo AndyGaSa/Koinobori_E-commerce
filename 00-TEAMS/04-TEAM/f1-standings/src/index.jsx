@@ -5,11 +5,12 @@ import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/store';
 import GetDrivers from './pages/Drivers';
+import DetailsConstructor from './components/Details-constructor/Details.constructor';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={configureStore()}>
-      <h1>hola mundo</h1>
+      <DetailsConstructor />
       <GetDrivers />
     </Provider>
   </React.StrictMode>,
