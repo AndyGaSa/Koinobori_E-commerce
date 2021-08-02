@@ -5,11 +5,11 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import configureStore from './redux/store';
-import Home from './pages/Home/Home';
-import Login from './pages/Login/Login';
-import NotFound from './pages/NotFound/NotFound';
-import Profile from './pages/Profile/Profile';
-import Register from './pages/Register/Register';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import NotFound from './pages/NotFound';
+import Profile from './pages/Profile';
+import Register from './pages/Register';
 
 ReactDOM.render(
   <React.StrictMode>
