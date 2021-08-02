@@ -1,8 +1,8 @@
 .leagues__container {
-  padding-top: 5rem;
+  padding-top: 4rem;
 }
 
-.leagues__container nav {
+.leagues__container form {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

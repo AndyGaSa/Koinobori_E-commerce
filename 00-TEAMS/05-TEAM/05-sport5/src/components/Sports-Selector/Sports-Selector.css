@@ -7,6 +7,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 1rem 4rem;
   width: 100%;
 }
@@ -21,10 +23,13 @@
   font-size: 1.5rem;
   width: 2rem;
   height: 2rem;
+  transition: .2s;
 }
 
 .sportSelector .sport-selector__navigation-menu:hover {
   color: #187890;
   font-size: 1.7rem;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 /*# sourceMappingURL=Sports-Selector.css.map */
