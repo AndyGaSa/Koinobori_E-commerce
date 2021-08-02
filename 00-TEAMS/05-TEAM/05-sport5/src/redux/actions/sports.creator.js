@@ -20,19 +20,23 @@ export default function getLeagues(sport) {
         const leaguesByCountries = response.reduce((acc, { data: { countrys } }) => {
           countrys?.forEach((country) => {
             if (country) {
-              acc.push({
-                country: country.strCountry.toLowerCase(),
-                leagues: {
+              if (!acc[country.strCountry.toLowerCase()]) {
+                acc[country.strCountry.toLowerCase()] = [];
+              }
+
+              acc[country.strCountry.toLowerCase()] = [
+                ...acc[country.strCountry.toLowerCase()],
+                {
                   badge: country.strBadge,
                   name: country.strLeague,
                   id: country.idLeague,
                   sport: country.strSport
                 }
-              });
+              ];
             }
           });
           return acc;
-        }, []);
+        }, {});
 
         dispatch({
           type: actionTypes.LOAD_LEAGUES,

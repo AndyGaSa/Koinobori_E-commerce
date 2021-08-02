@@ -17,7 +17,14 @@ export default function LeaguesList() {
   return (
     <ul>
       {
-      allLeagues?.map((countryLeagues) => <li>{countryLeagues.country}</li>)
+        Object.entries(allLeagues).map((country) => (
+          <>
+            <li>{country[0]}</li>
+            <ul>
+              {country[1].map((league) => <li>{league.name}</li>)}
+            </ul>
+          </>
+        ))
       }
     </ul>
   );
