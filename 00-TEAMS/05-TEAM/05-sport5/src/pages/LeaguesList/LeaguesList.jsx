@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import getLeagues from '../../redux/actions/sports.creator';
 import './LeaguesList.css';
+import SportsSelector from '../../components/Sports-Selector/Sports-Selector';
 
 export default function LeaguesList() {
   const allLeagues = useSelector((store) => store.leagues);
@@ -13,6 +14,9 @@ export default function LeaguesList() {
 
   return (
     <main className="leagues__container">
+      <nav>
+        <SportsSelector />
+      </nav>
       <nav>
         <input type="text" placeholder="Filter" />
         <select>
