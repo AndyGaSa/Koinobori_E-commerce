@@ -14,16 +14,14 @@ export default function LeaguesList() {
 
   return (
     <main className="leagues__container">
-      <nav>
-        <SportsSelector />
-      </nav>
-      <nav>
+      <SportsSelector />
+      <form>
         <input type="text" placeholder="Filter" />
         <select>
           <option value="Favourites" label="Favourites" />
           <option value="Alphabetically" label="Alphabetically" />
         </select>
-      </nav>
+      </form>
       <ul className="leagues">
         {
         Object.entries(allLeagues).map((country) => (
