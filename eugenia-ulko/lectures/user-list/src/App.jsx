@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 import actionTypes from './Redux/actions/action.types';
+import Header from './Redux/components/Header';
 
 function User() {
   const dispatch = useDispatch();
@@ -40,7 +41,7 @@ function User() {
   return (
     <>
       <div className="user-list-container">
-        <h2>User List</h2>
+        <Header />
         <label htmlFor="user-input">
 
           <input
@@ -85,6 +86,7 @@ function User() {
           className="submit-button"
           type="button"
           onClick={saveUser}
+          data-testId="create-button"
         >
           Add User
 

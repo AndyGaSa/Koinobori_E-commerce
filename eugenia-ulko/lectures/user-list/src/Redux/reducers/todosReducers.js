@@ -1,7 +1,6 @@
 import actionTypes from '../actions/action.types';
-import usersMock from '../store/usersmock';
 
-export default function usersReducer(userList = usersMock, action) {
+export default function usersReducer(userList = ['hello'], action) {
   let newUserList = userList;
   const newUser = { name: action.user };
 
