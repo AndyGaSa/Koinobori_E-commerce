@@ -1,8 +1,7 @@
 @import '../../styles/styles.const';
 
 .footer{
-
-    background-color: #636363;
+    background-color: $main-color;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -11,7 +10,6 @@
     bottom: 0;
     width: 100%;
    
-
     .footer__navigation-home-button,
     .footer__navigation-backpage-button,
     .footer__navigation-profile-button
@@ -31,5 +29,4 @@
             font-size: 1.7rem;
         }
     }
-
 }

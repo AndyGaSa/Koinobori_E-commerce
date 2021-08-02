@@ -1,5 +1,6 @@
-main {
+.leagues__container {
   background-color: #212121;
+  padding-top: 5rem;
 }
 
 nav {
@@ -30,7 +31,6 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #636363;
   margin: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -40,9 +40,10 @@ li {
 }
 
 .leagues__country {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #B7B7B7;
 }
 
 .leagues__name {

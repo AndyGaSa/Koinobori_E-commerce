@@ -12,7 +12,7 @@ export default function LeaguesList() {
   }, []);
 
   return (
-    <main>
+    <main className="leagues__container">
       <nav>
         <input type="text" placeholder="Filter" />
         <select>
