@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+}
+
+.imagen{
+    flex:1;
+    border: hotpink 1px solid;
+}
+
+.books {
+    flex: 1;
+    border: hotpink 1px solid;
+}
+
+.img_1{
+    width: 300px;
+}
