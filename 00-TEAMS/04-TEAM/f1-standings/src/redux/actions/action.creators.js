@@ -1,5 +1,4 @@
 import axios from 'axios';
-// import { useSelector } from 'react-redux';
 import actionType from './action.type';
 
 export default function loadDrivers() {
