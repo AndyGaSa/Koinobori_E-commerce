@@ -7,11 +7,11 @@ import {
 
 import configureStore from './redux/store/index';
 import Dashboard from './components/main/dashboard/Dashboard';
-import Details from './components/main/dashboard/Details';
-import Profile from './components/main/dashboard/Profile';
-import Header from './components/main/dashboard/Header';
-import Footer from './components/main/dashboard/Footer';
-import notFound from './components/main/dashboard/Footer';
+import Details from './components/main/details/Details';
+import Profile from './components/main/profile/Profile';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import notFound from './components/notFound/notFound';
 
 function App() {
   return (
