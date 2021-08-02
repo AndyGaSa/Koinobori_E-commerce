@@ -1,0 +1,14 @@
+ul{
+    flex:1;
+}
+.books li{
+    list-style: none;
+    height: 40px;
+    background-color: lightgrey;
+    margin-bottom:30px ;
+    border-left: 5px solid lightseagreen;
+}
+
+li:hover{
+    background-color: lightseagreen;
+}

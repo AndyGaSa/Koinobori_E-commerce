@@ -1,0 +1,10 @@
+.Header {
+    width: 100%;
+    height: 200px;
+    background-color: #e9eaee ;
+    margin-top: 10%;
+  }
+
+  .Header__title {
+    padding: 2% 5%;
+  }

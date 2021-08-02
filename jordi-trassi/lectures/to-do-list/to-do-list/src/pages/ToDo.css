@@ -1,0 +1,120 @@
+
+
+.toDo__main {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(251, 251, 223);
+    border-radius: 10px;
+    align-items: center;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    width: 100%;
+    text-shadow: 2px 2px rgb(179, 177, 177);
+    background-color: bisque;
+    padding: 30px;
+    border-radius: 10px;
+
+}
+
+.toDo__title {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h4 {
+    font-size: 12px;
+    margin-top: -45px;
+}
+
+h2 {
+    padding: 20px 40px;
+    background-color: bisque;
+    border-radius: 10px;
+    width: 50%;
+}
+
+input {
+    width: 45%;
+    height: 35px;
+    font-size: 20px;
+    border-color: bisque;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.toDo__buttons {
+    display: flex;
+    width: 45%;
+    justify-content: flex-end;
+}
+
+.toDo__nav-button {
+    width: 80px;
+    height: 30px;
+    margin-right: 20px;
+    border-color: bisque;
+    border-radius: 5px;
+
+}
+
+.toDo__button-task, 
+.toDo__button-delete, 
+.toDo__nav-button:hover {
+    cursor: pointer;
+}
+
+ul {
+    margin-top: 50px;
+    display: flex;
+    list-style: none;
+    width: 80%;
+    justify-content: space-evenly;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.toDo__button-task {
+    width: 150px;
+    height: 150px;
+    border-color: bisque;
+    background-color: rgb(110, 173, 170);
+    border-radius: 10px;
+    color:white;
+    font-size: 15px;
+    z-index: 0;
+    position: absolute;
+    word-wrap: break-word;
+}
+
+.toDo__button-delete {
+    width: 20px;
+    height: 20px;
+    border-color: red;
+    border-radius: 5px;
+    z-index: 1;
+    position: relative;
+    margin: 130px;
+    
+    
+}
+
+
+
+
+
+@media (max-with: 500px) {
+    h2 {
+        text-align: center;
+    }
+
+}
