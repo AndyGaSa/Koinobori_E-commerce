@@ -1,5 +1,5 @@
 import React from 'react';
-import Map from 'Map';
+// import Map from 'Map';
 
 const EventDetails = () => (
   <>
@@ -26,7 +26,7 @@ const EventDetails = () => (
       <h4>Plazas disponibles: ¿?</h4>
       Descripcion de prueba.
     </p>
-    <Map />
+    {/* <Map /> */}
   </>
 );
 

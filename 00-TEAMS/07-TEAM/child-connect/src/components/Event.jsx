@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'reacto-router-dom';
+// import { Link } from 'reacto-router-dom';
 
 export default function Event() {
   return (
@@ -21,15 +21,17 @@ export default function Event() {
           <p>Cantidad de niños</p>
         </div>
       </section>
-        <footer className="Footer__to-visitor">
-    <button type="button">Saber más...
-    // TODO fix Link with correct info about id and key: <Link to={`/Detalles_Evento/${event.id}`} key={}></Link>
-    </button>
-        </footer>
-    <footer className="Footer__to-user">
+      <footer className="Footer__to-visitor">
+        <button type="button">
+          Saber más...
+          {/* <TODO fix Link with correct info about id and key:
+           <Link to={`/Detalles_Evento/${event.id}`} key={""}></Link> */}
+        </button>
+      </footer>
+      <footer className="Footer__to-user">
         <button type="button">Editar</button>
         <button type="button">Papelera</button>
-    </footer>
+      </footer>
     </>
   );
 }
