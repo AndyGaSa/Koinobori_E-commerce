@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'reacto-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Event() {
   return (
@@ -23,9 +23,7 @@ export default function Event() {
       </section>
       <footer className="Footer__to-visitor">
         <button type="button">
-          Saber más...
-          {/* <TODO fix Link with correct info about id and key:
-           <Link to={`/Detalles_Evento/${event.id}`} key={""}></Link> */}
+          {/* <Link to="#">Saber más...</Link> */}
         </button>
       </footer>
       <footer className="Footer__to-user">
