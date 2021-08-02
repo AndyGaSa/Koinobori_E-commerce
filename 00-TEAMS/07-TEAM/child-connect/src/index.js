@@ -1,18 +1,17 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './index.css';
+import ReactDOM from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
 
 const store = createStore(applyMiddleware(thunk));
 
 ReactDOM.render(
-
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>

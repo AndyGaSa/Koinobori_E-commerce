@@ -23,7 +23,7 @@ export default function Event() {
       </section>
       <footer className="Footer__to-visitor">
         <button type="button">
-          <Link to="#">Saber más...</Link>
+          {/* <Link to="#">Saber más...</Link> */}
         </button>
       </footer>
       <footer className="Footer__to-user">
