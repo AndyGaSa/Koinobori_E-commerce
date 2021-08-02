@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Index</title>
+    <link rel="stylesheet" href="../html-structure/main.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header>
+        <button onclick="reset" class="header__reset-button">reset</button>
+    </header>
+    <main id="screen-content">
+       <li class="pokemon-list" id="pokemon-list">
+           
+       </li>
+       <section class="filters__container">
+           <div class="filters__types">
+               <button class="filter__type-element" onClick="filterByType('type/1',this)"><img src="../assets/types/type__0000_normal.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/2',this)"><img src="../assets/types/type__0001_fighting.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/14',this)"><img src="../assets/types/type__0002_psychic.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/16',this)"><img src="../assets/types/type__0003_dragon.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/11',this)"><img src="../assets/types/type__0004_water.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/18',this)"><img src="../assets/types/type__0005_fairy.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/15',this)"><img src="../assets/types/type__0006_ice.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/3',this)"><img src="../assets/types/type__0007_flying.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/8',this)"><img src="../assets/types/type__0008_ghost.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/10',this)"><img src="../assets/types/type__0009_fire.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/9',this)"><img src="../assets/types/type__0010_steel.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/12',this)"><img src="../assets/types/type__0011_grass.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/5',this)"><img src="../assets/types/type__0012_ground.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/6',this)"><img src="../assets/types/type__0013_rock.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/17',this)"><img src="../assets/types/type__0014_dark.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/13',this)"><img src="../assets/types/type__0015_electric.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/4',this)"><img src="../assets/types/type__0016_poison.png" /></button>
+               <button class="filter__type-element" onClick="filterByType('type/7',this)"><img src="../assets/types/type__0017_bug.png" /></button>
+           </div>
+       </section>
+    </main>
+    <footer>
+        <div id="footer__details-container">
+            <input type="text" placeholder="search" class="footer__input" id="pokemon-search-input">
+            <button onclick="nextAndPreviousPokemonList('next')" class="footer__details-button--next"></button>
+            <button onclick="nextAndPreviousPokemonList('previous')" class="footer__details-button--previous"></button>
+            <button onclick="searchPokemon()" class="footer__details-button--go">go</button>
+        </div>
+        <a href="../creation/creation.html" class="footer__filter-link">filter</a>
+        <a href="../creation/creation.html" class="footer__create-link">create</a>
+    </footer>
+    <script src="../storage.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
