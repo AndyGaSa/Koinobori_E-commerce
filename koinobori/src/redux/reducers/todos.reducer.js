@@ -13,7 +13,7 @@ export default function todosReducer(toDoList = [], action) {
     case actionTypes.UPDATE_TODO:
       newToDoList[action.index] = action.toDo;
       newToDoList = [
-        ...newToDoList,
+        ...newToDoList
       ];
       break;
 

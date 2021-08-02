@@ -6,11 +6,13 @@ import Details from './Details';
 import NotFound from './NotFound';
 
 export default function Main() {
-  <Switch>
-    <Route path="/" exact component={Trending} />
-    <Route path="/trending" component={Trending} />
-    <Route path="/category" component={Category} />
-    <Route path="/details" component={Details} />
-    <Route component={NotFound} />
-  </Switch>;
+  return (
+    <Switch>
+      <Route path="/" exact component={Trending} />
+      <Route path="/trending" component={Trending} />
+      <Route path="/category" component={Category} />
+      <Route path="/details" component={Details} />
+      <Route component={NotFound} />
+    </Switch>
+  );
 }
