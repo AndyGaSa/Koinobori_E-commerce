@@ -1,55 +1,75 @@
 @import '../../styles/styles.const.scss';
 
 .leagues__container {
-    background-color: $background-color;
     padding-top: 5rem;
+
+    nav{
+        width: fit-content;
+        margin: 0 auto;
+    }
+    
+    .leagues{
+        width: 90vw;
+        margin: 0 auto;
+        list-style: none;
+
+        .leagues__block{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem;
+            color: white;
+
+            .leagues__country{
+                width: 100%;
+                padding: 1.2rem 0.5rem;
+                text-align: center;
+                background-color: $body-clear-background;
+                list-style: none;
+                border-top-right-radius: 1rem;
+                border-top-left-radius: 1rem;
+                margin-bottom: 0.2rem;
+            }
+    
+            .leagues__all-leagues{
+                width: 80%;
+                padding: 0;
+                list-style: none;
+
+                .leagues__league{
+                    align-items: center;
+                    background-color: $leagues-background-color;
+                    margin-bottom: 0.3rem;
+                    font-weight: 700;
+                    padding: 0.2rem 0.5rem;
+                    border-radius: 0.5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .leagues__badge{
+                        width: 2.2rem;
+                        height: 2.2rem;
+                    }
+
+                    .leagues__name {
+                        width: 70%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
 }
 
-nav{
-    width: fit-content;
-    margin: 0 auto;
 
-}
 
-li{
-    list-style: none;
-}
 
-.leagues{
-    width: 70%;
-    margin: 0 auto;
-}
 
-.leagues__all-leagues{
-    padding: 0;
-}
 
-.leagues__block{
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    align-items: center;
-    color: white;
-    font-family: $main-font;
-}
 
-.leagues__country{
-    width: 100%;
-    padding: 0.5rem;
-    text-align: center;
-    background-color: $body-clear-background;
-}
 
-.leagues__name{
-    align-items: center;
-    background-color: $body-clear-background;
-    margin: 10px 0;
-    font-weight: 700;
-    padding: 0 20px;
-}
 
-.leagues__badge{
-    height: 20px;
-    width: 20px;
-    padding-right: 20px;
-}
+
+
+
