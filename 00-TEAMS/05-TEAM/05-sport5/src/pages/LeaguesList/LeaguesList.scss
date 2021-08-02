@@ -1,0 +1,41 @@
+@import '../../styles/styles.const.scss';
+
+nav{
+    width: fit-content;
+    margin: 0 auto;
+}
+li{list-style: none;}
+.leagues{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.leagues__all-leagues{
+    padding: 0;
+}
+.leagues__block{
+    display: flex;
+    flex-direction: column;
+    background-color: $leagues-background-color;
+    margin: 20px;
+    align-items: center;
+    color: $main-color;
+    font-family: $main-font;
+}
+.leagues__country{
+width: fit-content;
+}
+
+.leagues__name{
+    align-items: center;
+    background-color: $body-clear-background;
+    margin: 10px 0;
+    font-weight: 700;
+    padding: 0 20px;
+}
+
+.leagues__badge{
+    height: 20px;
+    width: 20px;
+    padding-right: 20px;
+}
