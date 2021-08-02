@@ -1,0 +1,96 @@
+.header{
+    width:100%;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: stretch;
+}
+.header__lower__nav-icons{
+    
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+}
+.icons{
+
+    Width: 161px;
+    height: 90px;
+}
+.logo{
+    width: 201px;
+    height: 248px;
+    top: 67px;
+    left:45px;
+}
+.cart{
+    width: 85px;
+    height: 75px;
+}
+.menu{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.header__upper{
+
+    Width: 100%;
+    height: 61px;
+    background-color:  #B968FF ;
+
+   
+
+}
+.discount{
+    color: #FFFB96 ;
+    font-family:  Neue;
+    font-style: Regular;
+    font-size: 36px;
+    line-height: 43px;
+    line-height: 100%;
+    align-items: center;
+    
+    
+}
+.discount{
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+  }
+  
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  }
+  
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+}
