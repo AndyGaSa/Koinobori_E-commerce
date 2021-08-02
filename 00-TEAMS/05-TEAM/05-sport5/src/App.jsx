@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import './styles/App.css';
 
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LeaguesList from './pages/LeaguesList/LeaguesList';
 import TeamsList from './pages/TeamsList/TeamsList';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/team/:teamId" component={TeamDetail} />
           <Route component={NotFound} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </Provider>
   );
