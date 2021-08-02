@@ -1,0 +1,20 @@
+.list{
+    display: flex;
+    flex-direction: column;
+}
+.list-item{
+    display: flex;
+    width: 300px;
+    background-color: grey;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    margin:20px;
+}
+.hero-image{
+    width: 150px;
+}
+.hero-name{
+    text-align: center;
+    width: 150px;
+}
