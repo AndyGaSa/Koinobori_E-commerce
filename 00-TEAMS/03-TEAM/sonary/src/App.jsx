@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
+
 import './App.css';
 import configureStore from './redux/store/index';
 import Dashboard from './components/main/dashboard/Dashboard';
