@@ -25,11 +25,11 @@ export function updateStock(stock, index) {
 
 export function loadStocks() {
   return async (dispatch) => {
-    const { data } = await axios('https://my-kinobori-api.herokuapp.com/clothes');
+    const { data } = await axios('https://my-kinobori-api.herokuapp.com/stock');
 
     dispatch({
-      type: actionTypes.LOAD_stockS,
-      stocks: data
+      type: actionTypes.LOAD_STOCK,
+      payload: data
     });
   };
 }
@@ -40,7 +40,7 @@ export function loadstocksWithAsync() {
     const stocks = await response.json();
 
     dispatch({
-      type: actionTypes.LOAD_stockS,
+      type: actionTypes.LOAD_STOCK,
       stocks
     });
   };
@@ -51,7 +51,7 @@ export function loadstocksWithPromise() {
     fetch('https://my-kinobori-api.herokuapp.com/clothes')
       .then((response) => response.json())
       .then((stocks) => dispatch({
-        type: actionTypes.LOAD_stockS,
+        type: actionTypes.LOAD_STOCK,
         stocks
       }));
   };
