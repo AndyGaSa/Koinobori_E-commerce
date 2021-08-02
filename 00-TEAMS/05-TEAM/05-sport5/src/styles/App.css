@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
+=======
+*{
+    margin:0;
+    padding:0;
+>>>>>>> 70f02ac8bf7eb4c53474da45b5fe19391c70ad3a
     box-sizing: border-box;
 }
