@@ -22,6 +22,7 @@ export function loadDriversPts() {
     });
   };
 }
+/*
 export function loadPilots() {
   return fetch('http://ergast.com/api/f1/2021/drivers.json')
     .then((response) => response.json())
@@ -35,3 +36,4 @@ export function loadPilots() {
     });
 }
 loadPilots();
+*/
