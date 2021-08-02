@@ -12,7 +12,7 @@ export default function LeaguesList() {
   }, []);
 
   return (
-    <>
+    <main>
       <nav>
         <input type="text" placeholder="Filter" />
         <select>
@@ -37,6 +37,6 @@ export default function LeaguesList() {
         ))
       }
       </ul>
-    </>
+    </main>
   );
 }
