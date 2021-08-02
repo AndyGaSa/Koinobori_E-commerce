@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Switch } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
-import configureStore from './redux/reducers';
+import configureStore from './redux/store';
 
 ReactDOM.render(
   <React.StrictMode>
