@@ -1,7 +1,21 @@
 header {
-    background-image: url(https://drive.google.com/file/d/1qt9yXb2dz4p2hjAyJxEGrViuXRUE4c0M/view?usp=sharing);
-
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://i.ibb.co/HgPB420/brothers-2107264.jpg);
+    background-repeat: no-repeat;
+    background-size: 1367px auto;
 }
+
+nav {
+    background-color: #5E5E5E;opacity: 0.8;    
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 261px;
+}
+
 
 .header__buttons {
 

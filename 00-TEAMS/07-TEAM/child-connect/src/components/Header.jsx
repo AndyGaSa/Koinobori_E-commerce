@@ -8,8 +8,8 @@ export default function Header() {
     <>
       <header>
         <nav>
-          <Link to="/">
-            <img src="https://drive.google.com/file/d/1hErhyLSEOwzR_QepMIxlAGwUGsa-EG6v/view?usp=sharing" alt="Child Connect Header Logo" />
+          <Link to="/" className="header__home-button">
+            <img src="https://i.ibb.co/M7Cprgj/Child-Connect-2.png" width="213px" height="auto" alt="Child Connect Header Logo" />
           </Link>
           <section className="header__buttons">
             {/* <Link to="#" className="buttons__crear-evento">Crear Evento</Link> */}
@@ -20,7 +20,7 @@ export default function Header() {
           </section>
         </nav>
         <div>
-          <h1>CHILD CONNECT, LA RED SOCIAL PARA LOS MÁS PEQUEÑOS.</h1>
+          <h1>CHILD CONNECT, la red social para conectar a los más pequeños.</h1>
         </div>
       </header>
     </>

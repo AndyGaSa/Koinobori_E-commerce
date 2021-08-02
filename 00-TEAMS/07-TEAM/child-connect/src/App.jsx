@@ -12,7 +12,6 @@ import './App.css';
 function App() {
   return (
     <>
-      <h1>Hola mundo</h1>
       <Header />
       <Switch>
         <Route path="/" exact component={Dashboard} />
