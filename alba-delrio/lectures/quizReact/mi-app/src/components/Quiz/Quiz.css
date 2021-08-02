@@ -1,0 +1,16 @@
+
+.quiz {
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px;
+}
+
+.quiz--wrong{
+    background-color: maroon;
+}
+
+.quiz--success {
+    background-color:mediumseagreen;
+}

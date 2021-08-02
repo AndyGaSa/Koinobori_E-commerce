@@ -1,0 +1,47 @@
+.ToDoClass__container{
+    padding: 30px;
+    padding-bottom: 18px;
+    border-radius: 20px;
+    filter: drop-shadow(4px 3px 6px lightgrey);
+    background-color: #ffc3bc;
+    width: 20%;
+    min-width: 100px;
+    margin: 20px 0;
+}
+h3{
+    margin: 0;
+    color: #444444;
+}
+p{
+    margin: 0;
+    color: #444444;
+}
+input{
+    height: 30px;
+    border-radius: 9px;
+    border: none;
+    margin-top: 10px;
+    width: 50%;
+    box-shadow: inset 4px 2px 8px lightgrey;
+    text-indent: 14px;
+    font-size: 1em;
+}
+input[type="text" i] {
+    padding: 3px 3px;
+}
+input:focus-visible {
+    outline-offset: none;
+    outline: none;
+}
+.ToDoCard__button{
+    margin: 10px 3px;
+    margin-bottom: 0;
+    border-radius: 8px;
+    border: none;
+    height: 30px;
+    filter: drop-shadow(4px 3px 1px rgba(79, 79, 79, 0.331));
+}
+.ToDoCard__button:hover{
+    background-color: lightslategray;
+    filter: drop-shadow(4px 3px 1px rgba(79, 79, 79, 0.331));
+}

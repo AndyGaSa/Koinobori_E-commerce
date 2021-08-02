@@ -1,0 +1,95 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.users__create {
+    padding: 2rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    position: relative;
+    margin: auto;
+    width: 23rem;
+}
+
+.users__create input {
+    height: 2rem;
+    width: 15rem;
+    border: 2px solid black;
+    padding: 0 1rem;
+    outline: none;
+}
+
+.users__create input:focus {
+    background-color: #F4F4F4;
+}
+
+.users__create button {
+    height: 2rem;
+    width: 4rem;
+    background-color: transparent;
+    border: 2px solid black;
+    border-left: none;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 2rem;
+    transition: .2s;
+}
+
+.users__create button:hover {
+    background-color: #212121;
+    color: white;
+}
+
+.users__create button:active {
+    background-color: gray;
+}
+
+.users__list {
+    width: 80vw;
+    max-width: 20rem;
+    list-style: none;
+}
+
+.users__list li {
+    background-color: #F4F4F4;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 1rem;
+    margin-bottom: 0.5rem;
+    transition: .2s;
+}
+
+.users__list li a {
+    color: black;
+    transition: .2s;
+}
+
+.users__list li:hover {
+    background-color: #212121;
+}
+
+.users__list li:hover button,
+.users__list li:hover a {
+    color: white;
+}
+
+.users__id {
+    color: grey;
+    margin-right: 1rem;
+}
+
+.users__list button {
+    border: none;
+    font-size: 0.75rem;
+    transition: .2s;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.users__list button:hover {
+    font-size: 0.9rem;
+}
+
