@@ -5,11 +5,15 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import rootReducer from './redux/reducers';
+import fetchAllEvents from './redux/actions/index';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
-const store = createStore(applyMiddleware(thunk));
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+store.dispatch(fetchAllEvents());
 
 ReactDOM.render(
   <React.StrictMode>
