@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import { createStore, compose } from 'redux';
 import rootReducer from '../reducers';
 
