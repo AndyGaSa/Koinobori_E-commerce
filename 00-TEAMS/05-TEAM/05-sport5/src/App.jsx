@@ -11,6 +11,7 @@ import TeamDetail from './pages/TeamDetail/TeamDetail';
 import NotFound from './pages/NotFound/NotFound';
 
 import configureStore from './redux/store';
+import './styles/App.css';
 
 function App() {
   return (

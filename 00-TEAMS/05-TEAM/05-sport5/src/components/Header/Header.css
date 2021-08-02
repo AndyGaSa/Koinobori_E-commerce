@@ -1,0 +1,42 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #0A0A0A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 4rem;
+  z-index: 2;
+}
+
+.header .header__navigation-menu {
+  background-color: transparent;
+  color: white;
+  outline: inherit;
+  border: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.header .header__navigation-menu:hover {
+  color: #187890;
+  font-size: 1.7rem;
+}
+
+.header .header__main-title {
+  color: white;
+  font-family: "Lobster", cursive;
+  font-size: 24px;
+  text-align: right;
+}
+/*# sourceMappingURL=Header.css.map */
