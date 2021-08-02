@@ -1,0 +1,27 @@
+@import '../../styles/styles.const';
+
+.sportSelector{
+    background-color: $main-color;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 4rem;
+    width: 100%;
+   
+    .sport-selector__navigation-menu
+    {
+        background-color: transparent;
+        color: white;
+        outline: inherit;
+        border: none;
+        transition: .2s;
+        font-size: 1.5rem;
+        width: 2rem;
+        height: 2rem;
+    
+
+        &:hover{
+            color: $hover-color;
+            font-size: 1.7rem;
+        }
+    }
+}
