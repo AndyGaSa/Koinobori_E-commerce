@@ -1,9 +1,15 @@
 // import React, { useEffect } from 'react';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import configureStore from './redux/store';
-import Test01 from './page/test1';
+import ComicList from './page/ComicList';
+import Header from './components/header/Header';
+import NotFound from './page/NotFound';
+import Profile from './page/Profile';
+import Battle from './page/Battle';
+import Login from './page/Login';
+import Footer from './components/footer/Footer';
 
 import './App.css';
 
@@ -11,8 +17,18 @@ function App() {
   return (
     <Provider store={configureStore()}>
       <BrowserRouter>
-        <Test01 />
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Login} />
+          <Route path="/comic-list" component={ComicList} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/battle" component={Battle} />
+          <Route path="/log-out" component={Login} />
+          <Route component={NotFound} />
+        </Switch>
+        <Footer />
       </BrowserRouter>
+
     </Provider>
 
   );
