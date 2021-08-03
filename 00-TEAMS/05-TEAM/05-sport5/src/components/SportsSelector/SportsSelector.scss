@@ -21,9 +21,10 @@
         border: none;
         transition: .2s;
         font-size: 1.5rem;
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2.3rem;
+        height: 2.3rem;
         transition: .4s;
+        border-radius: 50%;
 
         &:hover{
             color: $hover-color;
@@ -32,13 +33,15 @@
         }
 
         svg {
-            width: 1.6rem;
+            width: 100%;
+            padding: 0.4rem;
+            border-radius: 50%;
             fill: white;
             transition: .4s;
 
             &:hover {
                 fill: $hover-color;
-                width: 2.3rem;
+                padding: 0rem;
             }
         }
 
