@@ -1,39 +1,37 @@
+/* eslint-disable no-console */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import { Auth0Provider } from '@auth0/auth0-react';
+/* import { Auth0Provider } from '@auth0/auth0-react'; */
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import rootReducer from './redux/reducers';
-import fetchAllEvents from './redux/actions/events.creators';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-import LogInPage from './pages/LogInPage';
+import Dashboard from './pages/Dashboard';
+import Header from './components/Header';
+import fetchAllEvents from './redux/actions/events.creators';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
+console.log(store);
 
 store.dispatch(fetchAllEvents());
 
 ReactDOM.render(
-  <Auth0Provider
-    domain={process.env.REACT_APP_AUTH0_DOMAIN}
-    clientId={process.env.REACT_APP_AUTH0_CLIENTID}
-    redirectUrl={window.location.origin}
-  >
-    <React.StrictMode>
-      <Provider store={store}>
-        <BrowserRouter>
-          <LogInPage />
-          <Switch>
-            <Route exact path="/" component={LogInPage} />
-          </Switch>
-        </BrowserRouter>
-      </Provider>
-    </React.StrictMode>
-  </Auth0Provider>,
+  <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route path="/" component={Dashboard} />
+        </Switch>
+      </BrowserRouter>
+
+    </Provider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
