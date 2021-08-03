@@ -1,19 +1,16 @@
-/* eslint-disable no-debugger */
-/* eslint-disable max-len */
-/* eslint-disable no-console */
 /* eslint-disable camelcase */
-/* eslint-disable no-undef */
 /* eslint-disable import/prefer-default-export */
 import actionTypes from './actionTypes';
 
-export function loadChart() {
+export function loadDashboard() {
   return async (dispatch) => {
     const response = await fetch('https://api.musixmatch.com/ws/1.1/chart.tracks.get?format=jsonp&callback=callback&page_size=100&country=us&f_has_lyrics=f_has_lyrics&apikey=ac9bd389d8c264b9d3fe211a16c14560');
-    const chart = await response.text();
-    const { message: { body: { track_list } } } = await JSON.parse(chart.substring(9, (chart.length - 2)));
+    let mod = await response.text();
+    mod = await mod.substring(9, (mod.length - 2));
+    const { message: { body: { track_list } } } = await JSON.parse(mod);
     dispatch({
-      type: actionTypes.LOAD_SONARY,
-      chart: track_list
+      type: actionTypes.LOAD_DASHBOARD,
+      dashboard: track_list
     });
   };
 }

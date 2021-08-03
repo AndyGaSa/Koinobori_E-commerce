@@ -1,30 +1,28 @@
-/* eslint-disable no-debugger */
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
 import actionTypes from '../actions/actionTypes';
 
-export default function sonaryReducer(oldChart = [], action) {
-  let newChart = oldChart;
+export default function sonaryReducer(state = [], action) {
+  let sonary = state;
   switch (action.type) {
-    case actionTypes.LOAD_SONARY:
-      newChart = action.chart.map(({
+    case actionTypes.LOAD_DASHBOARD:
+      sonary = action.dashboard.map(({
         track: {
           track_id, album_id, artist_id, track_name, album_name, artist_name
         }
       }) => {
-        const track = {
+        const tracks = {
           track_id, album_id, artist_id, track_name, album_name, artist_name
         };
-        return track;
+        return tracks;
       });
       break;
     case actionTypes.LOAD_DETAILS:
-      console.log(action.lyrics);
-      newChart = action.lyrics.map(({ lyrics_body }) => lyrics_body);
+      sonary = action.details.lyrics_body;
       break;
     default:
       break;
   }
 
-  return newChart;
+  return sonary;
 }
