@@ -20,6 +20,7 @@
             align-items: center;
             margin: 2rem;
             color: white;
+            min-width: 200px;
 
             .leagues__country{
                 width: 100%;
@@ -61,23 +62,26 @@
 
                     a {
                         @include anchor;
+                        display: flex;
+                        align-items: center;
+                        flex-grow: 1;
+                        justify-content: flex-start;
                     }
                     
                     .leagues__badge{
                         width: 2.2rem;
                         height: 2.2rem;
+                        margin-right: 1rem;
                     }
 
                     .leagues__name {
                         width: 70%;
-                        text-align: center;
                     }
 
                     .leagues__favourite-button {
                         background-color: transparent;
                         border: none;
                         color: white;
-                        z-index: 1;
 
                         &:hover {
                             color: lightgrey;
