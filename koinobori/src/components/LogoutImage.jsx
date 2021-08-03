@@ -6,7 +6,7 @@ import './LoginProfile.scss';
 
 function LogoutImage() {
   const { logout } = useAuth0();
-  localStorage.removeItem('cart');
+
   return (
 
     <img className="login-image" onClick={() => logout()} src="https://i.ibb.co/KN3zKZY/logout.png" alt="logout" />
