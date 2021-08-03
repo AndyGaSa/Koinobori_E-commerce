@@ -2,12 +2,12 @@
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
-export function loadArtist() {
+export function loadSuggestedArtists() {
   return async (dispatch) => {
     const { data } = await axios('https://jsonplaceholder.typicode.com/todos');
 
     dispatch({
-      type: actionTypes.LOAD_ARTIST,
+      type: actionTypes.LOAD_SUGGESTED_ARTISTS,
       artist: data
     });
   };
