@@ -2,18 +2,19 @@
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import loadDetails from '../../../redux/actions/details.creator';
 
 export default function Detail() {
-  const lyrics = useSelector((store) => store.lyrics);
+  const chart = useSelector((store) => store.chart);
   const { track_id } = useParams();
-  loadDetails(track_id);
+  const dispatch = useDispatch();
+  useEffect(() => dispatch(loadDetails(track_id)), []);
   return (
     <main>
       <h1>Details Page</h1>
-      <p>{lyrics}</p>
+      <p>{chart.lyrics_body}</p>
     </main>
   );
 }

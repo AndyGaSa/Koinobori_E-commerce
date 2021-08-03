@@ -19,8 +19,8 @@ export default function sonaryReducer(oldChart = [], action) {
       });
       break;
     case actionTypes.LOAD_DETAILS:
-      console.log(action.lyrics);
-      newChart = action.lyrics.map(({ lyrics_body }) => lyrics_body);
+      newChart = action.lyrics;
+      console.log(newChart);
       break;
     default:
       break;
