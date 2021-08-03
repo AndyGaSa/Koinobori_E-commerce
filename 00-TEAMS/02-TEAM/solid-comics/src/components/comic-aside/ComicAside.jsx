@@ -1,5 +1,6 @@
 import React from 'react';
 import './ComicAside.scss';
+import { filterComics } from '../../redux/actions/comics.creators';
 
 export default function ComicAside() {
   return (
@@ -39,7 +40,13 @@ export default function ComicAside() {
         </button>
       </div>
       <input className="filter__input" type="text" name="input-search" />
-      <button type="button" className="filter__go-button">GO</button>
+      <button
+        type="button"
+        className="filter__go-button"
+        onClick={filterComics}
+      >
+        GO
+      </button>
     </aside>
   );
 }
