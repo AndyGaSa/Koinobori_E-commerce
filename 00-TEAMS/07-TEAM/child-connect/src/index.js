@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 /* import { Auth0Provider } from '@auth0/auth0-react'; */
@@ -13,12 +12,8 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 import Dashboard from './pages/Dashboard';
 import Header from './components/Header';
-import fetchAllEvents from './redux/actions/events.creators';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
-console.log(store);
-
-store.dispatch(fetchAllEvents());
 
 ReactDOM.render(
   <React.StrictMode>

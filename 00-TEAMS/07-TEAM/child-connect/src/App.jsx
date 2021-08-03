@@ -15,7 +15,7 @@ import EventDetails from './components/EventDetails';
 import './App.css';
 
 function App() {
-  const currentEvents = useSelector(({ events }) => events);
+  const currentEvents = useSelector((test) => test);
 
   console.log(currentEvents);
   return (
