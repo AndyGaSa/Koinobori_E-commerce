@@ -7,9 +7,9 @@ export default function Footer() {
   return (
 
     <>
-      <div className="main-container">
+      <div className="main-footer-container">
         <nav>
-          <ul className="main-container__socialmedia">
+          <ul className="main-footer-container__socialmedia">
             <li className="socialmedia__facebook"><Link to="facebook.com" /></li>
             <li className="socialmedia__youtube"><Link to="facebook.com" /></li>
             <li className="socialmedia__twitter"><Link to="facebook.com" /></li>
@@ -19,7 +19,7 @@ export default function Footer() {
           </ul>
         </nav>
         <form className="main-container__contact-form">
-          <h3>Contact Us</h3>
+          <h3>Contact Us:</h3>
           <div className="name-input">
             <input type="text" placeholder="First Name" />
             <input type="text" placeholder="Last Name" />
