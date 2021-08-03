@@ -20,8 +20,12 @@ export default function Details() {
       <section>
         <section>
           <figure>
-            <img src={`${stock?.imageFront}`} alt="" />
-            <img src={`${stock?.imageBack}`} alt="" />
+            <ul>
+              {stock
+      && stock.imageDetails.map((item) => (
+        <img src={item} alt="" />
+      ))}
+            </ul>
           </figure>
         </section>
         <section>
