@@ -9,13 +9,11 @@ export default function Details() {
   const { stockId } = useParams();
   const { category } = useParams();
   const [stock, setStock] = useState();
-
   // eslint-disable-next-line no-unused-vars
   function addToCart() {
     newLocalStorage.push(stock);
     localStorage.setItem('cart', JSON.stringify(newLocalStorage));
   }
-
   useEffect(() => {
     setStock(stockList.clothes
       && stockList.clothes[category].find((stockNow) => stockNow.id === +stockId));
