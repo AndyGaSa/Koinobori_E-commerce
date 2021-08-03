@@ -1,0 +1,14 @@
+.comic__item{
+    width: 243px;
+    height: 441.484;
+}
+.item__img{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 26px 24px -16px rgb(0 0 0 / 40%);
+}
+.comic__row{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+}
