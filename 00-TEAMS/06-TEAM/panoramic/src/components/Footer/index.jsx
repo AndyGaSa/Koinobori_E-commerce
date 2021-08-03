@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
-import styles from './styles.css';
+import styles from './styles.scss';
 
 export default function Footer() {
   return (
@@ -10,12 +10,12 @@ export default function Footer() {
       <div className="main-container">
         <nav>
           <ul className="main-container__socialmedia">
-            <li className="socialmedia__facebook"><Link to="facebook.com">F</Link></li>
+            <li className="socialmedia__facebook"><Link to="facebook.com" /></li>
             <li className="socialmedia__instagram"><Link to="facebook.com">F</Link></li>
             <li className="socialmedia__twitter"><Link to="facebook.com">F</Link></li>
             <li className="socialmedia__souncloud"><Link to="facebook.com">F</Link></li>
             <li className="socialmedia__pinterest"><Link to="facebook.com">F</Link></li>
-            <li className="socialmedia__youtube"><a href="www.facebook.com">A</a></li>
+            <li className="socialmedia__youtube"><Link to="facebook.com" /></li>
           </ul>
         </nav>
         <form className="main-container__contact-form">
