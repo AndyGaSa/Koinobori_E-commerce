@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
-import getLeagues from '../../redux/actions/sports.creator';
+import { useDispatch, useSelector } from 'react-redux';
+import { addFavouriteLeague, deleteFavouriteLeague, getLeagues } from '../../redux/actions/sports.creator';
 import './LeaguesList.scss';
 import SportsSelector from '../../components/SportsSelector/SportsSelector';
+import { leagueIsInFavourites } from '../../service/favourites-local-storage';
 
 export default function LeaguesList() {
   const allLeagues = useSelector((store) => store.countriesLeagues.leagues);
@@ -12,6 +13,31 @@ export default function LeaguesList() {
   useEffect(() => {
     dispatch(getLeagues(sportId));
   }, []);
+
+  function changeFavourite(league, event) {
+    const button = event.target;
+    if (button.className.includes('active')) {
+      dispatch(deleteFavouriteLeague(league.id));
+      button.className = 'leagues__favourite-button';
+      button.parentElement.className = 'leagues__league';
+    } else {
+      dispatch(addFavouriteLeague(league));
+      button.className = 'leagues__favourite-button leagues__favourite-button--active';
+      button.parentElement.className = 'leagues__league leagues__league--top';
+    }
+  }
+
+  function favouriteButtonClassCheck(leagueId) {
+    return leagueIsInFavourites(leagueId)
+      ? 'leagues__favourite-button leagues__favourite-button--active'
+      : 'leagues__favourite-button';
+  }
+
+  function favouriteElementClassCheck(leagueId) {
+    return leagueIsInFavourites(leagueId)
+      ? 'leagues__league leagues__league--top'
+      : 'leagues__league';
+  }
 
   return (
     <main className="leagues__container">
@@ -30,13 +56,12 @@ export default function LeaguesList() {
             <li key={`${country[0]}-name`} className="leagues__country">{country[0].toUpperCase()}</li>
             <ul key={`${country[0]}-league`} className="leagues__all-leagues">
               {country[1].map((league) => (
-
-                <li key={league.id} className="leagues__league">
-                  <img src={league.badge} alt={league.name} className="leagues__badge" />
+                <li key={league.id} className={favouriteElementClassCheck(league.id)}>
                   <Link to={`/league/${league.id}`}>
+                    <img src={league.badge} alt={league.name} className="leagues__badge" />
                     <span className="leagues__name">{league.name}</span>
                   </Link>
-                  <i className="fas fa-star" />
+                  <button className={favouriteButtonClassCheck(league.id)} type="button" aria-label="Add to favourites" onClick={(event) => changeFavourite(league, event)}><i className="fas fa-star" /></button>
                 </li>
               ))}
             </ul>

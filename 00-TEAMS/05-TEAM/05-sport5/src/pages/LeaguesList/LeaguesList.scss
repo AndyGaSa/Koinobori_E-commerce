@@ -20,6 +20,7 @@
             align-items: center;
             margin: 2rem;
             color: white;
+            min-width: 200px;
 
             .leagues__country{
                 width: 100%;
@@ -39,6 +40,9 @@
                 width: 80%;
                 padding: 0;
                 list-style: none;
+                display: flex;
+                flex-direction: column;
+
               
                 .leagues__league{
                     background-color: $leagues-background-color;
@@ -49,32 +53,56 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    transition: .3s;
+
+                    &--top {
+                        background-color: $leagues-background-color-favourite;
+                        order: -1;
+                    }
+
                     a {
                         @include anchor;
+                        display: flex;
+                        align-items: center;
+                        flex-grow: 1;
+                        justify-content: flex-start;
                     }
+                    
                     .leagues__badge{
                         width: 2.2rem;
                         height: 2.2rem;
+                        margin-right: 1rem;
                     }
 
                     .leagues__name {
                         width: 70%;
-                        text-align: center;
                     }
+
+                    .leagues__favourite-button {
+                        background-color: transparent;
+                        border: none;
+                        color: white;
+
+                        &:hover {
+                            color: lightgrey;
+                        }
+
+                        &--active {
+                            color: $favourite-color;
+    
+                            &:hover {
+                                color: $main-color;
+                            }
+                        }
+
+                        i {
+                            pointer-events: none;
+                        }
+                    }
+
                 }
             }
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 

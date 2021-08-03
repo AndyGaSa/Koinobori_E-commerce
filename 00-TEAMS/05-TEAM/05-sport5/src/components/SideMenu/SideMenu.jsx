@@ -1,9 +1,19 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { getFavourites } from '../../redux/actions/sports.creator';
+
 import './SideMenu.scss';
 
-function SideMenu({ favourites, navClass }) {
+function SideMenu({ navClass }) {
+  const favourites = useSelector((store) => store.countriesLeagues.favourites);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getFavourites());
+  }, []);
+
   return (
     <aside className={navClass}>
       <nav className="side-menu">
