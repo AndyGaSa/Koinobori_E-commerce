@@ -3,7 +3,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
 // import UserProfile from './pages/UserProfile';
@@ -13,12 +13,14 @@ import EventDetails from './components/EventDetails';
 
 import './App.css';
 
-function App({ events }) {
-  console.log(events);
+function App() {
+  const currentEvents = useSelector(({ events }) => events);
+
+  console.log(currentEvents);
   return (
     <>
       <h1>Hola mundo</h1>
-      <p>{events[0]?.activity}</p>
+      <p>{currentEvents[0]?.activity}</p>
       <Header />
       <Switch>
         <Route path="/" exact component={Dashboard} />
@@ -32,10 +34,4 @@ function App({ events }) {
   );
 }
 
-const mapStateToProps = (state) => ({
-  events: state.events
-});
-
-export default connect(
-  mapStateToProps
-)(App);
+export default App;
