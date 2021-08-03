@@ -10,11 +10,11 @@ export default function Details() {
   const [stock, setStock] = useState();
 
   useEffect(() => {
-    if (stockId) {
-      const foundStock = stockList.clothes[category].find((stockNow) => stockNow.id === +stockId);
-      setStock(foundStock);
-    }
-  }, [stockId]);
+
+    setStock(stockList.clothes
+      && stockList.clothes[category].find((stockNow) => stockNow.id === +stockId));
+  }, [stockId, stockList]);
+
 
   return (
     <main>
@@ -22,18 +22,21 @@ export default function Details() {
       <section>
         <section>
           <figure>
-            <img src={`${stock?.imageFront}`} alt="" />
-            <img src={`${stock?.imageBack}`} alt="" />
+            <ul>
+              {stock
+      && stock.imageDetails.map((item) => (
+        <img src={item} alt="" />
+      ))}
+            </ul>
           </figure>
         </section>
         <section>
           <section>{stock?.price}</section>
           <ul>
-            {
-          stock.description.map((item) => (
-            <li>{`${item}`}</li>
-          ))
-          }
+            {stock
+      && stock.description.map((item) => (
+        <li>{`${item}`}</li>
+      ))}
           </ul>
           <span>Tax included. Shipping calculated at checkout.</span>
           <button type="button">ADD TO CART</button>
