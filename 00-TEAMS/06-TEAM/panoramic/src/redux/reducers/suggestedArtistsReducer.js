@@ -10,6 +10,5 @@ export default function suggestedArtistsReducer(artistList = [], action) {
     default:
       break;
   }
-
   return newArtistList;
 }
