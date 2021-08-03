@@ -4,8 +4,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './Header.css';
+import { useAuth0 } from '@auth0/auth0-react';
+import LoginProfile from './LoginProfile';
+import LoginImage from './LoginImage';
+import LogoutImage from './LogoutImage';
 
 export default function Header() {
+  const { isAuthenticated } = useAuth0();
   const stockList = useSelector((store) => store.stock);
   return (
     <header>
@@ -36,10 +41,14 @@ export default function Header() {
             </Link>
           </div>
 
-          <Link to="/login">
-            <img className="login" src={stockList?.resources?.loginIcon} alt="login" />
-          </Link>
+          <Link to="/">
 
+            { isAuthenticated
+              ? <LogoutImage />
+              : <LoginImage />}
+
+          </Link>
+          <LoginProfile />
           <Link to="/cart">
             <img className="cart" src={stockList?.resources?.cartIconPurple} alt="cart" />
           </Link>
