@@ -1,5 +1,6 @@
 import axios from 'axios';
 import actionType from './action.type';
+// comentario
 
 export function loadRacesData() {
   return async (dispatch) => {
