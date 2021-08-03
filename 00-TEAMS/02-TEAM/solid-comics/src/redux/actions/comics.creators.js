@@ -11,15 +11,14 @@ export default function loadComics() {
     series: 'series',
     stories: 'stories'
   };
-  const limit = 'limit=20';
-  const offset = 'offset=50';
+  const limit = 'limit=2';
+  const offset = 'offset=200';
   const apikey = 'apikey=a717c0f1c6c7e9f36248d126d74b8f67';
   const hash = 'hash=6afa5ea281d51757fc165b2dd77446c5';
 
   return async (dispatch) => {
     const { data } = await axios(
       `${baseUrl}${items.comics}?ts=1&${limit}&${offset}&${apikey}&${hash}`
-      // 'http://gateway.marvel.com/v1/public/characters?ts=1&apikey=a717c0f1c6c7e9f36248d126d74b8f67&hash=6afa5ea281d51757fc165b2dd77446c5'
     );
 
     dispatch({
