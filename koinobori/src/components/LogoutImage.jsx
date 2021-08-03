@@ -5,7 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 function LogoutImage() {
   const { logout } = useAuth0();
-
+  localStorage.removeItem('cart');
   return (
 
     <img className="login" onClick={() => logout()} src="https://i.ibb.co/KN3zKZY/logout.png" alt="logout" />
