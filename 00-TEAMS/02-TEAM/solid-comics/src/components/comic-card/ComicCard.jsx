@@ -22,7 +22,7 @@ export default function ComicCard() {
             <h5>
               {targetComic[0]?.title}
             </h5>
-            <p>B. Earl, Veregge</p>
+            <p>B. Earl,Veregge</p>
           </div>
         </Link>
       </div>
