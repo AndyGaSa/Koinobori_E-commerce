@@ -1,13 +1,13 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
-import {}
+import loadAxiosSuggestedArtists, { getGenres } from '../../redux/actions/actionCreators';
 
 export default function Home() {
   const artist = useSelector((store) => store.suggestedArtists);
-  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(loadArtist());
+    loadAxiosSuggestedArtists();
+    getGenres().then((response) => console.log(response));
   }, []);
 
   return (
