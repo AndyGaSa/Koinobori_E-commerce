@@ -5,8 +5,30 @@ $side-menu-title-color: #707070;
 .side-menu__container {
     height: 0;
     position: fixed;
+    z-index: 1;
     transform: translateX(-500px);
     transition: .5s;
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+  
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
 }
 
 .side-menu__container--active {
@@ -16,18 +38,15 @@ $side-menu-title-color: #707070;
 .side-menu {
     font-family: $main-font;
     background-color: $side-menu-background-color;
-    position: absolute;
-    z-index: 1;
     width: 80vw;
     max-width: 400px;
     height: 100vh;
     padding: 5rem 0.5rem 0 0;
     color: white;
     animation: slide-in 0.5s;
+    overflow-y: scroll;
+    overflow-x: hidden;
 
-    &::after {
-        transform: translateX(0);
-    }
 
 
     .fa-star {
@@ -81,3 +100,4 @@ $side-menu-title-color: #707070;
         }
     }
 }
+

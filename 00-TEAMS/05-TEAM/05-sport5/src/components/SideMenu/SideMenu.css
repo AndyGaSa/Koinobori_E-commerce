@@ -1,10 +1,32 @@
 .side-menu__container {
   height: 0;
   position: fixed;
+  z-index: 1;
   -webkit-transform: translateX(-500px);
           transform: translateX(-500px);
   -webkit-transition: .5s;
   transition: .5s;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.side-menu__container ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.side-menu__container ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.side-menu__container ::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.side-menu__container ::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .side-menu__container--active {
@@ -13,9 +35,8 @@
 }
 
 .side-menu {
+  font-family: "Rubik", sans-serif;
   background-color: #363636;
-  position: absolute;
-  z-index: 1;
   width: 80vw;
   max-width: 400px;
   height: 100vh;
@@ -23,11 +44,8 @@
   color: white;
   -webkit-animation: slide-in 0.5s;
           animation: slide-in 0.5s;
-}
-
-.side-menu::after {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .side-menu .fa-star {
