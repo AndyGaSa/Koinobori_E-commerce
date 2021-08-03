@@ -15,7 +15,7 @@ export default function Header() {
     <header className="header">
       <section className="header__upper-container">
         <div className="scroll-container">
-          <div className="upper-container__discount-text">FREE WORLDWIDE SHIPPING ON ORDERS OVER 90€&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FREE WORLDWIDE SHIPPING ON ORDERS OVER 90€&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FREE WORLDWIDE SHIPPING ON ORDERS OVER 90€</div>
+          <div className="upper-container__discount-text">FREE WORLDWIDE SHIPPING ON ORDERS OVER 90€&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FREE WORLDWIDE SHIPPING ON ORDERS OVER 90€</div>
         </div>
       </section>
       <nav className="header__lower__nav-icons">
