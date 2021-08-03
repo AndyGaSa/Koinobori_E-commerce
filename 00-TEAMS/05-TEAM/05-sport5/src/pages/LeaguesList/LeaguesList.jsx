@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getLeagues } from '../../redux/actions/sports.creator';
+import { addFavouriteLeague, getLeagues } from '../../redux/actions/sports.creator';
 import './LeaguesList.scss';
 import SportsSelector from '../../components/SportsSelector/SportsSelector';
 
@@ -32,7 +32,7 @@ export default function LeaguesList() {
                 <li key={league.id} className="leagues__league">
                   <img src={league.badge} alt={league.name} className="leagues__badge" />
                   <span className="leagues__name">{league.name}</span>
-                  <i className="fas fa-star" />
+                  <button type="button" aria-label="Add to favourites" onClick={() => dispatch(addFavouriteLeague())}><i className="fas fa-star" /></button>
                 </li>
               ))}
             </ul>
