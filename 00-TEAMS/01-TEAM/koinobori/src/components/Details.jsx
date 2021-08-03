@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 
 export default function Details() {
   const stockList = useSelector((store) => store.stock);
-  console.log(stockList);
 
   const { stockId } = useParams();
   const { category } = useParams();
@@ -15,16 +14,18 @@ export default function Details() {
       && stockList.clothes[category].find((stockNow) => stockNow.id === +stockId));
   }, [stockId, stockList]);
 
-  console.log(stock);
-
   return (
     <main>
       <h2>{stock?.name}</h2>
       <section>
         <section>
           <figure>
-            <img src={`${stock?.imageFront}`} alt="" />
-            <img src={`${stock?.imageBack}`} alt="" />
+            <ul>
+              {stock
+      && stock.imageDetails.map((item) => (
+        <img src={item} alt="" />
+      ))}
+            </ul>
           </figure>
         </section>
         <section>
