@@ -8,9 +8,11 @@ import './LogInPage.css';
 export default function LogInPage() {
   return (
     <>
-      <img src="https://i.ibb.co/M7Cprgj/Child-Connect-2.png" alt="Child Connect Logo" />
-      <LogInButton />
-      {/* <Faq /> */}
+      <section>
+        <img src="https://i.ibb.co/M7Cprgj/Child-Connect-2.png" alt="Child Connect Logo" />
+        <LogInButton />
+        {/* <Faq /> */}
+      </section>
       <Footer />
     </>
   );

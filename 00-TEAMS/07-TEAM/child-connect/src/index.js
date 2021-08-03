@@ -12,6 +12,7 @@ import fetchAllEvents from './redux/actions/index';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import LogInPage from './pages/LogInPage';
+import Profile from './components/Auth0/Profile';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -29,6 +30,7 @@ ReactDOM.render(
           <LogInPage />
           <Switch>
             <Route exact path="/" component={LogInPage} />
+            <Route exact path="/profile" component={Profile} />
           </Switch>
         </BrowserRouter>
       </Provider>
