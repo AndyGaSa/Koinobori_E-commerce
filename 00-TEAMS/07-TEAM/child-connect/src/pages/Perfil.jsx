@@ -1,17 +1,16 @@
+/* eslint-disable no-console */
 import React from 'react';
-import EventList from './EventList';
+import { useSelector } from 'react-redux';
+/* import EventList from './EventList'; */
 
 export default function Perfil() {
+  const currentEvents = useSelector(({ events }) => events);
+
+  console.log(currentEvents);
   return (
     <>
-      <header>
-        <h2>Nombre del usuario</h2>
-        <section>
-          <img src="#" alt="avatar" />
-          <div>Tabla de datos personales extraidos de JSON</div>
-        </section>
-      </header>
-      <EventList />
+      <h1>{currentEvents[0]?.title}</h1>
+
     </>
 
   );
