@@ -1,12 +1,83 @@
 header {
-    background-image: url(https://drive.google.com/file/d/1qt9yXb2dz4p2hjAyJxEGrViuXRUE4c0M/view?usp=sharing);
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://i.ibb.co/HgPB420/brothers-2107264.jpg);
+    background-repeat: no-repeat;
+    background-size: 1367px auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #5E5E5E;opacity: 0.8;    
+}
+
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 261px;
 
 }
+
 
 .header__buttons {
-
+    position: absolute;
+    left: 82.58%;
+    right: 11.2%;
+    top: 32.43%;
+    bottom: 34.23%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
 }
+
 
 .buttons__crear-evento {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 40px;
+    position: absolute;
+    left: 876px;
+    right: 286px;
+    top: 45px;
+    bottom: 48px;
+    background: #FED305;opacity: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: static;
+    width: 141px;
+    height: 41px;
+    left: calc(50% - 141px/2);
+    top: calc(50% - 41px/2);
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    text-decoration: none;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 6px;
 }
+
+
+
+
+
+
+
+
+
