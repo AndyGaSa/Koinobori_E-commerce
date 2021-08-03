@@ -3,15 +3,16 @@
 import axios from 'axios';
 import actionTypes from './sports.types';
 
-export default function getTeams() {
+export default function getTeams(idLeague) {
   return async (dispatch) => {
-    const { data } = await axios('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php');
-    const leagueTeamsList = data.teams.map(({
-      idTeam, strTeam, strTeamLogo, strTeamShort
+    const { data } = await axios(`https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=${idLeague}`);
+    console.log(data);
+    const leagueTeamsList = data.teams?.map(({
+      idTeam, strTeam, strTeamBadge, strTeamShort
     }) => ({
       id: idTeam,
       name: strTeam,
-      badge: strTeamLogo,
+      badge: strTeamBadge,
       shortName: strTeamShort
     }));
 
