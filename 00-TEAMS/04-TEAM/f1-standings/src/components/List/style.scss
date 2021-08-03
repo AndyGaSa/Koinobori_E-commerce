@@ -1,0 +1,141 @@
+$color-red:#FF2021;
+$color-white:#FFFFFF;
+$color-black:#0E0E18;
+$color-off-white:#F8F4F1;
+
+@font-face {
+    font-family: 'f1';
+    src: url('../../assets/Formula1\ Display\ Regular.ttf')  format('truetype');
+  }
+  *{
+    font-family: 'f1';
+  }
+
+button[type="button"] {
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.constructor-list{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-black;
+}
+.constructor{
+    background-color: $color-white;
+    width: 95vw;
+    height: 20vw;
+    margin-bottom: 1vw;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.main-name-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 4vw;
+    height: 10vw;
+    width: 40vw;
+}
+.data__main-firstname{
+    font-weight: lighter;
+}
+.data__main-surname{
+    font-weight: bold;
+}
+p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.constructor-data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.data__main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.data__main-number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8vw;
+    height: 8vw;
+    margin-right: 5vw;
+    font-size: 5vw;
+    font-weight: bold;
+}
+.data__main-name{
+    font-size: 5vw;
+    font-weight: bold;
+}
+@mixin colors($color: #00D2BE) {
+    background-color:$color;
+    width: 1vw;
+    height: 12vw;
+    margin-right: 2vw
+  }
+.mercedes{
+    @include colors;
+ }
+.red_bull{
+   @include colors(#0600EF);
+}
+.ferrari{
+    @include colors(#DC0000);
+}
+.mclaren{
+    @include colors(#FF9801);
+ }
+ .alpine{
+    @include colors(#0190FF);
+ }
+ .alphatauri{
+    @include colors(#2B4562);
+ }
+ .aston_martin{
+    @include colors(#006F62);
+ }
+ .williams{
+    @include colors(#015AFF);
+ }
+ .alfa{
+    @include colors(#900000);
+ }
+ .haas{
+    @include colors(#FFFFFF);
+    border: solid gray 0.2px;
+ }
+.data__pts{
+    display: flex;
+    width: 15vw;
+    height: 5vw;
+    background-color: $color-off-white;
+    border-radius: 25px;
+    margin-right: 5vw;
+    font-size: 3vw;
+    align-items: center;
+    justify-content: center;
+
+}
+.pts__number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.number{
+    font-weight: bold;
+}
