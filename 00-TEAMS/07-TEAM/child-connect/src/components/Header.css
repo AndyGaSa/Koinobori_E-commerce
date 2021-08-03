@@ -21,6 +21,10 @@ h1 {
 
 }
 
+.header__menu-buttons {
+    display: flex;
+}
+
 
 .header__buttons {
     position: absolute;
