@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
+import { Auth0Provider } from '@auth0/auth0-react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
@@ -16,16 +17,22 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 store.dispatch(fetchAllEvents());
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-        <Switch>
-          <Route exact path="/App" component={App} />
-        </Switch>
-      </BrowserRouter>
-    </Provider>
-  </React.StrictMode>,
+  <Auth0Provider
+    domain={process.env.REACT_APP_AUTH0_DOMAIN}
+    clientId={process.env.REACT_APP_AUTH0_CLIENTID}
+    redirectUrl={window.location.origin}
+  >
+    <React.StrictMode>
+      <Provider store={store}>
+        <BrowserRouter>
+          <App />
+          <Switch>
+            <Route exact path="/App" component={App} />
+          </Switch>
+        </BrowserRouter>
+      </Provider>
+    </React.StrictMode>
+  </Auth0Provider>,
   document.getElementById('root')
 );
 
