@@ -24,9 +24,10 @@ function SideMenu({ navClass }) {
           </h3>
           <ul>
             {favourites.favouriteLeagues.map((favouriteLeague) => (
-              <li key={`favourite-league-${favouriteLeague.id}`} className="side-menu__favourite">
+              <li key={`favourite-league-${favouriteLeague.id}`} className="favourite">
                 <Link to={`/league/${favouriteLeague.id}`}>
-                  {favouriteLeague.name}
+                  <img src={favouriteLeague.badge} alt={favouriteLeague.name} className="favourite__badge" />
+                  <span className="favourite__name">{favouriteLeague.name}</span>
                 </Link>
                 <button className="favourite__delete" type="button">x</button>
               </li>
@@ -40,9 +41,10 @@ function SideMenu({ navClass }) {
           </h3>
           <ul>
             {favourites.favouriteTeams.map((favouriteTeam) => (
-              <li key={`favourite-team-${favouriteTeam.id}`} className="side-menu__favourite">
+              <li key={`favourite-team-${favouriteTeam.id}`} className="favourite">
                 <Link to={`/team/${favouriteTeam.id}`}>
-                  {favouriteTeam.name}
+                  <img src={favouriteTeam.badge} alt={favouriteTeam.name} className="leagues__badge" />
+                  <span className="favourite__name">{favouriteTeam.name}</span>
                 </Link>
                 <button className="favourite__delete" type="button">x</button>
               </li>
