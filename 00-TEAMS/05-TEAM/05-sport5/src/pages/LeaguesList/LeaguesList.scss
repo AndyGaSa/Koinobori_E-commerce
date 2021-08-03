@@ -1,7 +1,7 @@
 @import '../../styles/styles.const.scss';
 
 .leagues__container {
-    padding-top: 4rem;
+    padding: 4rem 0;
 
     form{
         width: fit-content;
@@ -29,6 +29,9 @@
                 border-top-right-radius: 1rem;
                 border-top-left-radius: 1rem;
                 margin-bottom: 0.2rem;
+                color: black;
+                font-weight: bolder;
+                letter-spacing: 2px; 
             }
     
             .leagues__all-leagues{
