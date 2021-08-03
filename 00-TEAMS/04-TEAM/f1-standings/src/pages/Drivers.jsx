@@ -1,16 +1,18 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import loadDrivers, { loadDriversPts } from '../redux/actions/action.creators';
-// import actionType from '../redux/actions/action.type';
+import { loadDriverStandings, loadRacesData, loadConstructorStandings } from '../redux/actions/action.creators';
 
 export default function GetDrivers() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(loadDrivers());
+    dispatch(loadDriverStandings());
   }, []);
   useEffect(() => {
-    dispatch(loadDriversPts());
+    dispatch(loadRacesData());
+  }, []);
+  useEffect(() => {
+    dispatch(loadConstructorStandings());
   }, []);
 
   return (

@@ -1,16 +1,15 @@
 /* eslint-disable no-undef */
 import React from 'react';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 export default function DetailsConstructor() {
   const constructor = 'mclaren';
 
-  // const data = useSelector((store) => store.points);
-
-  // data[0]?.Results.map((e) => <p>{e.Driver.familyName}</p>)
+  const data = useSelector((store) => store.constructor);
 
   return (
     <>
+      {console.log(data)}
       <header>
         <div>
           <span className="driver">{constructor}</span>
