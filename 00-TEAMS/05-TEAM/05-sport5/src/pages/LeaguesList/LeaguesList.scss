@@ -20,7 +20,7 @@
             align-items: center;
             margin: 2rem;
             color: white;
-            min-width: 200px;
+            min-width: 300px;
 
             .leagues__country{
                 width: 100%;
@@ -47,7 +47,6 @@
                 .leagues__league{
                     background-color: $leagues-background-color;
                     margin-bottom: 0.3rem;
-                    font-weight: 700;
                     padding: 0.2rem 0.5rem;
                     border-radius: 0.5rem;
                     display: flex;
@@ -65,17 +64,15 @@
                         display: flex;
                         align-items: center;
                         flex-grow: 1;
-                        justify-content: flex-start;
                     }
                     
                     .leagues__badge{
-                        width: 2.2rem;
-                        height: 2.2rem;
-                        margin-right: 1rem;
+                        @extend %small-logo;
                     }
 
                     .leagues__name {
-                        width: 70%;
+                        @extend %league-name;
+                        font-weight: 700;
                     }
 
                     .leagues__favourite-button {
