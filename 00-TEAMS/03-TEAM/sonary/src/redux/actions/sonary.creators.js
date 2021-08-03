@@ -8,7 +8,7 @@ import actionTypes from './actionTypes';
 
 export function loadChart() {
   return async (dispatch) => {
-    const response = await fetch('https://api.musixmatch.com/ws/1.1/chart.tracks.get?format=jsonp&callback=callback&country=us&apikey=ac9bd389d8c264b9d3fe211a16c14560');
+    const response = await fetch('https://api.musixmatch.com/ws/1.1/chart.tracks.get?format=jsonp&callback=callback&page_size=100&country=us&f_has_lyrics=f_has_lyrics&apikey=ac9bd389d8c264b9d3fe211a16c14560');
     const chart = await response.text();
     const { message: { body: { track_list } } } = await JSON.parse(chart.substring(9, (chart.length - 2)));
     dispatch({

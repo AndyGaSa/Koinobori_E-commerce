@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { loadChart } from '../../../redux/actions/sonary.creators';
 
 export default function Dashboard() {
@@ -13,9 +14,22 @@ export default function Dashboard() {
     <main>
       <ul>
         {
-            chart.map((name) => (
+            chart.map((track) => (
               <li>
-                {name}
+                <Link to={`/details/${track.track_id}`}>
+                  <ul>
+                    <li>
+                      Track name:
+                      {' '}
+                      {track.track_name}
+                    </li>
+                    <li>
+                      Artist name:
+                      {' '}
+                      {track.artist_name}
+                    </li>
+                  </ul>
+                </Link>
               </li>
             ))
         }
