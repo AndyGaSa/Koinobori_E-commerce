@@ -1,0 +1,45 @@
+.filter__aside-container{
+    position: relative;
+}
+.filter__aside-container::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 590px;
+    background-image: url(https://i.ibb.co/vw8sTMC/filter-aside-0000s-0001-Capa-11-copia.png);
+    background-repeat: no-repeat;
+    filter: blur(2px) brightness(0.3);
+}
+.filter__button-images-container{
+    display: flex;
+    flex-direction: column;
+}
+.filter__button{
+    position: relative;
+    width: 100px;
+    margin: 30px;
+    filter: saturate(0);
+    background-color: transparent;
+    border: none;
+}
+.filter__button-image{
+    width: 100%;
+}
+.filter__button:hover{
+   filter: saturate(1);
+}
+.filter__input{
+    position: relative;
+    width: 170px;
+    height: 30px;
+    margin: 30px;
+
+}
+.filter__go-button{
+    position: relative;
+    width: 60px;
+    height: 30px;
+    margin: 30px;
+}
