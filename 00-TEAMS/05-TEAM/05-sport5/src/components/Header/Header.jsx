@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
+
 import SideMenu from '../SideMenu/SideMenu';
 
 import './Header.scss';
-
-import favourites from '../../mock/favourites.mock';
 
 export default function Header() {
   const [navClass, setNavClass] = useState('side-menu__container');
@@ -24,7 +23,7 @@ export default function Header() {
         </button>
         <h1 className="header__main-title">Sport5</h1>
       </nav>
-      <SideMenu favourites={favourites} navClass={navClass} />
+      <SideMenu navClass={navClass} />
     </header>
   );
 }

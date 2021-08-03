@@ -1,5 +1,6 @@
 import axios from 'axios';
 import actionTypes from './sports.types';
+import { favouritesLocalStorageCheck, getFavouritesLocalStorage } from '../../service/favourites-local-storage';
 
 function getCountries() {
   return async () => {
@@ -9,7 +10,7 @@ function getCountries() {
   };
 }
 
-export default function getLeagues(sport) {
+export function getLeagues(sport) {
   return async (dispatch) => {
     const countriesGetter = getCountries();
     const countries = await countriesGetter();
@@ -43,5 +44,28 @@ export default function getLeagues(sport) {
           leaguesByCountries
         });
       });
+  };
+}
+
+export function getFavourites() {
+  favouritesLocalStorageCheck();
+
+  return {
+    type: actionTypes.LOAD_FAVOURITES,
+    favourites: getFavouritesLocalStorage()
+  };
+}
+
+export function addFavouriteLeague(favouriteLeague) {
+  return {
+    type: actionTypes.SAVE_LEAGUE,
+    favouriteLeague
+  };
+}
+
+export function deleteFavouriteLeague(leagueId) {
+  return {
+    type: actionTypes.DELETE_LEAGUE,
+    leagueId
   };
 }
