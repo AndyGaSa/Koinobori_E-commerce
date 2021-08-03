@@ -38,6 +38,8 @@
                 width: 80%;
                 padding: 0;
                 list-style: none;
+                display: flex;
+                flex-direction: column;
 
                 .leagues__league{
                     background-color: $leagues-background-color;
@@ -48,6 +50,12 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    transition: .3s;
+
+                    &--top {
+                        background-color: $leagues-background-color-favourite;
+                        order: -1;
+                    }
 
                     .leagues__badge{
                         width: 2.2rem;
@@ -69,32 +77,22 @@
                             color: lightgrey;
                         }
 
+                        &--active {
+                            color: $favourite-color;
+    
+                            &:hover {
+                                color: $main-color;
+                            }
+                        }
+
                         i {
                             pointer-events: none;
                         }
                     }
 
-                    .leagues__favourite-button--active {
-                        color: $favourite-color;
-
-                        &:hover {
-                            color: $main-color;
-                        }
-                    }
                 }
             }
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
