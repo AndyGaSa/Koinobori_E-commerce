@@ -63,9 +63,14 @@
                         background-color: transparent;
                         border: none;
                         color: white;
+                        z-index: 1;
 
                         &:hover {
                             color: lightgrey;
+                        }
+
+                        i {
+                            pointer-events: none;
                         }
                     }
 
