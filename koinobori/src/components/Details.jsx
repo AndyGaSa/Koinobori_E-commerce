@@ -16,8 +16,6 @@ export default function Details() {
     }
   }, [stockId]);
 
-  console.log(stock);
-
   return (
     <main>
       <h2>{stock?.name}</h2>
