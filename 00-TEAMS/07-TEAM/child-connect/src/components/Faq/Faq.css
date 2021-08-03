@@ -1,20 +1,13 @@
-.accordion__button {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
+.accordeon-header {
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
 }
-.active, .accordion__button:hover {
-    background-color: #ccc;
-  }
-.panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-  }
+.accordeon-header:hover{
+  background-color: pink;
+}
+.accordion-indicator {
+  position: absolute;
+  right: 30px;
+  top: 26px;
+}
