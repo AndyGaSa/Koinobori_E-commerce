@@ -12,6 +12,10 @@ export default function LeaguesList() {
     dispatch(getLeagues('Soccer'));
   }, []);
 
+  function changeFavourite(league) {
+    dispatch(addFavouriteLeague(league));
+  }
+
   return (
     <main className="leagues__container">
       <SportsSelector />
@@ -32,7 +36,7 @@ export default function LeaguesList() {
                 <li key={league.id} className="leagues__league">
                   <img src={league.badge} alt={league.name} className="leagues__badge" />
                   <span className="leagues__name">{league.name}</span>
-                  <button type="button" aria-label="Add to favourites" onClick={() => dispatch(addFavouriteLeague())}><i className="fas fa-star" /></button>
+                  <button type="button" aria-label="Add to favourites" onClick={() => changeFavourite(league)}><i className="fas fa-star" /></button>
                 </li>
               ))}
             </ul>

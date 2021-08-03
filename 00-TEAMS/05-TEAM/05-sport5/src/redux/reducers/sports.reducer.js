@@ -20,7 +20,8 @@ export default function sportsReducer(data = {
       newData = {
         ...data,
         favourites: {
-          favouriteLeagues: [...data.favouritesfavouriteLeagues, action.favouriteLeague]
+          ...data.favourites,
+          favouriteLeagues: [...data.favourites.favouriteLeagues, action.favouriteLeague]
         }
       };
       break;

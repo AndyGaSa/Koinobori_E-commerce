@@ -58,9 +58,9 @@ export function getFavourites() {
   };
 }
 
-export function addFavouriteLeague() {
+export function addFavouriteLeague(favouriteLeague) {
   return {
     type: actionTypes.SAVE_LEAGUE,
-    favouriteLeague: {}
+    favouriteLeague
   };
 }
