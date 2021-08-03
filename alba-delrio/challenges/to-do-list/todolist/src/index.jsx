@@ -1,13 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { Provider } from 'react-redux';
+import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/store';
 import ToDo from './components/ToDo';
 import './index.css';
 
-import reportWebVitals from './reportWebVitals';
-
-ReactDOM.render(
+render(
   <React.StrictMode>
     <Provider store={configureStore()}>
       <ToDo />

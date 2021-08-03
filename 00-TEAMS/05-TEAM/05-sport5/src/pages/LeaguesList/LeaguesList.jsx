@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavouriteLeague, deleteFavouriteLeague, getLeagues } from '../../redux/actions/sports.creator';
 import './LeaguesList.scss';
@@ -8,9 +9,9 @@ import { leagueIsInFavourites } from '../../service/favourites-local-storage';
 export default function LeaguesList() {
   const allLeagues = useSelector((store) => store.countriesLeagues.leagues);
   const dispatch = useDispatch();
-
+  const { sportId } = useParams();
   useEffect(() => {
-    dispatch(getLeagues('Soccer'));
+    dispatch(getLeagues(sportId));
   }, []);
 
   function changeFavourite(league, event) {
@@ -56,8 +57,10 @@ export default function LeaguesList() {
             <ul key={`${country[0]}-league`} className="leagues__all-leagues">
               {country[1].map((league) => (
                 <li key={league.id} className={favouriteElementClassCheck(league.id)}>
-                  <img src={league.badge} alt={league.name} className="leagues__badge" />
-                  <span className="leagues__name">{league.name}</span>
+                  <Link to={`/league/${league.id}`}>
+                    <img src={league.badge} alt={league.name} className="leagues__badge" />
+                    <span className="leagues__name">{league.name}</span>
+                  </Link>
                   <button className={favouriteButtonClassCheck(league.id)} type="button" aria-label="Add to favourites" onClick={(event) => changeFavourite(league, event)}><i className="fas fa-star" /></button>
                 </li>
               ))}
