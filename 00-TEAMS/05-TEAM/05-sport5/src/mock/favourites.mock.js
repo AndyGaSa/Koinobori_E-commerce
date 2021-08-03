@@ -3,12 +3,6 @@ export default {
     { id: 3464, name: 'La liga' },
     { id: 9785, name: 'Liguilla' },
     { id: 3521, name: 'A toajdfa' },
-    { id: 3521, name: 'A toajdfa' },
-    { id: 3521, name: 'A toajdfa' },
-    { id: 3521, name: 'A toajdfa' },
-    { id: 3521, name: 'A toajdfa' },
-    { id: 3521, name: 'A toajdfa' },
-    { id: 3521, name: 'A toajdfa' },
     { id: 7574, name: 'Ligote' }
   ],
   favouriteTeams: [
