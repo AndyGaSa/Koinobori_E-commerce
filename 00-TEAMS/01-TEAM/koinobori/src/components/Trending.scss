@@ -6,10 +6,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
     .main__container{
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        max-width: 1440px;
         .main__container-product{
             display: flex;
         }
@@ -18,11 +20,12 @@
             font-family: Roboto;
             font-weight: 900;
             font-size: 36px;
-            margin-left: 40px;
+            text-transform: uppercase;
         }
         .main__products{
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             .product__container{
                 display: flex;
                 flex-direction: column;
@@ -30,6 +33,7 @@
                     width: 338px;
                     height: 338px;
                     border: 1px solid black;
+                    background-color: white;
                 }
                 .product__caption{
                     display: flex;
