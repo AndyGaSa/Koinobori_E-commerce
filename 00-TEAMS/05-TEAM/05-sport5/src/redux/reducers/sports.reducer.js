@@ -3,6 +3,7 @@ import { saveFavourites } from '../../service/favourites-local-storage';
 
 export default function sportsReducer(data = {
   leagues: [],
+  teams: [],
   favourites:
   {
     favouriteLeagues: [],
@@ -13,6 +14,9 @@ export default function sportsReducer(data = {
   switch (action.type) {
     case actionTypes.LOAD_LEAGUES:
       newData = { ...data, leagues: action.leaguesByCountries };
+      break;
+    case actionTypes.LOAD_TEAMS:
+      newData = { ...data, teams: action.leagueTeamsList };
       break;
     case actionTypes.LOAD_FAVOURITES:
       newData = { ...data, favourites: action.favourites };
