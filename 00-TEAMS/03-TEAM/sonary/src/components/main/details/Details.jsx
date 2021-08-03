@@ -19,7 +19,10 @@ export default function Detail() {
   return (
     <main>
       <h1>Details Page</h1>
-      <p>{lyrics}</p>
+      {lyrics.map((p) => (
+        <p>{p}</p>
+      ))}
+
     </main>
   );
 }
