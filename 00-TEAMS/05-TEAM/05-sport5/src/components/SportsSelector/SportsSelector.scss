@@ -1,5 +1,5 @@
 @import '../../styles/variables';
-
+@import '../../styles/mixins'; 
 .sportSelector{
     background-color: $main-color;
     display: flex;
@@ -16,7 +16,6 @@
         align-items: center;
         justify-content: center;
         background-color: transparent;
-        color: white;
         outline: inherit;
         border: none;
         transition: .2s;
@@ -25,6 +24,8 @@
         height: 2.3rem;
         transition: .4s;
         border-radius: 50%;
+        @include anchor;
+
 
         &:hover{
             color: $hover-color;

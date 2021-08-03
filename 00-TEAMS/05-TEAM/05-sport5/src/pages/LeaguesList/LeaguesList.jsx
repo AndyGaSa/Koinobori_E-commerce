@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link, useParams } from 'react-router-dom';
 import getLeagues from '../../redux/actions/sports.creator';
 import './LeaguesList.scss';
 import SportsSelector from '../../components/SportsSelector/SportsSelector';
@@ -7,9 +8,9 @@ import SportsSelector from '../../components/SportsSelector/SportsSelector';
 export default function LeaguesList() {
   const allLeagues = useSelector((store) => store.countriesLeagues.leagues);
   const dispatch = useDispatch();
-
+  const { sportId } = useParams();
   useEffect(() => {
-    dispatch(getLeagues('Soccer'));
+    dispatch(getLeagues(sportId));
   }, []);
 
   return (
@@ -29,9 +30,12 @@ export default function LeaguesList() {
             <li key={`${country[0]}-name`} className="leagues__country">{country[0].toUpperCase()}</li>
             <ul key={`${country[0]}-league`} className="leagues__all-leagues">
               {country[1].map((league) => (
+
                 <li key={league.id} className="leagues__league">
                   <img src={league.badge} alt={league.name} className="leagues__badge" />
-                  <span className="leagues__name">{league.name}</span>
+                  <Link to={`/league/${league.id}`}>
+                    <span className="leagues__name">{league.name}</span>
+                  </Link>
                   <i className="fas fa-star" />
                 </li>
               ))}
