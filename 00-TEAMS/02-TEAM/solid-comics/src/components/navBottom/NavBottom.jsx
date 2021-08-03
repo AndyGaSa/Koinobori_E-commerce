@@ -7,7 +7,7 @@ import ComicCard from '../comic-card/ComicCard';
 export default function NavBottom() {
   return (
     <>
-      <span>-------NAV TOP--------</span>
+      <span>-------NAV BOTTOM--------</span>
       <ComicCard />
     </>
   );
