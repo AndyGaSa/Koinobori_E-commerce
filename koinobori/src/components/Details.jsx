@@ -15,7 +15,7 @@ export default function Details() {
       && stockList.clothes[category].find((stockNow) => stockNow.id === +stockId));
   }, [stockId, stockList]);
 
-  console.log(stock);
+  
 
   return (
     <main>
