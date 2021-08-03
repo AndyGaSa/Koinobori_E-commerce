@@ -2,6 +2,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import getSpotifyToken, { loadAxiosSuggestedArtists } from '../../redux/actions/actionCreators';
 
+import BannerLanding from '../../components/BannerLanding';
+
+
 export default function Home() {
   const artists = useSelector((store) => store.suggestedArtists);
   const dispatch = useDispatch();
@@ -12,6 +15,7 @@ export default function Home() {
   }, []);
   return (
     <>
+      <BannerLanding />
       <h1>Home Page</h1>
       <ul>
         {
