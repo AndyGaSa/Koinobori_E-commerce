@@ -57,3 +57,10 @@ export function getFavourites() {
     favourites: JSON.parse(localStorage.getItem('favourites'))
   };
 }
+
+export function addFavouriteLeague() {
+  return {
+    type: actionTypes.SAVE_LEAGUE,
+    favouriteLeague: {}
+  };
+}

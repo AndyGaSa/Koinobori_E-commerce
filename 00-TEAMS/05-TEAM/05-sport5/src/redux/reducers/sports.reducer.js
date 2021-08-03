@@ -13,6 +13,17 @@ export default function sportsReducer(data = {
     case actionTypes.LOAD_LEAGUES:
       newData = { ...data, leagues: action.leaguesByCountries };
       break;
+    case actionTypes.LOAD_FAVOURITES:
+      newData = { ...data, favourites: action.favourites };
+      break;
+    case actionTypes.SAVE_LEAGUE:
+      newData = {
+        ...data,
+        favourites: {
+          favouriteLeagues: [...data.favouritesfavouriteLeagues, action.favouriteLeague]
+        }
+      };
+      break;
     default:
       break;
   }
