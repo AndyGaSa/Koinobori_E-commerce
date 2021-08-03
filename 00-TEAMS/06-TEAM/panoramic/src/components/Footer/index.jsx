@@ -27,7 +27,7 @@ export default function Footer() {
           <input type="email" placeholder="Email Adress" />
           <input type="tel" placeholder="Phone Number" />
           <textarea placeholder="Let Us To Know How Can We Help" />
-          <button type="submit">Submit</button>
+          <button type="submit" data-testid="submit-button">Submit</button>
         </form>
 
       </div>
