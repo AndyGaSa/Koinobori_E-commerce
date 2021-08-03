@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import loadComics from '../redux/actions/comics.creators';
-import './ComicList.css';
+import './styles/ComicList.scss';
 
 import ComicNav from '../components/comic-list/ComicNav';
 import ComicFilter from '../components/comic-list/ComicFilter';
@@ -16,6 +16,7 @@ export default function ComicList() {
   console.log(comics);
   return (
     <>
+
       <ComicFilter />
       <ComicNav />
     </>
