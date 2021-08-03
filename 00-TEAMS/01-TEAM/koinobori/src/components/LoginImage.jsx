@@ -6,10 +6,14 @@ import './LoginImage.scss';
 
 function LoginImage() {
   const { loginWithRedirect } = useAuth0();
-  const newCart = {};
-  localStorage.setItem('cart', JSON.stringify(newCart));
+  function createStorage() {
+    const newCart = JSON.stringify([]);
+    localStorage.setItem('cart', newCart);
+    loginWithRedirect();
+  }
   return (
-    <img className="login-image" onClick={() => loginWithRedirect()} src="https://i.ibb.co/tHp0Kz7/login.png" alt="login" />
+
+    <img className="login-image" onClick={() => createStorage()} src="https://i.ibb.co/tHp0Kz7/login.png" alt="login" />
   );
 }
 
