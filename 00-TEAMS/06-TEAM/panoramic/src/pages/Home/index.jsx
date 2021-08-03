@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
-import { loadArtist } from '../../redux/actions/actionCreators';
+import {}
 
 export default function Home() {
-  const artist = useSelector((store) => store.artist);
+  const artist = useSelector((store) => store.suggestedArtists);
   const dispatch = useDispatch();
 
   useEffect(() => {
