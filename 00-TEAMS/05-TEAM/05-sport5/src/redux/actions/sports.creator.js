@@ -9,7 +9,7 @@ function getCountries() {
   };
 }
 
-export default function getLeagues(sport) {
+export function getLeagues(sport) {
   return async (dispatch) => {
     const countriesGetter = getCountries();
     const countries = await countriesGetter();
@@ -43,5 +43,17 @@ export default function getLeagues(sport) {
           leaguesByCountries
         });
       });
+  };
+}
+
+export function getFavourites() {
+  if (!localStorage.getItem('favourites')) {
+    const favouritesEmpty = { favouriteLeagues: [], favouriteTeams: [] };
+    localStorage.setItem('favourites', JSON.stringify(favouritesEmpty));
+  }
+
+  return {
+    type: actionTypes.LOAD_FAVOURITES,
+    favourites: JSON.parse(localStorage.getItem('favourites'))
   };
 }
