@@ -10,9 +10,11 @@ export default function Details() {
   const [stock, setStock] = useState();
 
   useEffect(() => {
+
     setStock(stockList.clothes
       && stockList.clothes[category].find((stockNow) => stockNow.id === +stockId));
   }, [stockId, stockList]);
+
 
   return (
     <main>
