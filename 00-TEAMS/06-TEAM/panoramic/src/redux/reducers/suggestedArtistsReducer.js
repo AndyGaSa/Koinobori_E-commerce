@@ -1,14 +1,15 @@
+/* eslint-disable no-debugger */
 import actionTypes from '../actions/actionTypes';
 
 export default function suggestedArtistsReducer(artistList = [], action) {
-  let newArtistList = artistList;
+  let newSuggestedArtistList = artistList;
   switch (action.type) {
     case actionTypes.LOAD_SUGGESTED_ARTISTS:
-      newArtistList = action.artist?.map(({ title }) => title);
+      newSuggestedArtistList = action.suggestedArtists?.map((artist) => artist);
       break;
 
     default:
       break;
   }
-  return newArtistList;
+  return newSuggestedArtistList;
 }

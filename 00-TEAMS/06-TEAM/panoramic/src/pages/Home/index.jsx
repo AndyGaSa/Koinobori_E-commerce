@@ -1,20 +1,34 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
-import loadAxiosSuggestedArtists, { getGenres } from '../../redux/actions/actionCreators';
+import getSpotifyToken, { loadAxiosSuggestedArtists } from '../../redux/actions/actionCreators';
 
 export default function Home() {
-  const artist = useSelector((store) => store.suggestedArtists);
+  const artists = useSelector((store) => store.suggestedArtists);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    loadAxiosSuggestedArtists();
-    getGenres().then((response) => console.log(response));
+    getSpotifyToken();
+    dispatch(loadAxiosSuggestedArtists());
   }, []);
-
   return (
     <>
       <h1>Home Page</h1>
       <ul>
-        {artist.map((element) => <li>{`${element}`}</li>)}
+        {
+        artists.map((artist) => (
+          <li>
+            {artist.name}
+            <img src={`${artist.images[0].url}`} alt="Girl in a jacket" />
+            <p>
+              <span>{`Artist genre: ${artist.genres[0]}`}</span>
+              <span>{`Followers: ${artist.followers.total}`}</span>
+            </p>
+            <button type="button">
+              Add to favourites
+            </button>
+          </li>
+        ))
+        }
       </ul>
     </>
   );
