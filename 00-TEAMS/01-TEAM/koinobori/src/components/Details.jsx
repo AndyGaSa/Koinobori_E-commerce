@@ -4,17 +4,16 @@ import { useSelector } from 'react-redux';
 
 export default function Details() {
   const stockList = useSelector((store) => store.stock);
+  console.log(stockList);
 
   const { stockId } = useParams();
   const { category } = useParams();
   const [stock, setStock] = useState();
 
   useEffect(() => {
-    if (stockId) {
-      const foundStock = stockList.clothes[category].find((stockNow) => stockNow.id === +stockId);
-      setStock(foundStock);
-    }
-  }, [stockId]);
+    setStock(stockList.clothes
+      && stockList.clothes[category].find((stockNow) => stockNow.id === +stockId));
+  }, [stockId, stockList]);
 
   console.log(stock);
 
@@ -31,11 +30,10 @@ export default function Details() {
         <section>
           <section>{stock?.price}</section>
           <ul>
-            {
-          stock.description.map((item) => (
-            <li>{`${item}`}</li>
-          ))
-          }
+            {stock
+      && stock.description.map((item) => (
+        <li>{`${item}`}</li>
+      ))}
           </ul>
           <span>Tax included. Shipping calculated at checkout.</span>
           <button type="button">ADD TO CART</button>
