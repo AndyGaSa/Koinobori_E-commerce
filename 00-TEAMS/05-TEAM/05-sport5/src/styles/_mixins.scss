@@ -1,0 +1,6 @@
+@mixin anchor($color: white) {
+    
+    text-decoration: none;
+    color: $color;
+
+}

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import getLeagues from '../../redux/actions/sports.creator';
-import './LeaguesList.css';
+import './LeaguesList.scss';
 import SportsSelector from '../../components/SportsSelector/SportsSelector';
 
 export default function LeaguesList() {

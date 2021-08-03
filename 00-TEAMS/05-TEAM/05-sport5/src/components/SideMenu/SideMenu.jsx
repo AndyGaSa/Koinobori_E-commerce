@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './SideMenu.css';
+import './SideMenu.scss';
 
 function SideMenu({ favourites, navClass }) {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SideMenu from '../SideMenu/SideMenu';
 
-import './Header.css';
+import './Header.scss';
 
 import favourites from '../../mock/favourites.mock';
 

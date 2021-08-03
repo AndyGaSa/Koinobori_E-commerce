@@ -1,5 +1,5 @@
 import React from 'react';
-import './SportsSelector.css';
+import './SportsSelector.scss';
 
 export default function SportSelector() {
   return (
