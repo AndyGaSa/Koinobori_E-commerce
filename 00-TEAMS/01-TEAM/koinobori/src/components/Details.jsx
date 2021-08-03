@@ -4,10 +4,17 @@ import { useSelector } from 'react-redux';
 
 export default function Details() {
   const stockList = useSelector((store) => store.stock);
+  const newLocalStorage = JSON.parse(localStorage.getItem('cart'));
 
   const { stockId } = useParams();
   const { category } = useParams();
   const [stock, setStock] = useState();
+
+  // eslint-disable-next-line no-unused-vars
+  function addToCart() {
+    newLocalStorage.push(stock);
+    localStorage.setItem('cart', JSON.stringify(newLocalStorage));
+  }
 
   useEffect(() => {
     setStock(stockList.clothes
@@ -37,7 +44,7 @@ export default function Details() {
       ))}
           </ul>
           <span>Tax included. Shipping calculated at checkout.</span>
-          <button type="button">ADD TO CART</button>
+          <button type="button" onClick={addToCart}>ADD TO CART</button>
         </section>
       </section>
     </main>
