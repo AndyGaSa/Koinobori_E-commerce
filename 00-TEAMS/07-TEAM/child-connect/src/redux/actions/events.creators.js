@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
 import axios from 'axios';
-import FETCH_EVENT from './types';
+import actionTypes from './events.types';
 
 // const apiUrl = 'http://127.0.0.1:3001';
 
 const fetchEvents = (events) => {
   console.log(events);
   return {
-    type: FETCH_EVENT,
+    type: actionTypes.FETCH_EVENT,
     events
   };
 };
