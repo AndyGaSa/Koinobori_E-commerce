@@ -4,18 +4,21 @@ import { useSelector } from 'react-redux';
 
 export default function Details() {
   const stockList = useSelector((store) => store.stock);
-  console.log(stockList);
 
   const { stockId } = useParams();
   const { category } = useParams();
   const [stock, setStock] = useState();
 
   useEffect(() => {
+
     setStock(stockList.clothes
       && stockList.clothes[category].find((stockNow) => stockNow.id === +stockId));
   }, [stockId, stockList]);
 
+<<<<<<< HEAD
   
+=======
+>>>>>>> cbf8a6a62d9b196a3fc19f1d6591f5742689c4ce
 
   return (
     <main>
@@ -23,8 +26,12 @@ export default function Details() {
       <section>
         <section>
           <figure>
-            <img src={`${stock?.imageFront}`} alt="" />
-            <img src={`${stock?.imageBack}`} alt="" />
+            <ul>
+              {stock
+      && stock.imageDetails.map((item) => (
+        <img src={item} alt="" />
+      ))}
+            </ul>
           </figure>
         </section>
         <section>

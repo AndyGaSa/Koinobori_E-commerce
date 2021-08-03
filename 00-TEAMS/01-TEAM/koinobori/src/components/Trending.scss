@@ -1,0 +1,49 @@
+@import '../../variables';
+@import '../../reset';
+
+.main{
+    background-color: $lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    .main__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1440px;
+        .main__container-product{
+            display: flex;
+        }
+        .main__title{
+            color: $purple;
+            font-family: Roboto;
+            font-weight: 900;
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+        .main__products{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .product__container{
+                display: flex;
+                flex-direction: column;
+                .product__image{
+                    width: 338px;
+                    height: 338px;
+                    border: 1px solid black;
+                    background-color: white;
+                }
+                .product__caption{
+                    display: flex;
+                    justify-content: space-between;
+                    font-family: Roboto;
+                    font-size: 18px;
+                    color: black;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
