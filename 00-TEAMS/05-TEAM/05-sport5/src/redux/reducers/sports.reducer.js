@@ -1,4 +1,5 @@
 import actionTypes from '../actions/sports.types';
+import { saveFavourites } from '../../service/favourites-local-storage';
 
 export default function sportsReducer(data = {
   leagues: [],
@@ -24,7 +25,7 @@ export default function sportsReducer(data = {
           favouriteLeagues: [...data.favourites.favouriteLeagues, action.favouriteLeague]
         }
       };
-      localStorage.setItem('favourites', JSON.stringify(newData.favourites));
+      saveFavourites(newData.favourites);
       break;
     default:
       break;

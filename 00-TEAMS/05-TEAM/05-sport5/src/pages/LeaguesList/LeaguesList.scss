@@ -58,6 +58,24 @@
                         width: 70%;
                         text-align: center;
                     }
+
+                    .leagues__favourite-button {
+                        background-color: transparent;
+                        border: none;
+                        color: white;
+
+                        &:hover {
+                            color: lightgrey;
+                        }
+                    }
+
+                    .leagues__favourite-button--active {
+                        color: $favourite-color;
+
+                        &:hover {
+                            color: $main-color;
+                        }
+                    }
                 }
             }
         }

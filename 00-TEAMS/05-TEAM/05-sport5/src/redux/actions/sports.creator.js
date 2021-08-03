@@ -1,5 +1,6 @@
 import axios from 'axios';
 import actionTypes from './sports.types';
+import { favouritesCheck } from '../../service/favourites-local-storage';
 
 function getCountries() {
   return async () => {
@@ -47,10 +48,7 @@ export function getLeagues(sport) {
 }
 
 export function getFavourites() {
-  if (!localStorage.getItem('favourites')) {
-    const favouritesEmpty = { favouriteLeagues: [], favouriteTeams: [] };
-    localStorage.setItem('favourites', JSON.stringify(favouritesEmpty));
-  }
+  favouritesCheck();
 
   return {
     type: actionTypes.LOAD_FAVOURITES,
