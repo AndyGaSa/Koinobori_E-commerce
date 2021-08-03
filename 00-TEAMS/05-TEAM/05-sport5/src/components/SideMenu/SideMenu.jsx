@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { getFavourites, deleteFavouriteLeague } from '../../redux/actions/sports.creator';
 import './SideMenu.scss';
 
-function SideMenu({ navClass }) {
+function SideMenu({ navClass, changeNavState }) {
   const favourites = useSelector((store) => store.countriesLeagues.favourites);
   const dispatch = useDispatch();
 
@@ -15,44 +15,47 @@ function SideMenu({ navClass }) {
   }, []);
 
   return (
-    <aside className={navClass}>
-      <nav className="side-menu">
-        <div>
-          <h3 className="side-menu__favourite-title">
-            <i className="fas fa-star" />
-            Favourite Leagues
-          </h3>
-          <ul>
-            {favourites.favouriteLeagues.map((favouriteLeague) => (
-              <li key={`favourite-league-${favouriteLeague.id}`} className="favourite">
-                <Link to={`/league/${favouriteLeague.id}`}>
-                  <img src={favouriteLeague.badge} alt={favouriteLeague.name} className="favourite__badge" />
-                  <span className="favourite__name">{favouriteLeague.name}</span>
-                </Link>
-                <button className="favourite__delete" type="button" onClick={() => dispatch(deleteFavouriteLeague(favouriteLeague.id))}>x</button>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h3 className="side-menu__favourite-title">
-            <i className="fas fa-star" />
-            Favourite Teams
-          </h3>
-          <ul>
-            {favourites.favouriteTeams.map((favouriteTeam) => (
-              <li key={`favourite-team-${favouriteTeam.id}`} className="favourite">
-                <Link to={`/team/${favouriteTeam.id}`}>
-                  <img src={favouriteTeam.badge} alt={favouriteTeam.name} className="leagues__badge" />
-                  <span className="favourite__name">{favouriteTeam.name}</span>
-                </Link>
-                <button className="favourite__delete" type="button">x</button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
-    </aside>
+    <div className={navClass}>
+      <aside>
+        <nav className="side-menu-navigator">
+          <div>
+            <h3 className="side-menu-navigator__title">
+              <i className="fas fa-star" />
+              Favourite Leagues
+            </h3>
+            <ul>
+              {favourites.favouriteLeagues.map((favouriteLeague) => (
+                <li key={`favourite-league-${favouriteLeague.id}`} className="favourite">
+                  <Link to={`/league/${favouriteLeague.id}`}>
+                    <img src={favouriteLeague.badge} alt={favouriteLeague.name} className="favourite__badge" />
+                    <span className="favourite__name">{favouriteLeague.name}</span>
+                  </Link>
+                  <button className="favourite__delete" type="button" onClick={() => dispatch(deleteFavouriteLeague(favouriteLeague.id))}>x</button>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="side-menu-navigator__title">
+              <i className="fas fa-star" />
+              Favourite Teams
+            </h3>
+            <ul>
+              {favourites.favouriteTeams.map((favouriteTeam) => (
+                <li key={`favourite-team-${favouriteTeam.id}`} className="favourite">
+                  <Link to={`/team/${favouriteTeam.id}`}>
+                    <img src={favouriteTeam.badge} alt={favouriteTeam.name} className="leagues__badge" />
+                    <span className="favourite__name">{favouriteTeam.name}</span>
+                  </Link>
+                  <button className="favourite__delete" type="button">x</button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+      </aside>
+      <button type="button" className="shadow" aria-label="shadow" onClick={changeNavState} />
+    </div>
   );
 }
 
