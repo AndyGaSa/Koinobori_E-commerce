@@ -1,0 +1,26 @@
+$footer-font: Helvetica, sans-serif;
+$text-light-color: rgb(222, 222, 222);
+$solid-dark: rgb(70, 70, 70);
+
+footer{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 50px;
+    width: 375px;
+    background-color: $solid-dark;
+    
+    a {
+        text-decoration: none;
+        font-size: 0.8em;
+        small{
+            color: $text-light-color;
+        }
+    }
+    nav {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    img{
+        height: 80%;
+    }
+}
