@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LogOutButton from './Auth0/LogOutButton';
 
 import './Header.css';
 
@@ -15,7 +16,7 @@ export default function Header() {
             <Link to="/" className="buttons__crear-evento">Crear Evento</Link>
             <div className="header__buttons">
               <Link to="/">Perfil</Link>
-              <Link to="/">Log Out</Link>
+              <LogOutButton />
             </div>
           </section>
         </nav>
