@@ -8,9 +8,10 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import rootReducer from './redux/reducers';
 import fetchAllEvents from './redux/actions/index';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import LogInPage from './pages/LogInPage';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -25,9 +26,9 @@ ReactDOM.render(
     <React.StrictMode>
       <Provider store={store}>
         <BrowserRouter>
-          <App />
+          <LogInPage />
           <Switch>
-            <Route exact path="/App" component={App} />
+            <Route exact path="/" component={LogInPage} />
           </Switch>
         </BrowserRouter>
       </Provider>
