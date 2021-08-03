@@ -10,7 +10,6 @@ import configureStore from './redux/store';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={configureStore()}>
-
       <Auth0Provider
         domain={process.env.REACT_APP_AUTH0_DOMAIN}
         clientId={process.env.REACT_APP_AUTH0_CLIENTID}
