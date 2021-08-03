@@ -9,7 +9,7 @@ export default function Perfil() {
   console.log(currentEvents);
   return (
     <>
-      <h1>{currentEvents[0]?.title}</h1>
+      <p>{currentEvents[0]?.title}</p>
 
     </>
 

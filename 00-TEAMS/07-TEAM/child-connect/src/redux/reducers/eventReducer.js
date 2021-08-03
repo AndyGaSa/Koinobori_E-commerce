@@ -1,4 +1,4 @@
-import FETCH_EVENT from '../actions/events.types';
+import FETCH_EVENT from '../actions/types';
 
 const eventReducer = (state = [], action) => {
   switch (action.type) {
