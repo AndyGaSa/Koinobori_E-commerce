@@ -6,6 +6,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
+import LogInPage from './pages/LogInPage';
 // import UserProfile from './pages/UserProfile';
 import EventDetails from './components/EventDetails';
 // import Footer from './components/Footer';
@@ -23,7 +24,7 @@ function App() {
       <p>{currentEvents[0]?.activity}</p>
       <Header />
       <Switch>
-        <Route path="/" exact component={Dashboard} />
+        <Route path="/" exact component={LogInPage} />
         <Redirect path="/dashboard" to="/" />
         {/* <Route path="/UserProfile" component={UserProfile} /> */}
         <Route path="/EventDetails" component={EventDetails} />
