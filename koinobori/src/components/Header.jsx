@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 
 export default function Header() {
   const stockList = useSelector((store) => store.stock);
-  console.log(stockList);
   return (
     <>
       <p>{stockList?.clothes?.accessories[0]?.name || 'hola'}</p>
