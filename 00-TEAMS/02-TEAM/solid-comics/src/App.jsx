@@ -24,7 +24,7 @@ function App() {
           <Route path="/profile" component={Profile} />
           <Route path="/battle" component={Battle} />
           <Route path="/log-out" component={Login} />
-          <Route path="/details/:comic/:heroes" component={Detail} />
+          <Route path="/details/:comic" component={Detail} />
           <Route component={NotFound} />
         </Switch>
         <Footer />
