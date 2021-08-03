@@ -11,7 +11,7 @@ export default function Header() {
           <Link to="/" className="header__home-button">
             <img src="https://i.ibb.co/M7Cprgj/Child-Connect-2.png" width="213px" height="auto" alt="Child Connect Header Logo" />
           </Link>
-          <section>
+          <section className="header__menu-buttons">
             <Link to="/" className="buttons__crear-evento">Crear Evento</Link>
             <div className="header__buttons">
               <Link to="/">Perfil</Link>
