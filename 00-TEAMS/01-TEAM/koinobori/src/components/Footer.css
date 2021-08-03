@@ -1,0 +1,19 @@
+.map{
+    border:0;
+    width:"400";
+    height:"300";
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #FF71CE ;
+    width: 100%;
+    height: 20%;
+}
+.footer__upper{
+    display: flex;
+}
+.footer__upper-container{
+    display: flex;
+    flex-direction: column;
+}

@@ -5,8 +5,6 @@ import './Header.css';
 
 export default function Header() {
   const stockList = useSelector((store) => store.stock);
-
-  console.log(stockList?.resources?.logo);
   return (
     <header>
       <div className="header__upper">
