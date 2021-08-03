@@ -1,0 +1,26 @@
+import actionTypes from '../actions/action.types';
+
+export default function StockReducer(stockList = {}, { type, payload }) {
+  let newStockList = stockList;
+  switch (type) {
+    case actionTypes.LOAD_STOCK:
+      newStockList = { ...newStockList, ...payload };
+      break;
+    case actionTypes.CREATE_STOCK:
+
+      break;
+
+    case actionTypes.UPDATE_STOCK:
+
+      break;
+
+    case actionTypes.DELETE_STOCK:
+
+      break;
+
+    default:
+      break;
+  }
+
+  return newStockList;
+}
