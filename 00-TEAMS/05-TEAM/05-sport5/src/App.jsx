@@ -18,6 +18,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Switch>
+        <TeamsList />
         <Route path="/" exact component={LeaguesList} />
         <Redirect path="/countries/:sportId" to="/" />
         <Route path="/league/:leagueId" component={TeamsList} />
