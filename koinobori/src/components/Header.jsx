@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './Header.css';
 
+console.log('dddd');
 export default function Header() {
   const stockList = useSelector((store) => store.stock);
   return (
@@ -33,6 +34,11 @@ export default function Header() {
               <img className="icons" src={stockList?.resources?.accIcon} alt="hats" />
             </Link>
           </div>
+
+          <Link to="/login">
+            <img className="login" src={stockList?.resources?.loginIcon} alt="login" />
+          </Link>
+
           <Link to="/cart">
             <img className="cart" src={stockList?.resources?.cartIconPurple} alt="cart" />
           </Link>
