@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
+import Footer from './components/Footer';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -33,6 +34,7 @@ ReactDOM.render(
             <Register />
           </Route>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,
