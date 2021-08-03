@@ -20,7 +20,7 @@ export default function TeamsList() {
           <li>
             <Link to={`/team/${team.id}`}>
               <img src={team.badge} alt={team.name} />
-              <span>{`${team.name} (team?.shortName)`}</span>
+              <span>{team.name}</span>
             </Link>
             <button type="button" aria-label="Add to favourites"><i className="fas fa-star" /></button>
           </li>
