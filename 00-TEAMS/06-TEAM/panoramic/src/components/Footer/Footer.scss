@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     height: auto;
-    padding: 20px 0;
+    padding: 50px 0;
 
     nav{
         display:flex;
@@ -75,7 +75,7 @@
     }
 
     input, textarea{
-        background-color: $tertiary-color;
+        background-color: $quaternary-color;
         height: 40px;
         border: none;
         color:$primary-font-color;
@@ -92,6 +92,10 @@
         height: 40px;
         background-color: $primary-color;
     }
+    button:hover{
+        cursor:pointer;
+        border: 3px gold solid;
+    }
 
 }
 
@@ -100,7 +104,7 @@
     justify-content: center;
     align-items: center;
     height: 80px;
-    background-color:#1D1B1B;
+    background-color:#141313;
     color:$primary-font-color;
     font-family: $secondary-font;
   
