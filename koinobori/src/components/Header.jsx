@@ -13,11 +13,11 @@ export default function Header() {
       <div className="header__lower">
         <nav className="header__lower__nav-icons">
 
-          <Link to="/category/tShirts">
+          <Link to="/">
             <img className="logo" src={stockList?.resources?.logo} alt="tshirts" />
           </Link>
           <div className="menu">
-            <Link to="/category/shirts">
+            <Link to="/category/tShirts">
               <img className="icons" src={stockList?.resources?.shirtsIcon} alt="jumpers" />
             </Link>
 
@@ -25,11 +25,11 @@ export default function Header() {
               <img className="icons" src={stockList?.resources?.hoodiesIcon} alt="hoodies" />
             </Link>
 
-            <Link to="/category/trousers">
+            <Link to="/category/shorts">
               <img className="icons" src={stockList?.resources?.trousersIcon} alt="trousers" />
             </Link>
 
-            <Link to="/category/hats">
+            <Link to="/category/accessories">
               <img className="icons" src={stockList?.resources?.accIcon} alt="hats" />
             </Link>
           </div>
@@ -39,9 +39,6 @@ export default function Header() {
 
         </nav>
       </div>
-
-      <p>{stockList?.clothes?.accessories[0]?.name || 'hola'}</p>
-      <p>Hola soy el headers</p>
     </header>
   );
 }
