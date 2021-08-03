@@ -21,7 +21,7 @@ function App() {
           <Route path="/" exact component={Dashboard} />
           <Redirect path="/dashboard" to="/" />
           <Route path="/heroes" component={Heroes} />
-          <Route path="/details/:heroId" component={Details} />
+          <Route path="/details/:comicId" component={Details} />
           <Route component={NotFound} />
         </Switch>
       </BrowserRouter>

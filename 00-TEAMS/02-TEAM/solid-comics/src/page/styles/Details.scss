@@ -1,0 +1,23 @@
+
+.details{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.detail__top{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    p{
+        width: 50%;
+    }
+}
+.detail__img{
+    width: 50%;
+
+}
+.detail__bottom{
+
+}

@@ -1,8 +1,14 @@
 import React from 'react';
+
 import './navBottom.css';
+
+import ComicCard from '../comic-card/ComicCard';
 
 export default function NavBottom() {
   return (
-    <span>esto es el NavBottom</span>
+    <>
+      <span>-------NAV BOTTOM--------</span>
+      <ComicCard />
+    </>
   );
 }

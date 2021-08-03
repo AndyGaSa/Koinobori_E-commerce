@@ -10,7 +10,7 @@ import Profile from './page/Profile';
 import Battle from './page/Battle';
 import Login from './page/Login';
 import Footer from './components/footer/Footer';
-
+import Detail from './page/Detail';
 import './App.css';
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
           <Route path="/profile" component={Profile} />
           <Route path="/battle" component={Battle} />
           <Route path="/log-out" component={Login} />
+          <Route path="/details/:comic" component={Detail} />
           <Route component={NotFound} />
         </Switch>
         <Footer />
