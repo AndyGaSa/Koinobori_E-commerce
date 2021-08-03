@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 
 export default function Details() {
   const stockList = useSelector((store) => store.stock);
-  console.log(stockList);
 
   const { stockId } = useParams();
   const { category } = useParams();
@@ -14,8 +13,6 @@ export default function Details() {
     setStock(stockList.clothes
       && stockList.clothes[category].find((stockNow) => stockNow.id === +stockId));
   }, [stockId, stockList]);
-
-  console.log(stock);
 
   return (
     <main>
