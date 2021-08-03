@@ -5,7 +5,7 @@
 }
 
 .main-container{
-    background-color: lightcoral;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     height: 300px;
@@ -17,18 +17,36 @@
     width: 400px;
     display: grid;
     grid-template-columns: repeat( 2, auto);
-    grid-template-rows: repeat(3,auto);
+}
+.main-container__socialmedia>li{
+    display: flex;
+    padding: 20px;
+    list-style: none;
+    text-decoration: none;
+    justify-content: center;
+
+}
+.socialmedia__facebook{
+    background-image: url(https://ibb.co/sKZMjLC);
+    height: 30px;
+    width: 30px;
 }
 
+
 .main-container__contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
     background-color: lightskyblue;
     width: 400px;
 }
 
 .bot-container{
-    background-color: lightgray;
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 80px;
+    background-color:#1D1B1B;
+    color:white;
 }
