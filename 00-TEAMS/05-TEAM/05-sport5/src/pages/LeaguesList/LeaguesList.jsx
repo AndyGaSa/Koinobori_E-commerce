@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addFavouriteLeague, getLeagues } from '../../redux/actions/sports.creator';
+import { addFavouriteLeague, deleteFavouriteLeague, getLeagues } from '../../redux/actions/sports.creator';
 import './LeaguesList.scss';
 import SportsSelector from '../../components/SportsSelector/SportsSelector';
 import { leagueIsInFavourites } from '../../service/favourites-local-storage';
@@ -14,10 +14,13 @@ export default function LeaguesList() {
   }, []);
 
   function changeFavourite(league, event) {
-    if (event.target.className.includes('active')) {
-
+    const button = event.target;
+    if (button.className.includes('active')) {
+      dispatch(deleteFavouriteLeague(league.id));
+      button.className = 'leagues__favourite-button';
     } else {
       dispatch(addFavouriteLeague(league));
+      button.className = 'leagues__favourite-button leagues__favourite-button--active';
     }
   }
 

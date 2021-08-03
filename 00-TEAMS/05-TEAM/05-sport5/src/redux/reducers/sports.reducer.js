@@ -27,6 +27,17 @@ export default function sportsReducer(data = {
       };
       saveFavourites(newData.favourites);
       break;
+    case actionTypes.DELETE_LEAGUE:
+      newData = {
+        ...data,
+        favourites: {
+          ...data.favourites,
+          favouriteLeagues: data.favourites.favouriteLeagues
+            .filter(({ id }) => id !== action.leagueId)
+        }
+      };
+      saveFavourites(newData.favourites);
+      break;
     default:
       break;
   }

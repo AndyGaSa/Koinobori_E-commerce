@@ -62,3 +62,10 @@ export function addFavouriteLeague(favouriteLeague) {
     favouriteLeague
   };
 }
+
+export function deleteFavouriteLeague(leagueId) {
+  return {
+    type: actionTypes.DELETE_LEAGUE,
+    leagueId
+  };
+}
