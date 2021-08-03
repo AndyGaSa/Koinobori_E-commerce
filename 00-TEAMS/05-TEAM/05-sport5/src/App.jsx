@@ -19,6 +19,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/:sportId" exact component={LeaguesList} />
+        <Redirect path="/" exact to="/Soccer" />
         <Redirect path="/countries/:sportId" to="/:sportId" />
         <Route path="/league/:leagueId" component={TeamsList} />
         <Route path="/team/:teamId" component={TeamDetail} />
