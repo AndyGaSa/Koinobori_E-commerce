@@ -25,6 +25,5 @@ export default function sonaryReducer(state = [], action) {
     default:
       break;
   }
-
   return sonary;
 }
