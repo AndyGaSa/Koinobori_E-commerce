@@ -14,6 +14,10 @@ describe('Given a SideMenu component', () => {
       render(<SideMenu />);
     });
 
+    test('Then should render Favourite Leagues', () => {
+      expect(screen.getByText('Favourite Leagues')).toBeInTheDocument();
+    });
+
     test('Then should render Favourite Teams', () => {
       expect(screen.getByText('Favourite Teams')).toBeInTheDocument();
     });
