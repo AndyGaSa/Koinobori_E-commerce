@@ -54,9 +54,17 @@
                     justify-content: space-between;
                     transition: .3s;
 
+                    &:hover{
+                        background-color: $hover-color;
+                    }
+
                     &--top {
                         background-color: $leagues-background-color-favourite;
                         order: -1;
+
+                        &:hover {
+                            background-color: $leagues-background-color-favourite-hover;
+                        }
                     }
 
                     a {
