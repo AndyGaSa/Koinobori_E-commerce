@@ -11,8 +11,6 @@ export default function sonaryReducer(state = [], action) {
       sonary = action.dashboard.map(({
         track
       }) => track);
-      console.log('hola');
-      console.log(sonary);
       break;
 
     default:
