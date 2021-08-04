@@ -12,10 +12,17 @@ import NotFound from './pages/NotFound/NotFound';
 
 import './styles/App.scss';
 
+import Login from './components/Login/Login';
+import Logout from './components/Logout/Logout';
+import Profile from './components/Profile/Profile';
+
 function App() {
   return (
 
     <BrowserRouter>
+      <Login />
+      <Logout />
+      <Profile />
       <Header />
       <Switch>
         <Route path="/:sportId" exact component={LeaguesList} />
