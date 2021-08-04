@@ -18,14 +18,15 @@ export default function TeamsList() {
 
   return (
     <>
-      <ul>
+      <h2 className="TeamList__Title">TeamList title:</h2>
+      <ul className="team">
         {allTeamsPerLeague?.length ? allTeamsPerLeague.map((team) => (
-          <li>
+          <li className="team__block" key={team.name}>
             <Link to={`/team/${team.id}`}>
-              <img src={team.badge} alt={team.name} />
-              <span>{team.name}</span>
+              <img src={team.badge} alt={team.name} className="team__badge" />
+              <span className="team__name">{team.name}</span>
             </Link>
-            <button type="button" aria-label="Add to favourites"><i className="fas fa-star" /></button>
+            <button type="button" aria-label="Add to favourites"><i className="fas fa-star" key={team.id} /></button>
           </li>
         ))
           : <NotFound />}
