@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.details__main{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2, h3{
+        width: fit-content;
+        margin: 15px auto;
+        color: white;
+    }
+
+    .details__badge{
+        margin: 15px auto;
+        width: 200px;
+        height: 200px;
+    }
+    .details__description{
+        margin: 15px;
+        padding: 15px;
+        color: white;
+    }
+    .details__jersey{
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 30px;
+    }
+}
+
+.details__media{
+    padding: 0 auto 150px;
+    margin: 0 auto 150px;
+    display: flex;
+
+    i{
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+        color: white;
+        margin: 20px;
+        font-size: 36px;
+        text-align: center;
+     
+        &:hover{
+            color: $main-color;
+            font-size: 48px;
+        }
+    }
+}
