@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './filterTop.css';
+import './filterTop.scss';
 
 import ComicCard from '../comic-card/ComicCard';
 
@@ -8,7 +8,12 @@ export default function FilterTop() {
   return (
     <>
       <span>-------FILTER TOP--------</span>
-      <ComicCard />
+      <div className="comic__row">
+        <ComicCard />
+        <ComicCard />
+        <ComicCard />
+        <ComicCard />
+      </div>
     </>
   );
 }

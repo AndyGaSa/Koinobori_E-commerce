@@ -1,5 +1,5 @@
 import React from 'react';
-import './ComicList.css';
+import './ComicList.scss';
 import FilterTop from '../filterTop/FilterTop';
 import FilterFavourites from '../filterFavourites/FilterFavourites';
 import ComicAside from '../comic-aside/ComicAside';
