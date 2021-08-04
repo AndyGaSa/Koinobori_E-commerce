@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { loadDashboard } from '../../../redux/actions/dashboard.creator';
+import './details.scss';
 
 export default function Information() {
   const tracks = useSelector((store) => store.sonary);
@@ -22,9 +23,22 @@ export default function Information() {
     setFoundTrack(x);
   }, [track_id, tracks]);
 
+  console.log(foundTrack);
+
   return (
     <div>
-      <h2>{foundTrack?.album_name}</h2>
+      <h2 className="details__title">{foundTrack?.track_name}</h2>
+      <aside className="details__information">
+        <figure className="details__figure" />
+        <ul className="details__track">
+          <li className="track__artist">{foundTrack?.artist_name}</li>
+          <li className="track__album">
+            Album:
+            {' '}
+            {foundTrack?.album_name}
+          </li>
+        </ul>
+      </aside>
     </div>
   );
 }
