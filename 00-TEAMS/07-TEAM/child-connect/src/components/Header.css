@@ -4,25 +4,26 @@
     box-sizing: border-box;
 }
 
-
 header {
     width: 100%;
-    background-image: url(https://i.ibb.co/HgPB420/brothers-2107264.jpg);
+    /* background-image: url(https://i.ibb.co/HgPB420/brothers-2107264.jpg); */
+    background-image: url(https://cei-laaurora.com/wp-content/uploads/2019/07/escuelas-de-verano-en-Valencia-ni%C3%B1os-juganfo-1000x500.jpg);
+    background-position: 0px 0px;
+    /* margin-top: -15px; */
     background-repeat: no-repeat;
-    background-size: 1367px;
+    background-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .header__menu {
     width: 100%;
     height: 180px;
-    background-color: #5E5E5E;
-    opacity: 0.8;
+    background-color: rgba(94, 94, 94, 0.6);
     display: flex;
     justify-content: space-between;
 }
 
-nav {
+.header__nav-menu {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -32,13 +33,12 @@ nav {
 .header__menu-buttons {
     display: flex;
     align-items: center;
-    padding: 20px;   
+    padding: 20px;  
 }
 
-.header__home-button {
-    opacity: 1;
+.header__menu_buttons--buttons {
+    padding-left: 20px;
 }
-
 
 .header__button-perfil {
     text-decoration: none;
@@ -46,25 +46,18 @@ nav {
     font-weight: 500;
     color: black;
     padding: 20px;
+    padding-right: 30px;
     margin-top: 20px;
+    text-shadow: 1px 1px rgb(163, 162, 162);
 }
 
 .header__button-perfil:active {
     color: red;
 } 
 
-.header__button-logout {
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: 500;
-    color: black;
-    padding: 20px;
-    margin-top: 20px;    
-
-}
-
 .button__crear-evento {
-    background: #FED305;
+    border-radius: 3px;
+    background-color: rgba(254, 211, 5);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 160px;
     height: 40px;
@@ -73,21 +66,22 @@ nav {
     text-decoration: none;
     text-align: center;
     padding: 8px;
-    color: #FFFFFF;  
+    color: #FFFFFF;
+      
 }
 
 .button__crear-evento:active {
     color: red;
 }
 
-
 h1 {
-    margin-top: 250px;
-    padding-bottom: 400px;
+    margin-top: 130px;
+    padding-bottom: 180px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 33px;
     text-align: center;
+    text-shadow: 2px 2px rgb(95, 94, 94);
 }
 
 
