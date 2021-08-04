@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { getFavourites, deleteFavouriteLeague } from '../../redux/actions/favourites.creator';
+import { getFavourites, deleteFavouriteLeague, deleteFavouriteTeam } from '../../redux/actions/favourites.creator';
 import './SideMenu.scss';
 
 function SideMenu({ navClass, changeNavState }) {
@@ -47,7 +47,7 @@ function SideMenu({ navClass, changeNavState }) {
                     <img src={favouriteTeam.badge} alt={favouriteTeam.name} className="favourite__badge" />
                     <span className="favourite__name">{favouriteTeam.name}</span>
                   </Link>
-                  <button className="favourite__delete" type="button">x</button>
+                  <button className="favourite__delete" type="button" onClick={() => dispatch(deleteFavouriteTeam(favouriteTeam.id))}>x</button>
                 </li>
               ))}
             </ul>
