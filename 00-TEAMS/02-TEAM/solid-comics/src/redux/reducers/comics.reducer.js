@@ -7,7 +7,8 @@ export default function comicsReducer(comicsList = [], action) {
       newComicList = action.comics.data.results?.map((comic) => comic);
       break;
     case actionTypes.FILTER_COMICS:
-      newComicList = action.comics.data.results?.map((comic) => comic);
+      // eslint-disable-next-line no-debugger
+      newComicList = action.filtered.data.results?.map((comic) => comic);
       break;
     default:
       break;
