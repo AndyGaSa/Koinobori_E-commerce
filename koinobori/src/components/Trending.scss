@@ -17,11 +17,7 @@
             display: flex;
         }
         .main__title{
-            color: $purple;
-            font-family: Roboto;
-            font-weight: 900;
-            font-size: 36px;
-            text-transform: uppercase;
+            @include title;
         }
         .main__products{
             display: flex;
@@ -39,7 +35,7 @@
                 .product__caption{
                     display: flex;
                     justify-content: space-between;
-                    font-family: Roboto;
+                    font-family: Roboto, Bebas Neue, Arial;
                     font-size: 18px;
                     color: black;
                     margin-top: 10px;
