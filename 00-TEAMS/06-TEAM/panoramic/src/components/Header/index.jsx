@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
-import styles from './Header.scss';
+import './Header.scss';
 
 export default function Header() {
   return (
@@ -11,11 +10,11 @@ export default function Header() {
         <h1 className="header_title">Panoramic</h1>
       </div>
       <nav className="header__navegation">
-        <Link className="header__navegation__link" to="/register">Register</Link>
         <Link className="header__navegation__link" to="/login">Login</Link>
-        <Link className="header__navegation__link" to="/perfil">Perfil</Link>
+        <Link className="header__navegation__link" to="/perfil">Profile</Link>
+        <Link className="header__navegation__link" to="/search">Search artist</Link>
+        <Link className="header__navegation__link" to="/list">♡ List</Link>
       </nav>
-
     </header>
   );
 }
