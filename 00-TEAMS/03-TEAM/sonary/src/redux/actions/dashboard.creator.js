@@ -13,7 +13,7 @@ export function loadDashboard() {
     console.log(track_list);
     dispatch({
       type: actionTypes.LOAD_DASHBOARD,
-      track_list
+      dashboard: track_list
     });
   };
 }
