@@ -4,12 +4,10 @@
     box-sizing: border-box;
 }
 
-header {
+.main__header {
     width: 100%;
-    /* background-image: url(https://i.ibb.co/HgPB420/brothers-2107264.jpg); */
     background-image: url(https://cei-laaurora.com/wp-content/uploads/2019/07/escuelas-de-verano-en-Valencia-ni%C3%B1os-juganfo-1000x500.jpg);
     background-position: 0px 0px;
-    /* margin-top: -15px; */
     background-repeat: no-repeat;
     background-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
@@ -48,6 +46,7 @@ header {
     padding: 20px;
     padding-right: 30px;
     margin-top: 20px;
+    margin-left: 10px;
     text-shadow: 1px 1px rgb(163, 162, 162);
 }
 
