@@ -61,6 +61,7 @@ list-style: none;
                     height: 250px;
                     background: url('https://i.ibb.co/Tbt59m0/pricetag.png');
                     background-size: contain;
+                    background-repeat: no-repeat;
                     .price{
                         display: block;
                         transform: rotate(10deg);
@@ -82,5 +83,52 @@ list-style: none;
                 }
             }
         }
+    }
+}
+
+@media (max-width: 1065px){
+    .main{
+        .main__container{
+            .main__title{
+                font-size: 18px;
+            }
+        .main__product{
+            flex-direction: column;
+            .product__images{
+                .product__bigimage{
+                    width: 338px;
+                    height: 338px;
+                }
+                .product__smallimages-container{
+                    width: 338px;
+                    justify-content: center;
+                    .product__smallimage{
+                        width: 75px;
+                        height: auto;
+                    }
+                }
+            }
+            .product__info{
+                .info__price{
+                    width: 260px;
+                    height: auto;
+                    .price{
+                        font-size: 95px;
+                        margin-top: 5vh;
+                        margin-right: 7vh;
+                    }
+        }
+        .info__description{
+            font-size: 10px;
+        }
+        .info__addtocart{
+            @include button;
+            font-size: 25px;
+            width: 36vw;
+            margin-top: 20px;
+        }
+    }
+        }
+    }
     }
 }
