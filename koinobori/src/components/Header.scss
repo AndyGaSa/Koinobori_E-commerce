@@ -16,6 +16,7 @@
       .scroll-container{
       overflow: hidden;
       .upper-container__discount-text{
+        max-height: 61px;
         line-height: 7vh;
         color: $yellow ;
         font-family: Bebas Neue;
@@ -107,7 +108,17 @@
 
 @media (max-width: 660px){
   .header{
+    .header__upper-container{
+      .scroll-container{
+        .upper-container__discount-text{
+          font-size: 25px;
+        }
+      }
+    }
     .header__lower__nav-icons{
+      .header__menu{
+        flex-wrap: wrap;
+      }
       .header__login{
         margin-top: 10px;
         margin-bottom: 10px;
@@ -117,12 +128,6 @@
         margin-bottom: 10px;
         width: 65px;
         height: 55px;
-      }
-      .header__menu{
-        .header__icons{
-          width: 131px;
-          height: 60px;
-        }
       }
     }
   }
