@@ -2,3 +2,21 @@ $purple: #B967FF;
 $yellow: #FFFB96;
 $pink: #FF71CE;
 $lightgray: #F4F4F6;
+
+@mixin button {
+    background-color: $purple;
+    color: $yellow;
+    border: none;
+    border-radius: 1px;
+    font-family: Bebas Neue, Roboto, Arial;
+    font-weight: 400;
+    padding: 15px;
+}
+
+@mixin title{
+    color: $purple;
+    font-family: Roboto, Bebas Neue, Arial;
+    font-weight: 900;
+    font-size: 36px;
+    text-transform: uppercase;
+}
