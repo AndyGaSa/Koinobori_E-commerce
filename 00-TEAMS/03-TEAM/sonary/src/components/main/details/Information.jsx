@@ -17,6 +17,7 @@ export default function Information() {
     if (!tracks.length) dispatch(loadDashboard());
   }, []);
 
+
   useEffect(() => {
     const x = (tracks.find((track) => track.track_id === +track_id));
     setFoundTrack(x);
