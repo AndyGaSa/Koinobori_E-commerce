@@ -15,7 +15,7 @@ function SideMenu({ navClass, changeNavState }) {
   }, []);
 
   return (
-    <div className={navClass}>
+    <div data-testid="side-menu" className={navClass}>
       <aside>
         <nav className="side-menu-navigator">
           <div>
