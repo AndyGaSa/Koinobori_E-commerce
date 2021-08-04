@@ -5,10 +5,10 @@ import { Link, useParams } from 'react-router-dom';
 import NotFound from '../NotFound/NotFound';
 
 import './TeamsList.scss';
-import getTeams from '../../redux/actions/teams.creator';
+import { getTeams } from '../../redux/actions/sports.creator';
 
 export default function TeamsList() {
-  const allTeamsPerLeague = useSelector((store) => store.countriesLeagues.teams);
+  const allTeamsPerLeague = useSelector((store) => store.countriesLeagues);
   const dispatch = useDispatch();
   const { leagueId } = useParams();
 

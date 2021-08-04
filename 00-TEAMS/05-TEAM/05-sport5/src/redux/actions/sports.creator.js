@@ -1,6 +1,5 @@
 import axios from 'axios';
 import actionTypes from './sports.types';
-import { favouritesLocalStorageCheck, getFavouritesLocalStorage } from '../../service/favourites-local-storage';
 
 function getCountries() {
   return async () => {
@@ -47,25 +46,20 @@ export function getLeagues(sport) {
   };
 }
 
-export function getFavourites() {
-  favouritesLocalStorageCheck();
+export function getTeams(idLeague) {
+  return async (dispatch) => {
+    const { data } = await axios(`https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=${idLeague}`);
+    const leagueTeamsList = data.teams?.map(({
+      idTeam, strTeam, strTeamBadge
+    }) => ({
+      id: idTeam,
+      name: strTeam,
+      badge: strTeamBadge
+    }));
 
-  return {
-    type: actionTypes.LOAD_FAVOURITES,
-    favourites: getFavouritesLocalStorage()
-  };
-}
-
-export function addFavouriteLeague(favouriteLeague) {
-  return {
-    type: actionTypes.SAVE_LEAGUE,
-    favouriteLeague
-  };
-}
-
-export function deleteFavouriteLeague(leagueId) {
-  return {
-    type: actionTypes.DELETE_LEAGUE,
-    leagueId
+    dispatch({
+      type: actionTypes.LOAD_TEAMS,
+      leagueTeamsList
+    });
   };
 }

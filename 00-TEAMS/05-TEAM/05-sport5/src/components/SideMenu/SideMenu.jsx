@@ -3,11 +3,11 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { getFavourites, deleteFavouriteLeague } from '../../redux/actions/sports.creator';
+import { getFavourites, deleteFavouriteLeague } from '../../redux/actions/favourites.creator';
 import './SideMenu.scss';
 
 function SideMenu({ navClass, changeNavState }) {
-  const favourites = useSelector((store) => store.countriesLeagues.favourites);
+  const favourites = useSelector((store) => store.favourites);
   const dispatch = useDispatch();
 
   useEffect(() => {
