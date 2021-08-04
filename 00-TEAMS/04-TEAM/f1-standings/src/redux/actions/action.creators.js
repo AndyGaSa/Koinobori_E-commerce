@@ -1,7 +1,6 @@
 import axios from 'axios';
 import actionType from './action.type';
 
-
 export function loadRacesData() {
   return async (dispatch) => {
     const { data: { MRData: { RaceTable: { Races } } } } = await axios('https://ergast.com/api/f1/2021/results.json?limit=220&offset=0');
