@@ -136,7 +136,7 @@
     
      border-top: solid 3px $color;
      border-right: solid 3px $color;
-     border-top-right-radius: 25px;
+     border-top-right-radius: 10px;
      font-size: 5vw;
      width: 40vw;
      display: flex;
@@ -156,8 +156,8 @@
 }
 .mclarenpoints{
     @include points($mclaren);
- }
- .alpinepoints{
+}
+.alpinepoints{
     @include points($alpine);
  }
  .alphatauripoints{
@@ -176,11 +176,78 @@
     @include points($haas);
     border: solid gray 0.2px;
  }
-
-
  .points__pts{
      margin-left: 1vw;
      color: $color-white;
      background-color: gray;
      border-radius: 5px;
  }
+ .season{
+     display: flex;
+     flex-direction: column;
+     width: 40vw;
+ }
+
+ .podiums-total{
+     font-size: 8vw;
+     font-weight: bold;
+ }
+ .podiums{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 15vw;
+    border-bottom: solid 2px grey;
+    border-right: solid 2px grey;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 5vw;
+    margin-top: 5vw;
+
+ }
+ @mixin podiums ($color: $mercedes){
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 5vw;
+    border-top: solid 3px $color;
+    border-right: solid 3px $color;
+    border-top-right-radius: 10px;
+    margin-bottom: 5vw;
+    
+
+}
+
+.mercedespodiums{
+   @include podiums;
+}
+.red_bullpodiums{
+  @include podiums($red_bull);
+}
+.ferraripodiums{
+   @include podiums($ferrari);
+}
+.mclarenpodiums{
+   @include podiums($mclaren);
+}
+.alpinepodiums{
+   @include podiums($alpine);
+}
+.alphatauripodiums{
+   @include podiums($alphatauri);
+}
+.aston_martinpodiums{
+   @include podiums($aston_martin);
+}
+.williamspodiums{
+   @include podiums($williams);
+}
+.alfapodiums{
+   @include podiums($alfa);
+}
+.haaspodiums{
+   @include podiums($haas);
+   border: solid gray 0.2px;
+}

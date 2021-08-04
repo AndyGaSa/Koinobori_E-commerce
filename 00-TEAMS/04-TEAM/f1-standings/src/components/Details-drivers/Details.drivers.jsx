@@ -79,17 +79,18 @@ export default function DriverDetails() {
           <div className="season">
             <h3>2021 Season</h3>
             <section className="season__data">
+              <div className={`${driver?.Constructors[0].constructorId}podiums`} />
               <div className="podiums">
                 <h5>Podiums</h5>
                 <span className="podiums-total">{driver?.wins}</span>
               </div>
-              <div className="dhl">
+              <div className="podiums">
                 <h5> DHL Fastest Lap</h5>
-                <span className="fastest-lap">0</span>
+                <span className="podiums-total">0</span>
               </div>
-              <div className="gps">
+              <div className="podiums">
                 <h5>GPs Entered</h5>
-                <span className="gps-entered">10</span>
+                <span className="podiums-total">10</span>
               </div>
             </section>
           </div>
