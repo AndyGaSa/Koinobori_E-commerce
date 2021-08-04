@@ -15,6 +15,23 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 store.dispatch(fetchAllEvents());
 
 ReactDOM.render(
+  // <Auth0Provider
+  //   domain={process.env.REACT_APP_AUTH0_DOMAIN}
+  //   clientId={process.env.REACT_APP_AUTH0_CLIENTID}
+  //   redirectUrl={window.location.origin}
+  // >
+  //   <React.StrictMode>
+  //     <Provider store={store}>
+  //       <BrowserRouter>
+  //         <LogInPage />
+  //         <Switch>
+  //           <Route exact path="/" component={LogInPage} />
+  //           <Route exact path="/profile" component={Profile} />
+  //         </Switch>
+  //       </BrowserRouter>
+  //     </Provider>
+  //   </React.StrictMode>
+  // </Auth0Provider>,
   <React.StrictMode>
     <Provider store={store}>
       <App />

@@ -1,0 +1,12 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
