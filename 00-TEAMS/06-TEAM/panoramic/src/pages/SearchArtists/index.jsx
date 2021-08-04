@@ -17,17 +17,16 @@ export default function SearchArtists() {
         placeholder="Search your favourite artist"
         onChange={(event) => dispatch(loadSearchedArtists(event.target.value))}
       />
-      <button
-        type="button"
-        onClick={() => dispatch(addFavArtist())}
-      >
-        Add Favourite Artist
-
-      </button>
       <ul>
         {searchedArtistsList.map((artist) => (
           <li>
             {artist.name}
+            <button
+              type="button"
+              onClick={() => dispatch(addFavArtist(artist))}
+            >
+              + Add
+            </button>
           </li>
         ))}
       </ul>

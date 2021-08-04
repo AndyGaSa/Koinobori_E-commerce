@@ -27,17 +27,11 @@ export function deleteFavArtists(artist) {
 }
 
 // Tiene que funcionar en funcion del LOAD nuevo
-export function addFavArtist() {
-  return async (dispatch) => {
-    const token = JSON.parse(localStorage.getItem('token'));
-    const { data } = await axios({
-      method: 'GET',
-      url: 'https://api.spotify.com/v1/artists?ids=24DO0PijjITGIEWsO8XaPs',
-      headers: { Authorization: `Bearer ${token}` }
-    });
-    dispatch({
+export function addFavArtist(artist) {
+  return (
+    ({
       type: actionTypes.ADD_FAVOURITE_ARTISTS,
-      artist: data.artists[0]
-    });
-  };
+      artist
+    })
+  );
 }
