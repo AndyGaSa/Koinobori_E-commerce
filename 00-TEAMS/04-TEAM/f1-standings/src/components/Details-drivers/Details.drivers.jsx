@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-console */
 /* eslint-disable prefer-const */
@@ -5,6 +6,7 @@
 /* eslint-disable no-lone-blocks */
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 // import { useParams } from 'react-router-dom';
 
 import './Details.css';
@@ -12,7 +14,9 @@ import './Details.css';
 export default function DriverDetails() {
   const drivers = useSelector((store) => store?.drivers);
   const [driver, setDriver] = useState();
-  const { driverId } = 'hamilton';
+  const { driverId } = useParams();
+  console.log(driverId);
+
   // eslint-disable-next-line no-restricted-syntax
 
   useEffect(() => {
@@ -20,7 +24,7 @@ export default function DriverDetails() {
     drivers && (aux = [0, ...drivers]);
     let y = [];
     aux && ([, y] = aux);
-    const foundDriver = y && y.find((currentDriver) => currentDriver.Driver.driverId === 'hamilton');
+    const foundDriver = y && y.find((currentDriver) => currentDriver.Driver.driverId === driverId);
     setDriver(foundDriver);
   }, [drivers, driverId]);
 

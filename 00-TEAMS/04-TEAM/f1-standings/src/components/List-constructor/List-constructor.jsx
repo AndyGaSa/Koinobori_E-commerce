@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import './style.scss';
+import '../List/style.scss';
 
 export default function ListConstructor() {
   const data = useSelector((store) => store.constructor);
