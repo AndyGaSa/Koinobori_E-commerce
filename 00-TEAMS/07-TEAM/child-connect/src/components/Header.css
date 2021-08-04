@@ -6,7 +6,6 @@
 
 
 header {
-    display: flex;
     width: 100%;
     background-image: url(https://i.ibb.co/HgPB420/brothers-2107264.jpg);
     background-repeat: no-repeat;
@@ -14,12 +13,9 @@ header {
 }
 
 nav {
-    width: 100vw;
     display: flex;
     align-items: center;
-    background-color: #5E5E5E;
-    justify-content: flex-end;
-    /* opacity: 0.8;     */
+    background-color: #5E5E5E;opacity: 0.8;    
 }
 
 h1 {
@@ -31,7 +27,6 @@ h1 {
 
 .header__menu-buttons {
     display: flex;
-    
 }
 
 
@@ -53,7 +48,6 @@ h1 {
 
 
 .buttons__crear-evento {
-
     display: flex;
     flex-direction: row;
     justify-content: center;
