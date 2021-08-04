@@ -31,9 +31,9 @@ export function addFavouriteTeam(favouriteTeam) {
   };
 }
 
-export function deleteFavouriteTeam(favouriteTeam) {
+export function deleteFavouriteTeam(teamId) {
   return {
     type: actionTypes.DELETE_TEAM,
-    favouriteTeam
+    teamId
   };
 }
