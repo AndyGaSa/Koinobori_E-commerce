@@ -21,10 +21,9 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "npm-run-all --parallel server react sonar",
+    "start": "npm-run-all --parallel server react",
     "server": "json-server ./api/db.json --config ./api/json-server.json",
     "react": "react-scripts start",
-    "sonar": "sonar start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll --collect-coverage",
     "eject": "react-scripts eject"

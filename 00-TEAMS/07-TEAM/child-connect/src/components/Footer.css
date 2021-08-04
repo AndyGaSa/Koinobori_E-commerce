@@ -1,7 +1,6 @@
 /* Website footer */
 
 footer {
-position: absolute;
 width: 1366px;
 height: 245px;
 left: calc(50% - 1366px/2 - 1px);
@@ -112,7 +111,6 @@ background: url(tel.png);
 /* Group 6634 */
 
 .footer-terms-list {
-position: absolute;
 width: 155px;
 height: 155px;
 left: 254px;
@@ -122,7 +120,6 @@ top: 39px;
 
 /* Datos de la empresa */
 .footer-terms-list_item {
-position: absolute;
 width: 155px;
 height: 21.8px;
 left: 254px;
