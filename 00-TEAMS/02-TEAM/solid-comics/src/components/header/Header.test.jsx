@@ -19,20 +19,10 @@ describe('Given a header component', () => {
       container = null;
     });
 
-    // test('Link matches snapshot', () => {
-    //     const component = renderer.create(
-    //       <StaticRouter location="someLocation" context={context}>
-    //         <Link to="#" />
-    //       </StaticRouter>
-    //     );
-
     test('Then 4 nav elements should be in the document', () => {
-      // act
       act(() => {
         render(<StaticRouter><Header /></StaticRouter>, container);
       });
-
-      // assert
       expect(container.getElementsByTagName('a').length).toBe(4);
     });
   });
