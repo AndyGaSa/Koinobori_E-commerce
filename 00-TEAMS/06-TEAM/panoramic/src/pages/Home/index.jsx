@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
-import getSpotifyToken, { loadAxiosSuggestedArtists } from '../../redux/actions/actionCreators';
+import getSpotifyToken, { loadAxiosSuggestedArtists } from '../../redux/actions/actionCreatorsHome';
+import { addFavArtist } from '../../redux/actions/actionCreatorsFavList';
 
 import BannerLanding from '../../components/BannerLanding';
 
@@ -26,7 +27,10 @@ export default function Home() {
               <span>{`Artist genre: ${artist.genres[0]}`}</span>
               <span>{`Followers: ${artist.followers.total}`}</span>
             </p>
-            <button type="button">
+            <button
+              type="button"
+              onClick={() => dispatch(addFavArtist(artist))}
+            >
               Add to favourites
             </button>
           </li>
