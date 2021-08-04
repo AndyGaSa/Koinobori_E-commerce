@@ -53,13 +53,13 @@
   .header__blankspace{
     flex-grow: 2;
   }
-    .header__menu{
-      flex-grow: 1;
-      display: flex;
-      justify-content: center;
-      .header__icons{
-        width: 161px;
-        height: 90px;
+  .header__menu{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    .header__icons{
+    width: 161px;
+    height: 90px;
     }
   }
 }
@@ -93,6 +93,37 @@
   .header{
     .header__lower__nav-icons{
       flex-direction: column;
+      .header__login{
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .header__cart{
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 660px){
+  .header{
+    .header__lower__nav-icons{
+      .header__login{
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .header__cart{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 65px;
+        height: 55px;
+      }
+      .header__menu{
+        .header__icons{
+          width: 131px;
+          height: 60px;
+        }
+      }
     }
   }
 }
