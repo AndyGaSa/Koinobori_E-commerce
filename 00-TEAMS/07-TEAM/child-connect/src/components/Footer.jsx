@@ -7,15 +7,17 @@ export default function Footer() {
     <>
       <footer>
 
-        <div className="footer-terms-list">
-          <p className="footer-terms-list__headline">Child Connect</p>
-          <ul>
-            <li className="footer-terms-list_item">¿Cómo funciona?</li>
-            <li className="footer-terms-list_item">Ayuda</li>
-            <li className="footer-terms-list_item">Privacidad</li>
-            <li className="footer-terms-list_item">Términos</li>
-            <li className="footer-terms-list_item">Datos de la empresa</li>
-          </ul>
+        <div className="footer-terms">
+          <div className="footer-terms-block">
+            <p className="footer-terms-list__headline">Child Connect</p>
+            <ul>
+              <li className="footer-terms-list_item">¿Cómo funciona?</li>
+              <li className="footer-terms-list_item">Ayuda</li>
+              <li className="footer-terms-list_item">Privacidad</li>
+              <li className="footer-terms-list_item">Términos</li>
+              <li className="footer-terms-list_item">Datos de la empresa</li>
+            </ul>
+          </div>
         </div>
 
         <div className="header-logo-section">
@@ -26,11 +28,11 @@ export default function Footer() {
         </div>
 
         <div className="header-social-network__icons">
-          <img src="https://i.ibb.co/q19wwTs/insta.png" alt="Instagram" />
-          <img src="https://i.ibb.co/F4VzVJy/whatsapp.png" alt="Whatsapp" />
-          <img src="https://i.ibb.co/54NXxmN/tel.png" alt="Tel" />
-          <img src="https://i.ibb.co/rmMhqY5/twitter.png" alt="Twitter" />
-          <img src="https://i.ibb.co/L5WSKp7/facebook.png" alt="Facebook" />
+          <div><img src="https://i.ibb.co/q19wwTs/insta.png" alt="Instagram" /></div>
+          <div><img src="https://i.ibb.co/F4VzVJy/whatsapp.png" alt="Whatsapp" /></div>
+          <div><img src="https://i.ibb.co/54NXxmN/tel.png" alt="Tel" /></div>
+          <div><img src="https://i.ibb.co/rmMhqY5/twitter.png" alt="Twitter" /></div>
+          <div><img src="https://i.ibb.co/L5WSKp7/facebook.png" alt="Facebook" /></div>
         </div>
 
       </footer>
