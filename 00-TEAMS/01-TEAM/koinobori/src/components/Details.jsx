@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-role */
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -50,11 +51,13 @@ export default function Details() {
       && stock.description.map((item) => (
         <li className="info__description">{`${item}`}</li>
       ))}
+
             </ul>
             <small>Tax included. Shipping calculated at checkout.</small>
-            <button className="info__addtocart" type="button" onClick={addToCart}>ADD TO CART</button>
+            <button className="info__addtocart" type="button" role="btnAddToCart" onClick={addToCart}>ADD TO CART</button>
           </div>
         </div>
+
       </section>
     </main>
   );
