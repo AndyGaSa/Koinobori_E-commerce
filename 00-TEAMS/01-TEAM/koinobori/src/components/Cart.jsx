@@ -6,10 +6,10 @@ export default function Cart() {
   const LocalStorage = JSON.parse(localStorage.getItem('cart'));
 
   return (
-    <main>
+    <>
       { LocalStorage === null
         ? <EmptyCart />
         : <FilledCart />}
-    </main>
+    </>
   );
 }
