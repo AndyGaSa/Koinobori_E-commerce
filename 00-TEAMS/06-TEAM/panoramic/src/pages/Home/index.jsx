@@ -1,7 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
+
 import getSpotifyToken, { loadAxiosSuggestedArtists } from '../../redux/actions/actionCreatorsHome';
 import { addFavArtist } from '../../redux/actions/actionCreatorsFavList';
+
+import './Home.scss';
 
 import BannerLanding from '../../components/BannerLanding';
 
@@ -16,27 +19,31 @@ export default function Home() {
   return (
     <>
       <BannerLanding />
-      <h1>Home Page</h1>
-      <ul>
-        {
-        artists.map((artist) => (
-          <li>
-            {artist.name}
-            <img src={`${artist.images[0].url}`} alt="Girl in a jacket" />
-            <p>
-              <span>{`Artist genre: ${artist.genres[0]}`}</span>
-              <span>{`Followers: ${artist.followers.total}`}</span>
-            </p>
-            <button
-              type="button"
-              onClick={() => dispatch(addFavArtist(artist))}
-            >
-              Add to favourites
-            </button>
-          </li>
-        ))
-        }
-      </ul>
+      <div className="suggested-artists-container">
+        <h1 className="suggested-artists-container__title">Suggestion Artist</h1>
+        <ul className="suggested-artists-container__artists-cards">
+          {
+          artists.map((artist) => (
+            <li className="artists-cards__artist-details">
+              <img src={`${artist.images[0].url}`} alt="Girl in a jacket" />
+              <h3>
+                {artist.name}
+              </h3>
+              <p>
+                <span>{`Artist genre: ${artist.genres[0]}`}</span>
+                <span>{`Followers: ${artist.followers.total}`}</span>
+              </p>
+              <button
+                type="button"
+                onClick={() => dispatch(addFavArtist(artist))}
+              >
+                Add to favourites
+              </button>
+            </li>
+          ))
+      }
+        </ul>
+      </div>
     </>
   );
 }
