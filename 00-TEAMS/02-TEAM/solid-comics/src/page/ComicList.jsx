@@ -6,7 +6,6 @@ import { loadComics } from '../redux/actions/comics.creators';
 
 import './styles/ComicList.scss';
 
-
 import ComicNav from '../components/comic-list/ComicNav';
 import ComicFilter from '../components/comic-list/ComicFilter';
 
