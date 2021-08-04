@@ -4,7 +4,7 @@ import Lyrics from './Lyrics';
 
 export default function Details() {
   return (
-    <main>
+    <main className="details">
       <Information />
       <Lyrics />
     </main>
