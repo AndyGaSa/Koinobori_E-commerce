@@ -6,9 +6,15 @@ $gris90:#575757;
 $verde: rgb(0, 229.5, 0);
 
 .details {
-    margin: 40px 160px 0px 160px;
+    margin: 20px 160px 0px 160px;
     display: flex; 
     flex-direction: row;
+}
+
+.details__title {
+    font-size: 30px;
+    position: absolute;
+    left: 540px;
 }
 
 .details__information {
@@ -23,8 +29,12 @@ $verde: rgb(0, 229.5, 0);
         border-radius: 10px;
         background-color: $gris15;
     }
-    .details__track {
-        margin: 20px 20px 20px 20px;
-        font-size: 20px;
+}
+
+.details__track {
+    margin: 20px 20px 20px 20px;
+    font-size: 20px;
+    .track__artist {
+        font-weight: bold;
     }
 }
