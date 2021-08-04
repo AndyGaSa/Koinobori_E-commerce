@@ -14,7 +14,7 @@ export default function Footer() {
             <li className="socialmedia__youtube"><Link to="facebook.com" /></li>
             <li className="socialmedia__twitter"><Link to="facebook.com" /></li>
             <li className="socialmedia__soundcloud"><Link to="facebook.com" /></li>
-            <li className="socialmedia__instagram"><Link to="facebook.com" /></li>
+            <li className="socialmedia__instagram" data-testid="instagram-icon"><Link to="facebook.com" /></li>
             <li className="socialmedia__pinterest"><Link to="facebook.com" /></li>
           </ul>
         </nav>
