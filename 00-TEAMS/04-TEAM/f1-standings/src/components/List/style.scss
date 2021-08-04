@@ -24,6 +24,7 @@ button[type="button"] {
     display: flex;
     flex-direction: column;
     background-color: $color-black;
+    
 }
 .constructor{
     background-color: $color-white;
@@ -32,6 +33,7 @@ button[type="button"] {
     margin-bottom: 1vw;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
+    margin-left: 0.5vw;
 }
 .main-name-container{
     display: flex;
