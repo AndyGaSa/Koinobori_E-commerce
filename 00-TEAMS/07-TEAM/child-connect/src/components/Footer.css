@@ -17,7 +17,7 @@ background: #5E5E5E;
 padding: 10px;
 }
 
-.footer-terms-list {
+.footer-terms {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -25,12 +25,11 @@ align-items: center;
 flex-basis: 33%;
 }
 
-.footer-terms-list-block {
+.footer-terms-block{
 display: flex;
 flex-direction: column;
-justify-content: center;
 align-items: flex-start;
-flex-basis: 33%;
+color: #FFFFFF;
 }
 
 /* Child Connect */
@@ -48,12 +47,6 @@ color: #FFFFFF;
 
 /* Group 6634 */
 
-.footer-terms-list {
-width: 155px;
-height: 155px;
-left: 254px;
-top: 39px;
-}
 
 .footer-terms-list_item {
 width: 100%;
@@ -67,7 +60,6 @@ align-items: center;
 color: #FFFFFF;
 margin-top: 4px;
 }
-
 
 .header-logo-section{
 display: flex;
@@ -120,4 +112,11 @@ align-items: center;
     margin: 5px;
     max-width: 40px;
     height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
 }

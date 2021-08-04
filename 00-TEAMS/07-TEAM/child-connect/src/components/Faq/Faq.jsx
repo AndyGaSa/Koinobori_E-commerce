@@ -1,8 +1,7 @@
 import React from 'react';
 import Accordion from './Accordion';
-import './Faq.css';
 
-export default function Faq() {
+const Faq = () => {
   const faqInfo = [
     {
       title: '¿Por qué usar Child Connect?',
@@ -18,6 +17,11 @@ export default function Faq() {
       title: '¿Por qué debo crear un perfil de usuario en Child Connect?',
       body:
       'Para que las familias puedan conocerte, conocer las edades e intereses de tus hijos, y así coordinar encuentros que puedan disfurtar en familia. Una vez que cuentes con tu perfil podrás apuntarte u ofrecer eventos.'
+    },
+    {
+      title: '¿Quiénes han creado Child Connect?',
+      body:
+      'Un equipo de personas inteligentes, bellas y sensibles que quieren hacer de éste un mundo mejor aportando su granito de arena en su trabajo cotidiano.               '
     }
   ];
   return (
@@ -31,4 +35,6 @@ export default function Faq() {
 
     </section>
   );
-}
+};
+
+export default Faq;
