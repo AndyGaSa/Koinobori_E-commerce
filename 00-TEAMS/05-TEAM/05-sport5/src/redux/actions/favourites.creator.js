@@ -1,4 +1,4 @@
-import actionTypes from './favourties.types';
+import actionTypes from './favourites.types';
 import { favouritesLocalStorageCheck, getFavouritesLocalStorage } from '../../service/favourites-local-storage';
 
 export function getFavourites() {
