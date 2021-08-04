@@ -6,7 +6,7 @@ import actionTypes from './actionTypes';
 
 export function loadDashboard() {
   return async (dispatch) => {
-    const response = await fetch('https://api.musixmatch.com/ws/1.1/chart.tracks.get?format=jsonp&callback=callback&page_size=10&country=us&f_has_lyrics=f_has_lyrics&apikey=8ba90f0cc799ec2725591826448e1d42');
+    const response = await fetch('https://api.musixmatch.com/ws/1.1/chart.tracks.get?format=jsonp&callback=callback&page_size=5&chart_name=top&country=wx&f_has_lyrics=1&apikey=b6147311dbfaffd8721603c89d845ed8');
     let mod = await response.text();
     mod = await mod.substring(9, (mod.length - 2));
     const { message: { body: { track_list } } } = await JSON.parse(mod);

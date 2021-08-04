@@ -1,0 +1,30 @@
+$gris5: #F2F2F2;
+$gris10:#E5E5E5;
+$gris15:#DADADA;
+$gris95:rgb(38, 38, 38);
+$gris90:#575757;
+$verde: rgb(0, 229.5, 0);
+
+.details {
+    margin: 40px 160px 0px 160px;
+    display: flex; 
+    flex-direction: row;
+}
+
+.details__information {
+    width: 340px; 
+    height: 540px;
+    background-color: $gris5;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    .details__figure {
+        height: 340px;
+        width: 340px;
+        border-radius: 10px;
+        background-color: $gris15;
+    }
+    .details__track {
+        margin: 20px 20px 20px 20px;
+        font-size: 20px;
+    }
+}
