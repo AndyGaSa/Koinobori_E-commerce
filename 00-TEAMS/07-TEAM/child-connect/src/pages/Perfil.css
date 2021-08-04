@@ -151,9 +151,9 @@ color: #9E9E9E;
 }
 
 .children-info__img {
- width: 12px;
- height: 22px;
- opacity: 0.3;
+ width: 15px;
+ height: 25px;
+ opacity: 0.7;
 }
 
 .children-info__age {
@@ -163,9 +163,11 @@ color: #9E9E9E;
 }
 .hobbies-info {
     width: 50%;
-
 }
 
+.hobbies-info__img {
+    width: 85px;
+}
 
 
 .profile-rating-block {
