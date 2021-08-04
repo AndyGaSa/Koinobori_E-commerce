@@ -5,9 +5,9 @@ import './Perfil.css';
 /* import EventList from './EventList'; */
 
 export default function Perfil() {
-  const currentEvents = useSelector(({ events }) => events);
+  const currentUsers = useSelector(({ users }) => users);
 
-  console.log(currentEvents);
+  console.log(currentUsers);
   return (
     <>
       <div className="profile-container">
@@ -60,7 +60,7 @@ export default function Perfil() {
 
       </div>
 
-      <p>{currentEvents[0]?.title}</p>
+      <p>{currentUsers[0]?.name}</p>
 
     </>
 

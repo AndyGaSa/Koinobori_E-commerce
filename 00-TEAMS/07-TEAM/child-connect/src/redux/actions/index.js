@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
 import axios from 'axios';
-import FETCH_EVENT from './types';
+import actionTypes from './types';
 
 // const apiUrl = 'http://127.0.0.1:3001';
 
 const fetchEvents = (events) => {
   console.log(events);
   return {
-    type: FETCH_EVENT,
+    type: actionTypes.FETCH_EVENT,
     events
   };
 };
@@ -27,4 +27,22 @@ const fetchAllEvents = () => ((dispatch) => (
     .catch((error) => { console.error(error); })
 ));
 
-export default fetchAllEvents;
+const fetchUsers = (users) => ({
+  type: actionTypes.FETCH_USERS,
+  users
+});
+
+const fetchAllUsers = () => ((dispatch) => (
+  axios.get('http://localhost:3001/users', {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+    },
+    responseType: 'json'
+  })
+    .then((response) => {
+      dispatch(fetchUsers(response));
+    })
+));
+
+export { fetchAllEvents, fetchAllUsers };
