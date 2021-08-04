@@ -26,6 +26,7 @@ export function deleteFavArtists(artist) {
   );
 }
 
+// Tiene que funcionar en funcion del LOAD nuevo
 export function addFavArtist() {
   return async (dispatch) => {
     const token = JSON.parse(localStorage.getItem('token'));
