@@ -24,7 +24,7 @@ function SideMenu({ navClass, changeNavState }) {
               Favourite Leagues
             </h3>
             <ul>
-              {favourites?.favouriteLeagues.map((favouriteLeague, index) => (
+              {favourites.favouriteLeagues.map((favouriteLeague, index) => (
                 <li data-testid={`favourite-leagues-item-${index}`} key={`favourite-league-${favouriteLeague.id}`} className="favourite">
                   <Link to={`/league/${favouriteLeague.id}`}>
                     <img src={favouriteLeague.badge} alt={favouriteLeague.name} className="favourite__badge" />
@@ -41,7 +41,7 @@ function SideMenu({ navClass, changeNavState }) {
               Favourite Teams
             </h3>
             <ul>
-              {favourites?.favouriteTeams.map((favouriteTeam) => (
+              {favourites.favouriteTeams.map((favouriteTeam) => (
                 <li key={`favourite-team-${favouriteTeam.id}`} className="favourite">
                   <Link to={`/team/${favouriteTeam.id}`}>
                     <img src={favouriteTeam.badge} alt={favouriteTeam.name} className="leagues__badge" />
