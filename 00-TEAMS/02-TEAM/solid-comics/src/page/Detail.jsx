@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import ComicCard from '../components/comic-card/ComicCard';
 import './styles/Details.scss';
 
 export default function Detail() {
@@ -21,7 +20,7 @@ export default function Detail() {
           <li className="detail__creators">
             <h3 className="detail__penciler">
               Penciler:
-              {targetComic[0]?}
+              {targetComic[0]?.title}
             </h3>
             <h3 className="detail__writer">
               Published:

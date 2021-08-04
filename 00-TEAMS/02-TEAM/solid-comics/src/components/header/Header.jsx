@@ -21,7 +21,7 @@ export default function Header() {
         </Link>
 
         <LogoutButton />
-        
+
       </nav>
     </header>
   );
