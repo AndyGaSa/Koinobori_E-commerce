@@ -1,24 +1,34 @@
 /* Website footer */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap');
 
 footer {
-width: 1366px;
-height: 245px;
-left: calc(50% - 1366px/2 - 1px);
-top: calc(50% - 245px/2 - 157.5px);
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: space-evenly;
+width: 100%;
 background: #5E5E5E;
-backdrop-filter: blur(12px);
+padding: 10px;
 }
-/* Note: backdrop-filter has minimal browser support */
+
+.footer-terms-list {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex-basis: 33%;
+}
 
 
-/* © 2021 Child Connect | All rights reserved */
-/*
-position: absolute;
-width: 742px;
-height: 19px;
-left: 548px;
-top: 211px;
-
+/* Child Connect */
+.footer-terms-list__headline{
+color: #FFFFFF;
 font-family: Alegreya Sans;
 font-style: normal;
 font-weight: 500;
@@ -26,88 +36,9 @@ font-size: 18px;
 line-height: 22px;
 display: flex;
 align-items: center;
-
 color: #FFFFFF;
 
-*/
 
-/* Child Connect (3) 1 */
-
-/*
-position: absolute;
-width: 252px;
-height: 265px;
-left: 569px;
-top: -13px;
-
-background: url(Child Connect (3).png);
-*/
-
-/* Redes Sociales div */
-/*
-position: absolute;
-width: 228px;
-height: 39px;
-left: 981px;
-top: 99px;
-
-*/
-
-/* facebook 1 */
-/*
-position: absolute;
-width: 17.7px;
-height: 36px;
-left: calc(50% - 17.7px/2 + 517.15px);
-top: calc(50% - 36px/2 - 2.5px);
-
-background: url(facebook.png);
-*/
-
-/* twitter 1 */
-/*
-position: absolute;
-width: 37.48px;
-height: 31px;
-left: calc(50% - 37.48px/2 + 474.99px);
-top: calc(50% - 31px/2 - 5px);
-
-background: url(twitter.png);
-*/
-
-/* insta 1 */
-/*
-position: absolute;
-width: 38.52px;
-height: 37px;
-left: calc(50% - 38.52px/2 + 317.26px);
-top: calc(50% - 37px/2 - 5px);
-
-background: url(insta.png);
-*/
-
-/* whatsapp 1 */
-/*
-position: absolute;
-width: 35.4px;
-height: 35px;
-left: calc(50% - 35.4px/2 + 374px);
-top: calc(50% - 35px/2 - 6px);
-
-background: url(whatsapp.png);
-
-*/
-/* tel 1 */
-/*
-position: absolute;
-width: 35.4px;
-height: 35px;
-left: calc(50% - 35.4px/2 + 423.97px);
-top: calc(50% - 35px/2 - 6px);
-
-background: url(tel.png);
-
-*/
 /* Group 6634 */
 
 .footer-terms-list {
@@ -117,14 +48,8 @@ left: 254px;
 top: 39px;
 }
 
-
-/* Datos de la empresa */
 .footer-terms-list_item {
-width: 155px;
-height: 21.8px;
-left: 254px;
-top: 172.2px;
-
+width: 100%;
 font-family: Alegreya Sans;
 font-style: normal;
 font-weight: 300;
@@ -132,28 +57,59 @@ font-size: 14px;
 line-height: 17px;
 display: flex;
 align-items: center;
-
 color: #FFFFFF;
+margin-top: 4px;
 }
 
-/* Child Connect */
-/*
-position: absolute;
-width: 155px;
-height: 21.8px;
-left: 254px;
-top: 39px;
+.header-logo-section{
+display: flex;
+flex-direction: column;
+flex-basis: 30%;
+justify-content: center;
+align-items: center;
+}
 
+.header-logo-section_logo {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo-section_logo img {
+    width: 70%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo-section__copyright {
 font-family: Alegreya Sans;
 font-style: normal;
 font-weight: 500;
 font-size: 18px;
-line-height: 22px;*/
-/* identical to box height */
-/*
+line-height: 22px;
 display: flex;
-align-items: center;
-
 color: #FFFFFF;
+padding-top: 10px;
+padding-bottom: 10px;
+}
 
-}*/
+/* Redes Sociales div */
+.header-social-network__icons {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-content: center;
+flex-basis: 33%;
+justify-content: center;
+align-items: center;
+}
+
+.header-social-network__icons img {
+    margin: 5px;
+    max-width: 40px;
+    height: auto;
+}
