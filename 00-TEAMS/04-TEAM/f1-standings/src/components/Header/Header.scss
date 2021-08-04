@@ -1,0 +1,42 @@
+@import '../../assets/colors.scss';
+
+.header{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    background-color: $color-white;
+    justify-content: space-around;
+    align-items: center;
+    height: 17vw;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.test{
+    height: 20vw;
+    background-color: $color-black;
+    border-style: none;
+}
+
+.header__login {
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    background-color: $color-black
+}
+
+.header__f1{
+    height: 8vw;
+    width: auto;
+}
+
+.header__logout{
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+}
+
+.logout__img{
+    height: 8vw;
+    width: 8vw;
+}
