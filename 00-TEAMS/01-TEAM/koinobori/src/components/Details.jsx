@@ -2,49 +2,67 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import './Details.scss';
 
 export default function Details() {
   const stockList = useSelector((store) => store.stock);
-  const newLocalStorage = JSON.parse(localStorage.getItem('cart'));
 
   const { stockId } = useParams();
   const { category } = useParams();
   const [stock, setStock] = useState();
   // eslint-disable-next-line no-unused-vars
-  function addToCart() {
-    newLocalStorage.push(stock);
-    localStorage.setItem('cart', JSON.stringify(newLocalStorage));
-  }
+
   useEffect(() => {
     setStock(stockList.clothes
       && stockList.clothes[category].find((stockNow) => stockNow.id === +stockId));
   }, [stockId, stockList]);
 
+  function addToCart() {
+    const LocalStorage = JSON.parse(localStorage.getItem('cart'));
+    const findIndex = LocalStorage.findIndex((item) => item.id === +stockId);
+    if (LocalStorage.some((item) => item.name === stock.name)) {
+      LocalStorage[findIndex].quantity += 1;
+    } else {
+      stock.quantity = 1;
+      LocalStorage.push(stock);
+    }
+    localStorage.setItem('cart', JSON.stringify(LocalStorage));
+  }
   return (
-    <main>
-      <h2>{stock?.name}</h2>
-      <section>
-        <section>
-          <figure>
-            <ul>
+    <main className="main">
+
+      <section className="main__container">
+        <h2 className="main__title">{stock?.name}</h2>
+        <div className="main__product">
+          <figure className="product__images">
+            <img className="product__bigimage" src={stock?.imageFront} alt="" />
+            <ul className="product__smallimages-container">
               {stock
       && stock.imageDetails.map((item) => (
-        <img src={item} alt="" />
+        <li><img className="product__smallimage" src={item} alt="" /></li>
       ))}
             </ul>
           </figure>
-        </section>
-        <section>
-          <section>{stock?.price}</section>
-          <ul>
-            {stock
+
+          <div className="product__info">
+            <div className="info__price"><span className="price">{stock?.price}</span></div>
+            <ul>
+              {stock
       && stock.description.map((item) => (
-        <li>{`${item}`}</li>
+        <li className="info__description">{`${item}`}</li>
       ))}
+<<<<<<< HEAD
           </ul>
           <span>Tax included. Shipping calculated at checkout.</span>
           <button type="button" role="btnAddToCart" onClick={addToCart}>ADD TO CART</button>
         </section>
+=======
+            </ul>
+            <small>Tax included. Shipping calculated at checkout.</small>
+            <button className="info__addtocart" type="button" onClick={addToCart}>ADD TO CART</button>
+          </div>
+        </div>
+>>>>>>> 94698f12ee96ad3d90c6b086995d5026c6ea2e20
       </section>
     </main>
   );

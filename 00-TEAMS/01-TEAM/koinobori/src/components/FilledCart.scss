@@ -1,0 +1,85 @@
+@import '../../variables';
+@import '../../reset';
+
+ul{
+    margin:0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    ul li {
+    margin:0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    }
+    }
+
+.main{
+    background-color: $lightgray;
+    .items__container{
+        display: flex;
+        flex-direction: column;
+        .item__container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 76vw;
+            height: 23vh;
+            background-color: white;
+            box-shadow: 4px 4px 5px gray;
+            border-radius: 5px;
+            margin-top: 50px;
+            padding-right: 5px;
+            padding-left: 20px;
+        }
+        .item__image{
+            width: 143px;
+            height: 140px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+        .nameprice__container{
+            display:flex;
+            flex-direction: column;
+            font-family: Bebas Neue, Roboto, Arial;
+            font-size: 34px;
+            .item__name{
+                color: black;
+            }
+            .item__price{
+                color: $purple;
+            }
+        }
+        .quantityinput__container{
+            display: flex;
+            flex-direction: column;
+            .item__quantity{
+                font-family: Roboto, Bebas Neue, Arial;
+                font-weight: 700;
+                font-size: 15px;
+            }
+            .item__input{
+                background-color: $lightgray;
+                font-family: Bebas Neue, Roboto, Arial;
+                font-size: 25px;
+                padding-left: 5px;
+            }
+        }
+        .delete__button{
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            .item__delete{
+                @include button;
+                padding: 0px;
+                flex-grow: 1;
+                width: 3vw;
+                height: 5vh;
+                margin-top: 8px;
+            }
+            .item__empty{
+                flex-grow: 2;
+            }
+        }
+    }
+}

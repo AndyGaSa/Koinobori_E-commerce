@@ -11,11 +11,12 @@
     .footer__upper{
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
         .footer__upper-container{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            font-family: Bebas Neue;
+            font-family: Bebas Neue, Roboto, Arial;
             font-size: 24px;
             color: white;
             .footer__upper-cards{
@@ -27,7 +28,7 @@
                 padding: 5px;
             }
             .footer__contact{
-                font-family: Roboto;
+                font-family: Roboto, Bebas Neue, Arial;
                 font-size: 18px;
                 padding: 0.8vw;
             }
@@ -42,9 +43,35 @@
     .footer__lower{
         text-align: center;
         color: $yellow;
-        font-family: Roboto;
+        font-family: Roboto, Bebas Neue, Arial;
         font-size: 18px;
         font-weight: 700;
         margin: 40px 0 20px 0;
+    }
+}
+
+
+@media (max-width: 920px){
+    .footer{
+        .footer__upper{
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            margin-top: 20px;
+            .footer__upper-container{
+                align-items: center;
+                font-size: 18px;
+                margin: 20px;
+                .footer__contact{
+                    font-size: 15px;
+                }
+                .map{
+                    margin-top: 0px;
+                }
+            }
+        }
+        .footer__lower{
+            font-size: 15px;
+        }
     }
 }
