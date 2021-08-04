@@ -30,7 +30,7 @@ function SideMenu({ navClass, changeNavState }) {
                     <img src={favouriteLeague.badge} alt={favouriteLeague.name} className="favourite__badge" />
                     <span className="favourite__name">{favouriteLeague.name}</span>
                   </Link>
-                  <button className="favourite__delete" type="button" onClick={() => dispatch(deleteFavouriteLeague(favouriteLeague.id))}>x</button>
+                  <button data-testid={`delete-button-${index}`} className="favourite__delete" type="button" onClick={() => dispatch(deleteFavouriteLeague(favouriteLeague.id))}>x</button>
                 </li>
               ))}
             </ul>

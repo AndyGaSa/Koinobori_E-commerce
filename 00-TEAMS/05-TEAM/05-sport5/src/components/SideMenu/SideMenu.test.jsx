@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, screen } from '../../utils/test.utils';
+import { fireEvent, render, screen } from '../../utils/test.utils';
 import SideMenu from './SideMenu';
 
 jest.mock('react', () => ({
@@ -39,6 +39,16 @@ describe('Given a SideMenu component', () => {
 
     test('Then favourite-leagues-item-2 should be in the document', () => {
       expect(screen.getByTestId('favourite-leagues-item-2')).toBeInTheDocument();
+    });
+
+    describe('And delete button is clicked in element 2', () => {
+      beforeEach(() => {
+        const deleteButton = screen.getByTestId('delete-button-2');
+        fireEvent.click(deleteButton);
+      });
+      test('Then favourite-leagues-item-2 should not be in the document', () => {
+        expect(screen.queryByTestId('favourite-leagues-item-2')).not.toBeInTheDocument();
+      });
     });
   });
 });
