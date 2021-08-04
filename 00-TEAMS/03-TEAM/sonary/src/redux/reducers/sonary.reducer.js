@@ -7,12 +7,15 @@ export default function sonaryReducer(state = [], action) {
   let sonary = state;
   switch (action.type) {
     case actionTypes.LOAD_DASHBOARD:
-      sonary = action.track_list.map(({ track }) => track);
+
+      sonary = state;
+      sonary = action.dashboard.map(({
+        track
+      }) => track);
+      console.log('hola');
+      console.log(sonary);
       break;
-    case actionTypes.LOAD_DETAILS:
-      sonary = action.details.lyrics_body;
-      sonary = sonary.split('\n');
-      break;
+
     default:
       break;
   }

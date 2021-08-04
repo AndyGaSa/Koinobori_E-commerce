@@ -10,7 +10,7 @@ export default function Dashboard() {
   const tracks = useSelector((store) => store.sonary);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(loadDashboard());
+    if (!tracks.length) dispatch(loadDashboard());
   }, []);
 
   let topSong = 0;

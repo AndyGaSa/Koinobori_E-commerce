@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import loadDetails from '../../../redux/actions/details.creator';
 
 export default function Lyrics() {
-  const lyrics = useSelector((store) => store.sonary);
+  const lyrics = useSelector((store) => store.song);
   const { track_id } = useParams();
   const dispatch = useDispatch();
 
