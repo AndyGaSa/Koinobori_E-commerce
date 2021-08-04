@@ -1,0 +1,91 @@
+@import '../../assets/colors.scss';
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.driver-details{
+    width:100vw;
+    height: 10em;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:$color-black ;
+    
+    .back-button__container{
+        height: 8vw;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        .back{
+            color:white;
+            
+        }
+        
+    }
+    .container-details{
+        display:flex;
+        flex-direction: row;
+    }
+    .driver-details__title{
+        display:flex ;
+        flex-direction: column;
+        .driver-name, .driver-cosntructor,.driver-constructor{
+            color:$color-off-white;
+        }
+        .driver-surname{
+            color:$color-off-white;
+            margin-bottom: 2vh;
+        }
+        .driver-number{
+            color:$color-off-white;
+            margin-right:3vw;
+            padding-right:3vw;
+            border-right: 3px solid grey;
+        }
+    }
+    img{
+        width:10em;
+    }
+}
+@mixin Line($color: $mercedes) {
+    border-left: 3px solid $color;
+    width: 1vw;
+    margin-right: 6vw;
+    
+}
+
+.mercedess{
+    @include Line;
+ }
+.red_bulls{
+   @include Line($red_bull);
+}
+.ferraris{
+    @include Line($ferrari);
+}
+.mclarens{
+    @include Line($mclaren);
+ }
+ .alpines{
+    @include Line($alpine);
+ }
+ .alphatauris{
+    @include Line($alphatauri);
+ }
+ .aston_martins{
+    @include Line($aston_martin);
+ }
+ .williamss{
+    @include Line($williams);
+ }
+ .alfas{
+    @include Line($alfa);
+ }
+ .haass{
+    @include Line($haas);
+    border: solid gray 0.2px;
+ }
