@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import './Details.scss';
 
 export default function Details() {
   const stockList = useSelector((store) => store.stock);
@@ -20,30 +21,33 @@ export default function Details() {
   }, [stockId, stockList]);
 
   return (
-    <main>
-      <h2>{stock?.name}</h2>
-      <section>
-        <section>
-          <figure>
-            <ul>
+    <main className="main">
+
+      <section className="main__container">
+        <h2 className="main__title">{stock?.name}</h2>
+        <div className="main__product">
+          <figure className="product__images">
+            <img className="product__bigimage" src={stock?.imageFront} alt="" />
+            <ul className="product__smallimages-container">
               {stock
       && stock.imageDetails.map((item) => (
-        <img src={item} alt="" />
+        <li><img className="product__smallimage" src={item} alt="" /></li>
       ))}
             </ul>
           </figure>
-        </section>
-        <section>
-          <section>{stock?.price}</section>
-          <ul>
-            {stock
+
+          <div className="product__info">
+            <div className="info__price"><span className="price">{stock?.price}</span></div>
+            <ul>
+              {stock
       && stock.description.map((item) => (
-        <li>{`${item}`}</li>
+        <li className="info__description">{`${item}`}</li>
       ))}
-          </ul>
-          <span>Tax included. Shipping calculated at checkout.</span>
-          <button type="button" onClick={addToCart}>ADD TO CART</button>
-        </section>
+            </ul>
+            <small>Tax included. Shipping calculated at checkout.</small>
+            <button className="info__addtocart" type="button" onClick={addToCart}>ADD TO CART</button>
+          </div>
+        </div>
       </section>
     </main>
   );
