@@ -23,9 +23,10 @@
 }
 .titels__comic-list{
     background-color: rgba(67, 202, 255, 0.76);
+    border: double;
     outline-width: 4px;
     outline-offset: 1px;
-
+    z-index: 1;
    left: 50%;
    transform: translate(-50%, -50%);
 }
