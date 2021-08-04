@@ -11,8 +11,15 @@ $lightgray: #F4F4F6;
     font-family: Bebas Neue, Roboto, Arial;
     font-weight: 400;
     padding: 15px;
-
     font-size: 30px;
+    &:hover{
+        box-shadow: 0px 15px 25px -5px $purple;
+        transform: scale(1.03); 
+    }
+    &:active{
+    box-shadow: 0px 4px 8px $purple;
+    transform: scale(.98);
+    }
 }
 @mixin title{
     color: $purple;
