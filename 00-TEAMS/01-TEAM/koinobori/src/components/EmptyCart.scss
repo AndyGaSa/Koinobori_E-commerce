@@ -28,4 +28,5 @@ align-items: center;
 }
 h1{
     @include title;
+    font-size: 50px;
 }
