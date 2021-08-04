@@ -23,6 +23,7 @@ export default function Details() {
       LocalStorage[findIndex].quantity += 1;
     } else {
       stock.quantity = 1;
+      stock.category = category;
       LocalStorage.push(stock);
     }
     localStorage.setItem('cart', JSON.stringify(LocalStorage));
