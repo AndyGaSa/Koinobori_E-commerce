@@ -1,4 +1,4 @@
-import actionTypes from '../actions/favourties.types';
+import actionTypes from '../actions/favourites.types';
 import { saveFavourites } from '../../service/favourites-local-storage';
 
 export default function sportsReducer(favourites = {
