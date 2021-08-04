@@ -13,15 +13,15 @@ export default function Trending() {
       <section className="main__container">
         <h2 className="main__title">NEW ARRIVALS</h2>
 
-        <section className="main__products">
+        <div className="main__products">
 
           <figure className="product__container">
             <Link className="product__link" to={`/details/tShirts/${stockList?.clothes?.tShirts[extractLengthClothes(stockList, 'tShirts')]?.id}`}>
               <img className="product__image" src={`${stockList?.clothes?.tShirts[extractLengthClothes(stockList, 'tShirts')]?.imageFront}`} alt="Last t-shirt arrival" />
-              <section className="product__caption">
+              <div className="product__caption">
                 <figcaption>{`${stockList?.clothes?.tShirts[extractLengthClothes(stockList, 'tShirts')]?.name}`}</figcaption>
                 <figcaption>{`${stockList?.clothes?.tShirts[extractLengthClothes(stockList, 'tShirts')]?.price}`}</figcaption>
-              </section>
+              </div>
             </Link>
           </figure>
 
@@ -45,14 +45,14 @@ export default function Trending() {
             </Link>
           </figure>
 
-        </section>
+        </div>
       </section>
 
       <section className="main__container">
 
         <h2 className="main__title">MOST POPULAR</h2>
 
-        <section className="main__products">
+        <div className="main__products">
 
           <figure className="product__container">
             <Link className="product__link" to={`/details/tShirts/${stockList?.clothes?.tShirts[1]?.id}`}>
@@ -84,7 +84,7 @@ export default function Trending() {
             </Link>
           </figure>
 
-        </section>
+        </div>
       </section>
     </main>
   );
