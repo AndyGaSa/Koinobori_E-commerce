@@ -12,16 +12,9 @@ import NotFound from './pages/NotFound/NotFound';
 
 import './styles/App.scss';
 
-import LogoutButton from './components/LogoutButton/LogoutButton';
-import Profile from './components/Profile/Profile';
-import LoginButton from './components/LoginButton/LoginButton';
-
 function App() {
   return (
     <>
-      <LoginButton />
-      <LogoutButton />
-      <Profile />
       <Header />
       <Switch>
         <Route path="/" exact component={LeaguesList} />
