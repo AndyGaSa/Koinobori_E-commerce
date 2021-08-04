@@ -1,4 +1,9 @@
 @import '../../variables';
+
+main{
+    background-color: $lightgray;
+}
+
 .emptyCart {
 display: flex;
 flex-direction: column;

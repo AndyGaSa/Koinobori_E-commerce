@@ -88,3 +88,11 @@
     transform: translateX(-100%);
   }
 }
+
+@media (max-width: 920px){
+  .header{
+    .header__lower__nav-icons{
+      flex-direction: column;
+    }
+  }
+}
