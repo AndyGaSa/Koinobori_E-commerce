@@ -24,8 +24,8 @@ function SideMenu({ navClass, changeNavState }) {
               Favourite Leagues
             </h3>
             <ul>
-              {favourites.favouriteLeagues.map((favouriteLeague) => (
-                <li key={`favourite-league-${favouriteLeague.id}`} className="favourite">
+              {favourites.favouriteLeagues.map((favouriteLeague, index) => (
+                <li data-testid={`favourite-leagues-item-${index}`} key={`favourite-league-${favouriteLeague.id}`} className="favourite">
                   <Link to={`/league/${favouriteLeague.id}`}>
                     <img src={favouriteLeague.badge} alt={favouriteLeague.name} className="favourite__badge" />
                     <span className="favourite__name">{favouriteLeague.name}</span>
