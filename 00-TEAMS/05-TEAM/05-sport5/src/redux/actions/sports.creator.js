@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger */
 import axios from 'axios';
 import actionTypes from './sports.types';
 
@@ -60,6 +61,45 @@ export function getTeams(idLeague) {
     dispatch({
       type: actionTypes.LOAD_TEAMS,
       leagueTeamsList
+    });
+  };
+}
+
+export default function getTeamDetails(teamId) {
+  return async (dispatch) => {
+    const { data } = await axios(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`);
+    const teamDetails = data.teams[0];
+    const {
+      idTeam, strTeamBanner, strTeamBadge, strTeam, strTeamJersey, strSport,
+      strCountry, strStadiumLocation, strLeague, strStadium, strStadiumThumb,
+      strDescriptionEN, strInstagram, strTwitter,
+      strYoutube, strWebsite,
+      strFacebook
+    } = teamDetails;
+
+    const details = {
+      id: idTeam,
+      banner: strTeamBanner,
+      badge: strTeamBadge,
+      name: strTeam,
+      equipment: strTeamJersey,
+      sport: strSport,
+      country: strCountry,
+      city: strStadiumLocation,
+      league: strLeague,
+      stadiumName: strStadium,
+      stadiumPicture: strStadiumThumb,
+      description: strDescriptionEN,
+      instagram: strInstagram,
+      twitter: strTwitter,
+      youtube: strYoutube,
+      teamPage: strWebsite,
+      facebook: strFacebook
+    };
+
+    dispatch({
+      type: actionTypes.LOAD_DETAILS,
+      details
     });
   };
 }
