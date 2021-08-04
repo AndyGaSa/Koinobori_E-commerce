@@ -28,11 +28,11 @@ export default function Footer() {
         </div>
 
         <div className="header-social-network__icons">
-          <div><img src="https://i.ibb.co/q19wwTs/insta.png" alt="Instagram" /></div>
-          <div><img src="https://i.ibb.co/F4VzVJy/whatsapp.png" alt="Whatsapp" /></div>
-          <div><img src="https://i.ibb.co/54NXxmN/tel.png" alt="Tel" /></div>
-          <div><img src="https://i.ibb.co/rmMhqY5/twitter.png" alt="Twitter" /></div>
-          <div><img src="https://i.ibb.co/L5WSKp7/facebook.png" alt="Facebook" /></div>
+          <div className="social-network__item"><img src="https://i.ibb.co/q19wwTs/insta.png" alt="Instagram" /></div>
+          <div className="social-network__item"><img src="https://i.ibb.co/F4VzVJy/whatsapp.png" alt="Whatsapp" /></div>
+          <div className="social-network__item"><img src="https://i.ibb.co/54NXxmN/tel.png" alt="Tel" /></div>
+          <div className="social-network__item"><img src="https://i.ibb.co/rmMhqY5/twitter.png" alt="Twitter" /></div>
+          <div className="social-network__item"><img src="https://i.ibb.co/L5WSKp7/facebook.png" alt="Facebook" /></div>
         </div>
 
       </footer>

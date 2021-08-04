@@ -113,3 +113,10 @@ align-items: center;
     max-width: 40px;
     height: auto;
 }
+
+@media only screen and (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
