@@ -13,7 +13,7 @@ export default function LeaguesList() {
   const { sportId } = useParams();
   useEffect(() => {
     dispatch(getLeagues(sportId));
-  }, []);
+  }, [sportId]);
 
   function changeFavourite(league, event) {
     const button = event.target;
@@ -44,7 +44,9 @@ export default function LeaguesList() {
       </form>
       <ul className="leagues">
         {
-        Object.entries(leaguesByCountries).map((country) => (
+        (Object.entries(leaguesByCountries)?.length
+        && Object.entries(leaguesByCountries)[0][1]?.length)
+        && Object.entries(leaguesByCountries).map((country) => (
           <div key={`${country[0]}-container`} className="leagues__block">
             <li key={`${country[0]}-name`} className="leagues__country">{country[0].toUpperCase()}</li>
             <ul key={`${country[0]}-league`} className="leagues__all-leagues">
