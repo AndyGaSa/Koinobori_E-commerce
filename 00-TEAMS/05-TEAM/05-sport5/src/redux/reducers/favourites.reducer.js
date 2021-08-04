@@ -38,6 +38,7 @@ export default function sportsReducer(favourites = {
         favouriteTeams: favourites.favouriteTeams
           .filter(({ id }) => id !== action.teamId)
       };
+      saveFavourites(newFavourites);
       break;
     default:
       break;
