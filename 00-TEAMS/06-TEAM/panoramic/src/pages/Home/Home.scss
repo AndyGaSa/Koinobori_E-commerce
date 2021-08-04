@@ -15,14 +15,25 @@
     &__artists-cards{
         margin: 0 auto;
         display: flex;
+        background-color: lightgreen;
         .artist-details{
             display: flex;
             margin: 0 auto;
             flex-direction: column;
+            background-color: lightpink;
+            list-style: none;
+
+            &__artist-name{
+                color:gold;
+                display: flex;
+                justify-content: center;
+                
+            }
         }
         img{
             width: 100px;
             height: 100px;
+            list-style: none;
         }
     }
 

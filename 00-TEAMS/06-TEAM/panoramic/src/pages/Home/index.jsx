@@ -26,7 +26,7 @@ export default function Home() {
           artists.map((artist) => (
             <li className="artists-cards__artist-details">
               <img src={`${artist.images[0].url}`} alt="Girl in a jacket" />
-              <h3>
+              <h3 className="artist-details__artist-name">
                 {artist.name}
               </h3>
               <p>
