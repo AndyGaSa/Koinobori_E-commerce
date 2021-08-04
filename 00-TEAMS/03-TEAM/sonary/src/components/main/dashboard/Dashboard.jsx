@@ -15,7 +15,7 @@ export default function Dashboard() {
       <ul>
         {
             tracks.map((track) => (
-              <li>
+              <li key={track.track_id}>
                 <Link to={`/details/${track.track_id}`}>
                   <ul>
                     <li>

@@ -4,7 +4,7 @@
 /* eslint-disable camelcase */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { loadDashboard } from '../../../redux/actions/dashboard.creator';
 
 export default function Information() {
@@ -24,7 +24,18 @@ export default function Information() {
 
   return (
     <div>
-      <h2>{foundTrack?.album_name}</h2>
+      <h2>{foundTrack?.track_name}</h2>
+      <p>
+        Artist:
+        {' '}
+        {foundTrack?.artist_name}
+      </p>
+      <p>
+        Album:
+        {' '}
+        {foundTrack?.album_name}
+      </p>
+
     </div>
   );
 }
