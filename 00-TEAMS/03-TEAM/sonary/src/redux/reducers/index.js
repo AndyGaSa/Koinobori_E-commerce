@@ -2,7 +2,10 @@
 /* eslint-disable no-unused-vars */
 import { combineReducers } from 'redux';
 import sonaryReducer from './sonary.reducer';
+import songReducer from './song.reducer';
 
+// Estado y reducer que lo maneja.
 export default combineReducers({
-  chart: sonaryReducer
+  sonary: sonaryReducer,
+  song: songReducer
 });

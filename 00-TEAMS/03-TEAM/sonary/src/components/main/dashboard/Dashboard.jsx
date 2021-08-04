@@ -1,20 +1,20 @@
+/* eslint-disable camelcase */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { loadChart } from '../../../redux/actions/sonary.creators';
+import { loadDashboard } from '../../../redux/actions/dashboard.creator';
 
 export default function Dashboard() {
-  const chart = useSelector((store) => store.chart);
+  const tracks = useSelector((store) => store.sonary);
   const dispatch = useDispatch();
-
   useEffect(() => {
-    dispatch(loadChart());
+    if (!tracks.length) dispatch(loadDashboard());
   }, []);
   return (
     <main>
       <ul>
         {
-            chart.map((track) => (
+            tracks.map((track) => (
               <li>
                 <Link to={`/details/${track.track_id}`}>
                   <ul>
