@@ -84,3 +84,31 @@ ul{
         }
     }
 }
+
+@media (max-width: 660px){
+    .main{
+        .items__container{
+            .item__container{
+                flex-direction: column;
+                width: 57vw;
+                height: 56vh;
+                padding-top: 20px;
+                .nameprice__container{
+                    align-items: center;
+                    .item__name{
+                        font-size: 25px;
+                    }
+                }
+                .delete__button{
+                    align-self: center;
+                    margin-bottom: 20px;
+                    .item__delete{
+                        width: 9vw;
+                        height: 5vh;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
