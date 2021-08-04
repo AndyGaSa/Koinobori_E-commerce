@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
-import Styles from './Styles.scss';
+import styles from './Header.scss';
 
 export default function Header() {
   return (
