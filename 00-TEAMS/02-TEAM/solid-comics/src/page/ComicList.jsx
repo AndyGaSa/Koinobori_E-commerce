@@ -16,10 +16,12 @@ export default function ComicList() {
   }, []);
   const comics = useSelector((store) => store.comics);
   console.log(comics);
+
   return (
     <section className="section__comic-list">
       {/* <ul className="list">
         {
+          if (comics.lenght>0){
           comics.map((hero) => (
             <li className="list-item">
               <span className="hero-name">{hero.title}</span>
@@ -28,6 +30,7 @@ export default function ComicList() {
               alt="charachter" />
             </li>
           ))
+          }
         }
       </ul> */}
 

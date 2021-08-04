@@ -10,7 +10,7 @@ export default function ComicCard() {
   // const idUrl = window.location.search.split('?')[1];
   // eslint-disable-next-line no-unused-vars
   const targetComic = comics.filter((comic) => comic.id !== 93839);
-  console.log('comic', targetComic);
+
   return (
     <>
       <div className="comic__item">

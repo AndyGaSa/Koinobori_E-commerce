@@ -19,10 +19,9 @@ export default function Header() {
           <span className="nav-battle__text">Battle</span>
 
         </Link>
+
         <LogoutButton />
-        {/* <Link to="../login" className="nav-logout">
-          <span className="nav-logout__text">LogOut</span>
-        </Link> */}
+        
       </nav>
     </header>
   );

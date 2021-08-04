@@ -1,17 +1,36 @@
 import React from 'react';
-
+import { useSelector } from 'react-redux';
+import ComicCard from '../components/comic-card/ComicCard';
 import './styles/Details.scss';
 
 export default function Detail() {
+  const comics = useSelector((store) => store.comics);
+  // const idUrl = window.location.search.split('?')[1];
+  // eslint-disable-next-line no-unused-vars
+  const targetComic = comics.filter((comic) => comic.id !== 93839);
+
   return (
     <main className="details">
       <div className="detail__top">
-        <img className="detail__img" src="https://i.annihil.us/u/prod/marvel/i/mg/f/90/610411d34068b/portrait_uncanny.jpg" alt="Spirits of Vengeance: Spirit Rider #1" />
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Quibusdam at tempora dignissimos expedita? Rem, magni eius tempora,
-          in voluptate eos cupiditate iste perspiciatis incidunt unde nam cum velit. Maiores.
-        </p>
+        <img className="detail__img" src={`${targetComic[0]?.thumbnail?.path}.${targetComic[0]?.thumbnail?.extension}`} alt="comic" />
+        <section>
+          <h2 className="detail__title">
+            Title:
+            {targetComic[0]?.title}
+          </h2>
+          <li className="detail__creators">
+            <h3 className="detail__penciler">
+              Penciler:
+              {targetComic[0]?}
+            </h3>
+            <h3 className="detail__writer">
+              Published:
+            </h3>
+            <h3 className="detail__colorist">
+              Penciler:
+            </h3>
+          </li>
+        </section>
       </div>
       <div className="detail__bottom">
         <span>
