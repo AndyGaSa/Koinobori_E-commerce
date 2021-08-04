@@ -8,7 +8,9 @@
   *{
     font-family: 'f1';
   }
-
+a{
+    color:$color-black;
+}
 button[type="button"] {
 	color: inherit;
 	border: none;

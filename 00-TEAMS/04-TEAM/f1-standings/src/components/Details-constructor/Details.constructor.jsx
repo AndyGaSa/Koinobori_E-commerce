@@ -3,10 +3,12 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import './Details.constructo.scss';
 
 export default function DetailsConstructor() {
-  const constructor = 'red_bull';
+  const { constructorId } = useParams();
+  const constructor = constructorId;
 
   const constructorData = useSelector((store) => store?.constructor);
   const constructorFiltered = constructorData[0]?.find((e) => e?.Constructor?.constructorId === constructor);
