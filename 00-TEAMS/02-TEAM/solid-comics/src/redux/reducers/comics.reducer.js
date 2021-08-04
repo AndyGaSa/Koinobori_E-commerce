@@ -1,8 +1,6 @@
 import actionTypes from '../actions/comics.types';
 
 export default function comicsReducer(comicsList = [], action) {
-  // eslint-disable-next-line no-debugger
-  debugger;
   let newComicList = comicsList;
   switch (action.type) {
     case actionTypes.LOAD_COMICS:
