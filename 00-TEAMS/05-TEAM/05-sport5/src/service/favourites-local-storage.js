@@ -12,8 +12,3 @@ export function getFavouritesLocalStorage() {
 export function saveFavourites(favourites) {
   localStorage.setItem('favourites', JSON.stringify(favourites));
 }
-
-export function leagueIsInFavourites(leagueId) {
-  const favourites = getFavouritesLocalStorage();
-  return favourites.favouriteLeagues.some(({ id }) => id === leagueId);
-}

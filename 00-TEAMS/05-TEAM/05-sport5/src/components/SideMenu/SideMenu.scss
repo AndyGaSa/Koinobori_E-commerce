@@ -1,108 +1,142 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-$side-menu-title-color: #707070;
 
-.side-menu__container {
+
+.side-menu-container {
     height: 0;
-    position: fixed;
-    z-index: 1;
-    transform: translateX(-500px);
-    transition: .5s;
-
-    /* width */
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
-  
-    /* Track */
-    ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-    }
-    
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 5px;
-    }
-    
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-    }
 }
 
-.side-menu__container--active {
-    transform: translateX(0);
-}
 
 .side-menu {
-    font-family: $main-font;
-    background-color: $side-menu-background-color;
-    width: 80vw;
-    max-width: 400px;
-    height: 100vh;
-    padding: 5rem 0.5rem 0 0;
-    color: white;
-    animation: slide-in 0.5s;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    aside {
+        height: 0;
+        position: fixed;
+        z-index: 2;
+        transform: translateX(-600px);
+        transition: .5s;
 
+        /* width */
+        ::-webkit-scrollbar {
+            width: 0.5rem;
+        }
+    
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: $side-menu-background-color;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
 
-
-    .fa-star {
-        margin-right: 5px;
-        color: $favourite-color;
-    }
-
-    .side-menu__favourite-title {
-        font-weight: 600;
-        letter-spacing: 1px;
-        background-color: #707070;
-        width: 100%;
-        padding: 0.5rem 1rem;
-        margin-bottom: 0.25rem;
-    }
-
-    ul {
-        margin-bottom: 3rem;
-        list-style: none;
-
-        .side-menu__favourite {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.5rem;
-            border-bottom: 1px solid gray;
-            border-top: 1px solid gray;
-            margin: 0 0 0.25rem 0.5rem;
-            letter-spacing: 1px;
-            transition: .2s;
-
-            &:hover {
-                background-color: $hover-color;
-                padding-left: 1rem;
+        .side-menu-navigator {
+            font-family: $main-font;
+            background-color: $side-menu-background-color;
+            width: 80vw;
+            max-width: 400px;
+            height: 100vh;
+            padding-top: 4em;
+            color: white;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            animation: slide-in 0.5s;
+    
+            .fa-star {
+                margin-right: 5px;
+                color: $favourite-color;
             }
-
-            a{
-                @include anchor()
+    
+            .side-menu-navigator__title {
+                font-weight: 600;
+                letter-spacing: 1px;
+                background-color: #707070;
+                width: 100%;
+                padding: 0.5rem 1rem;
+                margin-bottom: 0.25rem;
             }
-
-            .favourite__delete {
-                background-color: transparent;
-                color: white;
-                border: none;
-                font-size: 0.7rem;
-                transition: .2s;
-                width: 1rem;
-                height: 1.2rem;
-
-                &:hover {
-                    font-size: 1rem;
-                    font-weight: bold;
+    
+            ul {
+                margin-bottom: 3rem;
+                list-style: none;
+    
+                .favourite {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0.5rem 1rem;
+                    border-bottom: 1px solid gray;
+                    border-top: 1px solid gray;
+                    margin: 0 0 0.25rem 0.5rem;
+                    transition: .2s;
+    
+                    &:hover {
+                        background-color: $hover-color;
+                        padding-left: 1.3rem;
+                    }
+    
+                    a{
+                        @include anchor();
+                        display: flex;
+                        align-items: center;
+    
+                        .favourite__badge {
+                            @extend %small-logo;
+                        }
+    
+                        .favourite__name {
+                            @extend %league-name;
+                        }
+                    }
+    
+                    .favourite__delete {
+                        background-color: transparent;
+                        color: white;
+                        border: none;
+                        font-size: 0.7rem;
+                        transition: .2s;
+                        width: 1rem;
+                        height: 1.2rem;
+    
+                        &:hover {
+                            font-size: 1rem;
+                            font-weight: bold;
+                        }
+                    }
                 }
             }
         }
     }
-}
 
+    &--active {
+        aside {
+            transform: translateX(0);
+        }
+    }
+
+    .shadow {
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        border: none;
+        opacity: 0;
+        transition: .4s;
+        pointer-events: none;
+    }
+
+    &--active {
+        .shadow {
+            opacity: .75;
+            pointer-events: unset;
+        }
+    }
+}

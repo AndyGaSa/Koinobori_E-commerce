@@ -1,6 +1,16 @@
-@mixin anchor($color: white) {
-    
+@mixin anchor($color: white) {  
     text-decoration: none;
     color: $color;
+}
 
+%small-logo {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 1rem;
+}
+
+%league-name {
+    letter-spacing: 1px;
+    font-size: 1rem;
+    padding: 0 0.5rem;
 }
