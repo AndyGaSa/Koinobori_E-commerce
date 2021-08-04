@@ -24,7 +24,7 @@ export default function Header() {
             </section>
           </nav>
         </div>
-        <div>
+        <div className="header__title">
           <h1>CHILD CONNECT, la red social para conectar a los más pequeños.</h1>
         </div>
 
