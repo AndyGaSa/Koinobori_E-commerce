@@ -3,10 +3,12 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loadDashboard } from '../../../redux/actions/dashboard.creator';
+import actionTypes from '../../../redux/actions/actionTypes';
 
 export default function Dashboard() {
   const tracks = useSelector((store) => store.sonary);
   const dispatch = useDispatch();
+
   useEffect(() => {
     if (!tracks.length) dispatch(loadDashboard());
   }, []);
@@ -28,8 +30,19 @@ export default function Dashboard() {
                       {' '}
                       {track.artist_name}
                     </li>
+
                   </ul>
                 </Link>
+                <button
+                  type="button"
+                  onClick={() => dispatch({
+                    type: actionTypes.TOGGLE_FAVORITES,
+                    track
+                  })}
+                >
+                  Add/Remove
+
+                </button>
               </li>
             ))
         }
