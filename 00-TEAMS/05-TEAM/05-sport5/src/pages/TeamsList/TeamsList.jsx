@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
-
+import { addFavouriteTeam } from '../../redux/actions/favourites.creator';
 import NotFound from '../NotFound/NotFound';
 
 import './TeamsList.scss';
@@ -16,6 +16,10 @@ export default function TeamsList() {
     dispatch(getTeams(leagueId));
   }, [leagueId]);
 
+  function changeFavourite(team) {
+    dispatch(addFavouriteTeam(team));
+  }
+
   return (
     <>
       <h2 className="TeamList__Title">TeamList title:</h2>
@@ -26,7 +30,13 @@ export default function TeamsList() {
               <img src={team.badge} alt={team.name} className="team__badge" />
               <span className="team__name">{team.name}</span>
             </Link>
-            <button type="button" aria-label="Add to favourites"><i className="fas fa-star" key={team.id} /></button>
+            <button
+              type="button"
+              aria-label="Add to favourites"
+              onClick={(event) => changeFavourite(team, event)}
+            >
+              <i className="fas fa-star" key={team.id} />
+            </button>
           </li>
         ))
           : <NotFound />}
