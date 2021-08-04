@@ -10,7 +10,7 @@ export default function LeaguesList() {
   const leaguesByCountries = useSelector((store) => store.countriesLeagues);
   const favourites = useSelector((store) => store.favourites);
   const dispatch = useDispatch();
-  const { sportId } = useParams();
+  const { sportId = 'Soccer' } = useParams();
   useEffect(() => {
     dispatch(getLeagues(sportId));
   }, [sportId]);

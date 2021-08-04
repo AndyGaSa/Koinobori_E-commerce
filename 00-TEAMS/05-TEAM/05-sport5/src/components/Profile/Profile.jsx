@@ -11,15 +11,13 @@ export default function Profile() {
   if (isLoading) {
     return <div>Loading ...</div>;
   }
-  console.log(isAuthenticated);
 
-  return (
-    isAuthenticated && (
-      <div>
-        <img src={user.picture} alt={user.name} />
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
-      </div>
-    )
+  return isAuthenticated && (
+  <div>
+    <img src={user.picture} alt={user.name} />
+    <h2>{user.name}</h2>
+    <p>{user.email}</p>
+    <hr />
+  </div>
   );
 }

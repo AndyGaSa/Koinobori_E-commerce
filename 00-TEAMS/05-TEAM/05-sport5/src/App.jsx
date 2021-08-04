@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter, Redirect, Route, Switch
+  Redirect, Route, Switch
 } from 'react-router-dom';
 
 import Footer from './components/Footer/Footer';
@@ -12,28 +12,27 @@ import NotFound from './pages/NotFound/NotFound';
 
 import './styles/App.scss';
 
-import Login from './components/Login/Login';
-import Logout from './components/Logout/Logout';
+import LogoutButton from './components/LogoutButton/LogoutButton';
 import Profile from './components/Profile/Profile';
+import LoginButton from './components/LoginButton/LoginButton';
 
 function App() {
   return (
-
-    <BrowserRouter>
-      <Login />
-      <Logout />
+    <>
+      <LoginButton />
+      <LogoutButton />
       <Profile />
       <Header />
       <Switch>
+        <Route path="/" exact component={LeaguesList} />
         <Route path="/:sportId" exact component={LeaguesList} />
-        <Redirect path="/" exact to="/Soccer" />
         <Redirect path="/countries/:sportId" to="/:sportId" />
         <Route path="/league/:leagueId" exact component={TeamsList} />
-        <Route path="/team/:teamId" component={TeamDetail} />
+        <Route path="/team/:teamId" exact component={TeamDetail} />
         <Route component={NotFound} />
       </Switch>
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
 
