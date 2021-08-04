@@ -1,10 +1,12 @@
 import React from 'react';
-import {
-  BrowserRouter
-} from 'react-router-dom';
 
 import { render, screen } from '../../utils/test.utils';
 import SideMenu from './SideMenu';
+
+jest.mock('react', () => ({
+  ...jest.requireActual('react'),
+  useEffect: () => {}
+}));
 
 describe('Given a SideMenu component', () => {
   describe('When there are no favourites teams or leagues', () => {
@@ -30,14 +32,12 @@ describe('Given a SideMenu component', () => {
         }
       };
       render(
-        <BrowserRouter>
-          <SideMenu />
-        </BrowserRouter>,
+        <SideMenu />,
         initialState
       );
     });
 
-    test('Then favourite-leagues-item-3 should be in the document', () => {
+    test('Then favourite-leagues-item-2 should be in the document', () => {
       expect(screen.getByTestId('favourite-leagues-item-2')).toBeInTheDocument();
     });
   });
