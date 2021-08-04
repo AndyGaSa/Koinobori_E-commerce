@@ -5,21 +5,28 @@ import './Details.scss';
 
 export default function Details() {
   const stockList = useSelector((store) => store.stock);
-  const newLocalStorage = JSON.parse(localStorage.getItem('cart'));
 
   const { stockId } = useParams();
   const { category } = useParams();
   const [stock, setStock] = useState();
   // eslint-disable-next-line no-unused-vars
-  function addToCart() {
-    newLocalStorage.push(stock);
-    localStorage.setItem('cart', JSON.stringify(newLocalStorage));
-  }
+
   useEffect(() => {
     setStock(stockList.clothes
       && stockList.clothes[category].find((stockNow) => stockNow.id === +stockId));
   }, [stockId, stockList]);
 
+  function addToCart() {
+    const LocalStorage = JSON.parse(localStorage.getItem('cart'));
+    const findIndex = LocalStorage.findIndex((item) => item.id === +stockId);
+    if (LocalStorage.some((item) => item.name === stock.name)) {
+      LocalStorage[findIndex].quantity += 1;
+    } else {
+      stock.quantity = 1;
+      LocalStorage.push(stock);
+    }
+    localStorage.setItem('cart', JSON.stringify(LocalStorage));
+  }
   return (
     <main className="main">
 
