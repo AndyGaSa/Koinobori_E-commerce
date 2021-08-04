@@ -1,0 +1,86 @@
+@import '../../variables';
+@import '../../reset';
+
+ul{
+margin:0;
+padding: 0;
+text-indent: 0;
+list-style: none;
+ul li {
+margin:0;
+padding: 0;
+text-indent: 0;
+list-style: none;
+}
+}
+
+.main{
+    background-color: $lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 10vh;
+    .main__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1440px;
+        .main__title{
+            @include title;
+        }
+        .main__product{
+            display: flex;
+            .product__images{
+                display: flex;
+                flex-direction: column;
+                .product__bigimage{
+                    width: 615px;
+                    height: 600px;
+                    border: 1px solid black;
+                    background-color: white;
+                }
+                .product__smallimages-container{
+                    display: flex;
+                    .product__smallimage{
+                        width: 143px;
+                        height: 140px;
+                        margin: 5px;
+                        border: 1px solid black;
+                        background-color: white;
+                    }
+                }
+            }
+            .product__info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                .info__price{
+                    width: 350px;
+                    height: 250px;
+                    background: url('https://i.ibb.co/Tbt59m0/pricetag.png');
+                    background-size: contain;
+                    .price{
+                        display: block;
+                        transform: rotate(10deg);
+                        text-align: center;
+                        font-size: 144px;
+                        font-family: Bebas Neue, Roboto, Arial;
+                        margin-top: 6vh;
+                        margin-right: 3vh;
+                    }
+                }
+                .info__description{
+                    font-family: Roboto, Bebas Neue, Arial;
+                    font-size: 18px;
+                }
+                .info__addtocart{
+                    @include button;
+                    font-size: 36px;
+                    width: 18vw;
+                }
+            }
+        }
+    }
+}
