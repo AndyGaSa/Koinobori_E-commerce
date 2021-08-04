@@ -23,8 +23,8 @@
         grid-template-columns: repeat( 2, auto);
     
         .socialmedia__facebook{
-            @include socialmedia__icons("https://i.ibb.co/ZXNJ96C/icons8-facebook-48-1.png")
-            }
+        @include socialmedia__icons("https://i.ibb.co/ZXNJ96C/icons8-facebook-48-1.png")
+        }
                 
             .socialmedia__instagram{
         @include socialmedia__icons("https://i.ibb.co/xCRv0K8/icons8-instagram-48.png");
@@ -50,7 +50,6 @@
             cursor:pointer;
             background-size: 55px;
         }
-
     }
 }
 

@@ -4,7 +4,6 @@ import getSpotifyToken, { loadAxiosSuggestedArtists } from '../../redux/actions/
 
 import BannerLanding from '../../components/BannerLanding';
 
-
 export default function Home() {
   const artists = useSelector((store) => store.suggestedArtists);
   const dispatch = useDispatch();

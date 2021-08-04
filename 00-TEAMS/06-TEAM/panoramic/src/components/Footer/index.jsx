@@ -14,7 +14,7 @@ export default function Footer() {
             <li className="socialmedia__youtube"><Link to="facebook.com" /></li>
             <li className="socialmedia__twitter"><Link to="facebook.com" /></li>
             <li className="socialmedia__soundcloud"><Link to="facebook.com" /></li>
-            <li className="socialmedia__instagram"><Link to="facebook.com" /></li>
+            <li className="socialmedia__instagram" data-testid="instagram-icon"><Link to="facebook.com" /></li>
             <li className="socialmedia__pinterest"><Link to="facebook.com" /></li>
           </ul>
         </nav>
@@ -27,7 +27,7 @@ export default function Footer() {
           <input type="email" placeholder="Email Adress" />
           <input type="tel" placeholder="Phone Number" />
           <textarea placeholder="Let Us To Know How Can We Help" />
-          <button type="submit">Submit</button>
+          <button type="submit" data-testid="submit-button">Submit</button>
         </form>
 
       </div>
