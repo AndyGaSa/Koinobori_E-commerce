@@ -14,7 +14,12 @@ export default function List() {
   return (
     <>
       <ul>
-        {favArtist.map((artist) => <li>{artist.name}</li>)}
+        {favArtist.map((artist) => (
+          <li>
+            {artist.name}
+            <button type="button">x</button>
+          </li>
+        ))}
       </ul>
     </>
   );
