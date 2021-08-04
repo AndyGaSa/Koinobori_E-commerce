@@ -1,29 +1,33 @@
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import actionTypes from '../../../redux/actions/actionTypes';
 
 export default function Favorites() {
-  const favorites = useSelector((store) => store.favorites);
+  const favoritesL = useSelector((store) => store.favorites);
   const dispatch = useDispatch();
-  useEffect(() => {
-    if (!favorites.length) {
-      dispatch({
-        type: actionTypes.LOAD_FAVORITES
-      });
-    }
-  }, []);
-  function updateTrack(track) {
+  const [favorites, setCurrentTrack] = useState(favoritesL);
+
+  function trackChange(event, trackId) {
+    let updatedFavorites;
+    setCurrentTrack(
+      updatedFavorites = favorites.map((track) => (track.track_id === trackId
+        ? { ...track, [event.target.name]: event.target.value } : track))
+    );
+    return updatedFavorites;
+  }
+
+  function updateTrack() {
     dispatch({
       type: actionTypes.UPDATE_FAVORITE,
-      track
+      favorites
     });
   }
 
   return (
-    <main>
+    <div>
       <ul>
         {
               favorites.map((track) => (
@@ -34,8 +38,10 @@ export default function Favorites() {
                       {' '}
                       <input
                         type="text"
-                        placeholder={track.track_name}
+                        name="track_name"
+                        placeholder="track_name"
                         value={track.track_name}
+                        onChange={(event) => trackChange(event, track.track_id)}
                       />
                       {track.track_name}
                     </li>
@@ -44,12 +50,24 @@ export default function Favorites() {
                       {' '}
                       <input
                         type="text"
-                        placeholder={track.artist_name}
+                        name="artist_name"
+                        placeholder="artist_name"
                         value={track.artist_name}
+                        onChange={trackChange}
                       />
 
                     </li>
-                    <button type="button" id={track.track_id} onClick={updateTrack(track)}>Update</button>
+                    <button
+                      type="button"
+                      onClick={() => dispatch({
+                        type: actionTypes.TOGGLE_FAVORITES,
+                        track
+                      })}
+                    >
+                      Add/Remove
+
+                    </button>
+                    <button type="button" id={track.track_id} onClick={() => updateTrack()}>Update</button>
                   </ul>
                 </li>
               ))
@@ -57,6 +75,6 @@ export default function Favorites() {
 
       </ul>
 
-    </main>
+    </div>
   );
 }

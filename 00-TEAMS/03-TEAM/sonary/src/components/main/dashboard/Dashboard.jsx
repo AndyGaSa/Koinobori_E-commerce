@@ -28,38 +28,40 @@ export default function Dashboard() {
             tracks.map((track) => {
               topSong += 1;
               return (
-                <Link className="track" to={`/details/${track.track_id}`}>
-                  <li>
-                    <img src="https://www.laregion.es/asset/zoomcrop,1366,800,center,center//media/laregion/images/2021/07/30/2021073013335238213.jpg" alt="" />
-                    <span>
-                      <span className="track__info__top">
-                        <span>
-                          #
-                          {topSong}
+                <>
+                  <button
+                    type="button"
+                    onClick={() => dispatch({
+                      type: actionTypes.TOGGLE_FAVORITES,
+                      track
+                    })}
+                  >
+                    Add/Remove
+
+                  </button>
+                  <Link className="track" to={`/details/${track.track_id}`}>
+                    <li>
+                      <img src="https://www.laregion.es/asset/zoomcrop,1366,800,center,center//media/laregion/images/2021/07/30/2021073013335238213.jpg" alt="" />
+                      <span>
+                        <span className="track__info__top">
+                          <span>
+                            #
+                            {topSong}
+                          </span>
                         </span>
-                        <button
-                          type="button"
-                          onClick={() => dispatch({
-                            type: actionTypes.TOGGLE_FAVORITES,
-                            track
-                          })}
-                        >
-                          Add/Remove
-
-                        </button>
+                        <ul className="track__info">
+                          <li>
+                            {track.track_name}
+                          </li>
+                          <li>
+                            <span className="track__info__artist">{track.artist_name}</span>
+                          </li>
+                        </ul>
                       </span>
-                      <ul className="track__info">
-                        <li>
-                          {track.track_name}
-                        </li>
-                        <li>
-                          <span className="track__info__artist">{track.artist_name}</span>
-                        </li>
-                      </ul>
-                    </span>
 
-                  </li>
-                </Link>
+                    </li>
+                  </Link>
+                </>
               );
             })
 

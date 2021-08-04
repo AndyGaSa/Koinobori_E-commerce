@@ -7,4 +7,5 @@ export function initializeLocalStorage() {
   if (!favouriteTracks) {
     favouriteTracks = [];
   }
+  return favouriteTracks;
 }
