@@ -9,7 +9,6 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 import Profile from './pages/Profile';
-import Register from './pages/Register';
 import Footer from './components/Footer';
 import List from './pages/List';
 import SearchedArtistList from './pages/SearchArtists';
@@ -20,27 +19,14 @@ ReactDOM.render(
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/notfound">
-            <NotFound />
-          </Route>
-          <Route path="/profile">
-            <Profile />
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/list">
-            <List />
-          </Route>
-          <Route path="/searched">
-            <SearchedArtistList />
-          </Route>
+          <Route path="/" exact component={Home} />
+          <Route path="/home" />
+          <Route path="/login" component={Login} />
+          <Route path="/notfound" component={NotFound} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/list" component={List} />
+          <Route path="/search" component={SearchedArtistList} />
+          <Route component={NotFound} />
         </Switch>
         <Footer />
       </BrowserRouter>
