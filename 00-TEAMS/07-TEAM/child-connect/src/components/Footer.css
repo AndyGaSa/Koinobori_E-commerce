@@ -13,7 +13,6 @@ flex-direction: row;
 flex-wrap: nowrap;
 justify-content: space-evenly;
 width: 100%;
-height: 245px;
 background: #5E5E5E;
 padding: 10px;
 }
@@ -42,6 +41,18 @@ font-style: normal;
 font-weight: 500;
 font-size: 18px;
 line-height: 22px;
+display: flex;
+align-items: center;
+color: #FFFFFF;
+}
+
+/* Group 6634 */
+
+.footer-terms-list {
+width: 155px;
+height: 155px;
+left: 254px;
+top: 39px;
 }
 
 .footer-terms-list_item {

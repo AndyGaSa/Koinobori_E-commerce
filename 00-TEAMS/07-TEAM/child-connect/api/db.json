@@ -31,7 +31,7 @@
     {
       "id": 2,
       "auth_name": "Name",
-      "name": "Teorodo Perez",
+      "name": "Teodoro Perez",
       "email": "TeoPerez@melissa.tv",
       "avatar": "https://media.istockphoto.com/photos/charming-handsome-picture-id528582811?k=6&m=528582811&s=612x612&w=0&h=d1SW9imJ_3WkiV5Zol_cqUzxrWHXf7wxqa4fcd814bk=",
       "childs": [
@@ -256,11 +256,13 @@
         "id": 1,
         "url": "./users/1"
       },
-      "title": "Event",
+      "title": "Ping pong en el parque",
       "activity": "sports",
       "description": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
       "max_childs": 2,
       "childs": 0, 
+      "fecha": "Jueves",
+      "hora": "18",
       "location": {
         "lat": "41.381269586331",
         "long": "2.1375680541480206"
@@ -272,11 +274,13 @@
         "id": 1,
         "url": "./users/1"
       },
-      "title": "Event",
+      "title": "Muffins de colores",
       "activity": "coocking",
       "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
       "max_childs": 5,
       "childs": 0,
+      "fecha": "Miércoles",
+      "hora": "18",
       "location": {
         "lat": "41.38094758003186",
         "long": "2.13546520225758"
@@ -288,11 +292,13 @@
         "id": 3,
         "url": "./users/3"
       },
-      "title": "Event",
+      "title": "Bailamos mambo",
       "activity": "dancing",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
       "max_childs": 3,
       "childs": 0,
+      "fecha": "Martes",
+      "hora": "18",
       "location": {
         "lat": "41.37721219044338",
         "long": "2.1367097472539704"
@@ -304,11 +310,13 @@
         "id": 5,
         "url": "./users/5"
       },
-      "title": "Event",
+      "title": "Mario Bross",
       "activity": "console",
       "description": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       "max_childs": 4,
       "childs": 0,
+      "fecha": "Domingo",
+      "hora": "16",
       "location": {
         "lat": "41.37341217746666",
         "long": "2.1354222869128767"
@@ -320,11 +328,13 @@
         "id": 7,
         "url": "./users/7"
       },
-      "title": "Event",
+      "title": "Puzzles y juegos de mesa en casa",
       "activity": "puzzle",
       "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. ",
       "max_childs": 2,
       "childs": 0,
+      "fecha": "Sábado",
+      "hora": "16",
       "location": {
         "lat": "41.37811385584896",
         "long": "2.1307874296849394"
@@ -336,11 +346,13 @@
         "id": 6,
         "url": "./users/6"
       },
-      "title": "Event",
+      "title": "Alicia en el pais...",
       "activity": "theater",
       "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from  by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
       "max_childs": 5,
       "childs": 0,
+      "fecha": "Viernes",
+      "hora": "16",
       "location": {
         "lat": "41.38078657628437",
         "long": "2.1363664244963454"
@@ -352,11 +364,13 @@
         "id": 8,
         "url": "./users/8"
       },
-      "title": "Event",
+      "title": "Creando instrumentos",
       "activity": "music",
       "description": "Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. ",
       "max_childs": 4,
       "childs": 0,
+      "fecha": "Jueves",
+      "hora": "16",
       "location": {
         "lat": "41.37650373028421",
         "long": "2.13752513880333"
@@ -368,11 +382,13 @@
         "id": 10,
         "url": "./users/10"
       },
-      "title": "Event",
+      "title": "Jugando con tintes",
       "activity": "cience",
       "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
       "max_childs": 3,
       "childs": 0,
+      "fecha": "Miércoles",
+      "hora": "16",
       "location": {
         "lat": "41.37643932443257",
         "long": "2.134306487950595"
@@ -384,11 +400,13 @@
         "id": 3,
         "url": "./users/3"
       },
-      "title": "Event",
+      "title": "Football en el parque",
       "activity": "sports",
       "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. ",
       "max_childs": 5,
       "childs": 0,
+      "fecha": "Martes",
+      "hora": "16",
       "location": {
         "lat": "41.37804945159166",
         "long": "2.1339202498482672"
@@ -400,11 +418,13 @@
         "id": 2,
         "url": "./users/2"
       },
-      "title": "Event",
+      "title": "Musica y baile en la terraza",
       "activity": "dancing",
       "description": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
       "max_childs": 4,
       "childs": 0,
+      "fecha": "Lunes",
+      "hora": "16",
       "location": {
         "lat": "41.3793375246201",
         "long": ", 2.134134826571783"
