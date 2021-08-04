@@ -10,9 +10,12 @@ export function loadDashboard() {
     let mod = await response.text();
     mod = await mod.substring(9, (mod.length - 2));
     const { message: { body: { track_list } } } = await JSON.parse(mod);
+
+    console.log('holaaa');
+    console.log(track_list);
     dispatch({
       type: actionTypes.LOAD_DASHBOARD,
-      dashboard: track_list
+      track_list
     });
   };
 }

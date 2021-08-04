@@ -7,16 +7,7 @@ export default function sonaryReducer(state = [], action) {
   let sonary = state;
   switch (action.type) {
     case actionTypes.LOAD_DASHBOARD:
-      sonary = action.dashboard.map(({
-        track: {
-          track_id, album_id, artist_id, track_name, album_name, artist_name
-        }
-      }) => {
-        const tracks = {
-          track_id, album_id, artist_id, track_name, album_name, artist_name
-        };
-        return tracks;
-      });
+      sonary = action.track_list.map(({ track }) => track);
       break;
     case actionTypes.LOAD_DETAILS:
       sonary = action.details.lyrics_body;
@@ -25,5 +16,6 @@ export default function sonaryReducer(state = [], action) {
     default:
       break;
   }
+
   return sonary;
 }

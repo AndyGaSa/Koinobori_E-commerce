@@ -16,7 +16,8 @@ export default function Information() {
     dispatch(loadDashboard());
   }, []);
   const foundTrack = tracks.find((track) => track.track_id === +track_id);
-  console.log(foundTrack?.album_name);
+  console.log(foundTrack);
+
   return (
     <div>
       Hola
