@@ -16,8 +16,14 @@ export default function Header() {
           </Link>
           <nav className="header__nav-menu">
             <section className="header__menu-buttons">
+<<<<<<< HEAD
               <Link to="/addevent" className="button__crear-evento">Crear Evento</Link>
               <div className="header__buttons">
+=======
+
+              <Link to="/addevent" className="button__crear-evento">Crear Evento</Link>
+              <div className="header__menu_buttons--buttons">
+>>>>>>> a9405bfbc901b2b5c604246e84d174b5e074ff8b
                 <Link to="/perfil" className="header__button-perfil">Perfil</Link>
                 <LogOutButton className="header__button-logout" />
               </div>
