@@ -1,5 +1,5 @@
 .section__comic-list{
-    background-color: antiquewhite;
+    background-color: white;
 }
 .list{
     display: flex;
@@ -20,4 +20,12 @@
 .hero-name{
     text-align: center;
     width: 150px;
+}
+.titels__comic-list{
+    background-color: rgba(67, 202, 255, 0.76);
+    outline-width: 4px;
+    outline-offset: 1px;
+
+   left: 50%;
+   transform: translate(-50%, -50%);
 }

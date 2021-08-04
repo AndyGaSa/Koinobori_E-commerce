@@ -1,4 +1,10 @@
 .comic__row{
     display: flex;
     flex-direction: row;
+    position: relative;
+}
+.filter-top{
+    position: absolute;
+    top: 22%;
+    left: 16%;
 }
