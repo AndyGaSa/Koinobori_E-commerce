@@ -1,0 +1,31 @@
+@import '../../variables';
+.emptyCart {
+display: flex;
+flex-direction: column;
+align-items: center;
+    .sadFace{
+        height: 70vh;
+    }
+    .caption{
+        font-family: Bebas Neue, Roboto, Arial;
+        font-weight: 900;
+        color: $pink;
+        font-size: 30px;
+    }
+}
+.backButton{
+    @include button;
+    margin-top: 3vh;
+    margin-bottom: 10vh ;
+
+}
+.emptyCartSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    @include title;
+    font-size: 50px;
+}

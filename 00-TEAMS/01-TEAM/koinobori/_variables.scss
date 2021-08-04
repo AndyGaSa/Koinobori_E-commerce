@@ -11,12 +11,14 @@ $lightgray: #F4F4F6;
     font-family: Bebas Neue, Roboto, Arial;
     font-weight: 400;
     padding: 15px;
-}
 
+    font-size: 30px;
+}
 @mixin title{
     color: $purple;
     font-family: Roboto, Bebas Neue, Arial;
-    font-weight: 900;
-    font-size: 36px;
-    text-transform: uppercase;
+            font-weight: 900;
+            font-size: 36px;
+            text-transform: uppercase;
 }
+

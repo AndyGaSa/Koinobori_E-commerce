@@ -1,14 +1,15 @@
 import React from 'react';
+import EmptyCart from './EmptyCart';
+import FilledCart from './FilledCart';
 
 export default function Cart() {
-  const newLocalStorage = JSON.parse(localStorage.getItem('cart'));
+  const LocalStorage = JSON.parse(localStorage.getItem('cart'));
 
   return (
     <main>
-      <h1>soy el carrito</h1>
-      <ul>
-        {newLocalStorage.map((item) => <li>{item.name}</li>)}
-      </ul>
+      { LocalStorage === null
+        ? <EmptyCart />
+        : <FilledCart />}
     </main>
   );
 }
