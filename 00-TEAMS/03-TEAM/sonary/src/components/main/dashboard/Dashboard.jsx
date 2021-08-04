@@ -18,7 +18,7 @@ export default function Dashboard() {
     <main>
       <section className="dashboard">
         <h1>Top Chart</h1>
-        <div className="dashboard__search" />
+        <input type="search" placeholder="Serch" className="dashboard__search" />
       </section>
       <ul className="tracks__list">
         {

@@ -15,8 +15,12 @@ $negro:#1A1A1A;
     .dashboard__search{
         width: 740px;
         background-color: $gris-masoscuro;
-        border-radius: 20px;
+        border-radius: 10px;
+        border:0;
     }
+}
+.dashboard__search:hover{
+    background-color: $gris-intermedio;
 }
 .tracks__list{
     list-style: none;
@@ -75,6 +79,27 @@ $negro:#1A1A1A;
         height: 30px;
         border:none;
         border-radius: 50%;
+    }
+}
+
+@media (max-width: 600px){
+    .dashboard{
+        display: flex;
+        align-items: center;
+        h1{
+            font-size: 30px;
+        }
+        .dashboard__search{
+            width: 150px;
+            height: 50px;
+            margin-left: 10px;
+            background-color: $gris-masoscuro;
+            border-radius: 10px;
+            border:0;
+        }
+    }
+    .dashboard__search:hover{
+        background-color: $gris-intermedio;
     }
 }
 
