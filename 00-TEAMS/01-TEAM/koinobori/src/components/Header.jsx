@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import './Header.css';
+import './Header.scss';
 import { useAuth0 } from '@auth0/auth0-react';
 import LoginProfile from './LoginProfile';
 import LoginImage from './LoginImage';
@@ -13,76 +13,50 @@ export default function Header() {
   const { isAuthenticated } = useAuth0();
   const stockList = useSelector((store) => store.stock);
   return (
-    <header>
-      <div className="header__upper">
-        <p className="discount">FREE WORLDWIDE SHIPPING ON ORDERS OVER 90€</p>
-      </div>
-      <div className="header__lower">
-        <nav className="header__lower__nav-icons">
 
-          <Link to="/">
-            <img className="logo" src={stockList?.resources?.logo} alt="tshirts" />
-          </Link>
-          <div className="menu">
-            <Link to="/category/tShirts">
-              <img className="icons" src={stockList?.resources?.shirtsIcon} alt="jumpers" />
-            </Link>
+    <header className="header">
+      <section className="header__upper-container">
+        <div className="scroll-container">
+          <div className="upper-container__discount-text">FREE WORLDWIDE SHIPPING ON ORDERS OVER 90€&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FREE WORLDWIDE SHIPPING ON ORDERS OVER 90€</div>
+        </div>
+      </section>
+      <nav className="header__lower__nav-icons">
 
-            <Link to="/category/hoodies">
-              <img className="icons" src={stockList?.resources?.hoodiesIcon} alt="hoodies" />
-            </Link>
-
-            <Link to="/category/shorts">
-              <img className="icons" src={stockList?.resources?.trousersIcon} alt="trousers" />
-            </Link>
-
-            <Link to="/category/accessories">
-              <img className="icons" src={stockList?.resources?.accIcon} alt="hats" />
-            </Link>
-          </div>
-
-          <Link to="/">
-
-            { isAuthenticated
-              ? <LogoutImage />
-              : <LoginImage />}
-
-          </Link>
-          <LoginProfile />
-          <Link to="/cart">
-            <img className="cart" src={stockList?.resources?.cartIconPurple} alt="cart" />
+        <Link to="/">
+          <img className="header__logo" src={stockList?.resources?.logo} alt="tshirts" />
+        </Link>
+        <div className="header__blankspace" />
+        <nav className="header__menu">
+          <Link to="/category/tShirts">
+            <img className="header__icons" src={stockList?.resources?.shirtsIcon} alt="jumpers" />
           </Link>
 
-          <div id="select-container">
-            <ul>
-              <li lang-selection="FR" tooltip="FR" flow="down">
-                <img src="https://cdn.countryflags.com/thumbs/france/flag-800.png" alt="france flag" />
-              </li>
+          <Link to="/category/hoodies">
+            <img className="header__icons" src={stockList?.resources?.hoodiesIcon} alt="hoodies" />
+          </Link>
 
-              <li lang-selection="EN" tooltip="EN" flow="down" onClick="onSelect(this)">
-                <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-800.png" alt="america flag" />
-              </li>
+          <Link to="/category/shorts">
+            <img className="header__icons" src={stockList?.resources?.trousersIcon} alt="trousers" />
+          </Link>
 
-              <li lang-selection="ES" tooltip="ES" flow="down" onClick="onSelect(this)">
-                <img src="https://cdn.countryflags.com/thumbs/spain/flag-800.png" alt="spain flag" />
-              </li>
-
-              <li lang-selection="PT" tooltip="PT" flow="down" onClick="onSelect(this)">
-                <img src="https://cdn.countryflags.com/thumbs/portugal/flag-800.png" alt="portugal flag" />
-              </li>
-
-              <li lang-selection="FR" tooltip="FR" flow="up" onClick="onSelect(this)">
-                <img src="https://cdn.countryflags.com/thumbs/france/flag-800.png" alt="france flag" />
-              </li>
-
-              <li lang-selection="DE" tooltip="DE" flow="up" onClick="onSelect(this)">
-                <img src="https://cdn.countryflags.com/thumbs/germany/flag-800.png" alt="germany flag" />
-              </li>
-            </ul>
-          </div>
-
+          <Link to="/category/accessories">
+            <img className="header__icons" src={stockList?.resources?.accIcon} alt="hats" />
+          </Link>
         </nav>
-      </div>
+        <div className="header__blankspace" />
+
+        <Link to="/" className="header__login">
+
+          { isAuthenticated
+            ? <LogoutImage />
+            : <LoginImage />}
+          <LoginProfile />
+        </Link>
+        <Link to="/cart">
+          <img className="header__cart" src={stockList?.resources?.cartIconPurple} alt="cart" />
+        </Link>
+
+      </nav>
     </header>
   );
 }
