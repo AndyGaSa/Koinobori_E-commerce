@@ -17,11 +17,7 @@
             display: flex;
         }
         .main__title{
-            color: $purple;
-            font-family: Roboto;
-            font-weight: 900;
-            font-size: 36px;
-            text-transform: uppercase;
+            @include title;
         }
         .main__products{
             display: flex;
