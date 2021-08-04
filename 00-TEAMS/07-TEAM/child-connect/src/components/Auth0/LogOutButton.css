@@ -4,15 +4,20 @@
     box-sizing: border-box;
 }
 
-button {
+.log__button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0); 
     text-decoration: none;
     font-size: 25px;
     font-weight: 500;
     color: black;
-    padding: 20px;
-    margin-top: 20px;
+    text-shadow: 1px 1px rgb(163, 162, 162);
 }
 
-button:active {
+.log__button:hover {
+    cursor: pointer;
+}
+
+.log__button:active {
     color: red;
 } 
