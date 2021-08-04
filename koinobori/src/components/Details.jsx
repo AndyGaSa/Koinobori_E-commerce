@@ -51,18 +51,13 @@ export default function Details() {
       && stock.description.map((item) => (
         <li className="info__description">{`${item}`}</li>
       ))}
-<<<<<<< HEAD
-          </ul>
-          <span>Tax included. Shipping calculated at checkout.</span>
-          <button type="button" role="btnAddToCart" onClick={addToCart}>ADD TO CART</button>
-        </section>
-=======
+
             </ul>
             <small>Tax included. Shipping calculated at checkout.</small>
-            <button className="info__addtocart" type="button" onClick={addToCart}>ADD TO CART</button>
+            <button className="info__addtocart" type="button" role="btnAddToCart" onClick={addToCart}>ADD TO CART</button>
           </div>
         </div>
->>>>>>> 94698f12ee96ad3d90c6b086995d5026c6ea2e20
+
       </section>
     </main>
   );
