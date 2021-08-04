@@ -21,7 +21,6 @@ const fetchAllEvents = () => ((dispatch) => (
     responseType: 'json'
   })
     .then((response) => {
-      console.log(response);
       dispatch(fetchEvents(response.data));
     })
     .catch((error) => { console.error(error); })
