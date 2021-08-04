@@ -2,6 +2,7 @@ import React from 'react';
 import './header.scss';
 
 import { Link } from 'react-router-dom';
+import LogoutButton from '../LogoutButton';
 
 export default function Header() {
   return (
@@ -18,9 +19,10 @@ export default function Header() {
           <span className="nav-battle__text">Battle</span>
 
         </Link>
-        <Link to="../login" className="nav-logout">
+        <LogoutButton />
+        {/* <Link to="../login" className="nav-logout">
           <span className="nav-logout__text">LogOut</span>
-        </Link>
+        </Link> */}
       </nav>
     </header>
   );
