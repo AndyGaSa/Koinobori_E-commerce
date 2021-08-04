@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 export default function EmptyCart() {
   return (
-
     <section className="emptyCartSection">
       <h1>SHOPPING CART</h1>
       <figure className="emptyCart">
