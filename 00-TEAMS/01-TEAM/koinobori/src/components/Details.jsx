@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-role */
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -42,7 +43,7 @@ export default function Details() {
       ))}
           </ul>
           <span>Tax included. Shipping calculated at checkout.</span>
-          <button type="button" onClick={addToCart}>ADD TO CART</button>
+          <button type="button" role="btnAddToCart" onClick={addToCart}>ADD TO CART</button>
         </section>
       </section>
     </main>
