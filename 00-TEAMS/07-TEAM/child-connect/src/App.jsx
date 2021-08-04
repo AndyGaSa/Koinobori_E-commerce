@@ -22,16 +22,9 @@ const App = () => (
           <Perfil />
         </Route>
       </Switch>
-<<<<<<< HEAD
-      <Footer />
-    </>
-  );
-}
-=======
     </Router>
     <Footer />
   </>
 );
->>>>>>> bcbea970c5fdf63901e4a989414637985f0ba9c5
 
 export default App;
