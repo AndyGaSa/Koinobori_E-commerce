@@ -8,7 +8,6 @@ import './Details.constructo.scss';
 
 export default function DetailsConstructor() {
   const { constructorId } = useParams();
-  console.log(constructorId);
   const constructor = constructorId;
 
   const constructorData = useSelector((store) => store?.constructor);
