@@ -9,6 +9,9 @@ export default function sportsReducer(data = {}, action) {
     case actionTypes.LOAD_TEAMS:
       newData = action.leagueTeamsList;
       break;
+    case actionTypes.LOAD_DETAILS:
+      newData = action.details;
+      break;
     default:
       break;
   }
