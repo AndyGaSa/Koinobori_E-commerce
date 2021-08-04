@@ -14,7 +14,7 @@ export default function Lyrics() {
     if (track_id) {
       dispatch(loadDetails(+track_id));
     }
-  }, [track_id]);
+  }, []);
   return (
     <div>
       {lyrics.map((p) => (

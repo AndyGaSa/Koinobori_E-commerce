@@ -7,6 +7,7 @@ export default function sonaryReducer(state = [], action) {
   let sonary = state;
   switch (action.type) {
     case actionTypes.LOAD_DASHBOARD:
+
       sonary = state;
       sonary = action.dashboard.map(({
         track
@@ -16,5 +17,6 @@ export default function sonaryReducer(state = [], action) {
     default:
       break;
   }
+
   return sonary;
 }
