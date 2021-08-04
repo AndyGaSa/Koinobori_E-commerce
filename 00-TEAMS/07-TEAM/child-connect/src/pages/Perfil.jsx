@@ -35,8 +35,23 @@ export default function Perfil() {
                   <img src="https://i.ibb.co/TMfrrNS/girl.png" alt="" className="children-info__img" />
                   <p className="profile-data__text"> de 5 años</p>
                 </div>
+
               </div>
-              <div className="hobbies-info">hjhvhgvh</div>
+              <div className="hobbies-info">
+                <p className="profile-data-details__headline">Intereses de mis hijos:</p>
+                <div className="children-info__age">
+                  <img src="https://i.ibb.co/Ytk8bjz/Hobby-icon.png" alt="" className="hobbies-info__img" />
+                  <p className="profile-data__text"> Fútbol</p>
+                </div>
+                <div className="children-info__age">
+                  <img src="https://i.ibb.co/Ytk8bjz/Hobby-icon.png" alt="" className="hobbies-info__img" />
+                  <p className="profile-data__text"> Natación</p>
+                </div>
+                <div className="children-info__age">
+                  <img src="https://i.ibb.co/Ytk8bjz/Hobby-icon.png" alt="" className="hobbies-info__img" />
+                  <p className="profile-data__text"> Lectura</p>
+                </div>
+              </div>
             </div>
           </div>
           <div className="profile-rating-block" />
