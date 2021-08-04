@@ -9,7 +9,7 @@ function LogoutImage() {
 
   return (
 
-    <img className="login-image" onClick={() => logout()} src="https://i.ibb.co/KN3zKZY/logout.png" alt="logout" />
+    <img className="login-image" data-testid="logoutImagen" onClick={() => logout()} src="https://i.ibb.co/KN3zKZY/logout.png" alt="logout" />
   );
 }
 
