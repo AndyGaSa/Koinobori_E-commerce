@@ -13,6 +13,7 @@ export default function List() {
 
   return (
     <>
+      <input placeholder="Search your favourite artist" />
       <button
         type="button"
         onClick={() => dispatch(addFavArtist())}

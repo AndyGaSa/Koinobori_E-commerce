@@ -12,6 +12,7 @@ import Profile from './pages/Profile';
 import Register from './pages/Register';
 import Footer from './components/Footer';
 import List from './pages/List';
+import SearchedArtistList from './pages/SearchArtists';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -36,6 +37,9 @@ ReactDOM.render(
           </Route>
           <Route path="/list">
             <List />
+          </Route>
+          <Route path="/searched">
+            <SearchedArtistList />
           </Route>
         </Switch>
         <Footer />
