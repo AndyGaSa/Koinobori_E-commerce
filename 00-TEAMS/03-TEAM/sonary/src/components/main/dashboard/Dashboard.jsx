@@ -13,41 +13,50 @@ export default function Dashboard() {
     if (!tracks.length) dispatch(loadDashboard());
   }, []);
 
-  let topSong = 0;
+  let ranking = 0;
   return (
     <main>
       <section className="dashboard">
         <h1>Top Chart</h1>
-        <input type="search" placeholder="Serch" className="dashboard__search" />
+        <input type="search" placeholder="Search for a song!" className="dashboard__search" />
       </section>
-      <ul className="tracks__list">
+      <ul className="dashboard__list">
         {
             tracks.map((track) => {
-              topSong += 1;
+              ranking += 1;
               return (
-                <Link className="track" to={`/details/${track.track_id}`}>
-                  <li>
-                    <img src="https://www.laregion.es/asset/zoomcrop,1366,800,center,center//media/laregion/images/2021/07/30/2021073013335238213.jpg" alt="" />
-                    <span>
-                      <span className="track__info__top">
-                        <span>
-                          #
-                          {topSong}
-                        </span>
-                        <button type="button">add</button>
-                      </span>
-                      <ul className="track__info">
+                <li>
+                  <ul className="list__track">
+                    <li>
+                      <Link className="track" to={`/details/${track.track_id}`}>
+                        <img className="track__thumbnail" src="" alt="" />
+                      </Link>
+                    </li>
+                    <li>
+                      <ul className="track__information">
                         <li>
-                          {track.track_name}
+                          <ul className="information__top">
+                            <li className="top__position">
+                              #
+                              {ranking}
+                            </li>
+                            <li className="top__position">
+                              <button type="button">add</button>
+                            </li>
+                          </ul>
                         </li>
-                        <li>
-                          <span className="track__info__artist">{track.artist_name}</span>
-                        </li>
+                        <Link className="track" to={`/details/${track.track_id}`}>
+                          <li>
+                            <ul className="information__bottom">
+                              <li className="bottom__track">{track.track_name}</li>
+                              <li className="bottom__artist">{track.artist_name}</li>
+                            </ul>
+                          </li>
+                        </Link>
                       </ul>
-                    </span>
-
-                  </li>
-                </Link>
+                    </li>
+                  </ul>
+                </li>
               );
             })
         }
