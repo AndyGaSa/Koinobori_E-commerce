@@ -1,4 +1,4 @@
-import actionTypes from './favourties.types';
+import actionTypes from './favourites.types';
 import { favouritesLocalStorageCheck, getFavouritesLocalStorage } from '../../service/favourites-local-storage';
 
 export function getFavourites() {
@@ -21,5 +21,19 @@ export function deleteFavouriteLeague(leagueId) {
   return {
     type: actionTypes.DELETE_LEAGUE,
     leagueId
+  };
+}
+
+export function addFavouriteTeam(favouriteTeam) {
+  return {
+    type: actionTypes.SAVE_TEAM,
+    favouriteTeam
+  };
+}
+
+export function deleteFavouriteTeam(teamId) {
+  return {
+    type: actionTypes.DELETE_TEAM,
+    teamId
   };
 }

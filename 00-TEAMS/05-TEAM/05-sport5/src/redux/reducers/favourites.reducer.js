@@ -1,4 +1,4 @@
-import actionTypes from '../actions/favourties.types';
+import actionTypes from '../actions/favourites.types';
 import { saveFavourites } from '../../service/favourites-local-storage';
 
 export default function sportsReducer(favourites = {
@@ -24,6 +24,20 @@ export default function sportsReducer(favourites = {
           .filter(({ id }) => id !== action.leagueId)
       };
       saveFavourites(newFavourites);
+      break;
+    case actionTypes.SAVE_TEAM:
+      newFavourites = {
+        ...favourites,
+        favouriteTeams: [...favourites.favouriteTeams, action.favouriteTeam]
+      };
+      saveFavourites(newFavourites);
+      break;
+    case actionTypes.DELETE_TEAM:
+      newFavourites = {
+        ...favourites,
+        favouriteTeams: favourites.favouriteTeams
+          .filter(({ id }) => id !== action.teamId)
+      };
       break;
     default:
       break;
