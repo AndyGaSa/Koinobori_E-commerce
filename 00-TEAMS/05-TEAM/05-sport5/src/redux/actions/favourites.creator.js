@@ -23,3 +23,10 @@ export function deleteFavouriteLeague(leagueId) {
     leagueId
   };
 }
+
+export function addFavouriteTeam(favouriteTeam) {
+  return {
+    type: actionTypes.SAVE_TEAM,
+    favouriteTeam
+  };
+}
