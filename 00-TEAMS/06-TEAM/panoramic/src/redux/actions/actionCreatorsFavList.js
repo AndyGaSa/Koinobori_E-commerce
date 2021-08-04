@@ -1,7 +1,7 @@
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
-export default function loadFavArtists() {
+export function loadFavArtists() {
   return async (dispatch) => {
     const token = JSON.parse(localStorage.getItem('token'));
     const { data } = await axios({
@@ -13,6 +13,30 @@ export default function loadFavArtists() {
     dispatch({
       type: actionTypes.LOAD_FAVOURITE_ARTISTS,
       favArtists: data.artists
+    });
+  };
+}
+
+export function deleteFavArtists(artist) {
+  return (
+    {
+      type: actionTypes.DELETE_FAVOURITE_ARTISTS,
+      artist
+    }
+  );
+}
+
+export function addFavArtist() {
+  return async (dispatch) => {
+    const token = JSON.parse(localStorage.getItem('token'));
+    const { data } = await axios({
+      method: 'GET',
+      url: 'https://api.spotify.com/v1/artists?ids=24DO0PijjITGIEWsO8XaPs',
+      headers: { Authorization: `Bearer ${token}` }
+    });
+    dispatch({
+      type: actionTypes.ADD_FAVOURITE_ARTISTS,
+      artist: data.artists[0]
     });
   };
 }

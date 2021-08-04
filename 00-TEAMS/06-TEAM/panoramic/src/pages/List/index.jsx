@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import loadFavArtists from '../../redux/actions/actionCreatorsFavList';
+import { loadFavArtists, deleteFavArtists, addFavArtist } from '../../redux/actions/actionCreatorsFavList';
 import getSpotifyToken from '../../redux/actions/actionCreators';
 
 export default function List() {
@@ -13,11 +13,24 @@ export default function List() {
 
   return (
     <>
+      <button
+        type="button"
+        onClick={() => dispatch(addFavArtist())}
+      >
+        Add Favourite Artist
+
+      </button>
       <ul>
         {favArtist.map((artist) => (
           <li>
             {artist.name}
-            <button type="button">x</button>
+            <button
+              type="button"
+              onClick={() => dispatch(deleteFavArtists(artist))}
+            >
+              x
+
+            </button>
           </li>
         ))}
       </ul>
