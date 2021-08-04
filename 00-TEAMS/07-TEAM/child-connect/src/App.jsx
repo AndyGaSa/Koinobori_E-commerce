@@ -7,6 +7,8 @@ import {
 import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
 import Perfil from './pages/Perfil';
+import FormularioEventos from './pages/FormularioEventos';
+import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -21,6 +23,10 @@ const App = () => (
         <Route path="/perfil">
           <Perfil />
         </Route>
+        <Route path="/addevent">
+          <FormularioEventos />
+        </Route>
+        <Route component={NotFound} />
       </Switch>
     </Router>
     <Footer />
