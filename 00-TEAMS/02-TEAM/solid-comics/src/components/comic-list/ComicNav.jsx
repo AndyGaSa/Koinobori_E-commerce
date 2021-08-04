@@ -1,5 +1,5 @@
 import React from 'react';
-import './ComicList.css';
+import './ComicList.scss';
 import NavTop from '../navtop/NavTop';
 import NavBottom from '../navBottom/NavBottom';
 
