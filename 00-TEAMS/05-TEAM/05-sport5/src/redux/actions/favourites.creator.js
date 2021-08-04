@@ -30,3 +30,10 @@ export function addFavouriteTeam(favouriteTeam) {
     favouriteTeam
   };
 }
+
+export function deleteFavouriteTeam(favouriteTeam) {
+  return {
+    type: actionTypes.DELETE_TEAM,
+    favouriteTeam
+  };
+}
