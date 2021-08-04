@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addFavouriteLeague, deleteFavouriteLeague, getLeagues } from '../../redux/actions/sports.creator';
+import { getLeagues } from '../../redux/actions/sports.creator';
+import { addFavouriteLeague, deleteFavouriteLeague } from '../../redux/actions/favourites.creator';
 import './LeaguesList.scss';
 import SportsSelector from '../../components/SportsSelector/SportsSelector';
 
 export default function LeaguesList() {
-  const allData = useSelector((store) => store.countriesLeagues);
+  const leaguesByCountries = useSelector((store) => store.countriesLeagues);
+  const favourites = useSelector((store) => store.favourites);
   const dispatch = useDispatch();
   const { sportId } = useParams();
   useEffect(() => {
@@ -27,7 +29,7 @@ export default function LeaguesList() {
   }
 
   function leagueIsInFavourites(leagueId) {
-    return allData.favourites.favouriteLeagues.some(({ id }) => id === leagueId);
+    return favourites.favouriteLeagues.some(({ id }) => id === leagueId);
   }
 
   return (
@@ -42,7 +44,7 @@ export default function LeaguesList() {
       </form>
       <ul className="leagues">
         {
-        Object.entries(allData.leagues).map((country) => (
+        Object.entries(leaguesByCountries).map((country) => (
           <div key={`${country[0]}-container`} className="leagues__block">
             <li key={`${country[0]}-name`} className="leagues__country">{country[0].toUpperCase()}</li>
             <ul key={`${country[0]}-league`} className="leagues__all-leagues">
