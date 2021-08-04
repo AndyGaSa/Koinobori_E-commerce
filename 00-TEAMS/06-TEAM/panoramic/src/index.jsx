@@ -11,6 +11,7 @@ import NotFound from './pages/NotFound';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
 import Footer from './components/Footer';
+import List from './pages/List';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -32,6 +33,9 @@ ReactDOM.render(
           </Route>
           <Route path="/register">
             <Register />
+          </Route>
+          <Route path="/list">
+            <List />
           </Route>
         </Switch>
         <Footer />
