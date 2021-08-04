@@ -9,5 +9,5 @@ import favoriteReducer from './favoriteReducer';
 export default combineReducers({
   sonary: sonaryReducer,
   song: songReducer,
-  favorite: favoriteReducer
+  favorites: favoriteReducer
 });
