@@ -26,6 +26,13 @@ align-items: center;
 flex-basis: 33%;
 }
 
+.footer-terms-list-block {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+flex-basis: 33%;
+}
 
 /* Child Connect */
 .footer-terms-list__headline{
@@ -49,6 +56,7 @@ align-items: center;
 color: #FFFFFF;
 margin-top: 4px;
 }
+
 
 .header-logo-section{
 display: flex;
