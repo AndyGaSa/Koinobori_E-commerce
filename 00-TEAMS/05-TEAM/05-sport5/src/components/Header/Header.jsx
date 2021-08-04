@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header>
       <nav className="header">
-        <button type="button" className="header__navigation-menu" onClick={changeNavState}>
+        <button data-testid="input-button" type="button" className="header__navigation-menu" onClick={changeNavState}>
           <i className="fas fa-bars" />
         </button>
         <h1 className="header__main-title">Sport5</h1>
