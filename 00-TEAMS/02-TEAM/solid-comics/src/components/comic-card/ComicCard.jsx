@@ -18,12 +18,6 @@ export default function ComicCard() {
           to={`/details/${targetComic[0]?.id}`}
         >
           <img className="item__img" src={`${targetComic[0]?.thumbnail?.path}.${targetComic[0]?.thumbnail?.extension}`} alt="comic" />
-          <div>
-            <h5>
-              {targetComic[0]?.title}
-            </h5>
-            <p>B. Earl,Veregge</p>
-          </div>
         </Link>
       </div>
     </>
