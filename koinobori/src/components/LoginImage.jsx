@@ -13,7 +13,7 @@ function LoginImage() {
   }
   return (
 
-    <img className="login-image" onClick={() => createStorage()} src="https://i.ibb.co/tHp0Kz7/login.png" alt="login" />
+    <img className="login-image" data-testid="loginImagen" onClick={() => createStorage()} src="https://i.ibb.co/tHp0Kz7/login.png" alt="login" />
   );
 }
 
