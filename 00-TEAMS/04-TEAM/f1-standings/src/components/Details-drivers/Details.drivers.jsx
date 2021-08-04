@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable max-len */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-console */
@@ -9,7 +10,7 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 // import { useParams } from 'react-router-dom';
 
-import './Details.css';
+import './Details.drivers.styles.scss';
 
 export default function DriverDetails() {
   const drivers = useSelector((store) => store?.drivers);
@@ -32,18 +33,32 @@ export default function DriverDetails() {
     drivers && (
       <>
         <header className="driver-details">
-          <div className="container-details">
-            <a href="." className="back">backToDriversList</a>
-            <section className="driver-details__title">
-              <span className="driver-name">
-                {driver?.Driver.givenName}
-              </span>
-              <span className="driver-surname">{driver?.Driver.familyName}</span>
-              <div>
-                <span className="driver-number">{driver?.Driver.permanentNumber}</span>
-                <span className="driver-constructor">{driver?.Constructors.constructorId}</span>
-              </div>
-            </section>
+          <div className="back-button__container">
+            <a href="/" className="back">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDMzMC4wMDIgMzMwLjAwMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+CjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaWQ9IlhNTElEXzIyN18iIGQ9Ik0yMzMuMjUsMzA2LjAwMUwxMjcuNSwxNjUuMDA1TDIzMy4yNSwyNC4wMDFjNC45NzEtNi42MjgsMy42MjctMTYuMDMtMy0yMWMtNi42MjctNC45NzEtMTYuMDMtMy42MjYtMjEsMyAgTDk2Ljc1LDE1Ni4wMDVjLTQsNS4zMzMtNCwxMi42NjcsMCwxOGwxMTIuNSwxNDkuOTk2YzIuOTQ3LDMuOTMsNy40NTEsNi4wMDEsMTIuMDEyLDYuMDAxYzMuMTMxLDAsNi4yOS0wLjk3OCw4Ljk4OC0zLjAwMSAgQzIzNi44NzgsMzIyLjAzLDIzOC4yMjEsMzEyLjYyOCwyMzMuMjUsMzA2LjAwMXoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg=="
+              />
+
+            </a>
+          </div>
+          <div className="header-container">
+            <div className="container-details">
+              <div className={`${driver?.Constructors[0].constructorId}s`} />
+              <section className="driver-details__title">
+                <span className="driver-name">
+                  {driver?.Driver.givenName}
+                </span>
+                <span className="driver-surname">
+                  {driver?.Driver.familyName}
+                </span>
+                <div className="driver-constructor">
+                  <span className="driver-number">
+                    {driver?.Driver.permanentNumber}
+                  </span>
+                  <span className="driver-constructor">{driver?.Constructors[0].name}</span>
+                </div>
+              </section>
+            </div>
           </div>
           <img src="https://www.formula1.com/content/dam/fom-website/drivers/L/LANNOR01_Lando_Norris/lannor01.png.transform/2col-retina/image.png" alt="Lando Norris" />
         </header>
