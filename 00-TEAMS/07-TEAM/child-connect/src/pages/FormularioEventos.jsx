@@ -8,13 +8,13 @@ export default function FormularioEventos() {
         <p>Completa todos los campos</p>
       </header>
       <form>
-        <label htmlFor="evento_titulo">
+        <label htmlFor="event_titulo">
           Titulo del Evento:
           <input name="event_title" placeholder="Baile en casa" />
         </label>
-        <label htmlFor="evento_fecha">
+        <label htmlFor="event_date">
           Dia:
-          <select name="event_day" id="event_day">
+          <select name="event_date" id="event_date">
             <option selected value="lunes">Lunes</option>
             <option value="martes">Martes</option>
             <option value="miercoles">Miércoles</option>
