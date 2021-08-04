@@ -1,5 +1,6 @@
 // import React, { useEffect } from 'react';
 import React from 'react';
+
 import { Provider } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import configureStore from './redux/store';
@@ -17,15 +18,23 @@ function App() {
   return (
     <Provider store={configureStore()}>
       <BrowserRouter>
-        <Header />
         <Switch>
-          <Route path="/" exact component={Login} />
-          <Route path="/comic-list" component={ComicList} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/battle" component={Battle} />
-          <Route path="/log-out" component={Login} />
-          <Route path="/details/:comic" component={Detail} />
-          <Route component={NotFound} />
+          <Route path="/login" exact component={Login} />
+          <Route render={() => (
+            <>
+              <Header />
+              <Switch>
+                <Route path="/comic-list" component={ComicList} />
+                <Route path="/profile" component={Profile} />
+                <Route path="/battle" component={Battle} />
+                <Route path="/login" component={Login} />
+                <Route path="/details/:comic" component={Detail} />
+                <Route component={NotFound} />
+              </Switch>
+            </>
+          )}
+          />
+
         </Switch>
         <Footer />
       </BrowserRouter>

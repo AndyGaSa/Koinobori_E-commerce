@@ -1,18 +1,18 @@
 .login__main{
     background-image: url(https://i.ibb.co/2WxJhd1/login-back.jpg);
-    background-repeat: repeat-x;
     background-position: center center;
-    height: 75.3vh;
+    
+    height: 100vh;
 }
 .login__button{
     filter: saturate(0);
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 0;
     right: 0;
     margin: auto;
-    transform: translateY(-50%);
-    width: 200px;
+    transform: translateY(-68%);
+    width: 190px;
 }
 .login__button:hover{
     filter: saturate(1);
