@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter, Switch, Route
+} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import configureStore from './redux/store';
@@ -18,6 +20,9 @@ ReactDOM.render(
       <BrowserRouter>
         <Header />
         <Switch>
+          <Route path="/">
+            <Home />
+          </Route>
           <Route path="/home">
             <Home />
           </Route>

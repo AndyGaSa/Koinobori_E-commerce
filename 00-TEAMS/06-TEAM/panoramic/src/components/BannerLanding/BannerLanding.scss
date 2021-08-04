@@ -23,3 +23,22 @@
         height: 150px;
     }
 }
+@media only screen and (min-width: 768px) {
+    .section-banner{
+        height: 60vh;
+        height: 60vh;
+        flex-flow: column nowrap;
+        &__text-item{
+            width: 40%;
+            margin: 0 auto;
+            text-align: start;
+            color: white;
+            font-family: $secondary-font;
+            font-size: 2rem;
+        }
+        &__logo-item{
+            width: 250px;
+            height: 250px;
+        }
+    }
+}
