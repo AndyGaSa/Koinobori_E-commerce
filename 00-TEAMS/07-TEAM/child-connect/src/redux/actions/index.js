@@ -13,7 +13,13 @@ const fetchEvents = (events) => {
 };
 
 const fetchAllEvents = () => ((dispatch) => (
-  axios.get('http://localhost:3001/events')
+  axios.get('http://localhost:3001/events', {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+    },
+    responseType: 'json'
+  })
     .then((response) => {
       console.log(response);
       dispatch(fetchEvents(response.data));
