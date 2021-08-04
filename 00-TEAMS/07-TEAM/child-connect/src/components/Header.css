@@ -6,84 +6,88 @@
 
 
 header {
-    display: flex;
     width: 100%;
     background-image: url(https://i.ibb.co/HgPB420/brothers-2107264.jpg);
     background-repeat: no-repeat;
-    background-size: 1367px auto;
+    background-size: 1367px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header__menu {
+    width: 100%;
+    height: 180px;
+    background-color: #5E5E5E;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav {
-    width: 100vw;
     display: flex;
     align-items: center;
-    background-color: #5E5E5E;
     justify-content: flex-end;
-    /* opacity: 0.8;     */
-}
-
-h1 {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    text-align: center;
+    padding-right: 40px;
 }
 
 .header__menu-buttons {
     display: flex;
-    
+    align-items: center;
+    padding: 20px;   
+}
+
+.header__home-button {
+    opacity: 1;
 }
 
 
-.header__buttons {
-    left: 82.58%;
-    right: 11.2%;
-    top: 32.43%;
-    bottom: 34.23%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: white;
+.header__button-perfil {
     text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+    padding: 20px;
+    margin-top: 20px;
 }
 
+.header__button-perfil:active {
+    color: red;
+} 
 
-.buttons__crear-evento {
+.header__button-logout {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+    padding: 20px;
+    margin-top: 20px;    
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 7px 40px;
-    position: absolute;
-    left: 876px;
-    right: 286px;
-    top: 45px;
-    bottom: 48px;
-    background: #FED305;opacity: 1;
+}
+
+.button__crear-evento {
+    background: #FED305;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    position: static;
-    width: 141px;
-    height: 41px;
-    left: calc(50% - 141px/2);
-    top: calc(50% - 41px/2);
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
+    width: 160px;
+    height: 40px;
     font-weight: 500;
     font-size: 22px;
     text-decoration: none;
-    line-height: 26px;
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 6px;
+    text-align: center;
+    padding: 8px;
+    color: #FFFFFF;  
+}
+
+.button__crear-evento:active {
+    color: red;
+}
+
+
+h1 {
+    margin-top: 250px;
+    padding-bottom: 400px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
 }
 
 
