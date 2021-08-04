@@ -1,37 +1,30 @@
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
 import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
-// import UserProfile from './pages/UserProfile';
-import EventDetails from './components/EventDetails';
-// import Footer from './components/Footer';
-// import NotFound from './pages/NotFound';
-
+import Perfil from './pages/Perfil';
+import Footer from './components/Footer';
 import './App.css';
 
-function App() {
-  const currentEvents = useSelector(({ events }) => events);
-
-  console.log(currentEvents);
-  return (
-    <>
-      <h1>Hola mundo</h1>
-      <p>{currentEvents[0]?.activity}</p>
+const App = () => (
+  <>
+    <Router>
       <Header />
       <Switch>
-        <Route path="/" exact component={Dashboard} />
-        <Redirect path="/dashboard" to="/" />
-        {/* <Route path="/UserProfile" component={UserProfile} /> */}
-        <Route path="/EventDetails" component={EventDetails} />
-        {/* <Route component={NotFound} /> */}
+        <Route exact path="/">
+          <Dashboard />
+        </Route>
+        <Route path="/perfil">
+          <Perfil />
+        </Route>
       </Switch>
-      {/* <Footer /> */}
-    </>
-  );
-}
+    </Router>
+    <Footer />
+  </>
+);
 
 export default App;

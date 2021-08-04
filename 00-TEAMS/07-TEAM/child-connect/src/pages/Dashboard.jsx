@@ -1,16 +1,13 @@
-/* eslint-disable import/no-named-as-default */
 import React from 'react';
+import EventList from '../components/EventList';
 import './Dashboard.css';
-import EventList from './EventList';
-// import Faq from './Faq';
-// import Map from './Map';
 
-export default function Dashboard() {
-  return (
-    <>
-      <EventList />
-      {/* <Map />
-      <Faq /> */}
-    </>
-  );
-}
+const Dashboard = () => (
+  <>
+    <EventList />
+    {/* Map */}
+    {/* Comments */}
+  </>
+);
+
+export default Dashboard;
