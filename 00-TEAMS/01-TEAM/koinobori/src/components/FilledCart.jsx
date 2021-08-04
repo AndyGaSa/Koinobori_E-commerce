@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './FilledCart.scss';
 
 export default function FilledCart() {
-  const LocalStorage = JSON.parse(localStorage.getItem('cart'));
+  const [LocalStorage, setLocalStorage] = useState([]);
+
+  useEffect(() => {
+    setLocalStorage(JSON.parse(localStorage.getItem('cart')));
+  }, []);
+
   function deleteArticle(name) {
-    const newLocalStorage = LocalStorage.filter((item) => item.name !== name);
-    localStorage.setItem('cart', JSON.stringify(newLocalStorage));
-    window.location.reload();
+    setLocalStorage(LocalStorage.filter((item) => item.name !== name));
+    localStorage.setItem('cart', JSON.stringify(LocalStorage));
   }
   return (
     <main className="main">
