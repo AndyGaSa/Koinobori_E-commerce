@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.login-button {
+    width: 5rem;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    outline: inherit;
+    border: none;
+    transition: .2s;
+    height: 2rem;
+
+    &:hover{
+        color: $hover-color;
+    }
+}
