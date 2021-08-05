@@ -9,33 +9,98 @@
     justify-content: center;
     margin: 0 auto;
     height: auto;
+    padding: 10px 0;
+    background-color: $primary-color;
     &__title{
         margin: 0 auto;
+        font-family: $secondary-font;
+        font-size: 35px;
+        color:$primary-font-color;
+        padding: 20px 0;
     }
     &__artists-cards{
         margin: 0 auto;
         display: flex;
-        background-color: lightgreen;
-        .artist-details{
-            display: flex;
-            margin: 0 auto;
-            flex-direction: column;
-            background-color: lightpink;
-            list-style: none;
+        flex-direction: column;
+        list-style: none;
+        padding: 10px;
+    }  
 
-            &__artist-name{
-                color:gold;
-                display: flex;
-                justify-content: center;
-                
-            }
-        }
-        img{
-            width: 100px;
-            height: 100px;
-            list-style: none;
+}
+
+
+.artist-details{
+    display: flex;
+    margin: 25px auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: $secondary-color;
+    width: fit-content;
+    height: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 4px solid white;
+    &:hover{
+        box-shadow: 0 0 0 3pt $tertiary-color;
+
+    }
+    &__artist-img{
+        display: flex;
+        margin: -15px -13px;
+        margin-bottom: 0;
+        height: 180px;
+        border-radius: 20px 20px 0 0;
+        border: 3px white solid;
+       
+    }
+    &__artist-name{
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        padding: 5px 0;  
+        font-size: 16px;
+        color:$tertiary-color;
+        font-family: $primary-font;
+    }
+    p{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: $secondary-font;
+        color:$primary-font-color;
+        font-size: 9px;
+        span{
+            margin: 2px 0;
         }
     }
+    &__add-fav-button{
+        margin:0 auto;
+        margin-top: 10px;
+        width: 100px;
+        height: 30px;
+        border-radius: 25px;
+        background-color: $primary-color;
+        border: 3px $tertiary-color solid;
+        color: $tertiary-color;
+        font-size: 10px;
+        font-family: $primary-font;
 
-    
+
+        &:hover{
+            cursor:pointer;
+            background-color:rgb(139, 44, 103);
+            
+        }
+    }    
+}
+
+@media screen and(min-width: 600px){
+    .suggested-artists-container__artists-cards{
+        flex-direction: row;
+    }
+    .artist-details{
+        margin: 25px;
+    }
+
 }

@@ -24,8 +24,8 @@ export default function Home() {
         <ul className="suggested-artists-container__artists-cards">
           {
           artists.map((artist) => (
-            <li className="artists-cards__artist-details">
-              <img src={`${artist.images[0].url}`} alt="Girl in a jacket" />
+            <li className="artist-details">
+              <img className="artist-details__artist-img" src={`${artist.images[0].url}`} alt="artist-img" />
               <h3 className="artist-details__artist-name">
                 {artist.name}
               </h3>
@@ -34,10 +34,11 @@ export default function Home() {
                 <span>{`Followers: ${artist.followers.total}`}</span>
               </p>
               <button
+                className="artist-details__add-fav-button"
                 type="button"
                 onClick={() => dispatch(addFavArtist(artist))}
               >
-                Add to favourites
+                + Add to favourites
               </button>
             </li>
           ))
