@@ -51,11 +51,12 @@ export function getTeams(idLeague) {
   return async (dispatch) => {
     const { data } = await axios(`https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=${idLeague}`);
     const leagueTeamsList = data.teams?.map(({
-      idTeam, strTeam, strTeamBadge
+      idTeam, strTeam, strTeamBadge, strLeague
     }) => ({
       id: idTeam,
       name: strTeam,
-      badge: strTeamBadge
+      badge: strTeamBadge,
+      league: strLeague
     }));
 
     dispatch({
