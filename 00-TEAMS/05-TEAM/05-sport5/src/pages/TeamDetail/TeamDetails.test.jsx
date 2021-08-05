@@ -12,9 +12,12 @@ describe('Given a component Teamdetails', () => {
         type: 'LOAD_DETAILS',
         details: {
           id: 1111,
+          banner: 'banner.img',
           badge: 'badge.img',
           name: 'Inter',
-          city: 'Milan'
+          city: 'Milan',
+          league: 'Italian League',
+          stadiumName: 'Stadium'
         }
       }));
       render(
@@ -34,9 +37,12 @@ describe('Given a component Teamdetails', () => {
         type: 'LOAD_DETAILS',
         details: {
           id: null,
+          banner: null,
           badge: null,
           name: null,
-          city: null
+          city: null,
+          league: null,
+          stadiumName: null
         }
       }));
       render(
