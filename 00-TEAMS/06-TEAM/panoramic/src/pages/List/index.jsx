@@ -17,7 +17,6 @@ export default function List() {
               onClick={() => dispatch(deleteFavArtists(artist))}
             >
               x
-
             </button>
           </li>
         ))}

@@ -16,6 +16,7 @@ import List from './pages/List';
 import SearchedArtistList from './pages/SearchArtists';
 
 ReactDOM.render(
+
   <React.StrictMode>
     <Provider store={configureStore()}>
       <BrowserRouter>

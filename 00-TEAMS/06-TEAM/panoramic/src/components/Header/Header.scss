@@ -4,9 +4,10 @@
 
 .header{
     width: 100%;
-    background-color: $primary-color;
+    background-color: $secondary-color;
     display: flex;
     height: 60px;
+    position: fixed;
     &__logo-container{
         flex: 1;
         display: flex;
