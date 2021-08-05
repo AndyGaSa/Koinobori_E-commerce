@@ -55,7 +55,6 @@ const fetchAllFaqs = () => ((dispatch) => (
     responseType: 'json'
   })
     .then((response) => {
-      console.log(response);
       dispatch(fetchFaqs(response.data));
     })
     .catch((error) => { console.error(error); })
