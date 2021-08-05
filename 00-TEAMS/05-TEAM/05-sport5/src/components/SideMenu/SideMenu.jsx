@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import LogOutButton from '../LogoutButton/LogoutButton';
-import LogoInButton from '../LoginButton/LoginButton';
+import LoginButton from '../LoginButton/LoginButton';
 import { getFavourites, deleteFavouriteLeague, deleteFavouriteTeam } from '../../redux/actions/favourites.creator';
 import './SideMenu.scss';
 
@@ -25,7 +25,7 @@ function SideMenu({ navClass, changeNavState }) {
             ? (
               <>
                 <p className="side-menu-navigator__login-message">To be able to use the favourite menu, you need to login</p>
-                <LogoInButton />
+                <LoginButton />
               </>
             )
             : (
