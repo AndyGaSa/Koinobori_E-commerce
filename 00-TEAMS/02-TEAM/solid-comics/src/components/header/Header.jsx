@@ -13,15 +13,11 @@ export default function Header() {
         </Link>
         <Link to="../comic-list" className="nav-comics">
           <span className="nav-comics__text">Comics</span>
-
         </Link>
         <Link to="../battle" className="nav-battle">
           <span className="nav-battle__text">Battle</span>
-
         </Link>
-
         <LogoutButton />
-
       </nav>
     </header>
   );
