@@ -11,7 +11,7 @@ export default function NavTop() {
     <>
       <div className="comic__row">
         <span className="titels__comic-list nav-top">NAV TOP</span>
-        {comics.length && comics.slice(9, 11).map((
+        {comics.length && comics.slice(10, 14).map((
           comic
         ) => <ComicCard comic={comic} key={comic?.id} />)}
       </div>

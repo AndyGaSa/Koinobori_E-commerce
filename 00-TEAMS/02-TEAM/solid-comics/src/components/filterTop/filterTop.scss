@@ -8,3 +8,22 @@
     top: 22%;
     left: 16%;
 }
+.filter-button {
+    width: 270px;
+        height: auto;
+        box-shadow: 0 26px 24px -16px rgb(0 0 0 / 40%);
+        filter: saturate(0.3);
+        margin-bottom: 10px;
+        background-image: url(https://i.ibb.co/9wNnqRF/filter-image.jpg);
+        background-size: contain;
+        font-size: 42px;
+        font-weight: bolder;
+        color: #ffffff;
+        text-shadow: -2px 0 black, 0 -2px black, 2px 0 black, 0 2px black;
+}
+.filter-aside{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}

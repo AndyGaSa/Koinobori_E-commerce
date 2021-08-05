@@ -1,10 +1,10 @@
 import actionTypes from '../actions/comics.types';
 
-export default function comicsReducer(comicsList = [], action) {
+export default function filterReducer(comicsList = [], action) {
   let newComicList = comicsList;
   switch (action.type) {
-    case actionTypes.LOAD_COMICS:
-      newComicList = action.comics.data.results?.map((comic) => comic);
+    case actionTypes.FILTER_COMICS:
+      newComicList = action.filtered;
       break;
     default:
       break;

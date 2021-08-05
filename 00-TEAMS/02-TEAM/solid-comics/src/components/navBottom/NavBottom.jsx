@@ -11,7 +11,7 @@ export default function NavBottom() {
     <>
       <div className="comic__row">
         <span className="titels__comic-list nav-bottom">NAV BOTTOM</span>
-        {comics.length && comics.slice(11, 14).map((
+        {comics.length && comics.slice(15, 18).map((
           comic
         ) => <ComicCard comic={comic} key={comic.id} />)}
       </div>

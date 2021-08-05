@@ -7,8 +7,8 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <Auth0Provider
-    domain="dev-l-6xocc7.eu.auth0.com"
-    clientId="Eiafv7Nban9LU99VotyBrvcbkPwarNVV"
+    domain={process.env.REACT_APP_AUTH0_DOMAIN}
+    clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
     redirectUri={window.location.origin}
   >
     <React.StrictMode>

@@ -1,20 +1,18 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import './ComicAside.scss';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { filterComics } from '../../redux/actions/comics.creators';
 
 export default function ComicAside() {
   const dispatch = useDispatch();
-  function filter() {
-    const baseUrl = 'http://gateway.marvel.com/v1/public/';
-
-    const limit = 'limit=10';
-    const offset = 'offset=0';
-    const apikey = 'apikey=a717c0f1c6c7e9f36248d126d74b8f67';
-    const hash = 'hash=6afa5ea281d51757fc165b2dd77446c5';
-    const completeUrl = `${baseUrl}comics?ts=1&${limit}&${offset}&${apikey}&${hash}`;
-    dispatch(filterComics(completeUrl));
+  const comics = useSelector((store) => store.comics);
+  function filter(inputValue) {
+    if (!inputValue.trim()) {
+      dispatch(filterComics(false));
+    } else {
+      dispatch(filterComics(inputValue, comics));
+    }
   }
 
   return (
@@ -81,13 +79,26 @@ export default function ComicAside() {
           />
         </label>
       </form>
-      <input className="filter__input" type="text" name="input-search" />
+      <input
+        className="filter__input"
+        onChange={(
+          (event) => filter(
+            event.target.value
+          ))}
+        type="text"
+        name="input-search"
+      />
       <button
         type="button"
         className="filter__go-button"
-        onClick={filter}
       >
         GO
+      </button>
+      <button
+        type="button"
+        className="filter__go-button"
+      >
+        cancel
       </button>
     </aside>
   );
