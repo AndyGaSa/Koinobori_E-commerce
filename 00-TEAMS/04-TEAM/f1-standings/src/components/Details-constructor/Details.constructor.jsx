@@ -60,7 +60,6 @@ export default function DetailsConstructor() {
 
   return (
     <>
-
       <header>
         <div>
           <span className="driver">{constructor}</span>
