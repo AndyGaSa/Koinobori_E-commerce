@@ -10,9 +10,10 @@ export default function FavouritList() {
     <>
       <ul>
         {favArtist.map((artist) => (
-          <li>
+          <li data-testid="list-item">
             {artist.name}
             <button
+              data-testid="delete-button"
               type="button"
               onClick={() => dispatch(deleteFavArtists(artist))}
             >
