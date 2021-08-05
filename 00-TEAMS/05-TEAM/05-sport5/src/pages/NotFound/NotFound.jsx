@@ -4,7 +4,7 @@ import './NotFound.scss';
 export default function NotFound() {
   return (
     <>
-      <h2>
+      <h2 className="not-found">
         Error 404
         {' '}
         <span>Page Not Found</span>
