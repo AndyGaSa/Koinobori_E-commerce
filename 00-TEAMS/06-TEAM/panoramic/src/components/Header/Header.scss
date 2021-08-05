@@ -1,0 +1,66 @@
+@import "../../styles/reset.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+
+.header{
+    width: 100%;
+    background-color: $secondary-color;
+    display: flex;
+    height: 60px;
+    position: fixed;
+    &__logo-container{
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__logo-item{
+        height: 35px;
+        width: 40px;
+        margin-left: 10%;
+    }
+    &_title{
+        display: none;
+        font-size: 24px;
+        color: white;
+        margin-left: 1%;
+        font-family: $primary-font;
+    }
+    &__navegation{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        &__link{
+            text-decoration: none;
+            margin-right: 1.5rem;
+            font-weight: bold;
+            color: white;
+            font-size: 14px;
+            font-family: $primary-font;
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .header{
+        width: 100%;
+        margin: 0 auto;
+        height: 80px;
+        padding: 0 50px;
+        &__navegation__link{
+            font-size: 20px;
+            margin-right: 20px;
+            &:hover{
+                color: $tertiary-color;
+                font-size: 24px;
+            }
+        }
+        &_title{
+            font-size: 28px;
+            display: flex;
+        }
+    }
+    
+}
