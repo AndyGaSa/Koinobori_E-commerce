@@ -20,7 +20,7 @@ export default function Details() {
   function addToCart() {
     const LocalStorage = JSON.parse(localStorage.getItem('cart'));
     const findIndex = LocalStorage.findIndex((item) => item.id === +stockId);
-    if (LocalStorage.some((item) => item.name === stock.name)) {
+    if (LocalStorage.some((item) => item.name === stock?.name)) {
       LocalStorage[findIndex].quantity += 1;
     } else {
       stock.quantity = 1;
