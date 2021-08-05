@@ -40,7 +40,7 @@ export default function Details() {
             <ul className="product__smallimages-container">
               {stock
       && stock.imageDetails.map((item) => (
-        <li><img data-testid="image-test" className="product__smallimage" src={item} alt="" /></li>
+        <li key={item}><img className="product__smallimage" src={item} alt="" /></li>
       ))}
             </ul>
           </figure>
@@ -50,7 +50,7 @@ export default function Details() {
             <ul>
               {stock
       && stock.description.map((item) => (
-        <li className="info__description">{`${item}`}</li>
+        <li className="info__description" key={item}>{`${item}`}</li>
       ))}
 
             </ul>

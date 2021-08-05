@@ -14,7 +14,7 @@ export default function Category() {
         <section className="main__products">
           {stockList.clothes
           && stockList.clothes[category].map((item) => (
-            <figure className="product__container">
+            <figure key={item.name} className="product__container">
               <Link className="product__link" to={`/details/${category}/${item.id}`}>
                 <img className="product__image" src={`${item.imageFront}`} alt={`${category}`} />
                 <section className="product__caption">
