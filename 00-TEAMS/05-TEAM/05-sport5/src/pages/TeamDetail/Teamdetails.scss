@@ -1,52 +1,137 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-.details__main{
-    padding-top: 100px;
+.details {
+    padding: 4rem 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    @extend %side-bar;
 
-    h2, h3{
-        width: fit-content;
-        margin: 15px auto;
-        color: white;
+    .details__banner {
+        @extend %top-title;
+        order: -1;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    
+        img{
+            width: 100%;
+            min-height: 100%;
+        }
     }
 
-    .details__badge{
-        margin: 15px auto;
-        width: 200px;
-        height: 200px;
+    .details__information{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+
+        .details__badge{
+            width: 20rem;
+        }
+
+        .details__main-information {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            line-height: 1.6rem;
+
+            .details__name {
+                padding: 1rem;
+                font-size: 3rem;
+                letter-spacing: 2px;
+            }
+
+            section {
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                span {
+                    color: lightgrey;
+                    margin-left: 0.5rem;
+                }
+            }
+   
+        }
+        .details__jersey{
+            padding: 1rem;
+            width: 20rem;
+        }
     }
+
     .details__description{
-        margin: 15px;
-        padding: 15px;
+        width: 80%;
         color: white;
+        margin-top: 2rem;
+        height: 20rem;
+        overflow-y: scroll;
+        text-align: center;
     }
-    .details__jersey{
-        width: 200px;
-        height: 200px;
-        margin: 0 auto 30px;
+    
+    .details__media{
+        margin-bottom: 2rem;
+        max-width: 50rem;
+        padding: 0 4rem;
+        display: flex;
+        justify-content: space-around;
+    
+        i{
+            width: 4rem;
+            height: 4rem;
+            line-height: 4rem;
+            color: white;
+            font-size: 36px;
+            text-align: center;
+            transition: .2s;
+         
+            &:hover{
+                color: $main-color;
+                font-size: 48px;
+            }
+        }
     }
 }
 
-.details__media{
-    padding: 0 auto 150px;
-    margin: 0 auto 150px;
-    display: flex;
+@media screen and (min-width: 720px){
+    .details {
+        min-width: 1000px;
 
-    i{
-        width: 4rem;
-        height: 4rem;
-        line-height: 4rem;
-        color: white;
-        margin: 20px;
-        font-size: 36px;
-        text-align: center;
-     
-        &:hover{
-            color: $main-color;
-            font-size: 48px;
+        .details__information {
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 0 4rem;
+
+            .details__main-information {
+                align-items: flex-start;
+
+                section {
+                    align-items: flex-start;
+                    text-align: left;
+                }
+            }
+        }
+
+        .details__description {
+            height: auto;
+            overflow-y: unset;
+            padding: 2rem 0;
+            line-height: 1.8rem;
+        }
+    
+        .details__media {
+            order: -1;
+            align-self: flex-start;
+            padding: 0 4vw;
         }
     }
+
 }
