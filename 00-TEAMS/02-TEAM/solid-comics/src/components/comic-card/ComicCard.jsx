@@ -10,7 +10,7 @@ export default function ComicCard({ comic }) {
         <Link
           to={`/details/${comic?.id}`}
         >
-          <img className="item__img" src={`${comic?.thumbnail.path}.${comic?.thumbnail.extension}`} alt="comic" />
+          <img data-testid="create-img" className="item__img" src={`${comic?.thumbnail.path}.${comic?.thumbnail.extension}`} alt="comic" />
         </Link>
       </div>
     </>

@@ -4,7 +4,9 @@ $text-light-color: rgb(222, 222, 222);
 $solid-dark: rgb(70, 70, 70);
 
 .footer{
-    position: absolute;
+    clear: both;
+    position: relative;
+    margin-top: -50px;
     display: flex;
     flex-wrap: nowrap;
     height: 50px;
@@ -12,9 +14,8 @@ $solid-dark: rgb(70, 70, 70);
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    bottom: 0;
+    background-color: #464646;
     background-color: $solid-dark;
-    
 }
 .social-links {
     display: flex;

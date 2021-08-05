@@ -11,11 +11,9 @@ export default function Detail() {
   const [comic, setComic] = useState();
 
   useEffect(() => {
-    if (comicId) {
-      const currentComic = comics?.find((item) => +item.id === +comicId);
+    const currentComic = comicId && comics?.find((item) => +item.id === +comicId);
 
-      setComic(currentComic);
-    }
+    setComic(currentComic);
   }, [comicId]);
 
   return (
@@ -27,28 +25,28 @@ export default function Detail() {
 
       </h2>
       <div className="detail__top">
-        <img className="detail__img" src={`${comic?.thumbnail?.path}.${comic?.thumbnail?.extension}`} alt="comic" />
+        <img data-testid="create-img" className="detail__img" src={`${comic?.thumbnail?.path}.${comic?.thumbnail?.extension}`} alt="comic" />
         <section>
-          <div className="detail__creators">
+          <div className="detail__creators" data-testid={`list-item-${comic?.id}`}>
             <h3 className="detail__creator">
               Penciler:
-              {comic?.creators.items[0].name}
+              {comic?.creators?.items[0]?.name}
             </h3>
             <h3 className="detail__creator">
               Writer:
-              {comic?.creators.items[1].name}
+              {comic?.creators?.items[1]?.name}
             </h3>
             <h3 className="detail__creator">
               Colorist:
-              {comic?.creators.items[3].name}
+              {comic?.creators?.items[3]?.name}
             </h3>
             <h3 className="detail__creator">
               Penciler:
-              {comic?.creators.items[1].name}
+              {comic?.creators?.items[1]?.name}
             </h3>
             <h3 className="detail__creator">
               Editor:
-              {comic?.creators.items[2].name}
+              {comic?.creators?.items[2]?.name}
 
             </h3>
           </div>
