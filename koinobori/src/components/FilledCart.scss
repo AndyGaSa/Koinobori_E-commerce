@@ -41,7 +41,7 @@ ul{
         .nameprice__container{
             display:flex;
             flex-direction: column;
-            font-family: Bebas Neue, Roboto, Arial;
+            font-family: Bebas Neue, Roboto, Arial, Tahoma, sans-serif;
             font-size: 34px;
             .item__name{
                 color: black;
@@ -54,13 +54,13 @@ ul{
             display: flex;
             flex-direction: column;
             .item__quantity{
-                font-family: Roboto, Bebas Neue, Arial;
+                font-family: Roboto, Bebas Neue, Arial, Tahoma, sans-serif;
                 font-weight: 700;
                 font-size: 15px;
             }
             .item__input{
                 background-color: $lightgray;
-                font-family: Bebas Neue, Roboto, Arial;
+                font-family: Bebas Neue, Roboto, Arial, Tahoma, sans-serif;
                 font-size: 25px;
                 padding-left: 5px;
             }
