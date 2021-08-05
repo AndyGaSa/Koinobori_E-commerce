@@ -1,12 +1,9 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-
-
 .side-menu-container {
     height: 0;
 }
-
 
 .side-menu {
     aside {
@@ -29,6 +26,20 @@
             overflow-y: scroll;
             overflow-x: hidden;
             animation: slide-in 0.5s;
+
+            .login-button{
+                border-top: 1px solid white;
+                border-bottom: 1px solid white;
+                width: 100%;
+            }
+
+            .side-menu-navigator__login-message {
+                
+                font-family: $main-font;
+                font-size: 24px;
+                text-align: center;
+                margin: 10px;
+            }
     
             .fa-star {
                 margin-right: 5px;

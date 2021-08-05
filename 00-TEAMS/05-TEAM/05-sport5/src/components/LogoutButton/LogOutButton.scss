@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+
+.footer__navigation-logout-button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    outline: inherit;
+    border: none;
+    transition: .2s;
+    height: 2rem;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+
+    &:hover{
+        color: $hover-color;
+    }
+}
+
