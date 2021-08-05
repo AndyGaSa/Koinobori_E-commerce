@@ -1,5 +1,12 @@
 @import '../../assets/colors.scss';
 
+.login-credentials{
+    display: flex;
+    font-size: 10;
+    display: flex;
+    flex-direction: column;
+}
+
 .header{
     display: flex;
     position: fixed;
