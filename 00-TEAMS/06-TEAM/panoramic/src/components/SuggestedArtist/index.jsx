@@ -17,11 +17,15 @@ export default function SuggestedArtist() {
   return (
     <>
       <div className="suggested-artists-container">
-        <h1 className="suggested-artists-container__title">Suggestion Artist</h1>
+        <h1 className="suggested-artists-container__title">Suggested Artist</h1>
         <ul className="suggested-artists-container__artists-cards">
           {
           artists.map((artist) => (
-            <li className="artist-details">
+            <li
+              data-testid="list-item"
+              key="list-item"
+              className="artist-details"
+            >
               <img className="artist-details__artist-img" src={`${artist.images[0].url}`} alt="artist-img" />
               <h3 className="artist-details__artist-name">
                 {artist.name}
@@ -32,6 +36,7 @@ export default function SuggestedArtist() {
               </p>
               <button
                 className="artist-details__add-fav-button"
+                data-testid="add-button"
                 type="button"
                 onClick={() => dispatch(addFavArtist(artist))}
               >
