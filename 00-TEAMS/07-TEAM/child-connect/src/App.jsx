@@ -10,6 +10,7 @@ import Perfil from './pages/Perfil';
 import FormularioEventos from './pages/FormularioEventos';
 import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
+import LogInPage from './pages/LogInPage';
 import './App.css';
 
 const App = () => (
@@ -18,6 +19,9 @@ const App = () => (
       <Header />
       <Switch>
         <Route exact path="/">
+          <LogInPage />
+        </Route>
+        <Route path="/dashboard">
           <Dashboard />
         </Route>
         <Route path="/perfil">

@@ -9,7 +9,7 @@ function LogoutButton() {
     <button
       type="button"
       className="log__button"
-      onClick={() => logout()}
+      onClick={() => logout({ returnTo: window.location.origin })}
     >
       LogOut
     </button>
