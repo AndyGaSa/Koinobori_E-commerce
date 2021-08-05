@@ -5,9 +5,9 @@ import './Perfil.css';
 /* import EventList from './EventList'; */
 
 export default function Perfil() {
-  const currentEvents = useSelector(({ events }) => events);
+  const currentUsers = useSelector(({ users }) => users);
 
-  console.log(currentEvents);
+  console.log(currentUsers[0]?.name);
   return (
     <>
       <div className="profile-container">
@@ -18,7 +18,7 @@ export default function Perfil() {
             <div className="photo-deco-circle" />
           </div>
           <div className="profile-data-block">
-            <h2 className="profile-username">Sandra González</h2>
+            <h2 className="profile-username">{currentUsers[0]?.name}</h2>
             <div className="user-location">
               <img src="https://i.ibb.co/ckmfDWW/pin-1.png" alt="" className="location_icon" />
               <p className="user-city-name">Barcelona, Sants</p>
@@ -59,9 +59,6 @@ export default function Perfil() {
         <div className="profile-lower-block" />
 
       </div>
-
-      <p>{currentEvents[0]?.title}</p>
-
     </>
 
   );

@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import rootReducer from './redux/reducers';
-import fetchAllEvents from './redux/actions/index';
+import { fetchAllEvents, fetchAllUsers } from './redux/actions/index';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
@@ -13,6 +13,7 @@ import './index.css';
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
 store.dispatch(fetchAllEvents());
+store.dispatch(fetchAllUsers());
 
 ReactDOM.render(
   // <Auth0Provider
