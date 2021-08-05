@@ -48,7 +48,7 @@ export default function Cart() {
                   />
                 </div>
                 <div className="delete__button">
-                  <button onClick={() => deleteArticle(item.name, item.quantity)} data-testid="cart-button" className="item__delete" type="button">X</button>
+                  <button data-testid="cart-button" onClick={() => deleteArticle(item.name, item.quantity)} className="item__delete" type="button">X</button>
                   <div className="item__empty" />
                 </div>
               </li>
