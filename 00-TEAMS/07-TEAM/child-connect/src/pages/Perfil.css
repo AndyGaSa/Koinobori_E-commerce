@@ -23,7 +23,9 @@ border: 1px solid rgba(56, 183, 154, 0.7);
 background: rgba(72, 229, 194, 0.22);
 box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 10px 10px 40px rgba(158, 158, 158, 0.5);
 border-radius: 142.5px;
+margin-left: 50px;
 }
+
 
 .photo-deco-circle {
     /* Profile-photo-shadow */

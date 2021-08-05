@@ -12,15 +12,14 @@ export default function Perfil() {
         <div className="profile-upper-block">
           <div className="profile-photo-block">
             <img src="https://i.ibb.co/6vnFxPd/Layer-1.png" alt="profilepic" className="profilepic" />
-            <img src="https://i.ibb.co/xYHTgG6/Rectangle-1.png" alt="rectangle" />
-            <div className="photo-deco-circle" />
+            <img src="https://i.ibb.co/xYHTgG6/Rectangle-1.png" alt="rectangle" className="rectangle" />
           </div>
+
           <div className="profile-data-block">
             <h2 className="profile-username">Sandra González</h2>
             <div className="user-location">
               <img src="https://i.ibb.co/ckmfDWW/pin-1.png" alt="" className="location_icon" />
               <p className="user-city-name">Barcelona, Sants</p>
-
             </div>
             <div className="profile-data-details">
               <div className="children-info">
