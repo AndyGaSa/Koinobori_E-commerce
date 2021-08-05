@@ -24,6 +24,15 @@ export default function LeaguesList() {
     }
   }
 
+  function openCloseCountry(event) {
+    const blockElement = event.target.parentElement.parentElement;
+    if (blockElement.className.includes('closed')) {
+      blockElement.className = 'leagues__block';
+    } else {
+      blockElement.className = 'leagues__block leagues__block--closed';
+    }
+  }
+
   function leagueIsInFavourites(leagueId) {
     return favourites.favouriteLeagues.some(({ id }) => id === leagueId);
   }
@@ -44,8 +53,10 @@ export default function LeaguesList() {
         && Object.entries(leaguesByCountries)[0][1]?.length)
         && Object.entries(leaguesByCountries).map((country) => (
           <div key={`${country[0]}-container`} className="leagues__block">
-            <li key={`${country[0]}-name`} className="leagues__country">{country[0].toUpperCase()}</li>
-            <ul key={`${country[0]}-league`} className="leagues__all-leagues">
+            <li key={`${country[0]}-name`} className="leagues__country">
+              <button type="button" onClick={(event) => openCloseCountry(event)}>{country[0].toUpperCase()}</button>
+            </li>
+            <ul id={`${country[0]}-leagues`} key={`${country[0]}-league`} className="leagues__all-leagues">
               {country[1].map((league, index) => {
                 const isFavourite = leagueIsInFavourites(league.id);
                 return (

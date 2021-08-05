@@ -15,6 +15,7 @@
         margin: 0 auto;
         list-style: none;
 
+
         .leagues__block{
             display: flex;
             flex-direction: column;
@@ -25,16 +26,38 @@
 
             .leagues__country{
                 width: 100%;
-                padding: 1.2rem 0.5rem;
-                text-align: center;
+                height: 4rem;
+                padding: 0.5rem;
                 background-color: $body-clear-background;
                 list-style: none;
                 border-top-right-radius: 1rem;
                 border-top-left-radius: 1rem;
+                border-bottom-right-radius: .25rem;
+                border-bottom-left-radius: .25rem;
                 margin-bottom: 0.2rem;
-                color: black;
-                font-weight: bolder;
-                letter-spacing: 2px; 
+                position: relative;
+                display: flex;
+                align-items: center;
+                transition: .1s;
+
+                &::after {
+                    color: black;
+                    content: "▼";
+                    position: absolute;
+                    right: 1rem;
+                    pointer-events: none;
+                }
+
+
+                button {
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    border: none;
+                    color: black;
+                    font-weight: bolder;
+                    letter-spacing: 2px;
+                }
             }
     
             .leagues__all-leagues{
@@ -43,6 +66,7 @@
                 list-style: none;
                 display: flex;
                 flex-direction: column;
+                transition: 0.1s;
 
               
                 .leagues__league{
@@ -108,7 +132,29 @@
 
                 }
             }
+
+            &--closed {
+                .leagues__country {
+                    border-radius: 1rem;
+                    animation: absorb 0.4s ease;
+
+                    &::after {
+                        content: "▲";
+                    }
+                }
+
+                .leagues__all-leagues{
+                    opacity: 0;
+                    height: 0;
+                    pointer-events: none;
+                }
+            }
         }
     }
 }
 
+@keyframes absorb {
+    15% {height: 3.7rem}
+    70%{height: 4.12rem}
+    100% {height: 4rem}
+}
