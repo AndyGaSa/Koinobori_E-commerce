@@ -3,12 +3,12 @@ import React from 'react';
 import { screen, render } from '../utils/test.utils';
 import Cart from './Cart';
 
-describe('Given a LoginPrfoile component', () => {
-  test('Logout image displays when logged in', () => {
+describe('Given a Cart component', () => {
+  test('Shopping cart will display', () => {
     render(
       <Cart />
     );
 
-    expect(screen.getByTestId('logoutImagen'));
+    expect(screen.getByText(/SHOPPING CART/i));
   });
 });
