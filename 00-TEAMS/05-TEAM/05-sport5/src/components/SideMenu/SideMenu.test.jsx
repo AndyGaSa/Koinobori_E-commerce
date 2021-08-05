@@ -103,6 +103,7 @@ describe('Given a SideMenu component', () => {
   describe('When the user is not authenticated', () => {
     beforeEach(() => {
       useAuth0.mockReturnValue({ isAuthenticated: false });
+      render(<SideMenu />);
     });
 
     test('Then a button Login should be rendered', () => {
