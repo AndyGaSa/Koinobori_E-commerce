@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getLeagues } from '../../redux/actions/sports.creator';
@@ -7,13 +7,48 @@ import './LeaguesList.scss';
 import SportsSelector from '../../components/SportsSelector/SportsSelector';
 
 export default function LeaguesList() {
-  const leaguesByCountries = useSelector((store) => store.countriesLeagues);
+  const leaguesByCountriesApi = useSelector((store) => store.countriesLeagues);
   const favourites = useSelector((store) => store.favourites);
   const dispatch = useDispatch();
   const { sportId = 'Soccer' } = useParams();
+
+  const [filterValue, setFilterValue] = useState('');
+  const [leaguesByCountries, setLeaguesByCountries] = useState(leaguesByCountriesApi);
+
   useEffect(() => {
     dispatch(getLeagues(sportId));
   }, [sportId]);
+
+  useEffect(() => {
+    setLeaguesByCountries(leaguesByCountriesApi);
+  }, [leaguesByCountriesApi]);
+
+  function filterLeagues(event) {
+    const filter = event.target.value;
+    const filteredLeagues = Object.entries(leaguesByCountriesApi).reduce((acc, country) => {
+      if (country[0].includes(filter.toLowerCase())) {
+        [, acc[country[0]]] = country;
+      } else {
+        country[1]?.forEach((league) => {
+          if (league.name.toLowerCase().includes(filter.toLowerCase())) {
+            if (!acc[country[0]]) {
+              acc[country[0]] = [];
+            }
+
+            acc[country[0]] = [
+              ...acc[country[0]],
+              league
+            ];
+          }
+        });
+      }
+
+      return acc;
+    }, {});
+
+    setFilterValue(filter);
+    setLeaguesByCountries(filteredLeagues);
+  }
 
   function changeFavourite(league, event) {
     const button = event.target;
@@ -41,7 +76,7 @@ export default function LeaguesList() {
     <main className="leagues__container">
       <SportsSelector />
       <form>
-        <input type="text" placeholder="Filter" />
+        <input type="text" placeholder="Filter" value={filterValue} onChange={(event) => filterLeagues(event)} />
         <select>
           <option value="Favourites" label="Favourites" />
           <option value="Alphabetically" label="Alphabetically" />
