@@ -32,23 +32,17 @@ export default function Favorites() {
     return updatedFavorites;
   }
 
-  function updateTrack() {
-    dispatch({
-      type: actionTypes.UPDATE_FAVORITE,
-      favorites
-    });
-  }
   return (
     <div>
-      <ul>
+      <h1 className="profile__title">Profile</h1>
+      <ul className="favorites">
         {
               favorites.map((track) => (
                 <li key={track.track_id}>
-                  <ul>
+                  <ul className="favorites__track">
                     <li>
-                      Track name:
-                      {' '}
                       <input
+                        className="track__name"
                         type="text"
                         name="track_name"
                         placeholder="track_name"
@@ -57,27 +51,23 @@ export default function Favorites() {
                       />
                     </li>
                     <li>
-                      Artist name:
-                      {' '}
                       <input
+                        className="track__artist"
                         type="text"
                         name="artist_name"
                         placeholder="artist_name"
                         value={track.artist_name}
                         onChange={(event) => trackChange(event, track.track_id)}
                       />
-
                     </li>
-                    <button
-                      type="button"
-                      className={`list__button ${getFavClass(track)}`}
-                      onClick={() => toggleFav(track)}
-                    >
-                      Add/Remove
-
-                    </button>
-                    <button type="button" id={track.track_id} onClick={() => updateTrack()}>Update</button>
                   </ul>
+                  <button
+                    type="button"
+                    className={`list__button ${getFavClass(track)}`}
+                    onClick={() => toggleFav(track)}
+                  >
+                    +
+                  </button>
                 </li>
               ))
           }
