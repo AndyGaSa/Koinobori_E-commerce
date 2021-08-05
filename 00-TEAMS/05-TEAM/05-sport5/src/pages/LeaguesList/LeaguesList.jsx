@@ -19,12 +19,8 @@ export default function LeaguesList() {
     const button = event.target;
     if (button.className.includes('active')) {
       dispatch(deleteFavouriteLeague(league.id));
-      button.className = 'leagues__favourite-button';
-      button.parentElement.className = 'leagues__league';
     } else {
       dispatch(addFavouriteLeague(league));
-      button.className = 'leagues__favourite-button leagues__favourite-button--active';
-      button.parentElement.className = 'leagues__league leagues__league--top';
     }
   }
 
@@ -50,10 +46,11 @@ export default function LeaguesList() {
           <div key={`${country[0]}-container`} className="leagues__block">
             <li key={`${country[0]}-name`} className="leagues__country">{country[0].toUpperCase()}</li>
             <ul key={`${country[0]}-league`} className="leagues__all-leagues">
-              {country[1].map((league) => {
+              {country[1].map((league, index) => {
                 const isFavourite = leagueIsInFavourites(league.id);
                 return (
                   <li
+                    data-testid={`${country[0]}-league-${index}`}
                     key={league.id}
                     className={isFavourite
                       ? 'leagues__league leagues__league--top'
@@ -64,6 +61,7 @@ export default function LeaguesList() {
                       <span className="leagues__name">{league.name}</span>
                     </Link>
                     <button
+                      data-testid={`${country[0]}-league-${index}-favourite`}
                       className={isFavourite
                         ? 'leagues__favourite-button leagues__favourite-button--active'
                         : 'leagues__favourite-button'}
@@ -72,7 +70,6 @@ export default function LeaguesList() {
                       onClick={(event) => changeFavourite(league, event)}
                     >
                       <i className="fas fa-star" />
-
                     </button>
                   </li>
                 );

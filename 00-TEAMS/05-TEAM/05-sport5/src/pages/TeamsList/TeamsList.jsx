@@ -25,12 +25,8 @@ export default function TeamsList() {
     const button = event.target;
     if (button.className.includes('active')) {
       dispatch(deleteFavouriteTeam(team.id));
-      button.className = 'teams__favourite-button';
-      button.parentElement.clasName = 'teams__team';
     } else {
       dispatch(addFavouriteTeam(team));
-      button.className = 'teams__favourite-button teams__favourite-button--active';
-      button.parentElement.className = 'teams__team teams__team--top';
     }
   }
 
@@ -38,6 +34,7 @@ export default function TeamsList() {
     <>
       <h2 className="TeamList__Title">{allTeamsPerLeague[0]?.league}</h2>
       <ul className="teams">
+
         {allTeamsPerLeague?.length ? allTeamsPerLeague.map((team) => {
           const isFavourite = teamIsInFavourites(team.id);
           return (
