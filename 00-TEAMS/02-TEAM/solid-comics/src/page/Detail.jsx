@@ -1,42 +1,63 @@
-import React from 'react';
+/* eslint-disable no-debugger */
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import './styles/Details.scss';
 
 export default function Detail() {
   const comics = useSelector((store) => store.comics);
-  // const idUrl = window.location.search.split('?')[1];
-  // eslint-disable-next-line no-unused-vars
-  const targetComic = comics.filter((comic) => comic.id !== 93839);
+
+  const { comicId } = useParams();
+  const [comic, setComic] = useState();
+
+  useEffect(() => {
+    if (comicId) {
+      const currentComic = comics?.find((item) => +item.id === +comicId);
+
+      setComic(currentComic);
+    }
+  }, [comicId]);
 
   return (
     <main className="details">
+      <h2 className="detail__title">
+        Title:
+        {comic?.title}
+      </h2>
       <div className="detail__top">
-        <img className="detail__img" src={`${targetComic[0]?.thumbnail?.path}.${targetComic[0]?.thumbnail?.extension}`} alt="comic" />
+        <img className="detail__img" src={`${comic?.thumbnail?.path}.${comic?.thumbnail?.extension}`} alt="comic" />
         <section>
-          <h2 className="detail__title">
-            Title:
-            {targetComic[0]?.title}
-          </h2>
-          <li className="detail__creators">
-            <h3 className="detail__penciler">
+          <div className="detail__creators">
+            <h3 className="detail__creator">
               Penciler:
-              {targetComic[0]?.title}
+              {comic?.creators.items[0].name}
             </h3>
-            <h3 className="detail__writer">
-              Published:
+            <h3 className="detail__creator">
+              Writer:
+              {comic?.creators.items[1].name}
             </h3>
-            <h3 className="detail__colorist">
+            <h3 className="detail__creator">
+              Colorist:
+              {comic?.creators.items[3].name}
+            </h3>
+            <h3 className="detail__creator">
               Penciler:
+              {comic?.creators.items[1].name}
             </h3>
-          </li>
+            <h3 className="detail__creator">
+              Editor:
+              {comic?.creators.items[2].name}
+            </h3>
+          </div>
+          <div />
         </section>
       </div>
       <div className="detail__bottom">
         <span>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam eveniet suntç
-          obcaecati, ea delectus cum! Quae in et
-          numquam dolor earum cumque. Corporis dicta, ipsam labore impedit eveniet itaque! Rem!
-
+          print price:
+          {' '}
+          {comic?.prices[0].price}
+          $
         </span>
       </div>
     </main>
