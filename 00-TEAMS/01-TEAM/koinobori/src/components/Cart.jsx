@@ -8,12 +8,19 @@ export default function Cart() {
 
   useEffect(() => {
     setLocalStorage(JSON.parse(localStorage.getItem('cart')));
-  }, []);
+  }, [LocalStorage]);
 
-  function deleteArticle(name) {
-    const newLocalStorage = LocalStorage.filter((item) => item.name !== name);
-    setLocalStorage(newLocalStorage);
-    localStorage.setItem('cart', JSON.stringify(newLocalStorage));
+  function deleteArticle(name, quantity) {
+    if (quantity === 1) {
+      const newLocalStorage = LocalStorage.filter((item) => item.name !== name);
+      setLocalStorage(newLocalStorage);
+      localStorage.setItem('cart', JSON.stringify(newLocalStorage));
+    } else {
+      const findIndex = LocalStorage.findIndex((item) => item.name === name);
+      LocalStorage[findIndex].quantity -= 1;
+      setLocalStorage(LocalStorage);
+      localStorage.setItem('cart', JSON.stringify(LocalStorage));
+    }
   }
 
   return (
@@ -35,13 +42,13 @@ export default function Cart() {
                     className="item__input"
                     type="number"
                     name="quantity"
-                    placeholder={item.quantity}
+                    value={item.quantity}
                     min="1"
                     max="100"
                   />
                 </div>
                 <div className="delete__button">
-                  <button data-testid="cart-button" onClick={() => deleteArticle(item.name)} className="item__delete" type="button">X</button>
+                  <button onClick={() => deleteArticle(item.name, item.quantity)} data-testid="cart-button" className="item__delete" type="button">X</button>
                   <div className="item__empty" />
                 </div>
               </li>
