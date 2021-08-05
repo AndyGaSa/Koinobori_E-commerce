@@ -11,6 +11,7 @@ export default function Dashboard() {
   const tracks = useSelector((store) => store.sonary);
   const dispatch = useDispatch();
   const [filteredSongs, setFilterSong] = useState();
+  const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
 
   function filterSongs(searchTerm) {
     if (!searchTerm) setFilterSong(tracks);
@@ -59,7 +60,7 @@ export default function Dashboard() {
                   </button>
                   <Link className="track" to={`/details/${track.track_id}`}>
                     <ul className="list__aux">
-                      <li className="track__thumbnail">
+                      <li className="track__thumbnail" style={{ backgroundColor: `#${randomColor()}` }}>
                         <img src="" alt="" />
                       </li>
                       <li>
