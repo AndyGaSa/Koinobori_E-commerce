@@ -9,6 +9,9 @@ export default function favoriteReducer(favorites = initializeLocalStorage(), ac
   let track;
 
   switch (action.type) {
+    case actionTypes.LOAD_FAVORITES:
+      newState = action.favouriteTracks;
+      break;
     case actionTypes.TOGGLE_FAVORITES:
 
       track = action.track;
