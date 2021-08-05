@@ -179,5 +179,18 @@ color: #9E9E9E;
 }
 .profile-lower-block {
     display: flex;
+    flex-direction: column;
     width: 100%;
+    padding-left: 100px;
+font-family: Alegreya Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 35px;
+/* or 146% */
+text-align: justify;
+
+color: #6E6D70;
+
+
 }

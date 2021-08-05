@@ -37,7 +37,7 @@ export default function Perfil() {
                 </div>
                 <div className="children-info__age">
                   <img src="https://i.ibb.co/TMfrrNS/girl.png" alt="" className="children-info__img" />
-                  <p className="profile-data__text"> de 5 años</p>
+                  <p className="profile-data__text"> de 8 años</p>
                 </div>
 
               </div>
@@ -58,10 +58,23 @@ export default function Perfil() {
               </div>
             </div>
           </div>
-          <div className="profile-rating-block" />
+          <div className="profile-rating-block">
+            <img src="https://i.ibb.co/Cv61Tmy/Rating-icon.png" alt="rating-circle" />
+          </div>
         </div>
-        <div className="profile-lower-block" />
+        <div className="profile-lower-block">
+          <h3>Información personal:</h3>
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC, making it over
+            2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+            Virginia, looked up one of the more obscure Latin words, consectetur, from a
+            Lorem Ipsum passage, and going through the cites of the word in classical literature,
+            discovered the undoubtable source
 
+          </p>
+
+        </div>
       </div>
     </>
 
