@@ -1,12 +1,19 @@
 /* eslint-disable no-console */
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchAllEvents } from '../redux/actions';
 import Event from './Event';
 import './EventList.css';
 
 const EventList = () => {
   let currentEvents = useSelector(({ events }) => events);
   currentEvents = currentEvents.slice(0, 6);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAllEvents());
+  }, []);
 
   return (
     <>

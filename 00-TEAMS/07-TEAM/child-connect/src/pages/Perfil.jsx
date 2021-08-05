@@ -1,11 +1,18 @@
 /* eslint-disable no-console */
-import React from 'react';
-/* import { useSelector } from 'react-redux'; */
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchAllUsers } from '../redux/actions';
 import './Perfil.css';
 /* import EventList from './EventList'; */
 
 export default function Perfil() {
-  /* const currentUsers = useSelector(({ users }) => users); */
+  const currentUsers = useSelector(({ users }) => users);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAllUsers());
+  }, []);
+
   return (
     <>
       <div className="profile-container">
@@ -16,7 +23,7 @@ export default function Perfil() {
           </div>
 
           <div className="profile-data-block">
-            <h2 className="profile-username">Sandra González</h2>
+            <h2 className="profile-username">{currentUsers[0]?.name}</h2>
             <div className="user-location">
               <img src="https://i.ibb.co/ckmfDWW/pin-1.png" alt="" className="location_icon" />
               <p className="user-city-name">Barcelona, Sants</p>
@@ -56,9 +63,6 @@ export default function Perfil() {
         <div className="profile-lower-block" />
 
       </div>
-
-      <p />
-
     </>
 
   );

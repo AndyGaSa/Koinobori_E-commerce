@@ -7,7 +7,6 @@
 .main__header {
     width: 100%;
     background-image: url(https://cei-laaurora.com/wp-content/uploads/2019/07/escuelas-de-verano-en-Valencia-ni%C3%B1os-juganfo-1000x500.jpg);
-    background-position: 0px 0px;
     background-repeat: no-repeat;
     background-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
@@ -30,8 +29,9 @@
 
 .header__menu-buttons {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    padding: 20px;  
+    padding: 20px;
 }
 
 .header__menu_buttons--buttons {
@@ -52,7 +52,7 @@
 
 .header__button-perfil:active {
     color: red;
-} 
+}
 
 .button__crear-evento {
     border-radius: 3px;
@@ -66,7 +66,7 @@
     text-align: center;
     padding: 8px;
     color: #FFFFFF;
-      
+
 }
 
 .button__crear-evento:active {
@@ -80,7 +80,72 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 33px;
     text-align: center;
-    text-shadow: 2px 2px rgb(95, 94, 94);
+    text-shadow: 1px 1px rgb(117, 116, 116);
+}
+
+@media only screen and (max-width: 675px) {
+
+    .header__menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__button-perfil {
+        background-color: rgb(158, 158, 158);
+        border-radius: 3px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 9px 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .header__nav-menu {
+        width: 100%;
+    }
+
+    .header__title {
+        margin-top: 250px;
+        
+    }
+
+    .header__title h1 {
+        color: rgb(158, 158, 158);
+    }
+
+}
+
+@media only screen and (max-width: 541px) {
+
+    .main-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__menu-buttons {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+        margin: 20px;
+    }
+
+    .header__menu_buttons--buttons {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin: 20px;   
+    }
+    .header__nav-menu {
+        padding: 0px;
+        margin-top: 0px;
+    }
+    .header__title {
+        margin-top: 300px;
+    }
+    .header__button-perfil {
+        margin-bottom: 50px;
+    }
+
 }
 
 
