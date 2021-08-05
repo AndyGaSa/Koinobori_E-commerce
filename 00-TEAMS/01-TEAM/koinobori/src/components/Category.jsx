@@ -10,7 +10,7 @@ export default function Category() {
     <main className="main">
 
       <section className="main__container">
-        <h2 className="main__title">{category}</h2>
+        <h2 data-testid={category} className="main__title">{category}</h2>
         <section className="main__products">
           {stockList.clothes
           && stockList.clothes[category].map((item) => (
