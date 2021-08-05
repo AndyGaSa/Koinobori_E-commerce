@@ -18,8 +18,8 @@ function App() {
   return (
     <Provider store={configureStore()}>
       <Auth0Provider
-        domain="dev-f4fbum08.us.auth0.com"
-        clientId="vqPW5cmgTiKKjsTtNWwnQ3AZUPd5YaGM"
+        domain={process.env.REACT_APP_AUTH0_DOMAIN}
+        clientId={process.env.REACT_APP_AUTH0_CLIENTID}
         redirectUri={window.location.origin}
       >
         <BrowserRouter>
