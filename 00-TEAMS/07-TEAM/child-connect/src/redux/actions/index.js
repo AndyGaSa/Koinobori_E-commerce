@@ -42,23 +42,28 @@ const fetchAllUsers = () => ((dispatch) => (
     .catch((error) => { console.error(error); })
 ));
 
-const fetchFaqs = (data) => ({
+const fetchFaqs = (faqs) => ({
   type: actionTypes.FETCH_FAQ,
-  data
+  faqs
 });
 
-const fetchAllFaqs = () => ((dispatch) => (
-  axios.get('http://localhost:3001/faq', {
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
-    },
-    responseType: 'json'
-  })
-    .then((response) => {
-      dispatch(fetchFaqs(response.data));
+const fetchAllFaqs = () => ((dispatch) => {
+  console.log('hola che!');
+
+  return (
+    axios.get('http://localhost:3001/faq', {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+      },
+      responseType: 'json'
     })
-    .catch((error) => { console.error(error); })
-));
+      .then((response) => {
+        console.log(response);
+        dispatch(fetchFaqs(response.data));
+      })
+      .catch((error) => { console.error(error); })
+  );
+});
 
 export { fetchAllEvents, fetchAllUsers, fetchAllFaqs };

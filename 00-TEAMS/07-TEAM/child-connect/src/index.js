@@ -1,19 +1,19 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
+// import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
-import rootReducer from './redux/reducers';
-import { fetchAllEvents, fetchAllUsers } from './redux/actions/index';
+// import thunk from 'redux-thunk';
+// import rootReducer from './redux/reducers';
+// import { fetchAllEvents, fetchAllUsers } from './redux/actions/index';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import store from './redux/store/index';
+// const store = createStore(rootReducer, applyMiddleware(thunk));
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
-
-store.dispatch(fetchAllEvents());
-store.dispatch(fetchAllUsers());
+// store.dispatch(fetchAllEvents());
+// store.dispatch(fetchAllUsers());
 
 ReactDOM.render(
   // <Auth0Provider
@@ -34,7 +34,7 @@ ReactDOM.render(
   //   </React.StrictMode>
   // </Auth0Provider>,
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider store={store()}>
       <App />
     </Provider>
   </React.StrictMode>,
