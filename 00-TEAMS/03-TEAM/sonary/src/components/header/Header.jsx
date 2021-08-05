@@ -10,15 +10,15 @@ export default function Header() {
     <header className="header">
       <nav className="header__top">
         <div className="header__aux" />
-        <figure clasName="header__sonary">
-          <a clasName="sonary__anchor" href="/dashboard">
+        <figure className="header__sonary">
+          <a className="sonary__anchor" href="/dashboard">
             <img className="sonary__icon" alt="sonary icon" src={logo} />
           </a>
         </figure>
 
         <figure className="header__profile">
           <a className="profile__anchor" href="/profile">
-            <img src={isAuthenticated ? user.picture : iconUser} className="header__profile" alt="profile icon" />
+            <img src={isAuthenticated ? user.picture : iconUser} className="header__profile" alt="profile icon" data-testid="profile-image" />
           </a>
         </figure>
       </nav>

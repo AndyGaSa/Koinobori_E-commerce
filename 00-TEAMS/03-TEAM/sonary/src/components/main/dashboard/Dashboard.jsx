@@ -55,7 +55,7 @@ export default function Dashboard() {
     <main className="dashboard">
       <section className="dashboard__top">
         <h1 className="dashboard__title">Top Chart</h1>
-        <input type="search" placeholder="  Search for a song!" onChange={(event) => filterSongs(event.target.value)} className="dashboard__search" />
+        <input type="search" placeholder="  Search for a song!" data-testid="search-input" onChange={(event) => filterSongs(event.target.value)} className="dashboard__search" />
       </section>
       <ul className="dashboard__bottom">
         {
@@ -63,8 +63,9 @@ export default function Dashboard() {
             filteredSongs && filteredSongs.map((track) => {
               ranking += 1;
               return (
-                <li className="list__track">
+                <li key={track.track_id} className="list__track">
                   <button
+                    data-testid={`button-${track.track_id}`}
                     type="button"
                     className={`list__button ${getFavClass(track)}`}
                     onClick={() => toggleFav(track)}
