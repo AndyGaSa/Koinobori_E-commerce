@@ -13,13 +13,12 @@ function loadComics() {
   };
   const limit = 'limit=20';
   const offset = 'offset=200';
-  const apikey = 'apikey=a717c0f1c6c7e9f36248d126d74b8f67';
-  const hash = 'hash=6afa5ea281d51757fc165b2dd77446c5';
-  console.log('llamada a api');
+  const apikey = process.env.REACT_APP_MARVEL_APIKEY;
+  const hash = process.env.REACT_APP_MARVEL_HASH;
 
   return async (dispatch) => {
     const { data } = await axios(
-      `${baseUrl}${items.comics}?ts=1&${limit}&${offset}&${apikey}&${hash}`
+      `${baseUrl}${items.comics}?ts=1&${limit}&${offset}&apikey=${apikey}&hash=${hash}`
     );
 
     dispatch({
@@ -28,18 +27,32 @@ function loadComics() {
     });
   };
 }
-function filterComics(url) {
-  return async (dispatch) => {
-    const { data } = await axios(url);
 
-    dispatch({
+function filterStatus() {
+  return {
+    type: actionTypes.FILTER_STATUS,
+    filterStatus: 'false'
+  };
+}
+function filterComics(inputValue, comics) {
+  if (!inputValue) {
+    return {
       type: actionTypes.FILTER_COMICS,
-      filtered: data
-    });
+      filtered: []
+    };
+  }
+  const filteredList = comics?.filter((comic) => comic?.title.toLowerCase().includes(
+    inputValue.toLowerCase()
+  ));
+
+  return {
+    type: actionTypes.FILTER_COMICS,
+    filtered: filteredList
   };
 }
 
 export {
   loadComics,
-  filterComics
+  filterComics,
+  filterStatus
 };
