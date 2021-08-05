@@ -1,10 +1,14 @@
 import actionTypes from '../actions/action.types';
 
-export default function StockReducer({ type, payload }, stockList = {}) {
+export default function StockReducer(stockList = {}, { type, payload }) {
   let newStockList = stockList;
+  switch (type) {
+    case actionTypes.LOAD_STOCK:
+      newStockList = { ...newStockList, ...payload };
+      break;
 
-  if (type === actionTypes.LOAD_STOCK) {
-    newStockList = { ...newStockList, ...payload };
+    default:
+      break;
   }
 
   return newStockList;
