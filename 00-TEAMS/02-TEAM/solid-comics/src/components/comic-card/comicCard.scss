@@ -3,11 +3,14 @@
     height: 441.484;
 }
 .item__img{
+    filter: grayscale(100%);
     width: 100%;
     height: auto;
     box-shadow: 0 26px 24px -16px rgb(0 0 0 / 40%);
     margin-bottom: 10px;
 }
+.item__img:hover{
+    filter:none;}
 .comic__row{
     display: grid;
     grid-template-columns: repeat(2,1fr);

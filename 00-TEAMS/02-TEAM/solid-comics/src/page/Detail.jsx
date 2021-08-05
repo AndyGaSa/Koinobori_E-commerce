@@ -22,7 +22,9 @@ export default function Detail() {
     <main className="details">
       <h2 className="detail__title">
         Title:
+
         {comic?.title}
+
       </h2>
       <div className="detail__top">
         <img className="detail__img" src={`${comic?.thumbnail?.path}.${comic?.thumbnail?.extension}`} alt="comic" />
@@ -47,6 +49,7 @@ export default function Detail() {
             <h3 className="detail__creator">
               Editor:
               {comic?.creators.items[2].name}
+
             </h3>
           </div>
           <div />
@@ -57,6 +60,7 @@ export default function Detail() {
           print price:
           {' '}
           {comic?.prices[0].price}
+
           $
         </span>
       </div>

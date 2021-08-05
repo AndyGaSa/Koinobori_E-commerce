@@ -1,7 +1,7 @@
 .header {
     width: 375px;
     height: 150px;
-    margin: 0; 
+    margin-bottom: 10px; 
     border: 5px solid #000;
         .header-nav {
             position: relative;
@@ -9,7 +9,7 @@
                 position: absolute;
                 width: 91px;
                 height: 140px;
-                margin: 0px 0px 0px 0px;
+                margin: 0;
                 clip-path: polygon(0% 0, 100% 0, 75% 100%, 0% 100%);
                 top: 0px;
                 left: 0px;
