@@ -14,6 +14,8 @@ export default function Information() {
   const { track_id } = useParams();
   const [foundTrack, setFoundTrack] = useState();
 
+  const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
+
   useEffect(() => {
     if (!tracks.length) dispatch(loadDashboard());
   }, []);
@@ -29,7 +31,7 @@ export default function Information() {
     <div>
       <h2 className="details__title">{foundTrack?.track_name}</h2>
       <aside className="details__information">
-        <figure className="details__figure" />
+        <figure className="details__figure" style={{ backgroundColor: `#${randomColor()}` }} />
         <ul className="details__track">
           <li className="track__artist">{foundTrack?.artist_name}</li>
           <li className="track__album">

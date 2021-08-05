@@ -12,7 +12,7 @@ export default function Header() {
         <div className="header__aux" />
         <figure clasName="header__sonary">
           <a clasName="sonary__anchor" href="/dashboard">
-            <img className="sonary__icon" alt="sonary icon" src={logo} />
+            <img data-testid="logo-image" className="sonary__icon" alt="sonary icon" src={logo} />
           </a>
         </figure>
 

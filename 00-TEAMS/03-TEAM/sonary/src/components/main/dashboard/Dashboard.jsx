@@ -15,6 +15,7 @@ export default function Dashboard() {
 
   const dispatch = useDispatch();
   const [filteredSongs, setFilterSong] = useState();
+  const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
 
   function toggleFav(track) {
     dispatch({
@@ -54,7 +55,7 @@ export default function Dashboard() {
     <main className="dashboard">
       <section className="dashboard__top">
         <h1 className="dashboard__title">Top Chart</h1>
-        <input type="search" placeholder="  Search for a song!" onChange={(event) => filterSongs(event.target.value)} className="dashboard__search" />
+        <input type="search" placeholder="  Search for a song!" data-testid="search-input" onChange={(event) => filterSongs(event.target.value)} className="dashboard__search" />
       </section>
       <ul className="dashboard__bottom">
         {
@@ -62,8 +63,9 @@ export default function Dashboard() {
             filteredSongs && filteredSongs.map((track) => {
               ranking += 1;
               return (
-                <li className="list__track">
+                <li key={track.track_id} className="list__track">
                   <button
+                    data-testid={`button-${track.track_id}`}
                     type="button"
                     className={`list__button ${getFavClass(track)}`}
                     onClick={() => toggleFav(track)}
@@ -72,7 +74,7 @@ export default function Dashboard() {
                   </button>
                   <Link className="track" to={`/details/${track.track_id}`}>
                     <ul className="list__aux">
-                      <li className="track__thumbnail">
+                      <li className="track__thumbnail" style={{ backgroundColor: `#${randomColor()}` }}>
                         <img src="" alt="" />
                       </li>
                       <li>

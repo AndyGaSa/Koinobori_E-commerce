@@ -6,10 +6,11 @@ function LogoutButton() {
 
   return (
     <button
+      className="logout"
       type="button"
       onClick={() => logout()}
     >
-      Log Out
+      Log out
     </button>
   );
 }
