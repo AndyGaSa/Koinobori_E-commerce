@@ -21,6 +21,7 @@ export default function SearchArtists() {
     <main className="main">
       <h2 className="main__list-title">Search your favourite artist list</h2>
       <input
+        data-testid="search-input"
         className="main__input-search"
         placeholder="Search your favourite artist"
         onChange={(event) => dispatch(loadSearchedArtists(event.target.value))}
