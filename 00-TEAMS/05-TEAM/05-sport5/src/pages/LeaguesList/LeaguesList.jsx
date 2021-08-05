@@ -19,12 +19,8 @@ export default function LeaguesList() {
     const button = event.target;
     if (button.className.includes('active')) {
       dispatch(deleteFavouriteLeague(league.id));
-      button.className = 'leagues__favourite-button';
-      button.parentElement.className = 'leagues__league';
     } else {
       dispatch(addFavouriteLeague(league));
-      button.className = 'leagues__favourite-button leagues__favourite-button--active';
-      button.parentElement.className = 'leagues__league leagues__league--top';
     }
   }
 
