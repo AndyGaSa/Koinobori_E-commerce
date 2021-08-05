@@ -12,8 +12,8 @@ ReactDOM.render(
 
   <React.StrictMode>
     <Auth0Provider
-      domain="dev-5im3f8si.us.auth0.com"
-      clientId="012NmOfxleSuWEuJB4b3sLOf3CtqVKEu"
+      domain={process.env.REACT_APP_AUTH0_DOMAIN}
+      clientId={process.env.REACT_APP_AUTH0_CLIENTID}
       redirectUri="http://localhost:3000/dashboard"
     >
       <Provider store={store()}>
