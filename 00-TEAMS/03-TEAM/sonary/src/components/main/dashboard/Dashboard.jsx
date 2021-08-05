@@ -30,13 +30,13 @@ export default function Dashboard() {
                 <li className="list__track">
                   <button
                     type="button"
+                    className="list__button"
                     onClick={() => dispatch({
                       type: actionTypes.TOGGLE_FAVORITES,
                       track
                     })}
                   >
-                    Add/Remove
-
+                    +
                   </button>
                   <Link className="track" to={`/details/${track.track_id}`}>
                     <ul className="list__aux">
@@ -57,10 +57,10 @@ export default function Dashboard() {
                           </li>
                         </ul>
                       </li>
+                      <li className="information__auxiliar" />
                     </ul>
                   </Link>
                 </li>
-
               );
             })
 

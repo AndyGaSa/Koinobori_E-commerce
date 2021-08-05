@@ -1,5 +1,5 @@
 import React from 'react';
-import Favorites from '../favorites/Favorites';
+import Favorites from './Favorites';
 import UserProfile from './UserProfile';
 
 export default function Profile() {

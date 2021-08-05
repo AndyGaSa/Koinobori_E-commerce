@@ -6,15 +6,15 @@ $gris90:#575757;
 $verde: rgb(0, 229.5, 0);
 
 .details {
-    margin: 20px 160px 0px 160px;
+    margin: 40px 160px 0px 160px;
     display: flex; 
     flex-direction: row;
 }
 
 .details__title {
     font-size: 30px;
+    left: 170px;
     position: absolute;
-    left: 540px;
 }
 
 .details__information {
@@ -32,9 +32,28 @@ $verde: rgb(0, 229.5, 0);
 }
 
 .details__track {
-    margin: 20px 20px 20px 20px;
+    margin: 10px 10px 20px 15px;
     font-size: 20px;
     .track__artist {
         font-weight: bold;
     }
+    .track__artist:hover{
+        color: $verde;
+    }
+    .track__album:hover{
+        color: $verde;
+    }
+
+}
+
+.details__lyrics {
+    margin: 60px 20px 0px 0px;
+    padding: 10px 10px 20px 15px;
+    width: 740px;
+    background-color: $gris5;
+    border-radius: 10px;
+}
+
+::selection{
+    background-color: $verde;
 }

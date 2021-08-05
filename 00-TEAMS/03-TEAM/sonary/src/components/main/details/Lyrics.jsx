@@ -16,7 +16,7 @@ export default function Lyrics() {
     }
   }, []);
   return (
-    <div>
+    <div className="details__lyrics">
       {lyrics.map((p) => (
         <p>{p}</p>
       ))}
