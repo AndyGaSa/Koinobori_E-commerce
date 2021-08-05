@@ -21,7 +21,7 @@ export default function Footer() {
             {' '}
           </button>
         </Link>
-        <Link to="/">
+        <Link to="/ChartContainer">
           <button className="footer__stats" type="button">
             {' '}
             <img className="img" src="https://image.flaticon.com/icons/png/512/1420/1420470.png" alt="" />
