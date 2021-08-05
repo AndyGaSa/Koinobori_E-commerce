@@ -28,6 +28,10 @@ describe('Given a SideMenu component', () => {
       test('Then should render Favourite Teams', () => {
         expect(screen.getByText('Favourite Teams')).toBeInTheDocument();
       });
+
+      test('Then should render a Logout button', () => {
+        expect(screen.getByText('Logout')).toBeInTheDocument();
+      });
     });
 
     describe('And there are 3 favourite leagues', () => {
