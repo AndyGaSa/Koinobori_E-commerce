@@ -11,10 +11,11 @@ function loadComics() {
     series: 'series',
     stories: 'stories'
   };
-  const limit = 'limit=2';
+  const limit = 'limit=20';
   const offset = 'offset=200';
   const apikey = 'apikey=a717c0f1c6c7e9f36248d126d74b8f67';
   const hash = 'hash=6afa5ea281d51757fc165b2dd77446c5';
+  console.log('llamada a api');
 
   return async (dispatch) => {
     const { data } = await axios(

@@ -8,7 +8,6 @@ export default function ComicFilter() {
   return (
     <section>
       <FilterTop />
-      {/* <ComicAside /> */}
       <FilterFavourites />
     </section>
   );

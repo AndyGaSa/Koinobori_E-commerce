@@ -11,31 +11,20 @@ import ComicFilter from '../components/comic-list/ComicFilter';
 
 export default function ComicList() {
   const dispatch = useDispatch();
+  const comicStore = useSelector((store) => store.comics);
   useEffect(() => {
     dispatch(loadComics());
   }, []);
-  const comics = useSelector((store) => store.comics);
-  console.log(comics);
 
+  if (comicStore.length > 0) {
+    return (
+      <section className="section__comic-list">
+        <ComicFilter />
+        <ComicNav />
+      </section>
+    );
+  }
   return (
-    <section className="section__comic-list">
-      {/* <ul className="list">
-        {
-          if (comics.lenght>0){
-          comics.map((hero) => (
-            <li className="list-item">
-              <span className="hero-name">{hero.title}</span>
-              <img className="hero-image"
-              src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
-              alt="charachter" />
-            </li>
-          ))
-          }
-        }
-      </ul> */}
-
-      <ComicFilter />
-      <ComicNav />
-    </section>
+    <section className="section__comic-list" />
   );
 }
