@@ -34,22 +34,22 @@ export default function TeamsList() {
     <>
       <h2 className="TeamList__Title">TeamList title:</h2>
       <ul className="teams">
-        {allTeamsPerLeague?.length ? allTeamsPerLeague.map((team) => {
+        {allTeamsPerLeague?.length ? allTeamsPerLeague.map((team, index) => {
           const isFavourite = teamIsInFavourites(team.id);
           return (
             <li
-              data-testid="all-teams-per-league"
+              data-testid={`${team.name}-team-${index}`}
               key={team.name}
               className={isFavourite
                 ? 'teams__team teams__team--top'
                 : 'teams__team'}
-
             >
               <Link to={`/team/${team.id}`}>
                 <img src={team.badge} alt={team.name} className="team__badge" />
                 <span className="team__name">{team.name}</span>
               </Link>
               <button
+                data-testid={`${team.name}-team-${index}-favourite`}
                 className={isFavourite
                   ? 'teams__favourite-button teams__favourite-button--active'
                   : 'teams__favourite-button'}
