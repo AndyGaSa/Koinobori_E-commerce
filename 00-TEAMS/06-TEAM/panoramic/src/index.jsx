@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Auth0Provider } from '@auth0/auth0-react';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import configureStore from './redux/store';
@@ -14,24 +15,26 @@ import List from './pages/List';
 import SearchedArtistList from './pages/SearchArtists';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={configureStore()}>
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/home" />
-          <Route path="/login" component={Login} />
-          <Route path="/notfound" component={NotFound} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/list" component={List} />
-          <Route path="/search" component={SearchedArtistList} />
-          <Route component={NotFound} />
-        </Switch>
-        <Footer />
-      </BrowserRouter>
-    </Provider>
-  </React.StrictMode>,
+  <Auth0Provider>
+    <React.StrictMode>
+      <Provider store={configureStore()}>
+        <BrowserRouter>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/home" />
+            <Route path="/login" component={Login} />
+            <Route path="/notfound" component={NotFound} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/list" component={List} />
+            <Route path="/search" component={SearchedArtistList} />
+            <Route component={NotFound} />
+          </Switch>
+          <Footer />
+        </BrowserRouter>
+      </Provider>
+    </React.StrictMode>
+  </Auth0Provider>,
   document.getElementById('root')
 );
 
