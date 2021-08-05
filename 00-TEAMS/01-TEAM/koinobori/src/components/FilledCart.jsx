@@ -13,6 +13,7 @@ export default function FilledCart() {
     setLocalStorage(LocalStorage.filter((item) => item.name !== name));
     localStorage.setItem('cart', JSON.stringify(LocalStorage));
   }
+
   return (
     <main className="main">
       <ul className="items__container">
