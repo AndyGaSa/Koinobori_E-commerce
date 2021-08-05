@@ -35,7 +35,7 @@ function App() {
                     <Route path="/profile" component={Profile} />
                     <Route path="/battle" component={Battle} />
                     <Route path="/login" component={Login} />
-                    <Route path="/details/:comic" component={Detail} />
+                    <Route path="/details/:comicId" component={Detail} />
                     <Route component={NotFound} />
                   </Switch>
                 </>
