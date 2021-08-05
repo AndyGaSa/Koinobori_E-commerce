@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import {
-  BrowserRouter, Switch, Route, Redirect
-} from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import configureStore from './redux/store';
@@ -16,13 +14,14 @@ import List from './pages/List';
 import SearchedArtistList from './pages/SearchArtists';
 
 ReactDOM.render(
+
   <React.StrictMode>
     <Provider store={configureStore()}>
       <BrowserRouter>
         <Header />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Redirect path="/home" to="/" />
+          <Route path="/home" />
           <Route path="/login" component={Login} />
           <Route path="/notfound" component={NotFound} />
           <Route path="/profile" component={Profile} />
