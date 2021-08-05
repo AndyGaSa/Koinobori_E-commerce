@@ -19,10 +19,10 @@ function App() {
       <Switch>
         <Route path="/" exact component={LeaguesList} />
         <Route path="/:sportId" exact component={LeaguesList} />
-        <Redirect path="/countries/:sportId" to="/:sportId" />
+        <Redirect path="/countries/:sportId" exact to="/:sportId" />
         <Route path="/league/:leagueId" exact component={TeamsList} />
         <Route path="/team/:teamId" exact component={TeamDetail} />
-        <Route component={NotFound} />
+        <Route path="*" component={NotFound} />
       </Switch>
       <Footer />
     </>
