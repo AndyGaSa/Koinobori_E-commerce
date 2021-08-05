@@ -12,8 +12,7 @@ import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 import Profile from './pages/Profile';
 import Footer from './components/Footer';
-import List from './pages/List';
-import SearchedArtistList from './pages/SearchArtists';
+import FavouriteArtists from './pages/FavouriteArtists';
 
 ReactDOM.render(
 
@@ -27,8 +26,7 @@ ReactDOM.render(
           <Route path="/login" component={Login} />
           <Route path="/notfound" component={NotFound} />
           <Route path="/profile" component={Profile} />
-          <Route path="/list" component={List} />
-          <Route path="/search" component={SearchedArtistList} />
+          <Route path="/Favouritelist" component={FavouriteArtists} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

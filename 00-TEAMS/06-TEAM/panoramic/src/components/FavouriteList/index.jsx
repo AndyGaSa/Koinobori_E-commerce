@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteFavArtists } from '../../redux/actions/actionCreatorsFavList';
 
-export default function List() {
+export default function FavouritList() {
   const dispatch = useDispatch();
   const favArtist = useSelector((store) => store.favouriteArtists);
 

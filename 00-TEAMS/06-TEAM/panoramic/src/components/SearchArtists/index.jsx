@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import getSpotifyToken from '../../redux/actions/actionCreatorsHome';
 import { addFavArtist } from '../../redux/actions/actionCreatorsFavList';
 import loadSearchedArtists from '../../redux/actions/actionCreatorsSearchedList';
-import './Search.scss';
+import './SearchArtist.scss';
 
 export default function SearchArtists() {
   const dispatch = useDispatch();
