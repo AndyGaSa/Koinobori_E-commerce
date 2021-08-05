@@ -32,23 +32,23 @@ export default function TeamDetail() {
         <img src={teamDetails.equipment} alt="team-jersey" className="details__jersey" />
       </main>
       <section className="details__media">
-        <a className="details__instagram" href={`${teamDetails.instagram}`}>
+        <a className="details__instagram" href={`https://${teamDetails.instagram}`}>
           {' '}
           <i className="fab fa-instagram" />
         </a>
-        <a className="details__twitter" href={`${teamDetails.twitter}`}>
+        <a className="details__twitter" href={`https://${teamDetails.twitter}`}>
           {' '}
           <i className="fab fa-twitter" />
         </a>
-        <a className="details__facebook" href={`${teamDetails.facebook}`}>
+        <a className="details__facebook" href={`https://${teamDetails.facebook}`}>
           {' '}
           <i className="fab fa-facebook-square" />
         </a>
-        <a className="details__youtube" href={`${teamDetails.youtube}`}>
+        <a className="details__youtube" href={`https://${teamDetails.youtube}`}>
           {' '}
           <i className="fab fa-youtube" />
         </a>
-        <a className="details__webPage" href={`${teamDetails.teamPage}`}>
+        <a className="details__webPage" href={`https://${teamDetails.teamPage}`}>
           {' '}
           <i className="fas fa-globe" />
         </a>
