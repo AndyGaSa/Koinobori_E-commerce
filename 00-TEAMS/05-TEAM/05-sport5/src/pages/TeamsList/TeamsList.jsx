@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { addFavouriteTeam, deleteFavouriteTeam } from '../../redux/actions/favourites.creator';
@@ -12,6 +12,7 @@ export default function TeamsList() {
   const dispatch = useDispatch();
   const favourites = useSelector((store) => store.favourites);
   const { leagueId } = useParams();
+  const [filterValue, setFilterValue] = useState('');
 
   useEffect(() => {
     dispatch(getTeams(leagueId));
@@ -30,11 +31,16 @@ export default function TeamsList() {
     }
   }
 
+  function filterTeams(value) {
+    const inputValue = value;
+    setFilterValue(inputValue);
+  }
+
   return (
     <main className="team-list">
       <h2 className="TeamList__Title">{allTeamsPerLeague[0]?.league}</h2>
       <form>
-        <input type="text" placeholder="Filter teams" />
+        <input type="text" placeholder="Filter teams" value={filterValue} onChange={(event) => filterTeams(event.target.value)} />
       </form>
       <ul className="teams">
         {allTeamsPerLeague?.length ? allTeamsPerLeague.map((team, index) => {
