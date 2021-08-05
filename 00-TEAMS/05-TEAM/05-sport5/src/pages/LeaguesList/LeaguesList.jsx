@@ -7,7 +7,7 @@ import './LeaguesList.scss';
 import SportsSelector from '../../components/SportsSelector/SportsSelector';
 
 export default function LeaguesList() {
-  const leaguesByCountriesApi = useSelector((store) => store.countriesLeagues);
+  const leaguesByCountriesApi = useSelector((store) => store.sportsApi);
   const favourites = useSelector((store) => store.favourites);
   const dispatch = useDispatch();
   const { sportId = 'Soccer' } = useParams();

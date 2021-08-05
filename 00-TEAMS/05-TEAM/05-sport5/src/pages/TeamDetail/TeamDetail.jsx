@@ -5,7 +5,7 @@ import { getTeamDetails } from '../../redux/actions/sports.creator';
 import './Teamdetails.scss';
 
 export default function TeamDetail() {
-  const teamDetails = useSelector((store) => store.countriesLeagues);
+  const teamDetails = useSelector((store) => store.sportsApi);
   const dispatch = useDispatch();
   const { teamId } = useParams();
 
