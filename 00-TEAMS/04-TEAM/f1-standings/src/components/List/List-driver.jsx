@@ -12,12 +12,14 @@ export default function ListDriver() {
       <Header />
       <section className="constructor-list">
 
-        {data[0]?.map((driver) => (
-        // eslint-disable-next-line prefer-template
-          <Link to={'/driverDetails/' + driver.Driver.driverId}>
+        { data[0] && data[0]?.map((driver) => (
+          // eslint-disable-next-line prefer-template
+
+          <Link to={`/driverDetails/${driver.Driver.driverId}`}>
             <button
               className="constructor"
               type="button"
+              data-testid={`${driver.Driver.givenName}`}
             >
               <section className="constructor-data">
                 <section className="data__main">
