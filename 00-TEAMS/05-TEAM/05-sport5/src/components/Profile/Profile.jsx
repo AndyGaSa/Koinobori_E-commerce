@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
+import './Profile.scss';
 
 export default function Profile() {
   const {
@@ -13,11 +14,10 @@ export default function Profile() {
   }
 
   return isAuthenticated && (
-  <div>
-    <img src={user.picture} alt={user.name} />
-    <h2>{user.name}</h2>
-    <p>{user.email}</p>
-    <hr />
+  <div className="profile">
+    <img className="profile__picture" src={user.picture} alt={user.name} />
+    <h2 className="profile__name">{user.name}</h2>
+
   </div>
   );
 }
