@@ -4,10 +4,13 @@
 
 .leagues__container {
     padding: 4rem 0;
-
+    min-width: 300px;
     form{
         width: 60%;
         margin: 0.75rem auto;
+        display: flex;
+        justify-content: center;
+
 
         input {
             @extend %filter-input;
@@ -16,6 +19,8 @@
     
     .leagues{
         width: 90vw;
+        min-width: 300px;
+        max-width: 800px;
         margin: 0 auto;
         list-style: none;
 
@@ -26,7 +31,6 @@
             align-items: center;
             margin: 2rem;
             color: white;
-            min-width: 300px;
 
             .leagues__country{
                 width: 100%;

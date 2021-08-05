@@ -4,10 +4,15 @@
 
 .team-list {
     padding-top: 4rem;
+    min-width: 300px;
+
 
     form {
         width: 60%;
         margin: 0.75rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
 
         input {
             @extend %filter-input;
@@ -21,12 +26,15 @@
     line-height: 3.5rem;
     font-weight: bold;
     letter-spacing: 2px;
+    overflow: hidden;
 }
 .teams{
     margin: 30px auto;
     padding: 30px;
     display: flex;
     flex-direction: column;
+    min-width: 300px;
+    max-width: 800px;
 }
 .teams__team{
     max-width: 680px;

@@ -8,7 +8,7 @@ jest.mock('@auth0/auth0-react');
 describe('Given a Logout component', () => {
   describe('When is rendered', () => {
     beforeEach(() => {
-      useAuth0.mockReturnValue({ loginWithRedirect: jest.fn() });
+      useAuth0.mockReturnValue({ logout: jest.fn() });
       render(<LogoutButton />);
     });
 
@@ -21,7 +21,7 @@ describe('Given a Logout component', () => {
         const logoutButton = screen.getByTestId('logout-button-test');
         fireEvent.click(logoutButton);
       });
-      test('Then function loginWithRedirect is invoked', () => {
+      test('Then function logout is invoked', () => {
         const { logout } = useAuth0();
         expect(logout).toHaveBeenCalled();
       });

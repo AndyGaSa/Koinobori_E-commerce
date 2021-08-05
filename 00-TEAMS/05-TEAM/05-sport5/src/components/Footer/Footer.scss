@@ -10,17 +10,19 @@
     bottom: 0;
     width: 100%;
    
-    .footer__navigation-home-button,
-    .footer__navigation-backpage-button
-    {
+    
+    a, button, div{
         background-color: transparent;
         color: white;
         outline: inherit;
         border: none;
         transition: .2s;
         font-size: 1.5rem;
-        width: 2rem;
+        width: 30%;
         height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     
 
         &:hover{
