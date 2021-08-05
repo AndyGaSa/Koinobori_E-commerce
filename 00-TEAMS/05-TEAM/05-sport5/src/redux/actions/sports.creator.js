@@ -73,6 +73,7 @@ export function getTeamDetails(teamId) {
   return async (dispatch) => {
     const { data } = await axios(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`);
     const teamDetails = data.teams[0];
+    const defaultBanner = 'https://images.all-free-download.com/images/graphicthumb/sports_banner_colorful_silhouette_design_martial_arts_icons_6830872.jpg';
     const {
       idTeam, strTeamBanner, strTeamBadge, strTeam, strTeamJersey, strSport,
       strCountry, strStadiumLocation, strLeague, strStadium, strStadiumThumb,
@@ -83,7 +84,7 @@ export function getTeamDetails(teamId) {
 
     const details = {
       id: idTeam,
-      banner: strTeamBanner,
+      banner: strTeamBanner || defaultBanner,
       badge: strTeamBadge,
       name: strTeam,
       equipment: strTeamJersey,

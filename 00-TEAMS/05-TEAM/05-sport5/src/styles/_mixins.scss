@@ -28,3 +28,10 @@
         background-color: rgb(245, 245, 245);
     }
 }
+
+%top-title {
+    background-color: $main-color;
+    padding: 0 4rem;
+    width: 100%;
+    height: 3.5rem;
+}

@@ -12,16 +12,16 @@ describe('Given a Teams List component', () => {
       getTeams.mockReturnValue({
         type: sportsTypes.LOAD_TEAMS,
         leagueTeamsList: [
-          { id: '0001', name: 'Barça' },
-          { id: '0002', name: 'Madrid' },
-          { id: '0003', name: 'Getafe' }
+          { id: '0001', name: 'Barça', league: 'La liga' },
+          { id: '0002', name: 'Madrid', league: 'La liga' },
+          { id: '0003', name: 'Getafe', league: 'La liga' }
         ]
       });
       render(<TeamsList />);
     });
 
-    test('Then should render teams list title', () => {
-      expect(screen.getByText('TeamList title:')).toBeInTheDocument();
+    test('Then should render La liga in the title', () => {
+      expect(screen.getByText('La liga')).toBeInTheDocument();
     });
 
     ['Barça', 'Madrid', 'Getafe']

@@ -1,14 +1,11 @@
 @import '../../styles/variables';
 @import '../../styles/mixins'; 
 .sportSelector{
-    background-color: $main-color;
+    @extend %top-title;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 0 4rem;
-    width: 100%;
-    height: 3.5rem;
    
     .sport-selector__navigation-menu
     {
