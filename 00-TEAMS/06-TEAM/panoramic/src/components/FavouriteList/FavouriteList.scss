@@ -8,12 +8,22 @@
     display: flex;
     background-color: $primary-color;
     justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+    &__title{
+        padding: 40px;
+        font-size: 40px;
+        text-align: center;
+        font-family: $primary-font;
+        color: $tertiary-color;
+    }
 }
 .artists-list{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-between;
+    max-width: 1000px;
     &__item{
         display: flex;
     margin: 25px auto;
@@ -67,5 +77,15 @@
         }
     }
 }
+@media only screen and (min-width: 800px){
+    .artists-list{
+        flex-flow: row wrap;
+        justify-content: space-around;
+        &__item{
+            margin: 20px;
+        }
+    }
+}
+
 
 

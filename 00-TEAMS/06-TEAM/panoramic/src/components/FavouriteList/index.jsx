@@ -13,6 +13,7 @@ export default function FavouritList() {
 
   return (
     <section className="section-list">
+      <h2 className="section-list__title">Your favourite artists</h2>
       <ul className="artists-list">
         {favArtist.map((artist) => (
           <li
