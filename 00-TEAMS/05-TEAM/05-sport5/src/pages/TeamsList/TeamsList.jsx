@@ -31,8 +31,11 @@ export default function TeamsList() {
   }
 
   return (
-    <>
+    <main className="team-list">
       <h2 className="TeamList__Title">{allTeamsPerLeague[0]?.league}</h2>
+      <form>
+        <input type="text" placeholder="Filter teams" />
+      </form>
       <ul className="teams">
         {allTeamsPerLeague?.length ? allTeamsPerLeague.map((team, index) => {
           const isFavourite = teamIsInFavourites(team.id);
@@ -64,7 +67,7 @@ export default function TeamsList() {
         })
           : <NotFound />}
       </ul>
-    </>
+    </main>
 
   );
 }

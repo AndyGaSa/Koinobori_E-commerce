@@ -2,7 +2,18 @@
 @import "../../styles/reset";
 @import "../../styles/mixins";
 
-.TeamList__Title{
+.team-list {
+    form {
+        width: 60%;
+        margin: 0.75rem auto;
+
+        input {
+            @extend %filter-input;
+        }
+    }
+}
+
+.team-list__title{
     padding: 125px 0 0;
     margin: 0 auto;
     width: fit-content;

@@ -14,3 +14,17 @@
     font-size: 1rem;
     padding: 0 0.5rem;
 }
+
+%filter-input {
+    height: 2.5rem;
+    width: 100%;
+    padding: 0 1.5rem;
+    text-align: center;
+    border-radius: .2rem;
+    border: none;
+    outline: none;
+    
+    &:hover {
+        background-color: rgb(245, 245, 245);
+    }
+}
