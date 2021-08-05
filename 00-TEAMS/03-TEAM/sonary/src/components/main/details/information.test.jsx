@@ -1,23 +1,27 @@
 import React from 'react';
 import { render, screen } from '../../../utils/test.utils';
-import tracksMock from '../../../constants/songs.mock';
-import Details from './Details';
-import lyrics from '../../../constants/lyrics.mock';
+import Information from './Information';
+import { loadDashboard } from '../../../redux/actions/dashboard.creator';
+import actionTypes from '../../../redux/actions/actionTypes';
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useParamas: jest.fn().mockReturnValue({ track_id: 218732426 })
-}));
+jest.mock('../../../redux/actions/dashboard.creator');
 
-describe('Given a detail component ', () => {
-  const initialState = { sonary: tracksMock, song: lyrics };
-  render(
-    <Details />,
-    initialState
-  );
-
-  describe('When the track_id is 218732426 ', () => {
-    test("Then lyrics_body should 'contain Don't need no champagne poppin' entertainment'");
-    expect(screen.getByText("contain Don't need no champagne poppin")).toBeInTheDocument();
+describe('Given a Information component', () => {
+  describe('When rendered with certain parameters', () => {
+    beforeEach(() => {
+      loadDashboard.mockReturnValue(({
+        type: actionTypes.LOAD_DASHBOARD,
+        dashboard: [{
+          track_id: 218732426, track_name: 'Bad Habits', track_name_translation_list: Array(0), track_rating: 100, commontrack_id: 128751060
+        }
+        ]
+      }));
+      render(
+        <Information />
+      );
+    });
+    test('Then the track name Bad Habits should be on the screen', () => {
+      expect(screen.getByText('Bad Habits')).toBeInTheDocument();
+    });
   });
 });

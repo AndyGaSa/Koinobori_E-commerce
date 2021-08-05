@@ -10,8 +10,8 @@ export default function Header() {
     <header className="header">
       <nav className="header__top">
         <div className="header__aux" />
-        <figure clasName="header__sonary">
-          <a clasName="sonary__anchor" href="/dashboard">
+        <figure className="header__sonary">
+          <a className="sonary__anchor" href="/dashboard">
             <img data-testid="logo-image" className="sonary__icon" alt="sonary icon" src={logo} />
           </a>
         </figure>
