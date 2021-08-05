@@ -1,0 +1,21 @@
+.battle-container {
+    width: 100%;
+    text-align:center;
+    .battle-img {
+        width: 40%;
+        opacity: 0.5;
+    }
+    .battle-text{
+        display: block;
+        color: #fff;
+        font-size: 20px;
+        text-transform:uppercase;
+    }
+}
+@media only screen and (min-width: 376px) {
+    .battle-container {
+        .battle-text{
+            font-size: 50px;
+        }
+    }
+}
