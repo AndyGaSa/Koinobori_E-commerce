@@ -33,26 +33,3 @@ export function loadStocks() {
     });
   };
 }
-
-export function loadstocksWithAsync() {
-  return async (dispatch) => {
-    const response = await fetch('https://my-kinobori-api.herokuapp.com/clothes');
-    const stocks = await response.json();
-
-    dispatch({
-      type: actionTypes.LOAD_STOCK,
-      stocks
-    });
-  };
-}
-
-export function loadstocksWithPromise() {
-  return (dispatch) => {
-    fetch('https://my-kinobori-api.herokuapp.com/clothes')
-      .then((response) => response.json())
-      .then((stocks) => dispatch({
-        type: actionTypes.LOAD_STOCK,
-        stocks
-      }));
-  };
-}
