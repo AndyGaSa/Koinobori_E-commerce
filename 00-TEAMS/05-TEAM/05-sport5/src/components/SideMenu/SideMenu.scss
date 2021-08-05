@@ -16,26 +16,7 @@
         transform: translateX(-600px);
         transition: .5s;
 
-        /* width */
-        ::-webkit-scrollbar {
-            width: 0.5rem;
-        }
-    
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: $side-menu-background-color;
-        }
-        
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 5px;
-        }
-        
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
+        @extend %side-bar;
 
         .side-menu-navigator {
             font-family: $main-font;
