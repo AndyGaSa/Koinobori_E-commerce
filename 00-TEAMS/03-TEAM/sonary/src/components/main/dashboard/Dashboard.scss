@@ -53,13 +53,11 @@ $verde: rgb(0, 229.5, 0);
     background-color: $gris5;
 }
 
-.list__button:hover {
-    background-color: $gris10;
-}
 
-.list__button:active {
+.list__button--fav{
     background-color: $verde;
 }
+
 
 .list__track {
     background-color: $gris5;

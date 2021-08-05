@@ -8,10 +8,26 @@ import { loadDashboard } from '../../../redux/actions/dashboard.creator';
 import './Dashboard.scss';
 
 export default function Dashboard() {
-  const tracks = useSelector((store) => store.sonary);
+  const { tracks, favoriteTracks } = useSelector((store) => ({
+    tracks: store.sonary,
+    favoriteTracks: store.favorites
+  }));
+
   const dispatch = useDispatch();
   const [filteredSongs, setFilterSong] = useState();
   const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
+
+  function toggleFav(track) {
+    dispatch({
+      type: actionTypes.TOGGLE_FAVORITES,
+      track
+    });
+  }
+
+  function getFavClass(track) {
+    const isFav = favoriteTracks.some((song) => song === track);
+    return isFav ? 'list__button--fav' : '';
+  }
 
   function filterSongs(searchTerm) {
     if (!searchTerm) setFilterSong(tracks);
@@ -50,11 +66,8 @@ export default function Dashboard() {
                 <li className="list__track">
                   <button
                     type="button"
-                    className="list__button"
-                    onClick={() => dispatch({
-                      type: actionTypes.TOGGLE_FAVORITES,
-                      track
-                    })}
+                    className={`list__button ${getFavClass(track)}`}
+                    onClick={() => toggleFav(track)}
                   >
                     +
                   </button>

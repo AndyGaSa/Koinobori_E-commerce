@@ -13,17 +13,16 @@ export default function favoriteReducer(favorites = initializeLocalStorage(), ac
       newState = action.favouriteTracks;
       break;
     case actionTypes.TOGGLE_FAVORITES:
-
       track = action.track;
+
       // eslint-disable-next-line no-case-declarations
       const favoritesIds = favorites.map(({ track_id }) => track_id);
       if (favoritesIds.some((id) => id === track.track_id)) {
         newState = favorites.filter((currentTrack) => currentTrack.track_id !== track.track_id);
-        saveFavouritesToLocalStorage(newState);
       } else {
         newState = [...favorites, action.track];
-        saveFavouritesToLocalStorage(newState);
       }
+      saveFavouritesToLocalStorage(newState);
 
       break;
 
