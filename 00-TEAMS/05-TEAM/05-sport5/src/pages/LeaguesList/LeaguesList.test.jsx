@@ -59,6 +59,27 @@ describe('Given a LeaguesList component', () => {
           expect(screen.getByTestId('spain-league-1').className).toContain('leagues__league--top');
         });
       });
+
+      describe('And you click andorra-button', () => {
+        beforeEach(() => {
+          const countryButton = screen.getByTestId('andorra-button');
+          fireEvent.click(countryButton);
+        });
+
+        test('Then andorra-block class should contain leagues__block--closed', () => {
+          expect(screen.getByTestId('andorra-block').className).toContain('leagues__block--closed');
+        });
+
+        test('Then spain-block class should be leagues__block', () => {
+          expect(screen.getByTestId('spain-block').className).toBe('leagues__block');
+        });
+
+        test('Then if you click again andorra-block class should be leagues__block', () => {
+          const countryButton = screen.getByTestId('andorra-button');
+          fireEvent.click(countryButton);
+          expect(screen.getByTestId('spain-block').className).toBe('leagues__block');
+        });
+      });
     });
 
     describe('And andorra league 3 is a favourite league', () => {
@@ -98,6 +119,40 @@ describe('Given a LeaguesList component', () => {
         test('Then the li with data-testid andorra-league-2 class should be leagues__league', () => {
           expect(screen.getByTestId('andorra-league-2').className).toBe('leagues__league');
         });
+      });
+    });
+
+    describe('And you type spanish in filter-input', () => {
+      beforeEach(() => {
+        render(<LeaguesList />);
+        const filterInput = screen.getByTestId('filter-input');
+        fireEvent.change(filterInput, { target: { value: 'spanish' } });
+      });
+
+      test('Then Spanish League 2 should be in the document', () => {
+        expect(screen.getByText('Spanish League 2')).toBeInTheDocument();
+      });
+
+      test('Then Andorra League should not be in the document', () => {
+        expect(screen.queryByText('Andorra League')).not.toBeInTheDocument();
+      });
+    });
+
+    describe('And you type Spain in filter-input', () => {
+      beforeEach(() => {
+        render(<LeaguesList />);
+        const filterInput = screen.getByTestId('filter-input');
+        fireEvent.change(filterInput, { target: { value: 'Spain' } });
+      });
+
+      ['Spanish League 1', 'Spanish League 2', 'Spanish League 3'].forEach((text) => {
+        test(`Then ${text} should be in the document`, () => {
+          expect(screen.getByText(text)).toBeInTheDocument();
+        });
+      });
+
+      test('Then Andorra League should not be in the document', () => {
+        expect(screen.queryByText('Andorra League')).not.toBeInTheDocument();
       });
     });
   });

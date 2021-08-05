@@ -20,9 +20,11 @@ describe('Given a Footer component', () => {
       expect(screen.getByTestId('button-back')).toBeInTheDocument();
     });
 
-    test('Then profile button should be in the document', () => {
-      // assert
-      expect(screen.getByTestId('button-profile')).toBeInTheDocument();
+    describe('And the user is not Aunthenticated', () => {
+      test('Then profile button should be in the document', () => {
+        // assert
+        expect(screen.getByText('Login')).toBeInTheDocument();
+      });
     });
   });
 });
