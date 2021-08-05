@@ -15,26 +15,25 @@ import List from './pages/List';
 import SearchedArtistList from './pages/SearchArtists';
 
 ReactDOM.render(
-  <Auth0Provider>
-    <React.StrictMode>
-      <Provider store={configureStore()}>
-        <BrowserRouter>
-          <Header />
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/home" />
-            <Route path="/login" component={Login} />
-            <Route path="/notfound" component={NotFound} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/list" component={List} />
-            <Route path="/search" component={SearchedArtistList} />
-            <Route component={NotFound} />
-          </Switch>
-          <Footer />
-        </BrowserRouter>
-      </Provider>
-    </React.StrictMode>
-  </Auth0Provider>,
+
+  <React.StrictMode>
+    <Provider store={configureStore()}>
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/home" />
+          <Route path="/login" component={Login} />
+          <Route path="/notfound" component={NotFound} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/list" component={List} />
+          <Route path="/search" component={SearchedArtistList} />
+          <Route component={NotFound} />
+        </Switch>
+        <Footer />
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
