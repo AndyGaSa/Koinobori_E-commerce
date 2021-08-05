@@ -76,11 +76,7 @@ export default function LeaguesList() {
     <main className="leagues__container">
       <SportsSelector />
       <form>
-        <input type="text" placeholder="Filter" value={filterValue} onChange={(event) => filterLeagues(event)} />
-        <select>
-          <option value="Favourites" label="Favourites" />
-          <option value="Alphabetically" label="Alphabetically" />
-        </select>
+        <input type="text" placeholder="Filter by countries/leagues" value={filterValue} onChange={(event) => filterLeagues(event)} />
       </form>
       <ul className="leagues">
         {

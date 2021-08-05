@@ -6,8 +6,12 @@
     padding: 4rem 0;
 
     form{
-        width: fit-content;
-        margin: 0 auto;
+        width: 60%;
+        margin: 0.75rem auto;
+
+        input {
+            @extend %filter-input;
+        }
     }
     
     .leagues{
@@ -38,7 +42,11 @@
                 position: relative;
                 display: flex;
                 align-items: center;
-                transition: .1s;
+                transition: .2s;
+
+                &:hover {
+                    background-color: $body-clear-background-hover;
+                }
 
                 &::after {
                     color: black;
