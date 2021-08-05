@@ -53,5 +53,19 @@ describe('Given a Teams List component', () => {
         expect(screen.queryByText('Madrid')).not.toBeInTheDocument();
       });
     });
+    describe('When favourite button from team Getafe is cklicked', () => {
+      beforeEach(() => {
+        const getafeFavouriteButton = screen.getByTestId('Getafe-team-2-favourite');
+        fireEvent.click(getafeFavouriteButton);
+      });
+      test('Button classNames should contain "teams__favourite-button--active" ', () => {
+        expect(screen.getByTestId('Getafe-team-2-favourite').className).toContain('teams__favourite-button--active');
+      });
+      test('dispatch function should be called', () => {
+        const getafeFavouriteButton = screen.getByTestId('Getafe-team-2-favourite');
+        fireEvent.click(getafeFavouriteButton);
+        expect(screen.getByTestId('Getafe-team-2-favourite').className).not.toContain('teams__favourite-button--active');
+      });
+    });
   });
 });
