@@ -32,12 +32,6 @@ export default function Favorites() {
     return updatedFavorites;
   }
 
-  function updateTrack() {
-    dispatch({
-      type: actionTypes.UPDATE_FAVORITE,
-      favorites
-    });
-  }
   return (
     <div>
       <ul>
@@ -76,7 +70,7 @@ export default function Favorites() {
                       Add/Remove
 
                     </button>
-                    <button type="button" id={track.track_id} onClick={() => updateTrack()}>Update</button>
+
                   </ul>
                 </li>
               ))
