@@ -51,6 +51,7 @@ export default function Dashboard() {
   }, [tracks]);
 
   let ranking = 0;
+  console.log(filteredSongs);
   return (
     <main className="dashboard">
       <section className="dashboard__top">

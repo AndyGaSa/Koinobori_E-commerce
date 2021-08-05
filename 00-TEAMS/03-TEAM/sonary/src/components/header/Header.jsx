@@ -18,7 +18,7 @@ export default function Header() {
 
         <figure className="header__profile">
           <a className="profile__anchor" href="/profile">
-            <img src={isAuthenticated ? user.picture : iconUser} className="header__profile" alt="profile icon" />
+            <img src={isAuthenticated ? user.picture : iconUser} className="header__profile" alt="profile icon" data-testid="profile-image" />
           </a>
         </figure>
       </nav>
