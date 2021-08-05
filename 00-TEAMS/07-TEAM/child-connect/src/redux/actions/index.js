@@ -4,13 +4,10 @@ import actionTypes from './types';
 
 // const apiUrl = 'http://127.0.0.1:3001';
 
-const fetchEvents = (events) => {
-  console.log(events);
-  return {
-    type: actionTypes.FETCH_EVENT,
-    events
-  };
-};
+const fetchEvents = (events) => ({
+  type: actionTypes.FETCH_EVENT,
+  events
+});
 
 const fetchAllEvents = () => ((dispatch) => (
   axios.get('http://localhost:3001/events', {
@@ -40,8 +37,9 @@ const fetchAllUsers = () => ((dispatch) => (
     responseType: 'json'
   })
     .then((response) => {
-      dispatch(fetchUsers(response));
+      dispatch(fetchUsers(response.data));
     })
+    .catch((error) => { console.error(error); })
 ));
 
 export { fetchAllEvents, fetchAllUsers };
