@@ -2,29 +2,30 @@ import React from 'react';
 
 import { fireEvent, render, screen } from '../../utils/test.utils';
 import LeaguesList from './LeaguesList';
+import { getLeagues } from '../../redux/actions/sports.creator';
+import actionTypes from '../../redux/actions/sports.types';
 
-jest.mock('../../redux/actions/sports.creator', () => ({
-  getLeagues: () => ({
-    type: 'LOAD_LEAGUES',
-    leaguesByCountries: {
-      spain: [
-        { id: '0001', name: 'Spanish League 1' },
-        { id: '0002', name: 'Spanish League 2' },
-        { id: '0003', name: 'Spanish League 3' }
-      ],
-      andorra: [
-        { id: '0004', name: 'Andorra League 1' },
-        { id: '0005', name: 'Andorra League 2' },
-        { id: '0006', name: 'Andorra League 3' }
-      ]
-    }
-  })
-}));
+jest.mock('../../redux/actions/sports.creator');
 
 describe('Given a LeaguesList component', () => {
   describe('When is rendered with leagues data', () => {
     describe('And there are not any favourite league', () => {
       beforeEach(() => {
+        getLeagues.mockReturnValue({
+          type: actionTypes.LOAD_LEAGUES,
+          leaguesByCountries: {
+            spain: [
+              { id: '0001', name: 'Spanish League 1' },
+              { id: '0002', name: 'Spanish League 2' },
+              { id: '0003', name: 'Spanish League 3' }
+            ],
+            andorra: [
+              { id: '0004', name: 'Andorra League 1' },
+              { id: '0005', name: 'Andorra League 2' },
+              { id: '0006', name: 'Andorra League 3' }
+            ]
+          }
+        });
         render(
           <LeaguesList />
         );
@@ -91,6 +92,21 @@ describe('Given a LeaguesList component', () => {
             ]
           }
         };
+        getLeagues.mockReturnValue({
+          type: actionTypes.LOAD_LEAGUES,
+          leaguesByCountries: {
+            spain: [
+              { id: '0001', name: 'Spanish League 1' },
+              { id: '0002', name: 'Spanish League 2' },
+              { id: '0003', name: 'Spanish League 3' }
+            ],
+            andorra: [
+              { id: '0004', name: 'Andorra League 1' },
+              { id: '0005', name: 'Andorra League 2' },
+              { id: '0006', name: 'Andorra League 3' }
+            ]
+          }
+        });
         render(
           <LeaguesList />,
           initialState
@@ -124,6 +140,21 @@ describe('Given a LeaguesList component', () => {
 
     describe('And you type spanish in filter-input', () => {
       beforeEach(() => {
+        getLeagues.mockReturnValue({
+          type: actionTypes.LOAD_LEAGUES,
+          leaguesByCountries: {
+            spain: [
+              { id: '0001', name: 'Spanish League 1' },
+              { id: '0002', name: 'Spanish League 2' },
+              { id: '0003', name: 'Spanish League 3' }
+            ],
+            andorra: [
+              { id: '0004', name: 'Andorra League 1' },
+              { id: '0005', name: 'Andorra League 2' },
+              { id: '0006', name: 'Andorra League 3' }
+            ]
+          }
+        });
         render(<LeaguesList />);
         const filterInput = screen.getByTestId('filter-input');
         fireEvent.change(filterInput, { target: { value: 'spanish' } });
@@ -140,6 +171,21 @@ describe('Given a LeaguesList component', () => {
 
     describe('And you type Spain in filter-input', () => {
       beforeEach(() => {
+        getLeagues.mockReturnValue({
+          type: actionTypes.LOAD_LEAGUES,
+          leaguesByCountries: {
+            spain: [
+              { id: '0001', name: 'Spanish League 1' },
+              { id: '0002', name: 'Spanish League 2' },
+              { id: '0003', name: 'Spanish League 3' }
+            ],
+            andorra: [
+              { id: '0004', name: 'Andorra League 1' },
+              { id: '0005', name: 'Andorra League 2' },
+              { id: '0006', name: 'Andorra League 3' }
+            ]
+          }
+        });
         render(<LeaguesList />);
         const filterInput = screen.getByTestId('filter-input');
         fireEvent.change(filterInput, { target: { value: 'Spain' } });

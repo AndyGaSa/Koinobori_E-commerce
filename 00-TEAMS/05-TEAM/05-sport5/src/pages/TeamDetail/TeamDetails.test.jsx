@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '../../utils/test.utils';
 import TeamDetail from './TeamDetail';
 import { getTeamDetails } from '../../redux/actions/sports.creator';
+import actionTypes from '../../redux/actions/sports.types';
 
 jest.mock('../../redux/actions/sports.creator');
 
@@ -9,7 +10,7 @@ describe('Given a component Teamdetails', () => {
   describe('When rendered with valid params', () => {
     beforeEach(() => {
       getTeamDetails.mockReturnValue(({
-        type: 'LOAD_DETAILS',
+        type: actionTypes.LOAD_DETAILS,
         details: {
           id: 1111,
           banner: 'banner.img',
@@ -34,7 +35,7 @@ describe('Given a component Teamdetails', () => {
   describe('When rendered with invalid params', () => {
     beforeEach(() => {
       getTeamDetails.mockReturnValue(({
-        type: 'LOAD_DETAILS',
+        type: actionTypes.LOAD_DETAILS,
         details: {
           id: null,
           banner: null,
