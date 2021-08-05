@@ -1,8 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
+import LoginButton from '../LoginButton/LoginButton';
+import Profile from '../Profile/Profile';
 import './Footer.scss';
 
 export default function Footer() {
+  const { isAuthenticated } = useAuth0();
+
   return (
     <footer>
       <nav className="footer">
@@ -12,10 +17,7 @@ export default function Footer() {
         <button type="button" className="footer__navigation-backpage-button" data-testid="button-back">
           <i className="fas fa-chevron-left" />
         </button>
-        <button type="button" className="footer__navigation-profile-button" data-testid="button-profile">
-          <i className="fas fa-user" />
-        </button>
-
+        { !isAuthenticated ? <LoginButton /> : <Profile /> }
       </nav>
     </footer>
   );
