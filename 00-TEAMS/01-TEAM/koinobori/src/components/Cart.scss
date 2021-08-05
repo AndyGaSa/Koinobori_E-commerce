@@ -13,7 +13,14 @@ ul{
     list-style: none;
     }
     }
-
+input[type=number] {
+        -moz-appearance: textfield;
+    }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }    
 .main{
     background-color: $lightgray;
     .items__container{
@@ -63,6 +70,7 @@ ul{
                 font-family: Bebas Neue, Roboto, Arial, Tahoma, sans-serif;
                 font-size: 25px;
                 padding-left: 5px;
+                text-align: center;
             }
         }
         .delete__button{
