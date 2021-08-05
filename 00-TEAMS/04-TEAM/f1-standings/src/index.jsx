@@ -12,6 +12,7 @@ import DetailsDriver from './components/Details-drivers/Details.drivers';
 import ListDriver from './components/List/List-driver';
 import ListConstructor from './components/List-constructor/List-constructor';
 import DetailsConstructor from './components/Details-constructor/Details.constructor';
+import ChartContainer from './components/Charts/Chart';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Route path="/constructorList" component={ListConstructor} />
           <Route path="/driverDetails/:driverId" component={DetailsDriver} />
           <Route path="/constructorDetails/:constructorId" component={DetailsConstructor} />
+          <Route path="/ChartContainer" component={ChartContainer} />
         </Switch>
       </BrowserRouter>
     </Provider>
