@@ -8,11 +8,14 @@
     display: flex;
     height: 60px;
     position: fixed;
+    top:0;
+    
     &__logo-container{
         flex: 1;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        text-decoration: none;
     }
     &__logo-item{
         height: 35px;
@@ -54,7 +57,6 @@
             margin-right: 20px;
             &:hover{
                 color: $tertiary-color;
-                font-size: 24px;
             }
         }
         &_title{
