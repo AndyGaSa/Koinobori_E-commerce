@@ -2,11 +2,9 @@
 /* eslint-disable camelcase */
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useAuth0 } from '@auth0/auth0-react';
 import actionTypes from '../../../redux/actions/actionTypes';
 
 export default function Favorites() {
-  const { isAuthenticated } = useAuth0();
   const favoritesL = useSelector((store) => store.favorites);
   const dispatch = useDispatch();
   const [favorites, setCurrentTrack] = useState(favoritesL);
@@ -41,11 +39,9 @@ export default function Favorites() {
     });
   }
   return (
-    isAuthenticated
-      ? (
-        <div>
-          <ul>
-            {
+    <div>
+      <ul>
+        {
               favorites.map((track) => (
                 <li key={track.track_id}>
                   <ul>
@@ -86,15 +82,9 @@ export default function Favorites() {
               ))
           }
 
-          </ul>
+      </ul>
 
-        </div>
-      )
-      : (
-        <div>
-          <p>Log In</p>
-        </div>
-      )
+    </div>
 
   );
 }
