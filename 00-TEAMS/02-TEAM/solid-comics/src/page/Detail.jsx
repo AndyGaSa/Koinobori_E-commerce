@@ -15,7 +15,7 @@ export default function Detail() {
         {targetComic[0]?.title}
       </h2>
       <div className="detail__top">
-        <img className="detail__img" src={`${targetComic[0]?.thumbnail?.path}.${targetComic[0]?.thumbnail?.extension}`} alt="comic" />
+        <img data-testid="create-img" className="detail__img" src={`${targetComic[0]?.thumbnail?.path}.${targetComic[0]?.thumbnail?.extension}`} alt="comic" />
         <section>
           <div className="detail__creators">
             <h3 className="detail__creator">

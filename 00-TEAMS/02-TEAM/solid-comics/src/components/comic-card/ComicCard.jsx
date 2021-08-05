@@ -7,9 +7,8 @@ import './comicCard.scss';
 
 export default function ComicCard() {
   const comics = useSelector((store) => store.comics);
-  // const idUrl = window.location.search.split('?')[1];
-  // eslint-disable-next-line no-unused-vars
-  const targetComic = comics.filter((comic) => comic.id !== 93839);
+  const idUrl = window.location.search.split('?')[1];
+  const targetComic = comics.filter((comic) => comic.id !== idUrl);
 
   return (
     <>
@@ -17,7 +16,7 @@ export default function ComicCard() {
         <Link
           to={`/details/${targetComic[0]?.id}`}
         >
-          <img className="item__img" src={`${targetComic[0]?.thumbnail?.path}.${targetComic[0]?.thumbnail?.extension}`} alt="comic" />
+          <img data-testid="create-img" className="item__img" src={`${targetComic[0]?.thumbnail?.path}.${targetComic[0]?.thumbnail?.extension}`} alt="comic" />
         </Link>
       </div>
     </>
