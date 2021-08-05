@@ -8,7 +8,8 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-// import { useParams } from 'react-router-dom';
+import driverImg from '../../assets/driver.img';
+// import carImg from '../../assets/cars.img';
 
 import './Details.drivers.styles.scss';
 
@@ -16,8 +17,11 @@ export default function DriverDetails() {
   const drivers = useSelector((store) => store?.drivers);
   const [driver, setDriver] = useState();
   const { driverId } = useParams();
-  console.log(driverId);
 
+  const { img } = driverImg?.find((e) => e.driverId === driverId);
+  // const { car } = carImg?.find((e) => e.constructorId === driver?.Constructors[0]?.constructorId);
+
+  console.log(driver?.Constructors[0].constructorId);
   // eslint-disable-next-line no-restricted-syntax
 
   useEffect(() => {
@@ -59,7 +63,9 @@ export default function DriverDetails() {
               </section>
 
             </div>
-            <div className="foto-piloto" />
+            <div className="foto-piloto-container">
+              <img className="foto-piloto" src={img} alt="" />
+            </div>
           </div>
         </header>
         <section className="championship">
@@ -70,29 +76,32 @@ export default function DriverDetails() {
                 <span className="postion">{driver?.position}</span>
               </div>
             </div>
-
             <div className={`${driver?.Constructors[0].constructorId}points`}>
-              <span className="points__number">{driver?.points}</span>
-              <span className="points__pts">PTS</span>
+              <div className="points-container">
+                <span className="points__number">{driver?.points}</span>
+                <span className="points__pts">PTS</span>
+              </div>
             </div>
           </div>
-          <div className="season">
-            <h3>2021 Season</h3>
-            <section className="season__data">
-              <div className={`${driver?.Constructors[0].constructorId}podiums`} />
-              <div className="podiums">
-                <h5>Podiums</h5>
-                <span className="podiums-total">{driver?.wins}</span>
-              </div>
-              <div className="podiums">
-                <h5> DHL Fastest Lap</h5>
-                <span className="podiums-total">0</span>
-              </div>
-              <div className="podiums">
-                <h5>GPs Entered</h5>
-                <span className="podiums-total">10</span>
-              </div>
-            </section>
+          <div className="championship-container">
+            <div className="season">
+              <h3>2021 Season</h3>
+              <section className="season__data">
+                <div className={`${driver?.Constructors[0].constructorId}podiums`} />
+                <div className="podiums">
+                  <h5>Podiums</h5>
+                  <span className="podiums-total">{driver?.wins}</span>
+                </div>
+                <div className="podiums">
+                  <h5> Nationality</h5>
+                  <span className="podiums-total">{driver?.Driver.nationality}</span>
+                </div>
+                <div className="podiums">
+                  <h5>Code</h5>
+                  <span className="podiums-total">{driver?.Driver.code}</span>
+                </div>
+              </section>
+            </div>
           </div>
         </section>
       </>

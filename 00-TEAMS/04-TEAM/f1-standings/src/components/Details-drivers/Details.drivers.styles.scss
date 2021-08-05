@@ -35,26 +35,25 @@
         flex-direction: row;
         margin-left: 10px;
         justify-content: space-between;
+        height: 30vw;
         
 
     }
     .container-details{
         display:flex;
         flex-direction: row;
+        align-items: center;
         
     }
     .driver-details__title{
         display:flex ;
         flex-direction: column;
     }
-        .driver-name, .driver-cosntructor,.driver-constructor{
-            font-size: 2vw;
+        .driver-constructor{
+            font-size: 4vw;
             color:$color-off-white;
         }
-        .driver-surname{
-            color:$color-off-white;
-            margin-bottom: 2vw;
-        }
+       
 .driver-number{
             color:$color-off-white;
             margin-right:3vw;
@@ -62,10 +61,12 @@
             border-right: 3px solid grey;
 }
 .driver-name{
-    font-size: 2vw;
+    font-size: 4vw;
+    color: $color-white;
 }
 .driver-surname{
-    font-size: 4vw;
+    font-size: 6vw;
+    color: $color-white;
     font-weight: bold;
 }
     
@@ -106,17 +107,26 @@
  }
  .haass{
     @include Line($haas);
-    border: solid gray 0.2px;
+    
+ }
+ .foto-piloto-container{
+     display: flex;
+     align-items: flex-end;
+   
  }
  .foto-piloto{
-     background-color: salmon;
-     height: 15vw;
-     width: 15vw;
+    
+     height: 20vw;
+     width: 20vw;
  }
  .championship{
     display: flex;
     flex-direction: column;
     margin: 10px;
+ }
+ .championship-container{
+     display: flex;
+     flex-direction: row;
  }
  .championship-standing-container{
      display: flex;
@@ -131,6 +141,13 @@
  }
  .postion{
      font-size: 15vw;
+ }
+ .points-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-size: 7vw;
  }
  @mixin points ($color: $mercedes){
     
@@ -174,13 +191,15 @@
  }
  .haaspoints{
     @include points($haas);
-    border: solid gray 0.2px;
+    border-top: solid 3px gray;
+     border-right: solid 3px gray;
  }
  .points__pts{
      margin-left: 1vw;
      color: $color-white;
      background-color: gray;
      border-radius: 5px;
+     
  }
  .season{
      display: flex;
@@ -189,7 +208,7 @@
  }
 
  .podiums-total{
-     font-size: 8vw;
+     font-size: 6vw;
      font-weight: bold;
  }
  .podiums{
@@ -205,6 +224,7 @@
     margin-top: 5vw;
 
  }
+ 
  @mixin podiums ($color: $mercedes){
     
     display: flex;
@@ -249,5 +269,21 @@
 }
 .haaspodiums{
    @include podiums($haas);
-   border: solid gray 0.2px;
+   border-top: solid 3px gray;
+   border-right: solid 3px gray;
+}
+.car-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.car-photo{
+    display: flex;
+    width: 60vw;
+    height: 20vw;
+    transform: rotate(270deg);
+}
+.constructor-name{
+    font-size: 10vw;
+    color: $color-white;
 }
