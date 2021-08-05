@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 
-import getSpotifyToken, { loadAxiosSuggestedArtists } from '../../redux/actions/actionCreatorsHome';
+import getSpotifyToken, { loadAxiosSuggestedArtists } from '../../redux/actions/actionCreatorsSuggestedArtist';
 import { addFavArtist } from '../../redux/actions/actionCreatorsFavList';
 
 import './SuggestedArtist.scss';

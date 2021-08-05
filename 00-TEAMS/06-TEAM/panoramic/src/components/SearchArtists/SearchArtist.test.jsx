@@ -1,6 +1,9 @@
 import React from 'react';
+
 import { fireEvent, render, screen } from '../../utils/test.utils';
+
 import SearchArtists from './index';
+
 import { addFavArtist } from '../../redux/actions/actionCreatorsFavList';
 import loadSearchedArtists from '../../redux/actions/actionCreatorsSearchedList';
 
@@ -44,7 +47,7 @@ describe('Given a SearchArtist component', () => {
     });
   });
 
-  describe('And input value changes to Maluma', () => {
+  describe('And input value changes to alex', () => {
     beforeEach(() => {
       const initialState = {
         searchedArtists: [{ name: 'alex' }],

@@ -1,6 +1,6 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
-import styles from './BannerLanding.scss';
+
+import './BannerLanding.scss';
 
 export default function BannerLanding() {
   return (

@@ -1,6 +1,9 @@
 import React from 'react';
+
 import { render, screen, fireEvent } from '../../utils/test.utils';
+
 import FavouriteList from './index';
+
 import { deleteFavArtists } from '../../redux/actions/actionCreatorsFavList';
 
 jest.mock('../../redux/actions/actionCreatorsFavList');

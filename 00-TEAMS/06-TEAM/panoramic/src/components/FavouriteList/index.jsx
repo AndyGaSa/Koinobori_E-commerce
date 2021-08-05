@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
 import { deleteFavArtists } from '../../redux/actions/actionCreatorsFavList';
 
 export default function FavouritList() {
