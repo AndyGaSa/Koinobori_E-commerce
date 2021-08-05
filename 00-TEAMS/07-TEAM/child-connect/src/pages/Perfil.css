@@ -159,14 +159,16 @@ color: #9E9E9E;
 .children-info__age {
     display: flex;
     flex-direction: row;
-    padding: 5px;
+    padding: -5px;
+    align-items: center;
 }
 .hobbies-info {
     width: 50%;
 }
 
 .hobbies-info__img {
-    width: 85px;
+    width: 50px;
+
 }
 
 .profile-rating-block {

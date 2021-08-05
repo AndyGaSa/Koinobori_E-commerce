@@ -1,13 +1,11 @@
 /* eslint-disable no-console */
 import React from 'react';
-import { useSelector } from 'react-redux';
+/* import { useSelector } from 'react-redux'; */
 import './Perfil.css';
 /* import EventList from './EventList'; */
 
 export default function Perfil() {
-  const currentUsers = useSelector(({ users }) => users);
-
-  console.log(currentUsers);
+  /* const currentUsers = useSelector(({ users }) => users); */
   return (
     <>
       <div className="profile-container">
@@ -40,15 +38,15 @@ export default function Perfil() {
               <div className="hobbies-info">
                 <p className="profile-data-details__headline">Intereses de mis hijos:</p>
                 <div className="children-info__age">
-                  <img src="https://i.ibb.co/Ytk8bjz/Hobby-icon.png" alt="" className="hobbies-info__img" />
+                  <img src="https://i.ibb.co/GvX1g1D/Hobby-icon.png" alt="" className="hobbies-info__img" />
                   <p className="profile-data__text"> Fútbol</p>
                 </div>
                 <div className="children-info__age">
-                  <img src="https://i.ibb.co/Ytk8bjz/Hobby-icon.png" alt="" className="hobbies-info__img" />
+                  <img src="https://i.ibb.co/GvX1g1D/Hobby-icon.png" alt="" className="hobbies-info__img" />
                   <p className="profile-data__text"> Natación</p>
                 </div>
                 <div className="children-info__age">
-                  <img src="https://i.ibb.co/Ytk8bjz/Hobby-icon.png" alt="" className="hobbies-info__img" />
+                  <img src="https://i.ibb.co/GvX1g1D/Hobby-icon.png" alt="" className="hobbies-info__img" />
                   <p className="profile-data__text"> Lectura</p>
                 </div>
               </div>
@@ -60,7 +58,7 @@ export default function Perfil() {
 
       </div>
 
-      <p>{currentUsers[0]?.name}</p>
+      <p />
 
     </>
 

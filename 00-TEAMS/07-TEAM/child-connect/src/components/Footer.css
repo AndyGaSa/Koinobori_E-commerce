@@ -112,6 +112,16 @@ align-items: center;
     margin: 5px;
     max-width: 40px;
     height: auto;
+    
+}
+.social-network__item1 {
+ background-image: url('https://i.ibb.co/L5WSKp7/facebook.png');
+ background-repeat: no-repeat;
+ background-size: contain;
+ width: 25px;
+ height: 65px;
+ 
+
 }
 
 @media only screen and (max-width: 600px) {
