@@ -65,3 +65,22 @@
   width: 22em;
   height: 3em;
 }
+
+.event__button--saber-mas {
+  margin: 2vh;
+  width: 10vw;
+  height: 4vh;
+  border-radius: 10vh;
+  background-color: rgb(56, 183, 154);
+  border: transparent;
+  color: white;
+  align-items: flex-end;
+  align-self: flex-end;
+  margin-right: 10vw;
+  margin-bottom: 5vh;
+  box-shadow: -5px -5px 10px rgb(255 255 255 / 50%), 5px 5px 10px rgb(170 170 204 / 25%), 10px 10px 20px rgb(170 170 204 / 50%), -10px -10px 20px #ffffff;
+}
+
+.event__button--saber-mas:hover {
+  cursor: pointer;
+}
