@@ -14,14 +14,19 @@ export default function SearchArtists() {
   return (
     <>
       <input
+        data-testid="search-input"
         placeholder="Search your favourite artist"
         onChange={(event) => dispatch(loadSearchedArtists(event.target.value))}
       />
       <ul>
         {searchedArtistsList.map((artist) => (
-          <li>
+          <li
+            data-testid={`list-item-${artist.name}`}
+            key={`list-item-${artist.name}`}
+          >
             {artist.name}
             <button
+              data-testid="add-button"
               type="button"
               onClick={() => dispatch(addFavArtist(artist))}
             >
