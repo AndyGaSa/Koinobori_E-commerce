@@ -11,6 +11,17 @@ export default function Favorites() {
   useEffect(() => {
     setCurrentTrack(favoritesL);
   }, [favoritesL]);
+  function toggleFav(track) {
+    dispatch({
+      type: actionTypes.TOGGLE_FAVORITES,
+      track
+    });
+  }
+
+  function getFavClass(track) {
+    const isFav = favorites.some((song) => song === track);
+    return isFav ? 'list__button--fav' : '';
+  }
 
   function trackChange(event, trackId) {
     let updatedFavorites;
@@ -59,10 +70,8 @@ export default function Favorites() {
                     </li>
                     <button
                       type="button"
-                      onClick={() => dispatch({
-                        type: actionTypes.TOGGLE_FAVORITES,
-                        track
-                      })}
+                      className={`list__button ${getFavClass(track)}`}
+                      onClick={() => toggleFav(track)}
                     >
                       Add/Remove
 
