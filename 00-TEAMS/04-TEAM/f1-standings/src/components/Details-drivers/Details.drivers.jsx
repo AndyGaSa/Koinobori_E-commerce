@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import driverImg from '../../assets/driver.img';
-// import carImg from '../../assets/cars.img';
 
 import './Details.drivers.styles.scss';
 
@@ -14,11 +13,6 @@ export default function DriverDetails() {
   const { driverId } = useParams();
 
   const { img } = driverImg?.find((e) => e.driverId === driverId);
-  // const { car } = carImg?.find((e) => e.constructorId === driver?.Constructors[0]?.constructorId);
-
-  console.log(driver?.Constructors[0].constructorId);
-  // eslint-disable-next-line no-restricted-syntax
-
 
   useEffect(() => {
     let aux;

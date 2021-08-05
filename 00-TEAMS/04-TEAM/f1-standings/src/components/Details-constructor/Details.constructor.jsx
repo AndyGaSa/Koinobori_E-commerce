@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 /* eslint-disable no-undef */
 import React from 'react';
@@ -15,7 +14,6 @@ export default function DetailsConstructor() {
   const constructorData = useSelector((store) => store?.constructor);
   const constructorFiltered = constructorData[0]?.find((e) => e?.Constructor?.constructorId === constructor);
 
-  // eslint-disable-next-line no-unused-vars
   const driversData = useSelector((store) => store?.drivers);
   const racesData = useSelector((store) => store.races);
 
@@ -60,73 +58,7 @@ export default function DetailsConstructor() {
 
   const polePosition = (polePositionPilot1.length < polePositionPilot2.length) ? polePositionPilot2.length : polePositionPilot1.length;
   const { logo } = logoC.find((e) => e.constructorId === constructor);
-  /*
-  return (
-    <>
-      <header>
-        <div>
-          <span className="driver">{constructor}</span>
-          <img src="" alt="" />
-        </div>
-        <div className="car-picture" />
-      </header>
 
-      <section className="data">
-        <div className="championship-standing">
-          <div className="championship-standing__total">{constructorFiltered?.position}</div>
-          <div className="championship-standing__pts">
-            <div className="pts__value">{constructorFiltered?.points}</div>
-            <span className="pts__img">pts</span>
-          </div>
-        </div>
-
-        <span>2021 Season</span>
-
-        <div>
-          <span>Highest Finish</span>
-
-          <span>
-            {bestposition}
-            {' '}
-            X
-            {' '}
-            {count}
-          </span>
-
-        </div>
-        <div>
-          <span>Pole Positions</span>
-          <span>{polePosition}</span>
-        </div>
-        <div>
-          <span>Win Races</span>
-          <span>{constructorFiltered?.wins}</span>
-        </div>
-      </section>
-      {
-  pilots
-      && (
-      <section className="team">
-        <span>TEAM</span>
-        <div className="team__container">
-          <div className="container_pilot1">
-            <img className="pilot1__img" src="" alt="" />
-            <p className="pilot1__name">{pilots[0]?.Driver?.driverId}</p>
-            <p className="pilot1__lastname" />
-          </div>
-          <div className="container_pilot2">
-            <img className="pilot2__img" src="" alt="" />
-            <p className="pilot2__name">{pilots[1]?.Driver?.driverId}</p>
-            <p className="pilot2__lastname" />
-          </div>
-        </div>
-      </section>
-      )
-}
-    </>
-  );
-}
-*/
   return (
     <>
       <header className="driver-details">
@@ -141,7 +73,7 @@ export default function DetailsConstructor() {
           <div className="container-details">
             <div className={`${constructor}s`} />
             <section className="driver-details__title">
-              <span className="constructor-name">
+              <span data-testid={`constructor-Name-${constructor}`} className="constructor-name">
                 {constructor}
               </span>
             </section>

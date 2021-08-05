@@ -6,10 +6,7 @@ import { Provider } from 'react-redux';
 
 import configureStore from '../../redux/store';
 
-function render(
-  component,
-  initialState
-) {
+function render(component, initialState) {
   const store = configureStore(initialState);
 
   function Wrapper({ children }) {
