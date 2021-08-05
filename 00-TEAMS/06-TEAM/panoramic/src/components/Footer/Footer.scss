@@ -53,7 +53,6 @@
     }
 }
 
-
 .main-container__contact-form{
     margin: 0 auto;
     display: flex;
@@ -72,7 +71,6 @@
         display: flex;
         justify-content: space-between;
     }
-
     input, textarea{
         background-color: $quaternary-color;
         height: 40px;
@@ -95,7 +93,6 @@
         cursor:pointer;
         border: 3px gold solid;
     }
-
 }
 
 .bot-container{
@@ -106,21 +103,17 @@
     background-color:#141313;
     color:$primary-font-color;
     font-family: $secondary-font;
-  
 }
 
 @media screen and(min-width: 600px){
     .main-footer-container{
-    flex-direction: row;
-    nav{
-        margin: 0 auto;
-        margin-right: 80px;
-
-    }
-    .main-container__contact-form{
-        margin-left: 80px;
-        
-    }
-    }
-    
+        flex-direction: row;
+        nav{
+            margin: 0 auto;
+            margin-right: 80px;
+        }
+        .main-container__contact-form{
+            margin-left: 80px;
+        }
+    } 
 }

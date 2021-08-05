@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter, Switch, Route, Redirect
+} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import configureStore from './redux/store';
@@ -10,8 +12,7 @@ import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 import Profile from './pages/Profile';
 import Footer from './components/Footer';
-import List from './pages/List';
-import SearchedArtistList from './pages/SearchArtists';
+import FavouriteArtists from './pages/FavouriteArtists';
 
 ReactDOM.render(
 
@@ -21,12 +22,11 @@ ReactDOM.render(
         <Header />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/home" />
+          <Redirect path="/home" to="/" />
           <Route path="/login" component={Login} />
           <Route path="/notfound" component={NotFound} />
           <Route path="/profile" component={Profile} />
-          <Route path="/list" component={List} />
-          <Route path="/search" component={SearchedArtistList} />
+          <Route path="/Favouritelist" component={FavouriteArtists} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

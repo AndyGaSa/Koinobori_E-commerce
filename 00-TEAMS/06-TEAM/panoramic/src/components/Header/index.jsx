@@ -13,7 +13,7 @@ export default function Header() {
         <Link className="header__navegation__link" to="/login">Login</Link>
         <Link className="header__navegation__link" to="/perfil">Profile</Link>
         <Link className="header__navegation__link" to="/search">Search artist</Link>
-        <Link className="header__navegation__link" to="/list">♡ List</Link>
+        <Link className="header__navegation__link" to="/Favouritelist">♡ List</Link>
       </nav>
     </header>
   );
