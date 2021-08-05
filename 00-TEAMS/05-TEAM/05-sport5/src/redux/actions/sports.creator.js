@@ -65,7 +65,7 @@ export function getTeams(idLeague) {
   };
 }
 
-export default function getTeamDetails(teamId) {
+export function getTeamDetails(teamId) {
   return async (dispatch) => {
     const { data } = await axios(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`);
     const teamDetails = data.teams[0];
