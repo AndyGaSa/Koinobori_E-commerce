@@ -1,0 +1,138 @@
+$gris5: #F2F2F2;
+$gris10:#E5E5E5;
+$gris15:#DADADA;
+$gris95:rgb(38, 38, 38);
+$gris90:#575757;
+$verde: rgb(0, 229.5, 0);
+
+.profile {
+    display: flex;
+    margin: 40px 160px 0px 160px;
+}
+
+.user {
+    .user__title {
+        font-size: 30px;
+    }
+    
+    .favorites {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.profile {
+    width: 360px; 
+    height: 580px;
+    background-color: $gris5;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    .user__image {
+        height: 360px;
+        width: 360px;
+        border-radius: 10px;
+        background-color: $gris15;
+    }
+}
+
+.user__information {
+    margin: 10px 10px 20px 15px;
+    font-size: 20px;
+}
+
+.information__name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.favorites {
+    margin-left: 20px;
+    .favorites__title {
+        font-size: 30px;
+    }
+    .favorites__list {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 740px;
+        justify-content: space-between;
+    }
+}
+
+.favorites__track {
+    background-color: $gris5;
+    width: 360px;
+    height: 160px;
+    border-radius: 10px; 
+    display: flex;
+    margin: 10px 0px 10px 0px;
+}
+
+.favorites__track:hover {
+    background-color: $gris10;
+    .information__track {
+        background-color: $gris10;
+    }
+    
+    .information__artist {
+        background-color: $gris10;
+    }
+    
+}
+
+.favorites__thumbnail {
+    width: 160px;
+    height: 160px;
+    min-width: 160px;
+    background-color: $gris15;
+    border-radius: 10px; 
+}
+
+.list__button--fav{
+    background-color: $verde;
+    position: absolute;
+}
+
+.favorites__information {
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 10px 0px 20px 15px;
+    overflow: scroll;
+    font-size: 10px;
+    .information__track {
+        background-color: $gris5;
+        color: $gris95;
+        font-size: 20px;
+        border: 0;
+        font-weight: bold;
+    }
+    .information__artist {
+        background-color: $gris5;
+        color: $gris90; 
+        font-size: 20px;
+        border: 0;
+        font-weight: bold;
+    }
+}
+
+// Input change color.
+
+.logout {
+    width: 60px;
+    height: 25px; 
+    border-radius: 12.5px;
+    border: solid 1px $gris95;
+    background-color: $gris5;
+    margin: 120px 0px 0px 270px;
+    font-weight: bold;
+
+}
+
+.logout:hover {
+    background-color: $gris10;
+}
+
+.logout:active {
+    background-color: $verde;
+}
