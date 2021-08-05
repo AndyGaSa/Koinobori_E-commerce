@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className="header">
       <Link to="/" className="header__logo-container">
-        <img className="header__logo-item" src="https://i.ibb.co/SXY8TZG/LOGO-PANORAMIC-SOLO.png" alt="LOGO-PANORAMIC-SOLO" border="0" />
+        <img data-testid="main-logo-header" className="header__logo-item" src="https://i.ibb.co/SXY8TZG/LOGO-PANORAMIC-SOLO.png" alt="LOGO-PANORAMIC-SOLO" border="0" />
         <h1 className="header_title">Panoramic</h1>
       </Link>
       <nav className="header__navegation">
