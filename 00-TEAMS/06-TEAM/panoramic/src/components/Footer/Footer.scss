@@ -1,0 +1,119 @@
+@import '../../styles/reset.scss';
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+@import '../../styles/mixin.scss';
+
+.main-footer-container{
+    background-color:$primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 50px 0;
+
+    nav{
+        display:flex;
+    }
+    .main-footer-container__socialmedia{
+        margin: 0 auto;
+        padding: 30px;
+        width: 400px;
+        height: 350px;
+        display: grid;
+        grid-template-columns: repeat( 2, auto);
+    
+        .socialmedia__facebook{
+        @include socialmedia__icons("https://i.ibb.co/ZXNJ96C/icons8-facebook-48-1.png")
+        }
+                
+            .socialmedia__instagram{
+        @include socialmedia__icons("https://i.ibb.co/xCRv0K8/icons8-instagram-48.png");
+        }
+        
+        .socialmedia__youtube{
+        @include socialmedia__icons("https://i.ibb.co/0tXnXDq/icons8-youtube-50.png");
+        }
+        
+        .socialmedia__twitter{
+        @include socialmedia__icons("https://i.ibb.co/Nmn630v/icons8-twitter-60.png");
+        }
+        
+        .socialmedia__soundcloud {
+        @include socialmedia__icons("https://i.ibb.co/Y8zDvWp/icons8-soundcloud-50.png");
+        }
+        
+        .socialmedia__pinterest {
+        @include socialmedia__icons("https://i.ibb.co/NYJMt8s/icons8-pinterest-50.png");
+        }
+
+        li:hover{
+            cursor:pointer;
+            background-size: 55px;
+        }
+    }
+}
+
+.main-container__contact-form{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px white solid;
+    padding: 30px;
+    background-color: $secondary-color;
+    width: 400px;
+    height: 350px;
+    h3{
+        color:$primary-font-color;
+        font-family: $secondary-font;
+    }
+    .name-input{
+        display: flex;
+        justify-content: space-between;
+    }
+    input, textarea{
+        background-color: $quaternary-color;
+        height: 40px;
+        border: none;
+        color:$primary-font-color;
+        padding-left: 8px;
+    }
+    textarea{
+        height: 60px;
+        padding-top: 8px;
+    }
+    button{
+        border: 2px white solid;
+        color: $primary-font-color;
+        width: 150px;
+        height: 40px;
+        background-color: $primary-color;
+    }
+    button:hover{
+        cursor:pointer;
+        border: 3px gold solid;
+    }
+}
+
+.bot-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color:#141313;
+    color:$primary-font-color;
+    font-family: $secondary-font;
+}
+
+@media screen and(min-width: 600px){
+    .main-footer-container{
+        flex-direction: row;
+        nav{
+            margin: 0 auto;
+            margin-right: 80px;
+        }
+        .main-container__contact-form{
+            margin-left: 80px;
+        }
+    } 
+}
