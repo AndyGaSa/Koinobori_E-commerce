@@ -38,7 +38,7 @@ export default function Home() {
                 type="button"
                 onClick={() => dispatch(addFavArtist(artist))}
               >
-                + Add to favourites
+                +Add to favourites
               </button>
             </li>
           ))
