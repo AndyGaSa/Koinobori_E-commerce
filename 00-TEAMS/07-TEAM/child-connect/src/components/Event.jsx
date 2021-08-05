@@ -37,7 +37,7 @@ const Event = ({ data }) => (
       </section>
       <p className="event__description">{data.description}</p>
       <footer className="event__more-btn">
-        <button type="button">Saber más</button>
+        <button type="button" className="event-button__saber-mas">Saber más</button>
       </footer>
     </article>
   </>

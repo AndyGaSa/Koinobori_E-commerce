@@ -28,8 +28,8 @@ const EventList = () => {
         )}
       </section>
       <nav className="event-pagination">
-        <button className="event-pagination__siguiente" type="button">Siguiente</button>
         <button className="event-pagination__anterior" type="button">Anterior</button>
+        <button className="event-pagination__siguiente" type="button">Siguiente</button>
       </nav>
     </>
   );
