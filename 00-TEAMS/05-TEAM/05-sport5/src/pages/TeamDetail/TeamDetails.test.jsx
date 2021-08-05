@@ -28,7 +28,7 @@ describe('Given a component Teamdetails', () => {
       expect(screen.getByText(/Inter/i)).toBeInTheDocument();
     });
   });
-  describe('When rendered with valid params', () => {
+  describe('When rendered with invalid params', () => {
     beforeEach(() => {
       getTeamDetails.mockReturnValue(({
         type: 'LOAD_DETAILS',
