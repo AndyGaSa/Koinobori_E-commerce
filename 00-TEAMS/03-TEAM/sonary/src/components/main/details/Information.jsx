@@ -32,7 +32,11 @@ export default function Information() {
         <figure className="details__figure" />
         <ul className="details__track">
           <li className="track__artist">{foundTrack?.artist_name}</li>
-          <li className="track__album">{foundTrack?.album_name}</li>
+          <li className="track__album">
+            Album:
+            {' '}
+            {foundTrack?.album_name}
+          </li>
         </ul>
       </aside>
     </div>
