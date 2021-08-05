@@ -46,7 +46,7 @@ export default function TeamsList() {
 
   return (
     <main className="team-list">
-      <h2 className="TeamList__Title">{allTeamsPerLeague[0]?.league}</h2>
+      <h2 className="team-list__title">{allTeamsPerLeague[0]?.league}</h2>
       <form>
         <input type="text" placeholder="Filter teams" value={filterValue} onChange={(event) => filterTeams(event.target.value)} />
       </form>

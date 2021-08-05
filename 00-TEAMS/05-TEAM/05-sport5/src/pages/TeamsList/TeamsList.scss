@@ -16,10 +16,11 @@
 }
 
 .team-list__title{
-    padding: 125px 0 0;
-    margin: 0 auto;
-    width: fit-content;
-    color: white;
+    @extend %top-title;
+    text-align: center;
+    line-height: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 .teams{
     margin: 30px auto;
