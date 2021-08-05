@@ -71,6 +71,7 @@ export default function Favorites() {
                         onChange={(event) => trackChange(event, track.track_id)}
                       />
                     </li>
+
                   </ul>
                   <button
                     type="button"
