@@ -30,7 +30,7 @@ export default function Cart() {
         <main className="main">
           <ul className="items__container">
             {LocalStorage.map((item) => (
-              <li className="item__container">
+              <li data-testid="cart-li" className="item__container">
                 <Link to={`/details/${item.category}/${item.id}`}><img className="item__image" src={item.imageFront} alt={item.name} /></Link>
                 <div className="nameprice__container">
                   <span className="item__name">{item.name}</span>
@@ -48,7 +48,7 @@ export default function Cart() {
                   />
                 </div>
                 <div className="delete__button">
-                  <button onClick={() => deleteArticle(item.name, item.quantity)} className="item__delete" type="button">X</button>
+                  <button onClick={() => deleteArticle(item.name, item.quantity)} data-testid="cart-button" className="item__delete" type="button">X</button>
                   <div className="item__empty" />
                 </div>
               </li>
