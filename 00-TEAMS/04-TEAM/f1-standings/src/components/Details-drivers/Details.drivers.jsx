@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable no-unused-expressions */
 import React, { useEffect, useState } from 'react';
@@ -16,9 +17,7 @@ export default function DriverDetails() {
   const { img } = driverImg?.find((e) => e.driverId === driverId);
   // const { car } = carImg?.find((e) => e.constructorId === driver?.Constructors[0]?.constructorId);
 
-  console.log(driver?.Constructors[0].constructorId);
   // eslint-disable-next-line no-restricted-syntax
-
 
   useEffect(() => {
     let aux;

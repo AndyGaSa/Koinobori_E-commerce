@@ -1,0 +1,30 @@
+@import '../../assets/colors.scss';
+
+.leyend{
+    display: flex;
+    flex: row;
+    width: 90vw;
+    justify-content: space-between;
+  
+}
+.driver-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5vw;
+}
+.driver-info{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-black;
+    color: $color-white;
+}
+.input-container{
+    display: flex;
+}
+input{
+    width: 45vw;
+}
+.leyend-info{
+    font-size: 5vw;
+}
