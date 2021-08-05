@@ -15,6 +15,7 @@ export default function Lyrics() {
       dispatch(loadDetails(+track_id));
     }
   }, []);
+  console.log(lyrics);
   return (
     <div className="details__lyrics">
       {lyrics.map((p) => (
