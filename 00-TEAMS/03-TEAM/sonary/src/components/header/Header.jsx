@@ -1,11 +1,11 @@
 import React from 'react';
 import './header.input.scss';
-// import { useAuth0 } from '@auth0/auth0-react';
+import { useAuth0 } from '@auth0/auth0-react';
 import logo from './sonary.svg';
+import iconUser from './user.svg';
 
 export default function Header() {
-  // const { user } = useAuth0();
-
+  const { user, isAuthenticated } = useAuth0();
   return (
     <header className="header">
       <nav className="header__top">
@@ -18,7 +18,7 @@ export default function Header() {
 
         <figure className="header__profile">
           <a className="profile__anchor" href="/profile">
-            <img className="profile__icon" alt="icon" />
+            <img src={isAuthenticated ? user.picture : iconUser} className="header__profile" alt="profile icon" />
           </a>
         </figure>
       </nav>
