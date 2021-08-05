@@ -5,7 +5,7 @@ import { deleteFavArtists } from '../../redux/actions/actionCreatorsFavList';
 
 jest.mock('../../redux/actions/actionCreatorsFavList');
 
-describe('Given an Favourite List component', () => {
+describe('Given a Favourite List component', () => {
   describe('When the component is rendered', () => {
     beforeEach(() => {
       const initialState = {
