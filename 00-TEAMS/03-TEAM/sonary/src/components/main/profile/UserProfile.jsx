@@ -19,9 +19,9 @@ export default function userProfile() {
         </div>
       )
       : (
-        <di>
-          <p>NO estas logeado</p>
-        </di>
+        <div>
+          <p>Log In</p>
+        </div>
       )
   );
 }
