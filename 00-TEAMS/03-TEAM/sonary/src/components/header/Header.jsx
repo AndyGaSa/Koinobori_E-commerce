@@ -12,13 +12,13 @@ export default function Header() {
         <div className="header__aux" />
         <figure className="header__sonary">
           <a className="sonary__anchor" href="/dashboard">
-            <img className="sonary__icon" alt="sonary icon" src={logo} />
+            <img data-testid="logo-image" className="sonary__icon" alt="sonary icon" src={logo} />
           </a>
         </figure>
 
         <figure className="header__profile">
           <a className="profile__anchor" href="/profile">
-            <img src={isAuthenticated ? user.picture : iconUser} className="header__profile" alt="profile icon" data-testid="profile-image" />
+            <img data-testid="profile-image" src={isAuthenticated ? user.picture : iconUser} className="header__profile" alt="profile icon" />
           </a>
         </figure>
       </nav>

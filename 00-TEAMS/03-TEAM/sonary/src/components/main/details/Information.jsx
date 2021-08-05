@@ -25,8 +25,6 @@ export default function Information() {
     setFoundTrack(x);
   }, [track_id, tracks]);
 
-  console.log(foundTrack);
-
   return (
     <div>
       <h2 className="details__title">{foundTrack?.track_name}</h2>
