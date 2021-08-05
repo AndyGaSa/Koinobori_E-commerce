@@ -6,6 +6,7 @@ function LogoutButton() {
 
   return (
     <button
+      data-testid="logout"
       className="logout"
       type="button"
       onClick={() => logout()}

@@ -6,6 +6,7 @@ function LoginButton() {
 
   return (
     <button
+      data-testid="login"
       type="button"
       onClick={() => loginWithRedirect()}
     >
