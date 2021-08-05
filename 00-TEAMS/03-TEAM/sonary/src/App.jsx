@@ -4,6 +4,7 @@ import {
   BrowserRouter, Route, Redirect, Switch
 } from 'react-router-dom';
 
+import { Auth0Provider } from '@auth0/auth0-react';
 import configureStore from './redux/store';
 import Dashboard from './components/main/dashboard/Dashboard';
 import Details from './components/main/details/Details';
@@ -16,17 +17,23 @@ import './App.css';
 function App() {
   return (
     <Provider store={configureStore()}>
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route path="/" exact component={Dashboard} />
-          <Redirect path="/dashboard" to="/" />
-          <Route path="/details/:track_id" component={Details} />
-          <Route path="/profile" component={Profile} />
-          <Route component={notFound} />
-        </Switch>
-        <Footer />
-      </BrowserRouter>
+      <Auth0Provider
+        domain="dev-f4fbum08.us.auth0.com"
+        clientId="vqPW5cmgTiKKjsTtNWwnQ3AZUPd5YaGM"
+        redirectUri={window.location.origin}
+      >
+        <BrowserRouter>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Dashboard} />
+            <Redirect path="/dashboard" to="/" />
+            <Route path="/details/:track_id" component={Details} />
+            <Route path="/profile" component={Profile} />
+            <Route component={notFound} />
+          </Switch>
+          <Footer />
+        </BrowserRouter>
+      </Auth0Provider>
     </Provider>
   );
 }
