@@ -42,4 +42,23 @@ const fetchAllUsers = () => ((dispatch) => (
     .catch((error) => { console.error(error); })
 ));
 
-export { fetchAllEvents, fetchAllUsers };
+const fetchFaqs = (data) => ({
+  type: actionTypes.FETCH_FAQ,
+  data
+});
+
+const fetchAllFaqs = () => ((dispatch) => (
+  axios.get('http://localhost:3001/faq', {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+    },
+    responseType: 'json'
+  })
+    .then((response) => {
+      dispatch(fetchFaqs(response.data));
+    })
+    .catch((error) => { console.error(error); })
+));
+
+export { fetchAllEvents, fetchAllUsers, fetchAllFaqs };
