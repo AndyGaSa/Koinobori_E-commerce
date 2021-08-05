@@ -49,14 +49,17 @@ export function getLeagues(sport) {
 
 export function getTeams(idLeague) {
   return async (dispatch) => {
+    let leagueTeamsList = [];
     const { data } = await axios(`https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=${idLeague}`);
-    const leagueTeamsList = data.teams?.map(({
-      idTeam, strTeam, strTeamBadge
-    }) => ({
-      id: idTeam,
-      name: strTeam,
-      badge: strTeamBadge
-    }));
+    if (data.teams) {
+      leagueTeamsList = data.teams?.map(({
+        idTeam, strTeam, strTeamBadge
+      }) => ({
+        id: idTeam,
+        name: strTeam,
+        badge: strTeamBadge
+      }));
+    }
 
     dispatch({
       type: actionTypes.LOAD_TEAMS,

@@ -34,6 +34,7 @@ export default function TeamsList() {
     <>
       <h2 className="TeamList__Title">TeamList title:</h2>
       <ul className="teams">
+
         {allTeamsPerLeague?.length ? allTeamsPerLeague.map((team) => {
           const isFavourite = teamIsInFavourites(team.id);
           return (
