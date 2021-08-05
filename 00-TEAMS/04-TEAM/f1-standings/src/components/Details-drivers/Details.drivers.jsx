@@ -8,7 +8,8 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-// import { useParams } from 'react-router-dom';
+import driverImg from '../../assets/driver.img';
+// import carImg from '../../assets/cars.img';
 
 import './Details.drivers.styles.scss';
 
@@ -16,8 +17,11 @@ export default function DriverDetails() {
   const drivers = useSelector((store) => store?.drivers);
   const [driver, setDriver] = useState();
   const { driverId } = useParams();
-  console.log(driverId);
 
+  const { img } = driverImg?.find((e) => e.driverId === driverId);
+  // const { car } = carImg?.find((e) => e.constructorId === driver?.Constructors[0]?.constructorId);
+
+  console.log(driver?.Constructors[0].constructorId);
   // eslint-disable-next-line no-restricted-syntax
 
   useEffect(() => {
@@ -34,10 +38,9 @@ export default function DriverDetails() {
       <>
         <header className="driver-details">
           <div className="back-button__container">
-            <a href="/" className="back">
-              <img
-                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDMzMC4wMDIgMzMwLjAwMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+CjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaWQ9IlhNTElEXzIyN18iIGQ9Ik0yMzMuMjUsMzA2LjAwMUwxMjcuNSwxNjUuMDA1TDIzMy4yNSwyNC4wMDFjNC45NzEtNi42MjgsMy42MjctMTYuMDMtMy0yMWMtNi42MjctNC45NzEtMTYuMDMtMy42MjYtMjEsMyAgTDk2Ljc1LDE1Ni4wMDVjLTQsNS4zMzMtNCwxMi42NjcsMCwxOGwxMTIuNSwxNDkuOTk2YzIuOTQ3LDMuOTMsNy40NTEsNi4wMDEsMTIuMDEyLDYuMDAxYzMuMTMxLDAsNi4yOS0wLjk3OCw4Ljk4OC0zLjAwMSAgQzIzNi44NzgsMzIyLjAzLDIzOC4yMjEsMzEyLjYyOCwyMzMuMjUsMzA2LjAwMXoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg=="
-              />
+            <a href="/">
+              <img className="back" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPHBhdGggZD0iTTM3OS42NDQsNDc3Ljg3MmwtMjA3LjI5OS0yMDcuNzNjLTcuNzk4LTcuNzk4LTcuNzk4LTIwLjQ4NiwwLjAxNS0yOC4yOTlMMzc5LjY0MywzNC4xMjggICAgYzcuODAzLTcuODE5LDcuNzg5LTIwLjQ4Mi0wLjAyOS0yOC4yODRjLTcuODE5LTcuODAzLTIwLjQ4Mi03Ljc5LTI4LjI4NCwwLjAyOUwxNDQuMDYxLDIxMy41NzQgICAgYy0yMy4zOTQsMjMuMzk0LTIzLjM5NCw2MS40NTktMC4wMTUsODQuODM4TDM1MS4zMyw1MDYuMTI3YzMuOTA3LDMuOTE1LDkuMDMxLDUuODczLDE0LjE1Nyw1Ljg3MyAgICBjNS4xMTEsMCwxMC4yMjQtMS45NDgsMTQuMTI4LTUuODQ0QzM4Ny40MzMsNDk4LjM1NCwzODcuNDQ2LDQ4NS42OTEsMzc5LjY0NCw0NzcuODcyeiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4=" />
+              {' '}
 
             </a>
           </div>
@@ -58,35 +61,47 @@ export default function DriverDetails() {
                   <span className="driver-constructor">{driver?.Constructors[0].name}</span>
                 </div>
               </section>
+
+            </div>
+            <div className="foto-piloto-container">
+              <img className="foto-piloto" src={img} alt="" />
             </div>
           </div>
-          <img src="https://www.formula1.com/content/dam/fom-website/drivers/L/LANNOR01_Lando_Norris/lannor01.png.transform/2col-retina/image.png" alt="Lando Norris" />
         </header>
-        <section className="championship-standing">
-          <h5>Championship Standing</h5>
-          <div className="championship-standing__data">
-            <span className="postion">{driver?.position}</span>
-            <div className="points">
-              <span className="points__number">{driver?.points}</span>
-              <span className="points__pts">PTS</span>
+        <section className="championship">
+          <div className="championship-standing-container">
+            <div className="container-champ">
+              <h5>Championship Standing</h5>
+              <div className="championship-standing__data">
+                <span className="postion">{driver?.position}</span>
+              </div>
+            </div>
+            <div className={`${driver?.Constructors[0].constructorId}points`}>
+              <div className="points-container">
+                <span className="points__number">{driver?.points}</span>
+                <span className="points__pts">PTS</span>
+              </div>
             </div>
           </div>
-          <div className="season">
-            <h3>2021 Season</h3>
-            <section className="season__data">
-              <div className="podiums">
-                <h5>Podiums</h5>
-                <span className="podiums-total">{driver?.wins}</span>
-              </div>
-              <div className="dhl">
-                <h5> DHL Fastest Lap</h5>
-                <span className="fastest-lap">0</span>
-              </div>
-              <div className="gps">
-                <h5>GPs Entered</h5>
-                <span className="gps-entered">10</span>
-              </div>
-            </section>
+          <div className="championship-container">
+            <div className="season">
+              <h3>2021 Season</h3>
+              <section className="season__data">
+                <div className={`${driver?.Constructors[0].constructorId}podiums`} />
+                <div className="podiums">
+                  <h5>Podiums</h5>
+                  <span className="podiums-total">{driver?.wins}</span>
+                </div>
+                <div className="podiums">
+                  <h5> Nationality</h5>
+                  <span className="podiums-total">{driver?.Driver.nationality}</span>
+                </div>
+                <div className="podiums">
+                  <h5>Code</h5>
+                  <span className="podiums-total">{driver?.Driver.code}</span>
+                </div>
+              </section>
+            </div>
           </div>
         </section>
       </>
