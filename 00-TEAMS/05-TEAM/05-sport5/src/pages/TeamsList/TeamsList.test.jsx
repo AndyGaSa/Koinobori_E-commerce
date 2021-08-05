@@ -41,5 +41,17 @@ describe('Given a Teams List component', () => {
         expect(screen.getByTestId('Barça-team-0-favourite').className).toContain('teams__favourite-button--active');
       });
     });
+    describe('When "bar" is written in the filter input', () => {
+      beforeEach(() => {
+        const filterInput = screen.getByTestId('filter-input');
+        fireEvent.change(filterInput, { target: { value: 'Bar' } });
+      });
+      test('Then "Barça" should be in the document', () => {
+        expect(screen.queryByText('Barça')).toBeInTheDocument();
+      });
+      test('Then "Madrid" should not be in the document', () => {
+        expect(screen.queryByText('Madrid')).not.toBeInTheDocument();
+      });
+    });
   });
 });
