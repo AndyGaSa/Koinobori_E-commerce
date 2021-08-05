@@ -96,12 +96,6 @@
         }
     }
 
-    &--active {
-        aside {
-            transform: translateX(0);
-        }
-    }
-
     .shadow {
         position: fixed;
         z-index: 1;
@@ -115,6 +109,10 @@
     }
 
     &--active {
+        aside {
+            transform: translateX(0);
+        }
+
         .shadow {
             opacity: .75;
             pointer-events: unset;
