@@ -6,7 +6,7 @@ export default function loadSearchedArtists(inputValue) {
     const token = JSON.parse(localStorage.getItem('token'));
     const { data } = await axios({
       method: 'GET',
-      url: `https://api.spotify.com/v1/search?q=${inputValue}&type=artist&market=ES`,
+      url: `https://api.spotify.com/v1/search?q=${inputValue}&type=artist&limit=10&offset=0`,
       headers: { Authorization: `Bearer ${token}` }
     });
     dispatch({
