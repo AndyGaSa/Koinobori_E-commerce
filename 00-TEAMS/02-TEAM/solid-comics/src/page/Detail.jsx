@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import UserSelection from '../components/user-selection/UserSelection';
+
 import './styles/Details.scss';
 
 export default function Detail() {
@@ -26,6 +28,7 @@ export default function Detail() {
       <div className="detail__top">
         <img data-testid="create-img" className="detail__img" src={`${comic?.thumbnail?.path}.${comic?.thumbnail?.extension}`} alt="comic" />
         <section>
+          <UserSelection comicId={comicId} />
           <div className="detail__creators" data-testid={`list-item-${comic?.id}`}>
             <h3 className="detail__creator">
               Penciler:
