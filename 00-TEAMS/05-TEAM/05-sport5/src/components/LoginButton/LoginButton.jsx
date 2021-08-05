@@ -7,6 +7,7 @@ function LoginButton() {
 
   return (
     <button
+      data-testid="login-button-test"
       type="button"
       onClick={() => loginWithRedirect()}
       className="login-button"

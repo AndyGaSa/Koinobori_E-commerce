@@ -7,6 +7,7 @@ function LogoutButton() {
 
   return (
     <button
+      data-testid="logout-button-test"
       className="footer__navigation-logout-button"
       type="button"
       onClick={() => logout()}
