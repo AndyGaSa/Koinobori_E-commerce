@@ -42,6 +42,7 @@ export default function TeamsList() {
           const isFavourite = teamIsInFavourites(team.id);
           return (
             <li
+              data-testid="all-teams-per-league"
               key={team.name}
               className={isFavourite
                 ? 'teams__team teams__team--top'
