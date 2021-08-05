@@ -23,9 +23,13 @@ $verde: rgb(0, 229.5, 0);
         height: 40px;
         font-size: 20px;
         background-color: white;
-        border: solid 1px $gris10;
+        border: solid 1px $gris90;
         background-color: $gris5;
         border-radius: 10px;
+        margin-right: 80;
+    }
+    .dashboard__search::placeholder{
+        color: $gris90;
     }
 }
 
@@ -33,9 +37,28 @@ $verde: rgb(0, 229.5, 0);
     border: solid 1px $verde;
 }
 .dashboard__bottom {
-    margin: 30px 150px 0px 150px;
+    margin: 10px 150px 0px 150px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.list__button {
+    position: absolute;
+    margin-left: 325px;
+    margin-top: 10px;
+    width: 25px;
+    height: 25px; 
+    border-radius: 12.5px;
+    border: solid 1px $gris95;
+    background-color: $gris5;
+}
+
+.list__button:hover {
+    background-color: $gris10;
+}
+
+.list__button:active {
+    background-color: $verde;
 }
 
 .list__track {
@@ -51,6 +74,7 @@ $verde: rgb(0, 229.5, 0);
 }
 
 .list__track:hover {
+    background-color: $gris10;
     .bottom__track {
         color: $verde;
     }
@@ -58,6 +82,13 @@ $verde: rgb(0, 229.5, 0);
 
 .list__track:nth-child(1){
     width: 1120px;
+    .information__auxiliar {
+        width: 740px;
+        height: 160px;
+        background-color: $gris15;
+        border-radius: 10px;
+        margin-left: 90px;
+    }
 }
 
 .track__thumbnail {
@@ -69,7 +100,7 @@ $verde: rgb(0, 229.5, 0);
 }
 
 .track__information {
-    margin: 5px 20px 0px 10px;
+    margin: 5px 10px 0px 10px;
     height: 160px;
     display: flex; 
     flex-direction: column; 
@@ -86,8 +117,6 @@ $verde: rgb(0, 229.5, 0);
     }
 }
 
-
 .bottom__artist {
       color: $gris90;
 }
-
