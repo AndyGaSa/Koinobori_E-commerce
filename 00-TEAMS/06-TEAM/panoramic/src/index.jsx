@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { Auth0Provider } from '@auth0/auth0-react';
 import {
   BrowserRouter, Switch, Route, Redirect
 } from 'react-router-dom';
@@ -18,19 +19,25 @@ ReactDOM.render(
 
   <React.StrictMode>
     <Provider store={configureStore()}>
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Redirect path="/home" to="/" />
-          <Route path="/login" component={Login} />
-          <Route path="/notfound" component={NotFound} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/Favouritelist" component={FavouriteArtists} />
-          <Route component={NotFound} />
-        </Switch>
-        <Footer />
-      </BrowserRouter>
+      <Auth0Provider
+        domain="dev-x4gskn06.us.auth0.com"
+        clientId="uWxY3rqHFeugcexTsKK0rmCmdok2SfPl"
+        redirectUri={window.location.origin}
+      >
+        <BrowserRouter>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Redirect path="/home" to="/" />
+            <Route path="/login" component={Login} />
+            <Route path="/notfound" component={NotFound} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/Favouritelist" component={FavouriteArtists} />
+            <Route component={NotFound} />
+          </Switch>
+          <Footer />
+        </BrowserRouter>
+      </Auth0Provider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
