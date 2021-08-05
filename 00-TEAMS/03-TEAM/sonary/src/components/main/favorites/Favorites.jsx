@@ -1,14 +1,16 @@
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-
 import actionTypes from '../../../redux/actions/actionTypes';
 
 export default function Favorites() {
   const favoritesL = useSelector((store) => store.favorites);
   const dispatch = useDispatch();
   const [favorites, setCurrentTrack] = useState(favoritesL);
+  useEffect(() => {
+    setCurrentTrack(favoritesL);
+  }, [favoritesL]);
 
   function trackChange(event, trackId) {
     let updatedFavorites;
@@ -43,7 +45,6 @@ export default function Favorites() {
                         value={track.track_name}
                         onChange={(event) => trackChange(event, track.track_id)}
                       />
-                      {track.track_name}
                     </li>
                     <li>
                       Artist name:
@@ -53,7 +54,7 @@ export default function Favorites() {
                         name="artist_name"
                         placeholder="artist_name"
                         value={track.artist_name}
-                        onChange={trackChange}
+                        onChange={(event) => trackChange(event, track.track_id)}
                       />
 
                     </li>
