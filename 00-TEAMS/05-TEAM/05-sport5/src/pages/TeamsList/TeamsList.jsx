@@ -8,15 +8,19 @@ import './TeamsList.scss';
 import { getTeams } from '../../redux/actions/sports.creator';
 
 export default function TeamsList() {
-  const allTeamsPerLeague = useSelector((store) => store.countriesLeagues);
+  const allTeamsPerLeagueApi = useSelector((store) => store.countriesLeagues);
   const dispatch = useDispatch();
   const favourites = useSelector((store) => store.favourites);
   const { leagueId } = useParams();
   const [filterValue, setFilterValue] = useState('');
+  const [allTeamsPerLeague, setTeams] = useState(allTeamsPerLeagueApi);
 
   useEffect(() => {
     dispatch(getTeams(leagueId));
   }, [leagueId]);
+  useEffect(() => {
+    setTeams(allTeamsPerLeagueApi);
+  }, [allTeamsPerLeagueApi]);
 
   function teamIsInFavourites(teamId) {
     return favourites.favouriteTeams.some(({ id }) => id === teamId);
@@ -33,6 +37,10 @@ export default function TeamsList() {
 
   function filterTeams(value) {
     const inputValue = value;
+    const filteredTeams = allTeamsPerLeagueApi.filter(
+      (team) => team.name.toLowerCase().includes(inputValue.toLowerCase())
+    );
+    setTeams(filteredTeams);
     setFilterValue(inputValue);
   }
 
