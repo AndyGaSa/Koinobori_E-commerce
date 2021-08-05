@@ -81,7 +81,8 @@ export default function LeaguesList() {
       <ul className="leagues">
         {
         (Object.entries(leaguesByCountries)?.length
-        && Object.entries(leaguesByCountries)[0][1]?.length)
+        && Object.entries(leaguesByCountries)[0][1]?.length
+        && typeof Object.entries(leaguesByCountries)[0][1] === 'object')
         && Object.entries(leaguesByCountries).map((country) => (
           <div key={`${country[0]}-container`} className="leagues__block">
             <li key={`${country[0]}-name`} className="leagues__country">
@@ -122,5 +123,6 @@ export default function LeaguesList() {
       }
       </ul>
     </main>
+
   );
 }

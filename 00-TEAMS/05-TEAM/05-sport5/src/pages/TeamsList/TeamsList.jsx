@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { addFavouriteTeam, deleteFavouriteTeam } from '../../redux/actions/favourites.creator';
@@ -8,14 +8,19 @@ import './TeamsList.scss';
 import { getTeams } from '../../redux/actions/sports.creator';
 
 export default function TeamsList() {
-  const allTeamsPerLeague = useSelector((store) => store.countriesLeagues);
+  const allTeamsPerLeagueApi = useSelector((store) => store.countriesLeagues);
   const dispatch = useDispatch();
   const favourites = useSelector((store) => store.favourites);
   const { leagueId } = useParams();
+  const [filterValue, setFilterValue] = useState('');
+  const [allTeamsPerLeague, setTeams] = useState(allTeamsPerLeagueApi);
 
   useEffect(() => {
     dispatch(getTeams(leagueId));
   }, [leagueId]);
+  useEffect(() => {
+    setTeams(allTeamsPerLeagueApi);
+  }, [allTeamsPerLeagueApi]);
 
   function teamIsInFavourites(teamId) {
     return favourites.favouriteTeams.some(({ id }) => id === teamId);
@@ -30,11 +35,20 @@ export default function TeamsList() {
     }
   }
 
+  function filterTeams(value) {
+    const inputValue = value;
+    const filteredTeams = allTeamsPerLeagueApi.filter(
+      (team) => team.name.toLowerCase().includes(inputValue.toLowerCase())
+    );
+    setTeams(filteredTeams);
+    setFilterValue(inputValue);
+  }
+
   return (
     <main className="team-list">
       <h2 className="team-list__title">{allTeamsPerLeague[0]?.league}</h2>
       <form>
-        <input type="text" placeholder="Filter teams" />
+        <input type="text" placeholder="Filter teams" value={filterValue} onChange={(event) => filterTeams(event.target.value)} />
       </form>
       <ul className="teams">
         {allTeamsPerLeague?.length ? allTeamsPerLeague.map((team, index) => {
