@@ -8,20 +8,36 @@ import {
   ChartCategoryAxis,
   ChartCategoryAxisItem
 } from '@progress/kendo-react-charts';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import 'hammerjs';
+import './style.scss';
 
 const categories = [
-  'Bahrain',
-  'Italy',
-  'Portugal',
-  'Spain',
-  'Monaco',
-  'Azerbaijan',
-  'France',
-  'Austria',
-  'Austria',
-  'UK',
-  'Hungary'
+  '1.Bahrain',
+  '2.Italy',
+  '3.Portugal',
+  '4.Spain',
+  '5.Monaco',
+  '6.Azerbaijan',
+  '7.France',
+  '8.Austria',
+  '9.Austria',
+  '10.UK',
+  '11.Hungary'
+];
+const categoriesRace = [
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
+  '10',
+  '11'
 ];
 
 export default function ChartContainer() {
@@ -52,30 +68,42 @@ export default function ChartContainer() {
 
   return (
     <>
-      <Chart>
+      <Header />
+      <Chart className="chart">
         <ChartTitle text="Drivers Statistic" />
         <ChartCategoryAxis>
           <ChartCategoryAxisItem
             title={{
               text: 'Countries'
             }}
-            categories={categories}
+            categories={categoriesRace}
           />
         </ChartCategoryAxis>
         <ChartSeries>
           {driverSeries.map((driver) => <ChartSeriesItem type="line" data={driver.points} />)}
         </ChartSeries>
       </Chart>
-      <div>
-        <input type="text" onChange={(event) => setDriver1(event.target.value)} />
+      <section className="driver-info">
+        <div className="driver-input">
+          <input className="imput-conatiner" type="text" onChange={(event) => setDriver1(event.target.value)} />
 
-        <input type="text" onChange={(event) => setDriver2(event.target.value)} />
+          <input className="imput-container" type="text" onChange={(event) => setDriver2(event.target.value)} />
 
-        {driversData[0]?.map((e) => (
-          <p>{e.Driver.driverId}</p>
-        ))}
-
-      </div>
+        </div>
+        <section className="leyend">
+          <div>
+            {driversData[0]?.map((e) => (
+              <p className="leyend-info">{e.Driver.driverId}</p>
+            ))}
+          </div>
+          <div>
+            {categories.map((e) => (
+              <p className="leyend-info">{e}</p>
+            ))}
+          </div>
+        </section>
+      </section>
+      <Footer />
     </>
   );
 }
