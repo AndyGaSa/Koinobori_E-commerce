@@ -1,14 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable max-len */
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable no-console */
-/* eslint-disable prefer-const */
 /* eslint-disable no-unused-expressions */
-/* eslint-disable no-lone-blocks */
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-// import { useParams } from 'react-router-dom';
 
 import './Details.drivers.styles.scss';
 
@@ -16,9 +10,6 @@ export default function DriverDetails() {
   const drivers = useSelector((store) => store?.drivers);
   const [driver, setDriver] = useState();
   const { driverId } = useParams();
-  console.log(driverId);
-
-  // eslint-disable-next-line no-restricted-syntax
 
   useEffect(() => {
     let aux;
@@ -31,7 +22,7 @@ export default function DriverDetails() {
 
   return (
     drivers && (
-      <>
+      <div>
         <header className="driver-details">
           <div className="back-button__container">
             <a href="/" className="back">
@@ -45,7 +36,7 @@ export default function DriverDetails() {
             <div className="container-details">
               <div className={`${driver?.Constructors[0].constructorId}s`} />
               <section className="driver-details__title">
-                <span className="driver-name">
+                <span data-testid={`driver-name-${driver?.Driver.givenName}`} className="driver-name">
                   {driver?.Driver.givenName}
                 </span>
                 <span className="driver-surname">
@@ -89,7 +80,7 @@ export default function DriverDetails() {
             </section>
           </div>
         </section>
-      </>
+      </div>
     )
   );
 }
