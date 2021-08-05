@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { addFavouriteTeam, deleteFavouriteTeam } from '../../redux/actions/favourites.creator';
-import NotFound from '../NotFound/NotFound';
 
 import './TeamsList.scss';
 import { getTeams } from '../../redux/actions/sports.creator';
@@ -51,7 +50,7 @@ export default function TeamsList() {
         <input type="text" placeholder="Filter teams" value={filterValue} onChange={(event) => filterTeams(event.target.value)} />
       </form>
       <ul className="teams">
-        {allTeamsPerLeague?.length ? allTeamsPerLeague.map((team, index) => {
+        {allTeamsPerLeague?.length && allTeamsPerLeague.map((team, index) => {
           const isFavourite = teamIsInFavourites(team.id);
           return (
             <li
@@ -78,8 +77,7 @@ export default function TeamsList() {
               </button>
             </li>
           );
-        })
-          : <NotFound />}
+        })}
       </ul>
     </main>
 

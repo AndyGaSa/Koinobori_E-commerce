@@ -84,9 +84,9 @@ export default function LeaguesList() {
         && Object.entries(leaguesByCountries)[0][1]?.length
         && typeof Object.entries(leaguesByCountries)[0][1] === 'object')
         && Object.entries(leaguesByCountries).map((country) => (
-          <div key={`${country[0]}-container`} className="leagues__block">
+          <div data-testid={`${country[0]}-block`} key={`${country[0]}-container`} className="leagues__block">
             <li key={`${country[0]}-name`} className="leagues__country">
-              <button type="button" onClick={(event) => openCloseCountry(event)}>{country[0].toUpperCase()}</button>
+              <button data-testid={`${country[0]}-button`} type="button" onClick={(event) => openCloseCountry(event)}>{country[0].toUpperCase()}</button>
             </li>
             <ul id={`${country[0]}-leagues`} key={`${country[0]}-league`} className="leagues__all-leagues">
               {country[1].map((league, index) => {

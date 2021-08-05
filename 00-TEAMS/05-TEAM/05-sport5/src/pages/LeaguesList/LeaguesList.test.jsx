@@ -59,6 +59,27 @@ describe('Given a LeaguesList component', () => {
           expect(screen.getByTestId('spain-league-1').className).toContain('leagues__league--top');
         });
       });
+
+      describe('And you click andorra-button', () => {
+        beforeEach(() => {
+          const countryButton = screen.getByTestId('andorra-button');
+          fireEvent.click(countryButton);
+        });
+
+        test('Then andorra-block class should contain leagues__block--closed', () => {
+          expect(screen.getByTestId('andorra-block').className).toContain('leagues__block--closed');
+        });
+
+        test('Then spain-block class should be leagues__block', () => {
+          expect(screen.getByTestId('spain-block').className).toBe('leagues__block');
+        });
+
+        test('Then if you click again andorra-block class should be leagues__block', () => {
+          const countryButton = screen.getByTestId('andorra-button');
+          fireEvent.click(countryButton);
+          expect(screen.getByTestId('spain-block').className).toBe('leagues__block');
+        });
+      });
     });
 
     describe('And andorra league 3 is a favourite league', () => {
