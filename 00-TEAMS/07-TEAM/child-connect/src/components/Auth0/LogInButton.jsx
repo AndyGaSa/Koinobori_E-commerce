@@ -7,6 +7,7 @@ function LoginButton() {
   return (
     <button
       type="button"
+      className="login-button"
       onClick={() => loginWithRedirect({ returnTo: 'http://localhost:3000/dashboard' })}
     >
       Log In
