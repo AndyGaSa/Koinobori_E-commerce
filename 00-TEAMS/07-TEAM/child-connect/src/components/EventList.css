@@ -32,3 +32,8 @@
 .event-pagination__siguiente, .event-pagination__anterior:hover {
   cursor: pointer;
 }
+
+h2 {
+  text-align: center;
+  padding: 30px;
+}
