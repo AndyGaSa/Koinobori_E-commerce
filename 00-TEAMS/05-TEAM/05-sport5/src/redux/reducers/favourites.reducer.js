@@ -1,7 +1,7 @@
 import actionTypes from '../actions/favourites.types';
 import { saveFavourites } from '../../service/favourites-local-storage';
 
-export default function sportsReducer(favourites = {
+export default function favouritesReducer(favourites = {
   favouriteLeagues: [],
   favouriteTeams: []
 }, action) {
