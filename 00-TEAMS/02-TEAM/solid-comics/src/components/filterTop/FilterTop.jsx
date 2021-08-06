@@ -31,7 +31,8 @@ export default function FilterTop() {
           className="filter-button"
           type="button"
         >
-          filter
+          <span>FILTER</span>
+          <img className="filter-image" src="https://i.ibb.co/9wNnqRF/filter-image.jpg" alt="filter-back" />
 
         </button>
       </div>

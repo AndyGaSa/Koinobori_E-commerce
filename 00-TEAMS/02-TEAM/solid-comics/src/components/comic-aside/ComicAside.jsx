@@ -17,68 +17,38 @@ export default function ComicAside() {
 
   return (
     <aside className="filter__aside-container">
-      <form />
-      <form className="filter__button-images-container">
-        <label className="filter__button">
-          <input
-            type="radio"
-            id="avengers"
-            name="collection"
-            value="avengers"
-            checked
-          />
+
+      <div className="filter__button-images-container">
+        <button onClick={() => filter('avengers')} type="button" className="filter__button">
+
           <img
             className="filter__button-image"
             src="https://i.ibb.co/dWGry3z/filter-aside-0000s-0005-avengers-copia.png"
             alt="filter-aside-0000s-0005-avengers-copia"
             border="0"
           />
-        </label>
+        </button>
 
-        <label className="filter__button">
-          <input
-            type="radio"
-            id="xmen"
-            name="collection"
-            value="xmen"
-          />
+        <button onClick={() => filter('x-men')} type="button" className="filter__button">
           <img
             className="filter__button-image"
             src="https://i.ibb.co/rZsPdhD/filter-aside-0000s-0004-xmen-copia.png"
             alt="filter-aside-0000s-0004-xmen-copia"
             border="0"
           />
-        </label>
+        </button>
 
-        <label className="filter__button">
-          <input
-            type="radio"
-            id="fantastic"
-            name="collection"
-            value="fantastic"
-          />
+        <button onClick={() => filter('fantastic')} type="button" className="filter__button">
+
           <img
             className="filter__button-image"
             src="https://i.ibb.co/LNtGqhm/filter-aside-0000s-0003-fantastic4-copia.png"
             alt="filter-aside-0000s-0003-fantastic4-copia"
             border="0"
           />
-        </label>
-        <label className="filter__button">
-          <input
-            type="radio"
-            id="conan"
-            name="collection"
-            value="conan"
-          />
-          <img
-            className="filter__button-image"
-            src="https://i.ibb.co/rwVz5XL/filter-aside-0000s-0002-conan-copia.png"
-            alt="filter-aside-0000s-0002-conan-copia"
-            border="0"
-          />
-        </label>
-      </form>
+        </button>
+
+      </div>
       <input
         className="filter__input"
         onChange={(
@@ -88,18 +58,6 @@ export default function ComicAside() {
         type="text"
         name="input-search"
       />
-      <button
-        type="button"
-        className="filter__go-button"
-      >
-        GO
-      </button>
-      <button
-        type="button"
-        className="filter__go-button"
-      >
-        cancel
-      </button>
     </aside>
   );
 }
