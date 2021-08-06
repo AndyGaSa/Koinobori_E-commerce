@@ -17,9 +17,16 @@
     font-size: 40px;
 }
 .not-found-404{
+    padding-top: 120px;
     font-size: 100px;
     color: white;
     font-family: $primary-font;
+    text-align: center;
+}
+
+.not-found-description{
+    font-family: $primary-font;
+    font-size: 20px;
 }
 .not-found-button{
     margin:0 auto;
@@ -35,6 +42,7 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+
 }
 .not-found-button:hover{
     border: 3px whitesmoke solid;
