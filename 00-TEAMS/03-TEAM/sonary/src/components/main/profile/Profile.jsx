@@ -7,7 +7,11 @@ import User from './User';
 import './profile.scss';
 
 export default function Profile() {
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated, isLoading } = useAuth0();
+
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
   return (
     isAuthenticated
       ? (
