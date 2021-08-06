@@ -10,46 +10,43 @@
     flex-direction: row;
 }
 .profile-photo-block {
-    display: flex;
-    width: 30%;
+        display: flex;
+    width: 19em;
+    height: 19em;
+
 }
 
 .profilepic {
-width: 225px;
-height: 225px;
-left: 138px;
-top: 217px;
-border: 1px solid rgba(56, 183, 154, 0.7);
-background: rgba(72, 229, 194, 0.22);
-box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 10px 10px 40px rgba(158, 158, 158, 0.5);
-border-radius: 142.5px;
-margin-left: 50px;
+    width: 14em;
+    height: 14em;
+    /* left: 138px; */
+    /* top: 217px; */
+    border: 1px solid rgba(56, 183, 154, 0.7);
+    background: rgba(72, 229, 194, 0.22);
+    box-shadow: -5px -5px 10px rgb(255 255 255 / 50%), 10px 10px 40px rgb(158 158 158 / 50%);
+    border-radius: 142.5px;
+    margin-left: 50px;
+    background: rgba(187, 190, 190, 0.22);
+    box-shadow: -5px -5px 10px rgb(255 255 255 / 50%), 10px 10px 40px rgb(158 158 158 / 50%);
+    border-radius: 142.5px;
+    position: relative;
+    z-index: 1;
 }
 
-
+.rectangle {
+    position: relative;
+    top: 2vh;
+    left: -19em;
+}
 .photo-deco-circle {
     /* Profile-photo-shadow */
 width: 274px;
 height: 274px;
 left: 81px;
 top: 251px;
+position: relative;
 }
 /* Rectangle 1 */
-.rectangle {
-width: 274px;
-height: 274px;
-left: 81px;
-top: 251px;
-background: rgba(72, 229, 194, 0.22);
-box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 10px 10px 40px rgba(158, 158, 158, 0.5);
-border-radius: 142.5px;
-/* Rectangle */
-left: 6.75%;
-right: 76.74%;
-top: 4.35%;
-bottom: 91.92%;
-border-radius: 129.545px;
-}
 
 .profile-data-block {
     display: flex;

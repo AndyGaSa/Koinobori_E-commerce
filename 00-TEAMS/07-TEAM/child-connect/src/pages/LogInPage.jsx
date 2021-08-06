@@ -7,7 +7,11 @@ import './LogInPage.css';
 export default function LogInPage() {
   return (
     <>
-      <LogInButton />
+      <div className="login-container">
+        <div className="login-background">
+          <LogInButton />
+        </div>
+      </div>
       <Faq />
     </>
   );
