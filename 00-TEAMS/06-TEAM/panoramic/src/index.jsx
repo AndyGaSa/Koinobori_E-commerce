@@ -19,12 +19,12 @@ ReactDOM.render(
 
   <React.StrictMode>
     <Provider store={configureStore()}>
-      <Auth0Provider
-        domain="dev-x4gskn06.us.auth0.com"
-        clientId="uWxY3rqHFeugcexTsKK0rmCmdok2SfPl"
-        redirectUri={window.location.origin}
-      >
-        <BrowserRouter>
+      <BrowserRouter>
+        <Auth0Provider
+          domain={process.env.REACT_APP_AUTH0_DOMAIN}
+          clientId={process.env.REACT_APP_AUTH0_CLIENTID}
+          redirectUri={window.location.origin}
+        >
           <Header />
           <Switch>
             <Route path="/" exact component={Home} />
@@ -36,8 +36,8 @@ ReactDOM.render(
             <Route component={NotFound} />
           </Switch>
           <Footer />
-        </BrowserRouter>
-      </Auth0Provider>
+        </Auth0Provider>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
