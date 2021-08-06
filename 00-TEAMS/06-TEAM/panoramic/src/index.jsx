@@ -5,8 +5,9 @@ import {
   BrowserRouter, Switch, Route, Redirect
 } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import Header from './components/Header';
 import configureStore from './redux/store';
+
+import Header from './components/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
