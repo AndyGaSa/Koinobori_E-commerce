@@ -35,44 +35,42 @@ export default function Profile() {
   return (
     <>
       {checkUserData()}
-      <div>
-        <section className="user">
-          <img
-            src={picture}
-            alt="Profile"
-            className="user__image"
-          />
-          <div className="user__data">
-            <h2>{name}</h2>
-            <p className="user__email">{email}</p>
-          </div>
-          <div>
-            <ul>
-              Número de cómics
-              <li className="user__comic-property">
-                en propiedad:
-                {' '}
-                {haveIt}
-              </li>
-              <li className="user__comic-fav">
-                favoritos:
-                {' '}
-                {favs}
-              </li>
-              <li className="user__comic-wanted">
-                que quieres:
-                {' '}
-                {wanted}
-              </li>
-              <li className="user__comic-dislike">
-                que no te han gustado:
-                {' '}
-                {disLike}
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
+      <section className="user">
+        <img
+          src={picture}
+          alt="Profile"
+          className="user__image"
+        />
+        <div className="user__data">
+          <h2>{name}</h2>
+          <p className="user__email">{email}</p>
+        </div>
+        <div className="profile-list-container">
+          <span>Número de cómics</span>
+          <ul>
+            <li className="user__comic-property">
+              en propiedad:
+              {' '}
+              {haveIt}
+            </li>
+            <li className="user__comic-fav">
+              favoritos:
+              {' '}
+              {favs}
+            </li>
+            <li className="user__comic-wanted">
+              que quieres:
+              {' '}
+              {wanted}
+            </li>
+            <li className="user__comic-dislike">
+              que no te han gustado:
+              {' '}
+              {disLike}
+            </li>
+          </ul>
+        </div>
+      </section>
     </>
   );
 }

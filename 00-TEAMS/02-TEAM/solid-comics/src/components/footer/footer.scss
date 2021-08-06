@@ -4,8 +4,10 @@ $text-light-color: rgb(222, 222, 222);
 $solid-dark: rgb(70, 70, 70);
 
 .footer{
+
     position: fixed;
     bottom: 0;
+
     display: flex;
     flex-wrap: nowrap;
     height: 50px;
