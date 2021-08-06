@@ -40,7 +40,7 @@ export default function Details() {
             <ul className="product__smallimages-container">
               {stock
       && stock.imageDetails.map((item) => (
-        <li key={item}><img className="product__smallimage" src={item} alt="" /></li>
+        <li key={item} data-testid="li-test"><img className="product__smallimage" src={item} alt="" /></li>
       ))}
             </ul>
           </figure>
