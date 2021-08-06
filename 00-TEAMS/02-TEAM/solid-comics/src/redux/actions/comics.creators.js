@@ -11,8 +11,8 @@ function loadComics() {
     series: 'series',
     stories: 'stories'
   };
-  const limit = 'limit=20';
-  const offset = 'offset=200';
+  const limit = 'limit=99';
+  const offset = 'offset=800';
   const apikey = process.env.REACT_APP_MARVEL_APIKEY;
   const hash = process.env.REACT_APP_MARVEL_HASH;
 
