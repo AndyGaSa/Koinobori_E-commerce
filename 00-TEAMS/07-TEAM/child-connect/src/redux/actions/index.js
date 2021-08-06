@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import axios from 'axios';
 import actionTypes from './types';
-
 // const apiUrl = 'http://127.0.0.1:3001';
 
 const fetchEvents = (events) => ({
@@ -47,23 +46,25 @@ const fetchFaqs = (faqs) => ({
   faqs
 });
 
-const fetchAllFaqs = () => ((dispatch) => {
-  console.log('hola che!');
-
-  return (
-    axios.get('http://localhost:3001/faq', {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
-      },
-      responseType: 'json'
+const fetchAllFaqs = () => ((dispatch) => (
+  axios.get('http://localhost:3001/faq', {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+    },
+    responseType: 'json'
+  })
+    .then((response) => {
+      dispatch(fetchFaqs(response.data));
     })
-      .then((response) => {
-        console.log(response);
-        dispatch(fetchFaqs(response.data));
-      })
-      .catch((error) => { console.error(error); })
-  );
+    .catch((error) => { console.error(error); })
+));
+
+const createEvent = (data) => ({
+  type: actionTypes.CREATE_EVENT,
+  data: [data]
 });
 
-export { fetchAllEvents, fetchAllUsers, fetchAllFaqs };
+export {
+  fetchAllEvents, fetchAllUsers, fetchAllFaqs, createEvent
+};
