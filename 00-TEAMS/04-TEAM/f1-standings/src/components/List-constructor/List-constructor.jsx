@@ -15,7 +15,7 @@ export default function ListConstructor() {
         {data[0]?.map((constructor) => (
         // eslint-disable-next-line prefer-template
           <Link to={'/constructorDetails/' + constructor.Constructor.constructorId}>
-            <button className="constructor" type="button">
+            <button data-testid={`${constructor.Constructor.constructorId}`} className="constructor" type="button">
               <section className="constructor-data">
                 <section className="data__main">
                   <span className="data__main-number">{constructor.position}</span>

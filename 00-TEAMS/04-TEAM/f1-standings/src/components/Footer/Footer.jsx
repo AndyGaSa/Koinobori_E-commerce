@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="test2" />
       <footer className="footer">
         <Link to="/constructorlist/">
-          <button className="footer__constructor" type="button">
+          <button data-testid="footer-button" className="footer__constructor" type="button">
             {' '}
             <img className="img" src="https://image.flaticon.com/icons/png/512/842/842482.png" alt="" />
             {' '}
