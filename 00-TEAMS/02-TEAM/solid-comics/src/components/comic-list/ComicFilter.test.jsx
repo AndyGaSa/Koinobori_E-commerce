@@ -8,13 +8,13 @@ describe('given a ComicFilter component', () => {
       // act
 
     });
-
     test('Then create img should be in the document', () => {
       const initialState = {
         comics: [
           {
             id: 1,
             thumbnail: {
+
               path: 'exapmle',
               extension: 'jpg'
             }
