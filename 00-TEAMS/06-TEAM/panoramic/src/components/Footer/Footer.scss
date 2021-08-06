@@ -77,6 +77,12 @@
         border: none;
         color:$primary-font-color;
         padding-left: 8px;
+
+    }
+    .name-input{
+        input{
+            width: 165px;
+        }
     }
     textarea{
         height: 60px;
@@ -105,7 +111,7 @@
     font-family: $secondary-font;
 }
 
-@media screen and(min-width: 600px){
+@media screen and(min-width: 768px){
     .main-footer-container{
         flex-direction: row;
         nav{
