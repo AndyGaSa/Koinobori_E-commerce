@@ -2,7 +2,7 @@ import React from 'react';
 import './SportsSelector.scss';
 import { Link } from 'react-router-dom';
 
-export default function SportSelector() {
+export default function SportsSelector() {
   return (
 
     <nav className="sportSelector">
