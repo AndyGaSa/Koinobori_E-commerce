@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
+
+import LogoutButton from '../LogoutButton/LogoutButton';
+import LoginButton from '../LoginButton/LoginButton';
 
 import './Header.scss';
 
 export default function Header() {
+  const { isAuthenticated } = useAuth0();
   return (
     <header className="header">
       <Link to="/" className="header__logo-container">
@@ -11,7 +16,9 @@ export default function Header() {
         <h1 className="header_title">Panoramic</h1>
       </Link>
       <nav className="header__navegation">
-        <Link className="header__navegation__link" to="/login">Login</Link>
+        { isAuthenticated
+          ? <LogoutButton />
+          : <LoginButton />}
         <Link className="header__navegation__link" to="/perfil">Profile</Link>
         <Link className="header__navegation__link" to="/Favouritelist">♡ List</Link>
       </nav>
