@@ -12,7 +12,6 @@ import Profile from './components/main/profile/Profile';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import notFound from './components/notFound/notFound';
-import './App.css';
 
 function App() {
   return (
