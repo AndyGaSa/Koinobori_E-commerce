@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { useAuth0 } from '@auth0/auth0-react';
+=======
+
+>>>>>>> 5f2cd432901db75c46d433c7885c66394842958a
 import BannerLanding from '../../components/BannerLanding';
 import SearchArtists from '../../components/SearchArtists';
 import SuggestedArtist from '../../components/SuggestedArtist';

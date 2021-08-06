@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import getSpotifyToken from '../../redux/actions/actionCreatorsHome';
+
+import getSpotifyToken from '../../redux/actions/actionCreatorsSuggestedArtist';
 import { addFavArtist } from '../../redux/actions/actionCreatorsFavList';
 import loadSearchedArtists from '../../redux/actions/actionCreatorsSearchedList';
+
 import './SearchArtist.scss';
 
 export default function SearchArtists() {
