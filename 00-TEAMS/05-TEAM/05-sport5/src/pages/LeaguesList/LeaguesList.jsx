@@ -23,8 +23,7 @@ export default function LeaguesList() {
     setLeaguesByCountries(leaguesByCountriesApi);
   }, [leaguesByCountriesApi]);
 
-  function filterLeagues(event) {
-    const filter = event.target.value;
+  function filterLeagues(filter) {
     const filteredLeagues = Object.entries(leaguesByCountriesApi).reduce((acc, country) => {
       if (country[0].includes(filter.toLowerCase())) {
         [, acc[country[0]]] = country;
@@ -76,7 +75,7 @@ export default function LeaguesList() {
     <main className="leagues__container">
       <SportsSelector />
       <form>
-        <input data-testid="filter-input" type="text" placeholder="Filter by countries/leagues" value={filterValue} onChange={(event) => filterLeagues(event)} />
+        <input data-testid="filter-input" type="text" placeholder="Filter by countries/leagues" value={filterValue} onChange={(event) => filterLeagues(event.target.value)} />
       </form>
       <ul className="leagues">
         {
