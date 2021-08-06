@@ -6,7 +6,7 @@ import actionTypes from '../../../redux/actions/actionTypes';
 
 jest.mock('../../../redux/actions/details.creator');
 
-describe('Given a Lyrics component', () => {
+describe('Given a Details component', () => {
   describe('When rendered with certain parameters', () => {
     beforeEach(() => {
       loadDetails.mockReturnValue(({
