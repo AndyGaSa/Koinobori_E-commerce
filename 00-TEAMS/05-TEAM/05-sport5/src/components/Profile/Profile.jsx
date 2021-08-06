@@ -5,18 +5,23 @@ import './Profile.scss';
 export default function Profile() {
   const {
     user,
-    isAuthenticated,
-    isLoading
+    isAuthenticated
   } = useAuth0();
-
-  if (isLoading) {
-    return <div>Loading ...</div>;
-  }
 
   return isAuthenticated && (
   <div className="profile">
-    <img className="profile__picture" src={user.picture} alt={user.name} />
-    <h2 className="profile__name">{user.name}</h2>
+    <img
+      className="profile__picture"
+      src={user.picture}
+      alt={user.name}
+    />
+    <h2
+      data-testid="profile-test-name"
+      className="profile__name"
+    >
+      {user.name}
+
+    </h2>
 
   </div>
   );
