@@ -12,10 +12,9 @@ export default function ListDriver() {
       <Header />
       <section className="constructor-list">
 
-        { data[0] && data[0]?.map((driver) => (
-          // eslint-disable-next-line prefer-template
+        { data[0] && data[0].map((driver) => (
 
-          <Link to={`/driverDetails/${driver.Driver.driverId}`}>
+          <Link to={`/driverDetails/${driver?.Driver?.driverId}`}>
             <button
               className="constructor"
               type="button"
