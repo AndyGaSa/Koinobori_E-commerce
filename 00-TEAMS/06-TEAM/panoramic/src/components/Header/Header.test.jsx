@@ -14,9 +14,6 @@ describe('Given a Header component', () => {
     test('Then should be a h1 tag with the "Panoramic" text', () => {
       expect(screen.getByText(/Panoramic/i)).toBeInTheDocument();
     });
-    test('Then should be a Link tag and should contain the "Login" word', () => {
-      expect(screen.getByText(/Login/i)).toBeInTheDocument();
-    });
     test('Then should be a img with the "main-logo-header" id', () => {
       expect(screen.getByTestId('main-logo-header')).toBeInTheDocument();
     });

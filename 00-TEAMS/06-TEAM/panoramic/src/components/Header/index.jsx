@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 
-import LogoutButton from '../LogoutButton/LogoutButton';
-import LoginButton from '../LoginButton/LoginButton';
+import LogoutButton from '../LogoutButton';
+import LoginButton from '../LoginButton';
 
 import './Header.scss';
 

@@ -2,15 +2,15 @@ import React from 'react';
 
 import { render, screen } from '../../utils/test.utils';
 
-import LoginButton from './index';
+import LogoutButton from './index';
 
 describe('Given a LoginButton component', () => {
   describe('When the component is rendered', () => {
     test('Then should be a h1 tag with the "LoginButton" text', () => {
       render(
-        <LoginButton />
+        <LogoutButton />
       );
-      expect(screen.getByTestId('login-button')).toBeInTheDocument();
+      expect(screen.getByTestId('logout-button')).toBeInTheDocument();
     });
   });
 });
