@@ -1,12 +1,14 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import React from 'react';
 
+import actionTypes from '../../redux/actions/favourites.types';
 import { fireEvent, render, screen } from '../../utils/test.utils';
 import SideMenu from './SideMenu';
+import { getFavourites } from '../../redux/actions/favourites.creator';
 
-jest.mock('react', () => ({
-  ...jest.requireActual('react'),
-  useEffect: () => {}
+jest.mock('../../redux/actions/favourites.creator', () => ({
+  ...jest.requireActual('../../redux/actions/favourites.creator'),
+  getFavourites: jest.fn()
 }));
 
 jest.mock('@auth0/auth0-react');
@@ -18,6 +20,13 @@ describe('Given a SideMenu component', () => {
     });
     describe('And there are no favourites teams or leagues', () => {
       beforeEach(() => {
+        getFavourites.mockReturnValue({
+          type: actionTypes.LOAD_FAVOURITES,
+          favourites: {
+            favouriteLeagues: [],
+            favouriteTeams: []
+          }
+        });
         render(<SideMenu />);
       });
 
@@ -36,7 +45,8 @@ describe('Given a SideMenu component', () => {
 
     describe('And there are 3 favourite leagues', () => {
       beforeEach(() => {
-        const initialState = {
+        getFavourites.mockReturnValue({
+          type: actionTypes.LOAD_FAVOURITES,
           favourites: {
             favouriteLeagues: [
               { id: '0001', name: 'Andorra League' },
@@ -45,10 +55,9 @@ describe('Given a SideMenu component', () => {
             ],
             favouriteTeams: []
           }
-        };
+        });
         render(
-          <SideMenu />,
-          initialState
+          <SideMenu />
         );
       });
 
@@ -69,7 +78,8 @@ describe('Given a SideMenu component', () => {
 
     describe('And there are 3 favourite leagues and 3 favourite teams', () => {
       beforeEach(() => {
-        const initialState = {
+        getFavourites.mockReturnValue({
+          type: actionTypes.LOAD_FAVOURITES,
           favourites: {
             favouriteLeagues: [
               { id: '0001', name: 'Andorra League' },
@@ -82,10 +92,9 @@ describe('Given a SideMenu component', () => {
               { id: '0003', name: 'Esp' }
             ]
           }
-        };
+        });
         render(
-          <SideMenu />,
-          initialState
+          <SideMenu />
         );
       });
 
@@ -106,6 +115,13 @@ describe('Given a SideMenu component', () => {
   });
   describe('When the user is not authenticated', () => {
     beforeEach(() => {
+      getFavourites.mockReturnValue({
+        type: actionTypes.LOAD_FAVOURITES,
+        favourites: {
+          favouriteLeagues: [],
+          favouriteTeams: []
+        }
+      });
       useAuth0.mockReturnValue({ isAuthenticated: false });
       render(<SideMenu />);
     });

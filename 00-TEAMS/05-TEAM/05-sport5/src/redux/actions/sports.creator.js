@@ -2,7 +2,7 @@
 import axios from 'axios';
 import actionTypes from './sports.types';
 
-function getCountries() {
+export function getCountries() {
   return async () => {
     const { data } = await axios('https://www.thesportsdb.com/api/v1/json/1/all_countries.php');
     // eslint-disable-next-line camelcase

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import leagueReducer from './sports.reducer';
+import sportsReducer from './sports.reducer';
 import favouritesReducer from './favourites.reducer';
 
 export default combineReducers({
-  countriesLeagues: leagueReducer,
+  sportsApi: sportsReducer,
   favourites: favouritesReducer
 });

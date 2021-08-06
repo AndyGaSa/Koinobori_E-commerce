@@ -7,7 +7,7 @@ import './TeamsList.scss';
 import { getTeams } from '../../redux/actions/sports.creator';
 
 export default function TeamsList() {
-  const allTeamsPerLeagueApi = useSelector((store) => store.countriesLeagues);
+  const allTeamsPerLeagueApi = useSelector((store) => store.sportsApi);
   const dispatch = useDispatch();
   const favourites = useSelector((store) => store.favourites);
   const { leagueId } = useParams();

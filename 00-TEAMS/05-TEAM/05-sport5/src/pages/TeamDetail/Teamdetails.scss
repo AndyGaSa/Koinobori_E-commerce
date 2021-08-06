@@ -45,6 +45,8 @@
                 padding: 1rem;
                 font-size: 3rem;
                 letter-spacing: 2px;
+                line-height: 4rem;
+                text-align: center;
             }
 
             section {
@@ -111,6 +113,10 @@
 
             .details__main-information {
                 align-items: flex-start;
+
+                .details__name {
+                    text-align: left;
+                }    
 
                 section {
                     align-items: flex-start;
