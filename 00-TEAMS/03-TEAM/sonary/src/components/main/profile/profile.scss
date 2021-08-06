@@ -5,10 +5,6 @@ $gris95:rgb(38, 38, 38);
 $gris90:#575757;
 $verde: rgb(0, 229.5, 0);
 
-.profile {
-    display: flex;
-    margin: 40px 160px 0px 160px;
-}
 
 .user {
     .user__title {
@@ -22,6 +18,8 @@ $verde: rgb(0, 229.5, 0);
 }
 
 .profile {
+    display: flex;
+    margin: 40px 160px 0px 160px;
     width: 360px; 
     height: 580px;
     background-color: $gris5;

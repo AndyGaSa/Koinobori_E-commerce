@@ -4,7 +4,7 @@
 /* eslint-disable camelcase */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { loadDashboard } from '../../../redux/actions/dashboard.creator';
 import './details.scss';
 
