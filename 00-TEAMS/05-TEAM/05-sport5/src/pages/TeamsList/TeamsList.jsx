@@ -47,7 +47,7 @@ export default function TeamsList() {
     <main className="team-list">
       <h2 className="team-list__title">{allTeamsPerLeague[0]?.league}</h2>
       <form>
-        <input type="text" placeholder="Filter teams" value={filterValue} onChange={(event) => filterTeams(event.target.value)} />
+        <input type="text" data-testid="filter-input" placeholder="Filter teams" value={filterValue} onChange={(event) => filterTeams(event.target.value)} />
       </form>
       <ul className="teams">
         {allTeamsPerLeague?.length && allTeamsPerLeague.map((team, index) => {
