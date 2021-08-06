@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.main__header {
+.main-header {
     width: 100%;
     background-image: url(https://cei-laaurora.com/wp-content/uploads/2019/07/escuelas-de-verano-en-Valencia-ni%C3%B1os-juganfo-1000x500.jpg);
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.header__menu {
+.header-menu {
     width: 100%;
     height: 180px;
     background-color: rgba(94, 94, 94, 0.6);
@@ -20,25 +20,25 @@
     justify-content: space-between;
 }
 
-.header__nav-menu {
+.header-nav__menu {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 40px;
 }
 
-.header__menu-buttons {
+.header-menu__buttons {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 20px;
 }
 
-.header__menu_buttons--buttons {
+.header-menu-buttons__buttons {
     padding-left: 20px;
 }
 
-.header__button-perfil {
+.header-button__perfil {
     text-decoration: none;
     font-size: 25px;
     font-weight: 500;
@@ -50,11 +50,11 @@
     text-shadow: 1px 1px rgb(163, 162, 162);
 }
 
-.header__button-perfil:active {
+.header-button__perfil:active {
     color: red;
 }
 
-.button__crear-evento {
+.button-crear__evento {
     border-radius: 3px;
     background-color: rgba(254, 211, 5);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -69,7 +69,7 @@
 
 }
 
-.button__crear-evento:active {
+.button-crear__evento:active {
     color: red;
 }
 
@@ -85,12 +85,12 @@ h1 {
 
 @media only screen and (max-width: 675px) {
 
-    .header__menu {
+    .header-menu {
         flex-direction: column;
         align-items: center;
     }
 
-    .header__button-perfil {
+    .header-button__perfil {
         background-color: rgb(158, 158, 158);
         border-radius: 3px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -99,16 +99,16 @@ h1 {
         margin-left: 20px;
     }
 
-    .header__nav-menu {
+    .header-nav__menu {
         width: 100%;
     }
 
-    .header__title {
+    .header-title {
         margin-top: 250px;
         
     }
 
-    .header__title h1 {
+    .header-title h1 {
         color: rgb(158, 158, 158);
     }
 
@@ -122,27 +122,27 @@ h1 {
         align-items: center;
     }
 
-    .header__menu-buttons {
+    .header-menu__buttons {
         flex-direction: column;
         align-items: center;
         margin-top: 0px;
         margin: 20px;
     }
 
-    .header__menu_buttons--buttons {
+    .header-menu-buttons__buttons {
         flex-direction: column;
         align-items: center;
         padding: 20px;
         margin: 20px;   
     }
-    .header__nav-menu {
+    .header-nav__menu {
         padding: 0px;
         margin-top: 0px;
     }
-    .header__title {
+    .header-title {
         margin-top: 300px;
     }
-    .header__button-perfil {
+    .header-button__perfil {
         margin-bottom: 50px;
     }
 
