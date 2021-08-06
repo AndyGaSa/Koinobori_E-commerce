@@ -1,9 +1,9 @@
 import React from 'react';
-import ComicNav from './ComicNav';
+import ComicCard from '../comic-card/ComicCard';
 import { render, screen } from '../../utils/test-utils';
 
-describe('given a ComicFilter component', () => {
-  describe('When there are no ComicFilters', () => {
+describe('given a ComicCard component', () => {
+  describe('When there are no ComicCards', () => {
     beforeEach(() => {
       // act
 
@@ -20,147 +20,147 @@ describe('given a ComicFilter component', () => {
             }
           },
           {
-            id: 93739,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93639,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93539,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93439,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93339,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93239,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93139,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93819,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93829,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93849,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93859,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93869,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93879,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93889,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93899,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93838,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93837,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93836,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93835,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93834,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93833,
+            id: 93839,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
@@ -168,7 +168,7 @@ describe('given a ComicFilter component', () => {
           }
         ]
       };
-      render(<ComicNav />, { initialState });
+      render(<ComicCard />, { initialState });
       expect(screen.getByTestId('create-img')).toBeInTheDocument();
     });
   });

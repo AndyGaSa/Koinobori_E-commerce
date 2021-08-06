@@ -8,159 +8,159 @@ describe('given a ComicFilter component', () => {
       // act
 
     });
-
     test('Then create img should be in the document', () => {
       const initialState = {
         comics: [
           {
-            id: 93839,
+            id: 1,
+            thumbnail: {
+
+              path: 'exapmle',
+              extension: 'jpg'
+            }
+          },
+          {
+            id: 12,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 1234,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 12345,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 123456,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 1234567,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 12345678,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 123456789,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 1234567891,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 12345678912,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 12345678913,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 1234567894,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 12345678932,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 12345672,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 123456792,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 123678912,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 123467912,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 34578912,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 5678912,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 2468912,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
+            id: 126712,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
             }
           },
           {
-            id: 93839,
-            thumbnail: {
-              path: 'exapmle',
-              extension: 'jpg'
-            }
-          },
-          {
-            id: 93839,
+            id: 12356791,
             thumbnail: {
               path: 'exapmle',
               extension: 'jpg'
