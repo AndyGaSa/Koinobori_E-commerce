@@ -41,5 +41,31 @@ describe('Given a Teams List component', () => {
         expect(screen.getByTestId('Barça-team-0-favourite').className).toContain('teams__favourite-button--active');
       });
     });
+    describe('When "bar" is written in the filter input', () => {
+      beforeEach(() => {
+        const filterInput = screen.getByTestId('filter-input');
+        fireEvent.change(filterInput, { target: { value: 'Bar' } });
+      });
+      test('Then "Barça" should be in the document', () => {
+        expect(screen.queryByText('Barça')).toBeInTheDocument();
+      });
+      test('Then "Madrid" should not be in the document', () => {
+        expect(screen.queryByText('Madrid')).not.toBeInTheDocument();
+      });
+    });
+    describe('When favourite button from team Getafe is cklicked', () => {
+      beforeEach(() => {
+        const getafeFavouriteButton = screen.getByTestId('Getafe-team-2-favourite');
+        fireEvent.click(getafeFavouriteButton);
+      });
+      test('Button classNames should contain "teams__favourite-button--active" ', () => {
+        expect(screen.getByTestId('Getafe-team-2-favourite').className).toContain('teams__favourite-button--active');
+      });
+      test('dispatch function should be called', () => {
+        const getafeFavouriteButton = screen.getByTestId('Getafe-team-2-favourite');
+        fireEvent.click(getafeFavouriteButton);
+        expect(screen.getByTestId('Getafe-team-2-favourite').className).not.toContain('teams__favourite-button--active');
+      });
+    });
   });
 });
