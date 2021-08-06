@@ -38,6 +38,7 @@ const Event = ({ data }) => (
       <p className="event__description">{data.description}</p>
       <footer className="event__more-btn">
         <button type="button" className="event-button__saber-mas">Saber más</button>
+        <button type="button" className="event-button__eliminar">Eliminar</button>
       </footer>
     </article>
   </>
