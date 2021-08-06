@@ -1,11 +1,11 @@
 import React from 'react';
-import Profile from '../../components/Profile/Profile';
+import ProfileComp from '../../components/ProfileComp';
 
-export default function ProfilePage() {
+export default function Profile() {
   return (
     <>
       <h1>Profile</h1>
-      <Profile />
+      <ProfileComp />
     </>
   );
 }

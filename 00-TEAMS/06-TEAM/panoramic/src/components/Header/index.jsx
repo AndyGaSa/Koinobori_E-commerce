@@ -19,7 +19,7 @@ export default function Header() {
         { isAuthenticated
           ? <LogoutButton />
           : <LoginButton />}
-        <Link className="header__navegation__link" to="/perfil">Profile</Link>
+        <Link className="header__navegation__link" to="/profile">Profile</Link>
         <Link className="header__navegation__link" to="/Favouritelist">♡ List</Link>
       </nav>
     </header>

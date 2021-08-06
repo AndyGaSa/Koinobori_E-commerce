@@ -12,7 +12,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
-import ProfilePage from './pages/Profile';
+import Profile from './pages/Profile';
 import Footer from './components/Footer';
 import FavouriteArtists from './pages/FavouriteArtists';
 
@@ -32,7 +32,7 @@ ReactDOM.render(
             <Redirect path="/home" to="/" />
             <Route path="/login" component={Login} />
             <Route path="/notfound" component={NotFound} />
-            <Route path="/profile" component={ProfilePage} />
+            <Route path="/profile" component={Profile} />
             <Route path="/Favouritelist" component={FavouriteArtists} />
             <Route component={NotFound} />
           </Switch>
