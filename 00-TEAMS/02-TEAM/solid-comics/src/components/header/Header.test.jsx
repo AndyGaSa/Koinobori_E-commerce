@@ -23,7 +23,7 @@ describe('Given a header component', () => {
       act(() => {
         render(<StaticRouter><Header /></StaticRouter>, container);
       });
-      expect(container.getElementsByTagName('a').length).toBe(4);
+      expect(container.getElementsByTagName('a').length).toBe(3);
     });
   });
 });

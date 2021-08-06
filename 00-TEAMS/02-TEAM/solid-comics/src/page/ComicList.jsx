@@ -18,7 +18,7 @@ export default function ComicList() {
 
   if (comicStore.length > 0) {
     return (
-      <section className="section__comic-list">
+      <section data_testId="comic-list" className="section__comic-list">
         <ComicFilter />
         <ComicNav />
       </section>
