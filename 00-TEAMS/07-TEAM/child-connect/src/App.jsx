@@ -4,13 +4,13 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import Header from './components/Header';
-import Dashboard from './pages/Dashboard';
-import Perfil from './pages/Perfil';
-import FormularioEventos from './pages/FormularioEventos';
+import Header from './components/header/Header';
+import Dashboard from './pages/dashboard/Dashboard';
+import Perfil from './pages/perfil/Perfil';
+import FormularioEventos from './pages/formularioEventos/FormularioEventos';
 import NotFound from './pages/NotFound';
-import Footer from './components/Footer';
-import LogInPage from './pages/LogInPage';
+import Footer from './components/footer/Footer';
+import LogInPage from './pages/LogInPage/LogInPage';
 import './App.css';
 
 const App = () => (

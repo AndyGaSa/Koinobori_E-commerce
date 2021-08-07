@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchAllEvents } from '../redux/actions';
-import Event from './Event';
+import { fetchAllEvents } from '../../redux/actions';
+import Event from '../event/Event';
 import './EventList.css';
 
 const EventList = () => {
