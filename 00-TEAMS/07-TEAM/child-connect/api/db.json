@@ -6,7 +6,7 @@
       "name": "Lorena García",
       "email": "LoreGarcia@april.biz",
       "avatar": "https://ak.picdn.net/shutterstock/videos/13086851/thumb/1.jpg",
-      "childs": [
+      "children": [
         {"age": "5",
           "gender": "male",
           "interest": "sports"
@@ -34,7 +34,7 @@
       "name": "Teodoro Perez",
       "email": "TeoPerez@melissa.tv",
       "avatar": "https://media.istockphoto.com/photos/charming-handsome-picture-id528582811?k=6&m=528582811&s=612x612&w=0&h=d1SW9imJ_3WkiV5Zol_cqUzxrWHXf7wxqa4fcd814bk=",
-      "childs": [
+      "children": [
         {"age": "9",
           "gender": "female",
           "interest": "theater"
@@ -58,7 +58,7 @@
       "name": "Manuela Díaz",
       "email": "ManuDiaz@april.biz",
       "avatar": "https://t4.ftcdn.net/jpg/02/44/80/33/360_F_244803369_cNviClISSSUV5FGcYsJR9anLrqiRrHVK.jpg",
-      "childs": [
+      "children": [
         {"age": "2",
           "gender": "female",
           "interest": "sports"
@@ -81,7 +81,7 @@
       "name": "Monica Fouret",
       "email": "MoniFauret@yesenia.net",
       "avatar": "https://ak.picdn.net/shutterstock/videos/13086851/thumb/1.jpg",
-      "childs": [
+      "children": [
         {"age": "8",
           "gender": "female",
           "interest": "cience"
@@ -100,7 +100,7 @@
       "name": "Natalia Seijas",
       "email": "NataliaSeijas@kory.org",
       "avatar": "https://lh3.googleusercontent.com/proxy/uUEQtRPhbLlPICneqxlAok8VMl3orl-FeFTiRJGGl-j3IKvy6xZhwmQto3hSBnZ6QiHdBUd3Dj4L1RSesmjepVt4kZkd8jp-7s6_ddyc0dpMGPA",
-      "childs": [
+      "children": [
         {"age": "5",
           "gender": "male",
           "interest": "sports"
@@ -128,7 +128,7 @@
       "name": "Mariana Fabiani",
       "email": "MarianaFabiani@jasper.info",
       "avatar": "https://ak.picdn.net/shutterstock/videos/24954458/thumb/7.jpg",
-      "childs": [
+      "children": [
         {"age": "5",
           "gender": "male",
           "interest": "cience"
@@ -157,7 +157,7 @@
       "name": "Pedro Fioriti",
       "email": "PedroFoiriti@april.biz",
       "avatar": "https://media.istockphoto.com/photos/beautiful-black-man-picture-id1082488184?k=6&m=1082488184&s=612x612&w=0&h=XfcWsVQsQbmyjxNg4YT4aO_dNXbWAU0MKaO1m2hxYrk=",
-      "childs": [
+      "children": [
         {"age": "2",
           "gender": "female",
           "interest": "sports"
@@ -185,7 +185,7 @@
       "name": "Martiniano Molina",
       "email": "MartinianoMolina@april.biz",
       "avatar": "https://media.istockphoto.com/photos/handsome-man-wearing-casual-white-tshirt-waiving-saying-hello-happy-picture-id1124393111?k=6&m=1124393111&s=612x612&w=0&h=I78oJVA-KuhdKYisK0ghH-N4sXqMPzZy16WMCVyHfSg=",
-      "childs": [
+      "children": [
         {"age": "3",
           "gender": "male",
           "interest": "sports"
@@ -205,7 +205,7 @@
       "name": "Luciana Tornabene",
       "email": "LuTornabene@april.biz",
       "avatar": "https://s3.amazonaws.com/freestock-prod/450/freestock_48518167.jpg",
-      "childs": [
+      "children": [
         {"age": "8",
           "gender": "female",
           "interest": "cience"
@@ -228,7 +228,7 @@
       "name": "Jose Ramos",
       "email": "JoseRamos@april.biz",
       "avatar": "https://static.turbosquid.com/Preview/2018/11/01__00_20_19/rd421___male_standing.pngF831406B-96D0-4ACC-8EB6-1F7741455A66Default.jpg",
-      "childs": [
+      "children": [
         {"age": "10",
           "gender": "female",
           "interest": "theater"
@@ -259,8 +259,8 @@
       "title": "Ping pong en el parque",
       "activity": "sports",
       "description": "Et harum quidem rerum falestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
-      "max_childs": 2,
-      "childs": 0, 
+      "max_children": 2,
+      "children": 0, 
       "fecha": "Jueves",
       "hora": "18",
       "location": {
@@ -277,8 +277,8 @@
       "title": "Muffins de colores",
       "activity": "coocking",
       "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-      "max_childs": 5,
-      "childs": 0,
+      "max_children": 5,
+      "children": 0,
       "fecha": "Miércoles",
       "hora": "18",
       "location": {
@@ -295,8 +295,8 @@
       "title": "Bailamos mambo",
       "activity": "dancing",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "max_childs": 3,
-      "childs": 0,
+      "max_children": 3,
+      "children": 0,
       "fecha": "Martes",
       "hora": "18",
       "location": {
@@ -313,8 +313,8 @@
       "title": "Mario Bross",
       "activity": "console",
       "description": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "max_childs": 4,
-      "childs": 0,
+      "max_children": 4,
+      "children": 0,
       "fecha": "Domingo",
       "hora": "16",
       "location": {
@@ -331,8 +331,8 @@
       "title": "Puzzles y juegos de mesa en casa",
       "activity": "puzzle",
       "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. ",
-      "max_childs": 2,
-      "childs": 0,
+      "max_children": 2,
+      "children": 0,
       "fecha": "Sábado",
       "hora": "16",
       "location": {
@@ -349,8 +349,8 @@
       "title": "Alicia en el pais...",
       "activity": "theater",
       "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from  by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-      "max_childs": 5,
-      "childs": 0,
+      "max_children": 5,
+      "children": 0,
       "fecha": "Viernes",
       "hora": "16",
       "location": {
@@ -367,8 +367,8 @@
       "title": "Creando instrumentos",
       "activity": "music",
       "description": "Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. ",
-      "max_childs": 4,
-      "childs": 0,
+      "max_children": 4,
+      "children": 0,
       "fecha": "Jueves",
       "hora": "16",
       "location": {
@@ -385,8 +385,8 @@
       "title": "Jugando con tintes",
       "activity": "cience",
       "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
-      "max_childs": 3,
-      "childs": 0,
+      "max_children": 3,
+      "children": 0,
       "fecha": "Miércoles",
       "hora": "16",
       "location": {
@@ -403,8 +403,8 @@
       "title": "Football en el parque",
       "activity": "sports",
       "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. ",
-      "max_childs": 5,
-      "childs": 0,
+      "max_children": 5,
+      "children": 0,
       "fecha": "Martes",
       "hora": "16",
       "location": {
@@ -421,8 +421,8 @@
       "title": "Musica y baile en la terraza",
       "activity": "dancing",
       "description": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-      "max_childs": 4,
-      "childs": 0,
+      "max_children": 4,
+      "children": 0,
       "fecha": "Lunes",
       "hora": "16",
       "location": {
