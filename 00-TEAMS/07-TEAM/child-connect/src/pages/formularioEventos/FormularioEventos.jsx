@@ -26,13 +26,13 @@ export default function FormularioEventos() {
   return (
     <>
       <section className="event-form__header">
-        <h2>Crea un evento para ofrecer en tu barrio</h2>
+        <h2 data-testid="title-h2">Crea un evento para ofrecer en tu barrio</h2>
         <p>Completa todos los campos</p>
       </section>
       <form className="event-form__form">
         <label htmlFor="title">
           Titulo del Evento:
-          <input type="text" name="title" placeholder="Baile en casa" className="event-form__input" onChange={handleInputChange} />
+          <input data-testid="event-title" type="text" name="title" placeholder="Baile en casa" className="event-form__input" onChange={handleInputChange} />
         </label>
         <label htmlFor="location">
           Lugar:
@@ -94,7 +94,7 @@ export default function FormularioEventos() {
             <option value="5">5</option>
           </select>
         </label>
-        <button onClick={() => dispatch(createEvent(data))} type="button" className="event-form__button">Añadir Evento</button>
+        <button onClick={() => dispatch(createEvent(data))} type="button" className="event-form__button" data-testid="añadirEventoButton">Añadir Evento</button>
       </form>
     </>
   );
