@@ -8,7 +8,7 @@ import FilterFavourites from '../filterFavourites/FilterFavourites';
 export default function ComicFilter() {
   return (
     <section className="comic-filter__section">
-      <FilterTop />
+      <FilterTop data-testid="filterTop" />
       <FilterFavourites />
     </section>
   );

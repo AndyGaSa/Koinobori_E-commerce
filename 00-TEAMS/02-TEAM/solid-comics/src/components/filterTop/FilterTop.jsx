@@ -28,6 +28,7 @@ export default function FilterTop() {
           )}
         <button
           onClick={() => setAside(!aside)}
+          data-testid="show-aside"
           className="filter-button"
           type="button"
         >
