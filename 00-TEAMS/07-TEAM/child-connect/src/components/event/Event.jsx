@@ -31,7 +31,7 @@ const Event = ({ data }) => (
           <p>{data.activity}</p>
         </div>
         <div>
-          <div>{data.max_childs}</div>
+          <div>{data.max_children}</div>
           <p>Niños</p>
         </div>
       </section>
