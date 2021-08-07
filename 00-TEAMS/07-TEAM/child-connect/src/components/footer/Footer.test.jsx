@@ -16,6 +16,12 @@ describe('Given a Footer component', () => {
       container.remove();
       container = null;
     });
+    test('Then Child Connect should be in the document', () => {
+      act(() => {
+        render(<Footer />, container);
+      });
+      expect(container.querySelector('p').textContent).toBe('Child Connect');
+    });
     test('Then Child Connect¿Cómo funciona?AyudaPrivacidadTérminosDatos de la empresa© 2021 Child Connect | All rights reserved should be in the document', () => {
       act(() => {
         render(<Footer />, container);
