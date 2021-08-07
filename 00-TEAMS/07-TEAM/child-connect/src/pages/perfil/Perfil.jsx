@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAllUsers } from '../redux/actions';
+import { fetchAllUsers } from '../../redux/actions';
 import './Perfil.css';
 /* import EventList from './EventList'; */
 

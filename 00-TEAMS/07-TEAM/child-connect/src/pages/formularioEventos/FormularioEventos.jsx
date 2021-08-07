@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './FormularioEventos.css';
 import { useDispatch } from 'react-redux';
-import { createEvent } from '../redux/actions/index';
+import { createEvent } from '../../redux/actions/index';
 
 export default function FormularioEventos() {
   const dispatch = useDispatch();
