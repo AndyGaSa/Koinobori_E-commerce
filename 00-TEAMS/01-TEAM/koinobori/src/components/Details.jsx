@@ -10,7 +10,6 @@ export default function Details() {
   const { stockId } = useParams();
   const { category } = useParams();
   const [stock, setStock] = useState();
-  // eslint-disable-next-line no-unused-vars
 
   useEffect(() => {
     setStock(stockList.clothes
