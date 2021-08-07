@@ -35,7 +35,7 @@ export default function Header() {
                 <Link to="/addevent" className="button-crear__evento" data-testid="createEventButton">Crear Evento</Link>
                 <div className="header-menu-buttons__buttons">
                   <Link to="/perfil" className="header-button__perfil" data-testid="profileButton">Perfil</Link>
-                  <LogOutButton className="header-button__logout" />
+                  <LogOutButton data-testid="logOutButton" className="header-button__logout" />
                 </div>
               </>
               )}
