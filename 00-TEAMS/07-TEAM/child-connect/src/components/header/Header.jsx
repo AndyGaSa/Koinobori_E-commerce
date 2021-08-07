@@ -23,7 +23,7 @@ export default function Header() {
           {!isAuthenticated && (
           <>
             <Link to="/" className="header-home-button">
-              <img src="https://i.ibb.co/M7Cprgj/Child-Connect-2.png" width="213px" height="auto" alt="Child Connect Header Logo" />
+              <img data-testid="logoImg" src="https://i.ibb.co/M7Cprgj/Child-Connect-2.png" width="213px" height="auto" alt="Child Connect Header Logo" />
             </Link>
           </>
           )}
@@ -32,9 +32,9 @@ export default function Header() {
             <section className="header-menu__buttons">
               {isAuthenticated && (
               <>
-                <Link to="/addevent" className="button-crear__evento">Crear Evento</Link>
+                <Link to="/addevent" className="button-crear__evento" data-testid="createEventButton">Crear Evento</Link>
                 <div className="header-menu-buttons__buttons">
-                  <Link to="/perfil" className="header-button__perfil">Perfil</Link>
+                  <Link to="/perfil" className="header-button__perfil" data-testid="profileButton">Perfil</Link>
                   <LogOutButton className="header-button__logout" />
                 </div>
               </>
