@@ -8,7 +8,7 @@ export default function FilterFavourites() {
   return (
     <>
       <div className="comic__row">
-        <span className="titels__comic-list filter-favourites">FILTER FAVOURITES</span>
+        <span className="titels__comic-list filter-favourites">FAVOURITES</span>
         {comics.length && comics.slice(6, 9).map((
           comic
         ) => <ComicCard comic={comic} key={comic.id} />)}

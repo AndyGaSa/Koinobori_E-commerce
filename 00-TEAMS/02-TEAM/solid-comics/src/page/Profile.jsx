@@ -36,11 +36,15 @@ export default function Profile() {
     <>
       {checkUserData()}
       <section className="user">
-        <img
-          src={picture}
-          alt="Profile"
-          className="user__image"
-        />
+        <div className="user__image-container">
+          <img
+            src={picture}
+            alt="Profile"
+            className="user__image"
+          />
+          <img className="user__frame" src="https://i.ibb.co/5Tn58Mr/marco-5.png" alt="comic" />
+        </div>
+
         <div className="user__data">
           <h2>{name}</h2>
           <p className="user__email">{email}</p>

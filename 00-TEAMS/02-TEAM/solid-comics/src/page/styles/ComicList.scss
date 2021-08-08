@@ -1,6 +1,4 @@
-.section__comic-list{
-    background-color: white;
-}
+
 .list{
     display: flex;
     flex-direction: column;
@@ -22,11 +20,9 @@
     width: 150px;
 }
 .titels__comic-list{
-    background-color: rgba(67, 202, 255, 0.76);
-    border: double;
-    outline-width: 4px;
-    outline-offset: 1px;
+    background-image: url(https://i.ibb.co/WDHhjMS/banner.png);
     z-index: 1;
-   left: 50%;
-   transform: translate(-50%, -50%);
+    width: 22vw;
+    height: 8vw;
+    background-size: contain;
 }

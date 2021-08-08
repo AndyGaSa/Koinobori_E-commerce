@@ -1,16 +1,23 @@
 .comic__item{
-    border: 5px black solid;
-    margin: 4px;
+    margin: 0.8%;
+    filter: contrast(0.8);
 }
 .item__img{
-    filter: grayscale(100%);
+
     width: 100%;
     height: 100%;
-    //box-shadow: 0 26px 24px -16px rgb(0 0 0 / 40%);
-    //margin-bottom: 10px;
+    transition-duration: 0.5s;
+    filter: grayscale(100%);
+    transform: scale(1);
 }
 .item__img:hover{
-    filter:none;}
+    transform: scale(1.05);
+    filter:none
+}
+
+.overflow{
+    overflow: hidden;
+}
 .comic__row{
     display: flex;
     flex-direction: row;
@@ -19,4 +26,12 @@
     a{
         text-decoration: none;
     }
+}
+.frame{
+    pointer-events: none;
+    width: 106%;
+    height: 105%;
+    position: absolute;
+    top: -3%;
+    left: -3%; 
 }

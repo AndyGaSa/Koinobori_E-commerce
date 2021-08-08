@@ -29,6 +29,8 @@ function App() {
               <Route render={() => (
                 <>
                   <Header />
+
+                  <div className="texture" />
                   <Switch>
                     <Route path="/" exact component={ComicList} />
                     <Route path="/comic-list" component={ComicList} />

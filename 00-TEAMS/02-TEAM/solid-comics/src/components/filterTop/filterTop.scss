@@ -6,11 +6,16 @@
 .filter-top{
     position: absolute;
     top: 22%;
-    left: 16%;
+    left: 6%;
+    text-align: center;
+    line-height: 8vw;
+    font-size: 3vw;
 }
 .filter-button {
-    border: 5px black solid;
     margin: 4px;
+    /* pointer-events: fill; */
+    cursor: pointer;
+    position: relative;
 }
 .filter-image{
     width: 100%;
@@ -21,4 +26,15 @@
     z-index: 2;
     top: 0;
     left: 0;
+}
+.filter-button-text{
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    margin-left: -5vw;
+    top: 50%;
+    margin-top: -2vw;
+    font-size: 4vw;
+    color: white;
+    filter: drop-shadow(2px 2px 4px black);
 }
