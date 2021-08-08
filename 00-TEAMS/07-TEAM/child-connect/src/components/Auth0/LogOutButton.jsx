@@ -7,6 +7,7 @@ function LogoutButton() {
 
   return (
     <button
+      data-testid="logOut-button-test"
       type="button"
       className="log-button"
       onClick={() => logout({ returnTo: window.location.origin })}

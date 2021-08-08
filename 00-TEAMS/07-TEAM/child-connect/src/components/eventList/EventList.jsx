@@ -17,12 +17,12 @@ const EventList = () => {
 
   return (
     <div className="eventList-container">
-      <h2>Lista de Eventos en tu barrio</h2>
+      <h2 data-testid="eventList-h2">Lista de Eventos en tu barrio</h2>
       <section className="eventList">
         {currentEvents && (
           <>
             {
-              currentEvents.map((event) => <Event eventId={event.id} data={event} />)
+              currentEvents.map((event) => <Event eventId={event.id} data={event} data-testid="event-crated" />)
             }
           </>
         )}

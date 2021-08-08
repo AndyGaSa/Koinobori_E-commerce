@@ -24,7 +24,7 @@ describe('Given a FormularioEventos component', () => {
     test('Then h2 will be in the document', () => {
       expect(screen.getByTestId('title-h2')).toBeInTheDocument();
     });
-    test('And the value will be ...', () => {
+    test('And the value will be Crea un evento para ofrecer en tu barrio', () => {
       const tituloH2 = screen.getByTestId('title-h2');
       expect(tituloH2.textContent).toBe('Crea un evento para ofrecer en tu barrio');
     });

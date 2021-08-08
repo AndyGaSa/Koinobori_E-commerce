@@ -7,7 +7,7 @@ const EventDetails = () => (
       <button type="button">Volver</button>
       <section>
         <img src="" alt="User-avatar" />
-        <h3>Nombre Usuario</h3>
+        <h3 data-testid="userName-h3">Nombre Usuario</h3>
       </section>
       <button type="button">Me apunto</button>
     </nav>
