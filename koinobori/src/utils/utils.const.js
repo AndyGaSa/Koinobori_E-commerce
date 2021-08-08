@@ -4,3 +4,5 @@ export default function extractLengthClothes(stockList, category) {
     result - 1
   );
 }
+
+// module.exports = extractLengthClothes;
