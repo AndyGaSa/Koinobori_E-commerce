@@ -12,6 +12,7 @@ import actionType from '../../redux/actions/action.type';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import 'hammerjs';
+// hammerjs
 
 function Chart2() {
   const dispatch = useDispatch();
