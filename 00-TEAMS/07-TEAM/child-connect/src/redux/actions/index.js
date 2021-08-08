@@ -68,10 +68,10 @@ const createEvent = (data) => ({
 
 const createNewEvent = (data) => (
   axios.post('http://localhost:3001/events', data)
-    .then((response) => {
-      console.log(response.data);
-    })
-    .catch((error) => { console.error(error); })
+  // .then((response) => {
+  //   console.log(response.data);
+  // })
+  // .catch((error) => { console.error(error); })
 );
 
 export {
