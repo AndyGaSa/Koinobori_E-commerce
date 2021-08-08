@@ -7,7 +7,7 @@ import './EventList.css';
 
 const EventList = () => {
   let currentEvents = useSelector(({ events }) => events);
-  currentEvents = currentEvents.slice(0, 6);
+  currentEvents = currentEvents.slice(0, 11);
 
   const dispatch = useDispatch();
 
@@ -16,7 +16,7 @@ const EventList = () => {
   }, []);
 
   return (
-    <>
+    <div className="eventList-container">
       <h2>Lista de Eventos en tu barrio</h2>
       <section className="eventList">
         {currentEvents && (
@@ -31,7 +31,7 @@ const EventList = () => {
         <button className="event-pagination__anterior" type="button">Anterior</button>
         <button className="event-pagination__siguiente" type="button">Siguiente</button>
       </nav>
-    </>
+    </div>
   );
 };
 

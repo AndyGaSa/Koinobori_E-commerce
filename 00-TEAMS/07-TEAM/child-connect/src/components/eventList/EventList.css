@@ -1,22 +1,27 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .eventList {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 1fr 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    ". . ."
-    ". . ."; 
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .event-pagination {
   margin: 2em;
+  padding-left: 7%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .event-pagination__siguiente, .event-pagination__anterior {
   margin: 2vh;
-  width: 10vw;
+  width: 5.5em;
   height: 4vh;
   border-radius: 10vh;
   background-color: rgb(56, 183, 154);
@@ -36,4 +41,22 @@
 h2 {
   text-align: center;
   padding: 30px;
+}
+
+@media only screen and (max-width: 1036px) {
+  .eventList-container {
+    margin-top: -20px;
+  }
+}
+
+@media only screen and (max-width: 941px) {
+  .eventList-container {
+    margin-top: -80px;
+  }
+}
+
+@media only screen and (max-width: 741px) {
+  .eventList-container {
+    margin-top: -150px;
+  }
 }

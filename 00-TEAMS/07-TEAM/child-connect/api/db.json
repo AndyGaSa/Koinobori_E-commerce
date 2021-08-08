@@ -7,11 +7,13 @@
       "email": "LoreGarcia@april.biz",
       "avatar": "https://ak.picdn.net/shutterstock/videos/13086851/thumb/1.jpg",
       "childs": [
-        {"age": "5",
+        {
+          "age": "5",
           "gender": "male",
           "interest": "sports"
         },
-        {"age": "6",
+        {
+          "age": "6",
           "gender": "female",
           "interest": "sports"
         }
@@ -26,7 +28,6 @@
           "url": "./events/2"
         }
       ]
-          
     },
     {
       "id": 2,
@@ -35,22 +36,23 @@
       "email": "TeoPerez@melissa.tv",
       "avatar": "https://media.istockphoto.com/photos/charming-handsome-picture-id528582811?k=6&m=528582811&s=612x612&w=0&h=d1SW9imJ_3WkiV5Zol_cqUzxrWHXf7wxqa4fcd814bk=",
       "childs": [
-        {"age": "9",
+        {
+          "age": "9",
           "gender": "female",
           "interest": "theater"
         },
-        {"age": "3",
+        {
+          "age": "3",
           "gender": "female",
           "interest": "music"
         }
       ],
-      "user_events":
-          [
-            {
-            "id": 10,
-            "url": "./events/10"
-          }
-        ]
+      "user_events": [
+        {
+          "id": 10,
+          "url": "./events/10"
+        }
+      ]
     },
     {
       "id": 3,
@@ -59,10 +61,11 @@
       "email": "ManuDiaz@april.biz",
       "avatar": "https://t4.ftcdn.net/jpg/02/44/80/33/360_F_244803369_cNviClISSSUV5FGcYsJR9anLrqiRrHVK.jpg",
       "childs": [
-        {"age": "2",
+        {
+          "age": "2",
           "gender": "female",
           "interest": "sports"
-        }        
+        }
       ],
       "user_events": [
         {
@@ -82,17 +85,18 @@
       "email": "MoniFauret@yesenia.net",
       "avatar": "https://ak.picdn.net/shutterstock/videos/13086851/thumb/1.jpg",
       "childs": [
-        {"age": "8",
+        {
+          "age": "8",
           "gender": "female",
           "interest": "cience"
         },
-        {"age": "6",
+        {
+          "age": "6",
           "gender": "male",
           "interest": "cooking"
         }
       ],
-      "user_events":
-          []
+      "user_events": []
     },
     {
       "id": 5,
@@ -101,26 +105,28 @@
       "email": "NataliaSeijas@kory.org",
       "avatar": "https://lh3.googleusercontent.com/proxy/uUEQtRPhbLlPICneqxlAok8VMl3orl-FeFTiRJGGl-j3IKvy6xZhwmQto3hSBnZ6QiHdBUd3Dj4L1RSesmjepVt4kZkd8jp-7s6_ddyc0dpMGPA",
       "childs": [
-        {"age": "5",
+        {
+          "age": "5",
           "gender": "male",
           "interest": "sports"
         },
-        {"age": "6",
+        {
+          "age": "6",
           "gender": "female",
           "interest": "sports"
         },
-        {"age": "3",
+        {
+          "age": "3",
           "gender": "female",
           "interest": "dancing"
         }
       ],
-      "user_events":
-          [
-            {
-            "id": 4,
-            "url": "./events/4"
-          }
-        ]
+      "user_events": [
+        {
+          "id": 4,
+          "url": "./events/4"
+        }
+      ]
     },
     {
       "id": 6,
@@ -129,27 +135,28 @@
       "email": "MarianaFabiani@jasper.info",
       "avatar": "https://ak.picdn.net/shutterstock/videos/24954458/thumb/7.jpg",
       "childs": [
-        {"age": "5",
+        {
+          "age": "5",
           "gender": "male",
           "interest": "cience"
         },
-        {"age": "7",
+        {
+          "age": "7",
           "gender": "female",
           "interest": "sports"
         },
-        {"age": "10",
+        {
+          "age": "10",
           "gender": "female",
           "interest": "console"
         }
       ],
-      "user_events": 
-      [
+      "user_events": [
         {
-        "id": 6,
-        "url": "./events/6"
-      }
-    ]
-          
+          "id": 6,
+          "url": "./events/6"
+        }
+      ]
     },
     {
       "id": 7,
@@ -158,26 +165,28 @@
       "email": "PedroFoiriti@april.biz",
       "avatar": "https://media.istockphoto.com/photos/beautiful-black-man-picture-id1082488184?k=6&m=1082488184&s=612x612&w=0&h=XfcWsVQsQbmyjxNg4YT4aO_dNXbWAU0MKaO1m2hxYrk=",
       "childs": [
-        {"age": "2",
+        {
+          "age": "2",
           "gender": "female",
           "interest": "sports"
         },
-        {"age": "3",
+        {
+          "age": "3",
           "gender": "male",
           "interest": "dancing"
         },
-        {"age": "4",
+        {
+          "age": "4",
           "gender": "female",
           "interest": "coocking"
         }
       ],
-      "user_events":
-          [
-            {
-            "id": 5,
-            "url": "./events/5"
-          }
-        ]
+      "user_events": [
+        {
+          "id": 5,
+          "url": "./events/5"
+        }
+      ]
     },
     {
       "id": 8,
@@ -186,18 +195,18 @@
       "email": "MartinianoMolina@april.biz",
       "avatar": "https://media.istockphoto.com/photos/handsome-man-wearing-casual-white-tshirt-waiving-saying-hello-happy-picture-id1124393111?k=6&m=1124393111&s=612x612&w=0&h=I78oJVA-KuhdKYisK0ghH-N4sXqMPzZy16WMCVyHfSg=",
       "childs": [
-        {"age": "3",
+        {
+          "age": "3",
           "gender": "male",
           "interest": "sports"
         }
       ],
-      "user_events":
-          [
-            {
-            "id": 7,
-            "url": "./events/7"
-          }
-        ]
+      "user_events": [
+        {
+          "id": 7,
+          "url": "./events/7"
+        }
+      ]
     },
     {
       "id": 9,
@@ -206,21 +215,23 @@
       "email": "LuTornabene@april.biz",
       "avatar": "https://s3.amazonaws.com/freestock-prod/450/freestock_48518167.jpg",
       "childs": [
-        {"age": "8",
+        {
+          "age": "8",
           "gender": "female",
           "interest": "cience"
         },
-        {"age": "3",
+        {
+          "age": "3",
           "gender": "female",
           "interest": "music"
         },
-        {"age": "5",
+        {
+          "age": "5",
           "gender": "male",
           "interest": "sports"
         }
       ],
-      "user_events":
-          []
+      "user_events": []
     },
     {
       "id": 10,
@@ -229,30 +240,34 @@
       "email": "JoseRamos@april.biz",
       "avatar": "https://static.turbosquid.com/Preview/2018/11/01__00_20_19/rd421___male_standing.pngF831406B-96D0-4ACC-8EB6-1F7741455A66Default.jpg",
       "childs": [
-        {"age": "10",
+        {
+          "age": "10",
           "gender": "female",
           "interest": "theater"
         },
-        {"age": "8",
+        {
+          "age": "8",
           "gender": "male",
           "interest": "console"
         },
-        {"age": "6",
+        {
+          "age": "6",
           "gender": "male",
           "interest": "dancing"
         }
       ],
-      "user_events":
-          [{
-            "id": 8,
-            "url": "./events/8"
-          }]
+      "user_events": [
+        {
+          "id": 8,
+          "url": "./events/8"
+        }
+      ]
     }
   ],
   "events": [
     {
       "id": 1,
-      "user":{
+      "user": {
         "id": 1,
         "url": "./users/1"
       },
@@ -260,7 +275,7 @@
       "activity": "sports",
       "description": "Et harum quidem rerum falestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
       "max_childs": 2,
-      "childs": 0, 
+      "childs": 0,
       "fecha": "Jueves",
       "hora": "18",
       "location": {
@@ -270,7 +285,7 @@
     },
     {
       "id": 2,
-      "user":{
+      "user": {
         "id": 1,
         "url": "./users/1"
       },
@@ -288,7 +303,7 @@
     },
     {
       "id": 3,
-      "user":{
+      "user": {
         "id": 3,
         "url": "./users/3"
       },
@@ -303,10 +318,10 @@
         "lat": "41.37721219044338",
         "long": "2.1367097472539704"
       }
-    }, 
+    },
     {
       "id": 4,
-      "user":{
+      "user": {
         "id": 5,
         "url": "./users/5"
       },
@@ -321,10 +336,10 @@
         "lat": "41.37341217746666",
         "long": "2.1354222869128767"
       }
-    }, 
+    },
     {
       "id": 5,
-      "user":{
+      "user": {
         "id": 7,
         "url": "./users/7"
       },
@@ -339,10 +354,10 @@
         "lat": "41.37811385584896",
         "long": "2.1307874296849394"
       }
-    }, 
+    },
     {
       "id": 6,
-      "user":{
+      "user": {
         "id": 6,
         "url": "./users/6"
       },
@@ -357,10 +372,10 @@
         "lat": "41.38078657628437",
         "long": "2.1363664244963454"
       }
-    }, 
+    },
     {
       "id": 7,
-      "user":{
+      "user": {
         "id": 8,
         "url": "./users/8"
       },
@@ -375,10 +390,10 @@
         "lat": "41.37650373028421",
         "long": "2.13752513880333"
       }
-    }, 
+    },
     {
       "id": 8,
-      "user":{
+      "user": {
         "id": 10,
         "url": "./users/10"
       },
@@ -393,10 +408,10 @@
         "lat": "41.37643932443257",
         "long": "2.134306487950595"
       }
-    },  
+    },
     {
       "id": 9,
-      "user":{
+      "user": {
         "id": 3,
         "url": "./users/3"
       },
@@ -411,10 +426,10 @@
         "lat": "41.37804945159166",
         "long": "2.1339202498482672"
       }
-    }, 
+    },
     {
       "id": 10,
-      "user":{
+      "user": {
         "id": 2,
         "url": "./users/2"
       },
@@ -429,6 +444,18 @@
         "lat": "41.3793375246201",
         "long": ", 2.134134826571783"
       }
+    },
+    {
+      "id": 11,
+      "user": "",
+      "title": "fsgsgs",
+      "activity": "puzzle",
+      "description": "fffffff",
+      "max_child": "",
+      "childs": "",
+      "fecha": "sabado",
+      "hora": "17",
+      "location": "fffrrf"
     }
   ],
   "activities": [
