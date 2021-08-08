@@ -22,7 +22,7 @@ const EventList = () => {
         {currentEvents && (
           <>
             {
-              currentEvents.map((event) => <Event key={event.id} data={event} />)
+              currentEvents.map((event) => <Event eventId={event.id} data={event} />)
             }
           </>
         )}
