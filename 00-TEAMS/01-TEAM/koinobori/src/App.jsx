@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
-import { loadStocks } from './redux/actions/action.creators';
+import loadStocks from './redux/actions/action.creators';
 import './App.css';
 
 function App() {
