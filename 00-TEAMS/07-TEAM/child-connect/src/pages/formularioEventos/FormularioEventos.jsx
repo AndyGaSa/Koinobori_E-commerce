@@ -10,12 +10,12 @@ export default function FormularioEventos() {
     id: '',
     user: '',
     title: '',
-    activity: '',
+    activity: 'sport',
     description: '',
-    max_child: '',
-    childs: '',
-    fecha: '',
-    hora: '',
+    max_children: '5',
+    children: '',
+    fecha: 'Jueves',
+    hora: '18',
     location: ''
   });
 
