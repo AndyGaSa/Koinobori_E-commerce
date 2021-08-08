@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import axios from 'axios';
 import actionTypes from './types';
+
 // const apiUrl = 'http://127.0.0.1:3001';
 
 const fetchEvents = (events) => ({
@@ -62,9 +63,17 @@ const fetchAllFaqs = () => ((dispatch) => (
 
 const createEvent = (data) => ({
   type: actionTypes.CREATE_EVENT,
-  data: [data]
+  data
 });
 
+const createNewEvent = (data) => (
+  axios.post('http://localhost:3001/events', data)
+    .then((response) => {
+      console.log(response.data);
+    })
+    .catch((error) => { console.error(error); })
+);
+
 export {
-  fetchAllEvents, fetchAllUsers, fetchAllFaqs, createEvent
+  fetchAllEvents, fetchAllUsers, fetchAllFaqs, createEvent, createNewEvent
 };

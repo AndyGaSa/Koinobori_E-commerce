@@ -8,6 +8,7 @@ const Event = ({ data }) => (
   <>
     <article className="eventList__event">
       <header className="event__header">
+        <button type="button" className="event-button__eliminar">X</button>
         <h3>{data.title}</h3>
         <section>
           <img src="https://i.ibb.co/G3B81Bh/pin-1.png" alt="pin-icon" />
@@ -38,7 +39,6 @@ const Event = ({ data }) => (
       <p className="event__description">{data.description}</p>
       <footer className="event__more-btn">
         <button type="button" className="event-button__saber-mas">Saber más</button>
-        {/* <button type="button" className="event-button__eliminar">Eliminar</button> */}
       </footer>
     </article>
   </>

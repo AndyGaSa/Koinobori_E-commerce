@@ -7,13 +7,16 @@ import { createEvent } from '../../redux/actions/index';
 export default function FormularioEventos() {
   const dispatch = useDispatch();
   const [data, setData] = useState({
+    id: '',
+    user: '',
     title: '',
-    location: '',
-    fecha: 'lunes',
-    hora: '17',
-    activity: 'dancing',
+    activity: '',
     description: '',
-    max_children: '5'
+    max_child: '',
+    childs: '',
+    fecha: '',
+    hora: '',
+    location: ''
   });
 
   const handleInputChange = (event) => {
@@ -72,6 +75,7 @@ export default function FormularioEventos() {
           <select onChange={handleInputChange} name="activity" id="activity" className="event-form__selector">
             <option defaultValue value="sports">sports</option>
             <option value="coocking">cooking</option>
+            <option value="coocking">sport</option>
             <option value="dancing">dancing</option>
             <option value="cience">cience</option>
             <option value="music">music</option>
