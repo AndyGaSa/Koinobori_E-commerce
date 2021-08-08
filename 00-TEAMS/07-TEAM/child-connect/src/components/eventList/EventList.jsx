@@ -6,8 +6,8 @@ import Event from '../event/Event';
 import './EventList.css';
 
 const EventList = () => {
-  let currentEvents = useSelector(({ events }) => events);
-  currentEvents = currentEvents.slice(0, 11);
+  const currentEvents = useSelector(({ events }) => events);
+  // currentEvents = currentEvents.slice(0, 11);
 
   const dispatch = useDispatch();
 
@@ -27,10 +27,10 @@ const EventList = () => {
           </>
         )}
       </section>
-      <nav className="event-pagination">
+      {/* <nav className="event-pagination">
         <button className="event-pagination__anterior" type="button">Anterior</button>
         <button className="event-pagination__siguiente" type="button">Siguiente</button>
-      </nav>
+      </nav> */}
     </div>
   );
 };

@@ -70,6 +70,10 @@
   height: 3em;
 }
 
+.event-icon {
+  margin-right: 6px;
+}
+
 .event-button__saber-mas {
   margin: 2vh;
   width: 10vw;
@@ -99,5 +103,5 @@
   align-items: flex-end;
   align-self: flex-end;
   box-shadow: -5px -5px 10px rgb(255 255 255 / 50%), 5px 5px 10px rgb(170 170 204 / 25%), 10px 10px 20px rgb(170 170 204 / 50%), -10px -10px 20px #ffffff;
-  background-color: red;
+  background-color: rgb(251,179,187);
 }
