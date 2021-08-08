@@ -68,12 +68,18 @@ const createEvent = (data) => ({
 
 const createNewEvent = (data) => (
   axios.post('http://localhost:3001/events', data)
-  // .then((response) => {
-  //   console.log(response.data);
-  // })
-  // .catch((error) => { console.error(error); })
+);
+
+const deleteEvent = (event) => ({
+  type: actionTypes.DELETE_EVENT,
+  event
+});
+
+const deleteOneEvent = (event) => (
+  axios.delete(`http://localhost:3001/events/${event}`)
 );
 
 export {
-  fetchAllEvents, fetchAllUsers, fetchAllFaqs, createEvent, createNewEvent
+  fetchAllEvents, fetchAllUsers, fetchAllFaqs,
+  createEvent, createNewEvent, deleteOneEvent, deleteEvent
 };
