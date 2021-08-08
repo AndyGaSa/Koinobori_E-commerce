@@ -7,7 +7,7 @@ import './EventList.css';
 
 const EventList = () => {
   let currentEvents = useSelector(({ events }) => events);
-  currentEvents = currentEvents.slice(0, 6);
+  currentEvents = currentEvents.slice(0, 11);
 
   const dispatch = useDispatch();
 
