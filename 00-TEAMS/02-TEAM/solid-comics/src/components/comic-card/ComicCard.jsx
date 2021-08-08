@@ -12,6 +12,7 @@ export default function ComicCard({ comic }) {
     0: 'https://i.ibb.co/sPrwLZk/marco-2.png'
   };
   return (
+
     <>
       <div className="comic__item">
         <div className="overflow">
@@ -22,7 +23,6 @@ export default function ComicCard({ comic }) {
           </Link>
         </div>
         <img className="frame" src={frames[comic?.id % 5]} alt="comic" />
-
       </div>
     </>
   );

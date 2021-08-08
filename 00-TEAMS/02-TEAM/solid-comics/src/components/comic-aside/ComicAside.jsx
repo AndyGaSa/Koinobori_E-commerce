@@ -19,7 +19,7 @@ export default function ComicAside() {
     <aside className="filter__aside-container">
 
       <div className="filter__button-images-container">
-        <button onClick={() => filter('avengers')} type="button" className="filter__button">
+        <button data-testid="avengers" onClick={() => filter('avengers')} type="button" className="filter__button">
 
           <img
             className="filter__button-image"
@@ -29,7 +29,7 @@ export default function ComicAside() {
           />
         </button>
 
-        <button onClick={() => filter('x-men')} type="button" className="filter__button">
+        <button data-testid="x-men" onClick={() => filter('x-men')} type="button" className="filter__button">
           <img
             className="filter__button-image"
             src="https://i.ibb.co/rZsPdhD/filter-aside-0000s-0004-xmen-copia.png"
@@ -38,7 +38,7 @@ export default function ComicAside() {
           />
         </button>
 
-        <button onClick={() => filter('fantastic')} type="button" className="filter__button">
+        <button data-testid="fantastic" onClick={() => filter('fantastic')} type="button" className="filter__button">
 
           <img
             className="filter__button-image"
@@ -51,6 +51,7 @@ export default function ComicAside() {
       </div>
       <input
         className="filter__input"
+        data-testid="filter-input-field"
         onChange={(
           (event) => filter(
             event.target.value
