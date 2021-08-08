@@ -16,7 +16,7 @@ export default function characterList() {
 
   if (characters.length > 0) {
     return (
-      <section data_testId="characters-list" className="section__characters-list">
+      <section data_testid="characters-list" className="section__characters-list">
         <CharactersGroupA />
       </section>
     );

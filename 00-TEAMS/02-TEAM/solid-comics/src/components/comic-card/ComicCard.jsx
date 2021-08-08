@@ -19,7 +19,7 @@ export default function ComicCard({ comic }) {
           <Link
             to={`/comic-details/${comic?.id}`}
           >
-            <img data-testid="create-img" className="item__img" src={`${comic?.thumbnail.path}.${comic?.thumbnail.extension}`} alt="comic" />
+            <img data-testid="create-img" className="item__img" src={`${comic?.thumbnail.path}.${comic?.thumbnail.extension}`} alt={comic.title} />
           </Link>
         </div>
         <img className="frame" src={frames[comic?.id % 5]} alt="comic" />

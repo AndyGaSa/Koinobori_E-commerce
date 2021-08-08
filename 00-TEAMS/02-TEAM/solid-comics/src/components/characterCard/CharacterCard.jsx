@@ -18,7 +18,7 @@ export default function CharacterCard({ character }) {
         <Link
           to={`/character-details/${character?.id}`}
         >
-          <img data-testid="create-img" className="character__img" src={`${character?.thumbnail.path}.${character?.thumbnail.extension}`} alt="character" />
+          <img data-testid="create-img" className="character__img" src={`${character?.thumbnail.path}.${character?.thumbnail.extension}`} alt={`${character.name}`} />
           {/* <img className="character__frame" src={frames[character?.id % 5]} alt="comic" /> */}
         </Link>
         {/* </div> */}
