@@ -446,42 +446,28 @@
       }
     },
     {
-      "id": 11,
+      "id": 14,
       "user": "",
-      "title": "fsgsgs",
-      "activity": "puzzle",
-      "description": "fffffff",
-      "max_child": "",
-      "childs": "",
-      "fecha": "sabado",
-      "hora": "17",
-      "location": "fffrrf"
-    },
-    {
-      "id": 12,
-      "user": "",
-      "title": "lkljlkjl",
-      "activity": "coocking",
-      "description": "lkajlkallajldskjasljfl",
-      "max_child": "",
-      "childs": "",
-      "fecha": "jueves",
-      "hora": "17",
-      "location": "el parque",
-      "max_children": "4"
-    },
-    {
-      "id": 13,
-      "user": "",
-      "title": "skylab",
-      "activity": "console",
-      "description": "klkjlkjlkjllkjljlkjlk",
-      "max_child": "",
-      "childs": "",
-      "fecha": "domingo",
+      "title": "EL BAILE DE LA ESCOBA",
+      "activity": "dancing",
+      "description": "Escoba y musica",
+      "max_children": "5",
+      "children": "",
+      "fecha": "Jueves",
       "hora": "19",
-      "location": "en el centro",
-      "max_children": "2"
+      "location": "PLAZA pascal"
+    },
+    {
+      "id": 15,
+      "user": "",
+      "title": "Fotografia para niños",
+      "activity": "cience",
+      "description": "Fotos con Lola y sus técnicas ",
+      "max_children": "3",
+      "children": "",
+      "fecha": "martes",
+      "hora": "16",
+      "location": "Barcelona, ciutadella"
     }
   ],
   "activities": [
