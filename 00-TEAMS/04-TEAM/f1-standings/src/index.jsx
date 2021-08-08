@@ -13,7 +13,7 @@ import DetailsDriver from './components/Details-drivers/Details.drivers';
 import ListDriver from './components/List/List-driver';
 import ListConstructor from './components/List-constructor/List-constructor';
 import DetailsConstructor from './components/Details-constructor/Details.constructor';
-import ChartContainer from './components/Charts/Chart';
+import ChartContainer from './components/Charts/Chart2';
 
 ReactDOM.render(
   <React.StrictMode>
