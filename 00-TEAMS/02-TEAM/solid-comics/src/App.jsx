@@ -9,7 +9,7 @@ import ComicList from './page/ComicList';
 import Header from './components/header/Header';
 import NotFound from './page/NotFound';
 import Profile from './page/Profile';
-import Battle from './page/Battle';
+import Characters from './page/Characters';
 import Login from './page/Login';
 import Footer from './components/footer/Footer';
 import ComicDetail from './page/ComicDetail';
@@ -36,7 +36,7 @@ function App() {
                     <Route path="/" exact component={ComicList} />
                     <Route path="/comic-list" component={ComicList} />
                     <Route path="/profile" component={Profile} />
-                    <Route path="/battle" component={Battle} />
+                    <Route path="/characters" component={Characters} />
                     <Route path="/login" component={Login} />
                     <Route path="/comic-details/:comicId" component={ComicDetail} />
                     <Route path="/character-details/:characterId" component={CharacterDetail} />

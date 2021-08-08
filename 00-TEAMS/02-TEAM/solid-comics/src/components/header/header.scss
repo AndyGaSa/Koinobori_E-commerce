@@ -57,7 +57,7 @@
             .nav-comics:hover {
                 filter:none
             }
-            .nav-battle{
+            .nav-characters{
                 position: absolute;
                 width: 145px;
                 height: 140px;
@@ -69,18 +69,18 @@
                 filter: grayscale(100%);
                 background-size: cover;
                 background-position: center;
-                .nav-battle__text {
+                .nav-characters__text {
                     position: absolute;
                     color: #fff;
                     text-transform: uppercase;
                     top: 10px;
-                    left: 18%;
+                    left: 6%;
                     font-size: 4vw;
                     padding: 2px;
                     background-color: rgba(0, 0, 0, 0.4);
                 }
             }    
-            .nav-battle:hover {
+            .nav-characters:hover {
                 filter:none
             }
             .nav-logout{
@@ -141,14 +141,14 @@
                     width: 100%;
                 }
             }
-            .nav-battle{
+            .nav-characters{
                 position: relative;
                 width: 25%;
                 top: 0;
                 left: 0;
                 clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
                 margin: 0;
-                .nav-battle__img{
+                .nav-characters__img{
                     width: 100%;
                 }
             }

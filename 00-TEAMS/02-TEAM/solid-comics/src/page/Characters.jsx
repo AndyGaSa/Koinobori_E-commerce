@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { loadCharacters } from '../redux/actions/comics.creators';
 
-import './styles/battle.scss';
+import './styles/Characters.scss';
 
 import CharactersGroupA from '../components/charactersGroupA/CharactersGroupA';
 
