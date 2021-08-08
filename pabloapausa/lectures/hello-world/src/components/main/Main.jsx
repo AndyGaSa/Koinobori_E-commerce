@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Books from './Books';
-import './Main.css';
 
 // Qué significa 'useState'.
 
