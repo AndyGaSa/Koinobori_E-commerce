@@ -10,12 +10,12 @@ export default function FormularioEventos() {
     id: '',
     user: '',
     title: '',
-    activity: '',
+    activity: 'sport',
     description: '',
-    max_child: '',
-    childs: '',
-    fecha: '',
-    hora: '',
+    max_children: '5',
+    children: '',
+    fecha: 'Jueves',
+    hora: '18',
     location: ''
   });
 
@@ -75,7 +75,6 @@ export default function FormularioEventos() {
           <select onChange={handleInputChange} name="activity" id="activity" className="event-form__selector">
             <option defaultValue value="sports">sports</option>
             <option value="coocking">cooking</option>
-            <option value="coocking">sport</option>
             <option value="dancing">dancing</option>
             <option value="cience">cience</option>
             <option value="music">music</option>
