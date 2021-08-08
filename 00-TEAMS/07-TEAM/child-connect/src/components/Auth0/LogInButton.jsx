@@ -6,6 +6,7 @@ function LoginButton() {
 
   return (
     <button
+      data-testid="logIn-button-test"
       type="button"
       className="login-button"
       onClick={() => loginWithRedirect({ returnTo: 'http://localhost:3000/dashboard' })}
