@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { loadCharacters } from '../redux/actions/comics.creators';
 
 import './styles/battle.scss';
 
-export default function Battle() {
+import CharactersGroupA from '../components/charactersGroupA/CharactersGroupA';
+
+export default function characterList() {
+  const dispatch = useDispatch();
+  const characters = useSelector((store) => store.characters);
+  useEffect(() => {
+    dispatch(loadCharacters());
+  }, []);
+
+  if (characters.length > 0) {
+    return (
+      <section data_testId="characters-list" className="section__characters-list">
+        <CharactersGroupA />
+      </section>
+    );
+  }
   return (
-    <div className="battle-container">
-      <img src="https://i.ibb.co/4Pgyf39/battle.png" alt="" className="battle-img" />
-      <span className="battle-text">coming soon...</span>
-    </div>
+    <section className="section__characters-list" />
   );
 }

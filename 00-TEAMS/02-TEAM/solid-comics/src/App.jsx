@@ -12,7 +12,8 @@ import Profile from './page/Profile';
 import Battle from './page/Battle';
 import Login from './page/Login';
 import Footer from './components/footer/Footer';
-import Detail from './page/Detail';
+import ComicDetail from './page/ComicDetail';
+import CharacterDetail from './page/CharacterDetail';
 import './App.css';
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
                     <Route path="/profile" component={Profile} />
                     <Route path="/battle" component={Battle} />
                     <Route path="/login" component={Login} />
-                    <Route path="/details/:comicId" component={Detail} />
+                    <Route path="/comic-details/:comicId" component={ComicDetail} />
+                    <Route path="/character-details/:characterId" component={CharacterDetail} />
                     <Route component={NotFound} />
                   </Switch>
                 </>

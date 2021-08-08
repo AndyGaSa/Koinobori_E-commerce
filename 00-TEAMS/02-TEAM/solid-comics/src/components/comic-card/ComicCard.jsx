@@ -16,7 +16,7 @@ export default function ComicCard({ comic }) {
       <div className="comic__item">
         <div className="overflow">
           <Link
-            to={`/details/${comic?.id}`}
+            to={`/comic-details/${comic?.id}`}
           >
             <img data-testid="create-img" className="item__img" src={`${comic?.thumbnail.path}.${comic?.thumbnail.extension}`} alt="comic" />
           </Link>

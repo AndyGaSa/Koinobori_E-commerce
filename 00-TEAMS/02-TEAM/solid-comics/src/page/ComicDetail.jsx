@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import UserSelection from '../components/user-selection/UserSelection';
 
-import './styles/Details.scss';
+import './styles/ComicDetail.scss';
 
 export default function Detail() {
   const comics = useSelector((store) => store.comics);
@@ -18,35 +18,35 @@ export default function Detail() {
   }, [comicId]);
 
   return (
-    <main className="details">
-      <h2 className="detail__title">
+    <main className="comic__details">
+      <h2 className="comic__detail-title">
         Title:
 
         {comic?.title}
 
       </h2>
-      <div className="detail__top">
-        <img data-testid="create-img" className="detail__img" src={`${comic?.thumbnail?.path}.${comic?.thumbnail?.extension}`} alt="comic" />
+      <div className="comic__detail-top">
+        <img data-testid="create-img" className="comic__detail-img" src={`${comic?.thumbnail?.path}.${comic?.thumbnail?.extension}`} alt="comic" />
         <section>
           <UserSelection comicId={comicId} />
-          <div className="detail__creators" data-testid={`list-item-${comic?.id}`}>
-            <h3 className="detail__creator">
+          <div className="comic__detail-creators" data-testid={`list-item-${comic?.id}`}>
+            <h3 className="comic__detail-creator">
               Penciler:
               {comic?.creators?.items[0]?.name}
             </h3>
-            <h3 className="detail__creator">
+            <h3 className="comic__detail-creator">
               Writer:
               {comic?.creators?.items[1]?.name}
             </h3>
-            <h3 className="detail__creator">
+            <h3 className="comic__detail-creator">
               Colorist:
               {comic?.creators?.items[3]?.name}
             </h3>
-            <h3 className="detail__creator">
+            <h3 className="comic__detail-creator">
               Penciler:
               {comic?.creators?.items[1]?.name}
             </h3>
-            <h3 className="detail__creator">
+            <h3 className="comic__detail-creator">
               Editor:
               {comic?.creators?.items[2]?.name}
 
@@ -55,7 +55,7 @@ export default function Detail() {
           <div />
         </section>
       </div>
-      <div className="detail__bottom">
+      <div className="comic__detail-bottom">
         <span>
           print price:
           {' '}
