@@ -4,6 +4,7 @@
 
 
 .suggested-artists-container{
+    
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -25,8 +26,9 @@
         list-style: none;
         padding: 10px;
     }  
-
+    
 }
+
 
 
 .artist-details{
@@ -36,7 +38,8 @@
     justify-content: space-evenly;
     background-color: $secondary-color;
     width: fit-content;
-    height: 300px;
+    height: 330px;
+    width: 180px;
     padding: 10px;
     border-radius: 20px;
     border: 4px solid white;
@@ -52,6 +55,7 @@
         height: 180px;
         border-radius: 20px 20px 0 0;
         border: 3px white solid;
+        width: 179px;
        
     }
     &__artist-name{
@@ -63,6 +67,8 @@
         font-size: 16px;
         color:$tertiary-color;
         font-family: $primary-font;
+        height: 50px;
+        align-items: center;
     }
     p{
         display:flex;
@@ -71,6 +77,8 @@
         font-family: $secondary-font;
         color:$primary-font-color;
         font-size: 9px;
+        height: 23px;
+        align-items: center;
         span{
             margin: 2px 0;
         }
@@ -94,6 +102,24 @@
             
         }
     }    
+}
+
+.refresh-artist-button{
+    margin:0 auto;
+    margin-top: 30px;
+    width: 130px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: $primary-color;
+    border: 3px $tertiary-color solid;
+    color: $tertiary-color;
+    font-size: 15px;
+    font-family: $primary-font;
+    &:hover{
+        cursor:pointer;
+        background-color:gold;
+        
+    }
 }
 
 @media screen and(min-width: 600px){

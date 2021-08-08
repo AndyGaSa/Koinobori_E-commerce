@@ -15,6 +15,7 @@ import NotFound from './pages/NotFound';
 import Profile from './pages/Profile';
 import Footer from './components/Footer';
 import FavouriteArtists from './pages/FavouriteArtists';
+import Details from './pages/Details';
 
 ReactDOM.render(
 
@@ -34,6 +35,7 @@ ReactDOM.render(
             <Route path="/notfound" component={NotFound} />
             <Route path="/profile" component={Profile} />
             <Route path="/Favouritelist" component={FavouriteArtists} />
+            <Route path="/details" component={Details} />
             <Route component={NotFound} />
           </Switch>
           <Footer />
