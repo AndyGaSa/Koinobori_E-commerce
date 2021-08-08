@@ -1,8 +1,8 @@
-.comic__item{
+.character__item{
     margin: 0.8%;
     filter: contrast(0.8);
 }
-.item__img{
+.character__img{
 
     width: 100%;
     height: 100%;
@@ -10,15 +10,15 @@
     filter: grayscale(100%);
     transform: scale(1);
 }
-.item__img:hover{
+.character__img:hover{
     transform: scale(1.05);
     filter:none
 }
 
-.overflow{
+.character__overflow{
     overflow: hidden;
 }
-.comic__row{
+.character__row{
     display: flex;
     flex-direction: row;
     position: relative;
@@ -27,7 +27,7 @@
         text-decoration: none;
     }
 }
-.frame{
+.character__frame{
     pointer-events: none;
     width: 106%;
     height: 105%;

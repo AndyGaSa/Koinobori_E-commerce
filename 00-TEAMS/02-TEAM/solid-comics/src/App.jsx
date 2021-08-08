@@ -9,10 +9,11 @@ import ComicList from './page/ComicList';
 import Header from './components/header/Header';
 import NotFound from './page/NotFound';
 import Profile from './page/Profile';
-import Battle from './page/Battle';
+import Characters from './page/Characters';
 import Login from './page/Login';
 import Footer from './components/footer/Footer';
-import Detail from './page/Detail';
+import ComicDetail from './page/ComicDetail';
+import CharacterDetail from './page/CharacterDetail';
 import './App.css';
 
 function App() {
@@ -29,13 +30,16 @@ function App() {
               <Route render={() => (
                 <>
                   <Header />
+
+                  <div className="texture" />
                   <Switch>
                     <Route path="/" exact component={ComicList} />
                     <Route path="/comic-list" component={ComicList} />
                     <Route path="/profile" component={Profile} />
-                    <Route path="/battle" component={Battle} />
+                    <Route path="/characters" component={Characters} />
                     <Route path="/login" component={Login} />
-                    <Route path="/details/:comicId" component={Detail} />
+                    <Route path="/comic-details/:comicId" component={ComicDetail} />
+                    <Route path="/character-details/:characterId" component={CharacterDetail} />
                     <Route component={NotFound} />
                   </Switch>
                 </>

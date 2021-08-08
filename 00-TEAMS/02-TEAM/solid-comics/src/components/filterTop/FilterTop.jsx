@@ -14,15 +14,15 @@ export default function FilterTop() {
   return (
     <>
       <div className="comic__row">
-        <span className="titels__comic-list filter-top">FILTER TOP</span>
+        <span className="titels__comic-list filter-top">TOP COMICS</span>
 
         {filterStore.length > 0
           ? (
-            filterStore.slice(0, 3).map((
+            filterStore.slice(0, 4).map((
               comic
             ) => <ComicCard comic={comic} key={comic.id} />)
           ) : (
-            comics.slice(0, 5).map((
+            comics.slice(0, 4).map((
               comic
             ) => <ComicCard comic={comic} key={comic.id} />)
           )}
@@ -32,7 +32,7 @@ export default function FilterTop() {
           className="filter-button"
           type="button"
         >
-          <span>FILTER</span>
+          <span className="filter-button-text">FILTER</span>
           <img className="filter-image" src="https://i.ibb.co/9wNnqRF/filter-image.jpg" alt="filter-back" />
 
         </button>

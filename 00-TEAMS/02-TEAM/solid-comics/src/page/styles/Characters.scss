@@ -1,0 +1,64 @@
+.battle-container {
+    width: 100%;
+    text-align:center;
+    .battle-img {
+        width: 40%;
+        opacity: 0.5;
+    }
+    .battle-text{
+        display: block;
+        color: #fff;
+        font-size: 20px;
+        text-transform:uppercase;
+    }
+}
+@media only screen and (min-width: 376px) {
+    .battle-container {
+        .battle-text{
+            font-size: 50px;
+        }
+    }
+}
+.versus{
+    font-size: 4em; 
+}
+.section__characters-list{
+
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+        .group__row{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(126px, auto));
+            grid-auto-flow: dense;
+            grid-gap: 2px;
+            /* justify-content: center; */
+            /* margin: 0 auto; */
+            padding: 0;
+            width: 100%;
+      
+          .character__item{
+            position: relative;
+      
+            @for $i from 1 through 30 {
+              &:nth-child(#{$i}) {
+                $random-size-row: random(2);
+                $random-size-col: random(2);
+                grid-row: span $random-size-row;
+                grid-column: span $random-size-col;
+              }
+            }
+          }
+      
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }  
+      
+}

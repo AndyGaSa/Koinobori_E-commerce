@@ -1,5 +1,5 @@
 import React from 'react';
-import Detail from './Detail';
+import ComicDetail from './ComicDetail';
 import { render, screen } from '../utils/test-utils';
 
 jest.mock('react-router-dom', () => ({
@@ -30,7 +30,7 @@ describe('given a Detail component', () => {
           }]
       };
       render(
-        <Detail />, { initialState }
+        <ComicDetail />, { initialState }
       );
       expect(screen.getByTestId('list-item-93839')).toBeInTheDocument();
     });

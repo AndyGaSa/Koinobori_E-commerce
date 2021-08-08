@@ -2,13 +2,13 @@
 //     color: white;
 //     background-color: #464646;
 // }
-.details{
+.comic__details{
     display: flex;
     flex-direction: column;
     
     height: 100%;
 }
-.detail__top{
+.comic__detail-top{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -17,30 +17,30 @@
     }
 }
 @media (max-width: 375px) {
-    .detail__top{
+    .comic__detail-top{
         display: flex;
         flex-direction: column;
         align-items: center;
 }
 }
-.detail__img{
+.comic__detail-img{
     width: 50%;
 margin: 10px;
 }
-.detail__title{
+.comic__detail-title{
     display: flex;
     justify-content: center;
 }
-.detail__creators{
+.comic__detail-creators{
     margin: 10px;
 }
-.detail__bottom{
+.comic__detail-bottom{
     display: flex;
     justify-content: center;
     border-style: dotted;
     margin: 20px;
     font-size: 1.5em;
 }
-.detail__creator{
+.comic__detail-creator{
     margin-bottom: 10px;
 }

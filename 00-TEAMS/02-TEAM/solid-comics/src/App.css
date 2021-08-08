@@ -1,7 +1,26 @@
 /* Browser Reset */
+@font-face {
+  font-family: North;
+  src: url(../src/assets/North/North.otf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: North, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 200;
+}
+
+.texture{
+  filter: opacity(0.3);
+  pointer-events: none;
+  z-index: 4;
+  background-image: url(https://i.ibb.co/JRx51dC/comic-texture.png);
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
 }

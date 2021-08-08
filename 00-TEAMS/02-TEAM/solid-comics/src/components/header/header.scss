@@ -21,10 +21,11 @@
                     position: absolute;
                     color: #fff;
                     text-transform: uppercase;
+                    font-size: 4vw;
                     top: 0px;
                     left: 0px;
                     padding: 2px;
-                    background-color: rgba(0,0, 0, 0.4);
+                    background-color: rgba(0, 0, 0, 0.4);
                 }
             }
             .nav-profile:hover {
@@ -46,16 +47,17 @@
                     position: absolute;
                     color: #fff;
                     text-transform: uppercase;
-                    top: 105px;
-                    left: 20px;
+                    bottom: 6px;
+                    left: 10%;
+                    font-size: 4vw;
                     padding: 2px;
-                    background-color: rgba(0,0, 0, 0.4);
+                    background-color: rgba(0, 0, 0, 0.4);
                 }
             }
             .nav-comics:hover {
                 filter:none
             }
-            .nav-battle{
+            .nav-characters{
                 position: absolute;
                 width: 145px;
                 height: 140px;
@@ -67,17 +69,18 @@
                 filter: grayscale(100%);
                 background-size: cover;
                 background-position: center;
-                .nav-battle__text {
+                .nav-characters__text {
                     position: absolute;
                     color: #fff;
                     text-transform: uppercase;
                     top: 10px;
-                    left: 40px;
+                    left: 6%;
+                    font-size: 4vw;
                     padding: 2px;
-                    background-color: rgba(0,0, 0, 0.4);
+                    background-color: rgba(0, 0, 0, 0.4);
                 }
             }    
-            .nav-battle:hover {
+            .nav-characters:hover {
                 filter:none
             }
             .nav-logout{
@@ -95,11 +98,12 @@
                 .nav-logout__text {
                     position: absolute;
                     color: #fff;
+                    font-size: 4vw;
                     text-transform: uppercase;
-                    top: 110px;
-                    left: 45px;
+                    bottom: 0;
+                    left: 20%;
                     padding: 2px;
-                    background-color: rgba(0,0, 0, 0.4);
+                    background-color: rgba(0, 0, 0, 0.4);
                 }
             }   
             .nav-logout:hover {
@@ -137,14 +141,14 @@
                     width: 100%;
                 }
             }
-            .nav-battle{
+            .nav-characters{
                 position: relative;
                 width: 25%;
                 top: 0;
                 left: 0;
                 clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
                 margin: 0;
-                .nav-battle__img{
+                .nav-characters__img{
                     width: 100%;
                 }
             }

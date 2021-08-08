@@ -3,9 +3,9 @@ import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { StaticRouter } from 'react-router';
 
-import Battle from './Battle';
+import Characters from './Characters';
 
-describe('Given a battle component', () => {
+describe('Given a Characters component', () => {
   describe('When is rendered', () => {
     let container;
     beforeEach(() => {
@@ -21,7 +21,7 @@ describe('Given a battle component', () => {
 
     test('Then a "coming soon..." text should appear', () => {
       act(() => {
-        render(<StaticRouter><Battle /></StaticRouter>, container);
+        render(<StaticRouter><Characters /></StaticRouter>, container);
       });
       expect(container.textContent).toBe('coming soon...');
     });
