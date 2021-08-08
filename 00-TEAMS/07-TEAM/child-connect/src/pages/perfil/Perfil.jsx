@@ -26,7 +26,7 @@ export default function Perfil() {
             <h2 className="profile-username">{currentUsers[2]?.name}</h2>
             <div className="user-location">
               <img src="https://i.ibb.co/ckmfDWW/pin-1.png" alt="" className="location_icon" />
-              <p className="user-city-name">Barcelona, Sants</p>
+              <p data-testid="perfil-p" className="user-city-name">Barcelona, Sants</p>
             </div>
             <div className="profile-data-details">
               <div className="children-info">
