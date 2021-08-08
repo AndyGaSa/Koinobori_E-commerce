@@ -17,5 +17,10 @@ describe('Given a Header component', () => {
     test('Then should be a img with the "main-logo-header" id', () => {
       expect(screen.getByTestId('main-logo-header')).toBeInTheDocument();
     });
+    describe('And the user is not registered', () => {
+      test('Then should not be the logout button in the document', () => {
+        expect(screen.getByTestId('login-button')).toBeInTheDocument();
+      });
+    });
   });
 });

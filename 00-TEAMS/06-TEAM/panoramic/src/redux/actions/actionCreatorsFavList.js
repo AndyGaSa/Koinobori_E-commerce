@@ -16,7 +16,6 @@ export function deleteFavArtists(artist) {
   );
 }
 
-// Tiene que funcionar en funcion del LOAD nuevo
 export function addFavArtist(artist) {
   return (
     ({

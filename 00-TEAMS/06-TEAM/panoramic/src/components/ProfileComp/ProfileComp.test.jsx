@@ -17,15 +17,13 @@ describe('Given a ProfileComp component', () => {
         name: 'alex',
         email: 'example@example.com'
       };
+      const isAuthenticated = true;
       render(
-        <ProfileComp />, { user }
+        <ProfileComp />, { user, isAuthenticated }
       );
     });
     test('Then should be a div tag with the "main-section" id', () => {
       expect(screen.getByTestId('main-section')).toBeInTheDocument();
-    });
-    test('Then should be a img tag with the "user-img" id', () => {
-      expect(screen.getByTestId('user-img')).toBeInTheDocument();
     });
   });
 });
