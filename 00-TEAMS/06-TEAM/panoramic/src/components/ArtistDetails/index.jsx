@@ -33,11 +33,14 @@ export default function ArtistDetails() {
 
             <ul className="artist-card__genres">
               Genres:
-              {artist.genres.map((genre) => (
-                <li>
-                  {genre}
-                </li>
-              ))}
+              {artist.genres[0]
+                ? artist.genres.map((genre) => (
+                  <li>
+                    {genre}
+                  </li>
+                ))
+                : <p>None</p>}
+
             </ul>
 
             <ul className="artist-card__followers">
