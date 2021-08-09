@@ -57,7 +57,7 @@ export default function UserSelection({ comicId }) {
 
   return (
     <aside className="userSelection">
-      <button onClick={() => updateItemStatus('wanted')} className={`userSelection__image wantIt ${wantItState}`} type="button" src="https://i.ibb.co/XjvJdyG/Illustration-of-star-icon.jpg" alt="I Want It" />
+      <button onClick={() => updateItemStatus('wanted')} data-testid={`wantIt ${wantItState}`} className={`userSelection__image wantIt ${wantItState}`} type="button" src="https://i.ibb.co/XjvJdyG/Illustration-of-star-icon.jpg" alt="I Want It" />
       <button onClick={() => updateItemStatus('haveIt')} className={`userSelection__image haveIt ${haveItState}`} type="button" src="https://i.ibb.co/9HM9jqB/wantIt.jpg" alt="I Have It" />
       <button onClick={() => updateItemStatus('favs')} className={`userSelection__image favorite ${favoriteState}`} type="button" src="https://i.ibb.co/MPvDxR0/haveIt.png" alt="Favorite" />
       <button onClick={() => updateItemStatus('disLike')} className={`userSelection__image disLike ${disLikeItState}`} type="button" src="https://i.ibb.co/9wV8dc3/dislike.png" alt="dislike" />
