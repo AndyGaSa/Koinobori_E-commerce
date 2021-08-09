@@ -1,0 +1,107 @@
+.eventList__event{
+  width: 27.5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  padding: 1em;
+  background-color: lavender;
+  border-radius: 10px;
+}
+
+.event__header {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: none;
+  padding-left: 1em;
+}
+
+.event__header > h3 {
+  flex: 0 1 100%;
+  margin-bottom: .5em;
+}
+
+.event__header > section {
+  display: flex;
+  padding-right: 1em;
+}
+
+.event__header > section > img {
+  width: 1em;
+}
+
+.event__info {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: .5em 0;
+}
+
+.event__info > div {
+  display: flex;
+  align-items: center
+}
+
+.event__info > div > img, .event__info > div > div {
+  width: 2em;
+  height: 2em;
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+.event__description {
+  padding: .4em;
+}
+
+.event__more-btn {
+  display: flex;
+  flex-direction: column;
+  background-color: unset;
+  
+}
+
+.event__more-btn > button {
+  width: 22em;
+  height: 3em;
+}
+
+.event-icon {
+  margin-right: 6px;
+}
+
+.event-button__saber-mas {
+  margin: 2vh;
+  width: 10vw;
+  height: 4vh;
+  border-radius: 10vh;
+  background-color: rgb(56, 183, 154);
+  border: transparent;
+  color: white;
+  align-items: flex-end;
+  align-self: flex-end;
+  margin-bottom: 5vh;
+  box-shadow: -5px -5px 10px rgb(255 255 255 / 50%), 5px 5px 10px rgb(170 170 204 / 25%), 10px 10px 20px rgb(170 170 204 / 50%), -10px -10px 20px #ffffff;
+}
+
+.event-button__eliminar, .event-button__saber-mas:hover {
+  cursor: pointer;
+}
+
+.event-button__eliminar {
+  margin-left: 90%;
+  width: 40px;
+  height: 4vh;
+  border-radius: 10vh;
+  background-color: rgb(56, 183, 154);
+  border: transparent;
+  color: white;
+  align-items: flex-end;
+  align-self: flex-end;
+  box-shadow: -5px -5px 10px rgb(255 255 255 / 50%), 5px 5px 10px rgb(170 170 204 / 25%), 10px 10px 20px rgb(170 170 204 / 50%), -10px -10px 20px #ffffff;
+  background-color: rgb(251,179,187);
+}
