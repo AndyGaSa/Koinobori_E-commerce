@@ -3,19 +3,13 @@ const express = require('express');
 const server = express();
 const port = 5000;
 
-const beersRouter = express.Router();
-beersRouter
-  .route('/api/beers')
-  .get((req, res) => {
-    res.send('beers get underconstruction');
-  })
-  .post('/api/beers')
-  .get((req, res) => {
-    res.send('beers post underconstruction');
-  });
+server.use(express.json());
 
-server.use('/', beersRouter);
+const beersRouter = require('./src/routes/beersRouter');
+
+server.use('/api/beers', beersRouter);
+
 server.listen(
   port,
-  () => console.log(`Server is running on http//localhost:${port}`),
+  () => console.log(`Server is running on http://localhost:${port}`),
 );
