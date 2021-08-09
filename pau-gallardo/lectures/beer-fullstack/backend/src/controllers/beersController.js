@@ -1,5 +1,7 @@
 let beersMock = require('../mocks/beersMock');
 
+let lastId = beersMock.length;
+
 function getBeers(req, res) {
   res.send(beersMock);
 }
@@ -7,10 +9,11 @@ function getBeers(req, res) {
 function postBeer(req, res) {
   const { name } = req.body;
   const newBeer = {
-    id: Math.random(),
+    id: lastId,
     name,
   };
 
+  lastId += 1;
   beersMock.push(newBeer);
 
   res.send(newBeer);
@@ -27,9 +30,19 @@ function deleteOneBeer(req, res) {
   res.send(beersMock);
 }
 
+function updateOneBeer(req, res) {
+  const { beerId } = req.params;
+  const updatedBeer = beersMock.find(({ id }) => id === +beerId);
+  Object.keys(req.body).forEach((key) => {
+    updatedBeer[key] = req.body[key];
+  });
+  res.send(updatedBeer);
+}
+
 module.exports = {
   getBeers,
   postBeer,
   getOneBeer,
   deleteOneBeer,
+  updateOneBeer,
 };
