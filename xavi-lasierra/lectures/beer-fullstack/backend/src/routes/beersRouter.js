@@ -11,18 +11,7 @@ beersRouter
 beersRouter
   .route('/:beerId')
   .get(beersController.getOneBeer)
-  .post(beersController.postBeer);
-
-/* beersRouter
-  .route('/api/beers/:beerId')
-  .get((req, res) => {
-    res.send('one beer get under construction');
-  })
-  .post((req, res) => {
-    res.send('one beer put under contruction');
-  })
-  .delete((req, res) => {
-    res.send('one beer delete under contruction');
-  }); */
+  .put(beersController.updateBeer)
+  .delete(beersController.deleteOneBeer);
 
 module.exports = beersRouter;
