@@ -15,7 +15,7 @@ function postBeer(req, res) {
 
   beersMock.push(newBeer);
   maxId += 1;
-  res.send(beersMock);
+  res.send(newBeer);
 }
 
 function getOneBeer(req, res) {

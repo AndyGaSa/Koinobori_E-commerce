@@ -18,7 +18,7 @@ describe('Given postBeer function', () => {
       const res = { send: jest.fn() };
       const req = { body: { name: 'Leffe' } };
       controller.postBeer(req, res);
-      expect(res.send.mock.calls[0][0][25].id).toBe(26);
+      expect(res.send.mock.calls[0][0].id).toBe(26);
     });
   });
 });
