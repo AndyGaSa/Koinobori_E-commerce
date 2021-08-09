@@ -11,7 +11,7 @@ export default function CharactersGroupA() {
 
   return (
     <>
-      <div className="group__row">
+      <div className="group__row" data-testid="characters-container">
 
         {
             cleanCharacter.map((
