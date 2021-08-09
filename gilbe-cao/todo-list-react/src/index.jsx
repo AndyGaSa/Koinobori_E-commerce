@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
+import { Auth0Provider } from '@auth0/auth0-react';
 import reportWebVitals from './reportWebVitals';
 import ToDo from './component/ToDo';
 import configureStore from './redux/store';
@@ -8,7 +9,13 @@ import configureStore from './redux/store';
 render(
   <React.StrictMode>
     <Provider store={configureStore()}>
-      <ToDo />
+      <Auth0Provider
+        domain={process.env.REACT_APP_AUTH0_DOMAIN}
+        clientId={process.env.REACT_APP_AUTH0_CLIENTID}
+        redirectUri={window.location.origin}
+      >
+        <ToDo />
+      </Auth0Provider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),

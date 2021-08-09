@@ -1,0 +1,3 @@
+export default {
+  LOAD_SUGGESTED_ARTISTS: 'LOAD_SUGGESTED_ARTISTS'
+};
