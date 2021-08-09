@@ -22,17 +22,17 @@ export default async function getSpotifyToken() {
   }
 }
 
-export function loadAxiosSuggestedArtists() {
+export function loadAxiosSuggestedArtists(RandomInputValue) {
   return async (dispatch) => {
     const token = JSON.parse(localStorage.getItem('token'));
     const { data } = await axios({
       method: 'GET',
-      url: 'https://api.spotify.com/v1/artists?ids=5Hsv8dUHHOdnn72q4XIVz7,4q3ewBCX7sLwd24euuV69X,2YZyLoL8N0Wb9xBt1NhZWg,4QVBYiagIaa6ZGSPMbybpy,28gNT5KBp7IjEOQoevXf9N',
+      url: `https://api.spotify.com/v1/search?q=${RandomInputValue}&type=artist&limit=5&offset=0`,
       headers: { Authorization: `Bearer ${token}` }
     });
     dispatch({
       type: actionTypes.LOAD_SUGGESTED_ARTISTS,
-      suggestedArtists: data.artists
+      suggestedArtists: data.artists.items
     });
   };
 }

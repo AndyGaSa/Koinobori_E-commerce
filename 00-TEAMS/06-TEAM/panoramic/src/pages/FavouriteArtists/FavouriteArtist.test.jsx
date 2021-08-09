@@ -16,7 +16,7 @@ describe('Given a Favourite Artist component', () => {
         render(
           <FavouriteArtist />, { initialState }
         );
-        expect(screen.getByTestId('list-item')).toBeInTheDocument();
+        expect(screen.getByTestId('list-item-manu')).toBeInTheDocument();
       });
     });
   });

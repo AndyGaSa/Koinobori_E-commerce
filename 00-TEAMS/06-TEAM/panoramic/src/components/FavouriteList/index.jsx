@@ -18,14 +18,15 @@ export default function FavouritList() {
       <ul className="artists-list">
         {favArtist.map((artist) => (
           <li
+            key={`list-item-${artist.name}`}
             className="artists-list__item"
-            data-testid="list-item"
+            data-testid={`list-item-${artist.name}`}
           >
             <img src={getImageFromArtist(artist)} className="artists-list__artist-img" alt="photoartist" />
             <p>{artist.name}</p>
             <button
               className="artists-list__delete-fav-button"
-              data-testid="delete-button"
+              data-testid={`${artist.name}-delete-button`}
               type="button"
               onClick={() => dispatch(deleteFavArtists(artist))}
             >

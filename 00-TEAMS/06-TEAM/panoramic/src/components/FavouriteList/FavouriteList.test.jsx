@@ -22,13 +22,15 @@ describe('Given a Favourite List component', () => {
     });
     describe('And favArtist is not void', () => {
       test('Then should render a li with the id "list-item"', () => {
-        expect(screen.getByTestId('list-item')).toBeInTheDocument();
+        expect(screen.getByTestId('list-item-manu')).toBeInTheDocument();
       });
-      describe('And delete button is cliked', () => {
-        test('Then the deleteFavArtists function should be called', () => {
-          const deleteButton = screen.getByTestId('delete-button');
+      describe('And the artist delete button is cliked', () => {
+        beforeEach(() => {
+          const deleteButton = screen.getByTestId('manu-delete-button');
           deleteFavArtists.mockReturnValue({ type: '' });
           fireEvent.click(deleteButton);
+        });
+        test('Then the deleteFavArtists function should be called', () => {
           expect(deleteFavArtists).toHaveBeenCalled();
         });
       });
