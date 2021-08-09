@@ -1,35 +1,20 @@
+// imports
 const express = require('express');
 
+// server vars
 const server = express();
 const port = 5000;
+server.use(express.json());
 
-const beersRouter = express.Router();
-beersRouter
-  .route('/api/beers')
-  .get((req, res) => {
-    res.send('beers get under construction');
-  })
-  .post((req, res) => {
-    res.send('beers post under construction');
-  });
+// routes
+const beersRouter = require('./src/routes/beerRoutes');
 
-beersRouter
-  .route('/api/beers/:beerId')
-  .get((req, res) => {
-    res.send('onebeer get under construction');
-  })
-  .post((req, res) => {
-    res.send('onebeer post under construction');
-  })
-  .delete((req, res) => {
-    res.send('onebeer delete under construction');
-  });
+// Server Main Route
+server.use('/api/beers', beersRouter);
 
-server.use('/', beersRouter);
-
-// console.log(Date.now());
-
+// start Server
 server.listen(
   port,
-  () => { console.log(`Server is running on http://localhost:${port} and ${Date.now()}`); }
+  // eslint-disable-next-line no-console
+  () => { console.log(`Server is running on http://localhost:${port}`); }
 );
