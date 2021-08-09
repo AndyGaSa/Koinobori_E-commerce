@@ -21,7 +21,7 @@ export default function Cameras() {
     dispatch(deleteCamera(name));
   }
 
-  function filterButton(event) {
+  function filterFn(event) {
     const keyword = event.target.value;
 
     if (keyword !== '') {
@@ -41,7 +41,7 @@ export default function Cameras() {
       <h1>Cameras</h1>
       <input
         value={name}
-        onChange={filterButton}
+        onChange={filterFn}
       />
       <button type="button" onClick={create}>Add new camera</button>
       <section>
