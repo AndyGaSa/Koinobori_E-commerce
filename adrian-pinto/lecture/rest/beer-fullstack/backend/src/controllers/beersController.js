@@ -1,5 +1,7 @@
 const beersMock = require('../beers.json');
 
+const nextId = beersMock.length;
+
 const getBeers = (req, res) => res.send(beersMock);
 // todo - add newBirra logic
 const postBeer = (req, res) => {
@@ -13,7 +15,7 @@ const postBeer = (req, res) => {
   res.send(beersMock);
 };
 
-const getOneBeer = (req, res) => res.send(beersMock.find((beer) => beer.id === +req.params.id));
+const getOneBeer = (req, res) => res.json(beersMock.find((beer) => beer.id === +req.params.beerId));
 
 const putOneBeer = (req, res) => {
   console.log(req);
@@ -21,6 +23,7 @@ const putOneBeer = (req, res) => {
 
 const delOneBeer = (req, res) => {
   const index = beersMock.findIndex((beer) => +beer.id === +req.params.beerId);
+
   res.send(index === -1 ? 'No se pudo eliminar el Id' : beersMock.splice(index, 1));
 };
 
