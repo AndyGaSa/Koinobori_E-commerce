@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Details</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="./details.css">
+</head>
+<body>
+    <header>
+        <h1>Tour of Heroes</h1>
+        <nav>
+            <a href="../Dashboard/dashboard.html">Dashboard</a>
+            <a href="../Heroes/heroes.html">Heroes</a>
+        </nav>
+    </header>
+    <div>
+        <h2><span id="hero__title"></span> details!</h2>
+        <div><span>id: </span><span id="hero__id"></span></div>
+        <div>
+            <label>
+                name: 
+            </label>
+            <input type="text" id="hero__name">
+        </div>
+        <button>go back</button>
+        <button id="btn_save">save</button>
+        <hr>
+        <p>Slug: <span id="hero__slug"></span></p>
+        <hr>
+        <p>PowerStats:</p>
+        <div id="hero__powerstats"></div>
+        <hr>
+        <p>Appearance:</p>
+        <div id="hero__appearance"></div>
+        <hr>
+        <p>Biography:</p>
+        <div id="hero__biography"></div>
+        <hr>
+        <p>Work:</p>
+        <div id="hero__work"></div>
+        <hr>
+        <p>Connections:</p>
+        <div id="hero__connections"></div>
+        <hr>
+        <p>Images:</p>
+        <div id="hero__images"></div>
+        <hr>
+    </div>
+
+    <script src="../../heroes.const.js"></script>
+    <script src="./details.class.js"></script>
+    <script src="./transformUrlQueryToObject.js"></script>
+    <script src="./details.js"></script>
+</body>
+</html>

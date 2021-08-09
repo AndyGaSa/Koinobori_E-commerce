@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dashboard.css">
+    <title>Document</title>
+</head>
+<body class="style__body">
+    <header class="header">
+        <section class="header__logo">
+            <a href="./dashboard.html">
+                <img src="https://i.ibb.co/wKXyNMH/1200px-International-Pok-C3-A9mon-logo-svg.png" alt="">
+            </a>
+        </section>
+    </header>
+    <body>
+        <nav class="menu">
+            <section>
+                <label for="cars">Page Contents</label>
+                <select class="menu__values style--Imput" name="header__num-tarjetas" id="cantidad" onchange="obtenerPokemons(value)">
+                    <option value="151">todos</option>
+                    <option value="11">10</option>
+                    <option value="31">30</option>
+                    <option value="51">50</option>
+                </select>  
+            </section>
+
+            <section class="menu__search ">
+                <label for="cars">Filtrar
+                </label>
+                <input type="search" class="style--Imput">  
+            </section>
+            
+        </nav>
+        <div id="cartas__pokemon">
+        </div>
+        
+    </body>
+    <footer>
+
+    </footer>
+  
+
+    <script src="../../services/pokemon.service.js"></script>
+</body>
+</html>

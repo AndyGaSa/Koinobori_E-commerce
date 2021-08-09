@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes</title>
+    <link rel="stylesheet" href="../../../main-styles.css">
+    <link rel="stylesheet" href="./superheroes.css">
+</head>
+<body>
+    <header>
+        <h1>Tour of Heroes</h1>
+        <nav>
+            <a href="../Dashboard/dashboard.html">Dashboard</a>
+            <a href="#">Heroes</a>
+        </nav>
+    </header>
+    <h2>My Heroes</h2>
+
+    <div>
+        <label for="new-hero">Hero name: </label>
+
+        <button id="add-button" class="add-button">
+            Add hero
+        </button>
+        <br>
+        <label for="filter-hero">Search: </label>
+        <input id="filter-hero" />
+        <button id="filter-button" class="add-button">
+            Filter
+        </button>
+        <button class="add-button"  onclick="resetHeroList()">
+            Clear
+        </button>
+        <button class="add-button"  onclick="getHeroes()">
+            Get Heroes
+        </button>
+
+
+    <script src="../../../superhero.const.js"></script>
+
+    <script src="../../../checkout-include-local-storage.js"></script>
+    <script src="./filter-heroes.js"></script>
+    <script src="./superheroes.class.js"></script>
+    <script src="./superheroes.js"></script>
+    <script src="./add-hero-to-list.js"></script>
+    <script src="./reset-hero-list.js"></script>
+    <script src="./get-heroes-ajax.js"></script>
+    
+
+
+</body>
+</html>
