@@ -1,4 +1,4 @@
-const beersMock = require('../mocks/beersMock');
+let beersMock = require('../mocks/beersMock');
 
 function getBeers(req, res) {
   res.send(beersMock);
@@ -21,8 +21,15 @@ function getOneBeer(req, res) {
   res.send(beersMock.find(({ id }) => id === +beerId));
 }
 
+function deleteOneBeer(req, res) {
+  const { beerId } = req.params;
+  beersMock = beersMock.filter(({ id }) => id !== +beerId);
+  res.send(beersMock);
+}
+
 module.exports = {
   getBeers,
   postBeer,
   getOneBeer,
+  deleteOneBeer,
 };
