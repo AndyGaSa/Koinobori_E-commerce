@@ -43,6 +43,7 @@ export default function SuggestedArtist() {
               <Link className="artist-details__link" to={`/details/${artist.name}`}>
                 <button
                   type="button"
+                  data-testid="artist-details-button"
                   onClick={() => dispatch(loadArtistDetails(artist.name))}
                 >
                   <img className="artist-details__artist-img" src={getImageFromArtist(artist)} alt="artist-img" />

@@ -8,7 +8,6 @@ import './ArtistDetails.scss';
 export default function ArtistDetails() {
   const searchedArtist = useSelector((store) => store.artistDetails);
   const dispatch = useDispatch();
-  console.log(searchedArtist);
   useEffect(() => {
     getSpotifyToken();
   }, []);
