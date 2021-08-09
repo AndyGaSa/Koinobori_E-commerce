@@ -19,7 +19,7 @@ export default function ArtistDetails() {
   return (
     <div className="artist-details-container">
       <h1 className="artist-details-container__title">Artist Details</h1>
-      <ul>
+      <ul className="artist-details-container__main-card">
         {searchedArtist.map((artist) => (
           <li
             className="artist-details-container__artist-card"
@@ -56,14 +56,19 @@ export default function ArtistDetails() {
               </li>
             </ul>
             <div className="artist-card__buttons">
-              <a
-                className="artist-card__spotify-link"
-                href={`${artist.external_urls.spotify}`}
-              >
-                View on Spotify
-              </a>
               <button
-                className="artist-item__button-add"
+                type="button"
+                className="artist-card__spotify-link"
+              >
+                <a
+                  href={`${artist.external_urls.spotify}`}
+                >
+                  View on Spotify
+                </a>
+
+              </button>
+              <button
+                className="artist-card__button-add"
                 data-testid="add-button"
                 type="button"
                 onClick={() => dispatch(addFavArtist(artist))}
