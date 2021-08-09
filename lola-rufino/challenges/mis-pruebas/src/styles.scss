@@ -1,0 +1,42 @@
+*{
+    background-color: #746F72;
+    color: #C2EFB3;
+    font-size: 50px;
+    font-family: 'Amatic SC', Georgia, 'Times New Roman', Times, serif;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .header__nav{
+        padding: 10px;
+        font-size: 35px;
+    }
+    .dashboard__description{
+        font-size: 35px;
+    }
+    .cameras__container{
+        display: flex;
+        align-items: center;
+        .cameras__link{
+            display: flex;
+            flex-direction: column;
+            font-size: 35px;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        .cameras__icon{
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+    }
+    .footer__copyright{
+        margin-top: 40px;
+        font-size: 15px;
+    }
+}
