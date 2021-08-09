@@ -1,4 +1,3 @@
-
 module.exports = [
   {
     id: 1,
@@ -17,29 +16,29 @@ module.exports = [
     attenuation_level: 75,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 64,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 75,
-        },
+          duration: 75
+        }
       ],
       fermentation: {
         temp: {
           value: 19,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: null,
+      twist: null
     },
     ingredients: {
       malt: [
@@ -47,80 +46,80 @@ module.exports = [
           name: 'Maris Otter Extra Pale',
           amount: {
             value: 3.3,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 0.2,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Munich',
           amount: {
             value: 0.4,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Fuggles',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'First Gold',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Fuggles',
           amount: {
             value: 37.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'First Gold',
           amount: {
             value: 37.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Cascade',
           amount: {
             value: 37.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'Spicy chicken tikka masala',
       'Grilled chicken quesadilla',
-      'Caramel toffee cake',
+      'Caramel toffee cake'
     ],
     brewers_tips: 'The earthy and floral aromas from the hops can be overpowering. Drop a little Cascade in at the end of the boil to lift the profile with a bit of citrus.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 2,
@@ -139,29 +138,29 @@ module.exports = [
     attenuation_level: 76,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 69,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: null,
-        },
+          duration: null
+        }
       ],
       fermentation: {
         temp: {
           value: 18,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: null,
+      twist: null
     },
     ingredients: {
       malt: [
@@ -169,72 +168,72 @@ module.exports = [
           name: 'Maris Otter Extra Pale',
           amount: {
             value: 3.25,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 0.2,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Munich',
           amount: {
             value: 0.4,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Amarillo',
           amount: {
             value: 13.8,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Simcoe',
           amount: {
             value: 13.8,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 26.3,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Motueka',
           amount: {
             value: 18.8,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'Fresh crab with lemon',
       'Garlic butter dipping sauce',
       'Goats cheese salad',
-      'Creamy lemon bar doused in powdered sugar',
+      'Creamy lemon bar doused in powdered sugar'
     ],
     brewers_tips: 'Be careful not to collect too much wort from the mash. Once the sugars are all washed out there are some very unpleasant grainy tasting compounds that can be extracted into the wort.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 3,
@@ -253,50 +252,50 @@ module.exports = [
     attenuation_level: 83,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 60,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 10,
+          duration: 10
         },
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 30,
+          duration: 30
         },
         {
           temp: {
             value: 72,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 10,
+          duration: 10
         },
         {
           temp: {
             value: 78,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 5,
-        },
+          duration: 5
+        }
       ],
       fermentation: {
         temp: {
           value: 21,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: 'Soured naturally using the kettle souring technique, Yuzu fruit: 50g at middle, Yuzu juice: 200ml at FV',
+      twist: 'Soured naturally using the kettle souring technique, Yuzu fruit: 50g at middle, Yuzu juice: 200ml at FV'
     },
     ingredients: {
       malt: [
@@ -304,51 +303,51 @@ module.exports = [
           name: 'Propino Pale Malt',
           amount: {
             value: 1.63,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Wheat Malt',
           amount: {
             value: 1.63,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Propino Pale Malt for kettle souring',
           amount: {
             value: 0.03,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Acidulated Malt for kettle souring',
           amount: {
             value: 0.03,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Bramling Cross',
           amount: {
             value: 10,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'bitter',
-        },
+          attribute: 'bitter'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'Smoked chicken wings',
       'Miso ramen',
-      'Yuzu cheesecake',
+      'Yuzu cheesecake'
     ],
     brewers_tips: 'Clean everything twice. All you want is the clean sourness of lactobacillus.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 4,
@@ -367,29 +366,29 @@ module.exports = [
     attenuation_level: 80,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: null,
-        },
+          duration: null
+        }
       ],
       fermentation: {
         temp: {
           value: 9,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: null,
+      twist: null
     },
     ingredients: {
       malt: [
@@ -397,96 +396,96 @@ module.exports = [
           name: 'Extra Pale',
           amount: {
             value: 4.58,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 0.25,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Dark Crystal',
           amount: {
             value: 0.06,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Munich',
           amount: {
             value: 0.25,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Centennial',
           amount: {
             value: 5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Centennial',
           amount: {
             value: 10,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 10,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Centennial',
           amount: {
             value: 17.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 17.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 2007 - Pilsen Lager™',
+      yeast: 'Wyeast 2007 - Pilsen Lager™'
     },
     food_pairing: [
       'Spicy crab cakes',
       'Spicy cucumber and carrot Thai salad',
-      'Sweet filled dumplings',
+      'Sweet filled dumplings'
     ],
     brewers_tips: 'Play around with the fermentation temperature to get the best flavour profile from the individual yeasts.',
-    contributed_by: 'Ali Skinner <AliSkinner>',
+    contributed_by: 'Ali Skinner <AliSkinner>'
   },
   {
     id: 5,
@@ -505,29 +504,29 @@ module.exports = [
     attenuation_level: 67,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 66,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 70,
-        },
+          duration: 70
+        }
       ],
       fermentation: {
         temp: {
           value: 10,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: null,
+      twist: null
     },
     ingredients: {
       malt: [
@@ -535,55 +534,55 @@ module.exports = [
           name: 'Lager Malt',
           amount: {
             value: 6.63,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Wheat',
           amount: {
             value: 0.38,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Saaz',
           amount: {
             value: 60,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Saaz',
           amount: {
             value: 60,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Saaz',
           amount: {
             value: 60,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 2007 - Pilsen Lager™',
+      yeast: 'Wyeast 2007 - Pilsen Lager™'
     },
     food_pairing: [
       'Vietnamese squid salad',
       'Chargrilled corn on the cob with paprika butter',
-      'Strawberry and rhubarb pie',
+      'Strawberry and rhubarb pie'
     ],
     brewers_tips: 'Make sure you have a big enough yeast starter to ferment through the OG and lager successfully.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 6,
@@ -602,29 +601,29 @@ module.exports = [
     attenuation_level: 88.9,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 75,
-        },
+          duration: 75
+        }
       ],
       fermentation: {
         temp: {
           value: 22,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: 'Honey: 62.5g at End (WP), Coriander Seeds: 8.5g at 45mins',
+      twist: 'Honey: 62.5g at End (WP), Coriander Seeds: 8.5g at 45mins'
     },
     ingredients: {
       malt: [
@@ -632,89 +631,89 @@ module.exports = [
           name: 'Extra Pale',
           amount: {
             value: 3.63,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Munich',
           amount: {
             value: 0.13,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Wheat',
           amount: {
             value: 0.25,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Amarillo',
           amount: {
             value: 2.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Nelson Sauvin',
           amount: {
             value: 5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Peppercorns',
           amount: {
             value: 2.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Nelson Sauvin',
           amount: {
             value: 20,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 3711 - French Saison™',
+      yeast: 'Wyeast 3711 - French Saison™'
     },
     food_pairing: [
       'Mussels with a garlic and herb sauce',
       'Crab melt sandwich',
-      'Shortbread cookies',
+      'Shortbread cookies'
     ],
     brewers_tips: 'Source some really good heather honey to get the right spicy esters in the beer.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 7,
@@ -733,29 +732,29 @@ module.exports = [
     attenuation_level: 84,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 69,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 105,
-        },
+          duration: 105
+        }
       ],
       fermentation: {
         temp: {
           value: 21,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: 'Aged in whisky barrels with raspberries, tayberries and blackberries',
+      twist: 'Aged in whisky barrels with raspberries, tayberries and blackberries'
     },
     ingredients: {
       malt: [
@@ -763,116 +762,116 @@ module.exports = [
           name: 'Extra Pale',
           amount: {
             value: 9.69,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Chocolate',
           amount: {
             value: 0.19,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Carafa Special Malt Type 3',
           amount: {
             value: 0.44,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Tomahawk',
           amount: {
             value: 31.25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Magnum',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Magnum',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Tomahawk',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Centennial',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Centennial',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Tomahawk',
           amount: {
             value: 37.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
-        },
+          attribute: 'aroma'
+        }
       ],
-      yeast: 'Wyeast 3522 - Belgian Ardennes™',
+      yeast: 'Wyeast 3522 - Belgian Ardennes™'
     },
     food_pairing: [
       'Tandoori lamb with pomegranate',
       'Beef Wellington with a red wine jus',
-      'Raspberry chocolate torte',
+      'Raspberry chocolate torte'
     ],
     brewers_tips: "Don't worry too much about controlling the temperature with the Belgian yeast strain - just make sure it doesn't rise above 30°C!",
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 8,
@@ -891,29 +890,29 @@ module.exports = [
     attenuation_level: 78,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 75,
-        },
+          duration: 75
+        }
       ],
       fermentation: {
         temp: {
           value: 10,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: null,
+      twist: null
     },
     ingredients: {
       malt: [
@@ -921,96 +920,96 @@ module.exports = [
           name: 'Extra Pale',
           amount: {
             value: 3.33,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Munich',
           amount: {
             value: 0.42,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 0.28,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Acidulated Malt',
           amount: {
             value: 0.07,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Magnum',
           amount: {
             value: 7.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Magnum',
           amount: {
             value: 5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Hersbrucker',
           amount: {
             value: 6.25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Saaz',
           amount: {
             value: 6.25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Hersbrucker',
           amount: {
             value: 18.75,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Saaz',
           amount: {
             value: 18.75,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 2007 - Pilsen Lager™',
+      yeast: 'Wyeast 2007 - Pilsen Lager™'
     },
     food_pairing: [
       'Fried crab cakes with avocado salsa',
       'Spicy shredded pork roll with hot dipping sauce',
-      'Key lime pie',
+      'Key lime pie'
     ],
     brewers_tips: "Once the primary fermentation is complete get this beer as cold as you can and let it mature for as long as you've got.",
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 9,
@@ -1029,29 +1028,29 @@ module.exports = [
     attenuation_level: 83,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 105,
-        },
+          duration: 105
+        }
       ],
       fermentation: {
         temp: {
           value: 11,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: 'Scottish Heather Honey: 62.5g at middle, Add honey during the boil. After fermentation, age in a Scottish whisky cask',
+      twist: 'Scottish Heather Honey: 62.5g at middle, Add honey during the boil. After fermentation, age in a Scottish whisky cask'
     },
     ingredients: {
       malt: [
@@ -1059,102 +1058,102 @@ module.exports = [
           name: 'Munich',
           amount: {
             value: 5.63,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Flaked Oats',
           amount: {
             value: 1.88,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Wheat',
           amount: {
             value: 1.88,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 1.25,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Crystal',
           amount: {
             value: 0.63,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Dark Crystal',
           amount: {
             value: 0.63,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Chocolate',
           amount: {
             value: 0.31,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Peated Malt',
           amount: {
             value: 0.13,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Amber',
           amount: {
             value: 0.13,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Brown',
           amount: {
             value: 0.13,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Saaz',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'First Gold',
           amount: {
             value: 31.3,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
-        },
+          attribute: 'bitter'
+        }
       ],
-      yeast: 'Saflager S189',
+      yeast: 'Saflager S189'
     },
     food_pairing: [
       'Kedgeree',
       'Scotch broth with sourdough bread',
-      'Clootie dumpling',
+      'Clootie dumpling'
     ],
     brewers_tips: 'Authentic heather honey adds a beautiful floral top note that is unachievable any other way.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 10,
@@ -1173,29 +1172,29 @@ module.exports = [
     attenuation_level: 80.9,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 75,
-        },
+          duration: 75
+        }
       ],
       fermentation: {
         temp: {
           value: 19,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: null,
+      twist: null
     },
     ingredients: {
       malt: [
@@ -1203,53 +1202,53 @@ module.exports = [
           name: 'Extra Pale',
           amount: {
             value: 6.38,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Crystal 150',
           amount: {
             value: 0.13,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 0.25,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Bramling Cross',
           amount: {
             value: 60,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Bramling Cross',
           amount: {
             value: 50,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'Warm blackberry pie',
       'Vinegar doused fish and chips',
-      'Aromatic korma curry with lemon and garlic naan',
+      'Aromatic korma curry with lemon and garlic naan'
     ],
     brewers_tips: 'Getting good Bramling Cross is key. Most English hops are in leaf form (not pelletised), so getting fresh hops close to harvest (September) will give this beer the right amount of dark berry intensity.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 11,
@@ -1268,29 +1267,29 @@ module.exports = [
     attenuation_level: 74.7,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 67,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 75,
-        },
+          duration: 75
+        }
       ],
       fermentation: {
         temp: {
           value: 19,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: 'See honey and lactose additions',
+      twist: 'See honey and lactose additions'
     },
     ingredients: {
       malt: [
@@ -1298,138 +1297,138 @@ module.exports = [
           name: 'Pale Ale',
           amount: {
             value: 2.18,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 0.3,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Dark Crystal',
           amount: {
             value: 0.3,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Smoked Weyermann',
           amount: {
             value: 1.8,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Flaked Oats',
           amount: {
             value: 0.6,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Brown',
           amount: {
             value: 0.6,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Amber',
           amount: {
             value: 0.1,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Chocolate',
           amount: {
             value: 0.05,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Munich',
           amount: {
             value: 0.6,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Crystal 150',
           amount: {
             value: 0.2,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'First Gold',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Fuggles',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Honey',
           amount: {
             value: 250,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'Flavour',
+          attribute: 'Flavour'
         },
         {
           name: 'Lactose',
           amount: {
             value: 375,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'Flavour',
+          attribute: 'Flavour'
         },
         {
           name: 'First Gold',
           amount: {
             value: 10,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Fuggles',
           amount: {
             value: 10,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'aroma',
-        },
+          attribute: 'aroma'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'Roasted garlic and chilli infused camembert cheese',
       'Korean style chicken wings',
-      'Chocolate milk shake',
+      'Chocolate milk shake'
     ],
     brewers_tips: 'Lots of malt in this one. Mash-in in stages, and spread the pale ale malt throughout the mash to provide stability. If the mash starts to sink, stop, wait a few minutes while mixing, then start again.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 12,
@@ -1448,29 +1447,29 @@ module.exports = [
     attenuation_level: 77,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: null,
-        },
+          duration: null
+        }
       ],
       fermentation: {
         temp: {
           value: 19,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: null,
+      twist: null
     },
     ingredients: {
       malt: [
@@ -1478,114 +1477,114 @@ module.exports = [
           name: 'Pale Ale',
           amount: {
             value: 3.13,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 0.25,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Crystal 150',
           amount: {
             value: 0.18,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Carafa Special Malt Type 1',
           amount: {
             value: 0.25,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Simcoe',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Simcoe',
           amount: {
             value: 19,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Simcoe',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Citra',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Simcoe',
           amount: {
             value: 62.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 62.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Citra',
           amount: {
             value: 62.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
-        },
+          attribute: 'aroma'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'King prawn kebabs',
       'Halibut with a mango and tomato salad',
-      'Mint chocloate ice cream',
+      'Mint chocloate ice cream'
     ],
     brewers_tips: 'Be as accurate as possible when weighing out your malts to ensure you strike the right balance.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 13,
@@ -1604,29 +1603,29 @@ module.exports = [
     attenuation_level: 74.5,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 68,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 50,
-        },
+          duration: 50
+        }
       ],
       fermentation: {
         temp: {
           value: 19,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: null,
+      twist: null
     },
     ingredients: {
       malt: [
@@ -1634,76 +1633,76 @@ module.exports = [
           name: 'Maris Otter Extra Pale',
           amount: {
             value: 3.44,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 0.63,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Crystal 150',
           amount: {
             value: 0.31,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Carafa Special Malt Type 1',
           amount: {
             value: 0.31,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Carafa Special Malt Type 3',
           amount: {
             value: 0.31,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Cascade',
           amount: {
             value: 43.8,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Cascade',
           amount: {
             value: 81.3,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Cascade',
           amount: {
             value: 250,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
-        },
+          attribute: 'aroma'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'Vegetable egg scramble',
       'Margherita pizza',
-      'Fresh berry crisp tart',
+      'Fresh berry crisp tart'
     ],
     brewers_tips: 'If you can’t find really fresh cascade, substitute it for Amarillo or Ahtanum.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 14,
@@ -1722,29 +1721,29 @@ module.exports = [
     attenuation_level: 72.8,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 25,
-        },
+          duration: 25
+        }
       ],
       fermentation: {
         temp: {
           value: 22,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: null,
+      twist: null
     },
     ingredients: {
       malt: [
@@ -1752,77 +1751,77 @@ module.exports = [
           name: 'Maris Otter Extra Pale',
           amount: {
             value: 2.5,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 1.25,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Munich',
           amount: {
             value: 0.61,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Crystal 150',
           amount: {
             value: 0.28,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Dark Crystal 350-400',
           amount: {
             value: 0.2,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Nelson Sauvin',
           amount: {
             value: 15,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 10,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Nelson Sauvin',
           amount: {
             value: 30,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'Pastrami',
       'Swiss and horseradish sandwich',
       'Sharp cheddar cheese and onion/ raisin chutney',
-      'Peanut brittle',
+      'Peanut brittle'
     ],
     brewers_tips: 'Crush the malt as close to brewing time as possible. The fresher the malt, the more intense caramel flavours will be released in the wort.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 15,
@@ -1841,29 +1840,29 @@ module.exports = [
     attenuation_level: 85,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 40,
-        },
+          duration: 40
+        }
       ],
       fermentation: {
         temp: {
           value: 21,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: 'Barrel aged and blended with Anarchist Alchemist',
+      twist: 'Barrel aged and blended with Anarchist Alchemist'
     },
     ingredients: {
       malt: [
@@ -1871,71 +1870,71 @@ module.exports = [
           name: 'Pale Ale - Tipple',
           amount: {
             value: 11.1,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 0.94,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Crystal',
           amount: {
             value: 0.44,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Columbus Extract',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Centennial',
           amount: {
             value: 37.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Cascade',
           amount: {
             value: 37.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Simcoe',
           amount: {
             value: 37.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 3522 - Belgian Ardennes™',
+      yeast: 'Wyeast 3522 - Belgian Ardennes™'
     },
     food_pairing: [
       'Coriander & chilli crab cakes',
       'Goats cheese salad with walnuts, radish and blood orange',
-      'Pistachio cake',
+      'Pistachio cake'
     ],
     brewers_tips: "Brew twice as much Belgian Tripel as you were planning on ageing - it's awesome on its own too!",
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 16,
@@ -1954,29 +1953,29 @@ module.exports = [
     attenuation_level: 70.1,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 68,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 35,
-        },
+          duration: 35
+        }
       ],
       fermentation: {
         temp: {
           value: 18,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: null,
+      twist: null
     },
     ingredients: {
       malt: [
@@ -1984,133 +1983,133 @@ module.exports = [
           name: 'Extra Pale - Spring Blend',
           amount: {
             value: 5,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 1.25,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Crystal 150',
           amount: {
             value: 0.63,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Chocolate',
           amount: {
             value: 0.63,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Roasted Barley',
           amount: {
             value: 0.63,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Wheat',
           amount: {
             value: 0.31,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Flaked Oats',
           amount: {
             value: 0.31,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Smoked Malt',
           amount: {
             value: 0.06,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Columbus',
           amount: {
             value: 31.25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Columbus',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Willamette',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Galena',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Columbus',
           amount: {
             value: 75,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Galena',
           amount: {
             value: 75,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Simcoe',
           amount: {
             value: 100,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
-        },
+          attribute: 'aroma'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'Blue cheese beef burger',
       'Glazed short ribs',
-      'Chocolate cake',
+      'Chocolate cake'
     ],
     brewers_tips: 'Mash in at a higher temperature to leave more unfermentable sugars in the wort. This gives the beer a sweeter porter profile.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 17,
@@ -2129,29 +2128,29 @@ module.exports = [
     attenuation_level: 87,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 90,
-        },
+          duration: 90
+        }
       ],
       fermentation: {
         temp: {
           value: 17,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: 'White cane sugar: 150g at middle',
+      twist: 'White cane sugar: 150g at middle'
     },
     ingredients: {
       malt: [
@@ -2159,148 +2158,148 @@ module.exports = [
           name: 'Pale Ale',
           amount: {
             value: 6.13,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Crystal 150',
           amount: {
             value: 0.25,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 0.38,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Carafa Special Malt Type 1',
           amount: {
             value: 0.13,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Carafa Special Malt Type 3',
           amount: {
             value: 0.13,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Hop Extract',
           amount: {
             value: 20,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Chinook',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Cascade',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Centennial',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Columbus',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Chinook',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Cascade',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Centennial',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Columbus',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
-        },
+          attribute: 'aroma'
+        }
       ],
-      yeast: 'Wyeast 1272 - American Ale II™',
+      yeast: 'Wyeast 1272 - American Ale II™'
     },
     food_pairing: [
       'Coffee dusted venison loin',
       'Memphis-style beef short ribs',
-      'Chocolate orange brownies',
+      'Chocolate orange brownies'
     ],
     brewers_tips: 'Boil down to desired OG (about 17 litres).',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 18,
@@ -2319,29 +2318,29 @@ module.exports = [
     attenuation_level: 79.3,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 75,
-        },
+          duration: 75
+        }
       ],
       fermentation: {
         temp: {
           value: 19,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: null,
+      twist: null
     },
     ingredients: {
       malt: [
@@ -2349,116 +2348,116 @@ module.exports = [
           name: 'Extra Pale',
           amount: {
             value: 5.06,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 0.25,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Dark Crystal',
           amount: {
             value: 0.06,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Cascade',
           amount: {
             value: 2.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Centennial',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Simcoe',
           amount: {
             value: 17.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Simcoe',
           amount: {
             value: 17.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Citra',
           amount: {
             value: 17.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Simcoe',
           amount: {
             value: 75,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Cascade',
           amount: {
             value: 75,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Centennial',
           amount: {
             value: 75,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Citra',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
-        },
+          attribute: 'aroma'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'Spicy chicken skewers',
       'Fish tacos with hot sauce',
-      'Lemon pound cake with a ice sugar glaze',
+      'Lemon pound cake with a ice sugar glaze'
     ],
     brewers_tips: 'Create balance through experimentation with the hop amounts and malt backbone.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 19,
@@ -2477,29 +2476,29 @@ module.exports = [
     attenuation_level: 83,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 66,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 90,
-        },
+          duration: 90
+        }
       ],
       fermentation: {
         temp: {
           value: 19,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: 'Infusion of lingonberries alongside the dry hops, Cranberry Juice: 5.5g at 30mins, Lingonberries: 10g Twist',
+      twist: 'Infusion of lingonberries alongside the dry hops, Cranberry Juice: 5.5g at 30mins, Lingonberries: 10g Twist'
     },
     ingredients: {
       malt: [
@@ -2507,91 +2506,91 @@ module.exports = [
           name: 'Extra Pale',
           amount: {
             value: 6.12,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 0.8,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Tomahawk',
           amount: {
             value: 7,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Motueka',
           amount: {
             value: 5.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Galena',
           amount: {
             value: 2.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Mt.Hood',
           amount: {
             value: 2.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Challenger',
           amount: {
             value: 15,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Galena',
           amount: {
             value: 15,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
+          attribute: 'aroma'
         },
         {
           name: 'Nelson Sauvin',
           amount: {
             value: 20,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'dry hop',
-          attribute: 'aroma',
-        },
+          attribute: 'aroma'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'Fårikål (mutton stew) with a spicy twist',
       'Fenalår (salted cured lamb)',
-      'Krumkake with lingonberry jam',
+      'Krumkake with lingonberry jam'
     ],
     brewers_tips: 'Using crushed cranberries will dry out the beer further, drawing out their natural astringent character.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 20,
@@ -2610,29 +2609,29 @@ module.exports = [
     attenuation_level: 85,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 64,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 60,
-        },
+          duration: 60
+        }
       ],
       fermentation: {
         temp: {
           value: 21,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: null,
+      twist: null
     },
     ingredients: {
       malt: [
@@ -2640,53 +2639,53 @@ module.exports = [
           name: 'Extra Pale',
           amount: {
             value: 5.63,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Wheat',
           amount: {
             value: 0.69,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Crystal',
           amount: {
             value: 0.63,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Columbus',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Hersbrucker',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 3333 - German Wheat™',
+      yeast: 'Wyeast 3333 - German Wheat™'
     },
     food_pairing: [
       'Grilled portabello mushroom burger',
       'Chicken sausages with creamy mash',
-      'Caramel and banana meringue pie',
+      'Caramel and banana meringue pie'
     ],
     brewers_tips: 'If you are struggling to get that authentic head retention increase your mash temperature to about 70°C.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 21,
@@ -2705,29 +2704,29 @@ module.exports = [
     attenuation_level: 81.8,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 75,
-        },
+          duration: 75
+        }
       ],
       fermentation: {
         temp: {
           value: 22,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: null,
+      twist: null
     },
     ingredients: {
       malt: [
@@ -2735,98 +2734,98 @@ module.exports = [
           name: 'Extra Pale',
           amount: {
             value: 2.69,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Wheat',
           amount: {
             value: 1.25,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 0.38,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Waimea',
           amount: {
             value: 2.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 2.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Nelson Sauvin',
           amount: {
             value: 2.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Motueka',
           amount: {
             value: 2.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Simcoe',
           amount: {
             value: 6,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Citra',
           amount: {
             value: 6,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Waimea',
           amount: {
             value: 6,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 3638 - Bavarian Wheat™',
+      yeast: 'Wyeast 3638 - Bavarian Wheat™'
     },
     food_pairing: [
       'Citrus salad with balsamic dressing',
       'Lobster',
-      'Ginger and orange cookies',
+      'Ginger and orange cookies'
     ],
     brewers_tips: 'Ferment at higher or lower temperatures to select the esters that will create clove- like or banana-like flavours.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 22,
@@ -2845,29 +2844,29 @@ module.exports = [
     attenuation_level: 68,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 90,
-        },
+          duration: 90
+        }
       ],
       fermentation: {
         temp: {
           value: 19,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: 'Part-aged in oak barrels, finished with champagne yeast',
+      twist: 'Part-aged in oak barrels, finished with champagne yeast'
     },
     ingredients: {
       malt: [
@@ -2875,60 +2874,60 @@ module.exports = [
           name: 'Extra Pale',
           amount: {
             value: 10,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Caramalt',
           amount: {
             value: 1.88,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Munich',
           amount: {
             value: 1.25,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Amber',
           amount: {
             value: 0.63,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Nelson Sauvin',
           amount: {
             value: 100,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Nelson Sauvin',
           amount: {
             value: 100,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'Stilton on gingerbread biscuits',
       'Pot roasted artichokes',
-      'Lamb chops with caramelised figs',
+      'Lamb chops with caramelised figs'
     ],
     brewers_tips: 'Rack off to a secondary fermenter before pitching in some champagne.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 23,
@@ -2947,29 +2946,29 @@ module.exports = [
     attenuation_level: 86,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 75,
-        },
+          duration: 75
+        }
       ],
       fermentation: {
         temp: {
           value: 19,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: 'Oak chips soaked in Islay whisky 50g',
+      twist: 'Oak chips soaked in Islay whisky 50g'
     },
     ingredients: {
       malt: [
@@ -2977,93 +2976,93 @@ module.exports = [
           name: 'Extra Pale',
           amount: {
             value: 5.8,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Ahtanum',
           amount: {
             value: 17.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Chinook',
           amount: {
             value: 15,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Crystal',
           amount: {
             value: 17.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Chinook',
           amount: {
             value: 17.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'middle',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Ahtanum',
           amount: {
             value: 17.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Chinook',
           amount: {
             value: 27.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Crystal',
           amount: {
             value: 17.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Motueka',
           amount: {
             value: 17.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'Oysters',
       'Hickory smoked ham',
-      'Rocky Road',
+      'Rocky Road'
     ],
     brewers_tips: 'After primary fermentation is complete, rack off into a secondary fermeter and add the oak chips to replicate the authentic Islay barrel experience.',
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 24,
@@ -3082,29 +3081,29 @@ module.exports = [
     attenuation_level: 100,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 65,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 75,
-        },
+          duration: 75
+        }
       ],
       fermentation: {
         temp: {
           value: 20,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: 'Nettles: 25g at end, Juniper: 25g at end',
+      twist: 'Nettles: 25g at end, Juniper: 25g at end'
     },
     ingredients: {
       malt: [
@@ -3112,66 +3111,66 @@ module.exports = [
           name: 'Extra Pale',
           amount: {
             value: 12.5,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'Nelson Sauvin',
           amount: {
             value: 6.25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Centennial',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'Nelson Sauvin',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Amarillo',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Centennial',
           amount: {
             value: 12.5,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 3522 - Belgian Ardennes™',
+      yeast: 'Wyeast 3522 - Belgian Ardennes™'
     },
     food_pairing: [
       'Roasted wood pigeon with black pudding',
       'Pan seared venison fillet with juniper sauce',
-      'Apricot coconut cake',
+      'Apricot coconut cake'
     ],
     brewers_tips: "You'll have to get this one all the way down to -70°C. Taxidermy is not optional.",
-    contributed_by: 'Sam Mason <samjbmason>',
+    contributed_by: 'Sam Mason <samjbmason>'
   },
   {
     id: 25,
@@ -3190,29 +3189,29 @@ module.exports = [
     attenuation_level: 79,
     volume: {
       value: 20,
-      unit: 'litres',
+      unit: 'litres'
     },
     boil_volume: {
       value: 25,
-      unit: 'litres',
+      unit: 'litres'
     },
     method: {
       mash_temp: [
         {
           temp: {
             value: 67,
-            unit: 'celsius',
+            unit: 'celsius'
           },
-          duration: 75,
-        },
+          duration: 75
+        }
       ],
       fermentation: {
         temp: {
           value: 19,
-          unit: 'celsius',
-        },
+          unit: 'celsius'
+        }
       },
-      twist: 'Crushed juniper berries: 12.5g, Lemon peel: 18.8g',
+      twist: 'Crushed juniper berries: 12.5g, Lemon peel: 18.8g'
     },
     ingredients: {
       malt: [
@@ -3220,67 +3219,54 @@ module.exports = [
           name: 'Wheat',
           amount: {
             value: 2.5,
-            unit: 'kilograms',
-          },
+            unit: 'kilograms'
+          }
         },
         {
           name: 'Extra Pale',
           amount: {
             value: 2.06,
-            unit: 'kilograms',
-          },
-        },
+            unit: 'kilograms'
+          }
+        }
       ],
       hops: [
         {
           name: 'First Gold',
           amount: {
             value: 18.75,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'start',
-          attribute: 'bitter',
+          attribute: 'bitter'
         },
         {
           name: 'First Gold',
           amount: {
             value: 25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
+          attribute: 'flavour'
         },
         {
           name: 'Sorachi Ace',
           amount: {
             value: 16.25,
-            unit: 'grams',
+            unit: 'grams'
           },
           add: 'end',
-          attribute: 'flavour',
-        },
+          attribute: 'flavour'
+        }
       ],
-      yeast: 'Wyeast 1056 - American Ale™',
+      yeast: 'Wyeast 1056 - American Ale™'
     },
     food_pairing: [
       'Poached sole fillet with capers',
       'Summer fruit salad',
-      'Banana split',
+      'Banana split'
     ],
     brewers_tips: 'Make sure you have plenty of room in the fermenter. Beers containing wheat can often foam aggressively during fermentation.',
-    contributed_by: 'Sam Mason <samjbmason>',
-  },
+    contributed_by: 'Sam Mason <samjbmason>'
+  }
 ];
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
