@@ -14,18 +14,18 @@ const postBeer = (req, res) => {
   res.send(newBirra);
 };
 
-const getOneBeer = (req, res) => res.json(beersMock.find((beer) => beer.id === +req.params.beerId));
+const getOneBeer = (req, res) => res.send(beersMock.find((beer) => beer.id === +req.params.beerId));
 
 const putOneBeer = (req, res) => {
   beersMock = beersMock.map((beer) => (
     beer.id === +req.params.beerId ? { ...beer, ...req.body } : { ...beer }));
-  res.json(beersMock[req.params.beerId - 1]);
+  res.send(beersMock[req.params.beerId - 1]);
 };
 
 const delOneBeer = (req, res) => {
   const index = beersMock.findIndex((beer) => beer.id === +req.params.beerId);
 
-  res.json(index === -1 ? 'No se pudo eliminar el Id' : beersMock.splice(index, 1));
+  res.send(index === -1 ? 'No se pudo eliminar el Id' : beersMock.splice(index, 1));
 };
 
 module.exports = {

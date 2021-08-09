@@ -1,17 +1,53 @@
-const beersMock = require('../beer.json');
-const controllers = require('./beersController');
+const beersMock = require('../beers.json');
+const controller = require('./beersController');
 
-test('getBeers should call res.send', () => {
+test('GetBeers > Should call res.send', () => {
   const res = { send: jest.fn() };
-  controllers.getBeers(null, res);
+  controller.getBeers(null, res);
   expect(res.send).toHaveBeenCalled();
 });
 
-test('getOneBeer should call res.send', () => {
+test('getOneBeer > Should call res.send', () => {
   const req = { params: { beerId: 11 } };
   const res = { send: jest.fn() };
 
-  controllers.getOneBeer(req, res);
+  controller.getOneBeer(req, res);
 
-  expect(res.send.beersMock.call[0][0].id).toBe(11);
+  expect(res.send).toHaveBeenCalled();
+});
+
+test('postOneBeer > Should call res.send', () => {
+  const req = { params: { beerId: 11 } };
+  const res = { send: jest.fn() };
+
+  controller.postBeer(req, res);
+
+  expect(res.send).toHaveBeenCalled();
+});
+
+test('putOneBeer > Should call res.send', () => {
+  const req = { params: { beerId: 11 } };
+  const res = { send: jest.fn() };
+
+  controller.putOneBeer(req, res);
+
+  expect(res.send).toHaveBeenCalled();
+});
+
+test('delOneBeer > Should call res.send', () => {
+  const req = { params: { beerId: 11 } };
+  const res = { send: jest.fn() };
+
+  controller.delOneBeer(req, res);
+
+  expect(res.send).toHaveBeenCalled();
+});
+
+test('delOneBeer > But id not found Should call res.send', () => {
+  const req = { params: { beerId: 30 } };
+  const res = { send: jest.fn() };
+
+  controller.delOneBeer(req, res);
+
+  expect(res.send).toHaveBeenCalled();
 });
