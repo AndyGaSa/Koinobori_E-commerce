@@ -18,6 +18,17 @@ function postBeer(req, res) {
   beersMock.push(newBeer);
   res.send(newBeer);
 }
+function updateBeer(req, res) {
+  const { beerId } = req.params;
+  const currentBeer = beersMock[(beersMock.findIndex(({ id }) => id === +beerId))];
+  const newProperties = {
+    name: 'updatedBeer',
+    tagline: 'A Real Bitter Experience.',
+  };
+  currentBeer.name = newProperties.name;
+  currentBeer.tagline = newProperties.tagline;
+  res.send(currentBeer);
+}
 function deleteBeer(req, res) {
   const { beerId } = req.params;
   const beerToDelete = beersMock.findIndex(({ id }) => id === +beerId);
@@ -41,4 +52,5 @@ module.exports = {
   deleteBeer,
   getOneBeer,
   filterBeer,
+  updateBeer,
 };
