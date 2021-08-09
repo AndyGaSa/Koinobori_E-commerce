@@ -14,12 +14,13 @@
     "react-scripts": "4.0.3",
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
+    "sass": "^1.37.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test —watchAll —collect-coverage",
+    "test": "react-scripts test --watchAll --collect-coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

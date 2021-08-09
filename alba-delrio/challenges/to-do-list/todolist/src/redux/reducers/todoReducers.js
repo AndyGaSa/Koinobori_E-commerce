@@ -15,6 +15,9 @@ export default function todosReducer(toDoList = [], action) {
     case actionTypes.DELETE_TODO:
       newToDoList = toDoList.filter((toDo) => toDo !== action.toDo);
       break;
+    case actionTypes.LOAD_TODO:
+      newToDoList = action.toDos?.map(({ driverId }) => driverId);
+      break;
     default:
       break;
   }
