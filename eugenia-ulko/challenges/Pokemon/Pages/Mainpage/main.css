@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* **** HEADER ****/
+header {
+}
+
+.header__photo {}
+
+h1 {}
+
+
+/* **** MAIN SECTION ****/
+.mainsection {}
+
+.mainsection__button-side {}
+
+.mainsection__upperpart {}
+
+.mainsection__button-goback {}
+
+.navigation__button {}
+
+#button__APINTAR {}
+
+.mainsection__button-side {}
+
+.counter {}
