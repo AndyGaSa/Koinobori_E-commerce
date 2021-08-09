@@ -1,18 +1,17 @@
 let beersMock = require('../beers.json');
 
-const nextId = beersMock.length;
+let nextId = beersMock.length;
 
 const getBeers = (req, res) => res.send(beersMock);
-// todo - add newBirra logic
+
 const postBeer = (req, res) => {
   const newBirra = {
-    id: Math.random(),
-    name: req.body.name,
+    id: ++nextId,
+    ...req.body,
   };
-
   beersMock.push(newBirra);
 
-  res.send(beersMock);
+  res.send(newBirra);
 };
 
 const getOneBeer = (req, res) => res.json(beersMock.find((beer) => beer.id === +req.params.beerId));
@@ -20,13 +19,13 @@ const getOneBeer = (req, res) => res.json(beersMock.find((beer) => beer.id === +
 const putOneBeer = (req, res) => {
   beersMock = beersMock.map((beer) => (
     beer.id === +req.params.beerId ? { ...beer, ...req.body } : { ...beer }));
-  res.send(beersMock[req.params.beerId - 1]);
+  res.json(beersMock[req.params.beerId - 1]);
 };
 
 const delOneBeer = (req, res) => {
-  const index = beersMock.findIndex((beer) => +beer.id === +req.params.beerId);
+  const index = beersMock.findIndex((beer) => beer.id === +req.params.beerId);
 
-  res.send(index === -1 ? 'No se pudo eliminar el Id' : beersMock.splice(index, 1));
+  res.json(index === -1 ? 'No se pudo eliminar el Id' : beersMock.splice(index, 1));
 };
 
 module.exports = {
