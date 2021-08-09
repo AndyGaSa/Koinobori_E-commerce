@@ -32,15 +32,16 @@ export default function Profile() {
     }
   }
 
+  checkUserData();
+
   return (
     <>
-      {checkUserData()}
       <section className="user">
         <div className="user__top-container">
 
           <div className="user__data">
             <h2>{name}</h2>
-            <p className="user__email">{email}</p>
+            <p data-testid="user__email" className="user__email">{email}</p>
             <div className="profile-list-container">
               <span>Número de cómics</span>
               <ul>
@@ -54,7 +55,7 @@ export default function Profile() {
                   {' '}
                   {favs}
                 </li>
-                <li className="user__comic-wanted">
+                <li data-testid="user__comic-wanted" className="user__comic-wanted">
                   que quieres:
                   {' '}
                   {wanted}

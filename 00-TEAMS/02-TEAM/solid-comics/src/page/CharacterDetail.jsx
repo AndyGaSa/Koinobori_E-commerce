@@ -9,7 +9,7 @@ export default function Detail() {
   const characters = useSelector((store) => store.characters);
 
   const { characterId } = useParams();
-  const [character, setcharacter] = useState();
+  const [character, setcharacter] = useState('');
 
   useEffect(() => {
     const currentCharacter = characterId && characters?.find((item) => +item.id === +characterId);
