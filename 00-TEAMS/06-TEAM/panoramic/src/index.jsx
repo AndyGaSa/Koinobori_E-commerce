@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+
 import { Auth0Provider } from '@auth0/auth0-react';
 import {
   BrowserRouter, Switch, Route, Redirect
+
 } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/store';
@@ -40,6 +42,7 @@ ReactDOM.render(
           </Switch>
           <Footer />
         </Auth0Provider>
+
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,
