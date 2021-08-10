@@ -27,31 +27,46 @@ function getOneBeer({ beer }, res) {
 }
 
 async function deleteOneBeer({ params: { beerId } }, res) {
-  Beer.findByIdAndDelete(beerId);
+  try {
+    await Beer.findByIdAndDelete(beerId);
 
-  res.status(204);
-  return res.send();
+    res.status(204);
+    return res.send();
+  } catch (error) {
+    res.status(500);
+    return res.send(error);
+  }
 }
 
 async function updateBeer(req, res) {
-  const newData = req.body;
-  const { beerId } = req.params;
+  try {
+    const newData = req.body;
+    const { beerId } = req.params;
 
-  const updatedBeer = await Beer.findByIdAndUpdate(beerId, newData, { new: true });
+    const updatedBeer = await Beer.findByIdAndUpdate(beerId, newData, { new: true });
 
-  return res.send(updatedBeer);
+    return res.json(updatedBeer);
+  } catch (error) {
+    res.status(500);
+    return res.send(error);
+  }
 }
 
 async function findOneBeer(req, res, next) {
-  const { beerId } = req.params;
-  const beer = await Beer.findById(beerId);
+  try {
+    const { beerId } = req.params;
+    const beer = await Beer.findById(beerId);
 
-  if (beer) {
-    req.beer = beer;
-    return next();
+    if (beer) {
+      req.beer = beer;
+      return next();
+    }
+    res.status(404);
+    return res.send(new Error(`There is no beer with id: ${beerId}`));
+  } catch (error) {
+    res.status(500);
+    return res.send(error);
   }
-  res.status(404);
-  return res.send(new Error(`There is no beer with id: ${beerId}`));
 }
 
 module.exports = {
