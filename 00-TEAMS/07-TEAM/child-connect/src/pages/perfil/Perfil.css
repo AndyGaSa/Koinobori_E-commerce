@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+.profile-upper-block {
+    display: flex;
+    flex-direction: row;
+}
+.profile-photo-block {
+        display: flex;
+    width: 19em;
+    height: 19em;
+
+}
+
+.profilepic {
+    width: 14em;
+    height: 14em;
+    /* left: 138px; */
+    /* top: 217px; */
+    border: 1px solid rgba(56, 183, 154, 0.7);
+    background: rgba(72, 229, 194, 0.22);
+    box-shadow: -5px -5px 10px rgb(255 255 255 / 50%), 10px 10px 40px rgb(158 158 158 / 50%);
+    border-radius: 142.5px;
+    margin-left: 50px;
+    background: rgba(187, 190, 190, 0.22);
+    box-shadow: -5px -5px 10px rgb(255 255 255 / 50%), 10px 10px 40px rgb(158 158 158 / 50%);
+    border-radius: 142.5px;
+    position: relative;
+    z-index: 1;
+}
+
+.rectangle {
+    position: relative;
+    top: 2vh;
+    left: -19em;
+}
+.photo-deco-circle {
+    /* Profile-photo-shadow */
+width: 274px;
+height: 274px;
+left: 81px;
+top: 251px;
+position: relative;
+}
+/* Rectangle 1 */
+
+.profile-data-block {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding-left: 25px;
+}
+
+.profile-username {
+    /* Name */
+width: 456.03px;
+height: 45px;
+left: 455px;
+top: 235px;
+font-family: Rubik;
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 57px;
+/* or 160% */
+display: flex;
+align-items: center;
+color: #38B79A;
+}
+
+.user-location {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    
+}
+
+.location_icon {
+    width: 22px;
+    height: 22px;
+}
+
+.user-location p {
+    /* Barcelona, Sants */
+width: 368.41px;
+height: 35px;
+left: 491.75px;
+top: 289px;
+font-family: Alegreya Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 57px;
+/* or 287% */
+display: flex;
+align-items: center;
+color: #9E9E9E;
+padding-left: 12px;
+}
+
+.profile-data-details {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+}
+
+.profile-data-details__headline {
+ /* Tengo: */
+width: 267px;
+height: 32px;
+left: 464px;
+top: 333px;
+font-family: Alegreya Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 57px;
+display: flex;
+align-items: center;
+color: #6E6D70;
+}
+
+.profile-data__text {
+    /* de 5 años */
+width: 368.41px;
+height: 35px;
+left: 515px;
+top: 394px;
+font-family: Alegreya Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 57px;
+/* or 287% */
+display: flex;
+align-items: center;
+color: #9E9E9E;
+}
+.children-info {
+    width: 50%;
+    flex-direction: column;
+}
+
+.children-info p {
+    padding-left: 8px;;
+}
+
+.children-info__img {
+ width: 15px;
+ height: 25px;
+ opacity: 0.7;
+}
+
+.children-info__age {
+    display: flex;
+    flex-direction: row;
+    padding: -5px;
+    align-items: center;
+}
+.hobbies-info {
+    width: 50%;
+}
+
+.hobbies-info__img {
+    width: 50px;
+
+}
+
+.profile-rating-block {
+    display: flex;
+    width: 25%;
+}
+.profile-lower-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 100px;
+font-family: Alegreya Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 35px;
+/* or 146% */
+text-align: justify;
+
+color: #6E6D70;
+
+
+}
