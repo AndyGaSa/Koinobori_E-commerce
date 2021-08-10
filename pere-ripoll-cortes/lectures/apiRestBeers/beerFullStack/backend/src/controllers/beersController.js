@@ -6,14 +6,20 @@ const getBeers = (req, res) => {
 
 const postBeer = (req, res) => {
   const { name } = req.body;
+
+  if (beersMock.some((beer) => beer.name.toLowerCase() === name.toLowerCase())) {
+    res.status(403);
+    return res.send(new Error('There is a beer with the same name'));
+  }
+
   const newBeer = {
     id: beersMock.length + 1,
     name,
   };
 
   beersMock.push(newBeer);
-
-  res.send(newBeer);
+  res.status(201);
+  return res.send(newBeer);
 };
 
 const deleteBeer = (req, res) => {
@@ -37,7 +43,13 @@ const putBeer = (req, res) => {
 
 const getOneBeer = (req, res) => {
   const { beerId } = req.params;
-  res.send(beersMock.find(({ id }) => id === +beerId));
+  const beer = (beersMock.find(({ id }) => id === +beerId));
+
+  if (beer) {
+    return res.send(beer);
+  }
+  res.status(404);
+  return res.send(new Error('There is no beer'));
 };
 
 const filterBeer = (req, res) => {
