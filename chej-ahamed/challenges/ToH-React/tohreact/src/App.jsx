@@ -1,4 +1,7 @@
+
+
 /* eslint-disable no-undef */
+
 import React from 'react';
 import {
   BrowserRouter, Route, Redirect, Switch
@@ -12,6 +15,8 @@ import './App.css';
 import './Styles.css';
 import Header from './components/Header/Header';
 import NotFound from './pages/NotFound/Notfound';
+
+
 
 export default function App() {
   return (
