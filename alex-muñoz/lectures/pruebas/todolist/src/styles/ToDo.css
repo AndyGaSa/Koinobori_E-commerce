@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin:0 auto;
+    padding: 0 auto;
+}
+h1{
+    display:flex;
+    justify-content: center;
+    background-color: lightskyblue;
+    padding: 30px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px ;
+
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: 50px auto;
+    height: 25px;
+}
+.todo-list{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.todo-list>li{
+    margin: 10px 10em;
+}
