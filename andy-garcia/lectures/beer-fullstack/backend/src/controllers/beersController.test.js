@@ -1,5 +1,4 @@
 const controller = require('./beersController');
-const beersMock = require('../mocks/beersMock');
 
 test('GetBeers > Should call res.send', () => {
   const res = { send: jest.fn() };
