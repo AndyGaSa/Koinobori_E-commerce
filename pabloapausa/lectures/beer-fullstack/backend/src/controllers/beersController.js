@@ -9,6 +9,7 @@ function getBeers(req, res) {
 
 // Añade una cerveza, (GET).
 function postBeer(req, res) {
+  // Req.body: obtiene el JSON.
   const { name } = req.body;
   const beer = {
     id: Math.random(),
@@ -21,6 +22,7 @@ function postBeer(req, res) {
 
 // Lee una cerveza, (READ).
 function getBeer(req, res) {
+  // Req.params: obtiene la URL.
   const { beerId } = req.params;
   res.send(beersMock.find(({ id }) => id === +beerId));
 }
@@ -30,9 +32,3 @@ module.exports = {
   getBeer,
   postBeer,
 };
-
-/* Dudas
-  1. ¿Cuándo usar 'req' o 'res'?
-  2. ¿Qué es 'req.params'?
-  3. ¿Qué es 'req.body'?
-*/
