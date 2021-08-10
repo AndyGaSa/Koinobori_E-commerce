@@ -1,34 +1,38 @@
-// Segundo, el controller.
-
 const beersMock = require('../mocks/beersMock');
+const Beer = require('../models/beerModel');
 
-// Lee cada cerveza, (READ).
 function getBeers(req, res) {
   res.send(beersMock);
 }
 
-// Añade una cerveza, (GET).
+/*
 function postBeer(req, res) {
-  // Req.body: obtiene el JSON.
   const { name } = req.body;
-  const beer = {
+  const newBeer = {
     id: Math.random(),
     name,
   };
 
-  beersMock.push(beer);
-  res.send(beer);
+  beersMock.push(newBeer);
+
+  res.send(newBeer);
+}
+*/
+
+const getBeer = ({ beer }, res) => res.send(beer);
+
+async function postBeer(req, res) {
+  const toUpdate = req.body;
+  const { beerId } = req.params;
+
+  const updatedBeer = await Beer
 }
 
-// Lee una cerveza, (READ).
-function getBeer(req, res) {
-  // Req.params: obtiene la URL.
-  const { beerId } = req.params;
-  res.send(beersMock.find(({ id }) => id === +beerId));
-}
+
+
 
 module.exports = {
   getBeers,
-  getBeer,
   postBeer,
+  getBeer,
 };

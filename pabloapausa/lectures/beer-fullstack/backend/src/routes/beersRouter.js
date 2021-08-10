@@ -1,9 +1,8 @@
-// Tercero, el router.
-
 const express = require('express');
 const beersController = require('../controllers/beersController');
 
 const beersRouter = express.Router();
+
 beersRouter
   .route('/')
   .get(beersController.getBeers)
