@@ -1,7 +1,7 @@
 const controller = require('./beersControllers');
 
 describe('Given a getBeer controller', () => {
-  describe('And beerName !== undefined', () => {
+  describe('And beerName is defined', () => {
     test('then getBeers Should call res.send', () => {
       const res = { send: jest.fn() };
       const req = { query: { beerName: 'judas' } };
@@ -10,7 +10,7 @@ describe('Given a getBeer controller', () => {
       expect(res.send).toHaveBeenCalled();
     });
   });
-  describe('And beerName !== undefined', () => {
+  describe('And beerName is undefined', () => {
     test('then getBeers Should call res.send', () => {
       const res = { send: jest.fn() };
       const req = { query: { } };
@@ -49,7 +49,7 @@ describe('Given a getOneBeer controller', () => {
 });
 
 describe('Given a updateOneBeer', () => {
-  test('then updateOneBeer should return a modified beer', () => {
+  test('then send an item named buzzy', () => {
     const req = { params: { beerId: 1 }, body: { name: 'Buzzy' } };
     const res = { send: jest.fn() };
     controller.updateOneBeer(req, res);
@@ -59,7 +59,7 @@ describe('Given a updateOneBeer', () => {
 });
 
 describe('Given a deleteOneBeer', () => {
-  test('then the delete item has not to be in the array', () => {
+  test('then send the array without the deleted item', () => {
     const res = { send: jest.fn() };
     const req = { params: { beerId: 1 } };
     controller.deleteOneBeer(req, res);
