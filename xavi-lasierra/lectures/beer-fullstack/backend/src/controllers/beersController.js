@@ -1,8 +1,13 @@
 const Beer = require('../models/beerModel');
 
 async function getBeers({ query }, res) {
-  const foundBeers = await Beer.find(query);
-  res.send(foundBeers);
+  try {
+    const foundBeers = await Beer.find(query);
+    res.json(foundBeers);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 async function postBeer(req, res) {
