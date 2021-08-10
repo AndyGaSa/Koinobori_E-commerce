@@ -1,5 +1,6 @@
 const express = require('express');
 require('dotenv').config();
+require('./src/config/mongooseConfig');
 
 const debug = require('debug')('beersApi');
 const debugDev = require('debug')('dev');

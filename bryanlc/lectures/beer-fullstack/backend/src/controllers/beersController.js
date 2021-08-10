@@ -1,35 +1,61 @@
-const beersMock = require('../mocks/beersMock');
+const Beer = require('../models/beerModel');
 
-function getBeers(req, res) {
-  res.send(beersMock);
+async function getBeers({ query }, res) {
+  const foundBeers = await Beer.find(query);
+
+  return res.send(foundBeers);
 }
 
-function postBeer(req, res) {
-  debugger;
-  const { name } = req.body;
-  const newBeer = {
-    id: Math.random(),
-    name
-  };
+async function postBeer(req, res) {
+  const newBeer = await Beer.create(req.body);
 
-  beersMock.push(newBeer);
-
-  res.send(newBeer);
+  res.status(201);
+  return res.send(newBeer);
 }
 
-function getOneBeer(req, res) {
+async function findOneBeer(req, res, next) {
   const { beerId } = req.params;
-  res.send(beersMock.find(({ id }) => id === +beerId));
+  const beer = await Beer.findById(beerId);
+
+  if (beer) {
+    req.beer = beer;
+    next();
+  } else {
+    res.status(404);
+    res.send(new Error(`There is no beer with id ${beerId}`));
+  }
 }
 
-function deleteBeer(req, res) {
+function getOneBeer({ beer }, res) {
+  return res.send(beer);
+}
+
+async function putOneBear(req, res) {
+  const dataToUpdate = req.body;
+  const { beerId } = req.params;
+
+  const updateBeeer = await Beer.findByIdAndUpdate(
+    beerId,
+    dataToUpdate,
+    { new: true }
+  );
+
+  return res.send(updateBeeer);
+}
+
+async function deleteBeer(req, res) {
   const { beerid } = req.params;
-  res.send(beersMock.find(({ id }) => id === +beerid));
+  Beer.findByIdAndDelete(beerid);
+
+  res.status(204);
+  res.send();
 }
 
 module.exports = {
   getBeers,
   postBeer,
   getOneBeer,
-  deleteBeer
+  deleteBeer,
+  putOneBear,
+  findOneBeer
 };
