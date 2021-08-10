@@ -1,11 +1,26 @@
-const debug = require('debug')('beers:controllers');
-const beersMock = require('../beers.json');
+const debug = require('debug')('beers:beerC');
 const Beer = require('../models/beerModels');
 
 const getBeers = async ({ query }, res) => {
   const foundBeers = await Beer.find(query);
-
   res.send(foundBeers);
+};
+
+const getRandom = async (req, res) => {
+  const randomBeer = await Beer.aggregate().sample(1);
+  res.send(randomBeer);
+};
+
+const getRandomSenAlcohol = async (req, res) => {
+  const randomBeer = await Beer.aggregate([
+    { $match: { abv: { $lte: 5 } } },
+  ]).sample(1);
+  res.send(randomBeer);
+};
+
+const getByName = async (req, res) => {
+  debug('get By Name');
+  res.send();
 };
 
 const postBeer = async (req, res) => {
@@ -14,43 +29,14 @@ const postBeer = async (req, res) => {
   return res.send(newBirra);
 };
 
-const getOneBeer = (req, res) => res.send(beersMock.find((beer) => beer.id === +req.params.beerId));
+// todo put beer
 
-const putOneBeer = async (req, res) => {
-  const dataToUpdate = req.body;
-  const { beerId } = req.params;
-
-  const updateBeer = await Beer.findByIdAndUpdate(
-    beerId,
-    dataToUpdate,
-    { new: true },
-  );
-
-  res.send(updateBeer);
-};
-
-const delOneBeer = async (req, res) => {
-  Beer.findByIdAndDelete(req.params.beerId);
-
-  res.status(204);
-  res.send();
-};
-
-const findABeer = async (req, res, next) => {
-  const { beerId } = req.params;
-  const foundBeer = await Beer.findById(beerId);
-  if (foundBeer) {
-    req.beer = foundBeer;
-    next();
-  }
-  return res.send('Not found');
-};
+// todo delete beer
 
 module.exports = {
-  findABeer,
   getBeers,
+  getByName,
+  getRandom,
+  getRandomSenAlcohol,
   postBeer,
-  getOneBeer,
-  putOneBeer,
-  delOneBeer,
 };

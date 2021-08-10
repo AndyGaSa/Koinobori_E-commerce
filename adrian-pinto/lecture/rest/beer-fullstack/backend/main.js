@@ -14,6 +14,6 @@ server.use(express.json());
 
 const beerRouter = require('./src/routes/beersRouter');
 
-server.use('/api/beers', beerRouter);
+server.use('/api/', beerRouter);
 
 server.listen(port, () => debug(`Server runing on ${chalk.green(`127:${port}`)}`));

@@ -4,17 +4,20 @@ const beersController = require('../controllers/beersController');
 const beersRouter = express.Router();
 
 beersRouter
-  .route('/')
-  .get(beersController.getBeers)
-  .post(beersController.postBeer);
+  .route('/random')
+  .get(beersController.getRandom);
 
 beersRouter
-  .route('/:beerId')
-  .all(beersController.findABeer)
-  .get(beersController.getOneBeer)
-  .put(beersController.putOneBeer)
-  .delete(beersController.delOneBeer);
+  .route('/randomsenalcohol')
+  .get(beersController.getRandomSenAlcohol);
 
-// todo query param route
+beersRouter
+  .route('/beers/:beer_name')
+  .get(beersController.getByName);
+
+beersRouter
+  .route('/beers')
+  .get(beersController.getBeers)
+  .post(beersController.postBeer);
 
 module.exports = beersRouter;
