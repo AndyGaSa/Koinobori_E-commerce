@@ -8,7 +8,7 @@ const morgan = require('morgan');
 require('./src/config/mongooseConfig');
 
 const server = express();
-const port = process.env.PORT || 4001;
+const port = 4001;
 
 // middlewear
 server.use(morgan('dev'));
