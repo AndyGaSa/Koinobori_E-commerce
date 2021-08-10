@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "debug":"nodemon --inspect-brk index.js",
+    "debug": "nodemon --inspect-brk index.js",
     "test": "jest --watchAll --collect-coverage"
   },
   "keywords": [],
@@ -19,6 +19,7 @@
     "env": "0.0.2",
     "express": "^4.17.1",
     "jest": "^27.0.6",
+    "mongoose": "^5.13.6",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.12"
   },

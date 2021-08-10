@@ -1,53 +1,80 @@
-const beersMock = require('../mocks/beersMock');
+const Beer = require('../models/beerModel');
 
-function postBeer(req, res) {
-  const beerMockOredered = beersMock.map(({ id }) => id).sort((a, b) => a - b);
-  const lastId = beerMockOredered[beerMockOredered.length - 1];
-  const maxId = lastId + 1;
-  const { name } = req.body;
-  const newBeer = {
-    id: maxId,
-    name
-  };
-
-  beersMock.push(newBeer);
-  res.send(newBeer);
+async function getBeers({ query }, res) {
+  try {
+    const foundBeers = await Beer.find(query);
+    return res.send(foundBeers);
+  } catch (error) {
+    res.status(404);
+    return res.send(new Error('There are no beers'));
+  }
 }
 
-function filterBeer(req, res) {
-  const { beerName } = req.query;
+async function postBeer(req, res) {
+  try {
+    const newBeer = await Beer.create(req.body);
 
-  const beerFound = beersMock.filter(({ name }) => name === beerName);
-  res.send(beerFound);
+    return res.send(newBeer);
+  } catch (error) {
+    res.status(404);
+    return res.send(new Error('The beer has not been created'));
+  }
 }
-
-function getBeers(req, res) {
-  const { beerName } = req.query;
-  return beerName === undefined ? res.send(beersMock) : filterBeer(req, res);
-}
-
-function getOneBeer(req, res) {
+async function findOneBeer(req, res, next) {
   const { beerId } = req.params;
-  res.send(beersMock.find(({ id }) => id === +beerId));
+  const beer = await Beer.findById({ id: +beerId });
+
+  try {
+    req.beer = beer;
+    next();
+  } catch (error) {
+    res.status(404);
+    res.send(new Error(`There is no beer with id ${beerId}`));
+  }
 }
 
-function updateOneBeer(req, res) {
-  const { beerId } = req.params;
-  const { name } = req.body;
-  const updatedBeer = beersMock.map((item) => (item.id === +beerId
-    ? { ...item, name } : { ...item }));
-  res.send(updatedBeer);
+function getOneBeer({ beer }, res) {
+  return res.send(beer);
 }
-function deleteOneBeer(req, res) {
+
+async function updateOneBeer(req, res) {
+  const dataToUpdate = req.body;
   const { beerId } = req.params;
-  const filteredMock = beersMock.filter((item) => (item.id !== +beerId));
-  res.send(filteredMock);
+  try {
+    const updatedBeer = await Beer.findByIdAndUpdate(
+      beerId,
+      dataToUpdate,
+      { new: true }
+    );
+    return res.json(updatedBeer);
+  } catch (error) {
+    return res.send(error);
+  }
 }
+async function deleteOneBeer({ beer }, res) {
+  const { _id } = beer;
+
+  await Beer.findByIdAndDelete({ _id });
+  return res.send(`The beer ${beer.name} has been deleted`);
+}
+
+async function findRandomBeer(req, res) {
+  const foundBeer = await Beer.aggregate().sample(1);
+  return res.send(foundBeer);
+}
+
+async function findRandomNonAlcoholicBeer(req, res) {
+  const foundBeer = await Beer.aggregate([{ $match: { abv: { $gte: 8 } } }]);
+  return res.send(foundBeer);
+}
+
 module.exports = {
   getBeers,
   postBeer,
+  findOneBeer,
   getOneBeer,
-  filterBeer,
   updateOneBeer,
-  deleteOneBeer
+  deleteOneBeer,
+  findRandomBeer,
+  findRandomNonAlcoholicBeer
 };

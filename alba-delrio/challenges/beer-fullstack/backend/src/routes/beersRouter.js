@@ -4,14 +4,20 @@ const beersController = require('../controllers/beersControllers');
 const beersRouter = express.Router();
 
 beersRouter
-  .route('/')
+  .route('/beers/')
   .get(beersController.getBeers)
   .post(beersController.postBeer);
 
 beersRouter
-  .route('/:beerId')
+  .route('/beers/:beerId')
+  .all(beersController.findOneBeer)
   .get(beersController.getOneBeer)
   .put(beersController.updateOneBeer)
   .delete(beersController.deleteOneBeer);
-
+beersRouter
+  .route('/random')
+  .get(beersController.findRandomBeer);
+beersRouter
+  .route('/random/nonAlcoholic')
+  .get(beersController.findRandomNonAlcoholicBeer);
 module.exports = beersRouter;
