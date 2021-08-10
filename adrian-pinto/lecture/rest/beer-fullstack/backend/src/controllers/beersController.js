@@ -1,44 +1,46 @@
 const debug = require('debug')('beers:controllers');
-let beersMock = require('../beers.json');
+const beersMock = require('../beers.json');
+const Beer = require('../models/beerModels');
 
-let nextId = beersMock.length;
+const getBeers = async ({ query }, res) => {
+  const foundBeers = await Beer.find(query);
 
-const getBeers = (req, res) => res.send(beersMock);
+  res.send(foundBeers);
+};
 
-const postBeer = (req, res) => {
-  if (beersMock.some((beer) => beer.name.toLowerCase() === req.body.name.toLowerCase())) {
-    res.status(403);
-    return res.send('These beer already exist');
-  }
-
-  const newBirra = {
-    id: ++nextId,
-    ...req.body,
-  };
-  beersMock.push(newBirra);
+const postBeer = async (req, res) => {
+  const newBirra = await Beer.create(req.body);
 
   return res.send(newBirra);
 };
 
 const getOneBeer = (req, res) => res.send(beersMock.find((beer) => beer.id === +req.params.beerId));
 
-const putOneBeer = (req, res) => {
-  beersMock = beersMock.map((beer) => (
-    beer.id === +req.params.beerId ? { ...beer, ...req.body } : { ...beer }));
-  res.send(beersMock[req.params.beerId - 1]);
-};
-
-const delOneBeer = (req, res) => {
-  const index = beersMock.findIndex((beer) => beer.id === +req.params.beerId);
-
-  res.send(index === -1 ? 'No se pudo eliminar el Id' : beersMock.splice(index, 1));
-};
-
-const findABeer = (req, res, next) => {
+const putOneBeer = async (req, res) => {
+  const dataToUpdate = req.body;
   const { beerId } = req.params;
-  const beer = beersMock.find(({ id }) => id === +beerId);
-  if (beer) {
-    req.beer = beer;
+
+  const updateBeer = await Beer.findByIdAndUpdate(
+    beerId,
+    dataToUpdate,
+    { new: true },
+  );
+
+  res.send(updateBeer);
+};
+
+const delOneBeer = async (req, res) => {
+  Beer.findByIdAndDelete(req.params.beerId);
+
+  res.status(204);
+  res.send();
+};
+
+const findABeer = async (req, res, next) => {
+  const { beerId } = req.params;
+  const foundBeer = await Beer.findById(beerId);
+  if (foundBeer) {
+    req.beer = foundBeer;
     next();
   }
   return res.send('Not found');
