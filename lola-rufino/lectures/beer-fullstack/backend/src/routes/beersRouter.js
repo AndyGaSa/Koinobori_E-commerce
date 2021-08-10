@@ -15,7 +15,7 @@ beersRouter
   .put(beersController.updateOneBeer);
 
 beersRouter
-  .route('?beerName=:beerName')
+  .route('/:beerName')
   .get(beersController.filterOneBeer);
 
 module.exports = beersRouter;
