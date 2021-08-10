@@ -1,9 +1,15 @@
 // imports
+require('dotenv').config();
 const express = require('express');
+const debug = require('debug')('beersApi');
+const chalk = require('chalk');
+const morgan = require('morgan');
 
 // server vars
 const server = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
+
+server.use(morgan('tiny'));
 server.use(express.json());
 
 // routes
@@ -16,5 +22,5 @@ server.use('/api/beers', beersRouter);
 server.listen(
   port,
   // eslint-disable-next-line no-console
-  () => { console.log(`Server is running on http://localhost:${port}`); }
+  () => { debug(`Server is running on ${chalk.green(`http://localhost:${process.env.PORT}`)}`); }
 );
