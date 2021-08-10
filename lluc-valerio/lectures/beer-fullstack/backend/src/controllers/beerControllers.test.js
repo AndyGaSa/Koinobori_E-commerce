@@ -20,11 +20,46 @@ describe('Given a getBeers function', () => {
   });
 });
 
-test('getOneBeer > Should call res.send', () => {
-  const req = { params: { beerId: 11 } };
-  const res = { send: jest.fn() };
+describe('Given a getOneBeer function', () => {
+  describe('When is invoked with a beerId=11', () => {
+    test('Then getOneBeer should call res.send', () => {
+      const req = { params: { beerId: 11 } };
+      const res = { send: jest.fn() };
+      controller.getOneBeer(req, res);
+      expect(res.send).toHaveBeenCalled();
+    });
+  });
+});
 
-  controller.getOneBeer(req, res);
+describe('Given a setBeer function', () => {
+  describe('When is invoked with a name', () => {
+    test('setBeer should call res.send', () => {
+      const req = { body: { name: 'desperado' } };
+      const res = { send: jest.fn() };
+      controller.setBeer(req, res);
+      expect(res.send).toHaveBeenCalled();
+    });
+  });
+});
 
-  expect(res.send).toHaveBeenCalled();
+describe('Given a updateBeer function', () => {
+  describe('When is invoked with a name an a beerId', () => {
+    test('setBeer should call res.send', () => {
+      const req = { params: { beerId: '11' }, body: { name: 'desperado' } };
+      const res = { send: jest.fn() };
+      controller.updateBeer(req, res);
+      expect(res.send).toHaveBeenCalled();
+    });
+  });
+});
+
+describe('Given a deleteBeer function', () => {
+  describe('When is invoked with a beerId', () => {
+    test('deleteBeer should call res.send', () => {
+      const req = { params: { beerId: '11' } };
+      const res = { send: jest.fn() };
+      controller.deleteBeer(req, res);
+      expect(res.send).toHaveBeenCalled();
+    });
+  });
 });
