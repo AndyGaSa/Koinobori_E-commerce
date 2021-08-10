@@ -20,7 +20,7 @@ beersRouter
   .get(beersController.findRandomBeer);
 
 beersRouter
-  .route('/random/nonAlcoholic')
+  .route('/nonAlcoholic')
   .get(beersController.findRandomNonAlcoholBeer);
 
 module.exports = beersRouter;

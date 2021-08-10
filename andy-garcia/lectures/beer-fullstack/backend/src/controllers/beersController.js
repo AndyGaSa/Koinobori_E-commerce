@@ -44,21 +44,25 @@ function getOneBeer({ beer }, res) {
 }
 async function findRandomNonAlcoholBeer(req, res) {
   try {
-    const nonAlcholic = await BeersCollection.find({ abv: { $lte: 10 } }).exec();
-    const count = await nonAlcholic.count();
-    const rand = Math.floor(Math.random() * count);
-    const randomDoc = await nonAlcholic.findOne(rand);
-    return res.send(randomDoc);
+    const randomBeer = await BeersCollection.aggregate([
+      { $match: { abv: { $lte: 5 } } },
+    ]).sample(1);
+    return res.send(randomBeer);
   } catch (error) {
-    res.status(404);
+    res.status(317);
     return res.send(new Error('Errrrroooooor'));
   }
 }
 async function findRandomBeer(req, res) {
-  const count = await BeersCollection.count();
-  const rand = Math.floor(Math.random() * count);
-  const randomDoc = await BeersCollection.findOne().skip(rand);
-  return res.send(randomDoc);
+  try {
+    const count = await BeersCollection.count();
+    const rand = Math.floor(Math.random() * count);
+    const randomDoc = await BeersCollection.findOne().skip(rand);
+    return res.send(randomDoc);
+  } catch (error) {
+    res.status(317);
+    return res.send(new Error('Errrrroooooor'));
+  }
 }
 module.exports = {
   getBeers,
