@@ -106,3 +106,37 @@ describe('Given updateBeer function', () => {
     });
   });
 });
+
+describe('Given a findOneBeer function', () => {
+  describe('When it is called', () => {
+    describe('And the beer exists', () => {
+      const req = {
+        params: { beerId: '6' }
+      };
+      const next = jest.fn();
+      controller.findOneBeer(req, null, next);
+
+      test('Then should call next function', () => {
+        expect(next).toHaveBeenCalled();
+      });
+    });
+    describe('And the beer does not exist', () => {
+      const req = {
+        params: { beerId: '99' }
+      };
+      const res = {
+        send: jest.fn(),
+        status: jest.fn()
+      };
+      controller.findOneBeer(req, res, null);
+
+      test('Then should call res.status function with an argument 404', () => {
+        expect(res.status).toHaveBeenCalledWith(404);
+      });
+
+      test('Then should call res.send function with a new error with a message There is no beer with id: 99 as an argument', () => {
+        expect(res.send.mock.calls[0][0].message).toBe('There is no beer with id: 99');
+      });
+    });
+  });
+});
