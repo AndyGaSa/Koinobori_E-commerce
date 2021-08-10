@@ -5,6 +5,9 @@ const debug = require('debug')('beersApi');
 const chalk = require('chalk');
 const morgan = require('morgan');
 
+// DDBB connection
+require('./src/config/mongoose.Config');
+
 // server vars
 const server = express();
 const port = process.env.PORT || 5000;
