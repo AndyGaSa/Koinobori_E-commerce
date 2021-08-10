@@ -12,7 +12,7 @@ beersRouter
   .get(beersController.getRandomSenAlcohol);
 
 beersRouter
-  .route('/beers/:beer_name')
+  .route('/beers/:beerName')
   .get(beersController.getByName);
 
 beersRouter

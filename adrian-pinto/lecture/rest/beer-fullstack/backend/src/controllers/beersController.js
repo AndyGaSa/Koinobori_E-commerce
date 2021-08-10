@@ -18,9 +18,9 @@ const getRandomSenAlcohol = async (req, res) => {
   res.send(randomBeer);
 };
 
-const getByName = async (req, res) => {
-  debug('get By Name');
-  res.send();
+const getByName = async ({ params: { beerName } }, res) => {
+  const foundBeer = await Beer.findOne({ name: beerName });
+  res.send(foundBeer);
 };
 
 const postBeer = async (req, res) => {
