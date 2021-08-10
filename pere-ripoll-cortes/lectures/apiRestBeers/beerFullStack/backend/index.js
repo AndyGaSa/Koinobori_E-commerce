@@ -1,7 +1,7 @@
 const express = require('express');
 
 const server = express();
-const port = 5000;
+const port = 5001;
 
 // middlewear
 server.use(express.json());
