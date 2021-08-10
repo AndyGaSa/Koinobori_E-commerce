@@ -1,6 +1,5 @@
 const express = require('express');
 require('dotenv').config();
-
 const debug = require('debug')('beersApi');
 const chalk = require('chalk');
 const morgan = require('morgan');

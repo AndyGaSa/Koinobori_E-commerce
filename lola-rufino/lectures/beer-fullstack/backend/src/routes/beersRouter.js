@@ -10,12 +10,9 @@ beersRouter
 
 beersRouter
   .route('/:beerId')
+  .all(beersController.filterOneBeer)
   .get(beersController.getOneBeer)
   .delete(beersController.deleteOneBeer)
   .put(beersController.updateOneBeer);
-
-beersRouter
-  .route('/:beerName')
-  .get(beersController.filterOneBeer);
 
 module.exports = beersRouter;

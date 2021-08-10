@@ -1,54 +1,69 @@
-const beersMock = require('../mocks/beersMock');
+const Beer = require('../../models/beerModel');
 
-function getBeers(req, res) {
-  res.send(beersMock);
-}
-
-function postBeer(req, res) {
-  const { name } = req.body;
-
-  if (beersMock.some((beer) => beer.name.toLocaleLowerCase() === name.toLocaleLowerCase())) {
-    res.status(403);
-    return res.send(new Error(`There is a beer with the same name ${name}`));
+async function getBeers({ query }, res) {
+  try {
+    const foundBeers = await Beer.find(query);
+    res.json(foundBeers);
+  } catch (error) {
+    res.status(418);
+    res.send(new Error('There was an error. Beers not found.'));
   }
-  const newBeer = {
-    id: beersMock.length + 1,
-    name
-  };
-
-  beersMock.push(newBeer);
-
-  res.status(201);
-  return res.send(newBeer);
 }
 
-function getOneBeer(req, res) {
-  const { beerId } = req.params;
-  const beer = beersMock.find(({ id }) => id === +beerId);
-
-  if (beer) {
-    res.send(beer);
+async function postBeer(req, res) {
+  try {
+    const newBeer = await Beer.create(req.body);
+    res.status(201);
+    return res.json(newBeer);
+  } catch (error) {
+    res.status(418);
+    return res.send(new Error('There was an error. Beer not created'));
   }
-
-  res.status(404);
-  return res.send(new Error(`There is a no beer with the id ${beerId}`));
 }
 
-function deleteOneBeer(req, res) {
+function getOneBeer({ beer }, res) {
+  return res.send(beer);
+}
+
+async function deleteOneBeer(req, res) {
   const { beerId } = req.params;
-  res.send(beersMock.filter(({ id }) => id !== +beerId));
+  await Beer.findByIdAndDelete(beerId);
+  try {
+    res.status(204);
+    return res.send();
+  } catch (error) {
+    res.status(418);
+    return res.send(new Error('There was an error. Beer not created'));
+  }
 }
 
-function updateOneBeer(req, res) {
+async function updateOneBeer(req, res) {
+  const dataToUpdate = req.body;
   const { beerId } = req.params;
-  const { name } = req.body;
 
-  res.send(beersMock.map((item) => (item.id === +beerId ? { ...item, name } : { ...item })));
+  try {
+    const updatedBeer = await Beer.findByIdAndUpdate(
+      beerId,
+      dataToUpdate,
+      { new: true }
+    );
+    res.send(updatedBeer);
+  } catch (error) {
+    res.status(418);
+    res.send(new Error('There was an error. Beer not updated'));
+  }
 }
 
-function filterOneBeer(req, res) {
-  const { beerName } = req.query;
-  res.send(beersMock.filter(({ name }) => name === beerName));
+async function filterOneBeer(req, res, next) {
+  const { beerId } = req.params;
+  const beer = await Beer.findByIdAndDelete(beerId);
+  try {
+    req.beer = beer;
+    next();
+  } catch (error) {
+    res.status(418);
+    res.send(new Error('There was an error. Beer not filtered'));
+  }
 }
 
 module.exports = {

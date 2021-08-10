@@ -8,5 +8,7 @@ connect(
     useNewUrlParser: true
   }
 )
-  .then(() => debug('Database connection stablished'),
-    (error) => debug(error));
+  .then(
+    () => debug('Database connection stablished'),
+    (error) => debug(error)
+  );
