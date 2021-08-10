@@ -10,6 +10,7 @@ beersRouter
 
 beersRouter
   .route('/:beerId')
+  .all(beersController.findOneBeer)
   .get(beersController.getOneBeer)
   .put(beersController.updateBeer)
   .delete(beersController.deleteOneBeer);

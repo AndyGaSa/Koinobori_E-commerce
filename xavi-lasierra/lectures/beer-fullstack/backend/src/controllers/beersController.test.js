@@ -5,7 +5,8 @@ describe('Given getBeers function', () => {
     describe('And there are not filter queries', () => {
       test('Then should call res.send with beersMock as an argument', () => {
         const res = {
-          send: jest.fn()
+          send: jest.fn(),
+          status: jest.fn()
         };
         const req = { query: { } };
         controller.getBeers(req, res);
@@ -13,12 +14,13 @@ describe('Given getBeers function', () => {
         expect(res.send).toHaveBeenCalled();
       });
     });
-    describe('And there is a filter query beerName = ab:12', () => {
+    describe('And there is a filter query name = ab:12', () => {
       test('Then should call res.send with an object with id = 7 as an argument', () => {
         const res = {
-          send: jest.fn()
+          send: jest.fn(),
+          status: jest.fn()
         };
-        const req = { query: { beerName: 'ab:12' } };
+        const req = { query: { name: 'ab:12' } };
         controller.getBeers(req, res);
 
         expect(res.send.mock.calls[0][0][0].id).toBe(7);
@@ -29,15 +31,32 @@ describe('Given getBeers function', () => {
 
 describe('Given postBeer function', () => {
   describe('When it is invoked', () => {
-    const res = { send: jest.fn() };
-    const req = { body: { name: 'Leffe' } };
-    controller.postBeer(req, res);
+    describe('And the requested beer name is not already in the api', () => {
+      const res = {
+        send: jest.fn(),
+        status: jest.fn()
+      };
+      const req = { body: { name: 'Leffe' } };
+      controller.postBeer(req, res);
 
-    test('Then should call res.send with an object with property id = 25 as an argument', () => {
-      expect(res.send.mock.calls[0][0].id).toBe(26);
+      test('Then should call res.send with an object with property id = 25 as an argument', () => {
+        expect(res.send.mock.calls[0][0].id).toBe(26);
+      });
+      test('Then should call res.send with an object with property name = Leffe as an argument', () => {
+        expect(res.send.mock.calls[0][0].name).toBe('Leffe');
+      });
     });
-    test('Then should call res.send with an object with property name = Leffe as an argument', () => {
-      expect(res.send.mock.calls[0][0].name).toBe('Leffe');
+    describe('And the requested beer name is already in the api', () => {
+      const res = {
+        send: jest.fn(),
+        status: jest.fn()
+      };
+      const req = { body: { name: 'Leffe' } };
+      controller.postBeer(req, res);
+
+      test('Then should call res.send with a new error with the message There is a beer with the same name: Leffe', () => {
+        expect(res.send.mock.calls[0][0].message).toBe('There is a beer with the same name: Leffe');
+      });
     });
   });
 });
@@ -45,59 +64,45 @@ describe('Given postBeer function', () => {
 describe('Given getOneBeer function', () => {
   describe('When it is invoked with parameter 1', () => {
     test('Then should call res.send with an object with property name = Leffe as an argument', () => {
-      const res = { send: jest.fn() };
-      const req = { params: { beerId: '1' } };
+      const res = {
+        send: jest.fn()
+      };
+      const req = { beer: { name: 'Buzz' } };
       controller.getOneBeer(req, res);
       expect(res.send.mock.calls[0][0].name).toBe('Buzz');
-    });
-  });
-
-  describe('When it is invoked with parameter 26', () => {
-    test('Then should call res.send with an object with property name = Leffe as an argument', () => {
-      const res = { send: jest.fn() };
-      const req = { params: { beerId: '26' } };
-      controller.getOneBeer(req, res);
-      expect(res.send.mock.calls[0][0].name).toBe('Leffe');
-    });
-  });
-
-  describe('When it is invoked with parameter 99', () => {
-    test('Then should call res.send with undefined', () => {
-      const res = { send: jest.fn() };
-      const req = { params: { beerId: '99' } };
-      controller.getOneBeer(req, res);
-      expect(res.send.mock.calls[0][0]).toBe(undefined);
     });
   });
 });
 
 describe('Given deleteOneBeer function', () => {
   describe('When it is invoked with parameter 2', () => {
-    const res = { send: jest.fn() };
+    const res = {
+      send: jest.fn(),
+      status: jest.fn()
+    };
     const req = { params: { beerId: '2' } };
     controller.deleteOneBeer(req, res);
 
-    test('Then should call res.send with an object that do not contains Trashy Blonde', () => {
-      expect(res.send.mock.calls[0][0].some(({ name }) => name === 'Trashy Blonde')).toBe(false);
+    test('Then should call res.status with a 204 argument', () => {
+      expect(res.status.mock.calls[0][0]).toBe(204);
     });
   });
 });
 
 describe('Given updateBeer function', () => {
   describe('When it is invoked with parameter 6', () => {
-    const res = { send: jest.fn() };
+    const res = {
+      send: jest.fn(),
+      status: jest.fn()
+    };
     const req = {
       params: { beerId: '6' },
       body: { name: 'Moritz' }
     };
     controller.updateBeer(req, res);
 
-    test('Then should call res.send with an object that do not contains Buzz', () => {
-      expect(res.send.mock.calls[0][0].some(({ name }) => name === 'Electric India')).toBe(false);
-    });
-
-    test('Then should call res.send with an object that contains Moritz', () => {
-      expect(res.send.mock.calls[0][0].some(({ name }) => name === 'Moritz')).toBe(true);
+    test('Then should call res.send with an object with the name Moritz', () => {
+      expect(res.send.mock.calls[0][0].name).toBe('Moritz');
     });
   });
 });
