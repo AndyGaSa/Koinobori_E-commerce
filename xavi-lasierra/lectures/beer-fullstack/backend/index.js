@@ -4,6 +4,8 @@ const morgan = require('morgan');
 const chalk = require('chalk');
 const debug = require('debug')('beersApi');
 
+require('./src/config/mongooseConfig');
+
 const server = express();
 const port = process.env.PORT || 5000;
 
