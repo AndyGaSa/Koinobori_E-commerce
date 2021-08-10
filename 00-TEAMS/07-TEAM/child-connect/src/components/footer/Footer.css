@@ -1,0 +1,132 @@
+/* Website footer */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap');
+
+footer {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: space-evenly;
+width: 100%;
+background: #5E5E5E;
+padding: 10px;
+}
+
+.footer-terms {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex-basis: 33%;
+}
+
+.footer-terms-block{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+color: #FFFFFF;
+}
+
+/* Child Connect */
+.footer-terms-list__headline{
+color: #FFFFFF;
+font-family: Alegreya Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+display: flex;
+align-items: center;
+color: #FFFFFF;
+}
+
+/* Group 6634 */
+
+
+.footer-terms-list_item {
+width: 100%;
+font-family: Alegreya Sans;
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 17px;
+display: flex;
+align-items: center;
+color: #FFFFFF;
+margin-top: 4px;
+}
+
+.header-logo-section{
+display: flex;
+flex-direction: column;
+flex-basis: 30%;
+justify-content: center;
+align-items: center;
+}
+
+.header-logo-section_logo {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo-section_logo img {
+    width: 70%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo-section__copyright {
+font-family: Alegreya Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+display: flex;
+color: #FFFFFF;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+/* Redes Sociales div */
+.header-social-network__icons {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-content: center;
+flex-basis: 33%;
+justify-content: center;
+align-items: center;
+}
+
+.header-social-network__icons img {
+    margin: 5px;
+    max-width: 40px;
+    height: auto;
+    
+}
+.social-network__item1 {
+ background-image: url('https://i.ibb.co/L5WSKp7/facebook.png');
+ background-repeat: no-repeat;
+ background-size: contain;
+ width: 25px;
+ height: 65px;
+ 
+
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
