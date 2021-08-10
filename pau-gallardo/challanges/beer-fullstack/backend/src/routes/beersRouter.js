@@ -15,4 +15,8 @@ beersRouter
   .put(beersController.putOneBeer)
   .delete(beersController.deleteOneBeer);
 
+beersRouter
+  .route('/findRandomBeer')
+  .get(beersController.findOneRandomBeer);
+
 module.exports = beersRouter;

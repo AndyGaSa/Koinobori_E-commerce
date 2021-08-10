@@ -1,16 +1,24 @@
 const Beer = require('../models/beerModel');
 
 async function getBeers({ query }, res) {
-  const foundBeers = await Beer.find(query);
+  try {
+    const foundBeers = await Beer.find(query);
 
-  return res.send(foundBeers);
+    return res.send(foundBeers);
+  } catch (error) {
+    return res.send(error);
+  }
 }
 
 async function postBeer(req, res) {
-  const newBeer = await Beer.create(req.body);
+  try {
+    const newBeer = await Beer.create(req.body);
 
-  res.status(201);
-  return res.send(newBeer);
+    res.status(201);
+    return res.send(newBeer);
+  } catch (error) {
+    return res.send(error);
+  }
 }
 
 async function findOneBeer(req, res, next) {
@@ -52,6 +60,11 @@ async function deleteOneBeer(req, res) {
   res.send();
 }
 
+function findOneRandomBeer(req, res) {
+  res.status(204);
+  res.send('HOLA');
+}
+
 module.exports = {
   getBeers,
   postBeer,
@@ -59,4 +72,5 @@ module.exports = {
   putOneBeer,
   deleteOneBeer,
   findOneBeer,
+  findOneRandomBeer,
 };
