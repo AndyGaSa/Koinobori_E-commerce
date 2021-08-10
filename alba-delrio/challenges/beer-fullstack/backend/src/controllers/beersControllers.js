@@ -41,7 +41,6 @@ function updateOneBeer(req, res) {
 function deleteOneBeer(req, res) {
   const { beerId } = req.params;
   const filteredMock = beersMock.filter((item) => (item.id !== +beerId));
-  console.log(filteredMock);
   res.send(filteredMock);
 }
 module.exports = {
