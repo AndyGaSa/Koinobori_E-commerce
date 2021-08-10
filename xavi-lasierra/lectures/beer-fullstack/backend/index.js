@@ -1,8 +1,9 @@
 const express = require('express');
 require('dotenv').config();
+const debug = require('debug')('beersApi');
 
 const server = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 server.use(express.json());
 
@@ -12,5 +13,5 @@ server.use('/api/beers', beersRouter);
 
 server.listen(
   port,
-  () => console.log(`Server is running on http://localhost:${port}`)
+  () => debug(`Server is running on http://localhost:${port}`)
 );
