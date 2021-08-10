@@ -69,11 +69,38 @@ async function findOneBeer(req, res, next) {
   }
 }
 
+async function getRandomBeer({ query }, res) {
+  try {
+    const numOfBeers = await Beer.countDocuments(query);
+    const randomBeer = await Beer.findOne(query).skip(Math.floor(Math.random() * numOfBeers));
+
+    return res.json(randomBeer);
+  } catch (error) {
+    res.status(500);
+    return res.send(error);
+  }
+}
+
+async function getRandomNonAlcoholicBeer({ query }, res) {
+  try {
+    const numOfBeers = await Beer.countDocuments({ ...query, abv: { $lte: 1 } });
+    const randomBeer = await Beer.findOne({ ...query, abv: { $lte: 1 } })
+      .skip(Math.floor(Math.random() * numOfBeers));
+
+    return res.json(randomBeer);
+  } catch (error) {
+    res.status(500);
+    return res.send(error);
+  }
+}
+
 module.exports = {
   getBeers,
   postBeer,
   getOneBeer,
   deleteOneBeer,
   updateBeer,
-  findOneBeer
+  findOneBeer,
+  getRandomBeer,
+  getRandomNonAlcoholicBeer
 };

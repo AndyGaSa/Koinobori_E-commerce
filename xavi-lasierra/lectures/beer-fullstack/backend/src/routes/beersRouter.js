@@ -4,6 +4,14 @@ const beersController = require('../controllers/beersController');
 const beersRouter = express.Router();
 
 beersRouter
+  .route('/random/nonAlcoholic')
+  .get(beersController.getRandomNonAlcoholicBeer);
+
+beersRouter
+  .route('/random')
+  .get(beersController.getRandomBeer);
+
+beersRouter
   .route('/')
   .get(beersController.getBeers)
   .post(beersController.postBeer);
