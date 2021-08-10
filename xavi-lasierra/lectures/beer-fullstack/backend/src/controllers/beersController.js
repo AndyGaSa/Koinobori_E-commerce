@@ -11,10 +11,15 @@ async function getBeers({ query }, res) {
 }
 
 async function postBeer(req, res) {
-  const newBeer = await Beer.create(req.body);
+  try {
+    const newBeer = await Beer.create(req.body);
 
-  res.status(201);
-  return res.send(newBeer);
+    res.status(201);
+    return res.json(newBeer);
+  } catch (error) {
+    res.status(500);
+    return res.send(error);
+  }
 }
 
 function getOneBeer({ beer }, res) {

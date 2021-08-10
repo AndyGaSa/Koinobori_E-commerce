@@ -41,32 +41,52 @@ describe('Given getBeers function', () => {
 
 describe('Given postBeer function', () => {
   describe('When it is invoked', () => {
-    beforeEach(() => {
-      res = {
-        send: jest.fn(),
-        status: jest.fn()
-      };
-      req = { body: { } };
-      Beer.mockResolvedValue({});
+    describe('And create is resolved', () => {
+      beforeEach(() => {
+        res = {
+          json: jest.fn(),
+          status: jest.fn()
+        };
+        req = { body: { } };
+        Beer.mockResolvedValue({});
 
-      controller.postBeer(req, res);
+        controller.postBeer(req, res);
+      });
+
+      test('Then should call res.json', () => {
+        expect(res.json).toHaveBeenCalled();
+      });
+
+      test('Then should call res.status with an argument 201', () => {
+        expect(res.status).toHaveBeenCalledWith(201);
+      });
     });
+    describe('And create is rejected', () => {
+      beforeEach(() => {
+        res = {
+          send: jest.fn(),
+          status: jest.fn()
+        };
+        req = { body: { } };
+        Beer.mockRejectedValue({});
 
-    test('Then should call res.send', () => {
-      expect(res.send).toHaveBeenCalled();
-    });
+        controller.postBeer(req, res);
+      });
 
-    test('Then should call res.status', () => {
-      expect(res.status).toHaveBeenCalled();
+      test('Then should call res.send', () => {
+        expect(res.send).toHaveBeenCalled();
+      });
+
+      test('Then should call res.status with an argument 500', () => {
+        expect(res.status).toHaveBeenCalledWith(500);
+      });
     });
   });
 });
 
-/*
 describe('Given getOneBeer function', () => {
-  describe('When it is invoked with parameter 1', () => {
-    test('Then should call res.send with an object
-    with property name = Leffe as an argument', () => {
+  describe('When it is invoked', () => {
+    test('Then should call res.send', () => {
       res = {
         send: jest.fn()
       };
@@ -77,6 +97,7 @@ describe('Given getOneBeer function', () => {
   });
 });
 
+/*
 describe('Given deleteOneBeer function', () => {
   describe('When it is invoked with parameter 2', () => {
     res = {
