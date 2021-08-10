@@ -34,7 +34,7 @@ test('deleteOneBeer > Should call res.send', () => {
 });
 
 test('updateOneBeer > Should call res.send', () => {
-  const req = { params: { beerId: 11 } };
+  const req = { params: { beerId: 11 }, body: { id: 1 } };
   const res = { send: jest.fn() };
 
   controller.updateOneBeer(req, res);

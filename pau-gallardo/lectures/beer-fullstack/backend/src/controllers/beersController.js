@@ -39,6 +39,11 @@ function updateOneBeer(req, res) {
   res.send(updatedBeer);
 }
 
+// function filterBeer(req, res) {
+//   const { beerName } = req.params;
+//   res.send(updatedBeer);
+// }
+
 module.exports = {
   getBeers,
   postBeer,
