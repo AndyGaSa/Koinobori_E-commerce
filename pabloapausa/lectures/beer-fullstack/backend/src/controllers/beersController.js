@@ -1,38 +1,79 @@
-const beersMock = require('../mocks/beersMock');
 const Beer = require('../models/beerModel');
 
-function getBeers(req, res) {
-  res.send(beersMock);
+async function getBeers({ query }, res) {
+  try {
+    const foundBeers = await Beer.find(query);
+
+    return res.send(foundBeers);
+  } catch (error) {
+    return res.send(error);
+  }
+}
+
+async function postBeer(req, res) {
+  const newBeer = await Beer.create(req.body);
+
+  res.status(201);
+  return res.send(newBeer);
+}
+
+function getOneBeer({ beer }, res) {
+  return res.send(beer);
+}
+
+async function putOneBeer(req, res) {
+  const dataToUpdate = req.body;
+  const { beerId } = req.params;
+
+  const updatedBeer = await Beer.findByIdAndUpdate(
+    beerId,
+    dataToUpdate,
+    { new: true },
+  );
+
+  return res.send(updatedBeer);
+}
+
+async function deleteOneBeer(req, res) {
+  const { beerId } = req.params;
+
+  Beer.findByIdAndDelete(beerId);
+
+  res.status(204);
+  res.send();
+}
+
+async function findOneBeer(req, res, next) {
+  const { beerId } = req.params;
+  const beer = await Beer.findById(beerId);
+
+  if (beer) {
+    req.beer = beer;
+    next();
+  } else {
+    res.status(404);
+    res.send(new Error(`Couldn't find a beer by ID: ${beerId}.`));
+  }
 }
 
 /*
-function postBeer(req, res) {
-  const { name } = req.body;
-  const newBeer = {
-    id: Math.random(),
-    name,
-  };
+function findRandomBeer() {
+}
 
-  beersMock.push(newBeer);
+function findRandomNonAlcoholicBeer() {
 
-  res.send(newBeer);
 }
 */
-
-const getBeer = ({ beer }, res) => res.send(beer);
-
-async function postBeer(req, res) {
-  const toUpdate = req.body;
-  const { beerId } = req.params;
-
-  const updatedBeer = await Beer
-}
-
-
-
 
 module.exports = {
   getBeers,
   postBeer,
-  getBeer,
+  getOneBeer,
+  putOneBeer,
+  deleteOneBeer,
+  findOneBeer,
+  /*
+  findRandomBeer,
+  findRandomNonAlcoholicBeer,
+  */
 };
