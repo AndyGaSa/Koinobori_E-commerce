@@ -1,39 +1,56 @@
+const Beer = require('../models/beerModel');
 const controller = require('./beersControllers');
 
+jest.mock('../models/beerModel');
+
 describe('Given a getBeer controller', () => {
-  describe('And beerName is defined', () => {
-    test('then getBeers Should call res.send', () => {
-      const res = { send: jest.fn() };
-      const req = { query: { beerName: 'judas' } };
-      controller.getBeers(req, res);
+  describe('When is trigered', () => {
+    test('then call  send', async () => {
+      const res = {
+        send: jest.fn()
+      };
+      const req = { query: { beerName: ' ' } };
+      Beer.find.mockResolvedValue({ });
+      await controller.getBeers(req, res);
 
       expect(res.send).toHaveBeenCalled();
     });
-  });
-  describe('And beerName is undefined', () => {
-    test('then getBeers Should call res.send', () => {
-      const res = { send: jest.fn() };
-      const req = { query: { } };
-      controller.getBeers(req, res);
+    test('then call rejected', async () => {
+      const res = {
+        send: jest.fn(),
+        status: jest.fn()
+      };
+      const req = { query: { beerName: ' ' } };
 
-      expect(res.send).toHaveBeenCalled();
+      Beer.find.mockRejectedValue();
+      await controller.getBeers(req, res);
+
+      expect(res.status).toHaveBeenCalledWith(404);
     });
   });
 });
 
 describe('Given a postBeer controller', () => {
-  test('then a new item should to be added', () => {
-    const res = { send: jest.fn() };
-    const req = { body: { name: 'morte subite', id: 26 } };
-    controller.postBeer(req, res);
-    expect(res.send.mock.calls[0][0].name).toBe('morte subite');
-  });
+  describe('when is trigered', () => {
+    test('then call  send', async () => {
+      const res = { send: jest.fn() };
+      const req = { body: { } };
+      Beer.create.mockResolvedValue();
+      await controller.postBeer(req, res);
+      expect(res.send).toHaveBeenCalled();
+    });
+    test('then call rejected', async () => {
+      const res = {
+        send: jest.fn(),
+        status: jest.fn()
+      };
+      const req = { body: { } };
 
-  test('then the item id should be 27', () => {
-    const res = { send: jest.fn() };
-    const req = { body: { name: 'morte subite', id: 27 } };
-    controller.postBeer(req, res);
-    expect(res.send.mock.calls[0][0].id).toBe(27);
+      Beer.create.mockRejectedValue();
+      await controller.postBeer(req, res);
+
+      expect(res.status).toHaveBeenCalledWith(404);
+    });
   });
 });
 
@@ -48,22 +65,59 @@ describe('Given a getOneBeer controller', () => {
   });
 });
 
-describe('Given a updateOneBeer', () => {
-  test('then send an item named buzzy', () => {
-    const req = { params: { beerId: 1 }, body: { name: 'Buzzy' } };
-    const res = { send: jest.fn() };
-    controller.updateOneBeer(req, res);
+describe('Given a updateOneBeer controller', () => {
+  describe('when is trigered', () => {
+    test('then call  send', async () => {
+      const req = { params: { }, body: { } };
+      const res = { json: jest.fn() };
+      Beer.findByIdAndUpdate.mockResolvedValue();
+      await controller.updateOneBeer(req, res);
 
-    expect(res.send.mock.calls[0][0][0].name).toBe('Buzzy');
+      expect(res.json).toHaveBeenCalled();
+    });
+    test('then call  rejected', async () => {
+      const req = { params: { }, body: { } };
+      const res = { send: jest.fn() };
+      Beer.findByIdAndUpdate.mockRejectedValue();
+      await controller.updateOneBeer(req, res);
+
+      expect(res.send).toHaveBeenCalled();
+    });
   });
 });
 
-describe('Given a deleteOneBeer', () => {
-  test('then send the array without the deleted item', () => {
-    const res = { send: jest.fn() };
-    const req = { params: { beerId: 1 } };
-    controller.deleteOneBeer(req, res);
+describe('Given a deleteOneBeer controller', () => {
+  describe('when is trigered', () => {
+    test('then call send', async () => {
+      const res = { send: jest.fn() };
+      const req = { beer: { } };
+      Beer.aggregate.mockResolvedValue();
+      await controller.deleteOneBeer(req, res);
 
-    expect(res.send.mock.calls[0][0].some(({ id }) => id === 1)).toBe(false);
+      expect(res.send).toHaveBeenCalled();
+    });
   });
 });
+
+describe('Given a findOneBeer controller', () => {
+  describe('when is trigered', () => {
+    test('then call send', async () => {
+      const res = { send: jest.fn() };
+      const req = { params: { beer: { } } };
+      const next = jest.fn();
+
+      Beer.findById.mockResolvedValue();
+      await controller.findOneBeer(req, res, next);
+      expect(next).toHaveBeenCalled();
+    });
+    test('then call rejected', async () => {
+      const res = { send: jest.fn(), status: jest.fn() };
+      const req = { params: { beer: { } } };
+      const next = jest.fn();
+      Beer.findById.mockRejectedValue();
+      await controller.findOneBeer(req, res, next);
+      expect(res.status).toHaveBeenCalledWith(404);
+    });
+  });
+});
+

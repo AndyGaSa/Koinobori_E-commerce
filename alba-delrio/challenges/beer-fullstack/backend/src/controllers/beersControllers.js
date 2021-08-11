@@ -22,9 +22,9 @@ async function postBeer(req, res) {
 }
 async function findOneBeer(req, res, next) {
   const { beerId } = req.params;
-  const beer = await Beer.findById({ id: +beerId });
 
   try {
+    const beer = await Beer.findById({ id: +beerId });
     req.beer = beer;
     next();
   } catch (error) {
@@ -64,7 +64,7 @@ async function findRandomBeer(req, res) {
 }
 
 async function findRandomNonAlcoholicBeer(req, res) {
-  const foundBeer = await Beer.aggregate([{ $match: { abv: { $gte: 8 } } }]);
+  const foundBeer = await Beer.aggregate([{ $match: { abv: { $lte: 8 } } }]);
   return res.send(foundBeer);
 }
 
