@@ -13,8 +13,10 @@ server.use(morgan('dev'));
 server.use(express.json());
 
 const usersRouter = require('./scr/routes/userRouter');
+const productsRouter = require('./scr/routes/productRouter');
 
 server.use('/api/users', usersRouter);
+server.use('/api/products', productsRouter);
 
 server.listen(
   port,

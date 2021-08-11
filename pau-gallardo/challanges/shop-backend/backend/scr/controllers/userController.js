@@ -15,7 +15,7 @@ async function postUser(req, res) {
   try {
     const newUser = await User.create(req.body);
 
-    res.status(201);
+    res.status(200);
     res.send(newUser);
   } catch (error) {
     res.send(500);
