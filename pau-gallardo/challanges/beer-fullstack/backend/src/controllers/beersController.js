@@ -60,9 +60,9 @@ async function deleteOneBeer(req, res) {
   res.send();
 }
 
-function findOneRandomBeer(req, res) {
-  res.status(204);
-  res.send('HOLA');
+async function findOneRandomBeer(req, res) {
+  res.status(200);
+  res.send('hola');
 }
 
 module.exports = {

@@ -4,9 +4,8 @@ const beersController = require('../controllers/beersController');
 const beersRouter = express.Router();
 
 beersRouter
-  .route('/')
-  .get(beersController.getBeers)
-  .post(beersController.postBeer);
+  .route('/find')
+  .get(beersController.findOneRandomBeer);
 
 beersRouter
   .route('/:beerId')
@@ -16,7 +15,8 @@ beersRouter
   .delete(beersController.deleteOneBeer);
 
 beersRouter
-  .route('/findRandomBeer')
-  .get(beersController.findOneRandomBeer);
+  .route('/')
+  .get(beersController.getBeers)
+  .post(beersController.postBeer);
 
 module.exports = beersRouter;
