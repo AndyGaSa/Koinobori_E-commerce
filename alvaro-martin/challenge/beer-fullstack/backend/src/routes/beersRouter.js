@@ -3,12 +3,12 @@ const beersController = require('../controllers/beersController');
 
 const beersRouter = express.Router();
 beersRouter
-.route('/random')
-.get(beersController.getRandomBeer)
+  .route('/random')
+  .get(beersController.getRandomBeer);
 
 beersRouter
-.route('/randomNonAlco')
-.get(beersController.getRandomNonAlcoBeer)
+  .route('/randomNonAlco')
+  .get(beersController.getRandomNonAlcoBeer);
 
 beersRouter
   .route('/')
