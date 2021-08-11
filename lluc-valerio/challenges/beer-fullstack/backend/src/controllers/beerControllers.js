@@ -7,11 +7,12 @@ async function getBeers(req, res) {
     // debug(req.query.beerName);
     let bbDdResponse = null;
     if (!req.query.beerName) {
+      debug('inside general find');
       bbDdResponse = await Beer.find();
     } else {
       bbDdResponse = await Beer.findOne({ name: req.query.beerName });
     }
-    res.status(201);
+    res.status(200);
     return res.json(bbDdResponse);
   } catch (error) {
     res.status(500);
