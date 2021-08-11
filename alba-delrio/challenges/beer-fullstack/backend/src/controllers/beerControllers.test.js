@@ -120,3 +120,11 @@ describe('Given a findOneBeer controller', () => {
     });
   });
 });
+describe('Given a findRandomBeer controller', () => {
+  describe('when is trigered', () => {
+    test('then call send', async () => {
+      const res = { send: jest.fn() };
+      
+    });
+  });
+});
