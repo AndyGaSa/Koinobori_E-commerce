@@ -1,6 +1,6 @@
 const Product = require('../models/productModel');
 
-async function updateProduct(req, res) {
+async function createProduct(req, res) {
   const newBeer = await Product.create(req.body);
 
   return res.send(newBeer);
@@ -28,5 +28,5 @@ async function findProduct(req, res, next) {
 }
 
 module.exports = {
-  updateProduct, getProduct, deleteProduct, findProduct,
+  createProduct, getProduct, deleteProduct, findProduct,
 };

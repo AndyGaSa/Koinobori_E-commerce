@@ -1,13 +1,20 @@
 const Cart = require('../models/cartModel');
+const User = require('../models/userModel');
+const Product = require('../models/productModel');
 
-async function updateCart(req, res) {
-  const newBeer = await Cart.create(req.body);
-
-  return res.send(newBeer);
+async function createCart(req, res) {
+  const newCart = await Cart.create(req.body);
+  return res.send(newCart);
 }
 
 function getCart(req, res) {
-  res.send(Cart);
+  Cart.find({}, (err, carts) => {
+    User.populate(carts, { path: 'user' }, (err, carts) => {
+      Product.populate(carts, { path: 'products.product' }, (err, carts) => {
+        res.status(200).send(carts);
+      });
+    });
+  });
 }
 
 function deleteCart({ beer }, res) {
@@ -28,5 +35,5 @@ async function findCart(req, res, next) {
 }
 
 module.exports = {
-  updateCart, getCart, deleteCart, findCart,
+  createCart, getCart, deleteCart, findCart,
 };

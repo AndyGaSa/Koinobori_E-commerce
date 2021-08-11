@@ -7,7 +7,7 @@ cartRouter
   .route('/')
   .all(cartController.findCart)
   .get(cartController.getCart)
-  .post(cartController.updateCart)
+  .post(cartController.createCart)
   .delete(cartController.deleteCart);
 
 module.exports = cartRouter;
