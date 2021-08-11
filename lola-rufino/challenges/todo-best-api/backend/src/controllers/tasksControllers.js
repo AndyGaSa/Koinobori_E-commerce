@@ -13,7 +13,7 @@ const postTask = async (req, res) => {
 };
 
 const deleteById = async ({ params: { taskId } }, res) => {
-  const deletedTask = await Task.findByIdAndDelete(+taskId);
+  const deletedTask = await Task.findByIdAndDelete(taskId);
   res.send(deletedTask);
 };
 
