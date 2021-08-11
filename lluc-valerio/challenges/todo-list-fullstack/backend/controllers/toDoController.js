@@ -38,8 +38,26 @@ async function getOneToDo(req, res) {
   }
 }
 
+async function searchToDo(req, res) {
+  try {
+    debug(req.query);
+    const foundToDo = await ToDo.find(req.query);
+    res.status(201);
+    return res.send(foundToDo);
+  } catch (error) {
+    res.status(500);
+    return res.send(new Error(`Error during operation: ${error}`));
+  }
+}
+
+// async function updateOneToDo(req, res) {
+//   // const updatedToDo = await ToDo.update
+// }
+
 module.exports = {
   setToDo,
   getToDos,
-  getOneToDo
+  getOneToDo,
+  searchToDo
+  // updateOneToDo
 };
