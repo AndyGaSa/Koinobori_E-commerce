@@ -9,5 +9,3 @@ storeRouter
   .post(storeController.postStore);
 
 module.exports = storeRouter;
-
-// populate
