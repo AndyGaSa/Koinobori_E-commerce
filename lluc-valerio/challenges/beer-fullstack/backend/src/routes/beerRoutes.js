@@ -1,10 +1,14 @@
 const express = require('express');
+const controller = require('../controllers/beerControllers');
 
 const beersRouter = express.Router();
 
 beersRouter
-  .route('/');
+  .route('/')
+  .get(controller.getBeers)
+  .post(controller.setBeers);
 beersRouter
-  .route('/beerId');
+  .route('/:beerId')
+  .get(controller.getOneBeerById);
 
 module.exports = beersRouter;

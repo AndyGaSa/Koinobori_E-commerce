@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const beerSchema = mongoose.beerSchema({
+const beerSchema = mongoose.Schema({
   id: Number,
   name: String,
   tagline: String,
@@ -39,7 +39,7 @@ const beerSchema = mongoose.beerSchema({
         unit: String
       }
     },
-    twist: null
+    twist: String
   },
   ingredients: {
     malt: [
