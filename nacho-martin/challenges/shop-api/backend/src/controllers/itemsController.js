@@ -26,8 +26,21 @@ async function updateItem({ params }, res) {
     res.send(error);
   }
 }
+
+async function deleteItem({ params }, res) {
+  const item = await Item.findByIdAndDelete(params);
+
+  try {
+    res.status(201);
+    res.json(item);
+  } catch (error) {
+    res.status(404);
+    res.send(error);
+  }
+}
 module.exports = {
   getItems,
   createItem,
-  updateItem
+  updateItem,
+  deleteItem
 };

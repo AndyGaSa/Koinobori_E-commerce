@@ -10,6 +10,7 @@ itemsRouter
 
 itemsRouter
   .route('/:id')
-  .get(itemsController.updateItem);
+  .get(itemsController.updateItem)
+  .delete(itemsController.deleteItem);
 
 module.exports = itemsRouter;

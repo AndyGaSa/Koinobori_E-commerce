@@ -26,8 +26,21 @@ async function updateUser({ params }, res) {
     res.send(error);
   }
 }
+
+async function deleteUser({ params }, res) {
+  const user = await User.findByIdAndDelete(params);
+
+  try {
+    res.status(201);
+    res.json(user);
+  } catch (error) {
+    res.status(404);
+    res.send(error);
+  }
+}
 module.exports = {
   getUsers,
   createUser,
-  updateUser
+  updateUser,
+  deleteUser
 };
