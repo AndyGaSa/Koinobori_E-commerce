@@ -14,9 +14,11 @@ server.use(express.json());
 
 const productsRouter = require('./src/routes/products.router');
 const usersRouter = require('./src/routes/users.router');
+const cartsRouter = require('./src/routes/carts.router');
 
 server.use('/api/products', productsRouter);
 server.use('/api/users', usersRouter);
+server.use('/api/carts', cartsRouter);
 
 server.listen(
   port,
