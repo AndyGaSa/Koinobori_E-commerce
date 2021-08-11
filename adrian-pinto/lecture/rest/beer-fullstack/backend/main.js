@@ -13,7 +13,9 @@ server.use(morgan('dev'));
 server.use(express.json());
 
 const beerRouter = require('./src/routes/beersRouter');
+const randomRouter = require('./src/routes/randomRouter');
 
 server.use('/api/', beerRouter);
+server.use('/api/', randomRouter);
 
-server.listen(port, () => debug(`Server runing on ${chalk.green(`127:${port}`)}`));
+server.listen(port, () => debug(`Server runing on ${chalk.green(`127::1:${port}`)}`));

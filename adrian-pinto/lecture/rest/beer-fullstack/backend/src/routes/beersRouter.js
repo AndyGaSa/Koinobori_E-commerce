@@ -4,16 +4,10 @@ const beersController = require('../controllers/beersController');
 const beersRouter = express.Router();
 
 beersRouter
-  .route('/random')
-  .get(beersController.getRandom);
-
-beersRouter
-  .route('/randomsenalcohol')
-  .get(beersController.getRandomSenAlcohol);
-
-beersRouter
   .route('/beers/:beerName')
-  .get(beersController.getByName);
+  .get(beersController.getByName)
+  .put(beersController.putBeer)
+  .delete(beersController.deleteBeer);
 
 beersRouter
   .route('/beers')
