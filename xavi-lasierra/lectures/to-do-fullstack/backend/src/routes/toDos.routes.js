@@ -5,6 +5,11 @@ const toDosRouter = express.Router();
 
 toDosRouter
   .route('/')
-  .get(toDosController.getToDos);
+  .get(toDosController.getToDos)
+  .post(toDosController.postToDo);
+
+toDosRouter
+  .route('/:toDoId')
+  .get(toDosController.getOneToDo);
 
 module.exports = toDosRouter;
