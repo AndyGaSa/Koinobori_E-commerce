@@ -20,18 +20,26 @@ const getRandomSenAlcohol = async (req, res) => {
 
 const getByName = async ({ params: { beerName } }, res) => {
   const foundBeer = await Beer.findOne({ name: beerName });
+  debug(foundBeer);
   res.send(foundBeer);
 };
 
 const postBeer = async (req, res) => {
-  const newBirra = await Beer.create(req.body);
-
-  return res.send(newBirra);
+  const newBeer = await Beer.create(req.body);
+  return res.send(newBeer);
 };
 
-// todo put beer
+const putBeer = async (req, res) => {
+  const updateBeer = await Beer.findOneAndUpdate(req.params.beerName, req.body, {
+    new: true,
+  });
+  res.send(updateBeer);
+};
 
-// todo delete beer
+const deleteBeer = async ({ params: { beerName } }, res) => {
+  const delBeer = await Beer.findOneAndDelete({ name: beerName });
+  res.send(delBeer);
+};
 
 module.exports = {
   getBeers,
@@ -39,4 +47,6 @@ module.exports = {
   getRandom,
   getRandomSenAlcohol,
   postBeer,
+  putBeer,
+  deleteBeer,
 };
