@@ -20,6 +20,8 @@
     "eslint-plugin-import": "^2.24.0"
   },
   "scripts": {
+    "start": "node index.js",
+    "debug": "nodemon --inspect-brk index.js",
     "test": "jest --watchAll --collect-coverage"
   },
   "keywords": [],
