@@ -1,8 +1,8 @@
 const ToDo = require('../models/toDoModel');
 
-async function getToDos({ query }, res) {
+async function getToDos(req, res) {
   try {
-    const foundTodos = await ToDo.find(query);
+    const foundTodos = await ToDo.find(req.query);
     res.json(foundTodos);
   } catch (error) {
     res.status(500);
