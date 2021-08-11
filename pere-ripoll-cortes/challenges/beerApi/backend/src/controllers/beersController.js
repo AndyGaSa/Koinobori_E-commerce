@@ -41,9 +41,17 @@ const putOneBeer = async (req, res) => {
   return res.send(updateBeer);
 };
 
+const deleteOneBeer = async (req, res) => {
+  const { beerId } = req.params;
+  const del = await Beer.findByIdAndDelete(beerId);
+  res.status(204);
+  res.send(del);
+};
+
 module.exports = {
   getBeers,
   postBeer,
   findOneBeer,
   putOneBeer,
+  deleteOneBeer,
 };

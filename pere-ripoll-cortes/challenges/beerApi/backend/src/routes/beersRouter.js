@@ -5,7 +5,9 @@ const beerRoute = express.Router();
 
 beerRoute
   .route('/:beerId')
-  .all(beerController.findOneBeer);
+  .all(beerController.findOneBeer)
+  .delete(beerController.deleteOneBeer)
+  .put(beerController.putOneBeer);
 
 beerRoute
   .route('/')

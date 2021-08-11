@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "chalk": "^4.1.2",
+    "cors": "^2.8.5",
     "debug": "^2.6.9",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
@@ -20,8 +21,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll --collect-coverage",
-    "start":"nodemon index.js",
-    "debug":"nodemon --inspect-brk index.js"
+    "start": "nodemon index.js",
+    "debug": "nodemon --inspect-brk index.js"
   },
   "keywords": [],
   "author": "",
