@@ -246,3 +246,127 @@ describe('Given a findOneBeer function', () => {
     });
   });
 });
+
+describe('Given updateBeer function', () => {
+  describe('When it is invoked', () => {
+    describe('And findByIdAndUpdate is resolved', () => {
+      test('Then should call res.json', async () => {
+        res = {
+          json: jest.fn(),
+          status: jest.fn()
+        };
+        req = {
+          params: { beerId: '6' },
+          body: { }
+        };
+        Beer.findByIdAndUpdate.mockResolvedValue({});
+
+        await controller.updateBeer(req, res);
+
+        expect(res.json).toHaveBeenCalled();
+      });
+    });
+
+    describe('And findByIdAndUpdate is rejected', () => {
+      beforeEach(async () => {
+        res = {
+          status: jest.fn(),
+          send: jest.fn()
+        };
+        req = {
+          params: { beerId: '6' },
+          body: { }
+        };
+        Beer.findByIdAndUpdate.mockRejectedValue({});
+
+        await controller.updateBeer(req, res);
+      });
+
+      test('Then should call res.send', async () => {
+        expect(res.send).toHaveBeenCalled();
+      });
+
+      test('Then should call res.status with an argument 500', async () => {
+        expect(res.status).toHaveBeenCalledWith(500);
+      });
+    });
+  });
+});
+
+describe('Given a getRandomBeer function', () => {
+  describe('When it is called', () => {
+    describe('And aggregate is resolved', () => {
+      test('Then should call res.json function', async () => {
+        req = { query: {} };
+        res = { json: jest.fn() };
+
+        Beer.aggregate.mockReturnValue({
+          match: jest.fn().mockReturnValue({ sample: jest.fn().mockResolvedValue({}) })
+        });
+
+        await controller.getRandomBeer(req, res);
+
+        expect(res.json).toHaveBeenCalled();
+      });
+    });
+    describe('And aggregate is rejected', () => {
+      beforeEach(async () => {
+        req = { query: {} };
+        res = { send: jest.fn(), status: jest.fn() };
+
+        Beer.aggregate.mockReturnValue({
+          match: jest.fn().mockReturnValue({ sample: jest.fn().mockRejectedValue({}) })
+        });
+
+        await controller.getRandomBeer(req, res);
+      });
+
+      test('Then should call res.send function', () => {
+        expect(res.send).toHaveBeenCalled();
+      });
+
+      test('Then should call res.status function with an argument 500', () => {
+        expect(res.status).toHaveBeenCalledWith(500);
+      });
+    });
+  });
+});
+
+describe('Given a getRandomNonAlcocholicBeer function', () => {
+  describe('When it is called', () => {
+    describe('And aggregate is resolved', () => {
+      test('Then should call res.json function', async () => {
+        req = { query: {} };
+        res = { json: jest.fn() };
+
+        Beer.aggregate.mockReturnValue({
+          match: jest.fn().mockReturnValue({ sample: jest.fn().mockResolvedValue({}) })
+        });
+
+        await controller.getRandomNonAlcoholicBeer(req, res);
+
+        expect(res.json).toHaveBeenCalled();
+      });
+    });
+    describe('And aggregate is rejected', () => {
+      beforeEach(async () => {
+        req = { query: {} };
+        res = { send: jest.fn(), status: jest.fn() };
+
+        Beer.aggregate.mockReturnValue({
+          match: jest.fn().mockReturnValue({ sample: jest.fn().mockRejectedValue({}) })
+        });
+
+        await controller.getRandomNonAlcoholicBeer(req, res);
+      });
+
+      test('Then should call res.send function', () => {
+        expect(res.send).toHaveBeenCalled();
+      });
+
+      test('Then should call res.status function with an argument 500', () => {
+        expect(res.status).toHaveBeenCalledWith(500);
+      });
+    });
+  });
+});
