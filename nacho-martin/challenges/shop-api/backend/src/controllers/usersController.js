@@ -13,12 +13,7 @@ async function getUsers({ query }, res) {
 
 async function createUser(req, res) {
   const newUser = await User.create(req.body);
-  try {
-    res.json(newUser);
-  } catch (error) {
-    res.status(500);
-    res.send(error);
-  }
+  res.send(newUser);
 }
 
 async function updateUser({ params }, res) {
