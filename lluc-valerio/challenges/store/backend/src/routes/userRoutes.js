@@ -6,9 +6,12 @@ const userRouter = express.Router();
 
 userRouter
   .route('/')
-  .get(controller.getAllUsers)
+  .get(controller.getUsers)
   .post(controller.setUser);
 userRouter
-  .route('/:beerId');
+  .route('/:userId')
+  .get(controller.getUserById)
+  .put(controller.updateUser)
+  .delete(controller.deleteUser);
 
 module.exports = userRouter;
