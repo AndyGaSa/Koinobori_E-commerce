@@ -120,4 +120,3 @@ describe('Given a findOneBeer controller', () => {
     });
   });
 });
-
