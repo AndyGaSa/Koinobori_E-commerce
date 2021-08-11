@@ -6,14 +6,8 @@ async function postBeer(req, res) {
   return res.send(newBeer);
 }
 
-function filterBeers(req, res) {
-  const { beerName } = req.query;
-  res.send(BeersCollection.filter(({ name }) => name.toLowerCase() === beerName.toLowerCase()));
-}
-
 function getBeers(req, res) {
-  const { beerName } = req.query;
-  return beerName === undefined ? res.send(BeersCollection) : filterBeers(req, res);
+  res.send(BeersCollection);
 }
 
 function deleteOneBeer({ beer }, res) {

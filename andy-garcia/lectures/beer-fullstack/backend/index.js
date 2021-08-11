@@ -3,12 +3,13 @@ require('dotenv').config();
 const debug = require('debug')('beersApi');
 const chalk = require('chalk');
 const morgan = require('morgan');
-
+const cors = require('cors');
 require('./config/mongooseConfig');
 
 const server = express();
 const port = process.env.PORT || 5000;
 
+server.use(cors());
 server.use(morgan('dev'));
 server.use(express.json());
 
