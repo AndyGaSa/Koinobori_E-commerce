@@ -6,9 +6,12 @@ const productRouter = express.Router();
 
 productRouter
   .route('/')
-  .get(controller.getAllProducts)
+  .get(controller.getProducts)
   .post(controller.setProduct);
 productRouter
-  .route('/:beerId');
+  .route('/:productId')
+  .get(controller.getProductById)
+  .put(controller.updateProduct)
+  .delete(controller.deleteProduct);
 
 module.exports = productRouter;
