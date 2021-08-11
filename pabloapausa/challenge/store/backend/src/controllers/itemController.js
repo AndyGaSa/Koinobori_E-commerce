@@ -7,7 +7,7 @@ async function postItem({ body }, res) {
   return res.send(newItem);
 }
 
-async function getItem({ query }, res) {
+async function getItems({ query }, res) {
   const foundItem = await Item.filter(query);
 
   return res.send(foundItem);
@@ -15,5 +15,5 @@ async function getItem({ query }, res) {
 
 module.exports = {
   postItem,
-  getItem,
+  getItems,
 };
