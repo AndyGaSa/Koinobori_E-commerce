@@ -2,8 +2,8 @@ const Cart = require('../models/cartModel');
 
 async function getCart({ query }, res) {
   try {
-    const foundCart = await Beer.find(query);
-    return res.send(foundBeers);
+    const foundCart = await Cart.find(query);
+    return res.send(foundCarts);
   } catch (error) {
     res.status(404);
     return res.send(new Error('There are no beers'));
@@ -12,9 +12,9 @@ async function getCart({ query }, res) {
 
 async function updateCart(req, res) {
   try {
-    const newBeer = await Beer.create(req.body);
+    const newCart = await Cart.create(req.body);
 
-    return res.send(newBeer);
+    return res.send(newCart);
   } catch (error) {
     res.status(404);
     return res.send(new Error('The beer has not been created'));
@@ -24,7 +24,7 @@ async function findOneCart(req, res, next) {
   const { beerId } = req.params;
 
   try {
-    const beer = await Beer.findById({ id: +beerId });
+    const beer = await Cart.findById({ id: +beerId });
     req.beer = beer;
     next();
   } catch (error) {
@@ -36,7 +36,7 @@ async function findOneCart(req, res, next) {
 async function deleteCart({ beer }, res) {
   const { _id } = beer;
 
-  await Beer.findByIdAndDelete({ _id });
+  await Cart.findByIdAndDelete({ _id });
   return res.send(`The beer ${beer.name} has been deleted`);
 }
 
