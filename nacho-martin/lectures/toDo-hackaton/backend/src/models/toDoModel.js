@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 const toDoSchema = mongoose.Schema({
   description: String,
   isDone: Boolean,
-  creationDate: Date
+  creationDate: {
+    type: Date,
+    default: Date.now()
+  }
 });
 
-module.exports = mongoose.model('ToDo', toDoSchema);
+module.exports = mongoose.model('Todos', toDoSchema);
