@@ -10,6 +10,9 @@ toDosRouter
 
 toDosRouter
   .route('/:toDoId')
-  .get(toDosController.getOneToDo);
+  .all(toDosController.findOneToDo)
+  .get(toDosController.getOneToDo)
+  .delete(toDosController.deleteOneToDo)
+  .put(toDosController.putOneToDo);
 
 module.exports = toDosRouter;

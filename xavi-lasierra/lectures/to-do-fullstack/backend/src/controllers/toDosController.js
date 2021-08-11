@@ -1,25 +1,85 @@
 const ToDo = require('../models/toDoModel');
 
 async function getToDos({ query }, res) {
-  const foundTodos = await ToDo.find(query);
-  res.json(foundTodos);
+  try {
+    const foundTodos = await ToDo.find(query);
+    res.json(foundTodos);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 async function postToDo(req, res) {
-  const newTodo = await ToDo.create(req.body);
+  try {
+    const newTodo = await ToDo.create(req.body);
 
-  res.json(newTodo);
+    res.status(201);
+    res.json(newTodo);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
-async function getOneToDo(req, res) {
-  const { toDoId } = req.params;
-  const toDo = await ToDo.findById(toDoId);
+async function findOneToDo(req, res, next) {
+  try {
+    const { toDoId } = req.params;
+    const toDo = await ToDo.findById(toDoId);
 
+    if (toDo) {
+      req.toDo = toDo;
+      next();
+    } else {
+      res.status(404);
+      res.send(new Error(`There is no toDo with id ${toDoId}`));
+    }
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
+function getOneToDo({ toDo }, res) {
   res.json(toDo);
 }
 
+async function deleteOneToDo(req, res) {
+  try {
+    const { toDoId } = req.params;
+
+    await ToDo.findOneAndDelete(toDoId);
+
+    res.status(204);
+    res.send();
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
+async function putOneToDo(req, res) {
+  try {
+    const { toDoId } = req.params;
+
+    const updatedToDo = await ToDo.findByIdAndUpdate(
+      toDoId,
+      req.body,
+      { new: true }
+    );
+
+    res.send(updatedToDo);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
 module.exports = {
+  findOneToDo,
   getToDos,
   postToDo,
-  getOneToDo
+  getOneToDo,
+  deleteOneToDo,
+  putOneToDo
 };
