@@ -1,9 +1,11 @@
 const express = require('express');
-const userController = require('./.......');
+const userController = require('../controllers/userController');
 
-const beersRouter = express.Router();
+const usersRouter = express.Router();
 
-beersRouter
-  .route('/');
+usersRouter
+  .route('/')
+  .get(userController.getUsers)
+  .post(userController.postUser);
 
-module.exports = beersRouter;
+module.exports = usersRouter;

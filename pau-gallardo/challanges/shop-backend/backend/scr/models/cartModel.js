@@ -7,4 +7,4 @@ const cartSchema = mongoose.Schema({
   products: Array,
 });
 
-module.exports = mongoose.model('Beer', cartSchema);
+module.exports = mongoose.model('Cart', cartSchema);

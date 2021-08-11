@@ -4,4 +4,4 @@ const userSchema = mongoose.Schema({
   name: String,
 });
 
-module.exports = mongoose.model('Beer', userSchema);
+module.exports = mongoose.model('User', userSchema);

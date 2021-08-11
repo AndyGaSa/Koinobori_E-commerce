@@ -6,4 +6,4 @@ const productSchema = mongoose.Schema({
   stock: Number,
 });
 
-module.exports = mongoose.model('Beer', productSchema);
+module.exports = mongoose.model('Product', productSchema);
