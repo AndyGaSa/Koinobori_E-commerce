@@ -1,0 +1,71 @@
+h2 {
+    margin: 2rem 0;
+}
+
+h2 span {
+    margin-right: 0.5rem;
+    color: grey;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 5vw;
+    width: 100%;
+    max-width: 40rem;
+}
+
+.user label {
+    margin-bottom: 0.6rem;
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.user input {
+    margin-left: 0.5rem;
+    border-radius: 0.2rem;
+    width: 100%;
+    height: 1.6rem;
+    outline: none;
+}
+
+.user input:focus {
+    background-color: #F4F4F4;
+}
+
+.user div {
+    margin-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+p {
+    position: relative;
+    left: -2rem;
+    margin: 0.6rem 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.user__update {
+    margin-top: 1rem;
+    height: 2rem;
+    width: 4rem;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 0.9rem;
+    transition: .2s;
+}
+
+.user__update:hover {
+    background-color: #212121;
+    color: white;
+}
+
+.user__update:active {
+    background-color: gray;
+}

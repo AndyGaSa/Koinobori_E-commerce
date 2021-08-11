@@ -1,0 +1,12 @@
+
+@mixin socialmedia__icons($url){
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    margin: 10px;
+    background-image: url($url);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
