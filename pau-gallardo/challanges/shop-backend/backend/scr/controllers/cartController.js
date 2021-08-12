@@ -1,4 +1,6 @@
-const debug = require('debug')('shopApi');
+/* eslint-disable no-underscore-dangle */
+const mongoose = require('mongoose');
+const debug = require('debug')('shopApi:cartController');
 const Cart = require('../models/cartModel');
 const Product = require('../models/productModel');
 
@@ -14,13 +16,23 @@ async function getCarts({ query }, res) {
 
 async function postCarts(req, res) {
   const productId = req.body.products[0].product;
-
   try {
     const foundCart = await Cart.findOne({ user: req.body.user });
     const foundProduct = await Product.findById(productId);
 
     if (foundCart) {
-      foundCart.products.push(req.body.products[0]);
+      const inCart = foundCart.products.some((product) => product.product.equals(productId));
+      if (inCart) {
+        foundCart.products.map((product) => {
+          if (product.product.equals(productId)) {
+            product.amount += req.body.products[0].amount;
+          }
+          return '';
+        });
+      } else {
+        foundCart.products.push(req.body.products[0]);
+      }
+      await foundCart.save();
       await Product.findByIdAndUpdate(
         productId,
         { stock: foundProduct.stock - req.body.products[0].amount },
