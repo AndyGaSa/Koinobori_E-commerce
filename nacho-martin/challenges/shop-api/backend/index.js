@@ -19,5 +19,5 @@ server.use('/shop/items', itemsRouter);
 
 server.listen(
   port,
-  () => debug(`Server is running on ${chalk.blue(`http://localhost:${port}`)}`)
+  () => debug(`Server is running on ${chalk.cyanBright(`http://localhost:${port}`)}`)
 );
