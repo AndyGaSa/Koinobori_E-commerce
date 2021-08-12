@@ -27,7 +27,7 @@ async function stockCheck(products, res) {
       res.send(new Error(`Not enougth stock in product ${productFound.name}`));
       return false;
     }
-    await Product.findByIdAndUpdate(
+    return Product.findByIdAndUpdate(
       product.product,
       { stock: productFound.stock - product.amount }
     );
@@ -35,7 +35,7 @@ async function stockCheck(products, res) {
   return true;
 }
 
-async function postCart({ body }, res) {
+async function createCart({ body }, res) {
   try {
     if (await stockCheck(body.products, res)) {
       let newCart;
@@ -59,7 +59,22 @@ async function postCart({ body }, res) {
   }
 }
 
+function getCartById(req, res) {
+  res.send('a');
+}
+
+function updateCartById(req, res) {
+  res.send('a');
+}
+
+function deleteCartById(req, res) {
+  res.send('a');
+}
+
 module.exports = {
   getCarts,
-  postCart
+  createCart,
+  getCartById,
+  updateCartById,
+  deleteCartById
 };

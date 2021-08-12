@@ -23,7 +23,7 @@ async function postProduct({ body }, res) {
   }
 }
 
-async function findOneProduct(req, res, next) {
+async function findOneProductById(req, res, next) {
   try {
     const { productId } = req.params;
     const product = await Product.findById(productId);
@@ -40,13 +40,23 @@ async function findOneProduct(req, res, next) {
   }
 }
 
-function getOneProduct({ product }, res) {
+function getOneProductById({ product }, res) {
   res.json(product);
+}
+
+function updateOneProductById(req, res) {
+  res.send('a');
+}
+
+function deleteOneProductById(req, res) {
+  res.send('a');
 }
 
 module.exports = {
   getProducts,
   postProduct,
-  findOneProduct,
-  getOneProduct
+  findOneProductById,
+  getOneProductById,
+  updateOneProductById,
+  deleteOneProductById
 };

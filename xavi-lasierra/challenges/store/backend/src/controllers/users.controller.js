@@ -23,7 +23,22 @@ async function postUser({ body }, res) {
   }
 }
 
+function getOneUserById(req, res) {
+  res.send('a');
+}
+
+function updateUserById(req, res) {
+  res.send('a');
+}
+
+function deleteUserById(req, res) {
+  res.send('a');
+}
+
 module.exports = {
   getUsers,
-  postUser
+  postUser,
+  getOneUserById,
+  updateUserById,
+  deleteUserById
 };
