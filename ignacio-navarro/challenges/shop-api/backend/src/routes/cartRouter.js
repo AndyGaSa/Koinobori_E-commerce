@@ -10,6 +10,6 @@ cartRouter
   .post(cartController.postCart);
 cartRouter
   .route('/:cartId')
-  .post(cartController.postCart);
+  .post(cartController.createModifyCart);
 
 module.exports = cartRouter;
