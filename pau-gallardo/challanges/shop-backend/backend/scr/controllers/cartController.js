@@ -14,6 +14,23 @@ async function getCarts({ query }, res) {
   }
 }
 
+async function updateStock(model, id, req, foundProduct) {
+  await Product.findByIdAndUpdate(
+    id,
+    { stock: foundProduct.stock - req.body.products[0].amount },
+    { new: true },
+  );
+}
+
+function increaseAmount(foundCart, productId, req) {
+  foundCart.products.map((product) => {
+    if (product.product.equals(productId)) {
+      product.amount += req.body.products[0].amount;
+    }
+    return '';
+  });
+}
+
 async function postCarts(req, res) {
   const productId = req.body.products[0].product;
   try {
@@ -22,31 +39,24 @@ async function postCarts(req, res) {
 
     if (foundCart) {
       const inCart = foundCart.products.some((product) => product.product.equals(productId));
+
       if (inCart) {
-        foundCart.products.map((product) => {
-          if (product.product.equals(productId)) {
-            product.amount += req.body.products[0].amount;
-          }
-          return '';
-        });
+        increaseAmount(foundCart, productId, req);
       } else {
         foundCart.products.push(req.body.products[0]);
       }
+
       await foundCart.save();
-      await Product.findByIdAndUpdate(
-        productId,
-        { stock: foundProduct.stock - req.body.products[0].amount },
-        { new: true },
-      );
+
+      updateStock(Product, productId, req, foundProduct);
+
       res.send(foundCart);
       res.status(200);
     } else {
       const newCart = await Cart.create(req.body);
-      await Product.findByIdAndUpdate(
-        productId,
-        { stock: foundProduct.stock - req.body.products[0].amount },
-        { new: true },
-      );
+
+      updateStock(Product, productId, req, foundProduct);
+
       res.send(newCart);
       res.status(200);
     }
