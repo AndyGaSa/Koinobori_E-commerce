@@ -11,17 +11,17 @@ const port = process.env.PORT || 5000;
 server.use(morgan('dev'));
 server.use(express.json());
 
-// const cartItemRouter = require('./src/routes/cartItemRouter');
+const cartItemRouter = require('./src/routes/cartItemRouter');
 
-// server.use('/api/cartItem', cartItemRouter);
+server.use('/api/cartItem', cartItemRouter);
 
 const userRouter = require('./src/routes/userRouter');
 
 server.use('/api/user', userRouter);
 
-// const productRouter = require('./src/routes/productRouter');
+const productRouter = require('./src/routes/productRouter');
 
-// server.use('/api/productRouter', productRouter);
+server.use('/api/products', productRouter);
 
 server.listen(
   port,
