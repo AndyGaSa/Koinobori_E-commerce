@@ -1,6 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-const mongoose = require('mongoose');
-const debug = require('debug')('shopApi:cartController');
+// const debug = require('debug')('shopApi:cartController');
 const Cart = require('../models/cartModel');
 const Product = require('../models/productModel');
 
@@ -25,7 +24,8 @@ async function updateStock(model, id, req, foundProduct) {
 function increaseAmount(foundCart, productId, req) {
   foundCart.products.map((product) => {
     if (product.product.equals(productId)) {
-      product.amount += req.body.products[0].amount;
+      const productObj = product;
+      productObj.amount += req.body.products[0].amount;
     }
     return '';
   });
