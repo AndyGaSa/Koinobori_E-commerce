@@ -17,7 +17,7 @@ const cartRouter = require('./src/routes/cartRouter');
 
 server.use('/shop/users', usersRouter);
 server.use('/shop/items', itemsRouter);
-server.use('/shop/items', cartRouter);
+server.use('/shop/cart', cartRouter);
 
 server.listen(
   port,
