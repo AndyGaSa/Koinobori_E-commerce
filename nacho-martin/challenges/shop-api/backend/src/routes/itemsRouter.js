@@ -9,7 +9,8 @@ itemsRouter
   .post(itemsController.createItem);
 
 itemsRouter
-  .route('/:id')
+  .route('/:itemId')
+  .get(itemsController.getById)
   .put(itemsController.updateItem)
   .delete(itemsController.deleteItem);
 
