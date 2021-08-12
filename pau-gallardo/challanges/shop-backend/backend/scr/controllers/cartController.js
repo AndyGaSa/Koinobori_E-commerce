@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-// const debug = require('debug')('shopApi:cartController');
+const debug = require('debug')('shopApi:cartController');
 const Cart = require('../models/cartModel');
 const Product = require('../models/productModel');
 
@@ -66,14 +66,13 @@ async function postCarts(req, res) {
 }
 
 async function deleteOneCart(req, res) {
-  const { cardId } = req.params;
-
-  getCarts.findByIdAndDelete(cardId);
+  const { cartId } = req.params;
   try {
-    await Cart.findByIdAndDelete(cardId);
+    const deleted = await Cart.findByIdAndDelete(cartId);
+    debug(deleted);
 
-    res.status(204);
-    res.send();
+    res.status(200);
+    res.send(deleted);
   } catch (error) {
     res.status(500);
     res.send(error);

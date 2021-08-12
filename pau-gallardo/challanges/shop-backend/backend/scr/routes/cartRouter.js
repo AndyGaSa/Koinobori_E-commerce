@@ -9,4 +9,8 @@ cartsRouter
   .post(cartController.postCarts)
   .delete(cartController.deleteOneCart);
 
+cartsRouter
+  .route('/:cartId')
+  .delete(cartController.deleteOneCart);
+
 module.exports = cartsRouter;
