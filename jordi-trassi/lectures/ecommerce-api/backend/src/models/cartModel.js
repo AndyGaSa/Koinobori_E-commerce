@@ -8,7 +8,6 @@ const cartSchema = Schema({
       amount: Number,
     },
   ],
-
 });
 
 module.exports = model('Cart', cartSchema);

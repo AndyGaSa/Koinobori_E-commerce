@@ -1,67 +1,58 @@
-const Beer = require('../models/productModel');
+const Product = require('../models/productModel');
 
-async function getBeers({ query }, res) {
-  const foundBeers = await Beer.find(query);
-  return res.send(foundBeers);
-}
-async function postBeer(req, res) {
+async function getAll({ query }, res) {
   try {
-    const newBeer = await Beer.create(req.body);
-    res.status(201);
-    return res.send(newBeer);
+    const products = await Product.find(query);
+    res.json(products);
   } catch (error) {
     res.status(500);
-    return res.send(error);
+    res.send(error);
   }
 }
-async function findOneBeer(req, res, next) {
-  const { toDoId } = req.params;
-  const beer = await Beer.findById(toDoId);
-  if (beer) {
-    req.beer = beer;
-    next();
-  } else {
-    res.status(404);
-    res.send(new Error(`There is no beer with id ${toDoId}`));
+
+async function createOne({ body }, res) {
+  try {
+    const createdProduct = await Product.create(body);
+    res.json(createdProduct);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
   }
 }
-function getOneBeer({ beer }, res) {
-  return res.send(beer);
-}
-async function putOneBeer(req, res) {
-  const dataToUpdate = req.body;
-  const { beerId } = req.params;
-  const updatedBeer = await Beer.findByIdAndUpdate(
-    beerId,
-    dataToUpdate,
-    { new: true },
-  );
-  return res.send(updatedBeer);
-}
-async function deleteOneBeer(req, res) {
-  const { toDoId } = req.params;
 
-  const deletedTodo = await Beer.findByIdAndDelete(toDoId);
-
-  res.status(204);
-  return res.send(deletedTodo);
+async function getOneById(req, res) {
+  try {
+    res.send('getOneById works');
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
-async function getRandomBeer(req, res) {
-  const foundBeer = await Beer.aggregate().sample(1);
-  return res.send(foundBeer);
+async function updateOneById(req, res) {
+  try {
+    res.send('updateOneById works');
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
-async function getRandomNonAlcoBeer(req, res) {
-  const foundBeer = await Beer.aggregate().match({ abv: { $lte: 5 } }).sample(1);
-  return res.send(foundBeer);
+
+async function deleteOneById({ params: { productId } }, res) {
+  try {
+    await Product.findByIdAndDelete(productId);
+    res.status(204);
+    res.send();
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
+
 module.exports = {
-  getBeers,
-  postBeer,
-  getOneBeer,
-  putOneBeer,
-  deleteOneBeer,
-  findOneBeer,
-  getRandomBeer,
-  getRandomNonAlcoBeer,
+  getAll,
+  createOne,
+  getOneById,
+  updateOneById,
+  deleteOneById,
 };
