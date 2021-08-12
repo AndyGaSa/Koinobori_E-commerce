@@ -20,18 +20,21 @@ async function createOne({ body }, res) {
   }
 }
 
-async function getOneById(req, res) {
+async function getOneById(req, res, next) {
+  const { productId } = req.params;
   try {
-    res.send('getOneById works');
+    const product = await Product.findById({ id: +productId });
+    req.product = product;
+    next();
   } catch (error) {
-    res.status(500);
-    res.send(error);
+    res.status(404);
+    res.send(new Error(`There is no product with id ${productId}`));
   }
 }
 
 async function updateOneById(req, res) {
   try {
-    res.send('updateOneById works');
+    res.send();
   } catch (error) {
     res.status(500);
     res.send(error);
