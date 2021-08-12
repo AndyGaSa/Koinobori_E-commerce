@@ -1,45 +1,58 @@
 const User = require('../models/userModel');
 
-async function postUser(req, res) {
+async function getAll({ query }, res) {
   try {
-    const newUser = await User.create(req.body);
-    return res.send(newUser);
+    const users = await User.find(query);
+    res.json(users);
   } catch (error) {
-    res.status(404);
-    return res.send(new Error('The user has not been created'));
+    res.status(500);
+    res.send(error);
   }
 }
 
-async function getUser({ query }, res) {
+async function createOne({ body }, res) {
   try {
-    const foundUser = await User.find(query);
-    return res.send(foundUser);
+    const createdUser = await User.create(body);
+    res.json(createdUser);
   } catch (error) {
-    res.status(404);
-    return res.send(new Error('There are no users'));
+    res.status(500);
+    res.send(error);
   }
 }
 
-async function findOneUser(req, res, next) {
-  const { userId } = req.params;
-
+async function getOneById(req, res) {
   try {
-    const user = await User.findById({ id: +userId });
-    req.user = user;
-    next();
+    res.send('getOneById works');
   } catch (error) {
-    res.status(404);
-    res.send(new Error(`There is no user with id ${userId}`));
+    res.status(500);
+    res.send(error);
   }
 }
 
-function getOneUser({ user }, res) {
-  return res.send(user);
+async function updateOneById(req, res) {
+  try {
+    res.send('updateOneById works');
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
+async function deleteOneById({ params: { userId } }, res) {
+  try {
+    await User.findByIdAndDelete(userId);
+    res.status(204);
+    res.send();
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 module.exports = {
-  postUser,
-  getUser,
-  findOneUser,
-  getOneUser
+  getAll,
+  createOne,
+  getOneById,
+  updateOneById,
+  deleteOneById
 };
