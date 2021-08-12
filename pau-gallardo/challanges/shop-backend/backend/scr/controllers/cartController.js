@@ -1,5 +1,6 @@
 const debug = require('debug')('shopApi');
 const Cart = require('../models/cartModel');
+const Product = require('../models/productModel');
 
 async function getCarts({ query }, res) {
   try {
@@ -12,10 +13,21 @@ async function getCarts({ query }, res) {
 }
 
 async function postCarts(req, res) {
+  const productId = req.body.products[0].product;
   try {
-    const findUsers = await Cart.find({ user: req.body.user });
-    res.send(findUsers);
-    res.status(200);
+    const foundUsers = await Cart.findOne({ user: req.body.user });
+    const foundProduct = await Product.findById(productId);
+
+    if (foundUsers) {
+      foundUsers.products.push(req.body.products[0]);
+      const updatedProduct = await Product.findByIdAndUpdate(
+        productId,
+        { stock: foundProduct.stock - foundUsers.products[0].amount },
+        { new: true },
+      );
+      res.send(updatedProduct);
+      res.status(200);
+    }
   } catch (error) {
     res.send(500);
   }
