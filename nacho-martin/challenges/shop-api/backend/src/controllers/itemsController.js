@@ -1,9 +1,8 @@
 const Item = require('../models/itemsModel');
 
 async function getItems({ query }, res) {
-  const items = await Item.find(query);
-
   try {
+    const items = await Item.find(query);
     res.json(items);
   } catch (error) {
     res.status(404);
@@ -12,8 +11,13 @@ async function getItems({ query }, res) {
 }
 
 async function createItem(req, res) {
-  const newItem = await Item.create(req.body);
-  res.send(newItem);
+  try {
+    const newItem = await Item.create(req.body);
+    res.json(newItem);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 async function updateItem({ params }, res) {
@@ -27,8 +31,19 @@ async function updateItem({ params }, res) {
   }
 }
 
-async function deleteItem({ params }, res) {
-  const item = await Item.findByIdAndDelete(params);
+async function getById({ params }, res) {
+  const items = await Item.findById(params);
+
+  try {
+    res.json(items);
+  } catch (error) {
+    res.status(404);
+    res.send(error);
+  }
+}
+
+async function deleteItem({ params: itemId }, res) {
+  const item = await Item.findByIdAndDelete(itemId);
 
   try {
     res.status(201);
@@ -41,6 +56,7 @@ async function deleteItem({ params }, res) {
 module.exports = {
   getItems,
   createItem,
+  getById,
   updateItem,
   deleteItem
 };
