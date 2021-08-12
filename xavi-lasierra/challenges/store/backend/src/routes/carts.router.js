@@ -15,7 +15,7 @@ cartsRouter
   .post(createCart);
 
 cartsRouter
-  .route('/')
+  .route('/:cartId')
   .get(getCartById)
   .put(updateCartById)
   .delete(deleteCartById);

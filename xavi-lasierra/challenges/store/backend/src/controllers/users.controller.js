@@ -11,7 +11,7 @@ async function getUsers({ query }, res) {
   }
 }
 
-async function postUser({ body }, res) {
+async function createUser({ body }, res) {
   try {
     const newUser = await User.create(body);
 
@@ -31,13 +31,20 @@ function updateUserById(req, res) {
   res.send('a');
 }
 
-function deleteUserById(req, res) {
-  res.send('a');
+async function deleteUserById({ params: { userId } }, res) {
+  try {
+    await User.findByIdAndDelete(userId);
+    res.status(204);
+    res.send();
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 module.exports = {
   getUsers,
-  postUser,
+  createUser,
   getOneUserById,
   updateUserById,
   deleteUserById

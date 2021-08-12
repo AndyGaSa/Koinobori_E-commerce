@@ -11,7 +11,7 @@ async function getProducts({ query }, res) {
   }
 }
 
-async function postProduct({ body }, res) {
+async function createProduct({ body }, res) {
   try {
     const newProduct = await Product.create(body);
 
@@ -48,13 +48,20 @@ function updateOneProductById(req, res) {
   res.send('a');
 }
 
-function deleteOneProductById(req, res) {
-  res.send('a');
+async function deleteOneProductById({ params: { productId } }, res) {
+  try {
+    await Product.findByIdAndDelete(productId);
+    res.status(204);
+    res.send();
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 module.exports = {
   getProducts,
-  postProduct,
+  createProduct,
   findOneProductById,
   getOneProductById,
   updateOneProductById,

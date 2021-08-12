@@ -1,7 +1,7 @@
 const express = require('express');
 const {
   getProducts,
-  postProduct,
+  createProduct,
   findOneProductById,
   getOneProductById,
   updateOneProductById,
@@ -13,7 +13,7 @@ const productsRouter = express.Router();
 productsRouter
   .route('/')
   .get(getProducts)
-  .post(postProduct);
+  .post(createProduct);
 
 productsRouter
   .route('/:productId')
