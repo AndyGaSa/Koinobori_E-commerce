@@ -1,6 +1,6 @@
 const { model, Schema } = require('mongoose');
 
-const cartItemSchema = Schema({
+const cartSchema = Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User' },
   products: [
     {
@@ -10,4 +10,4 @@ const cartItemSchema = Schema({
   ]
 });
 
-module.exports = model('CartItem', cartItemSchema);
+module.exports = model('Cart', cartSchema);

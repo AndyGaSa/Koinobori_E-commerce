@@ -1,9 +1,9 @@
 const { model, Schema } = require('mongoose');
 
-const productItemSchema = Schema({
+const productSchema = Schema({
   name: String,
   price: Number,
   stock: Number
 });
 
-module.exports = model('Product', productItemSchema);
+module.exports = model('Product', productSchema);
