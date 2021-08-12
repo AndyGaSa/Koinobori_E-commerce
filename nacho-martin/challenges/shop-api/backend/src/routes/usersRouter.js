@@ -9,8 +9,9 @@ usersRouter
   .post(usersController.createUser);
 
 usersRouter
-  .route('/:id')
-  .get(usersController.updateUser)
-  .delete(usersController.deleteUser);
+  .route('/:userId')
+  .get(usersController.getOneUser)
+  .delete(usersController.deleteUser)
+  .put(usersController.updateUser);
 
 module.exports = usersRouter;
