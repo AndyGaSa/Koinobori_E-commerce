@@ -1,4 +1,5 @@
 const Cart = require('../models/cart.model');
+const Product = require('../models/product.model');
 
 async function getCarts({ query }, res) {
   try {
@@ -14,15 +15,47 @@ async function getCarts({ query }, res) {
   }
 }
 
+async function stockCheck(products, res) {
+  products.forEach(async (product) => {
+    const productFound = await Product.findById(product.product);
+    if (!productFound) {
+      res.status(404);
+      res.send(new Error('Product not found'));
+      return false;
+    }
+    if (productFound.stock < product.amount) {
+      res.send(new Error(`Not enougth stock in product ${productFound.name}`));
+      return false;
+    }
+    await Product.findByIdAndUpdate(
+      product.product,
+      { stock: productFound.stock - product.amount }
+    );
+  });
+  return true;
+}
+
 async function postCart({ body }, res) {
   try {
-    const newCart = await Cart.create(body);
+    if (await stockCheck(body.products, res)) {
+      let newCart;
+      if (await Cart.findOne({ user: body.user })) {
+        newCart = await Cart.findOneAndUpdate(
+          { user: body.user },
+          { $push: { products: body.products } },
+          { new: true }
+        );
+      } else {
+        newCart = await Cart.create(body);
+      }
 
-    res.status(201);
-    return res.json(newCart);
+      res.status(201);
+      res.json(newCart);
+    }
+    res.send();
   } catch (error) {
     res.status(500);
-    return res.send(error);
+    res.send(error);
   }
 }
 

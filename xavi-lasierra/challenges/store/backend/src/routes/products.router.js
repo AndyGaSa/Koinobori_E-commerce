@@ -8,4 +8,9 @@ productsRouter
   .get(productsController.getProducts)
   .post(productsController.postProduct);
 
+productsRouter
+  .route('/:productId')
+  .all(productsController.findOneProduct)
+  .get(productsController.getOneProduct);
+
 module.exports = productsRouter;

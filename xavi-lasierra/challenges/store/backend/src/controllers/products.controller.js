@@ -23,7 +23,30 @@ async function postProduct({ body }, res) {
   }
 }
 
+async function findOneProduct(req, res, next) {
+  try {
+    const { productId } = req.params;
+    const product = await Product.findById(productId);
+
+    if (product) {
+      req.product = product;
+      return next();
+    }
+    res.status(404);
+    return res.send(new Error(`There is no beer with id ${productId}`));
+  } catch (error) {
+    res.status(500);
+    return res.send(error);
+  }
+}
+
+function getOneProduct({ product }, res) {
+  res.json(product);
+}
+
 module.exports = {
   getProducts,
-  postProduct
+  postProduct,
+  findOneProduct,
+  getOneProduct
 };
