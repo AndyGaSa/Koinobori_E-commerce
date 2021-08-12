@@ -1,0 +1,45 @@
+$verde: rgb(0, 229.5, 0);
+
+*, *::after, *::before {
+    margin: 0px; 
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header__top {
+    height: 80px;
+    width: 100vw;
+    position: fixed;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(242, 242, 242);
+    display: flex; 
+    justify-content: space-between;
+}
+
+.header__bottom {
+    height: 120px;
+    width: 100vw;
+}
+
+.header__aux {
+    margin-left: 160px;
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.sonary__icon {
+    margin-top: 20px;
+    height: 40px;
+}
+
+.profile__icon {
+    margin-right: 160px;
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: $verde;
+}
