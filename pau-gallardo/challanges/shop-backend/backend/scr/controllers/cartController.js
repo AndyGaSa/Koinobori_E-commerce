@@ -14,18 +14,28 @@ async function getCarts({ query }, res) {
 
 async function postCarts(req, res) {
   const productId = req.body.products[0].product;
+
   try {
-    const foundUsers = await Cart.findOne({ user: req.body.user });
+    const foundCart = await Cart.findOne({ user: req.body.user });
     const foundProduct = await Product.findById(productId);
 
-    if (foundUsers) {
-      foundUsers.products.push(req.body.products[0]);
-      const updatedProduct = await Product.findByIdAndUpdate(
+    if (foundCart) {
+      foundCart.products.push(req.body.products[0]);
+      await Product.findByIdAndUpdate(
         productId,
-        { stock: foundProduct.stock - foundUsers.products[0].amount },
+        { stock: foundProduct.stock - req.body.products[0].amount },
         { new: true },
       );
-      res.send(updatedProduct);
+      res.send(foundCart);
+      res.status(200);
+    } else {
+      const newCart = await Cart.create(req.body);
+      await Product.findByIdAndUpdate(
+        productId,
+        { stock: foundProduct.stock - req.body.products[0].amount },
+        { new: true },
+      );
+      res.send(newCart);
       res.status(200);
     }
   } catch (error) {
