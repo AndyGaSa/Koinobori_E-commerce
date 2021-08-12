@@ -1,16 +1,20 @@
 const controller = require('./beersController');
 const Beer = require('../../models/beerModel');
 
-jest.mock = require('../../models/beerModel');
+jest.mock('../../models/beerModel');
 
 describe('Given a getBeers function', () => {
   describe('When triggered', () => {
     describe('And is resolved', () => {
       test('Should call res.json', async () => {
-        const res = { json: jest.fn() };
+        const res = {
+          json: jest.fn(),
+          status: jest.fn(),
+          send: jest.fn()
+        };
         const req = { query: {} };
 
-        Beer.create.mockResolvedValue();
+        Beer.find.mockResolvedValue({});
 
         await controller.getBeers(req, res);
 
@@ -22,7 +26,7 @@ describe('Given a getBeers function', () => {
         const res = { status: jest.fn() };
         const req = { query: {} };
 
-        Beer.find.mockRejectedValue();
+        Beer.find.mockRejectedValue(null);
 
         await controller.getBeers(req, res);
 
@@ -39,7 +43,7 @@ describe('Given a postBeer function', () => {
         const res = { status: jest.fn(), json: jest.fn() };
         const req = { body: {} };
 
-        Beer.create.mockResolvedValue();
+        Beer.create.mockResolvedValue({});
 
         await controller.postBeer(req, res);
 
@@ -51,7 +55,7 @@ describe('Given a postBeer function', () => {
         const res = { status: jest.fn() };
         const req = { query: {} };
 
-        Beer.create.mockRejectedValue();
+        Beer.create.mockRejectedValue(null);
 
         await controller.postBeer(req, res);
 
@@ -81,7 +85,7 @@ describe('Given a deleteOneBeer function', () => {
         const res = { status: jest.fn(), send: jest.fn() };
         const req = { params: { beerId: {} } };
 
-        Beer.findByIdAndDelete.mockResolvedValue();
+        Beer.findByIdAndDelete.mockResolvedValue(null);
 
         await controller.deleteOneBeer(req, res);
 
@@ -93,7 +97,7 @@ describe('Given a deleteOneBeer function', () => {
         const res = { status: jest.fn(), send: jest.fn() };
         const req = { params: { beerId: {} } };
 
-        Beer.create.mockRejectedValue();
+        Beer.create.mockRejectedValue(null);
 
         await controller.deleteOneBeer(req, res);
 
@@ -110,7 +114,7 @@ describe('Given a updateOneBeer function', () => {
         const res = { status: jest.fn(), send: jest.fn() };
         const req = { params: { beerId: {} }, body: {} };
 
-        Beer.findByIdAndUpdate.mockResolvedValue();
+        Beer.findByIdAndUpdate.mockResolvedValue({});
 
         await controller.updateOneBeer(req, res);
 
@@ -122,7 +126,7 @@ describe('Given a updateOneBeer function', () => {
         const res = { status: jest.fn(), send: jest.fn() };
         const req = { params: { beerId: {} } };
 
-        Beer.create.mockRejectedValue();
+        Beer.create.mockRejectedValue(null);
 
         await controller.updateOneBeer(req, res);
 
@@ -140,7 +144,7 @@ describe('Given a filterOneBeer function', () => {
         const req = { params: { beerId: {} }, beer: {} };
         const next = jest.fn();
 
-        Beer.findByIdAndDelete.mockResolvedValue();
+        Beer.findByIdAndDelete.mockResolvedValue({});
 
         await controller.filterOneBeer(req, res, next);
 
@@ -153,7 +157,7 @@ describe('Given a filterOneBeer function', () => {
         const req = { params: { beerId: {} } };
         const next = jest.fn();
 
-        Beer.findByIdAndDelete.mockRejectedValue();
+        Beer.findByIdAndDelete.mockRejectedValue(null);
 
         await controller.filterOneBeer(req, res, next);
 
