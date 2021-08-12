@@ -1,3 +1,4 @@
+const debug = require('debug')('shopApi');
 const Cart = require('../models/cartModel');
 
 async function getCarts({ query }, res) {
@@ -5,7 +6,6 @@ async function getCarts({ query }, res) {
     const foundCarts = await Cart.find(query).populate('user');
 
     res.send(foundCarts);
-    res.status(200);
   } catch (error) {
     res.status(500);
   }
@@ -13,10 +13,9 @@ async function getCarts({ query }, res) {
 
 async function postCarts(req, res) {
   try {
-    const newCart = await Cart.create(req.body);
-
+    const findUsers = await Cart.find({ user: req.body.user });
+    res.send(findUsers);
     res.status(200);
-    res.send(newCart);
   } catch (error) {
     res.send(500);
   }
