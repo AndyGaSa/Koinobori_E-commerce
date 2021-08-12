@@ -23,13 +23,13 @@ const getProducts = async ({ query }, res) => {
 };
 
 const putOneProduct = async (req, res) => {
-  const ProductToUpdate = req.body;
+  const productToUpdate = req.body;
   const { productId } = req.params;
 
   try {
     const updateProduct = await Product.findByIdAndUpdate(
       productId,
-      ProductToUpdate,
+      productToUpdate,
       { new: true }
     );
 
