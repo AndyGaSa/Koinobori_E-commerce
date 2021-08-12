@@ -26,3 +26,26 @@ next()
   }
 };
 */
+
+function getAll(req, res) {
+  res.send();
+}
+
+function createOne(req, res) {
+  res.send();
+}
+
+function findOneCart(req, res) {
+  res.json();
+}
+
+function getOneCartById(req, res) {
+  res.send();
+}
+module.exports = {
+  getAll,
+  findOneCart,
+  createOne,
+  getOneCartById
+
+};

@@ -1,8 +1,8 @@
 const Product = require('../models/productModel');
 
-const postProduct = async (req, res) => {
+const postProduct = async ({ body }, res) => {
   try {
-    const newProduct = await Product.create(req.body);
+    const newProduct = await Product.create(body);
     res.status(201);
     res.json(newProduct);
   } catch (error) {
