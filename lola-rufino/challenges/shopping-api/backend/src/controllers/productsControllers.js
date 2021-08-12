@@ -1,32 +1,60 @@
-const debug = require('debug')('tasks:controller');
-const Products = require('../models/productsModel');
+const Products = require('../models/productModel');
 
 const getProducts = async ({ query }, res) => {
-  const allProducts = await Products.find(query);
-  res.send(allProducts);
+  try {
+    const allProducts = await Products.find(query);
+    res.send(allProducts);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 };
 
-const postProducts = async (req, res) => {
-  debug(req.body);
-  const newProduct = await Products.create(req.body);
-  res.send(newProduct);
+const postProducts = async ({ body }, res) => {
+  try {
+    const newProduct = await Products.create(body);
+    res.json(newProduct);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+};
+
+const getProduct = async ({ params: { productId } }, res) => {
+  try {
+    const newProduct = await Products.findById(productId);
+    res.json(newProduct);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 };
 
 const deleteProduct = async ({ params: { productId } }, res) => {
-  const deletedProduct = await Products.findByIdAndDelete(productId);
-  res.send(deletedProduct);
+  try {
+    const deletedProduct = await Products.findByIdAndDelete(productId);
+    res.status(204);
+    res.send(deletedProduct);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 };
 
-const updateProduct = async (req, res) => {
-  const { productId } = req.params;
-  const { body } = req;
-  const updatedProduct = await Products.findByIdAndUpdate(productId, body, { new: true });
-  res.send(updatedProduct);
+const updateProduct = async ({ params: { productId }, body }, res) => {
+  try {
+    const updatedProduct = await Products.findByIdAndUpdate(productId, body, { new: true });
+    res.json(updatedProduct);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 };
 
 module.exports = {
   getProducts,
   postProducts,
+  getProduct,
   deleteProduct,
   updateProduct
 };
