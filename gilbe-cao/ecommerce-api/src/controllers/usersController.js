@@ -1,21 +1,52 @@
-function getAll(req, res) {
-  res.send('getAll works');
+const User = require('../models/userModel');
+
+async function getAll({ query }, res) {
+  try {
+    const users = await User.find(query);
+    res.json(users);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
-function createOne(req, res) {
-  res.send('createOne works');
+async function createOne({ body }, res) {
+  try {
+    const createdUser = await User.create(body);
+    res.json(createdUser);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
-function getOneById(req, res) {
-  res.send('getOneById works');
+async function getOneById(req, res) {
+  try {
+    res.send('getOneById works');
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
-function updateOneById(req, res) {
-  res.send('updateOneById works');
+async function updateOneById(req, res) {
+  try {
+    res.send('updateOneById works');
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
-function deleteOneById(req, res) {
-  res.send('deleteOneById works');
+async function deleteOneById({ params: { userId } }, res) {
+  try {
+    await User.findByIdAndDelete(userId);
+    res.status(204);
+    res.send();
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 module.exports = {

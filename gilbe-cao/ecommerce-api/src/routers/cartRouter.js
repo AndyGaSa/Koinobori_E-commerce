@@ -3,6 +3,7 @@ const {
   getAll,
   createOne,
   getOneById,
+  deleteOneById,
 } = require('../controllers/cartController');
 
 const cartRouter = new Router();
@@ -14,6 +15,7 @@ cartRouter
 
 cartRouter
   .route('/:cartId')
-  .get(getOneById);
+  .get(getOneById)
+  .delete(deleteOneById);
 
 module.exports = cartRouter;
