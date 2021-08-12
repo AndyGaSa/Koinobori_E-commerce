@@ -2,7 +2,7 @@ const Cart = require('../models/cartModel');
 
 async function getCarts({ query }, res) {
   try {
-    const foundCarts = await Cart.find(query);
+    const foundCarts = await Cart.find(query).populate('user');
 
     res.send(foundCarts);
     res.status(200);
@@ -22,7 +22,23 @@ async function postCarts(req, res) {
   }
 }
 
+async function deleteOneCart(req, res) {
+  const { cardId } = req.params;
+
+  getCarts.findByIdAndDelete(cardId);
+  try {
+    await Cart.findByIdAndDelete(cardId);
+
+    res.status(204);
+    res.send();
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
 module.exports = {
   getCarts,
   postCarts,
+  deleteOneCart,
 };

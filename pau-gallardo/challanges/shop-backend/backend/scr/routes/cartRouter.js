@@ -6,6 +6,7 @@ const cartsRouter = express.Router();
 cartsRouter
   .route('/')
   .get(cartController.getCarts)
-  .post(cartController.postCarts);
+  .post(cartController.postCarts)
+  .delete(cartController.deleteOneCart);
 
 module.exports = cartsRouter;
