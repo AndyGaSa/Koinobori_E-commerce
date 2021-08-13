@@ -1,9 +1,15 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable no-underscore-dangle */
 const Cart = require('../models/cartModel');
-const Item = require('../models/itemsModel');
 
 async function createOne({ body }, res) {
   try {
+    const { user } = body;
+    const cart = Cart.findOne({ userId: user });
+    if (cart) {
+      const updatedCart = await Cart.findByIdAndUpdate(cart._id,
+        { $inc: { amount: body.products[0].amount } },
+        { new: true });
+    }
     const newCart = await Cart.create(body);
     res.json(newCart);
   } catch (error) {
@@ -37,14 +43,15 @@ async function deleteById({ params: cartId }, res) {
 async function updateById(req, res) {
   try {
     const { cartId } = req.params;
-    const cartToUpdate = await Cart.findById(cartId);
+    const cartToUpdate = await Cart.findById(cartId)
+      .populate('products.item');
+
     const { itemId } = req.body;
-    const productToUpdate = await Item.findByIdAndUpdate(itemId);
-    res.json(cartToUpdate);
+    const itemToUpdate = cartToUpdate.products.filter(({ _id }) => _id.toString() === itemId);
+    res.json(itemToUpdate);
   } catch (error) {
     res.send(error);
   }
-  res.json();
 }
 
 module.exports = {
