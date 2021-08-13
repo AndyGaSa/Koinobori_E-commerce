@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    .main{
+        background-color: #053225;
+        color: #E34A6F;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Stylish', sans-serif;
+        height: 100vh;
+        .main__title{
+            font-size: 60px;
+            padding-top: 30px;
+        }
+        .main__container{
+            padding: 30px;
+            font-size: 20px;
+            width: 50vw;
+            display: flex;
+            justify-content: space-around;
+            color: #B2A198;
+        }
+    }
+}
