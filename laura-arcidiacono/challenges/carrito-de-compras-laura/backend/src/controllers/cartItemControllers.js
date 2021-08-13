@@ -25,8 +25,11 @@ async function createOne({ body }, res) {
   }
 }
 async function getOneById(req, res) {
+  const { query } = req;
+  const { cartId } = query;
   try {
-    res.send('getOneById works');
+    const carts = await Cart.findById(cartId);
+    res.json(carts);
   } catch (error) {
     res.status(500);
     res.send(error);
