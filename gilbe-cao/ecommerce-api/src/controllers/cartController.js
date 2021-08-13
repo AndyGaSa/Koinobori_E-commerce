@@ -11,15 +11,26 @@ async function createOne({ body }, res) {
           ({ product }) => product.toString() === current.product,
         );
 
-        if (existingProduct) {
-          existingProduct.amount += current.amount;
-        } else {
-          userCart.products.push(current);
+        const isStockAvailable = await Product.findOneAndUpdate(
+          {
+            _id: current.product,
+            stock: { $gte: current.amount },
+          },
+          {
+            $inc: { stock: -current.amount },
+          },
+        );
+
+        if (isStockAvailable) {
+          if (existingProduct) {
+            existingProduct.amount += current.amount;
+          } else {
+            userCart.products.push(current);
+          }
+          await userCart.save();
         }
-        await Product.findByIdAndUpdate(current.product, { $inc: { stock: -current.amount } });
       });
 
-      userCart.save();
       res.send(userCart);
     } else {
       const createdCartItem = await Cart.create(body);
