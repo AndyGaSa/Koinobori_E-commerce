@@ -59,6 +59,12 @@ async function deleteProduct(req, res) {
 async function getProductById(req, res) {
   try {
     debug('getProductById');
+
+    debug(`req: ${req}`);
+    debug(`res: ${res}`);
+
+    debug(`ProductID: ${req.params.productId}`);
+
     const productById = await Product.findById(req.params.productId);
     res.status(200);
     return res.json(productById);
@@ -68,10 +74,52 @@ async function getProductById(req, res) {
   }
 }
 
+async function checkStock(productId, amountToBuy) {
+  try {
+    let response = false;
+    debug('checkStock');
+    debug(`productId: ${productId}`);
+    debug(`amountToBuy: ${amountToBuy}`);
+
+    const productById = await Product.findById(productId);
+
+    debug(`productById: ${productById}`);
+
+    if (productById.stock > 0 && productById.stock >= amountToBuy) {
+      response = true;
+    }
+    return response;
+  } catch (error) {
+    debug(`An error occurred while getting an element: ${error}`);
+    return false;
+  }
+}
+
+async function updateStock(productId, amount) {
+  try {
+    debug('checkStock');
+    debug(`productId: ${productId}`);
+    debug(`amountToBuy: ${amount}`);
+
+    const amountToUpdate = { $inc: { stock: -amount } };
+
+    const prUpdated = await Product.findByIdAndUpdate(productId, amountToUpdate, { new: true });
+
+    debug(`productUpdated: ${prUpdated}`);
+
+    return true;
+  } catch (error) {
+    debug(`An error occurred while getting an element: ${error}`);
+    return false;
+  }
+}
+
 module.exports = {
   getProducts,
   setProduct,
   updateProduct,
   deleteProduct,
-  getProductById
+  getProductById,
+  checkStock,
+  updateStock
 };
