@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 const debug = require('debug')('shopApi:cartController');
+const { Model } = require('mongoose');
 const Cart = require('../models/cartModel');
 const Product = require('../models/productModel');
 
@@ -14,7 +15,7 @@ async function getCarts({ query }, res) {
 }
 
 async function updateStock(model, id, req, foundProduct) {
-  await Product.findByIdAndUpdate(
+  await model.findByIdAndUpdate(
     id,
     { stock: foundProduct.stock - req.body.products[0].amount },
     { new: true },
