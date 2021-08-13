@@ -20,9 +20,12 @@ async function createOne({ body }, res) {
   }
 }
 
-async function getOneById(req, res) {
+async function getOneById({ query }, res) {
   try {
-    res.send('getOneById works');
+    const { userId } = query;
+    const findUser = await User.findById(userId);
+    res.json(findUser);
+    res.send(204);
   } catch (error) {
     res.status(500);
     res.send(error);
@@ -30,11 +33,18 @@ async function getOneById(req, res) {
 }
 
 async function updateOneById(req, res) {
+  const { body } = req;
+  const { params: { user } } = req;
   try {
-    res.send('updateOneById works');
+    const updatedUser = await User.findByIdAndUpdate(
+      user,
+      body,
+      { new: true },
+    );
+    return res.json(updatedUser);
   } catch (error) {
     res.status(500);
-    res.send(error);
+    return res.send(error);
   }
 }
 

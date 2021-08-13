@@ -20,18 +20,12 @@ async function createOne({ body }, res) {
   }
 }
 
-async function getOneById(req, res) {
+async function getOneById({ query }, res) {
   try {
-    res.send('getOneById works');
-  } catch (error) {
-    res.status(500);
-    res.send(error);
-  }
-}
-
-async function updateOneById(req, res) {
-  try {
-    res.send('updateOneById works');
+    const { productId } = query;
+    const findProduct = await Product.findById(productId);
+    res.json(findProduct);
+    res.send(204);
   } catch (error) {
     res.status(500);
     res.send(error);
@@ -46,6 +40,22 @@ async function deleteOneById({ params: { productId } }, res) {
   } catch (error) {
     res.status(500);
     res.send(error);
+  }
+}
+
+async function updateOneById(req, res) {
+  const { body } = req;
+  const { params: { productId } } = req;
+  try {
+    const updatedProduct = await Product.findByIdAndUpdate(
+      productId,
+      body,
+      { new: true },
+    );
+    return res.json(updatedProduct);
+  } catch (error) {
+    res.status(500);
+    return res.send(error);
   }
 }
 

@@ -1,20 +1,5 @@
 const Cart = require('../models/cartModel');
 
-async function getAll({ query }, res) {
-  try {
-    const cartItems = await Cart.find(query)
-      .populate('user')
-      .populate({
-        path: 'products.product',
-        select: ['price', 'stock', 'name'],
-      });
-
-    res.json(cartItems);
-  } catch (error) {
-    res.status(500);
-    res.send(error);
-  }
-}
 async function createOne({ body }, res) {
   try {
     const createdCartItem = await Cart.create(body);
@@ -24,9 +9,31 @@ async function createOne({ body }, res) {
     res.send(error);
   }
 }
-async function getOneById(req, res) {
+
+async function getAll({ query }, res) {
   try {
-    res.send('getOneById works');
+    const cartItems = await Cart.find(query)
+      .populate('user')
+      .populate({
+        path: 'products.product',
+        select: ['name', 'price', 'stock'],
+      });
+
+    res.json(cartItems);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
+async function getOneById({ params }, res) {
+  try {
+    const { cartId } = params;
+    const findCart = await Cart.findById(cartId)
+      .populate('user')
+      .populate('products.product');
+    res.json(findCart);
+    res.send(204);
   } catch (error) {
     res.status(500);
     res.send(error);

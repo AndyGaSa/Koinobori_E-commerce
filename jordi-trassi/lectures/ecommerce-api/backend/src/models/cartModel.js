@@ -6,8 +6,7 @@ const cartSchema = Schema({
     {
       product: { type: Schema.Types.ObjectId, ref: 'Product' },
       amount: Number,
-    },
-  ],
+    }],
 });
 
 module.exports = model('Cart', cartSchema);
