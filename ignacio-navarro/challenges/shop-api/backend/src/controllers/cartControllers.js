@@ -1,3 +1,4 @@
+/* eslint-disable no-else-return */
 const Cart = require('../models/cartModel');
 
 async function getCart({ query }, res) {
@@ -18,34 +19,40 @@ async function getCart({ query }, res) {
 }
 
 async function postCart(req, res) {
-  console.log('creando carro');
   const newCart = await Cart.create(req.body);
   return res.send(newCart);
 }
 
-function updateCart(foundCart, body, res) {
-  const foundItem = foundCart.items.find((
-    currentProduct,
-  ) => JSON.stringify(currentProduct.item) === JSON.stringify(body.items[0].item));
-  if (foundItem) {
-    const newCart = foundCart;
-    newCart.items.amount = foundCart.items.amount + body.items[0].amount;
-    return res.send(newCart);
-  }
-  return res.send(foundCart);
+function updateCart(foundCart, body, res, cartId) {
+  const itemsIds = foundCart.items.map((item) => String(item.item));
+  const updatedItems = body.items.map((currentItem, index) => {
+    const isItemInDDBB = itemsIds.includes(String(currentItem.item));
+    if (isItemInDDBB) {
+      return {
+        // eslint-disable-next-line no-underscore-dangle
+        _id: currentItem._id,
+        item: currentItem.item,
+        amount: currentItem.amount + foundCart.items[index].amount, // ??cantidad en front end
+      };
+    } else {
+      return currentItem;
+    }
+  });
+  const response = {
+    _id: String(cartId),
+    user: foundCart.user,
+    items: updatedItems,
+  };
+  const newCart = Cart.findByIdAndUpdate(cartId, response);
+  return res.send(newCart);
 }
 
 async function createModifyCart(req, res) {
   const { cartId } = req.params;
   const foundCart = await Cart.findById(cartId);
   return (foundCart !== null)
-    ? updateCart(foundCart, req.body, res)
+    ? updateCart(foundCart, req.body, res, cartId)
     : postCart(req, res);
-
-  // const newItem = req.body.items;
-  // const newData = mainData.items.push(newItem);
-  // const newCart = Cart.findByIdAndUpdate(cartId, mainData, { new: true });
-  // return res.send(newCart);
 }
 
 module.exports = {
