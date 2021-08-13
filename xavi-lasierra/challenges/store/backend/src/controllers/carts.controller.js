@@ -14,30 +14,21 @@ async function getCarts({ query }, res) {
   }
 }
 
-function updateCart(body, products) {
-  const newProducts = products;
-  const foundProductIndex = newProducts
-    .findIndex(({ product }) => product.toString() === body.products[0].product);
+function updateCart(body, existingCart) {
+  const cart = existingCart;
 
-  if (foundProductIndex !== -1) {
-    newProducts[foundProductIndex].amount += body.products[0].amount;
+  body.products.forEach((productToAdd) => {
+    const foundProduct = cart.products
+      .find(({ product }) => product.toString() === productToAdd.product);
 
-    return Cart.findOneAndUpdate(
-      { user: body.user },
-      { products: newProducts },
-      { new: true }
-    );
-  }
+    if (foundProduct) {
+      foundProduct.amount += productToAdd.amount;
+    } else {
+      cart.products.push(productToAdd);
+    }
+  });
 
-  return Cart.findOneAndUpdate(
-    { user: body.user },
-    {
-      $push: {
-        products: body.products
-      }
-    },
-    { new: true }
-  );
+  return cart.save();
 }
 
 function updateStock(updatedProduct) {
@@ -48,18 +39,17 @@ function updateStock(updatedProduct) {
   );
 }
 
-async function createCart({ body }, res) {
+async function createUpdateCart({ body }, res) {
   try {
     let newCart;
     const existingCart = await Cart.findOne({ user: body.user });
     if (existingCart) {
-      newCart = await updateCart(body, existingCart.products);
+      newCart = await updateCart(body, existingCart);
     } else {
       newCart = await Cart.create(body);
     }
 
     await updateStock(body.products[0]);
-
     res.status(201);
     res.json(newCart);
   } catch (error) {
@@ -102,7 +92,7 @@ async function deleteCartById({ params: { cartId } }, res) {
 
 module.exports = {
   getCarts,
-  createCart,
+  createUpdateCart,
   findCartById,
   getCartById,
   deleteCartById
