@@ -1,0 +1,13 @@
+%small-image {
+    width: 4rem;
+}
+
+%medium-image {
+    width: 7rem;
+}
+
+%row-between-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

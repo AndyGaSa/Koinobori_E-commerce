@@ -1,0 +1,21 @@
+@import '../../styles/extensions', '../../styles/variables';
+
+.products{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    max-width: 100rem;
+
+    .products__product {
+        @extend %row-between-flex;
+        background-color: $list-element-color;
+        margin-bottom: 0.5rem;
+        padding: 1rem 5%;
+        border-radius: 0.5rem;
+
+
+        .product__image {
+            @extend %medium-image;
+        }
+    }
+}
