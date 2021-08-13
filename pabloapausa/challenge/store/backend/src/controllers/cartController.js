@@ -15,27 +15,49 @@ async function getAll({ query }, res) {
   }
 }
 
-async function createOne({ body }, res) {
+// POST, (body): createdCart.
+async function postOne({ body }, res) {
   try {
-    const newCart = await Cart.create(body);
-    return res.json(newCart);
+    const createdCart = await Cart.create(body);
+    return res.json(createdCart);
   } catch (error) {
     res.status(500);
     return res.send(error);
   }
 }
 
-// Pendant.
-async function getOneById(req, res) {
+// GET, (cartId) = cart.
+async function getOne(req, res, next) {
+  const { params: { cartId } } = req;
   try {
-    return res.send('getOneById is working');
+    const cart = await Cart.findById(cartId);
+    if (cart) {
+      req.cart = cart;
+      return next();
+    }
+    res.status(404);
+    return res.send(`Couldn't find cart by Id ${cartId}`);
   } catch (error) {
     res.status(500);
     return res.send(error);
   }
 }
 
-async function deleteOneById({ status: { cartId } }, res) {
+// PUT, (cartId, body): updatedCart.
+async function putOne(req, res) {
+  const [{ params: { cartId } }, { body }] = req;
+  try {
+    const updatedCart = await Cart
+      .findByIdAndUpdate(cartId, body, { new: true });
+    return res.json(updatedCart);
+  } catch (error) {
+    res.status(505);
+    return res.send(error);
+  }
+}
+
+// DELETE, (cartId).
+async function deleteOne({ status: { cartId } }, res) {
   try {
     await Cart.findByIdAndDelete(cartId);
     res.status(204);
@@ -48,7 +70,8 @@ async function deleteOneById({ status: { cartId } }, res) {
 
 module.exports = {
   getAll,
-  createOne,
-  getOneById,
-  deleteOneById,
+  postOne,
+  getOne,
+  putOne,
+  deleteOne,
 };

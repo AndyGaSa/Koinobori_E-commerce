@@ -1,9 +1,10 @@
 const { Router } = require('express');
 const {
   getAll,
-  createOne,
-  getOneById,
-  deleteOneById,
+  postOne,
+  getOne,
+  putOne,
+  deleteOne,
 } = require('../controllers/cartController');
 
 const cartRouter = new Router();
@@ -11,11 +12,12 @@ const cartRouter = new Router();
 cartRouter
   .route('/')
   .get(getAll)
-  .post(createOne);
+  .post(postOne);
 
 cartRouter
   .route('/cartId')
-  .get(getOneById)
-  .delete(deleteOneById);
+  .get(getOne)
+  .put(putOne)
+  .delete(deleteOne);
 
 module.exports = cartRouter;

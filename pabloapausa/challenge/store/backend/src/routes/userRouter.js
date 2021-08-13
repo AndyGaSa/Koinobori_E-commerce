@@ -1,11 +1,10 @@
-// const debug = require('debug')('store:userRouter');
 const { Router } = require('express');
 const {
   getAll,
-  createOne,
-  getOneById,
-  updateOneById,
-  deleteOneById,
+  postOne,
+  getOne,
+  putOne,
+  deleteOne,
 } = require('../controllers/userController');
 
 const userRouter = new Router();
@@ -13,12 +12,12 @@ const userRouter = new Router();
 userRouter
   .route('/')
   .get(getAll)
-  .post(createOne);
+  .post(postOne);
 
 userRouter
   .route('/:userId')
-  .get(getOneById)
-  .put(updateOneById)
-  .delete(deleteOneById);
+  .get(getOne)
+  .put(putOne)
+  .delete(deleteOne);
 
 module.exports = userRouter;

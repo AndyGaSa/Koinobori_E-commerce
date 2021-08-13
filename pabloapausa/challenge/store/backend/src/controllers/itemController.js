@@ -10,37 +10,49 @@ async function getAll({ query }, res) {
   }
 }
 
-async function createOne({ body }, res) {
+// POST, (body): 'createdItem'.
+async function postOne({ body }, res) {
   try {
-    const newItem = await Item.create(body);
-    return res.json(newItem);
+    const createdItem = await Item.create(body);
+    return res.json(createdItem);
   } catch (error) {
     res.status(500);
     return res.send(error);
   }
 }
 
-// Pendant.
-async function getOneById(req, res) {
+// GET, ('itemId'): 'item'.
+async function getOne(req, res, next) {
+  const { params: { itemId } } = req;
   try {
-    return res.send('getOneById is working');
+    const item = await Item.findById(itemId);
+    if (item) {
+      req.item = item;
+      return next();
+    }
+    res.status(500);
+    return res.send(`Couldn't find any item by Id ${itemId}`);
   } catch (error) {
     res.status(500);
     return res.send(error);
   }
 }
 
-// Pendant.
-async function updateOneById(req, res) {
+// PUT, ('body', 'itemId'): 'updatedItem'.
+async function putOne(req, res) {
+  const [{ params: { itemId } }, { body }] = req;
   try {
-    return res.send('updateOneById is working');
+    const updatedItem = await Item
+      .findByIdAndUpdate(itemId, body, { new: true });
+    return res.json(updatedItem);
   } catch (error) {
     res.status(500);
     return res.send(error);
   }
 }
 
-async function deleteOneById({ params: { itemId } }, res) {
+// DELETE, (itemId).
+async function deleteOne({ params: { itemId } }, res) {
   try {
     await Item.findByIdAndDelete(itemId);
     res.status(404);
@@ -53,8 +65,8 @@ async function deleteOneById({ params: { itemId } }, res) {
 
 module.exports = {
   getAll,
-  createOne,
-  getOneById,
-  updateOneById,
-  deleteOneById,
+  postOne,
+  getOne,
+  putOne,
+  deleteOne,
 };
