@@ -13,7 +13,7 @@ const getUsers = async ({ query }, res) => {
 const postUsers = async ({ body }, res) => {
   try {
     const newUser = await Users.create(body);
-    res.json(newUser);
+    res.send(newUser);
   } catch (error) {
     res.status(500);
     res.send(error);

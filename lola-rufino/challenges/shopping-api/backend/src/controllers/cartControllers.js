@@ -76,6 +76,28 @@ const deleteCart = async ({ params: { cartId } }, res) => {
   }
 };
 
+const createOne = async ({ body }, res) => {
+  try {
+    const userCart = await Cart.findOne({ user: body.user });
+    if (userCart) {
+      const updatedCart = await Cart.findByIdAndUpdate(
+        userCart._id,
+        {
+          $inc: { amount: body.products[0].amount }
+        },
+        { new: true }
+      );
+      res.send(updatedCart);
+    } else {
+      const createdCartItem = await Cart.create(body);
+      res.json(createdCartItem);
+    }
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+};
+
 module.exports = {
   getCarts,
   postCart,

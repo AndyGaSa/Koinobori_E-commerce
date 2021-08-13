@@ -35,16 +35,16 @@ describe('Given postUsers', () => {
     describe('And is resolved', () => {
       test('Then postUsers should call res.json', async () => {
         const req = { body: {} };
-        const res = { send: jest.fn(), status: jest.fn(), json: {} };
+        const res = { send: jest.fn(), status: jest.fn() };
 
-        Users.create.mockResolvedValue({});
+        Users.create.mockResolvedValue();
         await controller.postUsers(req, res);
 
-        expect(res.json).toHaveBeenCalled();
+        expect(res.send).toHaveBeenCalled();
       });
     });
     describe('And is rejected', () => {
-      test('Then getUsers should call res.send', async () => {
+      test('Then postUsers should call res.send', async () => {
         const req = { body: {} };
         const res = { send: jest.fn(), status: jest.fn(), json: {} };
 
