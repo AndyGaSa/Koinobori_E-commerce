@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 const Cart = require('../models/cart.model');
 const Product = require('../models/product.model');
 
@@ -69,12 +68,25 @@ async function createCart({ body }, res) {
   }
 }
 
-function getCartById(req, res) {
-  res.send('a');
+async function findCartById(req, res, next) {
+  try {
+    const { cartId } = req.params;
+    const cart = await Cart.findById(cartId);
+
+    if (cart) {
+      req.cart = cart;
+      return next();
+    }
+    res.status(404);
+    return res.send(new Error(`There is no beer with id ${cartId}`));
+  } catch (error) {
+    res.status(500);
+    return res.send(error);
+  }
 }
 
-function updateCartById(req, res) {
-  res.send('a');
+function getCartById({ cart }, res) {
+  res.json(cart);
 }
 
 async function deleteCartById({ params: { cartId } }, res) {
@@ -91,7 +103,7 @@ async function deleteCartById({ params: { cartId } }, res) {
 module.exports = {
   getCarts,
   createCart,
+  findCartById,
   getCartById,
-  updateCartById,
   deleteCartById
 };

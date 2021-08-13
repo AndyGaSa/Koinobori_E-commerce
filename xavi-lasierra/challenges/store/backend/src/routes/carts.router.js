@@ -2,8 +2,8 @@ const express = require('express');
 const {
   getCarts,
   createCart,
+  findCartById,
   getCartById,
-  updateCartById,
   deleteCartById
 } = require('../controllers/carts.controller');
 
@@ -16,8 +16,8 @@ cartsRouter
 
 cartsRouter
   .route('/:cartId')
+  .all(findCartById)
   .get(getCartById)
-  .put(updateCartById)
   .delete(deleteCartById);
 
 module.exports = cartsRouter;

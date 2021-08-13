@@ -2,6 +2,7 @@ const express = require('express');
 const {
   getUsers,
   createUser,
+  findOneUserById,
   getOneUserById,
   updateUserById,
   deleteUserById
@@ -16,6 +17,7 @@ usersRouter
 
 usersRouter
   .route('/:userId')
+  .all(findOneUserById)
   .get(getOneUserById)
   .put(updateUserById)
   .delete(deleteUserById);

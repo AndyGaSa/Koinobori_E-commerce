@@ -44,8 +44,22 @@ function getOneProductById({ product }, res) {
   res.json(product);
 }
 
-function updateOneProductById(req, res) {
-  res.send('a');
+async function updateOneProductById(req, res) {
+  try {
+    const dataToUpdate = req.body;
+    const { productId } = req.params;
+
+    const updatedProduct = await Product.findByIdAndUpdate(
+      productId,
+      dataToUpdate,
+      { new: true }
+    );
+
+    res.json(updatedProduct);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 async function deleteOneProductById({ params: { productId } }, res) {

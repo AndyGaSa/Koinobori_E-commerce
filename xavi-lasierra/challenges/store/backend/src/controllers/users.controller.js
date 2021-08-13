@@ -23,12 +23,43 @@ async function createUser({ body }, res) {
   }
 }
 
-function getOneUserById(req, res) {
-  res.send('a');
+async function findOneUserById(req, res, next) {
+  try {
+    const { userId } = req.params;
+    const user = await User.findById(userId);
+
+    if (user) {
+      req.user = user;
+      return next();
+    }
+    res.status(404);
+    return res.send(new Error(`There is no beer with id ${userId}`));
+  } catch (error) {
+    res.status(500);
+    return res.send(error);
+  }
 }
 
-function updateUserById(req, res) {
-  res.send('a');
+function getOneUserById({ user }, res) {
+  res.json(user);
+}
+
+async function updateUserById(req, res) {
+  try {
+    const dataToUpdate = req.body;
+    const { userId } = req.params;
+
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      dataToUpdate,
+      { new: true }
+    );
+
+    res.json(updatedUser);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 async function deleteUserById({ params: { userId } }, res) {
@@ -45,6 +76,7 @@ async function deleteUserById({ params: { userId } }, res) {
 module.exports = {
   getUsers,
   createUser,
+  findOneUserById,
   getOneUserById,
   updateUserById,
   deleteUserById
