@@ -17,7 +17,7 @@ const usersRouter = require('./src/routes/usersRouter');
 const cartRouter = require('./src/routes/cartRouter');
 const productRouter = require('./src/routes/productRouter');
 
-server.use('/api/user/', usersRouter);
+server.use('/api/user', usersRouter);
 server.use('/api/product', productRouter);
 server.use('/api/cart', cartRouter);
 
