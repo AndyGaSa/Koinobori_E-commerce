@@ -1,5 +1,5 @@
 const { connect } = require('mongoose');
-const debug = require('debug')('shops:ddbbConfig');
+const debug = require('debug')('shops');
 
 connect(
   process.env.DDBB_URL,

@@ -6,7 +6,7 @@ const productRouter = express.Router();
 productRouter
   .route('/')
 
-  .get(productController.getProduct)
+  .get(productController.getProducts)
   .post(productController.createProduct);
 
 productRouter

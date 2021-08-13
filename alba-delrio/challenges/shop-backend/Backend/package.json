@@ -1,9 +1,11 @@
 {
-  "name": "shop-backed",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
+    "debug": "nodemon --inspect-brk index.js",
     "test": "jest --watchAll --collect-coverage"
   },
   "keywords": [],
