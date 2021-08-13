@@ -1,12 +1,13 @@
-const debug = require('debug')('StoreApi::ddbbConfig');
-const mongoose = require('mongoose');
+const debug = require('debug')('StoreApi:ddbbConfig');
+const { connect } = require('mongoose');
 
-mongoose.connect(
+connect(
   process.env.DDBB_URL,
   {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   },
+
 )
   .then(
     () => debug('Database connection established'),
