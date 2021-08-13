@@ -21,17 +21,21 @@ async function createOne({ body }, res) {
 }
 
 async function getOneById(req, res) {
+  const { query } = req;
+  const { userId } = query;
   try {
-    res.send('getOneById works');
+    const users = await User.findById(userId);
+    res.json(users);
   } catch (error) {
     res.status(500);
     res.send(error);
   }
 }
 
-async function updateOneById(req, res) {
+async function updateOneById({ body }, res) {
   try {
-    res.send('updateOneById works');
+    const createdCartItem = await User.create(body);
+    res.json(createdCartItem);
   } catch (error) {
     res.status(500);
     res.send(error);
