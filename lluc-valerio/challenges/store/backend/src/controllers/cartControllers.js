@@ -79,7 +79,6 @@ async function addProductToCart(req, res) {
       // reduce amount from product stock
       const stockUpdated = await Product.updateStock(productId, amountToBuy);
       if (stockUpdated) {
-        debugger;
         const currentCart = await Cart.findById(cartId);
         debug(currentCart);
         debug(currentCart.products);
