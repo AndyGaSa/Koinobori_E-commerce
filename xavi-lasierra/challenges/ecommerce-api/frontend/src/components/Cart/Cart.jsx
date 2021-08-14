@@ -41,7 +41,10 @@ function Cart() {
       </ul>
       <button type="button" className="cart__pay-button">Pay</button>
       <button type="button" className="cart__summary" onClick={openCloseCart}>
-        <FontAwesomeIcon icon={faShoppingCart} />
+        <div>
+          <span className="cart__open-icon" />
+          <FontAwesomeIcon icon={faShoppingCart} />
+        </div>
         <p>
           Total Price:
           {' '}

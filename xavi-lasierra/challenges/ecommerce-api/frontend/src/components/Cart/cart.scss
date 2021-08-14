@@ -99,6 +99,14 @@
         color: $main-light-text-color;
         padding: 0 2rem;
         height: 2rem;
+
+        .cart__open-icon{
+            margin-right: 1rem;
+
+            &::after {
+                content: '▲';
+            }
+        }
     }
 
     .cart__pay-button {
@@ -137,6 +145,12 @@
         .cart__pay-button {
             display: none;
         }
+
+        .cart__summary{
+            .cart__open-icon::after {
+                content: '▼';
+            }
+        }
     }
 }
 
@@ -156,6 +170,10 @@
 
         .cart__summary {
             padding: 0 0.5rem;
+
+            .cart__open-icon {
+                display: none;
+            }
         }
 
         &--closed{
