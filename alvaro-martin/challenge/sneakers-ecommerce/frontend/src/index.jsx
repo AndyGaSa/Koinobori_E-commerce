@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
+import Sneakers from './components/Sneakers/sneakers';
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>hola</h1>
+    <Sneakers />
   </React.StrictMode>,
   document.getElementById('root'),
 );

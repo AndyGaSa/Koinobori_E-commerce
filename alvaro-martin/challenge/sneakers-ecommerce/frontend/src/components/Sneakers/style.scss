@@ -1,0 +1,76 @@
+@import '../../utils/colors.scss';
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.sneaker-container{
+    background-color: $color_cream;
+    border-radius: 25px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 20px -7px;
+}
+.sneaker-photo {
+    width: 75px;
+    background-color: $color_pink;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;}
+.photo{
+    width: 100px;
+    height: auto;
+    transform:  rotate(25deg);
+}
+.sneaker-description{
+    display: flex;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    color:$color_dark-blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.name{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.price{
+    font-weight: bold;
+    font-size: x-large;
+}
+.sneaker-amount{
+    display: flex;
+    align-items: center;
+    width: 50px;
+    margin: 10px;
+    color: $color_dark-blue;
+}
+.add{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: $color_blue;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.add:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    color:$color_cream;
+
+    transform: translateY(4px);
+  }
