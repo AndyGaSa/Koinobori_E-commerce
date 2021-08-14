@@ -4,7 +4,7 @@ const debug = require('debug')('ecommerce-server');
 const morgan = require('morgan');
 require('dotenv').config();
 
-require('./config/ddbbConfig');
+require('./src/config/ddbbConfig');
 
 const server = express();
 const port = process.env.PORT || 5000;
@@ -12,13 +12,9 @@ const port = process.env.PORT || 5000;
 server.use(morgan('dev'));
 server.use(express.json());
 
-const productListRouter = require('./routers/productListRouter');
-const cartRouter = require('./routers/cartRouter');
-const userRouter = require('./routers/userRouter');
+const productListRouter = require('./src/routers/productlistRouter');
 
-server.use('/api/product-list', productListRouter);
-server.use('/api/cart', cartRouter);
-server.use('/api/users', userRouter);
+server.use('/api/productlist', productListRouter);
 
 server.listen(
   port,
