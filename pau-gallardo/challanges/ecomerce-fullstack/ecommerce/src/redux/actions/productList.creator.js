@@ -3,7 +3,7 @@ import actionTypes from './actionTypes';
 export default function addProductToCart(product) {
   return (
     {
-      type: actionTypes.CREATE_CART,
+      type: actionTypes.ADD_TO_CART,
       product,
     }
   );
