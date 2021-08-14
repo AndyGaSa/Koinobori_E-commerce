@@ -1,13 +1,16 @@
 const express = require('express');
-const productController = require('../controllers/sitesController');
+const sitesController = require('../controllers/sitesController');
 
-const productRouter = express.Router();
+const sitesRouter = express.Router();
 
-productRouter
+sitesRouter
   .route('/')
-  .all(productController.findProduct)
-  .get(productController.getProduct)
-  .post(productController.createProduct)
-  .delete(productController.deleteProduct);
+  .get(sitesController.getAllSites)
+  .post(sitesController.createSite);
 
-module.exports = productRouter;
+sitesRouter
+  .route('/:siteid')
+  .put(sitesController.updateSite)
+  .delete(sitesController.deleteSite);
+
+module.exports = sitesRouter;

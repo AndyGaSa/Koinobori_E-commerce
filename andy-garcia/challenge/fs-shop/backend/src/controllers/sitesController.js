@@ -1,12 +1,12 @@
 const Sites = require('../models/sitesModel');
 
-async function createSites(req, res) {
+async function createSite(req, res) {
   const newBeer = await Sites.create(req.body);
 
   return res.send(newBeer);
 }
 
-async function getSites(req, res) {
+async function getAllSites(req, res) {
   try {
     const SitesItems = await Sites.find();
     res.json(SitesItems);
@@ -16,12 +16,12 @@ async function getSites(req, res) {
   }
 }
 
-function deleteSites({ beer }, res) {
+function deleteSite({ beer }, res) {
   const { _id } = beer;
   Sites.findByIdAndDelete(_id).exec();
   res.send(`La cerveza ${beer.name} ha sido eliminada`);
 }
-async function findSites(req, res, next) {
+async function updateSite(req, res, next) {
   const { beerId } = req.params;
   const beer = await Sites.findOne({ id: +beerId }).exec();
   try {
@@ -34,5 +34,5 @@ async function findSites(req, res, next) {
 }
 
 module.exports = {
-  createSites, getSites, deleteSites, findSites,
+  createSite, getAllSites, deleteSite, updateSite,
 };

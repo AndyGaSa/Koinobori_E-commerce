@@ -1,15 +1,16 @@
 const express = require('express');
-const cartController = require('../controllers/favSitesController');
+const favSitesController = require('../controllers/favSitesController');
 
-const cartRouter = express.Router();
+const favSitesRouter = express.Router();
 
-cartRouter
+favSitesRouter
   .route('/')
-  .all(cartController.findCart)
-  .get(cartController.getCart)
-  .delete(cartController.deleteCart);
-cartRouter
-  .route('/:productId')
-  .post(cartController.createCart);
+  .get(favSitesController.getUserFavs);
 
-module.exports = cartRouter;
+favSitesRouter
+  .route('/:favid')
+  .post(favSitesController.addFavSite)
+  .put(favSitesController.updateFavSite)
+  .delete(favSitesController.deleteFavSite);
+
+module.exports = favSitesRouter;

@@ -1,7 +1,7 @@
 /* eslint-disable no-shadow */
 const favSites = require('../models/favSitesModel');
 
-async function createfavSites(req, res) {
+async function addFavSite(req, res) {
   try {
     const findfavSites = await favSites.find({ user: req.body.user });
     // const productId = findfavSites[0].products;
@@ -17,7 +17,7 @@ async function createfavSites(req, res) {
   }
 }
 
-async function getfavSites({ query }, res) {
+async function getUserFavs({ query }, res) {
   try {
     const favSitesItems = await favSites.find(query)
       .populate('user')
@@ -33,12 +33,12 @@ async function getfavSites({ query }, res) {
   }
 }
 
-function deletefavSites({ beer }, res) {
+function deleteFavSite({ beer }, res) {
   const { _id } = beer;
   favSites.findByIdAndDelete(_id).exec();
   res.send(`La cerveza ${beer.name} ha sido eliminada`);
 }
-async function findfavSites(req, res, next) {
+async function updateFavSite(req, res, next) {
   const { beerId } = req.params;
   const beer = await favSites.findOne({ id: +beerId }).exec();
   try {
@@ -51,5 +51,5 @@ async function findfavSites(req, res, next) {
 }
 
 module.exports = {
-  createfavSites, getfavSites, deletefavSites, findfavSites,
+  addFavSite, getUserFavs, deleteFavSite, updateFavSite,
 };
