@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { removeProductFromCart, updateProductAmount } from '../../redux/actions/cart.creator';
@@ -8,8 +8,15 @@ export default function Cart() {
   const dispatch = useDispatch();
   const cartProducts = useSelector((store) => store.cartProducts);
 
-  const totalPrice = 0;
-  // const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    let newTotalPrice = 0;
+    cartProducts.forEach((product) => {
+      newTotalPrice += product.amount * product.price;
+    });
+    setTotalPrice(newTotalPrice);
+  }, [cartProducts]);
 
   function productQuantity(product, addOrSubstract, index) {
     switch (addOrSubstract) {
