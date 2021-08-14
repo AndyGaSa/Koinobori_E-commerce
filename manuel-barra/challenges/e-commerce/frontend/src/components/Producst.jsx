@@ -1,8 +1,9 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadProducts } from './redux/actions/actionCreators';
+import { loadProducts } from '../redux/actions/actionCreators';
 
-function App() {
+export default function Products() {
   const products = useSelector((store) => store.products);
   const dispatch = useDispatch();
 
@@ -11,14 +12,8 @@ function App() {
   }, []);
 
   return (
-    <>
-      <h1>Hola mundo</h1>
-      <ul>
-        {products.map((product) => <li key={product.name}>{product.name}</li>)}
-      </ul>
-    </>
-
+    <ul>
+      {products.map((product) => <li key={product.name}>{product.name}</li>)}
+    </ul>
   );
 }
-
-export default App;

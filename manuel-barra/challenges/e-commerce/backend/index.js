@@ -14,8 +14,8 @@ server.use(cors());
 server.use(morgan('dev'));
 server.use(express.json());
 
-const storeRouter = require('./src/routes/storeRouter');
+const productList = require('./src/routes/productsRouter');
 
-server.use('/api/', storeRouter);
+server.use('/api/', productList);
 
 server.listen(port, () => debug(`Server running on ${chalk.magenta(`http://localhost:${port}`)}`));
