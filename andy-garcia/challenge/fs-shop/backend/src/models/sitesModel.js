@@ -6,6 +6,6 @@ const productSchema = Schema({
   price: Number,
   stock: Number,
   distance: Number,
-  pictures: [{ url: String }],
+  pictures: [{ url: String, placeName: String }],
 });
 module.exports = mongoose.model('Sites', productSchema);
