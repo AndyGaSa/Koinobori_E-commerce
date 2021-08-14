@@ -1,15 +1,15 @@
-const User = require('../models/cartModel');
+const User = require('../models/userModel');
 
-async function createCart(req, res) {
+async function createUser({ body }, res) {
   try {
-    const newUser = await User.create(req.body);
-    return res.send(newUser);
+    const newUser = await User.create(body);
+    return res.json(newUser);
   } catch (error) {
-    res.status(404);
-    return res.send(new Error('There is no cart'));
+    res.status(500);
+    return res.send(new Error('Error'));
   }
 }
 
 module.exports = {
-  createCart
+  createUser
 };

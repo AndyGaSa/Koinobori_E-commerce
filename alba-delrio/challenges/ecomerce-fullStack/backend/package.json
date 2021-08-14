@@ -13,11 +13,14 @@
     "express": "^4.17.1",
     "jest": "^27.0.6",
     "mongoose": "^5.13.7",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "debug": "nodemon --inspect-brk index.js",
+    "test": "jest --watchAll --collect-coverage"
   },
   "keywords": [],
   "author": "",

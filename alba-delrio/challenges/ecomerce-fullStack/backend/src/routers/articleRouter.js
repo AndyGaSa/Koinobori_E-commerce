@@ -5,6 +5,6 @@ const articleRouter = express.Router();
 
 articleRouter
   .route('/')
-  .post(articleController.createCart);
+  .post(articleController.createArticle);
 
 module.exports = articleRouter;

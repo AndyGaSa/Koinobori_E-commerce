@@ -1,6 +1,6 @@
 const Article = require('../models/cartModel');
 
-async function createCart(req, res) {
+async function createArticle(req, res) {
   try {
     const newArticle = await Article.create(req.body);
     return res.send(newArticle);
@@ -11,5 +11,5 @@ async function createCart(req, res) {
 }
 
 module.exports = {
-  createCart
+  createArticle
 };

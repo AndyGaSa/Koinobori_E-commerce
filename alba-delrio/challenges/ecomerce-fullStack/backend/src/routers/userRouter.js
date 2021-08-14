@@ -5,6 +5,6 @@ const userRouter = express.Router();
 
 userRouter
   .route('/')
-  .post(userController.createCart);
+  .post(userController.createUser);
 
 module.exports = userRouter;
