@@ -5,6 +5,11 @@ const articleRouter = express.Router();
 
 articleRouter
   .route('/')
-  .post(articleController.createArticle);
-
+  .post(articleController.createArticle)
+  .get(articleController.getAllArticles);
+articleRouter
+  .route('/:article')
+  .get(articleController.getArticleById)
+  .put(articleController.updateArticle)
+  .delete(articleController.deleteArticle);
 module.exports = articleRouter;
