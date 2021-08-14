@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import loadProductList from '../../redux/actions/productList.creator';
 
 export default function ProductList() {
+  const productList = useSelector((store) => store.products);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadProductList());
+  }, []);
+
   return (
     <>
       <h2>Product List</h2>
       <ul>
         {
-        productsMock.map((singleProduct) => (
+        productList.map((singleProduct) => (
           <li>
             <span>{`Product name ${singleProduct.name}`}</span>
             <span>{`${singleProduct.price}€}`}</span>

@@ -1,10 +1,10 @@
 import actionTypes from '../actions/actionTypes';
 
-export default function productListReducer(productCartList = [], action) {
-  let newProductCartList = productCartList;
+export default function productListReducer(productList = [], action) {
+  let newProductCartList = productList;
   switch (action.type) {
-    case actionTypes.ADD_TO_CART:
-      newProductCartList = [...productCartList, action.product];
+    case actionTypes.LOAD_PRODUCT_LIST:
+      newProductCartList = action.productList.map(((product) => product));
       break;
 
     default:
