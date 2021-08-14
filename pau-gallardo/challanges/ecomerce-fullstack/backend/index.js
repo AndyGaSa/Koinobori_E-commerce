@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
-const debug = require('debug');
+const debug = require('debug')('ecommerceApi');
 
 const server = express();
 const port = process.env.PORT || 5000;
