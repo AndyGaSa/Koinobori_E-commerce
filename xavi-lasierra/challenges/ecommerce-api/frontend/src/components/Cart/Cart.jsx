@@ -39,6 +39,7 @@ function Cart() {
           </li>
         ))}
       </ul>
+      <button type="button" className="cart__pay-button">Pay</button>
       <button type="button" className="cart__summary" onClick={openCloseCart}>
         <FontAwesomeIcon icon={faShoppingCart} />
         <p>

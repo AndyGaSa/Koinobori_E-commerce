@@ -101,12 +101,40 @@
         height: 2rem;
     }
 
+    .cart__pay-button {
+        margin: 0.75rem;
+        margin-bottom: 0;
+        border: none;
+        border: 3px solid $main-light-color;
+        background-color: transparent;
+        color: $main-light-color;
+        padding: 0.5rem 0;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: .2s;
+
+        &:hover {
+            background-color: $main-light-color;
+            color: $main-dark-color;
+        }
+
+        &:active {
+            box-shadow: 0 0 10px $main-color;
+            background-color: $main-color;
+            border: 3px solid $main-color;
+        }
+    }
+
     &--closed{
         .cart__clear {
             display: none;
         }
 
         .cart__cart-products {
+            display: none;
+        }
+
+        .cart__pay-button {
             display: none;
         }
     }
@@ -137,6 +165,10 @@
     
             .cart__cart-products {
                 display: flex;
+            }
+
+            .cart__pay-button {
+                display: unset;
             }
         }
     }
