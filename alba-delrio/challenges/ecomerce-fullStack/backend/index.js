@@ -1,6 +1,6 @@
 const express = require('express');
 require('dotenv').config();
-const debug = require('debug')('shops');
+const debug = require('debug')('ecomerce');
 const chalk = require('chalk');
 const morgan = require('morgan');
 
@@ -12,13 +12,13 @@ const port = process.env.PORT || 5000;
 server.use(morgan('dev'));
 server.use(express.json());
 
-const usersRouter = require('./src/routes/usersRouter');
-const cartRouter = require('./src/routes/cartRouter');
-const productRouter = require('./src/routes/productRouter');
+const cartRouter = require('./src/routers/cartRouter');
+const articleRouter = require('./src/routers/articleRouter');
+const userRouter = require('./src/routers/userRouter');
 
-server.use('/api/user/', usersRouter);
-server.use('/api/product', productRouter);
 server.use('/api/cart', cartRouter);
+server.use('/api/article', articleRouter);
+server.use('./api/user', userRouter);
 
 server.listen(
   port,
