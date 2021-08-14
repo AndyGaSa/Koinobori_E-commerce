@@ -1,0 +1,110 @@
+@import '../../styles/extensions', '../../styles/variables';
+
+.cart {
+    position: fixed;
+    width: 100%;
+    top: 3rem;
+    font-family: $main-font;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    background-color: $main-dark-color;
+
+    .cart__clear {
+        background-color: $main-light-color;
+        padding: 0.5rem 2vw 0 2vw;
+        @extend %row-between-flex;
+
+        .cart__title {
+            font-size: 1.25rem;
+        }
+
+        .cart__clear-button {
+            background-color: transparent;
+            color: $main-dark-color;
+            font-size: 1.25rem;
+            border: none;
+        }
+    }
+
+    .cart__cart-products {
+        display: flex;
+        flex-direction: column;
+
+        .cart-products__product {
+            @extend %row-between-flex;
+            padding: 0.4rem 5vw;
+            background-color: $main-light-color;
+
+            & + .cart-products__product {
+                border-top: 2px solid $main-color;
+            }
+
+            .product__image {
+                @extend %small-image;
+            }
+    
+            .product__name {
+                font-size: 1rem;
+            }
+
+            .product__price {
+                font-size: 1rem;
+            }
+
+            .product__amount {
+                @extend %row-between-flex;
+
+                .product__quantity {
+                    display: block;
+                    width: 2rem;
+                    text-align: center;
+                }
+
+                .product__substract-button,
+                .product__add-button {
+                    font-weight: bold;
+                    font-size: 0.75rem;
+                    padding: 0.25rem 0.5rem;
+                    background-color: $main-color;
+                    border: 3px solid $main-light-color;
+                    border-radius: 2px;
+                    color: $main-light-color;
+                    box-shadow: 2px 2px 3px $main-dark-color;
+                    transition: .2s;
+                
+                    &:hover {
+                        background-color: $main-light-color;
+                        border: 3px solid $main-dark-color;
+                        color: $main-dark-color;
+                    }
+                
+                    &:active {
+                        box-shadow: none;
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+    
+            
+        }
+    }
+    .cart__summary {
+        @extend %row-between-flex;
+        background-color: transparent;
+        border: none;
+        color: $main-light-text-color;
+        padding: 0 10vw;
+        height: 2rem;
+    }
+
+    &--closed{
+        .cart__clear {
+            display: none;
+        }
+
+        .cart__cart-products {
+            display: none;
+        }
+    }
+}
