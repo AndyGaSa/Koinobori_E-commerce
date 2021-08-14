@@ -6,7 +6,7 @@
     flex-direction: column;
     width: 90vw;
     min-width: 450px;
-    max-width: 45rem;
+    max-width: 550px;
     margin: auto;
 
     .products__product {
@@ -15,6 +15,7 @@
         margin-bottom: 0.5rem;
         padding: 1rem 5%;
         border-radius: 0.1rem;
+        box-shadow: 2px 3px 5px $main-dark-color;
 
 
         .product__image {

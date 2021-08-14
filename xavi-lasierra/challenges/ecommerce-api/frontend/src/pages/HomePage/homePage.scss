@@ -1,3 +1,14 @@
 main {
     padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 720px) {
+    main{
+        padding: 4rem 3vw;
+        flex-direction: row;
+        justify-content: space-around;
+        min-width: 1100px;
+    }
 }
