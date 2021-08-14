@@ -5,7 +5,7 @@ const usersRouter = express.Router();
 
 usersRouter
   .route('/')
-  .post(userController.setNewUser);
+  .post(userController.findOrSetUser);
 
 usersRouter
   .route('/:userid')
