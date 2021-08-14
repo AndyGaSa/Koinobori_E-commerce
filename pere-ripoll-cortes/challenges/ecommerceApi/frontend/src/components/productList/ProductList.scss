@@ -1,0 +1,18 @@
+.wrapper{
+    width: 50%;
+    display: grid;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-areas: 
+    ". ."
+    ". ."
+    ". ."
+    ". ."
+    ". .";
+    
+}
+
+.tractor-img{
+    width: 100%;
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+}

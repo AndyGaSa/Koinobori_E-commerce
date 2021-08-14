@@ -1,14 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 // eslint-disable-next-line react/prop-types
-export default function Cart({ product }) {
+export default function Cart() {
+  const inCart = useSelector(({ cart }) => cart);
+  const [basket, setBasket] = useState([]);
+
   useEffect(() => {
-    console.log(product);
-  }, product);
+    setBasket(inCart);
+  }, [inCart]);
+
   return (
     <>
       <h1>Carrito</h1>
-      <p>{product}</p>
+      {basket.map((e) => (<p>{e.name}</p>))}
     </>
   );
 }

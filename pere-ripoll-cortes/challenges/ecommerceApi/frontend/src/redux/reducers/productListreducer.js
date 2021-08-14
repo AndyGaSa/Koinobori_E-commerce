@@ -1,8 +1,15 @@
 import actionType from '../actions/actionType';
 
 export default function productListreducer(productList = [], action) {
-  if (action.type === actionType.LOAD_PRODUCTS_DDBB) {
-    return action.data;
+  let newProductList = productList;
+
+  switch (action.type) {
+    case actionType.LOAD_PRODUCTS_DDBB:
+      newProductList = action.data;
+      break;
+    default:
+      break;
   }
-  return productList;
+
+  return newProductList;
 }

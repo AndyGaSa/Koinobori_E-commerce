@@ -10,6 +10,17 @@ const createOne = async (req, res) => {
   }
 };
 
+const getAllProducts = async (req, res) => {
+  try {
+    const productsList = await ProductList.find({});
+    res.json(productsList);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+};
+
 module.exports = {
   createOne,
+  getAllProducts,
 };

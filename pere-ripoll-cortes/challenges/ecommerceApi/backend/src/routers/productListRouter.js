@@ -6,6 +6,7 @@ const productListRouter = express.Router();
 
 productListRouter
   .route('/products')
-  .post(productListController.createOne);
+  .post(productListController.createOne)
+  .get(productListController.getAllProducts);
 
 module.exports = productListRouter;
