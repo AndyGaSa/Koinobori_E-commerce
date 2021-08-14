@@ -1,5 +1,5 @@
 /* eslint-disable no-shadow */
-const Cart = require('../models/cartModel');
+const Cart = require('../models/favSitesModel');
 
 async function createCart(req, res) {
   try {
