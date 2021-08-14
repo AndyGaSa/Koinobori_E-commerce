@@ -1,0 +1,13 @@
+.browse__items{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.browse__main-section{
+    display: flex;
+}
+main{
+    display: flex;
+    flex-direction: column;
+}

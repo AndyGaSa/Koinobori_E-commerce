@@ -1,0 +1,25 @@
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.home__banner{
+    width: 100vw;
+    height: 25vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://i.ibb.co/nRJnJ9S/beer-banner.jpg);
+}
+.home__h2{
+    margin-left: 60px;
+    /* z-index: 0; */
+    color: white;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+.home__items{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

@@ -1,4 +1,4 @@
-figure{
+.card-item__container{
     display: flex;
     flex-direction: column;
     height: 200px;
@@ -6,6 +6,7 @@ figure{
     align-items: center;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    margin: 30px;
     img{
         height: 150px;
         width: fit-content;
