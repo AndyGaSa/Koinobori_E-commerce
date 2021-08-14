@@ -18,6 +18,14 @@ export function removeProductFromCart(product) {
   );
 }
 
+export function removeAllProductsFromCart() {
+  return (
+    {
+      type: actionTypes.REMOVE_ALL_FROM_CART,
+    }
+  );
+}
+
 export function updateProductAmount(product, index) {
   return (
     {

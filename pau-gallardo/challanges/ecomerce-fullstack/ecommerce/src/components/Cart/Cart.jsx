@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { removeProductFromCart, updateProductAmount } from '../../redux/actions/cart.creator';
+import { removeProductFromCart, updateProductAmount, removeAllProductsFromCart } from '../../redux/actions/cart.creator';
 
 export default function Cart() {
   const dispatch = useDispatch();
@@ -61,6 +61,8 @@ export default function Cart() {
         }
       </ul>
       <span>{`Total price: ${totalPrice}`}</span>
+      <button type="button">Pay</button>
+      <button type="button" onClick={() => dispatch(removeAllProductsFromCart())}>Remove all</button>
     </>
   );
 }

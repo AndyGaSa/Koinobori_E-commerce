@@ -12,6 +12,10 @@ export default function cartReducer(cartProductList = [], action) {
       }
       break;
 
+    case actionTypes.REMOVE_ALL_FROM_CART:
+      newCartProductList = [];
+      break;
+
     case actionTypes.REMOVE_FROM_CART:
       newCartProductList = cartProductList.filter((product) => product._id !== action.product._id);
       break;
