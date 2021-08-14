@@ -1,9 +1,18 @@
 const Sites = require('../models/sitesModel');
 
-async function createSite(req, res) {
-  const newBeer = await Sites.create(req.body);
-
-  return res.send(newBeer);
+async function createSite({ body }, res) {
+  try {
+    const reqName = await Sites.findOne({ name: body.name }).exec();
+    if (reqName) {
+      throw new Error('Ya existe un sitio con ese nombre');
+    }
+    const newSite = await Sites.create(body);
+    return res.send(newSite);
+  } catch (error) {
+    console.log(error);
+    res.status(500);
+    return res.send(error.message);
+  }
 }
 
 async function getAllSites(req, res) {
@@ -16,10 +25,9 @@ async function getAllSites(req, res) {
   }
 }
 
-function deleteSite({ beer }, res) {
-  const { _id } = beer;
-  Sites.findByIdAndDelete(_id).exec();
-  res.send(`La cerveza ${beer.name} ha sido eliminada`);
+function deleteSite({ params: { siteid } }, res) {
+  Sites.findByIdAndDelete(siteid).exec();
+  res.send('El sitio ha sido eliminado');
 }
 async function updateSite(req, res, next) {
   const { beerId } = req.params;
