@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     height: auto;
-    padding: 50px 0;
+    padding: 200px 0 50px 0;
 
     nav{
         display:flex;
@@ -53,7 +53,6 @@
     }
 }
 
-
 .main-container__contact-form{
     margin: 0 auto;
     display: flex;
@@ -72,13 +71,18 @@
         display: flex;
         justify-content: space-between;
     }
-
     input, textarea{
         background-color: $quaternary-color;
         height: 40px;
         border: none;
         color:$primary-font-color;
         padding-left: 8px;
+
+    }
+    .name-input{
+        input{
+            width: 165px;
+        }
     }
     textarea{
         height: 60px;
@@ -95,7 +99,6 @@
         cursor:pointer;
         border: 3px gold solid;
     }
-
 }
 
 .bot-container{
@@ -106,21 +109,17 @@
     background-color:#141313;
     color:$primary-font-color;
     font-family: $secondary-font;
-  
 }
 
-@media screen and(min-width: 600px){
+@media screen and(min-width: 768px){
     .main-footer-container{
-    flex-direction: row;
-    nav{
-        margin: 0 auto;
-        margin-right: 80px;
-
-    }
-    .main-container__contact-form{
-        margin-left: 80px;
-        
-    }
-    }
-    
+        flex-direction: row;
+        nav{
+            margin: 0 auto;
+            margin-right: 80px;
+        }
+        .main-container__contact-form{
+            margin-left: 80px;
+        }
+    } 
 }

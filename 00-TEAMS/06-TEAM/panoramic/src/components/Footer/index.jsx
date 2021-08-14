@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
-import styles from './Footer.scss';
+
+import './Footer.scss';
 
 export default function Footer() {
   return (
@@ -10,12 +9,12 @@ export default function Footer() {
       <div className="main-footer-container">
         <nav>
           <ul className="main-footer-container__socialmedia">
-            <li className="socialmedia__facebook"><Link to="facebook.com" /></li>
-            <li className="socialmedia__youtube"><Link to="facebook.com" /></li>
-            <li className="socialmedia__twitter"><Link to="facebook.com" /></li>
-            <li className="socialmedia__soundcloud"><Link to="facebook.com" /></li>
-            <li className="socialmedia__instagram" data-testid="instagram-icon"><Link to="facebook.com" /></li>
-            <li className="socialmedia__pinterest"><Link to="facebook.com" /></li>
+            <li className="socialmedia__facebook" />
+            <li className="socialmedia__youtube" />
+            <li className="socialmedia__twitter" />
+            <li className="socialmedia__soundcloud" />
+            <li className="socialmedia__instagram" data-testid="instagram-icon" />
+            <li className="socialmedia__pinterest" />
           </ul>
         </nav>
         <form className="main-container__contact-form">
