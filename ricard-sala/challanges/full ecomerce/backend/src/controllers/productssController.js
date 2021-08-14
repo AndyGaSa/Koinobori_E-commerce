@@ -20,37 +20,36 @@ async function getAll({ query }, res) {
     res.send(error);
   }
 }
-async function getOneById(req, res) {
+async function getOneById({ params: { productId } }, res) {
   try {
-    res.send('getOneById works');
+    const foundProduct = await Product.findById(productId);
+    res.json(foundProduct);
   } catch (error) {
     res.status(500);
     res.send(error);
   }
 }
 async function updateOneById(req, res) {
+  const dataToUpdate = req.body;
+  const { productId } = req.params;
+
   try {
-    res.send('updateOneById works');
+    const updatedProduct = await Product.findByIdAndUpdate(
+      productId,
+      dataToUpdate,
+      { new: true },
+    );
+
+    res.json(updatedProduct);
   } catch (error) {
     res.status(500);
     res.send(error);
   }
 }
 
-async function deleteOneById({ params: { productId } }, res) {
-  try {
-    await Product.findByIdAndDelete(productId);
-    res.status(204);
-    res.send();
-  } catch (error) {
-    res.status(500);
-    res.send(error);
-  }
-}
 module.exports = {
   postProduct,
   getAll,
   getOneById,
-  deleteOneById,
   updateOneById,
 };

@@ -10,6 +10,5 @@ prouductsRouter
 prouductsRouter
   .route('/:productId')
   .put(productsController.updateOneById)
-  .delete(productsController.deleteOneById)
   .get(productsController.getOneById);
 module.exports = prouductsRouter;
