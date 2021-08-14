@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.21.1",
     "chalk": "^4.1.2",
     "debug": "^4.3.2",
     "dotenv": "^10.0.0",
@@ -25,5 +26,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "proxy": "http://localhost:5000"
 }
