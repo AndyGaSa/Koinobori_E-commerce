@@ -21,18 +21,26 @@ button {
 }
 .sneaker-photo {
     width: 75px;
+    height: 75px;
     background-color: $color_pink;
-    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px;
+    padding: 20px;
     border-radius: 20px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;}
 .photo{
     width: 100px;
     height: auto;
+    transition: 0.3s;
+
+}
+.photo:hover{
+    width: 150px;
     transform:  rotate(25deg);
+    transition: 0.3s;
+
 }
 .sneaker-description{
     display: flex;
@@ -71,6 +79,6 @@ button {
 .add:active {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     color:$color_cream;
-
     transform: translateY(4px);
+    
   }
