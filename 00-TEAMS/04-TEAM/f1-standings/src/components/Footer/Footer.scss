@@ -1,0 +1,38 @@
+@import '../../assets/colors.scss';
+
+
+.footer{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    background-color: $color-white;
+    justify-content: space-around;
+    align-items: center;
+    height: 17vw;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    bottom: 0;
+    background-color: $color-red;
+}
+
+.test2{
+    bottom: 0;
+    height: 17vw;
+}
+
+.footer__constructor{
+    background-color: $color-red;
+}
+
+.footer__driver{
+    background-color: $color-red;
+}
+.footer__stats{
+    background-color: $color-red;
+}
+
+img{
+    height: 10vw;
+    width: 10vw;
+}
+

@@ -1,0 +1,289 @@
+@import '../../assets/colors.scss';
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.driver-details{
+    width:100vw;
+    height: 30vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:$color-black ;
+}
+    .back-button__container{
+        height: 5vw;
+        width: 5vw;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-left: 1vw;
+        margin-top: 2vw;
+    }
+        .back{
+            height: 5vw;
+            width: 5vw;
+            
+        }
+        
+    
+    .header-container{
+        display: flex;
+        flex-direction: row;
+        margin-left: 10px;
+        justify-content: space-between;
+        height: 30vw;
+        
+
+    }
+    .container-details{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    .driver-details__title{
+        display:flex ;
+        flex-direction: column;
+    }
+        .driver-constructor{
+            font-size: 4vw;
+            color:$color-off-white;
+        }
+       
+.driver-number{
+            color:$color-off-white;
+            margin-right:3vw;
+            padding-right:3vw;
+            border-right: 3px solid grey;
+}
+.driver-name{
+    font-size: 4vw;
+    color: $color-white;
+}
+.driver-surname{
+    font-size: 6vw;
+    color: $color-white;
+    font-weight: bold;
+}
+    
+@mixin Line($color: $mercedes) {
+    border-left: 3px solid $color;
+    height: 12vw;
+    width: 1vw;
+    margin-right: 6vw;
+    
+}
+
+.mercedess{
+    @include Line;
+ }
+.red_bulls{
+   @include Line($red_bull);
+}
+.ferraris{
+    @include Line($ferrari);
+}
+.mclarens{
+    @include Line($mclaren);
+ }
+ .alpines{
+    @include Line($alpine);
+ }
+ .alphatauris{
+    @include Line($alphatauri);
+ }
+ .aston_martins{
+    @include Line($aston_martin);
+ }
+ .williamss{
+    @include Line($williams);
+ }
+ .alfas{
+    @include Line($alfa);
+ }
+ .haass{
+    @include Line($haas);
+    
+ }
+ .foto-piloto-container{
+     display: flex;
+     align-items: flex-end;
+   
+ }
+ .foto-piloto{
+    
+     height: 20vw;
+     width: 20vw;
+ }
+ .championship{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+ }
+ .championship-container{
+     display: flex;
+     flex-direction: row;
+ }
+ .championship-standing-container{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin-bottom:5vw;
+ }
+ .container-champ{
+     display: flex;
+     flex-direction: column;
+    
+ }
+ .postion{
+     font-size: 15vw;
+ }
+ .points-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-size: 7vw;
+ }
+ @mixin points ($color: $mercedes){
+    
+     border-top: solid 3px $color;
+     border-right: solid 3px $color;
+     border-top-right-radius: 10px;
+     font-size: 5vw;
+     width: 40vw;
+     display: flex;
+     flex-direction: row;
+     align-items: flex-end;
+     justify-content: flex-start;
+ }
+
+ .mercedespoints{
+    @include points;
+ }
+.red_bullpoints{
+   @include points($red_bull);
+}
+.ferraripoints{
+    @include points($ferrari);
+}
+.mclarenpoints{
+    @include points($mclaren);
+}
+.alpinepoints{
+    @include points($alpine);
+ }
+ .alphatauripoints{
+    @include points($alphatauri);
+ }
+ .aston_martinpoints{
+    @include points($aston_martin);
+ }
+ .williamspoints{
+    @include points($williams);
+ }
+ .alfapoints{
+    @include points($alfa);
+ }
+ .haaspoints{
+    @include points($haas);
+    border-top: solid 3px gray;
+     border-right: solid 3px gray;
+ }
+ .points__pts{
+     margin-left: 1vw;
+     color: $color-white;
+     background-color: gray;
+     border-radius: 5px;
+     
+ }
+ .season{
+     display: flex;
+     flex-direction: column;
+     width: 40vw;
+ }
+
+ .podiums-total{
+     font-size: 6vw;
+     font-weight: bold;
+ }
+ .podiums{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 15vw;
+    border-bottom: solid 2px grey;
+    border-right: solid 2px grey;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 5vw;
+    margin-top: 5vw;
+
+ }
+ 
+ @mixin podiums ($color: $mercedes){
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 5vw;
+    border-top: solid 3px $color;
+    border-right: solid 3px $color;
+    border-top-right-radius: 10px;
+    margin-bottom: 5vw;
+    
+
+}
+
+.mercedespodiums{
+   @include podiums;
+}
+.red_bullpodiums{
+  @include podiums($red_bull);
+}
+.ferraripodiums{
+   @include podiums($ferrari);
+}
+.mclarenpodiums{
+   @include podiums($mclaren);
+}
+.alpinepodiums{
+   @include podiums($alpine);
+}
+.alphatauripodiums{
+   @include podiums($alphatauri);
+}
+.aston_martinpodiums{
+   @include podiums($aston_martin);
+}
+.williamspodiums{
+   @include podiums($williams);
+}
+.alfapodiums{
+   @include podiums($alfa);
+}
+.haaspodiums{
+   @include podiums($haas);
+   border-top: solid 3px gray;
+   border-right: solid 3px gray;
+}
+.car-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.car-photo{
+    display: flex;
+    width: 60vw;
+    height: 20vw;
+    transform: rotate(270deg);
+}
+.constructor-name{
+    font-size: 10vw;
+    color: $color-white;
+}
