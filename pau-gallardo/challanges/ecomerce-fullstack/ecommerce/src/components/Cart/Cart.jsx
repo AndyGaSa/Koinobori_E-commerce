@@ -7,13 +7,16 @@ import { removeProductFromCart, updateProductAmount } from '../../redux/actions/
 export default function Cart() {
   const dispatch = useDispatch();
   const cartProducts = useSelector((store) => store.cartProducts);
+
   const totalPrice = 0;
   // const [totalPrice, setTotalPrice] = useState(0);
 
   function productQuantity(product, addOrSubstract, index) {
     switch (addOrSubstract) {
       case '+':
-        product.amount += 1;
+        if (product.amount < product.stock) {
+          product.amount += 1;
+        }
         break;
 
       case '-':
