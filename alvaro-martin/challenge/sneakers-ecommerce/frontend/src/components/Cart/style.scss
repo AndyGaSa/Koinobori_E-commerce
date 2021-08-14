@@ -1,0 +1,105 @@
+@import '../../utils/colors.scss';
+
+*,*::after,*::before{
+   
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.container-cart{
+    display: flex;
+    flex-direction: column;
+}
+.sneaker-container{
+    background-color: $color_cream;
+    border-radius: 25px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 20px -7px;
+}
+.sneaker-photo {
+    width: 75px;
+    height: 75px;
+    background-color: $color_pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;}
+
+.cart-photo{
+    width: 150px;
+    transform:  rotate(25deg);
+    transition: 0.3s;
+
+}
+.sneaker-description{
+    display: flex;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    color:$color_dark-blue;
+}
+
+.name{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.price{
+    font-weight: bold;
+    font-size: x-large;
+}
+.sneaker-amount{
+    display: flex;
+    align-items: center;
+    width: 150px;
+    margin: 10px;
+    color: $color_dark-blue;
+}
+.amount{
+    display: flex;
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: $color_orange;
+}
+
+.cart-add{
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    background-color: $color_blue;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.cart-add:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    color:$color_cream;
+    transform: translateY(4px);
+  }
+.total-container{
+    background-color: $color_orange;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}

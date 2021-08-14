@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
 import Sneakers from './components/Sneakers/sneakers';
+import Cart from './components/Cart/cart';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Sneakers />
+    <section className="sneaker-cart">
+      <Sneakers />
+      <Cart />
+    </section>
   </React.StrictMode>,
   document.getElementById('root'),
 );

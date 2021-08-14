@@ -5,14 +5,22 @@ import sneakers from '../../sneakers-data/data';
 import './style.scss';
 
 export default function Sneakers() {
-  return (
-    <>
+  const sneakerFilter = sneakers.filter(({ amount }) => amount > 0);
 
+  const x = sneakerFilter.map(({ amount, price }) => amount * +price);
+  const totalCart = x.reduce((acc, num) => acc + num);
+  return (
+    <section className="container-cart">
+      <h2 className="cart">Cart</h2>
       <ul className="sneakers">
-        {sneakers.map(({ name, img, price }) => (
+
+        {sneakerFilter.map(({
+          name, img, price, amount,
+        }) => (
+
           <section className="sneaker-container">
             <div className="sneaker-photo">
-              <img className="photo" src={img} alt="" srcSet="" />
+              <img className="cart-photo" src={img} alt="" srcSet="" />
 
             </div>
             <div className="sneaker-description">
@@ -30,7 +38,11 @@ export default function Sneakers() {
             </div>
             <div className="sneaker-amount">
 
-              <button type="button" className="add">
+              <button type="button" className="cart-add">
+                -
+              </button>
+              <p className="amount">{amount}</p>
+              <button type="button" className="cart-add">
                 +
               </button>
             </div>
@@ -38,6 +50,13 @@ export default function Sneakers() {
         ))}
 
       </ul>
-    </>
+      <section className="total-container">
+        <p>TOTAL</p>
+        <div className="total">
+          {totalCart}
+          €
+        </div>
+      </section>
+    </section>
   );
 }
