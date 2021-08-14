@@ -1,15 +1,28 @@
 /* eslint-disable no-shadow */
 const favSites = require('../models/favSitesModel');
 
+const checkFavSites = async (req, res, next) => {
+  const { user } = req.body.user;
+  const { body } = req.body;
+
+  const favList = favSites.find({ user });
+
+  if (!favList) {
+    favSites.create(body);
+    next();
+  }
+  req.favlist = favList;
+  next();
+};
+
 async function addFavSite(req, res) {
   try {
     const findfavSites = await favSites.find({ user: req.body.user });
     // const productId = findfavSites[0].products;
-    if (findfavSites) {
+    if (!findfavSites) {
       const newfavSites = await favSites.create(req.body);
       return res.send(newfavSites);
     }
-    findfavSites[0].products[0].amount = req.body.products[0].amount;
     return res.send(findfavSites);
   } catch (error) {
     res.status(500);
@@ -51,5 +64,9 @@ async function updateFavSite(req, res, next) {
 }
 
 module.exports = {
-  addFavSite, getUserFavs, deleteFavSite, updateFavSite,
+  addFavSite,
+  getUserFavs,
+  deleteFavSite,
+  updateFavSite,
+  checkFavSites,
 };

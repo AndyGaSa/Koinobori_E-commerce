@@ -9,6 +9,7 @@ favSitesRouter
 
 favSitesRouter
   .route('/:favid')
+  .all(favSitesController.checkFavSites)
   .post(favSitesController.addFavSite)
   .put(favSitesController.updateFavSite)
   .delete(favSitesController.deleteFavSite);
