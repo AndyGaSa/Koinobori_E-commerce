@@ -1,13 +1,10 @@
 const { Router } = require('express');
+const { createProduct } = require('../controllers/products.controller');
 
 const productsRouter = Router();
 
 productsRouter
   .route('/')
-  .get(
-    (req, res) => {
-      res.send('hi');
-    }
-  );
+  .post(createProduct);
 
 module.exports = productsRouter;
