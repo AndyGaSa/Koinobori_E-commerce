@@ -16,11 +16,11 @@ server.use(morgan('dev'));
 server.use(express.json());
 
 const productsRouter = require('./src/routes/productsRoute');
-/* const usersRouter = require('./src/routes/usersRoute');
-const cartRouter = require('./src/routes/cartRoute'); */
+const usersRouter = require('./src/routes/usersRoute');
+/* const cartRouter = require('./src/routes/cartRoute'); */
 
 server.use('/api/products', productsRouter);
-/* server.use('/api/users', usersRouter);
-server.use('/api/cart', cartRouter); */
+server.use('/api/users', usersRouter);
+/* server.use('/api/cart', cartRouter); */
 
 server.listen(port, () => debug(`Server running on ${chalk.magenta(`http://localhost:${port}`)}`));
