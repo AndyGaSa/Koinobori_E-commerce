@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul{
+        display: flex;
+        list-style: none;
+        li{
+            margin: 0 15px;
+        }
+    }
+    nav{
+        margin: 0 5px;
+        input{
+            margin:15px
+        }
+        button{
+            margin: 15px;
+        }
+    }
+}
