@@ -18,8 +18,8 @@ const favSitesRouter = require('./src/routes/favSitesRouter');
 const sitesRouter = require('./src/routes/sitesRouter');
 
 server.use('/api/user', usersRouter);
-server.use('/api/product', sitesRouter);
-server.use('/api/cart', favSitesRouter);
+server.use('/api/sites', sitesRouter);
+server.use('/api/favs', favSitesRouter);
 
 server.listen(
   port,
