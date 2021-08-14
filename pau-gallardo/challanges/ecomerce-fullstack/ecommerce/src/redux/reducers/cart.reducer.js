@@ -16,6 +16,11 @@ export default function cartReducer(cartProductList = [], action) {
       newCartProductList = cartProductList.filter((product) => product._id !== action.product._id);
       break;
 
+    case actionTypes.UPDATE_PRODUCT_AMOUNT:
+      newCartProductList[action.index] = action.product;
+      newCartProductList = [...newCartProductList];
+      break;
+
     default:
       break;
   }

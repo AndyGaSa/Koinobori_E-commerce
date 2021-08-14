@@ -17,3 +17,13 @@ export function removeProductFromCart(product) {
     }
   );
 }
+
+export function updateProductAmount(product, index) {
+  return (
+    {
+      type: actionTypes.UPDATE_PRODUCT_AMOUNT,
+      product,
+      index,
+    }
+  );
+}
