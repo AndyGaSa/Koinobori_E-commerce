@@ -5,5 +5,7 @@ const productSchema = Schema({
   name: String,
   price: Number,
   stock: Number,
+  distance: Number,
+  pictures: [{ url: String }],
 });
-module.exports = mongoose.model('Product', productSchema);
+module.exports = mongoose.model('Sites', productSchema);

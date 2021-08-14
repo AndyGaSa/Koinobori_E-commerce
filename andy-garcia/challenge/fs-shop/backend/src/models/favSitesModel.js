@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const cartSchema = Schema({
   user: { type: Schema.ObjectId, ref: 'User' },
-  products: [{
-    product: { type: Schema.ObjectId, ref: 'Product' },
+  favSites: [{
+    site: { type: Schema.ObjectId, ref: 'Sites' },
     amount: Number,
   }],
 });
-module.exports = mongoose.model('Cart', cartSchema);
+module.exports = mongoose.model('favSites', cartSchema);
