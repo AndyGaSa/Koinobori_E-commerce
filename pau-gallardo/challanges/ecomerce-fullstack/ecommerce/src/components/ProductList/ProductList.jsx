@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import loadProductList from '../../redux/actions/productList.creator';
-import addProductToCart from '../../redux/actions/cart.creator';
+import { addProductToCart } from '../../redux/actions/cart.creator';
 
 export default function ProductList() {
   const productList = useSelector((store) => store.products);
