@@ -4,7 +4,7 @@ import React from 'react';
 import sneakers from '../../sneakers-data/data';
 import './style.scss';
 
-export default function Sneakers() {
+export default function Cart() {
   const sneakerFilter = sneakers.filter(({ amount }) => amount > 0);
 
   const x = sneakerFilter.map(({ amount, price }) => amount * +price);
