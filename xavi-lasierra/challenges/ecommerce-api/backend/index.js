@@ -4,6 +4,8 @@ const morgan = require('morgan');
 const debug = require('debug')('ecommerceApi');
 const chalk = require('chalk');
 
+require('./src/config/ddbb.config');
+
 const server = express();
 const port = process.env.PORT || 5000;
 
