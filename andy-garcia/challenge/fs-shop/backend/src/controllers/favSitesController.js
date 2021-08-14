@@ -32,34 +32,31 @@ async function addFavSite(req, res) {
 
 async function getUserFavs({ query }, res) {
   try {
-    const favSitesItems = await favSites.find(query)
+    const favSitesTotal = await favSites.find(query)
       .populate('user')
       .populate({
-        path: 'products.product',
-        select: ['name', 'price', 'stock'],
+        path: 'favSites.site',
+        select: ['name', 'price', 'stock', 'distance, pictures'],
       });
 
-    res.json(favSitesItems);
+    res.json(favSitesTotal);
   } catch (error) {
     res.status(500);
     res.send(error);
   }
 }
 
-function deleteFavSite({ beer }, res) {
-  const { _id } = beer;
-  favSites.findByIdAndDelete(_id).exec();
-  res.send(`La cerveza ${beer.name} ha sido eliminada`);
+function deleteFavSite({ params: { favid } }, res) {
+  favSites.findByIdAndDelete(favid).exec();
+  res.send(`Se ha eliminado ${favid} de tu lista de favoritos`);
 }
-async function updateFavSite(req, res, next) {
-  const { beerId } = req.params;
-  const beer = await favSites.findOne({ id: +beerId }).exec();
+async function updateFavSite({ params: { favid } }, res) {
   try {
-    req.beer = beer;
-    next();
+    const foundFav = await favSites.findOne({ _id: favid }).exec();
+    console.log(foundFav);
   } catch (error) {
     res.status(404);
-    res.send(new Error(`There is no beer with id ${beerId}`));
+    res.send(new Error(`There is no fav with id ${favid}`));
   }
 }
 

@@ -9,7 +9,6 @@ async function createSite({ body }, res) {
     const newSite = await Sites.create(body);
     return res.send(newSite);
   } catch (error) {
-    console.log(error);
     res.status(500);
     return res.send(error.message);
   }

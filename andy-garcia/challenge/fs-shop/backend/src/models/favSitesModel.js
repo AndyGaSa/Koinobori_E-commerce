@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
 
-const cartSchema = Schema({
+const { Schema } = mongoose;
+const favSitesSchema = Schema({
   user: { type: Schema.ObjectId, ref: 'User' },
-  favSites: [{
+  userSites: [{
     site: { type: Schema.ObjectId, ref: 'Sites' },
     amount: Number,
+    fav: Boolean,
   }],
 });
-
-module.exports = mongoose.model('favSites', cartSchema);
+module.exports = mongoose.model('favSites', favSitesSchema);
