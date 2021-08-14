@@ -9,13 +9,13 @@ const removeConcidences = (sites, { userSites }) => (
 );
 
 const findOrSetUser = async (req, res) => {
-  const { user_id } = req.body;
+  const { name } = req.body;
   const response = {};
-  let user = await User.find({ user_id });
+  let user = await User.find({ name });
   let sites = await Sites.find();
   let favList = {};
 
-  if (!user) {
+  if (!user.length) {
     user = await User.create(req.body);
     favList = await FavList.create({
       user: user._id,
@@ -26,16 +26,16 @@ const findOrSetUser = async (req, res) => {
     response.favList = favList;
     response.sites = sites;
 
-    res.send(response);
+    return res.send(response);
   }
 
-  favList = await FavList.find({ user_id });
-  sites = removeConcidences(sites, favList);
+  favList = await FavList.find({ name });
+  sites = favList.length ? removeConcidences(sites, favList) : sites;
 
   response.favlist = favList;
   response.sites = sites;
 
-  res.send(response);
+  return res.send(response);
 };
 
 async function getUserById({ params: { userid } }, res) {
