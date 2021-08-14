@@ -5,7 +5,11 @@ const usersRouter = express.Router();
 
 usersRouter
   .route('/')
-  .get(userController.getUsers)
-  .post(userController.createUser);
+  .post(userController.setNewUser);
+
+usersRouter
+  .route('/:userid')
+  .get(userController.getUserById)
+  .delete(userController.removeUserById);
 
 module.exports = usersRouter;

@@ -1,6 +1,6 @@
 const express = require('express');
 require('dotenv').config();
-const debug = require('debug')('shops');
+const debug = require('debug')('index');
 const chalk = require('chalk');
 const morgan = require('morgan');
 const cors = require('cors');
@@ -14,12 +14,12 @@ server.use(morgan('dev'));
 server.use(express.json());
 
 const usersRouter = require('./src/routes/usersRouter');
-const cartRouter = require('./src/routes/cartRouter');
-const productRouter = require('./src/routes/productRouter');
+const favSitesRouter = require('./src/routes/favSitesRouter');
+const sitesRouter = require('./src/routes/sitesRouter');
 
 server.use('/api/user', usersRouter);
-server.use('/api/product', productRouter);
-server.use('/api/cart', cartRouter);
+server.use('/api/sites', sitesRouter);
+server.use('/api/favs', favSitesRouter);
 
 server.listen(
   port,

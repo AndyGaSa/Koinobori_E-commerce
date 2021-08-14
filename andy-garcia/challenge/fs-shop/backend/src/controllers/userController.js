@@ -1,12 +1,8 @@
 const User = require('../models/userModel');
 
-async function createUser(req, res) {
-  const newUser = await User.create(req.body);
-  return res.send(newUser);
-}
-async function getUsers(req, res) {
+async function getUserById({ params: { userid } }, res) {
   try {
-    const users = await User.find();
+    const users = await User.findById(userid);
     res.json(users);
   } catch (error) {
     res.status(500);
@@ -14,7 +10,17 @@ async function getUsers(req, res) {
   }
 }
 
+const setNewUser = async ({ body }, res) => {
+  const newUser = await User.create(body);
+  return res.send(newUser);
+};
+
+const removeUserById = async ({ params: { userid } }, res) => {
+  const delUser = await User.findByIdAndDelete(userid);
+  res.send(delUser);
+};
 module.exports = {
-  createUser,
-  getUsers,
+  setNewUser,
+  getUserById,
+  removeUserById,
 };
