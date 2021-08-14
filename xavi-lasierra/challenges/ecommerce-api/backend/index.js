@@ -13,8 +13,10 @@ server.use(express.json());
 server.use(morgan('dev'));
 
 const productsRouter = require('./src/routes/products.router');
+const usersRouter = require('./src/routes/users.router');
 
 server.use('/api/products', productsRouter);
+server.use('/api/users', usersRouter);
 
 server.listen(
   port,
