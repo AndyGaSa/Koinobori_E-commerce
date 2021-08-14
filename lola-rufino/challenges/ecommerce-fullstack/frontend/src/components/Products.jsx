@@ -1,6 +1,7 @@
+/* eslint-disable no-underscore-dangle */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import loadProducts from '../redux/actions/actionCreators';
+import { addItemToCart, loadProducts } from '../redux/actions/actionCreators';
 import './Products.scss';
 
 export default function Products() {
@@ -10,12 +11,13 @@ export default function Products() {
   useEffect(() => {
     dispatch(loadProducts());
   }, []);
+
   return (
     <main>
       <h2>Product List</h2>
       <ul>
         {products.map((product) => (
-          <li className="list__container">
+          <li key={product.name} className="list__container">
             <div className="list__item">
               {product.name}
               ,
@@ -32,7 +34,7 @@ export default function Products() {
             </div>
             <div className="list__item">
               {' '}
-              <button type="button" className="list__button">Add to cart</button>
+              <button type="button" className="list__button" onClick={() => addItemToCart(product._id)}>Add to cart</button>
             </div>
           </li>
         ))}
