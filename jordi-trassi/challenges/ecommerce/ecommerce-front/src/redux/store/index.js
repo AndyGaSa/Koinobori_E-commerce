@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { applyMiddleware, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers/index';

@@ -1,6 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadProducts } from '../redux/actions/actionCreator';
+import { loadProducts } from '../redux/actions/actionCrators';
 
 export default function Products() {
   const products = useSelector((store) => store.products);
