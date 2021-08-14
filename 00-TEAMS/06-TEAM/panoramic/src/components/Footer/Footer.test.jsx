@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { render, screen } from '../../utils/test.utils';
+
 import Footer from './index';
 
 describe('Given a Footer component', () => {
