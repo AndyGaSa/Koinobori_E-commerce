@@ -6,8 +6,8 @@ import './style.scss';
 
 export default function Sneakers() {
   return (
-    <>
-
+    <section className="container-cart">
+      <h2 className="cart">Sneakers</h2>
       <ul className="sneakers">
         {sneakers.map(({ name, img, price }) => (
           <section className="sneaker-container">
@@ -38,6 +38,6 @@ export default function Sneakers() {
         ))}
 
       </ul>
-    </>
+    </section>
   );
 }

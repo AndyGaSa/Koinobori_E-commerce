@@ -11,7 +11,12 @@ export default function Sneakers() {
   const totalCart = x.reduce((acc, num) => acc + num);
   return (
     <section className="container-cart">
-      <h2 className="cart">Cart</h2>
+      <nav className="cart-delete">
+        <h2 className="cart">Cart</h2>
+        <button type="button">
+          Delete Cart
+        </button>
+      </nav>
       <ul className="sneakers">
 
         {sneakerFilter.map(({
