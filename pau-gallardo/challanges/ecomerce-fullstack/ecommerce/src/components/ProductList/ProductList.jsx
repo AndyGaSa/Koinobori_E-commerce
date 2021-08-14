@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import loadProductList from '../../redux/actions/productList.creator';
+import addProductToCart from '../../redux/actions/cart.creator';
 
 export default function ProductList() {
   const productList = useSelector((store) => store.products);
@@ -23,6 +24,7 @@ export default function ProductList() {
             <span>{`Stock ${singleProduct.stock} units`}</span>
             <button
               type="button"
+              onClick={() => dispatch(addProductToCart(singleProduct))}
             >
               Add to cart
             </button>
