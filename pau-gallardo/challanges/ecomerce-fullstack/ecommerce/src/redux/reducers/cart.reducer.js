@@ -3,9 +3,13 @@ import actionTypes from '../actions/actionTypes';
 
 export default function cartReducer(cartProductList = [], action) {
   let newCartProductList = cartProductList;
+  let isInCart = false;
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
-      newCartProductList = [...cartProductList, action.product];
+      isInCart = cartProductList.some((product) => product._id === action.product._id);
+      if (!isInCart) {
+        newCartProductList = [...cartProductList, action.product];
+      }
       break;
 
     case actionTypes.REMOVE_FROM_CART:

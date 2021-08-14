@@ -20,7 +20,7 @@ export default function ProductList() {
         productList.map((singleProduct) => (
           <li>
             <span>{`Product name ${singleProduct.name}`}</span>
-            <span>{`${singleProduct.price}€}`}</span>
+            <span>{`${singleProduct.price}€`}</span>
             <span>{`Stock ${singleProduct.stock} units`}</span>
             <button
               type="button"

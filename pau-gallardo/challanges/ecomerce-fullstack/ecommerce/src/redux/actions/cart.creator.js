@@ -4,7 +4,7 @@ export function addProductToCart(product) {
   return (
     {
       type: actionTypes.ADD_TO_CART,
-      product,
+      product: { ...product, amount: 1 },
     }
   );
 }
