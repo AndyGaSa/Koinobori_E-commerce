@@ -1,0 +1,21 @@
+.list__container{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    .list__item{
+        padding: 5px;
+        .list__button{
+            font-family: 'Stylish', sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            background-color: #F7B2BD;
+            color: #053225;
+            border: 1px dashed #053225;
+            padding: 5px;
+            margin-left: 10px;
+            &:hover{
+                background-color: #E34A6F;
+            }
+        }  
+    }
+}
