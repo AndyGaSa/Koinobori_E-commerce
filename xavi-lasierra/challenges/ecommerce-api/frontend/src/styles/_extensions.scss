@@ -1,3 +1,5 @@
+@import './variables';
+
 %small-image {
     width: 4rem;
 }
@@ -10,4 +12,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+%login-logout-button {
+    font-family: $main-font;
+    font-weight: bold;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background-color: transparent;
+    border: 3px solid $main-light-color;
+    border-radius: 2px;
+    color: $main-light-color;
+    box-shadow: 2px 2px 3px $main-dark-color;
+    transition: .2s;
+
+    &:hover {
+        background-color: $main-light-color;
+        border: 3px solid $main-dark-color;
+        color: $main-dark-color;
+    }
+
+    &:active {
+        box-shadow: none;
+        font-size: 0.7rem;
+    }
 }

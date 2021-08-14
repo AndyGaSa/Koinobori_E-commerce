@@ -1,0 +1,5 @@
+@import '../../styles/extensions';
+
+.logout-button {
+    @extend %login-logout-button;
+}

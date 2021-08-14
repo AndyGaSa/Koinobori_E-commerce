@@ -1,22 +1,19 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
-const Profile = () => {
+import './profile.scss';
+
+function Profile() {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
-  if (isLoading) {
-    return <div>Loading ...</div>;
-  }
-
   return (
-    isAuthenticated && (
-      <div>
-        <img src={user.picture} alt={user.name} />
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
-      </div>
+    (isAuthenticated && !isLoading) && (
+      <section className="profile">
+        <span className="profile__user-name">{user.name}</span>
+        <img className="profile__user-photo" src={user.picture} alt={user.name} />
+      </section>
     )
   );
-};
+}
 
 export default Profile;

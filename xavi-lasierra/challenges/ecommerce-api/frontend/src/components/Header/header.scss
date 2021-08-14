@@ -1,0 +1,20 @@
+@import '../../styles/variables', '../../styles/extensions';
+
+.header {
+    @extend %row-between-flex;
+    font-family: $main-font;
+    background-color: $main-color;
+    padding: 0.5rem 5vw;
+
+    .header__title {
+        color: $main-light-text-color;
+        font-size: 1.5rem;
+    }
+
+    .header__login-logout {
+        display: flex;
+        justify-content: flex-end;
+        width: 40vw;
+        height: 2rem;
+    }
+}
