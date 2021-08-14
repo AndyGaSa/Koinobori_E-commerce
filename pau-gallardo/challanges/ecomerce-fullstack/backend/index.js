@@ -3,6 +3,8 @@ const express = require('express');
 const morgan = require('morgan');
 const debug = require('debug')('ecommerceApi');
 
+require('./src/config/ddbbConfig');
+
 const server = express();
 const port = process.env.PORT || 5000;
 
