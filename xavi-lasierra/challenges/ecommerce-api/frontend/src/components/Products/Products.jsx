@@ -10,7 +10,7 @@ function Product() {
   return (
     <ul className="products">
       { products.map((product) => (
-        <li className="products__product">
+        <li className="products__product" key={`${product.name}-shoe`}>
           <img className="product__image" src={product.img} alt={product.name} />
           <div className="product__information">
             <h3 className="product__name">{product.name}</h3>
