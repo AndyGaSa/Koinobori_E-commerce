@@ -9,7 +9,16 @@ async function createUser({ body }, res) {
     return res.send(new Error('Error'));
   }
 }
+async function deleteUser({ params: { _id } }, res) {
+  try {
+    await User.findByIdAndDelete(_id);
+    return res.send('The user has been deleted');
+  } catch (error) {
+    res.status(404);
+    return res.send('User not found');
+  }
+}
 
 module.exports = {
-  createUser
+  createUser, deleteUser
 };

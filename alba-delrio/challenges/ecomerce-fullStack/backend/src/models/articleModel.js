@@ -4,8 +4,8 @@ const { Schema } = mongoose;
 const articleSchema = Schema({
   name: String,
   price: Number,
-  stock: Number,
-  type: String
+  currency: String,
+  stock: Number
 
 });
-module.exports = mongoose.model('Product', articleSchema);
+module.exports = mongoose.model('Article', articleSchema);

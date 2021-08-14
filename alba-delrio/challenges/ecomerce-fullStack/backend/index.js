@@ -18,7 +18,7 @@ const userRouter = require('./src/routers/userRouter');
 
 server.use('/api/cart', cartRouter);
 server.use('/api/article', articleRouter);
-server.use('./api/user', userRouter);
+server.use('/api/user', userRouter);
 
 server.listen(
   port,
