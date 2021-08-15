@@ -1,0 +1,18 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 80%;
+    margin: 10% 10%;
+    height: 50px;
+    border-top: solid 2px #000;
+
+}
+@media only screen and (min-width: 376px) {
+    .footer{
+        display: none;
+    }
+}
+
+

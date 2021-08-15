@@ -1,0 +1,25 @@
+.product-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .product-list__title{
+        margin: 20px 0;
+    }
+    .product-list__items{
+        width: 80%;
+        margin: 10px 0;
+        list-style-type: square;
+        .item{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            margin: 10px 0;
+        }
+    }
+}
+@media only screen and (min-width: 376px) {
+    .product-list {
+        width: 50%;
+    }
+}

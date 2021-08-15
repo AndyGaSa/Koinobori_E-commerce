@@ -1,0 +1,26 @@
+.cart {
+    display: none;
+}
+@media only screen and (min-width: 376px) {
+    .cart{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid #000 1px;
+        .cart__title{
+            margin: 20px 0;
+        }
+        .cart__items{
+            width: 80%;
+            margin: 10px 0;
+            list-style-type: square;
+            .cart-item{
+                display: flex;
+                flex-direction: row;
+                justify-content:space-around;
+                margin: 10px 0;
+            }
+        }
+    }
+}

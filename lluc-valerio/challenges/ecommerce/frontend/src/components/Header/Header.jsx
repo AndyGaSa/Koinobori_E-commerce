@@ -2,7 +2,7 @@ import React from 'react';
 
 import User from '../User/User';
 
-import '../../styles/Header.css';
+import '../../styles/Header.scss';
 
 export default function Header() {
   return (
