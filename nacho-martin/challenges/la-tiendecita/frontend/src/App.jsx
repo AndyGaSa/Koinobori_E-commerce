@@ -1,10 +1,11 @@
 import React from 'react';
+import FunkoList from './components/FunkoList';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hola, mi gente</h1>
-    </div>
+    <>
+      <FunkoList />
+    </>
   );
 }
 
