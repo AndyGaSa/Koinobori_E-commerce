@@ -12,7 +12,6 @@ async function getClient({ query }, res) {
 
 async function findOneClient(req, res, next) {
   const { ClientId } = req.params;
-  console.log('find');
   try {
     const client = await Client.findById(ClientId);
 
