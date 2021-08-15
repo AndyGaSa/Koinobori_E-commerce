@@ -1,4 +1,5 @@
 const Cart = require('../models/cart.model');
+const Product = require('../models/product.model');
 
 async function getCarts({ query }, res) {
   try {
@@ -50,13 +51,23 @@ async function updateCartByUserId({ params: { userId }, body }, res) {
   }
 }
 
+function updateStock(updatedProduct) {
+  return Product.findByIdAndUpdate(
+    updatedProduct.product,
+    { $inc: { stock: -updatedProduct.amount } },
+    { new: true }
+  );
+}
+
 async function payCart({ params: { userId }, body }, res) {
   try {
-    const updatedCart = await Cart.findOneAndUpdate({ user: userId },
-      { products: body },
-      { new: true })
-      .populate('products.product');
-    res.json(updatedCart);
+    const clearCart = await Cart.findOneAndUpdate({ user: userId },
+      { products: [] },
+      { new: true });
+    body.forEach(async (product) => {
+      await updateStock(product);
+    });
+    res.json(clearCart);
   } catch (error) {
     res.status(500);
     res.send(error);
