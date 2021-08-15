@@ -43,6 +43,7 @@ function Cart({ user }) {
       {}
       <div className="cart__clear">
         <h2 className="cart__title">Cart</h2>
+        {user?.name && (
         <div>
           <button className="cart__clear-button" type="button" aria-label="Clear cart" onClick={saveCartData}>
             <FontAwesomeIcon icon={faHeart} />
@@ -51,6 +52,7 @@ function Cart({ user }) {
             <FontAwesomeIcon icon={faTrashAlt} />
           </button>
         </div>
+        )}
       </div>
       <ul className="cart__cart-products">
         {cart.products.map(({ product, amount }) => (
