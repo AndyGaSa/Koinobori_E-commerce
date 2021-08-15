@@ -12,8 +12,10 @@ server.use(morgan('dev'));
 server.use(express.json());
 
 const productsRouter = require('./src/routers/productsRouter');
+const cartRouter = require('./src/routers/cartRouter');
 
 server.use('/la-tiendecita/api/products', productsRouter);
+server.use('/la-tiendecita/api/cart', cartRouter);
 
 server.listen(
   port,
