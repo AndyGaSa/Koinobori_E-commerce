@@ -1,11 +1,16 @@
 import React from 'react';
-import './App.css';
+import { useAuth0 } from '@auth0/auth0-react';
+import Login from './components/Login';
+import MainPage from './components/MainPage';
 
 function App() {
+  const { isAuthenticated } = useAuth0();
   return (
-    <div className="App">
-      <h1>hola</h1>
-    </div>
+
+    isAuthenticated
+      ? <MainPage />
+      : <Login />
+
   );
 }
 
