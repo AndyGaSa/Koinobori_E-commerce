@@ -41,6 +41,9 @@ function cartReducer(cart = {
         products: []
       };
       break;
+    case actionTypes.SAVE_CART:
+      newCart = action.data;
+      break;
     default:
       break;
   }

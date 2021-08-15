@@ -2,7 +2,8 @@ const { Router } = require('express');
 const {
   getCarts,
   createCart,
-  getOneCart
+  getOneCart,
+  updateCartByUserId
 } = require('../controllers/carts.controller');
 
 const cartsRouter = Router();
@@ -14,6 +15,7 @@ cartsRouter
 
 cartsRouter
   .route('/:userId')
-  .get(getOneCart);
+  .get(getOneCart)
+  .put(updateCartByUserId);
 
 module.exports = cartsRouter;

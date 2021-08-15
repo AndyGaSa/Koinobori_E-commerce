@@ -37,8 +37,13 @@ async function getOneCart({ params: { userId } }, res) {
   }
 }
 
+async function updateCartByUserId({ params: { userId } }, res) {
+
+}
+
 module.exports = {
   getCarts,
   createCart,
-  getOneCart
+  getOneCart,
+  updateCartByUserId
 };

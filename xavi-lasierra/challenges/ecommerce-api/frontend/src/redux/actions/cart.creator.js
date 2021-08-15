@@ -27,8 +27,15 @@ export function substractProductFromCart(data) {
   });
 }
 
-export function saveCart() {
+export function saveCart({ _id, products }) {
+  return async (dispatch) => {
+    const { data } = await axios.put('/api/carts', cart);
 
+    dispatch({
+      type: actionTypes.SAVE_CART,
+      data
+    });
+  };
 }
 
 export function clearCart() {

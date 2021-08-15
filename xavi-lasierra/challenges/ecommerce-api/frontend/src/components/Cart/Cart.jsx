@@ -26,13 +26,26 @@ function Cart({ user }) {
     return cartClass ? setCartClass('') : setCartClass('cart--closed');
   }
 
+  function saveCartData() {
+    const cartData = {
+      ...cart,
+      products: cart.products.map(({ product, amount }) => (
+        {
+          product: product._id,
+          amount
+        }))
+    };
+    console.log(cartData);
+    dispatch(saveCart(cartData));
+  }
+
   return (
     <section className={`cart ${cartClass}`}>
       {}
       <div className="cart__clear">
         <h2 className="cart__title">Cart</h2>
         <div>
-          <button className="cart__clear-button" type="button" aria-label="Clear cart" onClick={() => dispatch(saveCart())}>
+          <button className="cart__clear-button" type="button" aria-label="Clear cart" onClick={saveCartData}>
             <FontAwesomeIcon icon={faHeart} />
           </button>
           <button className="cart__save-button" type="button" aria-label="Clear cart" onClick={() => dispatch(clearCart())}>
