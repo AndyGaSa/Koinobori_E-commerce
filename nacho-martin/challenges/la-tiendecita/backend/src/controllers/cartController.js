@@ -1,4 +1,5 @@
 const Cart = require('../models/cartModel');
+const Product = require('../models/productsModel');
 
 async function getAll({ query }, res) {
   try {
@@ -20,6 +21,17 @@ async function createOne({ body }, res) {
     res.send(error);
   }
 }
+
+async function updateStock({ product, types }) {
+  const productToUpdate = await Product.findById(product);
+  if (types === 'ADD_TO_CART') {
+    productToUpdate.stock -= 1;
+  } else {
+    productToUpdate.stock += 1;
+  }
+  productToUpdate.save();
+}
+
 async function updateCart(req, res) {
   try {
     const cartToUpdate = await Cart.find();
@@ -43,6 +55,7 @@ async function updateCart(req, res) {
     } else {
       cartToUpdate[0].products = [...cartToUpdate[0].products, productToAdd];
     }
+    updateStock(productToAdd);
     cartToUpdate[0].save();
     res.json(cartToUpdate[0].products);
   } catch (error) {
