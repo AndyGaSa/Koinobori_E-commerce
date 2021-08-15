@@ -1,5 +1,4 @@
 const Cart = require('../models/cartModel');
-const Product = require('../models/productModel');
 
 async function getAll({ query }, res) {
   try {
@@ -10,47 +9,6 @@ async function getAll({ query }, res) {
         select: ['price', 'stock', 'name']
       });
     res.json(getAllCarts);
-  } catch (error) {
-    res.status(500);
-    res.send(error);
-  }
-}
-
-async function createOne({ body }, res) {
-  try {
-    const userCart = await Cart.findOne({ user: body.user });
-
-    if (userCart) {
-      await body.products.forEach(async (current) => {
-        const existingProduct = userCart.products.find(
-          ({ product }) => product.toString() === current.product
-        );
-
-        const isStockAvailable = await Product.findOneAndUpdate(
-          {
-            _id: current.product,
-            stock: { $gte: current.amount }
-          },
-          {
-            $inc: { stock: -current.amount }
-          }
-        );
-
-        if (isStockAvailable) {
-          if (existingProduct) {
-            existingProduct.amount += current.amount;
-          } else {
-            userCart.products.push(current);
-          }
-          await userCart.save();
-        }
-      });
-
-      res.send(userCart);
-    } else {
-      const createdCartItem = await Cart.create(body);
-      res.json(createdCartItem);
-    }
   } catch (error) {
     res.status(500);
     res.send(error);
@@ -97,7 +55,6 @@ async function deleteOneById(req, res) {
 
 module.exports = {
   getAll,
-  createOne,
   getById,
   updateOneById,
   deleteOneById
