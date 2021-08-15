@@ -1,5 +1,15 @@
 const User = require('../models/user.model');
 
+async function getAllUsers({ query }, res) {
+  try {
+    const foundUsers = await User.find(query);
+    res.json(foundUsers);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
 async function getCreateUser({ body }, res) {
   try {
     let user = await User.findOne({ email: body.email });
@@ -16,5 +26,6 @@ async function getCreateUser({ body }, res) {
 }
 
 module.exports = {
+  getAllUsers,
   getCreateUser
 };
