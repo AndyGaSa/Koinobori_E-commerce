@@ -1,4 +1,5 @@
 /* eslint-disable no-underscore-dangle */
+const debug = require('debug')('user:controller');
 const User = require('../models/userModel');
 const Sites = require('../models/sitesModel');
 const FavList = require('../models/favSitesModel');
@@ -22,20 +23,31 @@ const findOrSetUser = async (req, res) => {
   return res.send({ user, favList, sites });
 };
 
-async function getUserById({ params: { userid } }, res) {
-  try {
-    const users = await User.findById(userid);
-    res.json(users);
-  } catch (error) {
-    res.status(500);
-    res.send(error);
-  }
-}
+const getUserById = async ({ params: { userid } }, res) => {
+  const user = await User.findById(userid);
+  const result = user.length
+    ? {
+      status: 200,
+      message: user,
+    } : {
+      status: 500,
+      message: 'Usuario no encontrado',
+    };
+
+  res.status(result.status);
+  res.send(result.message);
+};
 
 // todo - When remove user we need remove he favList as well
 const removeUserById = async ({ params: { userid } }, res) => {
+  debug(userid);
+  const findD = await FavList.findOneAndDelete({ user: userid });
+  const find = await FavList.find({ user: userid });
+  debug(`FindD: ${findD}`);
+  debug(`Find: ${find}`);
   const delUser = await User.findByIdAndDelete(userid);
-  res.send(delUser);
+  debug(delUser);
+  res.send('Usuario eliminado');
 };
 
 module.exports = {

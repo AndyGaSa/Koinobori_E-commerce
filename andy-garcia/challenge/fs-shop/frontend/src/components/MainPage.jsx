@@ -14,8 +14,9 @@ function MainPage() {
   if (isAuthenticated) {
     console.log(`Usuario ${user.name} autentificado`);
     useEffect(() => {
-      dispatch(fetchUserAccount(user.name));
+      dispatch(fetchUserAccount(user));
     }, []);
+    console.log('Contenido de user en store');
   }
 
   return (
