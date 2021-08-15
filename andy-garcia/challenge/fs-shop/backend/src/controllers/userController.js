@@ -42,4 +42,5 @@ module.exports = {
   findOrSetUser,
   getUserById,
   removeUserById,
+  removeConcidences,
 };
