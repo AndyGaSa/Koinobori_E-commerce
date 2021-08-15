@@ -1,36 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { loadOneBeer } from '../redux/actions/actionCreator';
+import './Details.scss';
 
 export default function Details() {
+  const selectedBeer = useSelector((store) => store.oneBeer);
+  const dispatch = useDispatch();
+  const { beerId } = useParams();
+  useEffect(() => {
+    dispatch(loadOneBeer(beerId));
+  }, []);
   return (
     <main>
-      <div>
-        <img src="" alt="" />
+      <h2>{selectedBeer.name}</h2>
+      <div className="details__main-container">
+        <img className="details__image" src={selectedBeer.image_url} alt="" />
         <section>
           <h2>
-            avb:
-            <span label="abv" />
+            Atenuation level:
+            <span label="atenuation">{selectedBeer.atenuation_level}</span>
           </h2>
           <h2>
-            avb:
-            <span label="abv" />
+            abv:
+            <span label="abv">{selectedBeer.abv}</span>
           </h2>
           <h2>
-            avb:
-            <span label="abv" />
-          </h2>
-          <h2>
-            avb:
-            <span label="abv" />
+            Tips:
+            <p>{selectedBeer.brewers_tips}</p>
           </h2>
         </section>
       </div>
-      <div>
-        <h3>description</h3>
+      <div className="details__description">
+        <h3>{selectedBeer.tagline}</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Atque quo iusto ducimus vero quam deserunt corrupti,
-          dignissimos nesciunt quod, exercitationem quibusdam?
-          Dolorum rem optio aliquid, earum iste eos ullam repudiandae.
+          {selectedBeer.description}
 
         </p>
       </div>

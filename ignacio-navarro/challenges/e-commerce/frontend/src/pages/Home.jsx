@@ -1,9 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { loadProducts } from '../redux/actions/actionCreator';
 import CardItem from '../components/CardItem/CardItem';
 import './Home.scss';
 
 export default function Home() {
+  const beersList = useSelector((store) => store.products);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadProducts());
+  }, []);
   return (
     <main>
       <div className="home__banner">
@@ -11,12 +19,7 @@ export default function Home() {
       </div>
 
       <div className="home__items">
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
+        {beersList.slice(0, 6).map((beer) => <CardItem beer={beer} />)}
       </div>
     </main>
   );

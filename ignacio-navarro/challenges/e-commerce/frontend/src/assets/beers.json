@@ -1,6 +1,6 @@
 [
     {
-
+      "stock":30,
       "name": "Buzz",
       "tagline": "A Real Bitter Experience.",
       "first_brewed": "09/2007",
@@ -122,7 +122,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Trashy Blonde",
       "tagline": "You Know You Shouldn't",
       "first_brewed": "04/2008",
@@ -236,7 +236,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Berliner Weisse With Yuzu - B-Sides",
       "tagline": "Japanese Citrus Berliner Weisse.",
       "first_brewed": "11/2015",
@@ -350,7 +350,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Pilsen Lager",
       "tagline": "Unleash the Yeast Series.",
       "first_brewed": "09/2013",
@@ -488,7 +488,7 @@
       "contributed_by": "Ali Skinner <AliSkinner>"
     },
     {
-
+      "stock":30,
       "name": "Avery Brown Dredge",
       "tagline": "Bloggers' Imperial Pilsner.",
       "first_brewed": "02/2011",
@@ -585,7 +585,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Electric India",
       "tagline": "Vibrant Hoppy Saison.",
       "first_brewed": "05/2013",
@@ -716,7 +716,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "AB:12",
       "tagline": "Imperial Black Belgian Ale.",
       "first_brewed": "07/2012",
@@ -874,7 +874,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Fake Lager",
       "tagline": "Bohemian Pilsner.",
       "first_brewed": "03/2013",
@@ -1012,7 +1012,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "AB:07",
       "tagline": "Whisky Cask-Aged Scotch Ale.",
       "first_brewed": "03/2010",
@@ -1156,7 +1156,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Bramling X",
       "tagline": "Single Hop IPA Series - 2011.",
       "first_brewed": "01/2011",
@@ -1251,7 +1251,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Misspent Youth",
       "tagline": "Milk & Honey Scotch Ale.",
       "first_brewed": "04/2013",
@@ -1431,7 +1431,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Arcade Nation",
       "tagline": "Seasonal Black IPA.",
       "first_brewed": "12/2015",
@@ -1587,7 +1587,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Movember",
       "tagline": "Moustache-Worthy Beer.",
       "first_brewed": "11/2009",
@@ -1705,7 +1705,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Alpha Dog",
       "tagline": "Existential Red Ale.",
       "first_brewed": "02/2010",
@@ -1824,7 +1824,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Mixtape 8",
       "tagline": "An Epic Fusion Of Old Belgian, American New Wave, And Scotch Whisky.",
       "first_brewed": "01/2012",
@@ -1937,7 +1937,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Libertine Porter",
       "tagline": "Dry-Hopped Aggressive Porter.",
       "first_brewed": "01/2012",
@@ -2112,7 +2112,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "AB:06",
       "tagline": "Imperial Black IPA.",
       "first_brewed": "04/2011",
@@ -2302,7 +2302,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Russian Doll – India Pale Ale",
       "tagline": "Nesting Hop Bomb.",
       "first_brewed": "08/2014",
@@ -2460,7 +2460,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Hello My Name Is Mette-Marit",
       "tagline": "Lingonberry Double IPA.",
       "first_brewed": "06/2013",
@@ -2593,7 +2593,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Rabiator",
       "tagline": "Imperial Wheat Beer",
       "first_brewed": "03/2011",
@@ -2688,7 +2688,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Vice Bier",
       "tagline": "Hoppy Wheat Bier.",
       "first_brewed": "04/2013",
@@ -2828,7 +2828,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Devine Rebel (w/ Mikkeller)",
       "tagline": "Oak-aged Barley Wine.",
       "first_brewed": "12/2008",
@@ -2930,7 +2930,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Storm",
       "tagline": "Islay Whisky Aged IPA.",
       "first_brewed": "12/2007",
@@ -3065,7 +3065,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "The End Of History",
       "tagline": "The World's Strongest Beer.",
       "first_brewed": "06/2011",
@@ -3173,7 +3173,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Bad Pixie",
       "tagline": "Spiced Wheat Beer.",
       "first_brewed": "10/2008",
@@ -3270,7 +3270,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Skull Candy",
       "tagline": "Pacific Hopped Amber Bitter.",
       "first_brewed": "02/2010",
@@ -3392,7 +3392,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Dog B",
       "tagline": "Cacao, Coffee Chili Anniversary Stout.",
       "first_brewed": "05/2013",
@@ -3551,7 +3551,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "HBC 369",
       "tagline": "Single Hop India Pale Ale – 2012.",
       "first_brewed": "02/2012",
@@ -3655,7 +3655,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "10 Heads High",
       "tagline": "Imperial Red Ale.",
       "first_brewed": "04/2013",
@@ -3793,7 +3793,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Dana - IPA Is Dead",
       "tagline": "Single Hop India Pale Ale.",
       "first_brewed": "02/2013",
@@ -3913,7 +3913,7 @@
       "contributed_by": "Matt Ball <GeordieMatt>"
     },
     {
-
+      "stock":30,
       "name": "Nanny State",
       "tagline": "Alcohol Free Hoppy Ale.",
       "first_brewed": "08/2009",
@@ -4158,7 +4158,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "AB:05",
       "tagline": "Belgian Imperial Stout.",
       "first_brewed": "12/2010",
@@ -4274,7 +4274,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Sorachi Ace",
       "tagline": "Single Hop IPA Series - 2011.",
       "first_brewed": "01/2011",
@@ -4369,7 +4369,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Bourbon Baby",
       "tagline": "Barrel-Aged Scotch Ale.",
       "first_brewed": "01/2014",
@@ -4508,7 +4508,7 @@
       "contributed_by": "Ali Skinner <AliSkinner>"
     },
     {
-
+      "stock":30,
       "name": "Berliner Weisse With Raspberries And Rhubarb - B-Sides",
       "tagline": "Fruity Berliner Weisse.",
       "first_brewed": "11/2015",
@@ -4622,7 +4622,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Shipwrecker Circus (w/ Oskar Blues)",
       "tagline": "American Barley Wine - Oskar Blues Collab.",
       "first_brewed": "09/2013",
@@ -4796,7 +4796,7 @@
       "contributed_by": "Ali Skinner <AliSkinner>"
     },
     {
-
+      "stock":30,
       "name": "Zephyr",
       "tagline": "There’s A Storm Brewing.",
       "first_brewed": "10/2008",
@@ -4972,7 +4972,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Belgian Trappist",
       "tagline": "Unleash the Yeast Series.",
       "first_brewed": "09/2013",
@@ -5110,7 +5110,7 @@
       "contributed_by": "Ali Skinner <AliSkinner>"
     },
     {
-
+      "stock":30,
       "name": "Kohatu - IPA Is Dead",
       "tagline": "Single Hop India Pale Ale.",
       "first_brewed": "02/2014",
@@ -5223,7 +5223,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Hello My Name is Vladimir",
       "tagline": "Limonnik Infused Imperial IPA (Not for Gays).",
       "first_brewed": "01/2014",
@@ -5372,7 +5372,7 @@
       "contributed_by": "Ali Skinner <AliSkinner>"
     },
     {
-
+      "stock":30,
       "name": "AB:17",
       "tagline": "Three Coffee Rye Imperial Porter.",
       "first_brewed": "10/2014",
@@ -5495,7 +5495,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Hardcore IPA",
       "tagline": "Explicit Imperial Ale. Citrusy. Resinous. Intense.",
       "first_brewed": "12/2009",
@@ -5680,7 +5680,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "American Wheat",
       "tagline": "Hoppy American Wheat.",
       "first_brewed": "07/2014",
@@ -5775,7 +5775,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Dog Wired (w/8 Wired)",
       "tagline": "New Zealand Imperial Pilsner.",
       "first_brewed": "06/2013",
@@ -5924,7 +5924,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "The Physics",
       "tagline": "Laid Back Amber Beer.",
       "first_brewed": "04/2007",
@@ -6044,7 +6044,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Anarchist Alchemist",
       "tagline": "Triple Hopped Triple Ipa.",
       "first_brewed": "03/2012",
@@ -6179,7 +6179,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "AB:15",
       "tagline": "Salted Caramel Popcorn Strong Ale.",
       "first_brewed": "03/2013",
@@ -6288,7 +6288,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Goldings - IPA Is Dead",
       "tagline": "Single Hop India Pale Ale.",
       "first_brewed": "02/2013",
@@ -6408,7 +6408,7 @@
       "contributed_by": "Matt Ball <GeordieMatt>"
     },
     {
-
+      "stock":30,
       "name": "AB:14",
       "tagline": "Oak-Aged Imperial Weizenbock.",
       "first_brewed": "02/2013",
@@ -6537,7 +6537,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Lost Dog (w/Lost Abbey)",
       "tagline": "Rum-Aged Imperial Porter - Lost Abbey Collab.",
       "first_brewed": "11/2011",
@@ -6644,7 +6644,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "TM10",
       "tagline": "Liquid Art.",
       "first_brewed": "04/2010",
@@ -6752,7 +6752,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Paradox Islay",
       "tagline": "Ubiquitous Imperial Stout.",
       "first_brewed": "04/2007",
@@ -6893,7 +6893,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Baby Dogma",
       "tagline": "Session Scotch Ale.",
       "first_brewed": "09/2013",
@@ -7032,7 +7032,7 @@
       "contributed_by": "Ali Skinner <AliSkinner>"
     },
     {
-
+      "stock":30,
       "name": "Albino Squid Assasin",
       "tagline": "Red Rye IPA",
       "first_brewed": "11/2015",
@@ -7186,7 +7186,7 @@
       "contributed_by": "Matt Ball <GeordieMatt>"
     },
     {
-
+      "stock":30,
       "name": "Amarillo - IPA Is Dead",
       "tagline": "Single Hop India Pale Ale.",
       "first_brewed": "01/2013",
@@ -7299,7 +7299,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Black Eyed King Imp",
       "tagline": "Barrel-Aged Prototype Cocoa Psycho.",
       "first_brewed": "11/2012",
@@ -7445,7 +7445,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Prototype 27",
       "tagline": "Vibrant Smoky Pink IPA.",
       "first_brewed": "04/2010",
@@ -7585,7 +7585,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Coffee Imperial Stout",
       "tagline": "Beats a Cup of Joe.",
       "first_brewed": "11/2008",
@@ -7723,7 +7723,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Mandarina Bavaria - IPA Is Dead",
       "tagline": "Single Hop India Pale Ale.",
       "first_brewed": "03/2015",
@@ -7813,7 +7813,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Dogma",
       "tagline": "Revamped Wee Heavy. Luscious. Malty. Fruity.",
       "first_brewed": "07/2013",
@@ -7964,7 +7964,7 @@
       "contributed_by": "Ali Skinner <AliSkinner>"
     },
     {
-
+      "stock":30,
       "name": "Magic Stone Dog (w/Magic Rock & Stone Brewing Co.)",
       "tagline": "Session Farmhouse IPA - Stone / Magic Rock Collab.",
       "first_brewed": "06/2014",
@@ -8080,7 +8080,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "AB:08",
       "tagline": "Deconstructed Blonde Imperial Stout.",
       "first_brewed": "11/2011",
@@ -8191,7 +8191,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Sunk Punk",
       "tagline": "Ocean Fermented Lager.",
       "first_brewed": "09/2011",
@@ -8326,7 +8326,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Sub Hop",
       "tagline": "Hopped-Up Imperial Pilsner.",
       "first_brewed": "06/2014",
@@ -8466,7 +8466,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Bracken's Porter",
       "tagline": "A Tribute To Our Favourite 4 Pawed Friend.",
       "first_brewed": "03/2013",
@@ -8577,7 +8577,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Tokyo Rising Sun - Lowland",
       "tagline": "A Beautiful Accident.",
       "first_brewed": "06/2009",
@@ -8724,7 +8724,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Hunter Foundation Pale Ale",
       "tagline": "American Pale Ale.",
       "first_brewed": "05/2012",
@@ -8830,7 +8830,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Hype",
       "tagline": "New Zealand Pale Ale.",
       "first_brewed": "08/2007",
@@ -8920,7 +8920,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "AB:16",
       "tagline": "Coffee-Infused Belgian Quad.",
       "first_brewed": "02/2014",
@@ -9038,7 +9038,7 @@
       "contributed_by": "Ali Skinner <AliSkinner>"
     },
     {
-
+      "stock":30,
       "name": "Sunmaid Stout",
       "tagline": "Rum & Raisin Imperial Stout.",
       "first_brewed": "12/2011",
@@ -9147,7 +9147,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Pale - Russian Doll",
       "tagline": "Nesting Hop Bomb.",
       "first_brewed": "08/2014",
@@ -9296,7 +9296,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Whisky Sour - B-Sides",
       "tagline": "Pilot Brew - Deconstructed Whisky Sour.",
       "first_brewed": "03/2015",
@@ -9489,7 +9489,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Black Eyed King Imp - Vietnamese Coffee Edition",
       "tagline": "Vietnamese Coffee Edition.",
       "first_brewed": "12/2014",
@@ -9635,7 +9635,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Eurotrash",
       "tagline": "Belgian Blonde.",
       "first_brewed": "10/2009",
@@ -9811,7 +9811,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Never Mind The Anabolics",
       "tagline": "Performance-Enhancing India Pale Ale.",
       "first_brewed": "06/2012",
@@ -9906,7 +9906,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "#Mashtag 2013",
       "tagline": "Democratic American Brown Ale.",
       "first_brewed": "05/2013",
@@ -10060,7 +10060,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Hobo Pop",
       "tagline": "2013 Prototype Rye Pale Ale.",
       "first_brewed": "11/2013",
@@ -10214,7 +10214,7 @@
       "contributed_by": "Ali Skinner <AliSkinner>"
     },
     {
-
+      "stock":30,
       "name": "AB:18",
       "tagline": "Imperial Brown Ale Aged In Rum Casks.",
       "first_brewed": "10/2011",
@@ -10346,7 +10346,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "Hops Kill Nazis",
       "tagline": "Imperial Red Ale.",
       "first_brewed": "08/2011",
@@ -10459,7 +10459,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
       "name": "AB:04",
       "tagline": "Imperial Stout With Coffee, Loads Of Cocoa And Chilli.",
       "first_brewed": "08/2010",
@@ -10593,7 +10593,7 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-
+      "stock":30,
         "name": "India Session Lager - Prototype Challenge",
         "tagline": "Refreshing Hop Fix.",
         "first_brewed": "11/2015",
@@ -10735,7 +10735,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Hopped-Up Brown Ale - Prototype Challenge",
         "tagline": "Malt Hop Balance.",
         "first_brewed": "01/2016",
@@ -10887,7 +10887,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Comet",
         "tagline": "Single Hop India Pale Ale",
         "first_brewed": "02/2014",
@@ -11000,7 +11000,7 @@
         "contributed_by": "Ali Skinner <AliSkinner>"
       },
       {
-
+        "stock":30,
         "name": "Baby Saison - B-Sides",
         "tagline": "Trial Baby Saison.",
         "first_brewed": "08/2015",
@@ -11134,7 +11134,7 @@
         "contributed_by": "Matt Ball <GeordieMatt>"
       },
       {
-
+        "stock":30,
         "name": "Santa Paws",
         "tagline": "Christmas Scoth Ale.",
         "first_brewed": "10/2010",
@@ -11273,7 +11273,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Original Dogma (Née Speedball)",
         "tagline": "Strong Ale With Honey And Spices.",
         "first_brewed": "07/2008",
@@ -11420,7 +11420,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Alpha Pop",
         "tagline": "Hoppy Rye Pale Ale.",
         "first_brewed": "03/2014",
@@ -11558,7 +11558,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Bavarian Weizen",
         "tagline": "Unleash the Yeast Series.",
         "first_brewed": "09/2013",
@@ -11696,7 +11696,7 @@
         "contributed_by": "Ali Skinner <AliSkinner>"
       },
       {
-
+        "stock":30,
         "name": "Citra",
         "tagline": "Single Hop IPA Series – 2011.",
         "first_brewed": "01/2011",
@@ -11800,7 +11800,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "#Mashtag 2015",
         "tagline": "US Hopped Black Barley Wine.",
         "first_brewed": "05/2015",
@@ -11988,7 +11988,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Dead Pony Club",
         "tagline": "West Coast Kicks. Citrusy. Zesty. Bright.",
         "first_brewed": "03/2012",
@@ -12128,7 +12128,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "AB:09",
         "tagline": "Cranachan Imperial Stout.",
         "first_brewed": "11/2010",
@@ -12237,7 +12237,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Mango Gose - B-Sides",
         "tagline": "Hoppy Mango Gose.",
         "first_brewed": "07/2015",
@@ -12371,7 +12371,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Everday Anarchy",
         "tagline": "White Wine Barrel-Aged Imperial Red Saison.",
         "first_brewed": "06/2013",
@@ -12500,7 +12500,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Peroxide Punk",
         "tagline": "Zesty Pale Ale.",
         "first_brewed": "04/2007",
@@ -12626,7 +12626,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Lumberjack Stout",
         "tagline": "Blueberry Bacon Stout.",
         "first_brewed": "12/2013",
@@ -12735,7 +12735,7 @@
         "contributed_by": "Ali Skinner <AliSkinner>"
       },
       {
-
+        "stock":30,
         "name": "Bowman's Beard - B-Sides",
         "tagline": "English Barley Wine.",
         "first_brewed": "03/2015",
@@ -12900,7 +12900,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Pumpkin King",
         "tagline": "Spicy Citrus Pumpkin Ale.",
         "first_brewed": "08/2015",
@@ -13011,7 +13011,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Hello My Name Is Päivi",
         "tagline": "Sea Buckthorn Double IPA.",
         "first_brewed": "05/2014",
@@ -13180,7 +13180,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Elvis Juice V2.0 - Prototype Challenge",
         "tagline": "Citrus Infused IPA.",
         "first_brewed": "12/2015",
@@ -13340,7 +13340,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Riptide",
         "tagline": "Twisted Merciless Stout.",
         "first_brewed": "04/2007",
@@ -13490,7 +13490,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Peach Therapy",
         "tagline": "Tart Belgian Tripple.",
         "first_brewed": "06/2015",
@@ -13610,7 +13610,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Clown King",
         "tagline": "US Style Barley Wine.",
         "first_brewed": "12/2013",
@@ -13782,7 +13782,7 @@
         "contributed_by": "Ali Skinner <AliSkinner>"
       },
       {
-
+        "stock":30,
         "name": "India Pale Weizen (w/ Weihenstephan)",
         "tagline": "BrewDog Versus Weihenstephan.",
         "first_brewed": "09/2014",
@@ -13895,7 +13895,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Hello My Name Is Beastie",
         "tagline": "Double IPA Brewed with Brambles.",
         "first_brewed": "08/2012",
@@ -14046,7 +14046,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Punk IPA 2010 - Current",
         "tagline": "Post Modern Classic. Spiky. Tropical. Hoppy.",
         "first_brewed": "10/2010",
@@ -14242,7 +14242,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "HBC 366 - IPA Is Dead",
         "tagline": "Single Hop India Pale Ale.",
         "first_brewed": "02/2014",
@@ -14355,7 +14355,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "American Ale",
         "tagline": "Unleash the Yeast Series.",
         "first_brewed": "09/2013",
@@ -14493,7 +14493,7 @@
         "contributed_by": "Ali Skinner <AliSkinner>"
       },
       {
-
+        "stock":30,
         "name": "Cocoa Psycho",
         "tagline": "Russian Imperial Stout. Rich. Decadent. Mocha.",
         "first_brewed": "11/2012",
@@ -14609,7 +14609,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Truffle and Chocolate Stout - B-Sides",
         "tagline": "Gastronomic Session Stout.",
         "first_brewed": "03/2015",
@@ -14750,7 +14750,7 @@
         "contributed_by": "Iain Mullan <iainmullan>"
       },
       {
-
+        "stock":30,
         "name": "Vagabond Pilsner",
         "tagline": "Hoppy Pilsner.",
         "first_brewed": "02/2013",
@@ -14906,7 +14906,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Vote Sepp",
         "tagline": "Witbier With Hibiscus.",
         "first_brewed": "05/2014",
@@ -15003,7 +15003,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Hello My Name Is Ingrid",
         "tagline": "Sophisticated Bergmanesque Beer.",
         "first_brewed": "12/2010",
@@ -15154,7 +15154,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "U-Boat (w/ Victory Brewing)",
         "tagline": "Smoked Porter Collab With Victory Brewing.",
         "first_brewed": "07/2014",
@@ -15279,7 +15279,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Melon And Cucumber IPA - B-Sides",
         "tagline": "Fresh Melon IPA.",
         "first_brewed": "03/2015",
@@ -15433,7 +15433,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Morag's Mojito - B-Sides",
         "tagline": "Cocktail Meets Beer.",
         "first_brewed": "08/2015",
@@ -15551,7 +15551,7 @@
         "contributed_by": "Matt Ball <GeordieMatt>"
       },
       {
-
+        "stock":30,
         "name": "Hop Rocker",
         "tagline": "Hoppy Aggressive Lager",
         "first_brewed": "04/2007",
@@ -15673,7 +15673,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Bounty Hunter - Shareholder Brew",
         "tagline": "Beatnik Milk Stout.",
         "first_brewed": "02/2015",
@@ -15780,7 +15780,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Zeitgeist",
         "tagline": "Organic Black Lager.",
         "first_brewed": "12/2008",
@@ -15882,7 +15882,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "AB:10",
         "tagline": "Imperial Brown Ale Aged In Spanish Red Wine Barrels.",
         "first_brewed": "10/2011",
@@ -16014,7 +16014,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Punk Monk",
         "tagline": "Who Ordered The Belgian Yeast?",
         "first_brewed": "07/2009",
@@ -16149,7 +16149,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Dog Fight (w/ Flying Dog)",
         "tagline": "Rye IPA - Flying Dog Collab.",
         "first_brewed": "10/2012",
@@ -16271,7 +16271,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Candy Kaiser",
         "tagline": "NorDdeutsches Retro Altbier.",
         "first_brewed": "08/2015",
@@ -16366,7 +16366,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Chaos Theory",
         "tagline": "Predictably Random IPA.",
         "first_brewed": "10/2008",
@@ -16479,7 +16479,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Juniper Wheat Beer",
         "tagline": "American Style Wheat Ale With Juniper Berries.",
         "first_brewed": "06/2011",
@@ -16576,7 +16576,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Jet Black Heart",
         "tagline": "Oatmeal Milk Stout. Dark. Roasty. Velvety.",
         "first_brewed": "01/2016",
@@ -16713,7 +16713,7 @@
         "contributed_by": "Sasha <SashaMasondeCaires>"
       },
       {
-
+        "stock":30,
         "name": "Galaxy",
         "tagline": "Single Hop India Pale Ale – 2012.",
         "first_brewed": "02/2012",
@@ -16817,7 +16817,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "White Noise",
         "tagline": "White IPA with Motueka.",
         "first_brewed": "07/2012",
@@ -16928,7 +16928,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Hinterland",
         "tagline": "A Most Beguiling Brew.",
         "first_brewed": "05/2015",
@@ -17071,7 +17071,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Spiced Cherry Sour - B-Sides",
         "tagline": "Alternative Festive.",
         "first_brewed": "03/2015",
@@ -17215,7 +17215,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Motueka",
         "tagline": "Single Hop India Pale Ale – 2012.",
         "first_brewed": "02/2012",
@@ -17319,7 +17319,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "5am Saint",
         "tagline": "Bittersweet Chaos. Malty. Fruity. Bite.",
         "first_brewed": "06/2009",
@@ -17509,7 +17509,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Black Eye Joe (w/ Stone Brewing Co)",
         "tagline": "Coffe Black IPA.",
         "first_brewed": "11/2013",
@@ -17665,7 +17665,7 @@
         "contributed_by": "Ali Skinner <Ali SKinner>"
       },
       {
-
+        "stock":30,
         "name": "Mr.Miyagi's Wasabi Stout",
         "tagline": "Spicy Stout Brewed By Aberdeen Bar Staff.",
         "first_brewed": "09/2011",
@@ -17781,7 +17781,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Growler",
         "tagline": "Citra Hopped Pilsner",
         "first_brewed": "03/2011",
@@ -17885,7 +17885,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "#Mashtag 2014",
         "tagline": "Democratic Imperial Red Ale.",
         "first_brewed": "05/2014",
@@ -18050,7 +18050,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Sink The Bismarck!",
         "tagline": "IPA For The Dedicated.",
         "first_brewed": "12/2009",
@@ -18235,7 +18235,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Dog A",
         "tagline": "Cacao, Coffee, Chili Imperial Anniversary Stout.",
         "first_brewed": "05/2012",
@@ -18394,7 +18394,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Born To Die",
         "tagline": "Terminally Hoppy India Pale Ale.",
         "first_brewed": "03/2015",
@@ -18563,7 +18563,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Pioneer - IPA Is Dead",
         "tagline": "Single Hop India Pale Ale.",
         "first_brewed": "03/2015",
@@ -18653,7 +18653,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Cap Dog (w/ Cap Brewery)",
         "tagline": "Black Cascara IPA.",
         "first_brewed": "08/2014",
@@ -18780,7 +18780,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Orange Blossom - B-Sides",
         "tagline": "Citrus Wheat Braggot.",
         "first_brewed": "08/2015",
@@ -18914,7 +18914,7 @@
         "contributed_by": "Matt Ball <GeordieMatt>"
       },
       {
-
+        "stock":30,
         "name": "Lizard Bride - Prototype Challenge",
         "tagline": "Fruit Infused Sour IPA.",
         "first_brewed": "07/2015",
@@ -19100,7 +19100,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Tokyo*",
         "tagline": "Intergalactic Stout. Rich. Smoky. Fruity.",
         "first_brewed": "06/2009",
@@ -19247,7 +19247,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Sorachi Bitter - B-Sides",
         "tagline": "Sorachi Ace Bitter.",
         "first_brewed": "03/2015",
@@ -19467,7 +19467,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Nelson Sauvin",
         "tagline": "Single Hop IPA Series – 2011.",
         "first_brewed": "01/2011",
@@ -19562,7 +19562,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Hello My Name Is Little Ingrid",
         "tagline": "Cloudberry Session IPA.",
         "first_brewed": "03/2015",
@@ -19749,7 +19749,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "AB:02",
         "tagline": "Triple Dry Hopped Imperial Red Ale.",
         "first_brewed": "05/2010",
@@ -19923,7 +19923,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "AB:03",
         "tagline": "Barrel-Aged Imperial Ale.",
         "first_brewed": "09/2008",
@@ -19995,7 +19995,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "AB:13",
         "tagline": "Cask-Aged Cherry Imperial Stout.",
         "first_brewed": "01/2012",
@@ -20090,7 +20090,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Rhubarb Saison - B-Sides",
         "tagline": "Spiced Rhubarb Saison.",
         "first_brewed": "10/2015",
@@ -20226,7 +20226,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Deaf Mermaid - B-Sides",
         "tagline": "Light Pale Ale.",
         "first_brewed": "04/2015",
@@ -20352,7 +20352,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Hoppy Saison - B-Sides",
         "tagline": "Hop Yeast Synergy.",
         "first_brewed": "03/2015",
@@ -20520,7 +20520,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "No Label",
         "tagline": "Dry Hopped Kölsch.",
         "first_brewed": "10/2015",
@@ -20642,7 +20642,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Old World Russian Imperial Stout",
         "tagline": "Russian Imperial Stout.",
         "first_brewed": "10/2011",
@@ -20796,7 +20796,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Hoppy Christmas",
         "tagline": "Simcoe Single-Hop India Pale Ale.",
         "first_brewed": "10/2012",
@@ -20909,7 +20909,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Edge",
         "tagline": "Dark Full-Bodied Cask Ale",
         "first_brewed": "12/2007",
@@ -21054,7 +21054,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Hello My Name Is Zé (w/ 2Cabeças)",
         "tagline": "Passionfruit IPA - 2Cabecas Collab.",
         "first_brewed": "03/2014",
@@ -21205,7 +21205,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Black Tokyo Horizon (w/Nøgne Ø & Mikkeller)",
         "tagline": "Imperial Stout Collaboration.",
         "first_brewed": "12/2010",
@@ -21368,7 +21368,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
       {
-
+        "stock":30,
         "name": "Restorative Beverage For Invalids And Convalescents",
         "tagline": "An Extract Taken From \"A Treatise on Food and Diet\" By Dr Jonathan Pereira, 1843.",
         "first_brewed": "02/2015",
@@ -21501,7 +21501,7 @@
         "contributed_by": "Sam Mason <samjbmason>"
       },
         {
-    
+          "stock":30,
           "name": "Tokyo Rising Sun - Highland",
           "tagline": "A Beautiful Accident.",
           "first_brewed": "06/2009",
@@ -21648,7 +21648,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "77 Lager",
           "tagline": "Artisan Rebel Pilsner.",
           "first_brewed": "12/2008",
@@ -21761,7 +21761,7 @@
           "contributed_by": "Mike Francis <mikeffrancis@gmail.com>"
         },
         {
-    
+          "stock":30,
           "name": "This. Is. Lager",
           "tagline": "21st Century Pilsner. Sharp. Robust. Honest.",
           "first_brewed": "08/2014",
@@ -21851,7 +21851,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Ella - IPA Is Dead",
           "tagline": "Single Hop India Pale Ale.",
           "first_brewed": "03/2015",
@@ -21941,7 +21941,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Barley Wine - Russian Doll",
           "tagline": "Double India Pale Ale.",
           "first_brewed": "06/2014",
@@ -22090,7 +22090,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Vagabond Pale ALe - Prototype Challenge",
           "tagline": "Gluten Free Beer. Toffee. Piney. Fruitcake.",
           "first_brewed": "11/2014",
@@ -22230,7 +22230,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Libertine Black Ale",
           "tagline": "The New Black. Roasty. Hoppy. Fruity.",
           "first_brewed": "03/2012",
@@ -22375,7 +22375,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Jack Hammer",
           "tagline": "Ruthless India Pale Ale. Hoppy. Bitter. Hoppy.",
           "first_brewed": "06/2012",
@@ -22519,7 +22519,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "AB:19",
           "tagline": "A Blend of Two Barrel-aged Imperial Saisons.",
           "first_brewed": "06/2012",
@@ -22573,7 +22573,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Bashah (w/ Stone Brewing Co)",
           "tagline": "Black Belgian Double IPA.",
           "first_brewed": "08/2009",
@@ -22704,7 +22704,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Challenger",
           "tagline": "Single Hop India Pale Ale – 2012.",
           "first_brewed": "02/2012",
@@ -22808,7 +22808,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Single Hop Enigma IPA - B-Sides",
           "tagline": "Enigma Hopped IPA.",
           "first_brewed": "01/2016",
@@ -22919,7 +22919,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Chinook - IPA Is Dead",
           "tagline": "Single Hop India Pale Ale.",
           "first_brewed": "03/2015",
@@ -23009,7 +23009,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Konnichiwa Kitsune",
           "tagline": "Hello My Name Is Yuzu.",
           "first_brewed": "10/2014",
@@ -23187,7 +23187,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "San Diego Scotch Ale (w/Ballast Point)",
           "tagline": "Imperial Scotch Ale With Rum & Raisin.",
           "first_brewed": "07/2012",
@@ -23305,7 +23305,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Old World India Pale Ale",
           "tagline": "English India Pale Ale.",
           "first_brewed": "10/2011",
@@ -23409,7 +23409,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Dog D",
           "tagline": "Anniversary Imperial Stout.",
           "first_brewed": "05/2015",
@@ -23584,7 +23584,7 @@
           "contributed_by": "Joakim Skoog <joakimskoog>"
         },
         {
-    
+          "stock":30,
           "name": "Simcoe",
           "tagline": "Single Hop India Pale Ale.",
           "first_brewed": "01/2012",
@@ -23704,7 +23704,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "How To Disappear Completely",
           "tagline": "Fake Fix Double IPA.",
           "first_brewed": "04/2009",
@@ -23906,7 +23906,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Doodlebug",
           "tagline": "Hoppy Sub-Session Pale Ale.",
           "first_brewed": "09/2015",
@@ -24046,7 +24046,7 @@
           "contributed_by": "Lars Gregori <choas>"
         },
         {
-    
+          "stock":30,
           "name": "Vic Secret",
           "tagline": "Single Hop India Pale Ale.",
           "first_brewed": "10/2013",
@@ -24159,7 +24159,7 @@
           "contributed_by": "Ali Skinner <AliSkinner>"
         },
         {
-    
+          "stock":30,
           "name": "All Day Long - Prototype Challenge",
           "tagline": "Malty Low ABV Ale.",
           "first_brewed": "11/2014",
@@ -24294,7 +24294,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Nuns With Guns",
           "tagline": "Dry-Hopped Lager.",
           "first_brewed": "11/2012",
@@ -24443,7 +24443,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Atlantic IPA Ale",
           "tagline": "IPA Of Yesteryear.",
           "first_brewed": "12/2008",
@@ -24565,7 +24565,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Tactical Nuclear Penguin",
           "tagline": "Uber Imperial Stout.",
           "first_brewed": "09/2009",
@@ -24712,7 +24712,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Jasmine IPA",
           "tagline": "Floral & Fruity India Pale Ale.",
           "first_brewed": "03/2014",
@@ -24859,7 +24859,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Lichtenstein Pale Ale",
           "tagline": "Us-Hopped Rye Pale Ale.",
           "first_brewed": "01/2013",
@@ -25042,7 +25042,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Paradox Jura",
           "tagline": "Ubiquitous Imperial Stout.",
           "first_brewed": "06/2010",
@@ -25183,7 +25183,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "AB:11",
           "tagline": "Black Barley Wine With Ginger, Raspberries, Chipotle Peppers.",
           "first_brewed": "08/2012",
@@ -25326,7 +25326,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Hello My Name is Sonja (w/ Evil Twin)",
           "tagline": "Blueberry Double IPA.",
           "first_brewed": "09/2013",
@@ -25448,7 +25448,7 @@
           "contributed_by": "Ali Skinner <AliSkinner>"
         },
         {
-    
+          "stock":30,
           "name": "Interstellar",
           "tagline": "2013 Prototype Red Rye IPA.",
           "first_brewed": "11/2013",
@@ -25602,7 +25602,7 @@
           "contributed_by": "Ali Skinner <AliSkinner>"
         },
         {
-    
+          "stock":30,
           "name": "Punk IPA 2007 - 2010",
           "tagline": "Post Modern Classic. Spiky. Tropical. Hoppy.",
           "first_brewed": "04/2007",
@@ -25737,7 +25737,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Blitz Berliner Weisse",
           "tagline": "Berliner Fruit Beer.",
           "first_brewed": "07/2013",
@@ -25816,7 +25816,7 @@
           "contributed_by": "Ali Skinner <AliSkinner>"
         },
         {
-    
+          "stock":30,
           "name": "Hardkogt IPA",
           "tagline": "A Special Double IPA For Our Danish Friends.",
           "first_brewed": "06/2010",
@@ -25983,7 +25983,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Hello My Name Is Holy Moose",
           "tagline": "Nordic Berry IPA.",
           "first_brewed": "07/2015",
@@ -26169,7 +26169,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Catherine's Pony (w/ Beavertown)",
           "tagline": "Imperial Smoked Porter – Beavertown Collab.",
           "first_brewed": "12/2012",
@@ -26305,7 +26305,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Moshi Moshi 15",
           "tagline": "American Pale Ale Birthday Beer.",
           "first_brewed": "11/2013",
@@ -26461,7 +26461,7 @@
           "contributed_by": "Ali Skinner <AliSkinner>"
         },
         {
-    
+          "stock":30,
           "name": "AB:01",
           "tagline": "Vanilla Bean Infused Belgian Quad.",
           "first_brewed": "02/2010",
@@ -26565,7 +26565,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Alice Porter",
           "tagline": "Enigmatic Dark Alchemy.",
           "first_brewed": "09/2010",
@@ -26706,7 +26706,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Double IPA - Russian Doll",
           "tagline": "Nesting Hop Bomb.",
           "first_brewed": "08/2014",
@@ -26873,7 +26873,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Waimea - IPA Is Dead",
           "tagline": "Single Hop India Pale Ale.",
           "first_brewed": "02/2013",
@@ -26993,7 +26993,7 @@
           "contributed_by": "Matt Ball <GeordieMatt>"
         },
         {
-    
+          "stock":30,
           "name": "Dog C",
           "tagline": "Cacao, Coffee Chili Anniversary Stout.",
           "first_brewed": "05/2014",
@@ -27159,7 +27159,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Bitch Please (w/ 3 Floyds)",
           "tagline": "Barley Wine - 3 Floyds Collab.",
           "first_brewed": "02/2012",
@@ -27293,7 +27293,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Cascade, Centennial & Willamette IPA - B-Sides",
           "tagline": "Pilot Kit IPA.",
           "first_brewed": "01/2016",
@@ -27418,7 +27418,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Shareholder Black IPA 2011",
           "tagline": "Shareholder Black IPA.",
           "first_brewed": "12/2011",
@@ -27591,7 +27591,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Black Jacques",
           "tagline": "Red Wine Barrel-Aged Imperial Black Saison.",
           "first_brewed": "06/2013",
@@ -27734,7 +27734,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "International Arms Race (w/ Flying Dog)",
           "tagline": "Zero IBU Herbal IPA.",
           "first_brewed": "08/2012",
@@ -27838,7 +27838,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Sunshine On Rye - B-Sides",
           "tagline": "Hoppy Rye IPA.",
           "first_brewed": "02/2015",
@@ -28026,7 +28026,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Stereo Wolf Stout - Prototype Challenge",
           "tagline": "Dark Audio Storm.",
           "first_brewed": "02/2015",
@@ -28178,7 +28178,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Dead Metaphor",
           "tagline": "Scottish Breakfast Stout.",
           "first_brewed": "09/2013",
@@ -28299,7 +28299,7 @@
           "contributed_by": "Ali Skinner <AliSkinner>"
         },
         {
-    
+          "stock":30,
           "name": "Black Dog",
           "tagline": "Hoppy Black Wheat Stout.",
           "first_brewed": "11/2009",
@@ -28486,7 +28486,7 @@
           "contributed_by": "Phil Nash <philnash>"
         },
         {
-    
+          "stock":30,
           "name": "Hop Fiction - Prototype Challenge",
           "tagline": "US-Style Pale Ale.",
           "first_brewed": "11/2014",
@@ -28612,7 +28612,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "El Dorado - IPA Is Dead",
           "tagline": "Single Hop India Pale Ale.",
           "first_brewed": "02/2013",
@@ -28732,7 +28732,7 @@
           "contributed_by": "Matt Ball <GeordieMatt>"
         },
         {
-    
+          "stock":30,
           "name": "Cult Lager",
           "tagline": "US & New Zeland Hopped Lager",
           "first_brewed": "04/2008",
@@ -28840,7 +28840,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Brixton Porter",
           "tagline": "Paradigm-Changing Porter.",
           "first_brewed": "11/2013",
@@ -28965,7 +28965,7 @@
           "contributed_by": "Ali Skinner <AliSkinner>"
         },
         {
-    
+          "stock":30,
           "name": "Barrel Aged Hinterland",
           "tagline": "A Most Beguiling Brew. Aged In Bourbon Casks.",
           "first_brewed": "06/2016",
@@ -29108,7 +29108,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Barrel Aged Albino Squid Assassin",
           "tagline": "Red Rye IPA Aged In Rye Whisky Cask.",
           "first_brewed": "06/2016",
@@ -29262,7 +29262,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Monk Hammer",
           "tagline": "Our Ruthless IPA With A Belgian Twist.",
           "first_brewed": "03/2016",
@@ -29406,7 +29406,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Ship Wreck",
           "tagline": "Redacted Collaboration Ale.",
           "first_brewed": "03/2016",
@@ -29510,7 +29510,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Ace Of Simcoe",
           "tagline": "Single-Hopped Session IPA.",
           "first_brewed": "01/2016",
@@ -29623,7 +29623,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Blitz Series",
           "tagline": "Fruit Infused Berlinerweisse.",
           "first_brewed": "06/2016",
@@ -29717,7 +29717,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Dog E",
           "tagline": "Ninth Anniversary Imperial Stout.",
           "first_brewed": "06/2016",
@@ -29874,7 +29874,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Prototype Pils 2.0",
           "tagline": "Revamped German Pils.",
           "first_brewed": "06/2016",
@@ -29985,7 +29985,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "AB:20",
           "tagline": "Tiramisu Barley Wine.",
           "first_brewed": "06/2016",
@@ -30087,7 +30087,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Paradox Islay 2.0",
           "tagline": "Islay Cask-Aged Imperial Stout.",
           "first_brewed": "06/2016",
@@ -30228,7 +30228,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Chili Hammer",
           "tagline": "Our Ruthless IPA With A Fiery Twist.",
           "first_brewed": "06/2016",
@@ -30372,7 +30372,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Brewdog Vs Beavertown",
           "tagline": "Coffee And Cigarettes.",
           "first_brewed": "06/2016",
@@ -30515,7 +30515,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Prototype Helles",
           "tagline": "Laid-Back Bavarian Classic.",
           "first_brewed": "06/2016",
@@ -30603,7 +30603,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Rye Hammer",
           "tagline": "Our Ruthless IPA with A Spicy Twist.",
           "first_brewed": "06/2016",
@@ -30754,7 +30754,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Black Hammer",
           "tagline": "Our Ruthless IPA With A Dark Malt Twist.",
           "first_brewed": "06/2016",
@@ -30905,7 +30905,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Ace Of Chinook",
           "tagline": "Single-Hopped Session IPA.",
           "first_brewed": "01/2016",
@@ -31018,7 +31018,7 @@
           "contributed_by": "Matt Ball <GeordieMatt>"
         },
         {
-    
+          "stock":30,
           "name": "Ace Of Equinox",
           "tagline": "Single-Hopped Session IPA.",
           "first_brewed": "01/2016",
@@ -31131,7 +31131,7 @@
           "contributed_by": "Matt Ball <GeordieMatt>"
         },
         {
-    
+          "stock":30,
           "name": "Ace Of Citra",
           "tagline": "Single-Hopped Session IPA.",
           "first_brewed": "01/2016",
@@ -31244,7 +31244,7 @@
           "contributed_by": "Matt Ball <GeordieMatt>"
         },
         {
-    
+          "stock":30,
           "name": "Neon Overlord",
           "tagline": "Mango And Chilli IPA",
           "first_brewed": "01/2016",
@@ -31377,7 +31377,7 @@
           "contributed_by": "Matt Ball <GeordieMatt>"
         },
         {
-    
+          "stock":30,
           "name": "Mango And Chili Barley Wine",
           "tagline": "Spicy Chewy Sweet",
           "first_brewed": "2016",
@@ -31533,7 +31533,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Science IPA",
           "tagline": "India Pale Ale",
           "first_brewed": "2016",
@@ -31669,7 +31669,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Honey And Lemon Blitz",
           "tagline": "Honey & Lemon Infused Berliner Weisse.",
           "first_brewed": "2016",
@@ -31808,7 +31808,7 @@
           "contributed_by": "Sam Mason <samjbmason>"
         },
         {
-    
+          "stock":30,
           "name": "Kingpin",
           "tagline": "21st century lager.",
           "first_brewed": "2016",
@@ -31919,7 +31919,7 @@
           "contributed_by": "John Jenkman <johnjenkman>"
         },
         {
-    
+          "stock":30,
           "name": "#Mashtag 2016",
           "tagline": "Sour cherry triple IPA.",
           "first_brewed": "2016",
@@ -32070,7 +32070,7 @@
           "contributed_by": "John Jenkman <johnjenkman>"
         },
         {
-    
+          "stock":30,
           "name": "Blitz Saison",
           "tagline": "Lemon & coriander Berliner Weisse",
           "first_brewed": "2016",
@@ -32204,7 +32204,7 @@
           "contributed_by": "John Jenkman <johnjenkman>"
         }
         ,
-  {
+  {  "stock":30,
     "name": "Hello My Name Is Ingrid 2016",
     "tagline": "Cloudberry Double IPA",
     "first_brewed": "2016",
@@ -32390,7 +32390,7 @@
     "brewers_tips": "Add the cloudberries to your beer when racking the beer after primary fermentation. Grind them into a paste to allow maximum flavour extraction.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Crew Brew",
     "tagline": "Democratic Amber Ale",
     "first_brewed": "2016",
@@ -32552,7 +32552,7 @@
     "brewers_tips": "Bring a few bottles to your local BrewDog bar when it's done and ask the staff if you got it right, they're the only ones who can tell you for sure! They'll also probably know of other homebrewers and beer enthusiasts nearby that you can link in with to share your experiences and get awesome first hand advice from.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Gin Blitz",
     "tagline": "Botanical Berliner Weisse",
     "first_brewed": "2016",
@@ -32678,7 +32678,7 @@
     "brewers_tips": "Crack open/mash up the Juniper berries to get the most flavour and aroma from them.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "AB:21",
     "tagline": "Liquorice Blackcurrant Stout.",
     "first_brewed": "2016",
@@ -32779,7 +32779,7 @@
     "brewers_tips": "As with all of our Abstrakts this one is great for ageing. Be extra vigilant at all times as a small fault now will lead to disaster a few years down the line.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Beatnik",
     "tagline": "Imperial Red Ale",
     "first_brewed": "2016",
@@ -32909,7 +32909,7 @@
     "brewers_tips": "Lightly toast the coconut chips to allow better interaction with the hot wort.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Casino Rye Ale",
     "tagline": "Life's a Gamble",
     "first_brewed": "2016",
@@ -33021,7 +33021,7 @@
     "brewers_tips": "We don't recommend roulette as a way to design beer. Spin the bottle is a much more sensible option. Make this beer with the freshest ingredients you can. Try to arrange brewday as close to delivery day as possible and throw 10 brewbucks on black 17 for us.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Self Assembly Pope",
     "tagline": "Coconut Vanilla Porter",
     "first_brewed": "2016",
@@ -33129,7 +33129,7 @@
     "brewers_tips": "Don't be shy with the roasted coconut, it's a delicate flavour compared to the rest of the beer, so go nuts! If it grows wild near you, go grab some Gorse and chuck it in too for a local natural boost to the coconut flavours.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Twin Atlantic",
     "tagline": "Mango & Pineapple Pale",
     "first_brewed": "2016",
@@ -33216,7 +33216,7 @@
     "brewers_tips": "If you can't find an awesome Scottish band to collaborate with just pump up the volume on your stereo and have fun moshing whilst you're mashing in. Use ripe but fresh fruit and be prepared to lose extra volume to it. It'll be worth it.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Hop Shot",
     "tagline": "Quadruple India Pale Ale",
     "first_brewed": "2016",
@@ -33359,7 +33359,7 @@
     "brewers_tips": "This level of alcohol can be achieved using a domestic freezer. Use a container with a tap close to the bottom so you can run the un-frozen, concentrated beer from under the ice on top. You may have to do this three or four times. The colder you freeze it the boozier it gets. Be careful to not dilute it too much when draining off the concentrated liquid after freezing so you don’t dilute it too much.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Rye IPA",
     "tagline": "Rye India Pale Ale.",
     "first_brewed": "2016",
@@ -33512,7 +33512,7 @@
     "brewers_tips": "Be prepared for a long sparge as the rye content is really high.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Sorachi Ace Session",
     "tagline": "Sorachi Ace Belgian Pale.",
     "first_brewed": "2016",
@@ -33620,7 +33620,7 @@
     "brewers_tips": "If you dry hop with extra Sorachi Ace you'll end up with an awesome extra hit of lemony zing but be warned, it'll go through a lot of interesting variations on the way, including coconut and even bubblegum! Give it time though and it'll land back at that lovely lemon zest that will compliment the coriander seeds perfectly.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Dortmunder",
     "tagline": "Pale Lager.",
     "first_brewed": "2017",
@@ -33716,7 +33716,7 @@
     "brewers_tips": "To really nail this style you need to get the water right. Do a bit of research on water profiles and ask a local brewery if they can help you out with some water treatments.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: 90 Shilling",
     "tagline": "Honeyed Spicy Malt.",
     "first_brewed": "2017",
@@ -33840,7 +33840,7 @@
     "brewers_tips": "Pre-mix your malts to keep the conversion of starches to sugars even across the mash and give you a more uniform grain bed for lautering and sparging. This is a lot less labour intensive than manually stirring your speciality malts into your mash tun.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Kellerbier",
     "tagline": "Crisp Unfiltered Goodness.",
     "first_brewed": "2017",
@@ -33950,7 +33950,7 @@
     "brewers_tips": "Kellerbier translates to cellar beer, if you don’t have a cellar just make sure to keep the fermentation temperature as close as possible to what you'd expect in a bavarian basement.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Tripel",
     "tagline": "Spiced Belgium Ale.",
     "first_brewed": "2017",
@@ -34073,7 +34073,7 @@
     "brewers_tips": "Brew twice as much Belgian Tripel as you were planning on ageing - it's awesome on its own too!",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Vermont IPA",
     "tagline": "Juicy, Tropical, Citrusy.",
     "first_brewed": "2017",
@@ -34228,7 +34228,7 @@
     "brewers_tips": "Add the dry hops in separate muslin bags to increase surface area contact and reduce the amount of hop matter in the beer after dry hopping without reducing the characteristic hazy look of the beer.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Semi Skimmed Occultist",
     "tagline": "Oatmeal Milk Stout.",
     "first_brewed": "2017",
@@ -34377,7 +34377,7 @@
     "brewers_tips": "Surface area contact is key in dry additions. Make sure your coffee and cacao nibs are weighed down with something and spread them out between multiple muslin bags if you can. This is not an exact science so taste as you go and swap out for fresh coffee and/or cacao if you haven't gotten the flavour you want after five days or so. You will not have this problem with the vanilla.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Paradox Rye",
     "tagline": "Rye Whisky Barrel-Aged Imperial Stout.",
     "first_brewed": "2005",
@@ -34517,7 +34517,7 @@
     "brewers_tips": "The beauty of this beer is in how brilliantly it lends itself to infusing or ageing. Experiment with different additions when the beer is ageing, taste it regularly to gauge its progress, and make sure you package it at its peak.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Tropic Thunder",
     "tagline": "Island-Hopping Stout.",
     "first_brewed": "2016",
@@ -34659,7 +34659,7 @@
     "brewers_tips": "If you are feeling adventurous, and haven’t guzzled your whole batch upon first tasting it, try mulling this like you would a wine or cider. Cinnamon and clove will really lend themselves to the flavour of Tropic Thunder and mulled beer is definitely cooler than the usual offerings at a winter gathering.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "New England IPA",
     "tagline": "Vermont IPA",
     "first_brewed": "2017",
@@ -34762,7 +34762,7 @@
     "brewers_tips": "Skip the arrageenan (Irish Moss), all haze is good haze in this beer.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Nitro Breakfast Stout",
     "tagline": "Boozy Chocolate Milkshake.",
     "first_brewed": "2017",
@@ -34904,7 +34904,7 @@
     "brewers_tips": "* Not a suitable replacement for an actual breakfast. Nitroing at home is, well, not impossible but unlikely. Luckily this beer tastes great when lightly carbonated too! Be prepared for a slow runoff and don’t skimp on the cacao!",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Vermont IPA V2.0",
     "tagline": "Juicy, Citrusy, Tropical.",
     "first_brewed": "2017",
@@ -35059,7 +35059,7 @@
     "brewers_tips": "DON’T add flour. This “tip” has been floating around for the style and it’s bad advice. Any and all murk should accompany something that enhances the beer. This little juice-box is dry hopped at a rate of 10g per litre. Wonder what would happen if you doubled that...",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Mandarina Lager",
     "tagline": "Pithy Pale Pilsner.",
     "first_brewed": "2017",
@@ -35155,7 +35155,7 @@
     "brewers_tips": "After boiling your wort, chill the wort down quickly to avoid the compound DMS forming. DMS gives beer a tinned sweetcorn like aroma.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: East Coast Crush",
     "tagline": "Session Vermont IPA.",
     "first_brewed": "2017",
@@ -35294,7 +35294,7 @@
     "brewers_tips": "Vermont Yeast, whilst desirable for this style of beer, is not absolutely necessary. The murk of a NEIPA can be achieved by malt selection and your process.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Pump Action Poet",
     "tagline": "Stone Fruit IPA.",
     "first_brewed": "2017",
@@ -35406,7 +35406,7 @@
     "brewers_tips": "Adding the fruit at the end of the boil effectively pasteurises it. If you plan to add fruit after primary fermentation, buy aseptic puree or have a plan to pasteurise it before adding it.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Lemon Meringue Pie",
     "tagline": "Experimental Dessert Beer.",
     "first_brewed": "2017",
@@ -35525,7 +35525,7 @@
     "brewers_tips": "Dextrin Malt adds sugars to your wort that the yeast are unable to ferment. If you want a sweetness remaining in your beer, add a little of this but not too much!!!",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "AB:22",
     "tagline": "Speyside Barrel-Aged Coffee Chocolate Stout.",
     "first_brewed": "2017",
@@ -35687,7 +35687,7 @@
     "brewers_tips": "Soak American oak (medium toasted) chips in your favourite Speyside tipple overnight and add them after primary fermentation",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Hazy Jane",
     "tagline": "New England IPA.",
     "first_brewed": "2017",
@@ -35842,7 +35842,7 @@
     "brewers_tips": "This beer is supposed to be very cloudy. Don’t be shy to get a good bit of the hot break into the fermenter.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Imperial Pale Weizen",
     "tagline": "Dry-Hopped Wheat Beer.",
     "first_brewed": "2017",
@@ -35972,7 +35972,7 @@
     "brewers_tips": "A German style wheat beer that is mostly defined by its yeast character. Yeast strain has a massive influence on the final perception of the beer.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Blonde Export Stout",
     "tagline": "Beatnik Brewing Collective 2017.",
     "first_brewed": "2017",
@@ -36118,7 +36118,7 @@
     "brewers_tips": "An oxymoron of a beer. The cocoa nibs are vital in providing that stout like flavour without the associated colour.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Cranachan Cream Ale",
     "tagline": "Raspberry Cream Ale.",
     "first_brewed": "2017",
@@ -36266,7 +36266,7 @@
     "brewers_tips": "Add heather honey to your boil to make this beer even better!!!",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Spelt & Honey Saison",
     "tagline": "Honey & Spelt Saison",
     "first_brewed": "2017",
@@ -36376,7 +36376,7 @@
     "brewers_tips": "Spelt malt can slow your run off, similar to Rye. Take your time or add some extra malt to compensate for lower efficiency.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Prototype Double IPA",
     "tagline": "American Hop Overload.",
     "first_brewed": "2017",
@@ -36526,7 +36526,7 @@
     "brewers_tips": "The hopping rate should leave a light residual haze in your beer after maturation. Don’t worry, this comes from the hop compounds, haze is taste.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Prototype Black Rye IPA",
     "tagline": "Complex Dark Ale",
     "first_brewed": "2017",
@@ -36670,7 +36670,7 @@
     "brewers_tips": "If you want the colour but less of the flavour of the dark malts, try substituting the Carafa Special III for a dehusked version of Carafa.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Sidewalk Shark",
     "tagline": "Citrus-Infused German Sour.",
     "first_brewed": "2017",
@@ -36805,7 +36805,7 @@
     "brewers_tips": "Play around with the citrus flavour by using differing amounts of lemon peel, orange peel, grapefruit peel, lime peel or kaffir lime leaves.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Nine To Five Wizard",
     "tagline": "India Pale Weizen.",
     "first_brewed": "2017",
@@ -36944,7 +36944,7 @@
     "brewers_tips": "If you want more phenolic (Banana & Spice) flavours, ferment at a higher temperature. If you want more fruit esters, keep the fermentation lower and under control.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Prototype Blonde Ale",
     "tagline": "Mellow Golden Ale.",
     "first_brewed": "2017",
@@ -37038,7 +37038,7 @@
     "brewers_tips": "This yeast strain produces a marked sulphurous note in the beer. If that’s not your thing, don’t Burtonise your mash and see the difference!",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "AB:23",
     "tagline": "Bourbon Barrel-Aged Barley Wine.",
     "first_brewed": "2017",
@@ -37171,7 +37171,7 @@
     "brewers_tips": "Never put honey into your beer without pasteurising it. It is full of wild yeasts that are waiting to spoil your hard work.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Slot Machine",
     "tagline": "Red Rye IPA.",
     "first_brewed": "2017",
@@ -37326,7 +37326,7 @@
     "brewers_tips": "Rye can cause run off problems. Try to reach a temperature of 78 degrees Celsius if possible, and sparge at the same temperature.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Make Earth Great Again",
     "tagline": "Cloudberry Saison.",
     "first_brewed": "2017",
@@ -37462,7 +37462,7 @@
     "brewers_tips": "So your homebrew shop of choice may not stock all the ingredients here! You can buy cloudberry jam and add that instead. The pectin in the jam is not ideal and will form a haze but that can be forgiven in a saison.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Homicidal Puppet Help Desk",
     "tagline": "Barrel-Aged Rye Barley Wine.",
     "first_brewed": "2017",
@@ -37565,7 +37565,7 @@
     "brewers_tips": "Be careful with brown malt. If you put too much in, it can very easily turn a fantastic tasting beer into a beer that tastes like someone has poured a pint into an ash tray, swirled it around and put it back into your pint.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Pina Colada Sidewalk",
     "tagline": "Pineapple & Coconut Gose.",
     "first_brewed": "2017",
@@ -37718,7 +37718,7 @@
     "brewers_tips": "Be careful with your salt additions. A very light saltiness aids the refreshing character. It should not overpower or drive you to seek another different beer to refresh your palate.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "AB:24",
     "tagline": "Coffee & Brown Sugar Baltic Porter.",
     "first_brewed": "2017",
@@ -37876,7 +37876,7 @@
     "brewers_tips": "Do not substitute the muscovado sugar with white sugar. It lacks the molasses (black treacle) component that comes from only being partially refined.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Hello My Name Is Helga",
     "tagline": "Cherry Double IPA.",
     "first_brewed": "2017",
@@ -38008,7 +38008,7 @@
     "brewers_tips": "Morello Cherries are the go to cherry variety for this beer (and Krieks), the sour compliments the residual sweetness of the malt. Works well if you reduce your IBU to the 20 to 30 range too.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Hello My Name Is Sari",
     "tagline": "Bilberry Double IPA.",
     "first_brewed": "2017",
@@ -38149,7 +38149,7 @@
     "brewers_tips": "Instead of adding the blueberry juice in the kettle. Add fresh blueberries to your secondary fermenter, pitch The Yeast Bay's Melange Sour Blend and wait for 1 year.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Hello My Name Is Aune",
     "tagline": "Stawberry Double IPA.",
     "first_brewed": "2017",
@@ -38290,7 +38290,7 @@
     "brewers_tips": "Strawberry is a very delicate flavour, so don’t shy away with putting a lot more in when you dry hop.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Hello My Name Is Marianne",
     "tagline": "Cassis Infused Double IPA.",
     "first_brewed": "2017",
@@ -38431,7 +38431,7 @@
     "brewers_tips": "Save yourself a lot of hassle and buy the blackcurrant as a concentrate or cordial. Ribena time!",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Hello My Name Is Agnetha",
     "tagline": "Lingonberry Double IPA.",
     "first_brewed": "2017",
@@ -38572,7 +38572,7 @@
     "brewers_tips": "Add the lingonberry juice either to the end of the boil or to the fermenter, depending on whether the juice has been pasteurised.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Hello My Name Is Lieke",
     "tagline": "Orange Infused Double IPA.",
     "first_brewed": "2017",
@@ -38713,7 +38713,7 @@
     "brewers_tips": "The Seville Orange is a bitter orange, so adjust your bittering hop addition down to account for the fact that there will be a contribution from them.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Hello My Name Is Niamh",
     "tagline": "Elderflower Infused Double IPA.",
     "first_brewed": "2017",
@@ -38854,7 +38854,7 @@
     "brewers_tips": "Save yourself a lot of hassle and buy the Elderflower as a concentrate or cordial. Collecting elderberries ranks low on the FPES (fruit picking enjoyment scale), can't imagine the flower picking is much better.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Hello My Name Is Sofia",
     "tagline": "Lemon Infused Double IPA.",
     "first_brewed": "2017",
@@ -38995,7 +38995,7 @@
     "brewers_tips": "Keep an eye on your pH as you are adding your lemon juice. Yeast can tolerate low pH conditions but the length of fermentation may take longer than normal.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Hello My Name Is Maria",
     "tagline": "Mandarin Infused Double IPA.",
     "first_brewed": "2017",
@@ -39136,7 +39136,7 @@
     "brewers_tips": "Using the mandarin in the mash means you can also throw in the peel to extract the essential oils from it. The pith can be quite bitter if it makes it into the boil.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "I Wanna Be Your Dog",
     "tagline": "Omnipollo X BrewDog - Barrel Aged Imperial Stout.",
     "first_brewed": "2017",
@@ -39281,7 +39281,7 @@
     "brewers_tips": "Don’t be too quick to rack the beer off the yeast once your final gravity is reached. The stressed yeast will be absorbing a number of undesirable fermentation by-products such as acetaldehyde and diacetyl. Give them a minimum of 10 days at fermentation temperature to do this before cooling it down.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Opaque Jake",
     "tagline": "Vermont IPA.",
     "first_brewed": "2017",
@@ -39384,7 +39384,7 @@
     "brewers_tips": "Pectin powder can easily be sourced and is an easy alternative for a homebrewer to produce murky beer if you don’t have access to a low flocculating yeast.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Choco Libre",
     "tagline": "Mexican Hot Chocolate Imperial Stout.",
     "first_brewed": "2017",
@@ -39542,7 +39542,7 @@
     "brewers_tips": "Add virgin white oak chips soaked in a Reposado Tequila to give it a \"South of the Wall\" kick.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Off-Duty Alien",
     "tagline": "Citrus IPA",
     "first_brewed": "2018",
@@ -39722,7 +39722,7 @@
     "brewers_tips": "Adding the orange and grapefruit peels to the mash gently extracts the essential oils from the peel but leaves the bitter pith behind in the spent grain.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "East Of Vermont",
     "tagline": "Mango & Peach Milkshake Vermont IPA.",
     "first_brewed": "2018",
@@ -39843,7 +39843,7 @@
     "brewers_tips": "If you use mango pulp, extend the time that you whirlpool to let it settle out. Trying to clean mango pulp out of your heat exchanger or cooling coil is not a fun ending to a brewday.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Declassified Demi-God",
     "tagline": "Barrel-Aged Imperial Milk Stout.",
     "first_brewed": "2018",
@@ -40019,7 +40019,7 @@
     "brewers_tips": "The lactose kettle addition is unfermentable by yeast. Target a pre-boil OG of between 90 and 100, then use the lactose to increase it to the target OG.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Raspberry Popsicle Parade",
     "tagline": "Raspberry Berliner Weisse.",
     "first_brewed": "2018",
@@ -40120,7 +40120,7 @@
     "brewers_tips": "If you don’t need it to be low ABV, try tripling the amount of malt to get more body. Experiment with different sources for lactic acid bacteria, like unpasteurised yogurt or sour dough.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Indie Pale Ale",
     "tagline": "True Independent Craft.",
     "first_brewed": "2018",
@@ -40239,7 +40239,7 @@
     "brewers_tips": "This beer is charactised by the subtle aromas derived from yeast. Ensure you have fresh healthy yeast and good temperature control to replicate these flavours.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Small Batch: Dry-hopped Pilsner",
     "tagline": "Dry-hopped lager.",
     "first_brewed": "2018",
@@ -40353,7 +40353,7 @@
     "brewers_tips": "Before dry hopping, if you aren't happy with the \"green\" beer, drink it (or dump it) and make a new one to avoid wasting your premium hops on something flawed.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Hazy Jane Bourbon Barrel Aged",
     "tagline": "Bourbon Barrel Vermont IPA.",
     "first_brewed": "2018",
@@ -40517,7 +40517,7 @@
     "brewers_tips": "Avoid any oxygen uptake! It will oxidise the delicate hop flavours during the ageing period. Purge your barrel/ageing vessel with CO2 and seal it airtight.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Hazy Jane Rye Barrel Aged",
     "tagline": "Bourbon Barrel Vermont IPA.",
     "first_brewed": "2018",
@@ -40681,7 +40681,7 @@
     "brewers_tips": "Avoid any oxygen uptake! It will oxidise the delicate hop flavours during the ageing period. Purge your barrel/ageing vessel with CO2 and seal it airtight.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Karma Cloud",
     "tagline": "Tropical IPA.",
     "first_brewed": "2018",
@@ -40813,7 +40813,7 @@
     "brewers_tips": "Using the latest year's hops is a must. Leave the beer conditioning on the hops for a maximum of 5 days, otherwise there is a risk of a green vegetal like character being extracted.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Native Son",
     "tagline": "West Coast IPA.",
     "first_brewed": "2018",
@@ -40970,7 +40970,7 @@
     "brewers_tips": "This beer is very hop centric. Use the youngest hops that are available and store them in a freezer. This will help slow the degradation of desirable hop compounds.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "AB:25",
     "tagline": "Bourbon Barrel-Aged Barley Wine.",
     "first_brewed": "2018",
@@ -41085,7 +41085,7 @@
     "brewers_tips": "Waxing the bottle/cap helps to exclude oxygen ingress through the cap if you are looking to cellar the beer for a long time.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Kamikaze Knitting Club",
     "tagline": "Maple Stout",
     "first_brewed": "2018",
@@ -41220,7 +41220,7 @@
     "brewers_tips": "Try experimenting with fenugreek seeds which give off a maple syrup like flavour.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Very Big Moose",
     "tagline": "Chocolate Imperial Stout.",
     "first_brewed": "2018",
@@ -41332,7 +41332,7 @@
     "brewers_tips": "Its probably best to parti-gyle this beer as this will have a run off time of 6 hours+!!! Set up the mash and see what is collected overnight, then add more hot water to do your second mash and make a low (3%) beer from your residual extract.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Paradox Islay 2018",
     "tagline": "Whisky Cask Aged Imperial Stout.",
     "first_brewed": "2018",
@@ -41472,7 +41472,7 @@
     "brewers_tips": "Brew this as part of a parti gyle mash, making this beer from your first runnings. It will take a long time to run off and be prepared to add dextrose to reach your target OG.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Clockwork Tangerine",
     "tagline": "Citrus IPA.",
     "first_brewed": "2018",
@@ -41710,7 +41710,7 @@
     "brewers_tips": "Try your own fruit series with this beer. Grapefruit, Passionfruit, Rapberries or Morello Cherries would be great.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Sonic Boom",
     "tagline": "New German Hop IPA.",
     "first_brewed": "2018",
@@ -41849,7 +41849,7 @@
     "brewers_tips": "This IPA features German hops in the dry hop. Why not try a Slovenian only version using: Dana, Bobek, Aurora & Cascade.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Dog G",
     "tagline": "11th Anniversary Imperial Stout.",
     "first_brewed": "2018",
@@ -42023,7 +42023,7 @@
     "brewers_tips": "Age this beer!!! Often it will pick up new incredible flavours after an extended cellaring. Think 2 years plus.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Mallow Mafia",
     "tagline": "Russian Imperial Stout.",
     "first_brewed": "2018",
@@ -42194,7 +42194,7 @@
     "brewers_tips": "If your mash run off takes a long time, increase the temperature of your sparge water to keep the mash bed warm and permeable.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Manic Mango",
     "tagline": "Mango IPA.",
     "first_brewed": "2018",
@@ -42351,7 +42351,7 @@
     "brewers_tips": "Add the mango puree towards the end of primary fermentation, about 10 SG points above your FG. Allow it to reach FG and have a diacetyl rest before dry hopping it.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Baltic Fleet",
     "tagline": "Baltic Porter.",
     "first_brewed": "2018",
@@ -42484,7 +42484,7 @@
     "brewers_tips": "Double Roasted Crystal is used when the astringency and bitterness inherent to roast malts is not desired. This means that it can be used at a higher rate in the grist to add complex caramel and dried fruit notes with a beautiful red-brown hue.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "SOS! (May Day!)",
     "tagline": "Dry-Hopped Maibock.",
     "first_brewed": "2018",
@@ -42648,7 +42648,7 @@
     "brewers_tips": "Traditional German brewing is awesome and deserving of respect. If you brew this during spring time, call it a Maibock, any other time of the year and it should be called an Helles Bock.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Al Adjore!",
     "tagline": "Barley Wine",
     "first_brewed": "2018",
@@ -42773,7 +42773,7 @@
     "brewers_tips": "Sanitise the oak chips before adding them to the fermenter. Vodka is ideal as it’s a neutral spirit and can be drained off. If you don’t want to affect the ABV, try steaming them.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Neverland",
     "tagline": "India Pale Lager.",
     "first_brewed": "2018",
@@ -42928,7 +42928,7 @@
     "brewers_tips": "Acidulated malt was first produced to circumvent the Reinheitsgebot in Germany where they could not acidify their brewing water. A weak organic acid such as lactic acid can be used in its place.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "Grano Giusto",
     "tagline": "Dark Lager.",
     "first_brewed": "2018",
@@ -43063,7 +43063,7 @@
     "brewers_tips": "Grano dei Miracoli is a unique ancient grain and shouldn't be substituted, this beer is focused on what this ingredient offers when paired with modern malts.",
     "contributed_by": "John Jenkman <johnjenkman>"
   },
-  {
+  {  "stock":30,
     "name": "King of Eights",
     "tagline": "East Coast IPA",
     "first_brewed": "2018",

@@ -6,8 +6,10 @@ header{
     ul{
         display: flex;
         list-style: none;
-        li{
+        a{
+            text-decoration: none;
             margin: 0 15px;
+            color: black;
         }
     }
     nav{
@@ -15,8 +17,10 @@ header{
         input{
             margin:15px
         }
-        button{
+        a{
             margin: 15px;
+            text-decoration: none;
+            color: black;
         }
     }
 }
