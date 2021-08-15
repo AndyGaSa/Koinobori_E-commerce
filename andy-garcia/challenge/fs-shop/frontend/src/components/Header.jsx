@@ -3,11 +3,10 @@ import LogoutButton from './LogoutButton';
 
 function Header() {
   return (
-    <div className="Header">
-      <header>
-        <LogoutButton />
-      </header>
-    </div>
+
+    <header>
+      <LogoutButton />
+    </header>
   );
 }
 
