@@ -6,7 +6,6 @@ import { fetchUserAccount } from '../redux/actions';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-import LogoutButton from './LogoutButton';
 
 function MainPage() {
   const { user, isAuthenticated } = useAuth0();
@@ -26,7 +25,7 @@ function MainPage() {
       <h1>{userAccount?.name}</h1>
       )}
       <h1>hola soy el main</h1>
-      <LogoutButton />
+
       <Header />
       <Main />
       <Footer />
