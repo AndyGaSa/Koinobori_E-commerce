@@ -1,14 +1,26 @@
 /* eslint-disable camelcase */
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useAuth0 } from '@auth0/auth0-react';
+import { fetchUserAccount } from '../redux/actions';
 
 function MainPage() {
-  const { user_id } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
+  const userAccount = useSelector(({ logUser }) => logUser);
+  const dispatch = useDispatch();
+
+  if (isAuthenticated) {
+    console.log(`Usuario ${user.name} autentificado`);
+    useEffect(() => {
+      dispatch(fetchUserAccount(user.name));
+    }, []);
+  }
+
   return (
     <div className="MainPage">
-      {user_id
-      ?? <h1>{user_id}</h1>}
-
+      {isAuthenticated && (
+      <h1>{userAccount?.name}</h1>
+      )}
       <h1>hola soy el main</h1>
     </div>
   );
