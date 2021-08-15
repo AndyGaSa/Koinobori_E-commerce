@@ -8,9 +8,7 @@ export default function cartReducer(cart = {}, action) {
       break;
 
     case actionTypes.UPDATE_CART:
-      console.log(cart, 'cart');
-      console.log(action, 'action.data');
-      newCart.products = [...cart.products, action.data];
+      newCart = action.data;
       break;
 
     default:

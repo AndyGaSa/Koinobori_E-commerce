@@ -2,17 +2,18 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './CardItem.scss';
 import { Link } from 'react-router-dom';
 import { updateCart } from '../../redux/actions/actionCreator';
 
 export default function CardItem({ beer }) {
+  const currentCart = useSelector((store) => store.cart);
   const dispatch = useDispatch();
 
   function addToCart() {
     if (beer._id) {
-      dispatch(updateCart(beer));
+      dispatch(updateCart(beer, currentCart));
     }
   }
   return (

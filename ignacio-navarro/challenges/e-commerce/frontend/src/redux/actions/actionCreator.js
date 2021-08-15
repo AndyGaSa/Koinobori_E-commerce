@@ -42,13 +42,18 @@ export function createCart(userId) {
     });
   };
 }
-export function updateCart(product) {
-  const productId = product._id;
-  console.log('creator');
+export function updateCart(product, cart) {
+  const newCart = cart;
+  const thereIsProduct = cart.products.find((current) => current.product === product._id);
+  if (thereIsProduct !== undefined) {
+    thereIsProduct.amount += 1;
+  } else {
+    newCart.products.push({ product: product._id, amount: 1 });
+  }
   return async (dispatch) => {
     dispatch({
       type: actionTypes.UPDATE_CART,
-      data: productId,
+      data: newCart,
     });
   };
 }
