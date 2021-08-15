@@ -16,7 +16,7 @@ export default function Products() {
   return (
     <ul className="products_list">
       {products.map((product) => (
-        <div key={product.name} className="list-itmes_container">
+        <div key={product.name} className="list-items_container">
           <li className="list_item">
             <img src={product.img} alt={product.name} className="item_img" />
             <article className="item_article">
