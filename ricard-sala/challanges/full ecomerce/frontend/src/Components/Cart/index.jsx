@@ -1,16 +1,16 @@
 import React from 'react';
+import './styles.scss';
 
 export default function Cart() {
   return (
     <div className="cart">
-      <h3 className="cart__user">carrito compra</h3>
-      <div className="cart__products">
-        <span className="product">producto1</span>
-        <span className="product">producto2</span>
-        <span className="product">producto3</span>
-        <span className="product">producto4</span>
-        <button type="button">buy</button>
-      </div>
+      <h3 className="cart__user">name:riki</h3>
+      <div className="cart__products" />
+      <button className="button-cart" type="button">
+        <img className="img-button" src="https://img.icons8.com/material-outlined/24/000000/fast-cart.png" alt="cart" />
+        buy
+
+      </button>
     </div>
   );
 }
