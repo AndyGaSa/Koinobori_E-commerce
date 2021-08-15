@@ -1,8 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const chalk = require('chalk');
 const debug = require('debug')('ecommerce-server');
 const morgan = require('morgan');
-require('dotenv').config();
 
 require('./src/config/ddbbConfig');
 
