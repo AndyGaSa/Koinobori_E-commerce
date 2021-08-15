@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import actionTypes from './cart.actions';
 
-export default function getCart(userId) {
+export function getCart(userId) {
   return async (dispatch) => {
     const { data } = await axios.get(`/api/carts/${userId}`);
 
@@ -11,4 +11,11 @@ export default function getCart(userId) {
       data
     });
   };
+}
+
+export function addProductToCart(data) {
+  return ({
+    type: actionTypes.ADD_TO_CART,
+    data
+  });
 }

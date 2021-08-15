@@ -1,19 +1,27 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import propTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 
 import getProducts from '../../redux/actions/products.creator';
+import { addProductToCart } from '../../redux/actions/cart.creator';
 import './products.scss';
 
-function Product() {
+function Products({ user }) {
   const dispatch = useDispatch();
   const products = useSelector((store) => store.products);
 
   useEffect(() => {
     dispatch(getProducts());
   }, []);
+
+  function addToCart(product) {
+    if (user?.name) {
+      dispatch(addProductToCart(product));
+    }
+  }
 
   return (
     <ul className="products">
@@ -32,11 +40,19 @@ function Product() {
             {product.price}
             €
           </span>
-          <button className="product__add-button" type="button" aria-label="Add"><FontAwesomeIcon icon={faPlusSquare} /></button>
+          <button className="product__add-button" type="button" aria-label="Add" onClick={() => addToCart(product)}><FontAwesomeIcon icon={faPlusSquare} /></button>
         </li>
       ))}
     </ul>
   );
 }
 
-export default Product;
+export default Products;
+
+Products.propTypes = {
+  user: propTypes.shape({
+    _id: propTypes.string,
+    name: propTypes.string,
+    email: propTypes.string
+  }).isRequired
+};

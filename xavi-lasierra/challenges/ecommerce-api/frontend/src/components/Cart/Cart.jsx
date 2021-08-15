@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faShoppingCart, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
-import getCart from '../../redux/actions/cart.creator';
+import { getCart } from '../../redux/actions/cart.creator';
 import './cart.scss';
 
 function Cart({ user }) {
@@ -34,12 +34,12 @@ function Cart({ user }) {
         </button>
       </div>
       <ul className="cart__cart-products">
-        {cart.products.map(({ productInformation, amount }) => (
-          <li className="cart-products__product" key={`${productInformation.name}-shoe`}>
-            <img className="product__image" src={productInformation.img} alt={productInformation.name} />
-            <span className="product__name">{productInformation.name}</span>
+        {cart.products.map(({ product, amount }) => (
+          <li className="cart-products__product" key={`${product.name}-shoe`}>
+            <img className="product__image" src={product.img} alt={product.name} />
+            <span className="product__name">{product.name}</span>
             <span className="product__price">
-              {productInformation.price}
+              {product.price}
               €
             </span>
             <div className="product__amount">
