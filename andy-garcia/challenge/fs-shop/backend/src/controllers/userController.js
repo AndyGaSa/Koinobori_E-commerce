@@ -1,5 +1,4 @@
 /* eslint-disable no-underscore-dangle */
-/* eslint-disable camelcase */
 const User = require('../models/userModel');
 const Sites = require('../models/sitesModel');
 const FavList = require('../models/favSitesModel');
@@ -33,10 +32,12 @@ async function getUserById({ params: { userid } }, res) {
   }
 }
 
+// todo - When remove user we need remove he favList as well
 const removeUserById = async ({ params: { userid } }, res) => {
   const delUser = await User.findByIdAndDelete(userid);
   res.send(delUser);
 };
+
 module.exports = {
   findOrSetUser,
   getUserById,
