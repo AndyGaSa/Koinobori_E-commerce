@@ -11,9 +11,9 @@ const readAllProducts = async ({ query }, res) => {
 };
 
 const searchProduct = async (req, res, next) => {
-  const { params: { id } } = req;
+  const { params: { productId } } = req;
   try {
-    const product = await Product.findById(id);
+    const product = await Product.findById(productId);
     if (product) {
       req.product = product; // Create 'product' property.
       next(); // To GET, PUT or DELETE methods.
@@ -30,10 +30,10 @@ const searchProduct = async (req, res, next) => {
 const readOneProduct = ({ product }, res) => res.send(product);
 
 const updateOneProduct = async (req, res) => {
-  const [{ product }, { params: { id } }] = req;
+  const [{ product }, { params: { productId } }] = req;
   try {
     const updatedProduct = await Product.findByIdAndUpdate(
-      id,
+      productId,
       product,
       { new: true },
     );
@@ -44,9 +44,9 @@ const updateOneProduct = async (req, res) => {
   }
 };
 
-const deleteOneProduct = async ({ params: { id } }, res) => {
+const deleteOneProduct = async ({ params: { productId } }, res) => {
   try {
-    await Product.findByIdAndDelete(id);
+    await Product.findByIdAndDelete(productId);
     res.status(204); // No Content.
     res.json(); // Send JSON parse.
   } catch (error) {

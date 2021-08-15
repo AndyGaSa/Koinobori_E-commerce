@@ -3,7 +3,7 @@ const cartController = require('../controllers/cartController');
 
 const cartRouter = new Router(); // Create Router object.
 
-cartRouter.rute('/:id')
+cartRouter.route('/:id')
   .all(cartController.search)
   .get(cartController.readOne)
   .put(cartController.updateOne)

@@ -3,10 +3,10 @@ const productController = require('../controllers/productController');
 
 const productRouter = new Router(); // Create Router object.
 
-productRouter.rute('/')
+productRouter.route('/')
   .get(productController.readAllProducts);
 
-productRouter.rute('/id')
+productRouter.route(':/productId')
   .all(productController.searchProduct)
   .get(productController.readOneProduct)
   .put(productController.updateOneProduct)
