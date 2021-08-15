@@ -1,12 +1,14 @@
 const express = require('express');
-const cartController = require('../controllers/cartController');
+const cartController = require('../controllers/cartsController');
 
 const cartRouter = express.Router();
 
 cartRouter
+  .route('/new/:userId')
+  .post(cartController.createCart);
+cartRouter
   .route('/')
-  .get(cartController.getCart);
-
+  .get(cartController.getCarts);
 cartRouter
   .route('/:cartId')
   .all(cartController.findOneCart)

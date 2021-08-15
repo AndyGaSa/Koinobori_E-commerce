@@ -1,3 +1,4 @@
+const debug = require('debug')('dev');
 const Cart = require('../models/cartModel');
 
 async function getCarts({ query }, res) {
@@ -11,16 +12,37 @@ async function getCarts({ query }, res) {
 }
 
 async function findOneCart(req, res, next) {
-  const { cartId } = req.params;
+  const { userId } = req.params;
   try {
-    const cart = await Cart.findById(cartId);
+    const cart = await Cart.find(userId);
 
     if (cart) {
       req.cart = cart;
       next();
     } else {
       res.status(404);
-      res.send(new Error(`There is no Cart with id ${cartId}`));
+      res.send(new Error(`There is no Cart with id ${userId}`));
+    }
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+async function createCart(req, res) {
+  debug(req.body);
+  const { userId } = req.params;
+  const thereIsCart = await Cart.find({ user: userId });
+  const body = {
+    user: userId,
+    products: [],
+  };
+  try {
+    if (!thereIsCart.length) {
+      const newCart = await Cart.create(body);
+      debug(newCart);
+      res.json(newCart);
+    } else {
+      res.json(thereIsCart[0]);
     }
   } catch (error) {
     res.status(500);
@@ -36,4 +58,5 @@ module.exports = {
   getCarts,
   findOneCart,
   getOneCart,
+  createCart,
 };

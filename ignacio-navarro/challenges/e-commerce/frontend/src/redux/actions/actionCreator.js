@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
@@ -22,12 +23,32 @@ export function loadOneBeer(beerId) {
   };
 }
 
-export function addProducts(beerId) {
+export function loadUser(userId) {
   return async (dispatch) => {
-    const { data } = await axios.post('/api/cart', beerId);
+    const { data } = await axios.get(`/api/client/${userId}`);
+
     dispatch({
-      type: actionTypes.ADD_PRODUCTS,
+      type: actionTypes.LOAD_USER,
       data,
+    });
+  };
+}
+export function createCart(userId) {
+  return async (dispatch) => {
+    const { data } = await axios.post(`/api/cart/new/${userId}`);
+    dispatch({
+      type: actionTypes.CREATE_CART,
+      data,
+    });
+  };
+}
+export function updateCart(product) {
+  const productId = product._id;
+  console.log('creator');
+  return async (dispatch) => {
+    dispatch({
+      type: actionTypes.UPDATE_CART,
+      data: productId,
     });
   };
 }

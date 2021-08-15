@@ -2,17 +2,17 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import './CardItem.scss';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { addProducts } from '../../redux/actions/actionCreator';
+import { updateCart } from '../../redux/actions/actionCreator';
 
 export default function CardItem({ beer }) {
   const dispatch = useDispatch();
 
   function addToCart() {
-    if (beer.stock > 0) {
-      dispatch(addProducts(beer._id));
+    if (beer._id) {
+      dispatch(updateCart(beer));
     }
   }
   return (
@@ -26,7 +26,7 @@ export default function CardItem({ beer }) {
           $
         </span>
       </Link>
-      <button className="card-item__buy" type="button" onClick={addToCart()}>Add</button>
+      <button className="card-item__buy" type="button" onClick={addToCart}>Add</button>
     </div>
   );
 }
