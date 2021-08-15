@@ -26,3 +26,13 @@ export function substractProductFromCart(data) {
     data
   });
 }
+
+export function saveCart() {
+
+}
+
+export function clearCart() {
+  return ({
+    type: actionTypes.CLEAR_CART
+  });
+}

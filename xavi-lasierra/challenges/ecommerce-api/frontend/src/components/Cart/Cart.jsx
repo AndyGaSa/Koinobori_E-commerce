@@ -4,9 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import propTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faShoppingCart, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faTrashAlt, faHeart } from '@fortawesome/free-solid-svg-icons';
 
-import { getCart, addProductToCart, substractProductFromCart } from '../../redux/actions/cart.creator';
+import {
+  getCart, addProductToCart, substractProductFromCart, saveCart, clearCart
+} from '../../redux/actions/cart.creator';
 import './cart.scss';
 
 function Cart({ user }) {
@@ -29,9 +31,14 @@ function Cart({ user }) {
       {}
       <div className="cart__clear">
         <h2 className="cart__title">Cart</h2>
-        <button className="cart__clear-button" type="button" aria-label="Clear cart">
-          <FontAwesomeIcon icon={faTrashAlt} />
-        </button>
+        <div>
+          <button className="cart__clear-button" type="button" aria-label="Clear cart" onClick={() => dispatch(saveCart())}>
+            <FontAwesomeIcon icon={faHeart} />
+          </button>
+          <button className="cart__save-button" type="button" aria-label="Clear cart" onClick={() => dispatch(clearCart())}>
+            <FontAwesomeIcon icon={faTrashAlt} />
+          </button>
+        </div>
       </div>
       <ul className="cart__cart-products">
         {cart.products.map(({ product, amount }) => (

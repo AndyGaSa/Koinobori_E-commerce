@@ -35,6 +35,12 @@ function cartReducer(cart = {
           : product)).filter((product) => product.amount !== 0)
       };
       break;
+    case actionTypes.CLEAR_CART:
+      newCart = {
+        ...newCart,
+        products: []
+      };
+      break;
     default:
       break;
   }

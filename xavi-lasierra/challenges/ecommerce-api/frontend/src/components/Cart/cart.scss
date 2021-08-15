@@ -22,11 +22,22 @@
             font-size: 1.25rem;
         }
 
+        .cart__save-button,
         .cart__clear-button {
             background-color: transparent;
             color: $main-dark-color;
             font-size: 1.25rem;
             border: none;
+            width: 2rem;
+
+            &:hover {
+                color: $main-color;
+            }
+
+            &:active {
+                font-size: 1.2rem;
+                color: $main-dark-color;
+            }
         }
     }
 
