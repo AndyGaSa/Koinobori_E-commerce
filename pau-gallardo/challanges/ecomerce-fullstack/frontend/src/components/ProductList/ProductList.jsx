@@ -18,13 +18,17 @@ export default function ProductList() {
       <ul>
         {
         productList.map((singleProduct) => (
-          <li>
+          <li
+            data-testid={`list-item-${singleProduct.name}`}
+            key={`key-${singleProduct.name}`}
+          >
             <span>{`Product name ${singleProduct.name}`}</span>
             <span>{`${singleProduct.price}€`}</span>
             <span>{`Stock ${singleProduct.stock} units`}</span>
             <button
               type="button"
               onClick={() => dispatch(addProductToCart(singleProduct))}
+              data-testid="add-button"
             >
               Add to cart
             </button>
