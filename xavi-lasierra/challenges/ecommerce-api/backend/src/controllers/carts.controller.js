@@ -67,7 +67,7 @@ async function payCart({ params: { userId }, body }, res) {
     await body.forEach(async (paidProduct) => {
       const product = await stockCheck(paidProduct);
       if (product) {
-        //
+        res.status(400);
       }
     });
     await res.json(newCart);

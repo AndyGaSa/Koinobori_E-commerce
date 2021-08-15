@@ -46,7 +46,6 @@ export function clearCart() {
 export function submitCart({ user, products }) {
   return async (dispatch) => {
     const { data } = await axios.put(`/api/carts/pay/${user}`, products);
-    console.log(data);
     dispatch({
       type: actionTypes.SAVE_CART,
       data
