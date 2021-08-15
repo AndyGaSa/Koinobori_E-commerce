@@ -1,4 +1,5 @@
 /* eslint-disable no-underscore-dangle */
+const debug = require('debug')('user:controller');
 const User = require('../models/userModel');
 const Sites = require('../models/sitesModel');
 const FavList = require('../models/favSitesModel');
@@ -39,8 +40,14 @@ const getUserById = async ({ params: { userid } }, res) => {
 
 // todo - When remove user we need remove he favList as well
 const removeUserById = async ({ params: { userid } }, res) => {
+  debug(userid);
+  const findD = await FavList.findOneAndDelete({ user: userid });
+  const find = await FavList.find({ user: userid });
+  debug(`FindD: ${findD}`);
+  debug(`Find: ${find}`);
   const delUser = await User.findByIdAndDelete(userid);
-  res.send(delUser);
+  debug(delUser);
+  res.send('Usuario eliminado');
 };
 
 module.exports = {
