@@ -1,5 +1,4 @@
 import React from 'react';
-import { expect } from '@jest/globals';
 import { fireEvent, render, screen } from '../../utils/test.utils';
 
 import { addProductToCart } from '../../redux/actions/cart.creator';

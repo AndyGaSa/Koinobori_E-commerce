@@ -44,7 +44,10 @@ export default function Cart() {
       <ul>
         {
         cartProducts.map((singleProduct, index) => (
-          <li>
+          <li
+            data-testid={`list-item-${singleProduct.name}`}
+            key={`key-${singleProduct.name}`}
+          >
             <span>{`Product name ${singleProduct.name}`}</span>
             <span>{`${singleProduct.price}€`}</span>
             <button type="button" onClick={() => productQuantity(singleProduct, '-', index)}>-</button>
@@ -53,6 +56,7 @@ export default function Cart() {
             <button
               type="button"
               onClick={() => dispatch(removeProductFromCart(singleProduct))}
+              data-testid="remove-button"
             >
               Remove from cart
             </button>
@@ -62,7 +66,14 @@ export default function Cart() {
       </ul>
       <span>{`Total price: ${totalPrice}`}</span>
       <button type="button">Pay</button>
-      <button type="button" onClick={() => dispatch(removeAllProductsFromCart())}>Remove all</button>
+      <button
+        type="button"
+        onClick={() => dispatch(removeAllProductsFromCart())}
+        data-testid="remove-all-button"
+      >
+        Remove all
+
+      </button>
     </>
   );
 }
