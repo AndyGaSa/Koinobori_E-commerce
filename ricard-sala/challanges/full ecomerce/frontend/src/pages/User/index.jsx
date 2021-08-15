@@ -1,22 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { postUserToApi } from '../../redux/actions/actionCreators';
+import './styles.scss';
 
 export default function User() {
-  const Users = [{ user: 'pepe' }];
+  const dispatch = useDispatch();
+  const [userName, setUserName] = useState({});
+
+  const inputHandle = (event) => {
+    setUserName({
+      name: event.target.value,
+    });
+  };
+
   return (
-    <ul className="user">
-      {Users.map((user) => (
-        <li>
-          <Link
-            to={`/cart/${user.id}`}
-            key={user.id}
-          >
-            <span className="user-name" />
-            {user.name}
-            <button type="button"> logOut</button>
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <form className="form">
+      <input type="text" id="lname" name="lname" onChange={inputHandle} />
+      <input className="form-submit" onClick={() => dispatch(postUserToApi(userName))} type="submit" value="LOGIN" />
+    </form>
+
   );
 }
