@@ -1,21 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import propTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 
-import getProducts from '../../redux/actions/products.creator';
 import { addProductToCart } from '../../redux/actions/cart.creator';
 import './products.scss';
 
 function Products({ user }) {
   const dispatch = useDispatch();
   const products = useSelector((store) => store.products);
-
-  useEffect(() => {
-    dispatch(getProducts());
-  }, []);
 
   function addToCart(product) {
     if (user?.name) {

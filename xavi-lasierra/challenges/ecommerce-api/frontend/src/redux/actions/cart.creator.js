@@ -31,7 +31,7 @@ export function saveCart({ user, products }) {
   return async (dispatch) => {
     const { data } = await axios.put(`/api/carts/${user}`, products);
     dispatch({
-      type: actionTypes.SAVE_CART,
+      type: actionTypes.SUBMIT_CART,
       data
     });
   };

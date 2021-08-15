@@ -14,7 +14,7 @@ function cartReducer(cart = {
         newCart = {
           ...newCart,
           products: newCart.products.map((product) => (
-            (product.product._id === action.data._id && product.amount <= product.product.stock)
+            (product.product._id === action.data._id && product.amount < product.product.stock)
               ? { ...product, amount: product.amount + 1 }
               : product))
         };
@@ -43,6 +43,9 @@ function cartReducer(cart = {
       };
       break;
     case actionTypes.SAVE_CART:
+      newCart = action.data;
+      break;
+    case actionTypes.SUBMIT_CART:
       newCart = action.data;
       break;
     default:
