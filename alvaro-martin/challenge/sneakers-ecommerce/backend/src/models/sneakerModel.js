@@ -5,6 +5,7 @@ const sneakerSchema = Schema({
   img: String,
   price: String,
   stock: Number,
+  amount: Number,
 });
 
-module.exports = model('Sneaker', sneakerSchema);
+module.exports = model('Sneakers', sneakerSchema);

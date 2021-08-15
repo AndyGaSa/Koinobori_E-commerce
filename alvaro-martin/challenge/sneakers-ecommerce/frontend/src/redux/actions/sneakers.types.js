@@ -1,3 +1,5 @@
 export default {
   LOAD_SNEAKERS: 'LOAD_SNEAKERS',
+  LOAD_CART: 'LOAD_CART',
+  CREATE_CART: 'CREATE_CART',
 };

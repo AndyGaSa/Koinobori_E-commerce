@@ -13,8 +13,10 @@ server.use(morgan('dev'));
 server.use(express.json()); // Si viene petición con datos .json los añade en el body
 
 const sneakersRouter = require('./src/routers/sneakerRouter');
+const cartRouter = require('./src/routers/cartRouter');
 
 server.use('/api/sneakers', sneakersRouter); // Routers
+server.use('/api/carts', cartRouter); // Routers
 
 server.listen(
   port,
