@@ -1,16 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
+import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import Sneakers from './components/Sneakers/sneakers';
 import Cart from './components/Cart/cart';
+import configureStore from './redux/store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <section className="sneaker-cart">
-      <Sneakers />
-      <Cart />
-    </section>
+    <Provider store={configureStore()}>
+      <section className="sneaker-cart">
+        <Sneakers />
+        <Cart />
+      </section>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );

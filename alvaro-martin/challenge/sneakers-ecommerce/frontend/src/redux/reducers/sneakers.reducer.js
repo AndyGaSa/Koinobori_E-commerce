@@ -1,15 +1,8 @@
 import actionTypes from '../actions/sneakers.types';
 
-export default function sneakersReducer(sneakersList = [], action) {
-  let newSneakersList = sneakersList;
-  switch (action.type) {
-    case actionTypes.LOAD_SNEAKERS:
-      newSneakersList = action.sneakers?.map(({ name }) => name);
-      break;
-
-    default:
-      break;
+export default function sneakersReducer(sneakers = [], action) {
+  if (action.type === actionTypes.LOAD_SNEAKERS) {
+    return action.sneakers;
   }
-
-  return newSneakersList;
+  return sneakers;
 }
