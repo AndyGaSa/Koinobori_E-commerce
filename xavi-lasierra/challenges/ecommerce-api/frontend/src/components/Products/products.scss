@@ -16,10 +16,12 @@
         padding: 1rem 5%;
         border-radius: 0.1rem;
         box-shadow: 2px 3px 5px $main-dark-color;
+        transition: .2s;
 
 
         .product__image {
             @extend %medium-image;
+            transition: .2s;
         }
 
         .product__information {
@@ -48,6 +50,24 @@
             width: 2.5rem;
             border: none;
             background-color: transparent;
+
+            &:hover {
+                color: $main-color;
+                font-size: 2rem;
+            }
+
+            &:active {
+                font-size: 1.6rem;
+                color: limegreen;
+            }
+        }
+
+        &:hover {
+            background-color: $main-hover-color;
+
+            .product__image {
+                transform:translateX(1.5rem);
+            }
         }
     }
 }
