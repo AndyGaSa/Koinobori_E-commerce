@@ -9,7 +9,7 @@ require('./src/config/mongooseConfig');
 const server = express();
 const port = process.env.PORT || 5000;
 
-server.use(cors());
+server.use(cors({ origin: 'localhost' }));
 server.use(morgan('dev'));
 server.use(express.json());
 
