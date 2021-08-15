@@ -53,6 +53,5 @@
   "main": ".eslintrc.js",
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "proxy": "http://localhost:5000"
+  "license": "ISC"
 }
