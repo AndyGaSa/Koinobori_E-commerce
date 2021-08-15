@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(194, 191, 191);
+    display: flex;
+    justify-content: center;
+}
+
+.body{
+    width: 80vw;
+    height: 80vh;
+    margin-top: 10%;
+    background-image: url('https://wallpaperaccess.com/full/3361491.jpg');
+    background-position: center;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.buttons_login_logout{
+    
+}
