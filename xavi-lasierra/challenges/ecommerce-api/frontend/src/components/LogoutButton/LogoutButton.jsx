@@ -8,7 +8,7 @@ function LogoutButton() {
 
   return (
     <button className="logout-button" type="button" onClick={() => logout({ returnTo: window.location.origin })}>
-      Log Out
+      Logout
     </button>
   );
 }

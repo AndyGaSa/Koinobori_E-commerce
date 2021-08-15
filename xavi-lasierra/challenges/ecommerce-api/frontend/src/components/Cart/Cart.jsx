@@ -15,12 +15,19 @@ function Cart({ user }) {
   const dispatch = useDispatch();
   const cart = useSelector((store) => store.cart);
   const [cartClass, setCartClass] = useState('cart--closed');
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     if (user?.name) {
       dispatch(getCart(user._id));
     }
   }, [user]);
+
+  useEffect(() => {
+    const newTotalPrice = cart.products
+      .reduce((acc, { product, amount }) => acc + product.price * amount, 0);
+    setTotalPrice(newTotalPrice);
+  }, [cart]);
 
   function openCloseCart() {
     return cartClass ? setCartClass('') : setCartClass('cart--closed');
@@ -82,7 +89,10 @@ function Cart({ user }) {
         <p>
           Total Price:
           {' '}
-          <span>10€</span>
+          <span>
+            {totalPrice}
+            €
+          </span>
         </p>
       </button>
     </section>

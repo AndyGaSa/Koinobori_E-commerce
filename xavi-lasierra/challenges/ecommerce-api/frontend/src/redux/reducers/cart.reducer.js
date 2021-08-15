@@ -13,11 +13,12 @@ function cartReducer(cart = {
       if (newCart.products.some(({ product: { _id } }) => _id === action.data._id)) {
         newCart = {
           ...newCart,
-          products: newCart.products.map((product) => (product.product._id === action.data._id
-            ? { ...product, amount: product.amount + 1 }
-            : product))
+          products: newCart.products.map((product) => (
+            (product.product._id === action.data._id && product.amount <= product.product.stock)
+              ? { ...product, amount: product.amount + 1 }
+              : product))
         };
-      } else {
+      } else if (action.data.stock) {
         newCart = {
           ...newCart,
           products: [...newCart.products, {
