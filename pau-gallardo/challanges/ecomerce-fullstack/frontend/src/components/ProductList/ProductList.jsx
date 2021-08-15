@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import loadProductList from '../../redux/actions/productList.creator';
 import { addProductToCart } from '../../redux/actions/cart.creator';
 
+import './ProductList.scss';
+
 export default function ProductList() {
   const productList = useSelector((store) => store.products);
   const dispatch = useDispatch();
@@ -14,17 +16,19 @@ export default function ProductList() {
 
   return (
     <>
-      <h2>Product List</h2>
-      <ul>
-        {
+      <div className="proli-container">
+        <h2 className="proli-container__tittle">Product List</h2>
+        <ul className="proli-container__list">
+          {
         productList.map((singleProduct) => (
           <li
+            className="proli-container__list__component"
             data-testid={`list-item-${singleProduct.name}`}
             key={`key-${singleProduct.name}`}
           >
-            <span>{`Product name ${singleProduct.name}`}</span>
-            <span>{`${singleProduct.price}€`}</span>
-            <span>{`Stock ${singleProduct.stock} units`}</span>
+            <span className="proli-container__list__component__stuff">{`Product name: ${singleProduct.name}`}</span>
+            <span className="proli-container__list__component__stuff">{`${singleProduct.price}€`}</span>
+            <span className="proli-container__list__component__stuff">{`Stock ${singleProduct.stock} units`}</span>
             <button
               type="button"
               onClick={() => dispatch(addProductToCart(singleProduct))}
@@ -35,7 +39,8 @@ export default function ProductList() {
           </li>
         ))
         }
-      </ul>
+        </ul>
+      </div>
     </>
   );
 }

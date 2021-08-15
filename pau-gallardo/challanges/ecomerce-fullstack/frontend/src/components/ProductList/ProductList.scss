@@ -2,3 +2,22 @@
 @import '../../styles/colors';
 @import '../../styles/fonts';
 
+.proli-container{
+    margin: 40px;
+    
+    &__tittle{
+        background-color: gold;
+    }
+    
+    &__list__component{
+        list-style: none;
+        margin: 15px;
+        display: flex;
+
+        &__stuff{
+            margin-right:10px;
+        }
+    }
+        
+}
+
