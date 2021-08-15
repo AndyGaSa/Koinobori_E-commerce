@@ -1,9 +1,10 @@
 import actionTypes from '../actions/types';
 
 const userReducers = (state = [], action) => {
+  console.log(action);
   switch (action.type) {
     case actionTypes.FETCH_USER:
-      return action.logUser;
+      return action.userData;
     default:
       return state;
   }

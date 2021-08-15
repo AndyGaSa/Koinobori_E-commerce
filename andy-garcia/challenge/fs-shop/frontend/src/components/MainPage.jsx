@@ -6,20 +6,22 @@ import { fetchUserAccount } from '../redux/actions';
 
 function MainPage() {
   const { user, isAuthenticated } = useAuth0();
-  const userAccount = useSelector(({ logUser }) => logUser);
+  const logUser = useSelector(({ userAccount }) => userAccount);
   const dispatch = useDispatch();
 
   if (isAuthenticated) {
     console.log(`Usuario ${user.name} autentificado`);
     useEffect(() => {
-      dispatch(fetchUserAccount(user.name));
+      dispatch(fetchUserAccount(user));
     }, []);
+    console.log('Contenido de user en store');
+    console.log(logUser);
   }
 
   return (
     <div className="MainPage">
       {isAuthenticated && (
-      <h1>{userAccount?.name}</h1>
+      <h1>{logUser?.user[0].name}</h1>
       )}
       <h1>hola soy el main</h1>
     </div>
