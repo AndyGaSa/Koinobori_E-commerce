@@ -1,12 +1,16 @@
 import React from 'react';
 import LoginButton from './LoginButton';
-import LogoutButton from './LogoutButton';
+import './Login.css';
 
 function Login() {
   return (
     <div className="Login">
-      <LoginButton />
-      <LogoutButton />
+      <div>
+        <h1>HEY!</h1>
+        <h2>LOOKS THAT YOU ARE NOT LOGGED IN...</h2>
+        <h3>You are missing all of it...</h3>
+        <LoginButton />
+      </div>
     </div>
   );
 }

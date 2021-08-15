@@ -3,6 +3,10 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useAuth0 } from '@auth0/auth0-react';
 import { fetchUserAccount } from '../redux/actions';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+import LogoutButton from './LogoutButton';
 
 function MainPage() {
   const { user, isAuthenticated } = useAuth0();
@@ -22,6 +26,10 @@ function MainPage() {
       <h1>{userAccount?.name}</h1>
       )}
       <h1>hola soy el main</h1>
+      <LogoutButton />
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
