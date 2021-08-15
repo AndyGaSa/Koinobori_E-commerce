@@ -10,7 +10,7 @@ export default function FunkoList() {
 
   useEffect(() => {
     dispatch(loadProducts());
-  }, []);
+  }, [products]);
 
   function destructureProduct(product) {
     const newProduct = {
@@ -30,7 +30,17 @@ export default function FunkoList() {
             <img src={product.img} alt="" />
             {`${product.model}: ${product.price}€`}
             {' '}
-            <button type="button" onClick={() => dispatch(addToCart(destructureProduct(product)))}>Add</button>
+            {product.stock === 0
+              ? <span>Sold Out</span>
+              : (
+                <>
+                  <span>
+                    Stock:
+                    {product.stock}
+                  </span>
+                  <button type="button" onClick={() => dispatch(addToCart(destructureProduct(product)))}>Add</button>
+                </>
+              )}
           </li>
         ))}
       </ul>

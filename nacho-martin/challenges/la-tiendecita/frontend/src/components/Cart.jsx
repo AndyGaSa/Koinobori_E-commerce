@@ -44,7 +44,9 @@ export default function Cart() {
                 {' '}
                 {amount}
                 {' '}
-                <button type="button" onClick={() => dispatch(addToCart(addProduct(product)))}>+</button>
+                {product.stock > 0
+                  ? <button type="button" onClick={() => dispatch(addToCart(addProduct(product)))}>+</button>
+                  : null}
               </span>
             </li>
           )
