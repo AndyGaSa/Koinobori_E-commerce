@@ -35,7 +35,6 @@ function Cart({ user }) {
           amount
         }))
     };
-    console.log(cartData);
     dispatch(saveCart(cartData));
   }
 

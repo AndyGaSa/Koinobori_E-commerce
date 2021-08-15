@@ -27,10 +27,10 @@ export function substractProductFromCart(data) {
   });
 }
 
-export function saveCart({ _id, products }) {
+export function saveCart({ user, products }) {
   return async (dispatch) => {
-    const { data } = await axios.put('/api/carts', cart);
-
+    const { data } = await axios.put(`/api/carts/${user}`, products);
+    console.log(data);
     dispatch({
       type: actionTypes.SAVE_CART,
       data
