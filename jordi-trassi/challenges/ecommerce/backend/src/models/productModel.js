@@ -1,12 +1,17 @@
 const { model, Schema } = require('mongoose');
 
 const productSchema = Schema({
+  image: String,
   name: String,
   price: Number,
   stock: Number,
-  image: {
+  currency: {
     type: String,
-    default: 'http://',
+    default: '€',
+  },
+  description: {
+    type: String,
+    default: 'Los mejores caramelos del mundo!',
   },
 });
 
