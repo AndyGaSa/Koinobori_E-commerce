@@ -1,5 +1,4 @@
 /* eslint-disable no-underscore-dangle */
-/* eslint-disable camelcase */
 const User = require('../models/userModel');
 const Sites = require('../models/sitesModel');
 const FavList = require('../models/favSitesModel');
@@ -9,33 +8,18 @@ const removeConcidences = (sites, { userSites }) => (
 );
 
 const findOrSetUser = async (req, res) => {
-  const { user_id } = req.body;
-  const response = {};
-  let user = await User.find({ user_id });
+  const { name } = req.body;
+  let user = await User.find({ name });
   let sites = await Sites.find();
-  let favList = {};
+  const favList = !user.length
+    ? (
+      user = await User.create(req.body),
+      await FavList.create({ user: user._id, favsites: [] })
+    ) : await FavList.find({ name });
 
-  if (!user) {
-    user = await User.create(req.body);
-    favList = await FavList.create({
-      user: user._id,
-      favsites: [],
-    });
+  sites = favList.length ? removeConcidences(sites, favList) : sites;
 
-    response.user = user;
-    response.favList = favList;
-    response.sites = sites;
-
-    res.send(response);
-  }
-
-  favList = await FavList.find({ user_id });
-  sites = removeConcidences(sites, favList);
-
-  response.favlist = favList;
-  response.sites = sites;
-
-  res.send(response);
+  return res.send({ user, favList, sites });
 };
 
 async function getUserById({ params: { userid } }, res) {
@@ -48,12 +32,15 @@ async function getUserById({ params: { userid } }, res) {
   }
 }
 
+// todo - When remove user we need remove he favList as well
 const removeUserById = async ({ params: { userid } }, res) => {
   const delUser = await User.findByIdAndDelete(userid);
   res.send(delUser);
 };
+
 module.exports = {
   findOrSetUser,
   getUserById,
   removeUserById,
+  removeConcidences,
 };
