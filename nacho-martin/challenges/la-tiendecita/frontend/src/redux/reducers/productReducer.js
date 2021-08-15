@@ -1,8 +1,10 @@
-import actionTypes from '../actions/actionTypes/actionTypes';
+import actionTypes from '../actions/types/products';
 
 export default function productReducer(products = [], action) {
+  let newProducts = products;
   if (action.type === actionTypes.LOAD_PRODUCTS) {
-    return action.data;
+    newProducts = action.products;
+    return action.products;
   }
-  return products;
+  return newProducts;
 }
