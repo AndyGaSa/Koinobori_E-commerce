@@ -12,6 +12,18 @@ export function loadProducts() {
   };
 }
 
+export function loadCarts() {
+  return async (dispatch) => {
+    const { cartInfo } = await axios.get('/api/carts');
+    if (cartInfo) {
+      dispatch({
+        type: actionTypes.LOAD_CARTS,
+        cartInfo,
+      });
+    }
+  };
+}
+
 export function buyProducts(cartData) {
   return async (dispatch) => {
     const { data } = await axios.post('/api/cart', cartData);

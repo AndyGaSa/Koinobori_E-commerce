@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadProducts } from '../redux/actions/actionCreators';
+import { loadProducts, buyProducts } from '../redux/actions/actionCreators';
 import './Products.css';
 
 export default function Products() {
@@ -17,6 +17,7 @@ export default function Products() {
       <h1>Todos Los Productos:</h1>
       <ul>
         {products.map(({
+          _id,
           name,
           price,
           image,
@@ -42,7 +43,9 @@ export default function Products() {
                   <p className="product-information__description">{description}</p>
                 </article>
               </div>
-              <button type="button" className="btn-comprar">Comprar</button>
+              <button type="button" className="btn-comprar" onClick={() => dispatch(buyProducts(_id))}>
+                Comprar
+              </button>
             </div>
           </li>
         ))}
