@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import propTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faShoppingCart, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
@@ -7,14 +8,13 @@ import { faShoppingCart, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import getCart from '../../redux/actions/cart.creator';
 import './cart.scss';
 
-function Cart() {
+function Cart({ user }) {
   const dispatch = useDispatch();
-  const user = useSelector((store) => store.users);
   const cart = useSelector((store) => store.cart);
   const [cartClass, setCartClass] = useState('cart--closed');
 
   useEffect(() => {
-    if (user) {
+    if (user?.name) {
       // eslint-disable-next-line no-underscore-dangle
       dispatch(getCart(user._id));
     }
@@ -52,7 +52,7 @@ function Cart() {
       </ul>
       {cart.products.length > 0
         ? <button type="button" className="cart__pay-button">Pay</button>
-        : <span className="cart__empty">Cart is empty</span>}
+        : <span className="cart__empty">{user?.name ? 'Cart is empty' : 'Login to add products'}</span>}
       <button type="button" className="cart__summary" onClick={openCloseCart}>
         <div>
           <span className="cart__open-icon" />
@@ -69,3 +69,11 @@ function Cart() {
 }
 
 export default Cart;
+
+Cart.propTypes = {
+  user: propTypes.shape({
+    _id: propTypes.string,
+    name: propTypes.string,
+    email: propTypes.string
+  }).isRequired
+};
