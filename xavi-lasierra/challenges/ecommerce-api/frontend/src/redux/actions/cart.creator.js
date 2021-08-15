@@ -19,3 +19,10 @@ export function addProductToCart(data) {
     data
   });
 }
+
+export function substractProductFromCart(data) {
+  return ({
+    type: actionTypes.SUBSTRACT_FROM_CART,
+    data
+  });
+}

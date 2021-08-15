@@ -27,6 +27,14 @@ function cartReducer(cart = {
         };
       }
       break;
+    case actionTypes.SUBSTRACT_FROM_CART:
+      newCart = {
+        ...newCart,
+        products: newCart.products.map((product) => (product.product._id === action.data
+          ? { ...product, amount: product.amount - 1 }
+          : product)).filter((product) => product.amount !== 0)
+      };
+      break;
     default:
       break;
   }

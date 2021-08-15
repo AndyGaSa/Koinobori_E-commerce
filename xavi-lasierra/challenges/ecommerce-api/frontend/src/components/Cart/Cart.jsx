@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import propTypes from 'prop-types';
@@ -5,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faShoppingCart, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
-import { getCart } from '../../redux/actions/cart.creator';
+import { getCart, addProductToCart, substractProductFromCart } from '../../redux/actions/cart.creator';
 import './cart.scss';
 
 function Cart({ user }) {
@@ -15,7 +16,6 @@ function Cart({ user }) {
 
   useEffect(() => {
     if (user?.name) {
-      // eslint-disable-next-line no-underscore-dangle
       dispatch(getCart(user._id));
     }
   }, [user]);
@@ -43,9 +43,9 @@ function Cart({ user }) {
               €
             </span>
             <div className="product__amount">
-              <button className="product__substract-button" type="button" aria-label="Substract">-</button>
+              <button className="product__substract-button" type="button" aria-label="Substract" onClick={() => dispatch(substractProductFromCart(product._id))}>-</button>
               <span className="product__quantity">{amount}</span>
-              <button className="product__add-button" type="button" aria-label="Add">+</button>
+              <button className="product__add-button" type="button" aria-label="Add" onClick={() => dispatch(addProductToCart(product))}>+</button>
             </div>
           </li>
         ))}
