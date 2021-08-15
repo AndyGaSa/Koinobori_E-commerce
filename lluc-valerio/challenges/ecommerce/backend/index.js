@@ -22,7 +22,7 @@ const userRouter = require('./src/routes/userRoutes');
 
 // Server Main Route
 server.use('/api/cart', cartRouter);
-server.use('/api/product', productRouter);
+server.use('/api/products', productRouter);
 server.use('/api/user', userRouter);
 
 // start Server
