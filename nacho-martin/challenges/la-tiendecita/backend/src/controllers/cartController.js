@@ -34,6 +34,11 @@ async function updateCart(req, res) {
         productToUpadate.amount += 1;
       } else {
         productToUpadate.amount -= 1;
+        if (productToUpadate.amount === 0) {
+          cartToUpdate[0].products = cartToUpdate[0].products.filter(
+            (product) => product !== productToUpadate
+          );
+        }
       }
     } else {
       cartToUpdate[0].products = [...cartToUpdate[0].products, productToAdd];
