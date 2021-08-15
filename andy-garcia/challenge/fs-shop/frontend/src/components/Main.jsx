@@ -5,7 +5,7 @@ function Main() {
   return (
     <main>
       <div>
-        <h1>aqui va la imagen</h1>
+        <h1>aqui va la imagenn</h1>
       </div>
     </main>
   );
