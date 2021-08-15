@@ -6,7 +6,17 @@ async function createOneProduct({ body }, res) {
     res.send(createdProduct);
     res.status(200);
   } catch (error) {
-    res.send(500);
+    res.status(500);
+  }
+}
+
+async function getAllProducts(req, res) {
+  try {
+    const foundProducts = Product.find();
+    res.json(foundProducts);
+    res.status(200);
+  } catch (error) {
+    res.status(500);
   }
 }
 
