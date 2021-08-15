@@ -12,7 +12,7 @@ async function createOneProduct({ body }, res) {
 
 async function getAllProducts(req, res) {
   try {
-    const foundProducts = Product.find();
+    const foundProducts = await Product.find();
     res.json(foundProducts);
     res.status(200);
   } catch (error) {
@@ -22,4 +22,5 @@ async function getAllProducts(req, res) {
 
 module.exports = {
   createOneProduct,
+  getAllProducts,
 };
