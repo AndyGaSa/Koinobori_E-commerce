@@ -14,7 +14,7 @@ export default function User() {
   };
 
   return (
-    <form className="form">
+    <form className="form" action="/">
       <input type="text" id="lname" name="lname" onChange={inputHandle} />
       <input className="form-submit" onClick={() => dispatch(postUserToApi(userName))} type="submit" value="LOGIN" />
     </form>
