@@ -45,9 +45,6 @@ function cartReducer(cart = {
     case actionTypes.SAVE_CART:
       newCart = action.data;
       break;
-    case actionTypes.SUBMIT_CART:
-      newCart = action.data;
-      break;
     default:
       break;
   }
