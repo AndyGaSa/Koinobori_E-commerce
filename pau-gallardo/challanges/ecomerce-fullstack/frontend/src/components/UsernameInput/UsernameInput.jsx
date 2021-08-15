@@ -8,6 +8,11 @@ export default function UsernameInput() {
         type="text"
         placeholder="Introduce your name"
       />
+      <button
+        type="button"
+      >
+        Save
+      </button>
     </>
   );
 }
