@@ -6,13 +6,21 @@ import configureStore from '../redux/stores';
 import ProductList from '../components/ProductList/ProductList';
 import Cart from '../components/Cart/Cart';
 
+import './Desktop.scss';
+
 export default function Desktop() {
   return (
     <>
       <Provider store={configureStore()}>
         <h2>Esto es el desktop</h2>
-        <ProductList />
-        <Cart />
+        <div className="main">
+          <div className="main__product-list">
+            <ProductList />
+          </div>
+          <div className="main__cart">
+            <Cart />
+          </div>
+        </div>
       </Provider>
     </>
   );
