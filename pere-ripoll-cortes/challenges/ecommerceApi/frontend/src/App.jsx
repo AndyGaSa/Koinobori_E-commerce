@@ -27,7 +27,7 @@ function App() {
             <ProductList user={user.name} email={user.email} picture={user.picture} />
           </div>
           <div className="Cart">
-            <Cart />
+            <Cart user={user.name} email={user.email} picture={user.picture} />
           </div>
         </div>
       </>
