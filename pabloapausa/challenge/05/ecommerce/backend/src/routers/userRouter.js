@@ -3,13 +3,10 @@ const userController = require('../controllers/userController');
 
 const userRouter = new Router(); // Create Router object.
 
-userRouter.route('/')
-  . get(userController.readAll);
-
 userRouter.route('/:id')
-  .all(userController.readOne)
-  .post(userController.create)
-  .put(userController.update)
-  .delete(userController.delete);
+  .all(userController.search)
+  .get(userController.readOne)
+  .put(userController.updateOne)
+  .delete(userController.deleteOne);
 
 module.exports = userRouter;

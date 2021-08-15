@@ -4,12 +4,12 @@ const productController = require('../controllers/productController');
 const productRouter = new Router(); // Create Router object.
 
 productRouter.rute('/')
-  .get(productController.readAll);
+  .get(productController.readAllProducts);
 
 productRouter.rute('/id')
-  .all(productController.readOne)
-  .post(productController.create)
-  .put(productController.update)
-  .delete(productController.delete);
+  .all(productController.searchProduct)
+  .get(productController.readOneProduct)
+  .put(productController.updateOneProduct)
+  .delete(productController.deleteOneProduct);
 
 module.exports = productRouter;
