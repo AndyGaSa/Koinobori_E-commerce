@@ -1,31 +1,44 @@
-import React from 'react';
+// import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { loadCartItems } from '../../redux/actions/actionCreator';
 
 import '../../styles/Cart.scss';
 
 export default function Cart() {
-  return (
-    <aside className="cart">
+  const items = useSelector((store) => store.items);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(loadCartItems('611960d2fdf6901a047aa981'));
+    console.log('*****************');
+    console.log(items[0]);
+  }, []);
+
+  return (
+    // <div>cart component</div>
+    <aside className="cart">
       <h2 className="cart__title">CART</h2>
       <ul className="cart__items">
-        <li>
-          <div className="cart-item">
-            <span className="cart-item__name">Joc 1</span>
-            <span className="cart-item__price">70€</span>
-            <span className="cart-item__stock">Stock: 3</span>
-            <button type="button">Add</button>
-          </div>
-        </li>
-        <li>
-          <div className="cart-item">
-            <span className="cart-item__name">Joc 1</span>
-            <span className="cart-item__price">70€</span>
-            <span className="cart-item__stock">Stock: 3</span>
-            <button type="button">Add</button>
-          </div>
-        </li>
+        {items[0].products.map((item) => (
+          <li key={item.product.name}>
+            <div className="cart-item">
+              <span className="cart-item__name">{item.product.name}</span>
+              <span className="cart-item__price">
+                {item.product.price}
+                {' '}
+                €
+              </span>
+              <span className="cart-item__stock">
+                Stock:
+                {' '}
+                {item.amount}
+              </span>
+              <button type="button">Add</button>
+            </div>
+          </li>
+        ))}
       </ul>
-
     </aside>
   );
 }
