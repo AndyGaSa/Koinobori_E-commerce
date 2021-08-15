@@ -1,0 +1,22 @@
+.cart{
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    justify-content: center;
+    flex-direction: column;
+}
+.cart__user{
+    font-size: 2em;
+    color: azure;
+}
+.cart__products{
+    display: flex;
+}
+.button-cart{
+display: flex;
+align-items: center;
+border-style:solid;
+border-color:#eefd1f ;
+color: #eefd1f;
+margin: 35px;
+}

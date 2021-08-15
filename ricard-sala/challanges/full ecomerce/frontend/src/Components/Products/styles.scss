@@ -1,0 +1,19 @@
+.product-card__container-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+.product-card__container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.product-card-img{
+img{ width: 30vw};
+   
+}
+.product-card-info{
+     width: 35vw;
+    }

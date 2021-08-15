@@ -1,0 +1,24 @@
+
+.title{
+    align-items: center;
+    font-size: 2em;
+    align-items: center; 
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    font-family: Impact, Charcoal, sans-serif;
+    color: #eefd1f;
+    font-style: oblique;
+    background-color: #424242;
+    margin: 30px;
+}
+.nav-var{
+    background-color:#424242 ;
+    display: flex;
+    justify-content: space-evenly;
+    a {text-decoration: none;
+    color: #eefd1f;}
+}
+.product-card-info{
+    text-decoration: none;
+}
