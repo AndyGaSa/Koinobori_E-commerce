@@ -10,9 +10,9 @@ async function getAll({ query }, res) {
   }
 }
 
-async function createOne({ body }, res) {
+async function createOne(req, res) {
   try {
-    const createdUser = await User.create(body);
+    const createdUser = await User.create(req.body);
     res.json(createdUser);
   } catch (error) {
     res.status(500);
