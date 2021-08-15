@@ -30,7 +30,11 @@ async function updateCart(req, res) {
       const productToUpadate = cartToUpdate[0].products.find(
         (object) => object.product.toString() === productToAdd.product
       );
-      productToUpadate.amount += 1;
+      if (productToAdd.types === 'ADD_TO_CART') {
+        productToUpadate.amount += 1;
+      } else {
+        productToUpadate.amount -= 1;
+      }
     } else {
       cartToUpdate[0].products = [...cartToUpdate[0].products, productToAdd];
     }
