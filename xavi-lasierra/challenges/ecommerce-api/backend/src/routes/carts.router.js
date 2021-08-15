@@ -3,10 +3,15 @@ const {
   getCarts,
   createCart,
   getOneCart,
-  updateCartByUserId
+  updateCartByUserId,
+  payCart
 } = require('../controllers/carts.controller');
 
 const cartsRouter = Router();
+
+cartsRouter
+  .route('/pay/:userId')
+  .put(payCart);
 
 cartsRouter
   .route('/')

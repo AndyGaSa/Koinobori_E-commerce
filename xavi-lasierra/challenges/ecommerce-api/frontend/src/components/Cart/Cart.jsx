@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faTrashAlt, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import {
-  getCart, addProductToCart, substractProductFromCart, saveCart, clearCart
+  getCart, addProductToCart, substractProductFromCart, saveCart, clearCart, submitCart
 } from '../../redux/actions/cart.creator';
 import './cart.scss';
 
@@ -33,8 +33,8 @@ function Cart({ user }) {
     return cartClass ? setCartClass('') : setCartClass('cart--closed');
   }
 
-  function saveCartData() {
-    const cartData = {
+  function transformCartData() {
+    return {
       ...cart,
       products: cart.products.map(({ product, amount }) => (
         {
@@ -42,7 +42,18 @@ function Cart({ user }) {
           amount
         }))
     };
+  }
+
+  function saveCartData() {
+    const cartData = transformCartData();
     dispatch(saveCart(cartData));
+  }
+
+  function pay() {
+    if (cart.products.length > 0) {
+      const cartData = transformCartData();
+      dispatch(submitCart(cartData));
+    }
   }
 
   return (
@@ -79,7 +90,7 @@ function Cart({ user }) {
         ))}
       </ul>
       {cart.products.length > 0
-        ? <button type="button" className="cart__pay-button">Pay</button>
+        ? <button type="button" className="cart__pay-button" onClick={pay}>Pay</button>
         : <span className="cart__empty">{user?.name ? 'Cart is empty' : 'Login to add products'}</span>}
       <button type="button" className="cart__summary" onClick={openCloseCart}>
         <div>

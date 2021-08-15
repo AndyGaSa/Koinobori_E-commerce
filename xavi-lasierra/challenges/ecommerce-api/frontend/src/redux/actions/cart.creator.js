@@ -42,3 +42,13 @@ export function clearCart() {
     type: actionTypes.CLEAR_CART
   });
 }
+
+export function submitCart({ user, products }) {
+  return async (dispatch) => {
+    const { data } = await axios.put(`/api/carts/pay/${user}`, products);
+    dispatch({
+      type: actionTypes.SAVE_CART,
+      data
+    });
+  };
+}

@@ -50,9 +50,23 @@ async function updateCartByUserId({ params: { userId }, body }, res) {
   }
 }
 
+async function payCart({ params: { userId }, body }, res) {
+  try {
+    const updatedCart = await Cart.findOneAndUpdate({ user: userId },
+      { products: body },
+      { new: true })
+      .populate('products.product');
+    res.json(updatedCart);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
 module.exports = {
   getCarts,
   createCart,
   getOneCart,
-  updateCartByUserId
+  updateCartByUserId,
+  payCart
 };
