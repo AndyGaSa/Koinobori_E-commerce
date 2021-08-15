@@ -1,0 +1,24 @@
+.main__listBeers{
+    flex-grow: 3;
+    h2{
+        padding: 1vw;
+    }
+    ul {
+        list-style: none;
+        li {
+            display: flex;
+            .beerName{
+                flex-grow: 2;
+                padding: 1vw;
+                max-width: 200px;
+                text-align: start;
+            }
+            .beerPrice{
+                padding: 1vw;
+            }
+            .beerAdd{
+                padding: 1vw;
+            }
+        }
+    }
+}

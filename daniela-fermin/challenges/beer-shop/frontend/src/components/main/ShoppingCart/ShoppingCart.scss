@@ -1,0 +1,34 @@
+.main__shoppingCart{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    h2{
+        padding: 1vw;
+    }
+    ul {
+        list-style: none;
+        li {
+            display: flex;
+            .beerName{
+                flex-grow: 2;
+                padding: 1vw;
+                max-width: 200px;
+                text-align: start;
+            }
+            .beerPrice{
+                padding: 1vw;
+            }
+            .beerButton{
+                padding: 1vw;
+            }
+            input{
+                max-width: 30px;
+            }
+        }
+    }
+    button{
+
+    }
+}
