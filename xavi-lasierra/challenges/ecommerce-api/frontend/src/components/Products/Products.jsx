@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 
-import products from '../../mocks/products.mock';
+import getProducts from '../../redux/actions/products.creator';
 import './products.scss';
 
 function Product() {
+  const dispatch = useDispatch();
+  const products = useSelector((store) => store.products);
+
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
+
   return (
     <ul className="products">
       { products.map((product) => (

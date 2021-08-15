@@ -1,9 +1,10 @@
 import actionTypes from '../actions/products.actions';
 
 function productsReducer(products = [], action) {
-  const newProducts = products;
+  let newProducts = products;
   switch (action.type) {
     case actionTypes.LOAD_PRODUCTS:
+      newProducts = action.data;
       break;
     default:
       break;
