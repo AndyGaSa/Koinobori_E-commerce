@@ -33,6 +33,7 @@
     .cart__cart-products {
         display: flex;
         flex-direction: column;
+        border-bottom: 2px solid $main-color;
 
         .cart-products__product {
             @extend %row-between-flex;
@@ -132,6 +133,12 @@
             background-color: $main-color;
             border: 3px solid $main-color;
         }
+    }
+
+    .cart__empty {
+        text-align: center;
+        color: $main-light-color;
+        padding-top: 0.5rem;
     }
 
     &--closed{
