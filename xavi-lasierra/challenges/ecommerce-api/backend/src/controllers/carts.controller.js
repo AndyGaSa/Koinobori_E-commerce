@@ -24,11 +24,11 @@ async function createCart({ body }, res) {
 async function getOneCart({ params: { userId } }, res) {
   try {
     let foundCart = await Cart.findOne({ user: userId })
-      .populate('products.productInformation');
+      .populate('products.product');
 
     if (!foundCart) {
       foundCart = await Cart.create({ user: userId })
-        .populate('products.productInformation');
+        .populate('products.product');
     }
     res.json(foundCart);
   } catch (error) {
@@ -37,8 +37,17 @@ async function getOneCart({ params: { userId } }, res) {
   }
 }
 
-async function updateCartByUserId({ params: { userId } }, res) {
-
+async function updateCartByUserId({ params: { userId }, body }, res) {
+  try {
+    const updatedCart = await Cart.findOneAndUpdate({ user: userId },
+      { products: body },
+      { new: true })
+      .populate('products.product');
+    res.json(updatedCart);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 module.exports = {
