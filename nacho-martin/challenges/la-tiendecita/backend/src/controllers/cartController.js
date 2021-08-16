@@ -36,6 +36,7 @@ async function updateCart(req, res) {
   try {
     const cartToUpdate = await Cart.find();
     const productToAdd = await req.body;
+
     if (cartToUpdate[0].products.some(
       (object) => object.product.toString() === productToAdd.product
     )) {
@@ -44,8 +45,11 @@ async function updateCart(req, res) {
       );
       if (productToAdd.types === 'ADD_TO_CART') {
         productToUpadate.amount += 1;
+        cartToUpdate[0].total += productToAdd.price;
       } else {
         productToUpadate.amount -= 1;
+        cartToUpdate[0].total -= productToAdd.price;
+
         if (productToUpadate.amount === 0) {
           cartToUpdate[0].products = cartToUpdate[0].products.filter(
             (product) => product !== productToUpadate
@@ -54,6 +58,7 @@ async function updateCart(req, res) {
       }
     } else {
       cartToUpdate[0].products = [...cartToUpdate[0].products, productToAdd];
+      cartToUpdate[0].total += productToAdd.price;
     }
     updateStock(productToAdd);
     cartToUpdate[0].save();

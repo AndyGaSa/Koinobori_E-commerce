@@ -8,7 +8,8 @@ const cartSchema = mongoose.Schema({
       amount: Number,
       types: String
     }
-  ]
+  ],
+  total: Number
 });
 
 module.exports = mongoose.model('Cart', cartSchema);
