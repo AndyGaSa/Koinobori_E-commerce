@@ -26,7 +26,8 @@
   "scripts": {
     "start": "nodemon index.js",
     "debug": "nodemon --inspect-brk index.js",
-    "test": "jest --watchAll --collect-coverage"
-  },
-  "proxy": "http://localhost:5000/"
+    "test": "jest --watchAll --collect-coverage",
+    "frontend": "cd frontend && npm start", 
+    "dev": "concurrently -n 'backend,frontend' -c'red,green' \"nodemon index.js\" \"npm run frontend\""
+  }
 }
