@@ -13,7 +13,7 @@ import './cart.scss';
 
 function Cart({ user }) {
   const dispatch = useDispatch();
-  const cart = useSelector((store) => store.cart);
+  const userCart = useSelector(({ cart }) => cart);
   const [cartClass, setCartClass] = useState('cart--closed');
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -24,10 +24,10 @@ function Cart({ user }) {
   }, [user]);
 
   useEffect(() => {
-    const newTotalPrice = cart.products
+    const newTotalPrice = userCart.products
       .reduce((acc, { product, amount }) => acc + product.price * amount, 0);
     setTotalPrice(newTotalPrice);
-  }, [cart]);
+  }, [userCart]);
 
   function openCloseCart() {
     return cartClass ? setCartClass('') : setCartClass('cart--closed');
@@ -35,8 +35,8 @@ function Cart({ user }) {
 
   function transformCartData() {
     return {
-      ...cart,
-      products: cart.products.map(({ product, amount }) => (
+      ...userCart,
+      products: userCart.products.map(({ product, amount }) => (
         {
           product: product._id,
           amount
@@ -50,7 +50,7 @@ function Cart({ user }) {
   }
 
   function pay() {
-    if (cart.products.length > 0) {
+    if (userCart.products.length > 0) {
       const cartData = transformCartData();
       dispatch(submitCart(cartData));
     }
@@ -73,7 +73,7 @@ function Cart({ user }) {
         )}
       </div>
       <ul className="cart__cart-products">
-        {cart.products.map(({ product, amount }) => (
+        {userCart.products.map(({ product, amount }) => (
           <li className="cart-products__product" key={`${product.name}-shoe`}>
             <img className="product__image" src={product.img} alt={product.name} />
             <span className="product__name">{product.name}</span>
@@ -89,7 +89,7 @@ function Cart({ user }) {
           </li>
         ))}
       </ul>
-      {cart.products.length > 0
+      {userCart.products.length > 0
         ? <button type="button" className="cart__pay-button" onClick={pay}>Pay</button>
         : <span className="cart__empty">{user?.name ? 'Cart is empty' : 'Login to add products'}</span>}
       <button type="button" className="cart__summary" onClick={openCloseCart}>

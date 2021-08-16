@@ -11,7 +11,7 @@ import './products.scss';
 
 function Products({ user }) {
   const dispatch = useDispatch();
-  const products = useSelector((store) => store.products);
+  const allProducts = useSelector(({ products }) => products);
 
   function addToCart(product) {
     if (user?.name) {
@@ -25,7 +25,7 @@ function Products({ user }) {
 
   return (
     <ul className="products">
-      { products.map((product) => (
+      { allProducts.map((product) => (
         <li className="products__product" key={`${product.name}-shoe`}>
           <img className="product__image" src={product.img} alt={product.name} />
           <div className="product__information">

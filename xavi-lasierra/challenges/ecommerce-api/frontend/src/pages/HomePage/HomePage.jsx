@@ -7,12 +7,12 @@ import Cart from '../../components/Cart/Cart';
 import './homePage.scss';
 
 function HomePage() {
-  const user = useSelector((store) => store.user);
+  const currentUser = useSelector(({ user }) => user);
 
   return (
     <main>
-      <Cart user={user} />
-      <Products user={user} />
+      <Cart user={currentUser} />
+      <Products user={currentUser} />
     </main>
   );
 }
