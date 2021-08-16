@@ -1,34 +1,27 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable no-shadow */
-const favSites = require('../models/favSitesModel');
+const debug = require('debug')('fav:cont');
+const FavSites = require('../models/favSitesModel');
 
 const checkFavSites = async (req, res, next) => {
-  const { user } = req.body.user;
-  const { body } = req.body;
-
-  const favList = favSites.find({ user });
-
-  if (!favList) {
-    favSites.create(body);
-    next();
-  }
-  req.favlist = favList;
+  const { params: { favid } } = req;
+  req.userFav = await FavSites.find({ user: favid });
   next();
 };
 
-async function addFavSite(req, res) {
-  try {
-    const findfavSites = await favSites.find({ user: req.body.user });
-    // const productId = findfavSites[0].products;
-    if (!findfavSites) {
-      const newfavSites = await favSites.create(req.body);
-      return res.send(newfavSites);
-    }
-    return res.send(findfavSites);
-  } catch (error) {
-    res.status(500);
-    return res.send(error);
-  }
-}
+const addFavSite = async (req, res) => {
+  const [userFav] = [...req.userFav];
+  const result = await FavSites.findByIdAndUpdate(
+    userFav._id,
+    {
+      $addToSet: {
+        userSites: req.body,
+      },
+    }, { useFindAndModify: false, new: true },
+  );
+
+  res.send(result);
+};
 
 async function getUserFavs({ query }, res) {
   try {
