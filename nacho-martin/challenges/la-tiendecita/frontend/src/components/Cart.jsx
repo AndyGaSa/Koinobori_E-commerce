@@ -18,7 +18,8 @@ export default function Cart() {
     const newProduct = {
       product: product._id,
       amount: 1,
-      types: 'DELETE_FROM_CART'
+      types: 'DELETE_FROM_CART',
+      price: product.price
     };
     return newProduct;
   }
@@ -27,7 +28,8 @@ export default function Cart() {
     const newProduct = {
       product: product._id,
       amount: 1,
-      types: 'ADD_TO_CART'
+      types: 'ADD_TO_CART',
+      price: product.price
     };
     return newProduct;
   }
@@ -54,6 +56,7 @@ export default function Cart() {
           )
         ))}
       </ul>
+      <h3>{`Total: ${carts[0]?.total}€`}</h3>
     </section>
   );
 }

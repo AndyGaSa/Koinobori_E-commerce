@@ -20,7 +20,8 @@ export default function FunkoList() {
     const newProduct = {
       product: product._id,
       amount: 1,
-      types: 'ADD_TO_CART'
+      types: 'ADD_TO_CART',
+      price: product.price
     };
     return newProduct;
   }
