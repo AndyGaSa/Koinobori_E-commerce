@@ -16,6 +16,7 @@
         padding: 1rem 5%;
         border-radius: 0.1rem;
         box-shadow: 2px 3px 5px $main-dark-color;
+        height: 8rem;
         transition: .2s;
 
 
@@ -66,7 +67,7 @@
             background-color: $main-hover-color;
 
             .product__image {
-                transform:translateX(1.5rem);
+                margin-left: 1rem;
             }
         }
     }

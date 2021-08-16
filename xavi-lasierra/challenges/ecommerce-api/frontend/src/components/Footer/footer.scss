@@ -1,0 +1,18 @@
+@import '../../styles/variables', '../../styles/extensions';
+
+footer {
+    @extend %row-between-flex;
+    height: 5rem;
+    background-color: $main-dark-color;
+    padding: 1rem;
+    width: 100%;
+
+    small {
+        color: white;
+    }
+
+    address {
+        color: $main-light-text-color;
+        text-align: right;
+    }
+}
