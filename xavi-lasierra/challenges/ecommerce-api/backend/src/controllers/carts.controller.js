@@ -1,5 +1,3 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable no-await-in-loop */
 const Cart = require('../models/cart.model');
 const Product = require('../models/product.model');
 
@@ -55,18 +53,17 @@ async function updateCartByUserId({ params: { userId }, body }, res) {
 
 async function payCart({ params: { userId }, body }, res) {
   try {
-    const notBoughtProducts = [];
-    for (const paidProduct of body) {
+    const notBoughtProducts = await body.reduce(async (accAsync, paidProduct) => {
+      const acc = await accAsync;
+
       const product = await Product.findOneAndUpdate(
         { _id: paidProduct.product, stock: { $gte: paidProduct.amount } },
         { $inc: { stock: -paidProduct.amount } },
         { new: true }
       );
-      if (!product) {
-        notBoughtProducts.push(paidProduct);
-      }
-    }
 
+      return product ? acc : [...acc, paidProduct];
+    }, []);
     const newCart = await Cart.findOneAndUpdate({ user: userId },
       { products: notBoughtProducts },
       { new: true }).populate('products.product');
