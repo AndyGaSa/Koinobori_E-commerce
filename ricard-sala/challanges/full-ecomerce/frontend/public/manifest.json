@@ -2,7 +2,11 @@
   "short_name": "helmet shop",
   "name": "best website helmet shop",
   "icons": [
-   
+    {
+    "src": "https://img.icons8.com/color/24/000000/motorbike-helmet.png",
+    "sizes": "64x64 32x32 24x24 16x16",
+    "type": "image/x-icon"
+    }
   ],
   "start_url": ".",
   "display": "standalone",
