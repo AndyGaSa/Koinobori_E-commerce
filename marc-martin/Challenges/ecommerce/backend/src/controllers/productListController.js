@@ -10,6 +10,29 @@ async function getAllProducts({ query }, res) {
   }
 }
 
+async function createOneProduct({ body }, res) {
+  try {
+    const createdProduct = await Product.create(body);
+    res.json(createdProduct);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
+async function deleteOneById({ params: { productId } }, res) {
+  try {
+    await Product.findByIdAndDelete(productId);
+    res.status(204);
+    res.send();
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
 module.exports = {
-  getAllProducts
+  getAllProducts,
+  createOneProduct,
+  deleteOneById
 };
