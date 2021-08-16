@@ -9,7 +9,6 @@ const checkFavSites = async (req, res, next) => {
   next();
 };
 
-// ? Try change addToSet to set for each value
 const addFavSite = async (req, res) => {
   const [userFav] = [...req.userFav];
   const result = await FavSites.findByIdAndUpdate(
@@ -25,7 +24,17 @@ const addFavSite = async (req, res) => {
 };
 
 const updateFavSite = async (req, res) => {
+  const { _id } = req.userFav[0];
+  const { amount, fav } = req.body;
+  const { nModified } = await FavSites.updateOne({ _id, 'userSites._id': req.body._id },
+    {
+      $set: {
+        'userSites.$.amount': amount,
+        'userSites.$.fav': fav,
+      },
+    });
 
+  res.send(!nModified ? `No se pudo modificar ${_id}` : `${_id} Modificado correctamente`);
 };
 
 const deleteFavSite = async (req, res) => {
