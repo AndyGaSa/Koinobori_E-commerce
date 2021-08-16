@@ -3,10 +3,14 @@ const cartController = require('../controllers/cartController');
 
 const cartRouter = new Router(); // Create Router object.
 
+cartRouter.route('/')
+  .all(cartController.readAllcarts)
+  .post(cartController.createOnecart);
+
 cartRouter.route('/:id')
-  .all(cartController.search)
-  .get(cartController.readOne)
-  .put(cartController.updateOne)
-  .delete(cartController.deleteOne);
+  .all(cartController.searchOnecart)
+  .get(cartController.readOnecart)
+  .put(cartController.updateOnecart)
+  .delete(cartController.deleteOnecart);
 
 module.exports = cartRouter;

@@ -1,16 +1,26 @@
 const Product = require('../models/productModel');
 
-const readAllProducts = async ({ query }, res) => {
+const readAllProducts = async ({ query }, res) => { // GET.
   try {
     const products = await Product.find(query);
     res.json(products); // Send JSON parse.
   } catch (error) {
     res.status(500); // Internal Server Error.
-    res.send(error);
+    res.send(error); // Send error response.
   }
 };
 
-const searchProduct = async (req, res, next) => {
+const createOneProduct = async ({ body }, res) => { // POST.
+  try {
+    const createdProduct = await Product.create(body);
+    res.json(createdProduct);
+  } catch (error) {
+    res.status(500); // Internal Server Error.
+    res.send(error); // Send error response.
+  }
+};
+
+const searchOneProduct = async (req, res, next) => {
   const { params: { productId } } = req;
   try {
     const product = await Product.findById(productId);
@@ -23,13 +33,13 @@ const searchProduct = async (req, res, next) => {
     }
   } catch (error) {
     res.status(500); // Internal Server Error.
-    res.send(error);
+    res.send(error); // Send error response.
   }
 };
 
-const readOneProduct = ({ product }, res) => res.send(product);
+const readOneProduct = ({ product }, res) => res.send(product); // GET.
 
-const updateOneProduct = async (req, res) => {
+const updateOneProduct = async (req, res) => { // PUT.
   const [{ product }, { params: { productId } }] = req;
   try {
     const updatedProduct = await Product.findByIdAndUpdate(
@@ -40,24 +50,25 @@ const updateOneProduct = async (req, res) => {
     res.json(updatedProduct); // Send JSON parse.
   } catch (error) {
     res.status(500); // Internal Server Error.
-    res.send(error);
+    res.send(error); // Send error response.
   }
 };
 
-const deleteOneProduct = async ({ params: { productId } }, res) => {
+const deleteOneProduct = async ({ params: { productId } }, res) => { // DELETE.
   try {
     await Product.findByIdAndDelete(productId);
     res.status(204); // No Content.
     res.json(); // Send JSON parse.
   } catch (error) {
     res.status(500); // Internal Server Error.
-    res.send(error);
+    res.send(error); // Send error response.
   }
 };
 
 module.exports = {
   readAllProducts,
-  searchProduct,
+  createOneProduct,
+  searchOneProduct,
   readOneProduct,
   updateOneProduct,
   deleteOneProduct,
