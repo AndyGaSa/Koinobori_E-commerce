@@ -14,9 +14,10 @@ export default function ProductList() {
 
   return (
     <section className="product-list">
+      {/* <div>holiiiii</div> */}
       <h2 className="product-list__title">PRODUCT LIST</h2>
       <ul className="product-list__items">
-        {products.map((product) => (
+        {products?.map((product) => (
           <li key={product.name}>
             <div className="item">
               <span className="item__name">{product.name}</span>

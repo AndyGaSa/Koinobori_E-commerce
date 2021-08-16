@@ -11,22 +11,18 @@ export default function Cart() {
 
   useEffect(() => {
     dispatch(loadCartItems('611960d2fdf6901a047aa981'));
-    console.log('*****************');
-    console.log(items[0]);
   }, []);
 
   return (
-    // <div>cart component</div>
     <aside className="cart">
       <h2 className="cart__title">CART</h2>
       <ul className="cart__items">
-        {items[0].products.map((item) => (
+        {items[0]?.products?.map((item) => (
           <li key={item.product.name}>
             <div className="cart-item">
               <span className="cart-item__name">{item.product.name}</span>
               <span className="cart-item__price">
                 {item.product.price}
-                {' '}
                 €
               </span>
               <span className="cart-item__stock">
