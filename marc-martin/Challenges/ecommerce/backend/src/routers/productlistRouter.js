@@ -1,13 +1,15 @@
 const { Router } = require('express');
 
 const {
-  getAllProducts
+  getAllProducts,
+  createOneProduct
 } = require('../controllers/productListController');
 
 const productListRouter = new Router();
 
 productListRouter
   .route('/')
-  .get(getAllProducts);
+  .get(getAllProducts)
+  .post(createOneProduct);
 
 module.exports = productListRouter;
