@@ -15,7 +15,7 @@
 
     .cart__clear {
         background-color: $main-light-color;
-        padding: 0.5rem 0.75rem 0 0.75rem;
+        padding: 0.5rem 0.75rem;
         @extend %row-between-flex;
 
         .cart__title {
@@ -179,11 +179,12 @@
 
 @media screen and (min-width: 720px) {
     .cart{
+        margin-top: 2rem;
         order: 1;
         min-width: 450px;
         max-width: 450px;
         position: unset;
-        box-shadow: 2px 3px 5px $main-dark-color;
+        box-shadow: 4px 4px 5px $main-dark-color;
                 
         .cart__cart-products {
             .cart-products__product {

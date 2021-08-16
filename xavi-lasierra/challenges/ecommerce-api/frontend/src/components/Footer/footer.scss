@@ -1,18 +1,22 @@
 @import '../../styles/variables', '../../styles/extensions';
 
 footer {
+    font-family: $main-font;
     @extend %row-between-flex;
     height: 5rem;
     background-color: $main-dark-color;
-    padding: 1rem;
+    padding: 0 2rem;
     width: 100%;
 
     small {
+        font-size: 0.7rem;
         color: white;
     }
 
     address {
+        font-size: 0.9rem;
         color: $main-light-text-color;
         text-align: right;
+        font-style: normal;
     }
 }
