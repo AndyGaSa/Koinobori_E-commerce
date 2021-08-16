@@ -16,7 +16,9 @@ const findOrSetUser = async (req, res) => {
     ? (
       user = await User.create(req.body),
       await FavList.create({ user: user._id, favsites: [] })
-    ) : await FavList.find({ name });
+    ) : (
+      await FavList.findOne({ user: user[0]._id })
+    );
 
   sites = favList.length ? removeConcidences(sites, favList) : sites;
 
