@@ -12,13 +12,18 @@ body {
     color: rgb(255, 255, 255);
 }
 
-ul {
-    display: flex;
-    flex-direction: column;
+.products__list {
     list-style: none;
 }
 
-li {
+.list-items__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 3rem;
+}
+.list-items__item {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -26,15 +31,15 @@ li {
     margin: 3rem;
 }
  
-img {
+.list-item__img {
     border: solid 0.2rem;
     border-color: #ff982f;
 }
-article {
+.list-item__article{
     margin: 2rem;
 }
 
-button {
+.list-item__button {
     background-color: #237de0;
     width: 7rem;
     padding: 0.4rem;

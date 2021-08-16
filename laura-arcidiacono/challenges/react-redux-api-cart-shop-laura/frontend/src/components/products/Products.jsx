@@ -14,12 +14,12 @@ export default function Products() {
   }, []);
 
   return (
-    <ul className="products_list">
+    <ul className="products__list">
       {products.map((product) => (
-        <div key={product.name} className="list-items_container">
-          <li className="list_item">
-            <img src={product.img} alt={product.name} className="item_img" />
-            <article className="item_article">
+        <div key={product.name} className="list-items__container">
+          <li className="list-items__item">
+            <img src={product.img} alt={product.name} className="list-item__img" />
+            <article className="list-item__article">
               <h3>{product.name}</h3>
               <h4>{product.author}</h4>
               <p>
@@ -35,7 +35,13 @@ export default function Products() {
                 {' '}
               </p>
             </article>
-            <button onClick={() => console.log('Comprar')} type="button" className="item_button">Comprar</button>
+            <button
+              onClick={() => console.log('Comprar')}
+              type="button"
+              className="list-item__button"
+            >
+              Comprar
+            </button>
           </li>
         </div>
       ))}
