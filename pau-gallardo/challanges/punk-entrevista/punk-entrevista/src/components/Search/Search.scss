@@ -1,0 +1,19 @@
+
+
+.search-container{
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    margin: 25px;
+
+   &__left{
+       display: flex;
+
+       &__radios{
+           border: solid 2px black;
+           margin-left: 15px;
+           padding: 5px;
+           border-radius: 5px 5px 5px 5px;
+       }
+   }
+}
