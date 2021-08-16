@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import loadCart from '../redux/actions/creators/loadCart';
 import addToCart from '../redux/actions/creators/addToCart';
 
+import('../styles/Cart.scss');
+
 export default function Cart() {
   const carts = useSelector((store) => store.carts);
   const dispatch = useDispatch();
@@ -30,13 +32,13 @@ export default function Cart() {
     return newProduct;
   }
   return (
-    <>
+    <section className="cart">
       <h2>Cart:</h2>
-      <ul>
+      <ul className="cart__list">
         {carts.map((currentCart) => currentCart.products?.map(
           ({ product, amount }) => (
 
-            <li key={product?.model}>
+            <li key={product?.model} className="cart__item">
               {product?.model}
               {' '}
               <span>
@@ -52,6 +54,6 @@ export default function Cart() {
           )
         ))}
       </ul>
-    </>
+    </section>
   );
 }
