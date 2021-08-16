@@ -4,7 +4,6 @@ import actionTypes from './actionTypes';
 export function loadProducts() {
   return async (dispatch) => {
     const { data } = await axios.get('/api/products');
-
     dispatch({
       type: actionTypes.LOAD_PRODUCTS,
       data
@@ -22,12 +21,28 @@ export function loadCartItems(user) {
   };
 }
 
-export function buyProducts(cartData) {
+export function addCartItems(cartId, newCartItem) {
+  // // eslint-disable-next-line no-debugger
+  // debugger;
   return async (dispatch) => {
-    const { data } = await axios.post('/api/cart', cartData);
+    const { data } = await axios.put(`/api/cart/${cartId}`, newCartItem);
     dispatch({
-      type: actionTypes.BUY_PRODUCTS,
+      type: actionTypes.ADD_ITEMS,
       data
     });
+    // dispatch({
+    //   type: actionTypes.LOAD_ITEMS,
+    //   data
+    // });
   };
 }
+
+// export function buyProducts(cartData) {
+//   return async (dispatch) => {
+//     const { data } = await axios.post('/api/cart', cartData);
+//     dispatch({
+//       type: actionTypes.BUY_PRODUCTS,
+//       data
+//     });
+//   };
+// }

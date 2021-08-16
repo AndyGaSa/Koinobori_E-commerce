@@ -6,6 +6,9 @@ export default function itemsReducer(items = [], action) {
     case actionTypes.LOAD_ITEMS:
       newItems = action.data;
       break;
+    case actionTypes.ADD_ITEMS:
+      newItems = action.data;
+      break;
     default:
       break;
   }

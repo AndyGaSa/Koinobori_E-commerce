@@ -35,6 +35,16 @@ export default function Cart() {
           </li>
         ))}
       </ul>
+      <div className="summary">
+        <div className="summary__price">
+          <span className="summary__text">Total Price:</span>
+          <span className="summary__text-value">20€</span>
+        </div>
+        <div className="summary__actions">
+          <button className="summary__pay-action" type="button">Pay</button>
+          <button className="summary__delete-action" type="button">Delete All</button>
+        </div>
+      </div>
     </aside>
   );
 }
