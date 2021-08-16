@@ -1,0 +1,33 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .listElement{
+        width:40vw;
+        height:30vh;
+        display: flex;
+        flex-direction: row;
+        padding: 6px;
+        margin:5px;
+        background-color:#99d98c;
+        border-radius:8px;
+        .listElement__img{
+            width:23vw;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        .data{
+            display:flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center ;
+        }
+    }
+}
