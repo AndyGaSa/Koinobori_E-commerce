@@ -1,5 +1,6 @@
 import axios from 'axios';
 import actionTypes from '../types/cart';
+import loadProducts from './products';
 
 export default function addToCart(product) {
   return async (dispatch) => {
@@ -9,5 +10,6 @@ export default function addToCart(product) {
       type: actionTypes.LOAD_CART,
       cart: data
     });
+    dispatch(loadProducts());
   };
 }
