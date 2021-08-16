@@ -4,11 +4,7 @@ const favSitesController = require('../controllers/favSitesController');
 const favSitesRouter = express.Router();
 
 favSitesRouter
-  .route('/')
-  .get(favSitesController.getUserFavs);
-
-favSitesRouter
-  .route('/:favid')
+  .route('/:userid')
   .all(favSitesController.checkFavSites)
   .post(favSitesController.addFavSite)
   .put(favSitesController.updateFavSite)
