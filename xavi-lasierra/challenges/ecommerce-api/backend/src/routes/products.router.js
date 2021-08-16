@@ -8,7 +8,7 @@ const {
 const productsRouter = Router();
 
 productsRouter
-  .rounte('/random')
+  .route('/random')
   .get(getRandomProduct);
 
 productsRouter
