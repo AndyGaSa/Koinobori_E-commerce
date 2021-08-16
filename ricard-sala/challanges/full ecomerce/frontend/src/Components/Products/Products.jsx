@@ -1,3 +1,4 @@
+import { element } from 'prop-types';
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import actionTypes from '../../redux/actions/actionTypes';
@@ -37,7 +38,7 @@ export default function Products() {
                 {e.stock}
               </span>
             </div>
-            <button type="button" onClick={() => reduxCartList(e)} className="add-cart">ADD</button>
+            <button type="button" onClick={() => reduxCartList(element)} className="add-cart">ADD</button>
           </div>
         </div>
       ))}

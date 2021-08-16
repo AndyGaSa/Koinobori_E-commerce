@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import actionTypes from '../../redux/actions/actionTypes';
 import './styles.scss';
 
 export default function Cart() {
@@ -8,6 +9,11 @@ export default function Cart() {
   useEffect(() => {
     setProductsToCart(cartRedux);
   }, [cartRedux]);
+  const reduxCartList=(product)=>{
+    dispatchEvent({
+      type:actionTypes.
+    })
+  }
   return (
     <div className="cart">
       <h3 className="cart__user">riki CART</h3>
@@ -19,7 +25,14 @@ export default function Cart() {
               <span className="cart-name">{element.name}</span>
               <span className="cart-price">{element.price}</span>
             </div>
-            <button className="delete-button" type="button">X</button>
+            <button
+              className="delete-button"
+              type="button"
+              onClick={() => reduxDeleteProduct(element)}
+            >
+              X
+
+            </button>
           </div>
         )) }
       </div>
