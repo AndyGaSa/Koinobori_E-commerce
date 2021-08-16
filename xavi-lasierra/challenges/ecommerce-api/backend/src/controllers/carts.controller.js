@@ -51,26 +51,29 @@ async function updateCartByUserId({ params: { userId }, body }, res) {
   }
 }
 
-function stockCheck(paidProduct) {
-  return Product.findOneAndUpdate(
-    { _id: paidProduct.product, stock: { $gte: paidProduct.amount } },
-    { $inc: { stock: -paidProduct.amount } },
-    { new: true }
-  );
+async function stockCheck(products, res) {
+  const notBoughtProducts = [];
+  await products.forEach(async (paidProduct) => {
+    const product = await Product.findOneAndUpdate(
+      { _id: paidProduct.product, stock: { $gte: paidProduct.amount } },
+      { $inc: { stock: -paidProduct.amount } },
+      { new: true }
+    );
+    if (!product) {
+      notBoughtProducts.push(paidProduct);
+      res.status(400);
+    }
+  });
+  return notBoughtProducts;
 }
 
 async function payCart({ params: { userId }, body }, res) {
   try {
+    const notBoughtProducts = await stockCheck(body, res);
     const newCart = await Cart.findOneAndUpdate({ user: userId },
-      { products: [] },
+      { products: notBoughtProducts },
       { new: true }).populate('products.product');
-    await body.forEach(async (paidProduct) => {
-      const product = await stockCheck(paidProduct);
-      if (product) {
-        res.status(400);
-      }
-    });
-    await res.json(newCart);
+    res.json(newCart);
   } catch (error) {
     res.status(500);
     res.send(error);

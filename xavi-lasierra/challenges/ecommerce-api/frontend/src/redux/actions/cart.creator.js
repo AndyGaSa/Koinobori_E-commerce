@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import actionTypes from './cart.actions';
+import getProducts from './products.creator';
 
 export function getCart(userId) {
   return async (dispatch) => {
@@ -31,7 +32,7 @@ export function saveCart({ user, products }) {
   return async (dispatch) => {
     const { data } = await axios.put(`/api/carts/${user}`, products);
     dispatch({
-      type: actionTypes.SUBMIT_CART,
+      type: actionTypes.SAVE_CART,
       data
     });
   };
@@ -50,5 +51,7 @@ export function submitCart({ user, products }) {
       type: actionTypes.SAVE_CART,
       data
     });
+
+    dispatch(getProducts());
   };
 }
