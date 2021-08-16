@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import loadProducts from '../redux/actions/actionCreator';
+import { loadProducts } from '../redux/actions/actionCreator';
 
 export default function Products() {
   const products = useSelector((store) => store.products);
@@ -12,7 +12,11 @@ export default function Products() {
 
   return (
     <ul>
-      {products.map((product) => <li key={product.name}>{product.name}</li>)}
+      {products.map((product) => (
+        <li key={product.name}>
+          {product.name}
+        </li>
+      ))}
     </ul>
   );
 }
