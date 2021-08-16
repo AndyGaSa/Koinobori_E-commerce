@@ -1,0 +1,41 @@
+
+
+
+h2{
+    width: fit-content;
+    margin: 30px auto;
+    font-size: 24px;
+    font-weight: 700;
+    color: #DB4848;
+}
+
+.cart__list{
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    background-color: #bdbdbd;
+
+
+    .cart__item{
+        list-style: none;
+        padding: 10px;
+        margin: 10px;
+        flex-direction: row;
+        background-color: #dadada;
+        position: relative;
+        button{
+            width: 20px;
+            border-radius: 50%;
+            flex-direction: row;
+            background-color: #DB4848;
+            position: relative;
+            color: white;
+            border: #da8484 2px solid;
+
+        }
+        span{
+            position: absolute;
+            right: 10px;
+        }
+    }
+}
