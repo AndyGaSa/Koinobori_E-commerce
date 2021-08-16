@@ -9,6 +9,10 @@ body {
     }
 }
 
+.hide-element {
+    display: none;
+}
+
 @media screen and (min-width: 720px) {
     body {    
         #root {

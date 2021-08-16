@@ -24,26 +24,29 @@ function Products({ user }) {
   }, []);
 
   return (
-    <ul className="products">
-      { allProducts.map((product) => (
-        <li className="products__product" key={`${product.name}-shoe`}>
-          <img className="product__image" src={product.img} alt={product.name} />
-          <div className="product__information">
-            <h3 className="product__name">{product.name}</h3>
-            <span className="product__stock">
-              {product.stock}
-              {' '}
-              available
+    <>
+      <h2 className="hide-element">Shoes</h2>
+      <ul className="products">
+        { allProducts.map((product) => (
+          <li className="products__product" key={`${product.name}-shoe`}>
+            <img className="product__image" src={product.img} alt={product.name} />
+            <div className="product__information">
+              <h3 className="product__name">{product.name}</h3>
+              <span className="product__stock">
+                {product.stock}
+                {' '}
+                available
+              </span>
+            </div>
+            <span className="product__price">
+              {product.price}
+              €
             </span>
-          </div>
-          <span className="product__price">
-            {product.price}
-            €
-          </span>
-          <button className="product__add-button" type="button" aria-label="Add" onClick={() => addToCart(product)}><FontAwesomeIcon icon={faPlusSquare} /></button>
-        </li>
-      ))}
-    </ul>
+            <button className="product__add-button" type="button" aria-label="Add" onClick={() => addToCart(product)}><FontAwesomeIcon icon={faPlusSquare} /></button>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 
