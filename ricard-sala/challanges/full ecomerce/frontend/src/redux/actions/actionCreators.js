@@ -11,6 +11,15 @@ export function loadProducts() {
     });
   };
 }
+export function addToCart() {
+  return async (dispatch) => {
+    const { data } = await axios.get('/api/products');
+    dispatch({
+      type: actionTypes.ADD_TO_CART,
+      data,
+    });
+  };
+}
 
 const setUserToStore = (data) => ({
   type: actionTypes.LOAD_PRODUCTS,
