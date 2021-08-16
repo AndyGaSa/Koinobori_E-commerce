@@ -1,0 +1,31 @@
+.cards {
+    display: flex;
+
+    /* Put a card in the next row when previous cards take all width */
+    flex-wrap: wrap;
+
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.cards__item {
+    /* There will be 4 cards per row */
+    flex-basis: 25%;
+
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__cover img {
+    height: 150px;
+}
+
+.card__content {
+    /* Take available height */
+    flex: 1;
+}
