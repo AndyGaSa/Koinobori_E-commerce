@@ -3,6 +3,7 @@ require('dotenv').config();
 const debug = require('debug')('ecomerces');
 const chalk = require('chalk');
 const morgan = require('morgan');
+const cors = require('cors');
 
 require('./src/config/mongooseConfig');
 
@@ -11,6 +12,7 @@ const port = process.env.PORT || 5002;
 
 server.use(morgan('dev'));
 server.use(express.json());
+server.use(cors());
 
 const cartRouter = require('./src/routers/cartRouter');
 const articleRouter = require('./src/routers/articleRouter');

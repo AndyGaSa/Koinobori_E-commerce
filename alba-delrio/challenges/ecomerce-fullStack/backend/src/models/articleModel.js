@@ -5,6 +5,7 @@ const articleSchema = Schema({
   name: String,
   price: Number,
   currency: String,
+  img: String,
   stock: Number
 
 });
