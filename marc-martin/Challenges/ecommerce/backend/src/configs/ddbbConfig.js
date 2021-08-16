@@ -1,5 +1,6 @@
 const { connect } = require('mongoose');
 const debug = require('debug')('ecommerce-server:ddbbConfig');
+const chalk = require('chalk');
 
 connect(
   process.env.DDBB_URL,
@@ -9,6 +10,6 @@ connect(
   }
 )
   .then(
-    () => debug('Connection established'),
-    (error) => debug(error)
+    () => debug(`${chalk.bgGreen('Connection established')}`),
+    (error) => debug(`${chalk.bgRed(error)}`)
   );
