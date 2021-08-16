@@ -13,19 +13,34 @@ h1{
     grid-template-columns: repeat(2, 50%);
     gap: 10px 5% ;
     width: 80%;
-    height: fit-content;
+    height: 100%;
     margin: 30px auto 15px;
     li{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        flex-wrap: nowrap;
+     
     }
     button{
         background-color: #DB4848;
         color: white;
         border: #da8484 2px solid;
     }
+    
+}
+
+.products__sold-out{
+    width: fit-content;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff2424;
+    padding: 5px 15px;
+    border: #ff2424 5px solid;
+    border-radius: 5px;
+    margin: -50% auto;
+    transform: rotate(-45deg);
 }
 
 @media screen and (max-width:480px) {

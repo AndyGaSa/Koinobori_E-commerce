@@ -31,17 +31,17 @@ export default function FunkoList() {
       <ul className="products__list">
         {availableProducts.map((product) => (
           <li key={`${product._id}`}>
-            <img src={product.img} alt="" />
+            <img className="products__image" src={product.img} alt="" />
             {`${product.model}`}
             <span>{`${product.price}€`}</span>
             {product.stock === 0
-              ? <span>Sold Out</span>
+              ? <span className="products__sold-out">Sold Out</span>
               : (
                 <>
                   <span>
                     {` Stock: ${product.stock}`}
                   </span>
-                  <button type="button" onClick={() => dispatch(addToCart(destructureProduct(product)))}>Add</button>
+                  <button className="product__button-add" type="button" onClick={() => dispatch(addToCart(destructureProduct(product)))}>Add</button>
                 </>
               )}
           </li>
