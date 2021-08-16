@@ -40,6 +40,7 @@
 
 .app-body {
   display: flex;
+  justify-content: center;
 }
 
 .app-header__sub-title {
@@ -52,4 +53,11 @@
   margin-bottom: 40px;
   position: relative;
   z-index: 2;
+}
+
+@media (max-width: 925px) {
+  .app-body {
+    flex-direction: column;
+    align-items: center;
+  }
 }

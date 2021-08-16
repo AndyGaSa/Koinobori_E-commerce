@@ -26,19 +26,32 @@ export default function Products() {
             <h2 className="product-name">
               {product.name}
             </h2>
-            <div className="product-main">
-              <div className="product-content">
-                <figure className="product-figure-container">
-                  <img src={product.image} alt="Caramelos Paco" className="product-figure-container__image" />
+            <div className="product-container">
+              <div className="product-container__content">
+                <figure className="product-container__figure">
+                  <img src={product.image} alt="Caramelos Paco" className="product-container__figure--image" />
                 </figure>
                 <article className="product-information">
                   <p className="product-information__price">
-                    Price:
+                    <span>
+                      Precio:
+                    </span>
                     {' '}
                     {product.price}
                     {product.currency}
+                    {' '}
+                    Ud.
                   </p>
-                  <p className="product-information__description">{product.description}</p>
+                  <p className="product-information__description">
+                    {product.description}
+                  </p>
+                  <p className="product-information__stock">
+                    Stock:
+                    {' '}
+                    {product.stock}
+                    {' '}
+                    Uds.
+                  </p>
                 </article>
               </div>
               <button

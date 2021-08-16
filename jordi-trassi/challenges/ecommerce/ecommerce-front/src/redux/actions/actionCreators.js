@@ -34,3 +34,21 @@ export function addToCart(product, amount = 1) {
     },
   };
 }
+
+export function payProducts(cart) {
+  return async (dispatch) => {
+    try {
+      const { data: products } = await axios.post(process.env.REACT_APP_CART_ENDPOINT, cart);
+      dispatch({
+        type: actionTypes.PAY_PRODUCTS,
+        products,
+      });
+    } catch (error) {
+      dispatch({
+        type: actionTypes.PRODUCT_API_ERROR,
+        products: [],
+        error: error.message,
+      });
+    }
+  };
+}

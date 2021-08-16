@@ -11,8 +11,9 @@
     border-radius: 10px;
     width: 35%;
     height: auto;
-    background-color: rgba(253, 143, 143, 0.822);
+    background-color: rgba(255, 168, 168, 0.822);
     box-shadow: 2px 2px rgb(168, 167, 167);
+    align-items: center;
 }
 
 h2 {
@@ -21,6 +22,47 @@ h2 {
     font-size: 30px;
 }
 
+
+td {
+    text-shadow: 1px 1px rgba(251, 250, 250, 0.822);
+    text-align: left;
+    color: rgb(39, 39, 39);
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.cart-product__btn-delete{
+    border: solid 2px black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 900;
+    color: white;
+    background-color: purple;
+}
+
+.cart-product__btn-delete:active {
+    background-color: rgba(255, 168, 168, 0.822)
+}
+
+
+.cart-product__list {
+    margin-top: 30px;
+}
+.cart-products__total{
+    margin-top: 30px;
+    font-size: 20px;
+    
+}
+
+.cart-products__total span{
+    color: white;
+    text-shadow: 1px 1px rgb(168, 167, 167);
+    font-weight: 800;
+} 
+
 .btn-pagar {
     cursor: pointer;
     font-weight: 800;
@@ -28,6 +70,13 @@ h2 {
     width: 10vw;
     height: 30px;
     margin-left: 5px;
-    margin-top: 50px;
-    background-color:rgb(255, 106, 47);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    background-color:rgb(253, 120, 68);
+}
+
+@media (max-width: 925px) {
+    .cart-body {
+        width: 95%;
+    }
 }

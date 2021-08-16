@@ -1,27 +1,62 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadCarts } from '../redux/actions/actionCreators';
+import { payProducts } from '../redux/actions/actionCreators';
+
 import './Cart.css';
 
-export default function Carts() {
-  const carts = useSelector((store) => store.carts);
+export default function Cart() {
+  const cart = useSelector((store) => store.cart);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(loadCarts());
-  }, []);
+  function handlePay() {
+    dispatch(payProducts(cart));
+  }
 
   return (
+
     <section className="cart-body">
-      <ul>
-        {carts.map(({
-          _id,
-        }) => (
-          <li key={_id}>nuevo cart</li>
-        ))}
-      </ul>
-      <h2>Su lista de productos:</h2>
-      <button type="button" className="btn-pagar">Pagar</button>
+      <h2>Su cesta de caramelos:</h2>
+      <div className="cart-product__list">
+        {
+        !!cart.items.length && (
+          cart?.items?.map((item) => (
+            <tr className="cart-product">
+              <td key={item.neme}>
+                {item.name}
+              </td>
+              <td>
+                {item.price}
+                €/Ud.
+              </td>
+              <td>
+                {item.amount}
+              </td>
+              <td>
+                <button
+                  type="button"
+                  className="cart-product__btn-delete"
+                  // onClick={handleDelete}
+                >
+                  X
+                </button>
+              </td>
+            </tr>
+          ))
+        )
+        }
+      </div>
+      <p className="cart-products__total">
+        <span>Total: </span>
+        {cart?.totalPrice}
+        {' '}
+        €
+      </p>
+      <button
+        type="button"
+        className="btn-pagar"
+        onClick={handlePay}
+      >
+        Pagar
+      </button>
     </section>
 
   );
