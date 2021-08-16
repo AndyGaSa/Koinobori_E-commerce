@@ -1,0 +1,41 @@
+@import '../../styles/extensions', '../../styles/variables';
+
+.recomendation {
+    font-family: $main-font;
+    background-color: $main-light-color;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.1rem;
+    box-shadow: 4px 4px 5px $main-dark-color;
+    height: 20rem;
+    transition: .2s;
+
+    .recomendation__title {
+        padding: 0.5rem;
+    }
+
+    .recomendation__product {
+        @extend %row-between-flex;
+        align-items: flex-start;
+
+        .product__main-information {
+            .product__name {
+
+            }
+
+            .product__price {
+
+            }
+        }
+
+        .product__image {
+
+        }
+
+        .product__buttons {
+            button{
+                
+            }
+        }
+    }
+}
