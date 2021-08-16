@@ -1,7 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadProducts, buyProducts } from '../redux/actions/actionCreators';
+import { loadProducts, addToCart } from '../redux/actions/actionCreators';
+
 import './Products.css';
 
 export default function Products() {
@@ -12,41 +13,39 @@ export default function Products() {
     dispatch(loadProducts());
   }, []);
 
+  function handleAddClick(product) {
+    dispatch(addToCart(product));
+  }
+
   return (
     <section className="products-list">
       <h1>Todos Los Productos:</h1>
       <ul>
-        {products.map(({
-          _id,
-          name,
-          price,
-          image,
-          currency,
-          description,
-        }) => (
-          <li key={name}>
+        {products.map((product) => (
+          <li key={product.name}>
             <h2 className="product-name">
-              {name}
+              {product.name}
             </h2>
             <div className="product-main">
               <div className="product-content">
                 <figure className="product-figure-container">
-                  <img src={image} alt="Caramelos Paco" className="product-figure-container__image" />
+                  <img src={product.image} alt="Caramelos Paco" className="product-figure-container__image" />
                 </figure>
                 <article className="product-information">
                   <p className="product-information__price">
                     Price:
                     {' '}
-                    {price}
-                    {currency}
+                    {product.price}
+                    {product.currency}
                   </p>
-                  <p className="product-information__description">{description}</p>
+                  <p className="product-information__description">{product.description}</p>
                 </article>
               </div>
               <button
                 type="button"
                 className="btn-comprar"
-                onClick={() => dispatch(buyProducts(_id))}
+                disabled={product.stock < 1}
+                onClick={() => handleAddClick(product)}
               >
                 Comprar
               </button>
