@@ -17,28 +17,36 @@ export default function Products() {
 
     <div className="product-card__container">
 
-      {products.map((e) => (
+      {products.map((elements) => (
         <div className="product-card__container-item">
           <div className="product-card-img">
-            <img src={e.img} alt="imagen" />
+            <img src={elements.img} alt="imagen" />
           </div>
           <div className="product-card-info">
             <div>
-              <li>{e.name}</li>
+              <li>{elements.name}</li>
             </div>
             <div>
               <span className="product-card-price">
                 price:
-                {e.price}
+                {elements.price}
               </span>
             </div>
             <div>
               <span className="product-card-stock">
                 stock
-                {e.stock}
+                {elements.stock}
               </span>
             </div>
-            <button type="button" onClick={() => reduxCartList(element)} className="add-cart">ADD</button>
+            <button
+              type="button"
+              onClick={() => reduxCartList(elements)}
+              className="add-cart"
+              disabled={element.stock < 1}
+            >
+              ADD
+
+            </button>
           </div>
         </div>
       ))}
