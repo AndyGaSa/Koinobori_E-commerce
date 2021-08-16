@@ -12,8 +12,23 @@ export function loadProducts() {
   };
 }
 
-export function addItemToCart(id) {
-  const { data } = await axios.post('api/cart', { products.product: id})
+export async function addItemToCart(productId) {
+  const newData = {
+    user: '6117c1ba4d74be32e81acbd7',
+    products: [
+      {
+        product: productId,
+        amount: 1
+      }
+    ]
+  };
+  const res = await axios.post('api/cart', newData);
+  console.log(res);
+}
+
+export async function deleteItemToCart(cartId) {
+  const res = await axios.delete(`api/cart/${cartId}`);
+  console.log(res);
 }
 
 export function loadCart() {

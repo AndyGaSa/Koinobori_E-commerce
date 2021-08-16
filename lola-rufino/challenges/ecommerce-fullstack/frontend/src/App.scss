@@ -9,10 +9,13 @@
         flex-direction: column;
         align-items: center;
         font-family: 'Stylish', sans-serif;
-        height: 120vh;
+        height: 100%;
         .main__title{
             font-size: 60px;
             padding-top: 30px;
+            .main__image{
+                max-height: 50px;
+            }
         }
         .main__container{
             padding: 30px;

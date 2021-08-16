@@ -1,9 +1,15 @@
 .list__container{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    align-items: center;
     margin: 10px;
     .list__item{
         padding: 5px;
+        .list__image{
+            border: 3px dashed #E34A6F;
+            border-radius: 5px;
+            max-height: 100px;
+        }
         .list__button{
             font-family: 'Stylish', sans-serif;
             font-size: 15px;

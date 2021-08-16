@@ -25,7 +25,19 @@ const createOneCart = async ({ body }, res) => {
   }
 };
 
+const deleteOneCartById = async (req, res) => {
+  const { cartId } = req.params;
+  try {
+    const deletedCart = await Cart.findByIdAndDelete(cartId);
+    res.json(deletedCart);
+  } catch (error) {
+    res.status(418);
+    res.send("Couldn't delete a cart");
+  }
+};
+
 module.exports = {
   getAllCarts,
-  createOneCart
+  createOneCart,
+  deleteOneCartById
 };
