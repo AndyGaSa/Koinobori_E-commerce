@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 const FavSites = require('../models/favSitesModel');
 
 const checkFavSites = async (req, res, next) => {
