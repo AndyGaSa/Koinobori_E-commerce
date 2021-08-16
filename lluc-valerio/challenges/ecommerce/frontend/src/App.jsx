@@ -13,7 +13,7 @@ function App() {
   return (
     <Provider store={configureStore()}>
       <Header />
-      <main className="ecommerce">
+      <main data-testid="ecommerce" className="ecommerce">
         <ProductList />
         <Cart />
       </main>
