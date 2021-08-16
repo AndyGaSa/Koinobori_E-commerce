@@ -7,7 +7,10 @@ export default function productsReducers(products = [], action) {
       newProducts = action.data;
 
       break;
+      // case: actionTypes.ADD_TO_CART;
+      // nextProducts=products.map(product=>{
 
+      // })
     default:
       break;
   }
