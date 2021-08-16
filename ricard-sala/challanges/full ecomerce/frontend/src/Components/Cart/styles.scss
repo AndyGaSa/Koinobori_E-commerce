@@ -11,6 +11,29 @@
 }
 .cart__products{
     display: flex;
+    flex-direction: column;
+}
+.cart-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.cart-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.cart-name{
+    margin: 30px;
+}
+.cart-price{
+    margin: 30px;
+}
+.cart-img{
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
 }
 .button-cart{
 display: flex;
@@ -19,4 +42,10 @@ border-style:solid;
 border-color:#eefd1f ;
 color: #eefd1f;
 margin: 35px;
+}
+.delete-button{
+color: #eefd1f;
+border-color:#eefd1f ;
+height: 30px;
+width: 30px;
 }
