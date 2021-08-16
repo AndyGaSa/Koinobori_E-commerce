@@ -19,7 +19,7 @@ export default function AtriclesList() {
         <li className="listElement" key={article.name}>
           <img className="listElement__img" src={article.img} alt="árandanos" />
           <div className="data">
-            <p>
+            <p data-testid={`article-name-${article .name}`}>
               {article.name}
             </p>
             <span>

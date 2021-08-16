@@ -12,8 +12,10 @@ function App() {
     <>
       <Provider store={configureStore()}>
         <Header />
-        <AtriclesList />
-        <Cart />
+        <div className="main">
+          <AtriclesList className="articleList" />
+          <Cart className="cart" />
+        </div>
       </Provider>
     </>
   );
