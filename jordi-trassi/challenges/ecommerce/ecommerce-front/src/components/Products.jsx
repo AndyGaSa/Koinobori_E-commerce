@@ -43,7 +43,11 @@ export default function Products() {
                   <p className="product-information__description">{description}</p>
                 </article>
               </div>
-              <button type="button" className="btn-comprar" onClick={() => dispatch(buyProducts(_id))}>
+              <button
+                type="button"
+                className="btn-comprar"
+                onClick={() => dispatch(buyProducts(_id))}
+              >
                 Comprar
               </button>
             </div>
