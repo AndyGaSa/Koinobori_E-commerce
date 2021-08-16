@@ -20,7 +20,18 @@ async function createProduct({ body }, res) {
   }
 }
 
+async function getRandomProduct({ query }, res) {
+  try {
+    const randomProduct = await Product.aggregate().match(query).sample(1);
+    return res.json(randomProduct);
+  } catch (error) {
+    res.status(500);
+    return res.send(error);
+  }
+}
+
 module.exports = {
   getAllProducts,
-  createProduct
+  createProduct,
+  getRandomProduct
 };

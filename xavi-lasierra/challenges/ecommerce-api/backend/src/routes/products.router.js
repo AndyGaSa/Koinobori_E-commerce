@@ -1,10 +1,15 @@
 const { Router } = require('express');
 const {
   getAllProducts,
-  createProduct
+  createProduct,
+  getRandomProduct
 } = require('../controllers/products.controller');
 
 const productsRouter = Router();
+
+productsRouter
+  .rounte('/random')
+  .get(getRandomProduct);
 
 productsRouter
   .route('/')
