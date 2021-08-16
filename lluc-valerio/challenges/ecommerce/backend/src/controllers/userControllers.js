@@ -1,4 +1,4 @@
-const debug = require('debug')('storeApi:userController');
+const debug = require('debug')('ecommerce:userController');
 const User = require('../models/userModel');
 
 async function getUsers(req, res) {

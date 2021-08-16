@@ -1,4 +1,4 @@
-const debug = require('debug')('storeApi:productController');
+const debug = require('debug')('ecommerce:productController');
 const Product = require('../models/productModel');
 
 async function getProducts(req, res) {

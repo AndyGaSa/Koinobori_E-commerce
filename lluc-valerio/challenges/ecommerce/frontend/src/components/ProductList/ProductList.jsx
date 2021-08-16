@@ -14,15 +14,15 @@ export default function ProductList() {
     dispatch(loadProducts());
   }, []);
 
-  function addItem(product) {
+  async function addItem(product) {
     const newCartItem = {
       products: {
         // eslint-disable-next-line no-underscore-dangle
         product: product._id,
-        amount: '1'
+        amount: 1
       }
     };
-    dispatch(addCartItems('61146a4a814bd28b7cd95bf2', newCartItem));
+    await dispatch(addCartItems('61146a4a814bd28b7cd95bf2', newCartItem));
     dispatch(loadProducts());
   }
 

@@ -1,4 +1,4 @@
-const debug = require('debug')('storeApi:cartController');
+const debug = require('debug')('ecommerce:cartController');
 const Cart = require('../models/cartModel');
 const Product = require('./productControllers');
 
@@ -18,7 +18,8 @@ async function getCarts(req, res) {
         .populate('products.product');
     }
     res.status(200);
-    return res.json(allCarts);
+
+    return res.json(allCarts[0]);
   } catch (error) {
     res.status(500);
     return res.send(`An error occurred while getting data: ${error}`);
@@ -80,24 +81,43 @@ async function addProductToCart(req, res) {
       const stockUpdated = await Product.updateStock(productId, amountToBuy);
       if (stockUpdated) {
         const currentCart = await Cart.findById(cartId);
+
+        debug('******currentCart**********');
         debug(currentCart);
-        debug(currentCart.products);
-        debug(currentCart.products[1]);
-        const productIndex = currentCart.products.findIndex((item) => item.product === productId);
-        debug(`productIndex: ${productIndex}`);
+
+        const prodIdString = productId.toString();
+        const productIndex = currentCart.products.findIndex((item) => {
+          const itemProductString = (item.product).toString();
+          return itemProductString === prodIdString;
+        });
+
+        // debug(`productIndex: ${productIndex}`);
         if (productIndex < 0) {
           debug('no product');
-          updatedCart = await Cart.findByIdAndUpdate(cartId, { $push: req.body }, { new: true });
+          updatedCart = await Cart.findByIdAndUpdate(cartId, { $push: req.body }, { new: true })
+            .populate('name')
+            .populate('products.product');
         } else {
           debug('product');
-          updatedCart = await Cart.findByIdAndUpdate(
-            cartId,
-            { $inc: { 'products.$[productIndex].amount': +req.body.amount } },
-            { arrayFilters: [{ productIndex }], multi: true },
-            { new: true }
-          );
-        }
 
+          debug(productIndex);
+          currentCart.products[productIndex].amount += amountToBuy;
+
+          debug('******currentCart:AFTER**********');
+          debug(currentCart);
+
+          updatedCart = await Cart.findByIdAndUpdate(cartId, currentCart, { new: true })
+            .populate('name')
+            .populate('products.product');
+
+          //   updatedCart = await Cart.findByIdAndUpdate(
+          //     cartId,
+          //     { $inc: { 'products.products.$[productIndex].amount': amountToBuy } },
+          //     { arrayFilters: [{ productIndex }], multi: true, new: true }
+          //   )
+          //     .populate('name')
+          //     .populate('products.product');
+        }
         res.status(200);
       } else {
         res.status(500);

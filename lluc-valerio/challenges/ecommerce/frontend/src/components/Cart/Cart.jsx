@@ -17,7 +17,7 @@ export default function Cart() {
     <aside className="cart">
       <h2 className="cart__title">CART</h2>
       <ul className="cart__items">
-        {items[0]?.products?.map((item) => (
+        {items.products?.map((item) => (
           <li key={item.product.name}>
             <div className="cart-item">
               <span className="cart-item__name">{item.product.name}</span>
