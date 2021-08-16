@@ -3,38 +3,75 @@
 .recomendation {
     font-family: $main-font;
     background-color: $main-light-color;
-    margin-bottom: 2rem;
     padding: 0.5rem;
     border-radius: 0.1rem;
     box-shadow: 4px 4px 5px $main-dark-color;
     height: 20rem;
+    min-width: 450px;
+    max-width: 550px;
+    margin: auto;
+    margin-bottom: 2rem;
     transition: .2s;
 
     .recomendation__title {
         padding: 0.5rem;
+        font-size: 1.25rem;
+        width: 100%;
+        border-bottom: 1px solid $secondary-text-color;
     }
 
     .recomendation__product {
         @extend %row-between-flex;
-        align-items: flex-start;
 
         .product__main-information {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 16rem;
+
             .product__name {
+                font-size: 1.9rem;
 
+                .product__price {
+                    font-size: 1.5rem;
+                    color: $secondary-text-color;
+                    margin-left: 1rem;
+                }
             }
 
-            .product__price {
-
+            .product__image {
+                @extend %large-image;
             }
         }
 
-        .product__image {
 
-        }
 
         .product__buttons {
+            display: flex;
+            flex-direction: column;
+
             button{
-                
+                font-weight: bold;
+                font-size: 0.75rem;
+                padding: 0.25rem 0.5rem;
+                background-color: transparent;
+                border: 3px solid $main-dark-color;
+                border-radius: 2px;
+                color: $main-dark-color;
+                box-shadow: 2px 2px 3px $main-dark-color;
+                margin: 0.5rem;
+                transition: .2s;
+            
+                &:hover {
+                    background-color: $main-dark-color;
+                    border: 3px solid $main-dark-color;
+                    color: $main-light-color;
+                }
+            
+                &:active {
+                    box-shadow: none;
+                }
             }
         }
     }

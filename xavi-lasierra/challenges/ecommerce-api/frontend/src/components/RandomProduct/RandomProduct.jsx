@@ -29,13 +29,16 @@ function RandomProduct({ user }) {
           <h2 className="recomendation__title">Our recomendation:</h2>
           <div className="recomendation__product">
             <div className="product__main-information">
-              <h3 className="product__name">{randomProduct.name}</h3>
-              <span className="product__price">
-                {randomProduct.price}
-                €
-              </span>
+              <h3 className="product__name">
+                {randomProduct.name}
+                {' '}
+                <span className="product__price">
+                  {randomProduct.price}
+                  €
+                </span>
+              </h3>
+              <img className="product__image" src={randomProduct.img} alt={randomProduct.name} />
             </div>
-            <img className="product__image" src={randomProduct.img} alt={randomProduct.name} />
             <div className="product__buttons">
               <button type="button" onClick={() => addToCart(randomProduct)}>Add to cart</button>
               <button type="button" onClick={() => dispatch(getRandomProduct())}>Another recomendation</button>
