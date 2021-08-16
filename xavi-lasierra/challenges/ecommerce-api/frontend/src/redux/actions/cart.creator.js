@@ -52,6 +52,6 @@ export function submitCart({ user, products }) {
       data
     });
 
-    dispatch(getProducts());
+    getProducts()(dispatch);
   };
 }

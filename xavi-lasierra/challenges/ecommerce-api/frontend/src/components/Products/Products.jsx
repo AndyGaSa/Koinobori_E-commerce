@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import propTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 
 import { addProductToCart } from '../../redux/actions/cart.creator';
+import getProducts from '../../redux/actions/products.creator';
 import './products.scss';
 
 function Products({ user }) {
@@ -17,6 +18,10 @@ function Products({ user }) {
       dispatch(addProductToCart(product));
     }
   }
+
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
 
   return (
     <ul className="products">

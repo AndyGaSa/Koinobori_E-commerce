@@ -9,7 +9,6 @@ import { faShoppingCart, faTrashAlt, faHeart } from '@fortawesome/free-solid-svg
 import {
   getCart, addProductToCart, substractProductFromCart, saveCart, clearCart, submitCart
 } from '../../redux/actions/cart.creator';
-import getProducts from '../../redux/actions/products.creator';
 import './cart.scss';
 
 function Cart({ user }) {
@@ -28,10 +27,6 @@ function Cart({ user }) {
     const newTotalPrice = cart.products
       .reduce((acc, { product, amount }) => acc + product.price * amount, 0);
     setTotalPrice(newTotalPrice);
-
-    if (cart.products.length === 0) {
-      dispatch(getProducts());
-    }
   }, [cart]);
 
   function openCloseCart() {

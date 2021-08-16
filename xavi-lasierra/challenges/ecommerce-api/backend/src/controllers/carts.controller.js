@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-await-in-loop */
 const Cart = require('../models/cart.model');
 const Product = require('../models/product.model');
 
@@ -51,25 +53,20 @@ async function updateCartByUserId({ params: { userId }, body }, res) {
   }
 }
 
-async function stockCheck(products, res) {
-  const notBoughtProducts = [];
-  await products.forEach(async (paidProduct) => {
-    const product = await Product.findOneAndUpdate(
-      { _id: paidProduct.product, stock: { $gte: paidProduct.amount } },
-      { $inc: { stock: -paidProduct.amount } },
-      { new: true }
-    );
-    if (!product) {
-      notBoughtProducts.push(paidProduct);
-      res.status(400);
-    }
-  });
-  return notBoughtProducts;
-}
-
 async function payCart({ params: { userId }, body }, res) {
   try {
-    const notBoughtProducts = await stockCheck(body, res);
+    const notBoughtProducts = [];
+    for (const paidProduct of body) {
+      const product = await Product.findOneAndUpdate(
+        { _id: paidProduct.product, stock: { $gte: paidProduct.amount } },
+        { $inc: { stock: -paidProduct.amount } },
+        { new: true }
+      );
+      if (!product) {
+        notBoughtProducts.push(paidProduct);
+      }
+    }
+
     const newCart = await Cart.findOneAndUpdate({ user: userId },
       { products: notBoughtProducts },
       { new: true }).populate('products.product');
