@@ -5,7 +5,9 @@ const Sites = require('../models/sitesModel');
 const FavList = require('../models/favSitesModel');
 
 const removeConcidences = (sites, { userSites }) => (
-  sites.filter((site) => userSites.filter((userSite) => userSite.site === site._id).length === 0)
+  sites.filter((site) => (
+    userSites.filter((userSite) => userSite.site.toString() === site._id.toString()).length === 0
+  ))
 );
 
 const findOrSetUser = async (req, res) => {
@@ -16,11 +18,9 @@ const findOrSetUser = async (req, res) => {
     ? (
       user = await User.create(req.body),
       await FavList.create({ user: user._id, favsites: [] })
-    ) : (
-      await FavList.findOne({ user: user[0]._id })
-    );
+    ) : await FavList.findOne({ user: user[0]._id });
 
-  sites = favList.length ? removeConcidences(sites, favList) : sites;
+  sites = favList.userSites.length ? removeConcidences(sites, favList) : sites;
 
   return res.send({ user, favList, sites });
 };
