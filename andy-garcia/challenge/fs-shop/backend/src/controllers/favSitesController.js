@@ -1,6 +1,4 @@
 /* eslint-disable no-underscore-dangle */
-/* eslint-disable no-shadow */
-const debug = require('debug')('fav:cont');
 const FavSites = require('../models/favSitesModel');
 
 const checkFavSites = async (req, res, next) => {
