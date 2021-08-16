@@ -1,9 +1,10 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-named-as-default-member */
+/* eslint-disable import/no-named-as-default */
 import { combineReducers } from 'redux';
-import productsReducer from './productsReducers';
-import cartsReducer from './cartsReducers';
+import products from './productsReducers';
+import cart from './cartReducer';
 
 export default combineReducers({
-  products: productsReducer,
-  carts: cartsReducer,
+  products,
+  cart,
 });
