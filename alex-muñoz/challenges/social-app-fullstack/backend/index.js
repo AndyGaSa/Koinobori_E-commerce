@@ -12,9 +12,9 @@ const port = process.env.PORT || 5000;
 server.use(morgan('dev'));
 server.use(express.json());
 
-const socialAppRouter = require('./src/routes/socialAppRouter');
+const userRouter = require('./src/routes/userRoutes');
 
-server.use('/api/social-app', socialAppRouter);
+server.use('/api/users', userRouter);
 
 server.listen(
   port,

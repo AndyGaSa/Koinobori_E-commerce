@@ -1,13 +1,13 @@
 const { model, Schema } = require('mongoose');
 
 const userSchema = new Schema({
-  picture: { type: Schema.Types.ObjectId, default: 'http://placehold.it/32x32' },
+  picture: { type: String, default: 'http://placehold.it/32x32' },
   age: Number,
   eyeColor: String,
   name: String,
   gender: String,
   about: String,
-  registered: Date,
+  registered: { type: Date, default: new Date() },
   tags: [String],
   friends: [{ type: Schema.Types.ObjectId, ref: 'User' }],
   adversaries: [{ type: Schema.Types.ObjectId, ref: 'User' }],
