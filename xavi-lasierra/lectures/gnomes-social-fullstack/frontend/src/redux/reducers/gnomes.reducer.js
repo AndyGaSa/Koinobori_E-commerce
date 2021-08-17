@@ -1,11 +1,11 @@
 import actionTypes from '../actions/gnomes.actions';
 
-function usersReducer(user = {}, action) {
-  let newUser = user;
+function gnomesReducer(gnomes = {}, action) {
+  let newGnomes = gnomes;
   if (action.type === actionTypes.LOAD_GNOMES) {
-    newUser = user;
+    newGnomes = gnomes;
   }
-  return newUser;
+  return newGnomes;
 }
 
-export default usersReducer;
+export default gnomesReducer;
