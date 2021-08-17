@@ -1,0 +1,17 @@
+@import '../../styles/variables', '../../styles/extensions';
+
+.profile {
+    @extend %row-between-flex;
+    margin-right: 0.5rem;
+
+    .profile__user-name {
+        margin-right: 0.25rem;
+        color: $main-light-text-color;
+        font-size: 0.75rem;
+    }
+
+    .profile__user-photo {
+        width: 2rem;
+        border-radius: 50%;
+    }
+}
