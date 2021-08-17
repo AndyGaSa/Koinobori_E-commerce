@@ -24,6 +24,10 @@ async function getOneById({ params: { userId } }, res) {
       .populate({
         path: 'friends',
         select: ['name'],
+      })
+      .populate({
+        path: 'adversaries',
+        select: ['name', 'friends'],
       });
     res.json(user);
   } catch (error) {
