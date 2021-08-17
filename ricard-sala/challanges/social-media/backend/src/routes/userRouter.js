@@ -4,6 +4,8 @@ const {
   createOne,
   getAll,
   getOneById,
+  updateOneById,
+  deleteOneById,
 } = require('../controllers/userController');
 
 const userRouter = new Router();
@@ -15,6 +17,8 @@ userRouter
 
 userRouter
   .route('/:userId')
-  .get(getOneById);
+  .get(getOneById)
+  .put(updateOneById)
+  .delete(deleteOneById);
 
 module.exports = userRouter;
