@@ -12,11 +12,5 @@ export function loadBeers() {
 }
 
 export function payCart(cartData) {
-  return async (dispatch) => {
-    const { data } = await axios.post('/api/cart', cartData);
-    dispatch({
-      type: actionTypes.PAY_CART,
-      data
-    });
-  };
+  return axios.post('/api/cart', cartData);
 }

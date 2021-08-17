@@ -47,6 +47,7 @@ export default function ShoppingCart() {
               type="text"
             />
             <button
+              className="beerButton"
               onClick={() => { addToCart(beer); }}
               type="button"
             >
@@ -62,7 +63,10 @@ export default function ShoppingCart() {
         onClick={() => {
           const cartData = {
             user: '611920405201d36ea8e46e68',
-            products: beersInCart
+            products: beersInCart.map(({ _id, amount }) => ({
+              product: _id,
+              amount
+            }))
           };
           payCart(cartData);
         }}
