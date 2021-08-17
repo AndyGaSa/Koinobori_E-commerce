@@ -2,7 +2,7 @@
 
 .recomendation {
     font-family: $main-font;
-    background-color: $main-light-color;
+    background-color: $main-hover-color;
     padding: 0.5rem;
     border-radius: 0.1rem;
     box-shadow: 4px 4px 5px $main-dark-color;
@@ -50,6 +50,12 @@
         .product__buttons {
             display: flex;
             flex-direction: column;
+
+            span {
+                color: $secondary-text-color;
+                text-align: center;
+                font-size: 0.8rem;
+            }
 
             button{
                 font-weight: bold;

@@ -40,6 +40,11 @@ function RandomProduct({ user }) {
               <img className="product__image" src={randomProduct.img} alt={randomProduct.name} />
             </div>
             <div className="product__buttons">
+              <span>
+                {randomProduct.stock}
+                {' '}
+                available
+              </span>
               <button type="button" onClick={() => addToCart(randomProduct)}>Add to cart</button>
               <button type="button" onClick={() => dispatch(getRandomProduct())}>Another recomendation</button>
             </div>
