@@ -14,9 +14,8 @@ server.use(cors());
 server.use(morgan('dev'));
 server.use(express.json());
 
-/* const userRouter = require('./src/routes/userRoute');
-server.use('api/users', userRouter); */
+const userRouter = require('./src/routes/userRouter');
 
-server.post('/', (req, res) => res.send('Api funciona'));
+server.use('/api/users', userRouter);
 
 server.listen(port, () => debug(`Server running on ${chalk.magenta(`http://localhost:${port}`)}`));
