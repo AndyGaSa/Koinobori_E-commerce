@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 const chalk = require('chalk');
 
-require('./src/config');
+require('./src/config/ddbb.config');
 
 const server = express();
 const port = process.env.PORT || 5000;
@@ -14,9 +14,9 @@ server.use(cors());
 server.use(morgan('dev'));
 server.use(express.json());
 
-const gnomesRouter = require('./src/routes/gnomesRouter');
+const gnomesRouter = require('./src/routers/gnomesRouter');
 
-server.use('/api/gnomes', gnomesRouter);
+server.use('/gnomesApi/', gnomesRouter);
 
 server.listen(
   port,
