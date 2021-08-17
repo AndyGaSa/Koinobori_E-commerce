@@ -1,0 +1,24 @@
+const express = require('express');
+require('dotenv').config();
+const debug = require('debug')('api');
+const morgan = require('morgan');
+const cors = require('cors');
+const chalk = require('chalk');
+
+require('./src/config');
+
+const server = express();
+const port = process.env.PORT || 5000;
+
+server.use(cors());
+server.use(morgan('dev'));
+server.use(express.json());
+
+const gnomesRouter = require('./src/routes/gnomesRouter');
+
+server.use('/api/gnomes', gnomesRouter);
+
+server.listen(
+  port,
+  () => debug(`Server is running on ${chalk.bgYellow(`http://localhost:${port}`)}`)
+);
