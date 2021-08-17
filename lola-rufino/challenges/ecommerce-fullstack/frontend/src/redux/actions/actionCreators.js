@@ -12,6 +12,17 @@ export function loadProducts() {
   };
 }
 
+export function loadCart() {
+  return async (dispatch) => {
+    const { data } = await axios.get('/api/cart');
+
+    dispatch({
+      type: actionTypes.LOAD_CART,
+      data
+    });
+  };
+}
+
 export async function addItemToCart(productId) {
   const newData = {
     user: '6117c1ba4d74be32e81acbd7',
@@ -22,22 +33,27 @@ export async function addItemToCart(productId) {
       }
     ]
   };
-  const res = await axios.post('api/cart', newData);
-  console.log(res);
+  await axios.post('api/cart', newData);
 }
 
-export async function deleteItemToCart(cartId) {
-  const res = await axios.delete(`api/cart/${cartId}`);
-  console.log(res);
-}
-
-export function loadCart() {
-  return async (dispatch) => {
-    const { data } = await axios.get('/api/cart');
-
-    dispatch({
-      type: actionTypes.LOAD_CART,
-      data
-    });
+/* export async function addItemToCart(product) {
+  return {
+    type: actionTypes.ADD_TO_CART,
+    product: {
+      product: product._id,
+      name: product.name,
+      price: product.price,
+      amount,
+    },
   };
+} */
+
+export async function deleteItemFromCart(productId) {
+  console.log(productId);
+  // delete item
+}
+
+export async function deleteCart(cartId) {
+  console.log('console de cartId', cartId);
+  await axios.delete(`api/cart/${cartId}`);
 }

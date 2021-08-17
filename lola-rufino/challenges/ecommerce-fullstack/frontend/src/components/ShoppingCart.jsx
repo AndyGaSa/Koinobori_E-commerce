@@ -1,11 +1,12 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { loadCart, deleteItemToCart } from '../redux/actions/actionCreators';
+import { loadCart, deleteItemFromCart, deleteCart } from '../redux/actions/actionCreators';
 import './ShoppingCart.scss';
 
 export default function ShoppingCart() {
   const cart = useSelector((store) => store.cart);
+  console.log('esto es cart', cart);
   const dispatch = useDispatch();
   const [cartRunning, setCartRunning] = useState(true);
 
@@ -32,7 +33,7 @@ export default function ShoppingCart() {
               {cartItem.products[0].amount}
             </div>
             <div className="list__item">
-              <button type="button" className="list__button" onClick={() => { deleteItemToCart(cartItem._id); setCartRunning(false); }}>x</button>
+              <button type="button" className="list__button" onClick={() => { deleteItemFromCart(cartItem._id); setCartRunning(false); }}>x</button>
             </div>
           </li>
         ))}
@@ -40,7 +41,7 @@ export default function ShoppingCart() {
       <span>Total price: </span>
       <div className="buttons__container">
         <button type="button" className="buttons">Pay</button>
-        <button type="button" className="buttons">Clear</button>
+        <button type="button" className="buttons" onClick={() => deleteCart(cart._id)}>Clear</button>
       </div>
     </main>
   );

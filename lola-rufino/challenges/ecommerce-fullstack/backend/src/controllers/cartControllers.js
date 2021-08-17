@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 const Cart = require('../models/cartModel');
 
 const getAllCarts = async ({ query }, res) => {

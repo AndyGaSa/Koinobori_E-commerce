@@ -43,7 +43,7 @@ export default function Products() {
             </div>
             <div className="list__item">
               {' '}
-              <button type="button" className="list__button" onClick={() => { addItemToCart(product._id); setProductRunning(false); }}>+</button>
+              <button type="button" className="list__button" onClick={() => { addItemToCart(product); setProductRunning(false); }}>+</button>
             </div>
           </li>
         ))}
