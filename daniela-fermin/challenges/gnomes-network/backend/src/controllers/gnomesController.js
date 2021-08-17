@@ -33,9 +33,13 @@ async function getOne({ query }, res) {
   }
 }
 
-async function updateOne({ query }, res) {
+async function updateOne({ query, body }, res) {
   try {
-    const updatedGnome = await Gnome.findByIdAndUpdate(query);
+    const updatedGnome = await Gnome.findOneAndUpdate(
+      query,
+      body,
+      { new: true }
+    );
     res.status(200);
     res.json(updatedGnome);
   } catch (error) {
@@ -45,7 +49,7 @@ async function updateOne({ query }, res) {
 }
 async function deleteOne({ query }, res) {
   try {
-    const updatedGnome = await Gnome.findByIdAndDelete(query);
+    const updatedGnome = await Gnome.findOneAndDelete(query);
     res.status(201);
     res.json(updatedGnome);
   } catch (error) {
