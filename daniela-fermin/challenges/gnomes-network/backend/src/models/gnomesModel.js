@@ -7,7 +7,7 @@ const gnomeSchema = new Schema({
   name: String,
   gender: String,
   about: String,
-  registered: Date,
+  registered: { type: Date, default: new Date() },
   tags: [String],
   friends: [{ type: Schema.Types.ObjectId, ref: 'Gnome' }],
   adversaries: [{ type: Schema.Types.ObjectId, ref: 'Gnome' }],

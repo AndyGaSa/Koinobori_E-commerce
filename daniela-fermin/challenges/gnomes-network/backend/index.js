@@ -1,6 +1,6 @@
 const express = require('express');
 require('dotenv').config();
-const debug = require('debug')('api');
+const debug = require('debug')('gnomesApi');
 const morgan = require('morgan');
 const cors = require('cors');
 const chalk = require('chalk');
@@ -20,5 +20,5 @@ server.use('/gnomesApi/', gnomesRouter);
 
 server.listen(
   port,
-  () => debug(`Server is running on ${chalk.bgYellow(`http://localhost:${port}`)}`)
+  () => debug(`Server is running on ${chalk.bgBlue(`http://localhost:${port}`)}`)
 );
