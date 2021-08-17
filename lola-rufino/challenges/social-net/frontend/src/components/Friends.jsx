@@ -1,11 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
-export default function Friends() {
+export default function Friends({ friendProp }) {
   return (
-    <div>
-      <span>Ignacio Navarro</span>
-      <span>Ricard Sala</span>
-      <span>Pere Ripoll</span>
-    </div>
+    <span>{friendProp.name}</span>
   );
 }
