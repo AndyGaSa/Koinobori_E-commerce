@@ -35,6 +35,19 @@ export function addToCart(product, amount = 1) {
   };
 }
 
+export function deleteToCart(product) {
+  // eslint-disable-next-line no-debugger
+  debugger;
+  return {
+    type: actionTypes.DELETE_TO_CART,
+    product: {
+      ...product,
+      amount: product.amount - 1,
+      stock: product.stock + 1,
+    },
+  };
+}
+
 export function payProducts(cart) {
   return async (dispatch) => {
     try {

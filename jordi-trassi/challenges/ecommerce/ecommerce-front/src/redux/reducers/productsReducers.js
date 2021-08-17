@@ -19,9 +19,20 @@ export default function productsReducer(products = [], action) {
       });
       break;
 
+    case actionTypes.DELETE_TO_CART:
+      console.log(action.product);
+      nextProducts = products.map((product) => {
+        if (product._id === action.product.product) {
+          product.stock += action.product.amount;
+        }
+        return product;
+      });
+      break;
+
     case actionTypes.LOAD_PRODUCTS:
       nextProducts = action.data;
       break;
+
     default:
       break;
   }

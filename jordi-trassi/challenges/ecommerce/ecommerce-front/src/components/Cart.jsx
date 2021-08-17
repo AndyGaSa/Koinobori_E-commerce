@@ -1,14 +1,18 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { payProducts } from '../redux/actions/actionCreators';
+import { payProducts, deleteToCart } from '../redux/actions/actionCreators';
 
 import './Cart.css';
 
 export default function Cart() {
   const cart = useSelector((store) => store.cart);
   const dispatch = useDispatch();
+
   function handlePay() {
     dispatch(payProducts(cart));
+  }
+  function handleDeleteClick(product) {
+    dispatch(deleteToCart(product));
   }
 
   return (
@@ -20,21 +24,21 @@ export default function Cart() {
         !!cart.items.length && (
           cart?.items?.map((item) => (
             <tr className="cart-product">
-              <td key={item.neme}>
+              <td key={item.name}>
                 {item.name}
               </td>
               <td>
                 {item.price}
                 €/Ud.
               </td>
-              <td>
+              <td className="cart-product__amount">
                 {item.amount}
               </td>
               <td>
                 <button
                   type="button"
                   className="cart-product__btn-delete"
-                  // onClick={handleDelete}
+                  onClick={() => handleDeleteClick(item)}
                 >
                   X
                 </button>
