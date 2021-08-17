@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-underscore-dangle */
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
@@ -11,22 +11,33 @@ export function loadProducts() {
     });
   };
 }
-export function addToCart() {
-  return async (dispatch) => {
-    const { data } = await axios.get('/api/products');
-    dispatch({
-      type: actionTypes.ADD_TO_CART,
-      data,
-    });
+export function addToCart(product, amount = 1) {
+  return {
+    type: actionTypes.ADD_TO_CART,
+    product: {
+      amount,
+      product: product._id,
+      name: product.name,
+      price: product.price,
+    },
   };
 }
-export function deleteItemCart() {
+
+export function payProducts(cart) {
   return async (dispatch) => {
-    const { data } = await axios.get('/api/products');
-    dispatch({
-      type: actionTypes.ADD_TO_CART,
-      data,
-    });
+    try {
+      const { data: products } = await axios.post(process.env.REACT_APP_CART_ENDPOINT, cart);
+      dispatch({
+        type: actionTypes.PAY_PRODUCTS,
+        products,
+      });
+    } catch (error) {
+      dispatch({
+        type: actionTypes.PRODUCT_API_ERROR,
+        products: [],
+        error: error.message,
+      });
+    }
   };
 }
 
