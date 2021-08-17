@@ -12,7 +12,9 @@ const port = process.env.PORT || 5000;
 server.use(express.json());
 server.use(morgan('dev'));
 
-server.post('/api/users', (req, res) => res.send('gnomos API funciona'));
+const userRouter = require('./src/routes/userRouter');
+
+server.use('/api/users', userRouter);
 
 server.listen(
   port,
