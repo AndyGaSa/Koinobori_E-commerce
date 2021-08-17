@@ -1,0 +1,5 @@
+export default {
+  LOAD_LEAGUES: 'LOAD_LEAGUES',
+  LOAD_TEAMS: 'LOAD_TEAMS',
+  LOAD_DETAILS: 'LOAD_DETAILS'
+};
