@@ -51,8 +51,8 @@ function GnomeProfile() {
         <ul className="social__gnomes">
           {gnome?.friends.map(({ name }) => (
             <li>
-              {name}
-              <button type="button">x</button>
+              <button className="social__gnome" type="button">{name}</button>
+              <button className="social__delete" type="button">x</button>
             </li>
           ))}
         </ul>
@@ -60,8 +60,8 @@ function GnomeProfile() {
         <ul className="social__gnomes">
           {gnome?.adversaries.map(({ name }) => (
             <li>
-              {name}
-              <button type="button">x</button>
+              <button className="social__gnome" type="button">{name}</button>
+              <button className="social__delete" type="button">x</button>
             </li>
           ))}
         </ul>

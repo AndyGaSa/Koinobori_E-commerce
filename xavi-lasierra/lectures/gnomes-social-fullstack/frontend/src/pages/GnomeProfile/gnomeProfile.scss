@@ -105,6 +105,7 @@
             font-weight: bold;
             letter-spacing: 1px;
             text-align: center;
+            margin-bottom: 0.5rem;
         }
 
         .social__gnomes {
@@ -118,12 +119,24 @@
                 height: 2rem;
                 border-top: 1px solid $main-light-color;
                 border-bottom: 1px solid $main-light-color;
+                transition: .2s;
 
                 & + li{
                     border-top: none;
                 }
 
-                button {
+                .social__gnome {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    color: white;
+                    font-size: 0.9rem;
+                    text-align: left;
+                    transition: .2s;
+                }
+
+                .social__delete {
                     background-color: transparent;
                     border: none;
                     color: white;
@@ -135,6 +148,22 @@
                     &:hover {
                         font-size: 1rem;
                     }
+                }
+
+                &:hover {
+                    background-color: $main-color;
+
+                    .social__gnome {
+                        color: black;
+                    }
+
+                    .social__delete {
+                        color: black;
+                    }
+                }
+
+                &:active {
+                    background-color: $main-light-color;
                 }
             }
         }
