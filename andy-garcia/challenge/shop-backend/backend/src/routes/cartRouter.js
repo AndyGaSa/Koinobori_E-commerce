@@ -7,7 +7,9 @@ cartRouter
   .route('/')
   .all(cartController.findCart)
   .get(cartController.getCart)
-  .post(cartController.createCart)
   .delete(cartController.deleteCart);
+cartRouter
+  .route('/:productId')
+  .post(cartController.createCart);
 
 module.exports = cartRouter;
