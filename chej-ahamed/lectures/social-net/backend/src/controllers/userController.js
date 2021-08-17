@@ -19,4 +19,55 @@ async function getAll({ query }, res) {
     res.send(error);
   }
 }
-module.exports = { createOne, getAll };
+async function findOneUser(req, res, next) {
+  const { userId } = req.params;
+  try {
+    const user = await User.findById(userId);
+
+    if (user) {
+      req.user = user;
+      next();
+    } else {
+      res.status(404);
+      res.send(new Error(`There is no user with id ${userId}`));
+    }
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+async function updateOneUser(req, res) {
+  const dataToUpdate = req.body;
+  const { userId } = req.params;
+
+  try {
+    const updatedBeer = await User.findByIdAndUpdate(
+      userId,
+      dataToUpdate,
+      { new: true }
+    );
+
+    res.json(updatedBeer);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
+async function deleteOneUser(req, res) {
+  const { userId } = req.params;
+
+  try {
+    await User.findByIdAndDelete(userId);
+
+    res.status(204);
+    res.json('The user was deleted');
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
+module.exports = {
+  createOne, getAll, findOneUser, updateOneUser, deleteOneUser
+};
