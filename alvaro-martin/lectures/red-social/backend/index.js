@@ -1,6 +1,6 @@
 const express = require('express'); // Middleware express
 require('dotenv').config(); // Acceder variables .env
-const debug = require('debug')('storeApi');
+const debug = require('debug')('server');
 const chalk = require('chalk');
 const morgan = require('morgan'); // Middleware morgan para ver en consola las peticiones
 
@@ -12,7 +12,7 @@ const port = process.env.PORT || 5000;
 server.use(morgan('dev'));
 server.use(express.json()); // Si viene petición con datos .json los añade en el body
 
-const usersRouter = require('./src/routes/users.router');
+const usersRouter = require('./src/routers/userRouter');
 
 server.use('/api/users', usersRouter);
 
