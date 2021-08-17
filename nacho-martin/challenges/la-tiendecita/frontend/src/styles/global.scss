@@ -6,7 +6,7 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
 }
-div{
+main{
     display: flex;
 
 }
@@ -20,5 +20,22 @@ section{
 @media screen and (max-width: 1080px) {
     div{
         flex-direction: column;
+    }
+}
+
+%log_button{
+    margin:10px 20px 0;
+    width: 100px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: white;
+    border: none;
+    color: #ff2424;
+    font-size: 16px;
+    font-weight: 700;
+    &:hover{
+        cursor:pointer;
+        background-color:#da8484;
+        color: white;
     }
 }

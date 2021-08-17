@@ -20,13 +20,16 @@ h1{
         display: flex;
         flex-direction: column;
         width: 80%;
-        flex-wrap: nowrap;
-     
+        position: relative;     
     }
     button{
         background-color: #DB4848;
         color: white;
         border: #da8484 2px solid;
+        width: 80px;
+        position: absolute;
+        bottom: 0;
+        left: 25%;
     }
     
 }
