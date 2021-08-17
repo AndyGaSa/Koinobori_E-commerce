@@ -13,7 +13,16 @@ export default function Products() {
 
   return (
     <ul>
-      {products.map((product) => <li key={product.name}>{product.name}</li>)}
+      {products.map(({
+        name, image, price, stock
+      }) => (
+        <li key={name}>
+          <h2>{name}</h2>
+          <img src={image} alt="jugador" />
+          <h3>{price}</h3>
+          <p>{stock}</p>
+        </li>
+      ))}
     </ul>
   );
 }
