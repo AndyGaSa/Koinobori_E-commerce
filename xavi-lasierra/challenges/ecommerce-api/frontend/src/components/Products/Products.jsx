@@ -34,7 +34,7 @@ function Products({ user }) {
   return (
     <>
       <h2 className="hide-element">Shoes</h2>
-      <form>
+      <form className="products-filter">
         <input type="text" placeholder="Search" value={inputValue} onChange={({ target: { value } }) => setInputValue(value)} />
         <select value={selectValue} onChange={({ target: { value } }) => setSelectValue(value)}>
           {selectOptions
