@@ -81,7 +81,11 @@ describe('Given a function getOneUserById', () => {
     });
     describe('And is rejected', () => {
       test('Then should call status', async () => {
-        User.findById.mockRejectedValue();
+        User.findById.mockReturnValue({
+          populate: jest.fn().mockReturnValue({
+            populate: jest.fn().mockRejectedValue({})
+          })
+        });
 
         await controller.getOneUserById(req, res);
 
@@ -125,12 +129,13 @@ describe('Given a function deleteUserById', () => {
   });
   describe('When is triggered', () => {
     describe('And is resolved', () => {
-      test('Then should call json', async () => {
+      test('Then should call status 204', async () => {
         User.findByIdAndDelete.mockResolvedValue({});
 
         await controller.deleteUserById(req, res);
 
-        expect(res.json).toHaveBeenCalled();
+        expect(res.status.mock.calls[0][0]).toBe(204);
+        expect(res.status).toHaveBeenCalledWith(204);
       });
     });
     describe('And is rejected', () => {
