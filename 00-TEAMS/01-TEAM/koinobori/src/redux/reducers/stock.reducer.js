@@ -6,17 +6,6 @@ export default function StockReducer(stockList = {}, { type, payload }) {
     case actionTypes.LOAD_STOCK:
       newStockList = { ...newStockList, ...payload };
       break;
-    case actionTypes.CREATE_STOCK:
-
-      break;
-
-    case actionTypes.UPDATE_STOCK:
-
-      break;
-
-    case actionTypes.DELETE_STOCK:
-
-      break;
 
     default:
       break;
@@ -24,3 +13,5 @@ export default function StockReducer(stockList = {}, { type, payload }) {
 
   return newStockList;
 }
+
+// module.exports = StockReducer;
