@@ -61,7 +61,7 @@ describe('Given getAll ', () => {
 
 describe('Given getOne', () => {
   beforeEach(() => {
-    req = { query: {} };
+    req = { params: { gnomeId: 57 } };
     res = {
       status: jest.fn(),
       send: jest.fn(),
@@ -69,16 +69,28 @@ describe('Given getOne', () => {
     };
   });
   describe('When is triggered', () => {
-    describe('And findOne is resolved', () => {
+    describe('And findById is resolved', () => {
       test('Then res.json is called', async () => {
-        Gnome.findOne.mockResolvedValue([{ name: 'Pepe' }]);
+        Gnome.findById.mockReturnValue({
+          populate:
+          jest.fn().mockReturnValue({
+            populate:
+            jest.fn().mockResolvedValue({})
+          })
+        });
         await gnomesController.getOne(req, res);
         expect(res.json).toHaveBeenCalled();
       });
     });
-    describe('And findOne is rejected', () => {
+    describe('And findById is rejected', () => {
       test('Then res.status to be called with 500', async () => {
-        Gnome.findOne.mockRejectedValue({});
+        Gnome.findById.mockReturnValue({
+          populate:
+          jest.fn().mockReturnValue({
+            populate:
+            jest.fn().mockRejectedValue({})
+          })
+        });
         await gnomesController.getOne(req, res);
 
         expect(res.status).toHaveBeenCalledWith(500);
@@ -89,7 +101,7 @@ describe('Given getOne', () => {
 
 describe('Given updateOne', () => {
   beforeEach(() => {
-    req = { query: {} };
+    req = { params: { gnomeId: {} } };
     res = {
       status: jest.fn(),
       send: jest.fn(),
@@ -97,16 +109,16 @@ describe('Given updateOne', () => {
     };
   });
   describe('When is triggered', () => {
-    describe('And finOneAndUpdate is resolved', () => {
+    describe('And findByIdAndUpdate is resolved', () => {
       test('Then res.json is called', async () => {
-        Gnome.findOneAndUpdate.mockResolvedValue([{ name: 'Pepe' }]);
+        Gnome.findByIdAndUpdate.mockResolvedValue([{ name: 'Pepe' }]);
         await gnomesController.updateOne(req, res);
         expect(res.json).toHaveBeenCalled();
       });
     });
     describe('And findOneAndUpdate is rejected', () => {
       test('Then res.send is called with CREATE_ERROR', async () => {
-        Gnome.findOneAndUpdate.mockRejectedValue(new Error('CREATE_ERROR'));
+        Gnome.findByIdAndUpdate.mockRejectedValue(new Error('CREATE_ERROR'));
         await gnomesController.updateOne(req, res);
 
         expect(res.send.mock.calls[0][0].message).toBe('CREATE_ERROR');
@@ -116,7 +128,7 @@ describe('Given updateOne', () => {
 });
 describe('Given deleteOne', () => {
   beforeEach(() => {
-    req = { query: {} };
+    req = { params: { gnomeId: {} } };
     res = {
       status: jest.fn(),
       send: jest.fn(),
@@ -124,16 +136,16 @@ describe('Given deleteOne', () => {
     };
   });
   describe('When is triggered', () => {
-    describe('And finOneAndDelete is resolved', () => {
+    describe('And findByIdAndDelete is resolved', () => {
       test('Then res.json is called', async () => {
-        Gnome.findOneAndDelete.mockResolvedValue([{ name: 'Pepe' }]);
+        Gnome.findByIdAndDelete.mockResolvedValue([{ name: 'Pepe' }]);
         await gnomesController.deleteOne(req, res);
         expect(res.json).toHaveBeenCalled();
       });
     });
-    describe('And findOneAndDelete is rejected', () => {
-      test('Then res.send is called with CREATE_ERROR', async () => {
-        Gnome.findOneAndDelete.mockRejectedValue({});
+    describe('And findByIdAndDelete is rejected', () => {
+      test('Then res.send is called', async () => {
+        Gnome.findByIdAndDelete.mockRejectedValue({});
         await gnomesController.deleteOne(req, res);
 
         expect(res.send).toHaveBeenCalled();

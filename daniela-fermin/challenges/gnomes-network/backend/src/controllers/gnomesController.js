@@ -22,9 +22,17 @@ async function createOne({ body }, res) {
   }
 }
 
-async function getOne({ query }, res) {
+async function getOne({ params: { gnomeId } }, res) {
   try {
-    const theGnome = await Gnome.findOne(query);
+    const theGnome = await Gnome.findById(gnomeId)
+      .populate({
+        path: 'friends',
+        select: ['name']
+      })
+      .populate({
+        path: 'adversaries',
+        select: ['name']
+      });
     res.status(200);
     res.json(theGnome);
   } catch (error) {
@@ -33,12 +41,15 @@ async function getOne({ query }, res) {
   }
 }
 
-async function updateOne({ query, body }, res) {
+async function updateOne({ params: { gnomeId }, body }, res) {
   try {
-    const updatedGnome = await Gnome.findOneAndUpdate(
-      query,
+    const updatedGnome = await Gnome.findByIdAndUpdate(
+      gnomeId,
       body,
-      { new: true }
+      {
+        new: true,
+        useFindAndModify: false
+      }
     );
     res.status(200);
     res.json(updatedGnome);
@@ -47,9 +58,9 @@ async function updateOne({ query, body }, res) {
     res.send(error);
   }
 }
-async function deleteOne({ query }, res) {
+async function deleteOne({ params: { gnomeId } }, res) {
   try {
-    const updatedGnome = await Gnome.findOneAndDelete(query);
+    const updatedGnome = await Gnome.findByIdAndDelete(gnomeId);
     res.status(201);
     res.json(updatedGnome);
   } catch (error) {
