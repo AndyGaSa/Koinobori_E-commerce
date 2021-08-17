@@ -8,4 +8,10 @@ userRouter
   .post(userController.createOne)
   .get(userController.getAll);
 
+userRouter
+  .route('/:userId')
+  .get(userController.getOneById)
+  .put(userController.updateOneById)
+  .delete(userController.deleteOneById);
+
 module.exports = userRouter;
