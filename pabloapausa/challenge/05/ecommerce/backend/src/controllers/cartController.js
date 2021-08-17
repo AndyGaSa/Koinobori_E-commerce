@@ -1,75 +1,92 @@
 const Cart = require('../models/cartModel');
+const Product = require('../models/productModel');
 
-const readAllcarts = async ({ query }, res) => { // GET.
+const readAllCarts = async ({ query }, res) => {
   try {
     const carts = await Cart.find(query);
-    res.json(carts); // Send JSON parse.
+    res.json(carts);
   } catch (error) {
-    res.status(500); // Internal Server Error.
-    res.send(error); // Send error response.
+    res.status(500);
+    res.send(error);
   }
 };
 
-const createOnecart = async ({ body }, res) => { // POST.
+const createOneCart = async ({ body }, res) => {
   try {
-    const createdcart = await Cart.create(body);
-    res.json(createdcart);
+    const createdCart = await Cart.create(body);
+    res.status(201);
+    res.json(createdCart);
   } catch (error) {
-    res.status(500); // Internal Server Error.
-    res.send(error); // Send error response.
+    res.status(500);
+    res.send(error);
   }
 };
 
-const searchOnecart = async (req, res, next) => {
-  const { params: { cartId } } = req;
+const readOneCart = async (req, res) => {
+  const { params: { userId } } = req;
   try {
-    const cart = await Cart.findById(cartId);
-    if (cart) {
-      req.cart = cart; // Create 'cart' property.
-      next(); // To GET, PUT or DELETE methods.
-    } else {
-      res.status(404); // Not Found.
-      res.send(new Error('Couldn\'t find cart'));
+    let cart = await Cart.findOne({ user: userId })
+      .populate('products.product');
+    if (!cart) {
+      cart = await Cart.create({ user: userId })
+        .populate('products.product');
     }
+    res.json(cart);
   } catch (error) {
-    res.status(500); // Internal Server Error.
-    res.send(error); // Send error response.
+    res.status(500);
+    res.send(error);
   }
 };
 
-const readOnecart = ({ cart }, res) => res.send(cart); // GET.
-
-const updateOnecart = async (req, res) => { // PUT.
-  const [{ cart }, { params: { cartId } }] = req;
+const updateOneCart = async (req, res) => {
+  const { params: { userId }, body } = req;
   try {
-    const updatedcart = await Cart.findByIdAndUpdate(
-      cartId,
-      cart,
+    const updatedCart = await Cart.findOneAndUpdate(
+      { user: userId },
+      { products: body },
       { new: true },
-    );
-    res.json(updatedcart); // Send JSON parse.
+    ).populate('products.product');
+    res.json(updatedCart);
   } catch (error) {
-    res.status(500); // Internal Server Error.
-    res.send(error); // Send error response.
+    res.status(500);
+    res.send(error);
   }
 };
 
-const deleteOnecart = async ({ params: { cartId } }, res) => { // DELETE.
+const aaa = async (req, res) => {
+  const { params: { userId }, body } = req;
   try {
-    await Cart.findByIdAndDelete(cartId);
-    res.status(204); // No Content.
-    res.json(); // Send JSON parse.
+    // const cart = await body.reduce(async (acc));
+    const updatedCart = await Cart.findOneAndUpdate(
+      { user: userId },
+      { products: cart },
+      { new: true },
+    ).populate('products.product');
+    res.json(updatedCart);
   } catch (error) {
-    res.status(500); // Internal Server Error.
-    res.send(error); // Send error response.
+    res.status(500);
+    res.send(error);
   }
 };
 
 module.exports = {
-  readAllcarts,
-  createOnecart,
-  searchOnecart,
-  readOnecart,
-  updateOnecart,
-  deleteOnecart,
+  readAllCarts,
+  createOneCart,
+  readOneCart,
+  updateOneCart,
+  aaa,
 };
+
+/*
+    const notBoughtProducts = await body.reduce(async (accAsync, paidProduct) => {
+      const acc = await accAsync;
+
+      const product = await Product.findOneAndUpdate(
+        { _id: paidProduct.product, stock: { $gte: paidProduct.amount } },
+        { $inc: { stock: -paidProduct.amount } },
+        { new: true }
+      );
+
+      return product ? acc : [...acc, paidProduct];
+    }, []);
+*/

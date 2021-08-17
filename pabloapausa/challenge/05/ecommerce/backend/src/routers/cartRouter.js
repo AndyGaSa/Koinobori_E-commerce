@@ -4,13 +4,11 @@ const cartController = require('../controllers/cartController');
 const cartRouter = new Router(); // Create Router object.
 
 cartRouter.route('/')
-  .all(cartController.readAllcarts)
-  .post(cartController.createOnecart);
+  .all(cartController.readAllCarts)
+  .post(cartController.createOneCart);
 
-cartRouter.route('/:id')
-  .all(cartController.searchOnecart)
-  .get(cartController.readOnecart)
-  .put(cartController.updateOnecart)
-  .delete(cartController.deleteOnecart);
+cartRouter.route('/:cartId')
+  .get(cartController.readOneCart)
+  .put(cartController.updateOneCart);
 
 module.exports = cartRouter;
