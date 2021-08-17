@@ -1,5 +1,5 @@
 import axios from 'axios';
-import actionTypesUsers from './actionTypesUsers';
+import actionTypesUsers from '../types/users';
 
 export default function loadUsers() {
   return async (dispatch) => {

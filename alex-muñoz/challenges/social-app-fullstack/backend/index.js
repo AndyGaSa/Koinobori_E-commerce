@@ -13,8 +13,10 @@ server.use(morgan('dev'));
 server.use(express.json());
 
 const userRouter = require('./src/routes/userRoutes');
+const friendRouter = require('./src/routes/friendRoutes');
 
 server.use('/api/users', userRouter);
+server.use('/api/friends', friendRouter);
 
 server.listen(
   port,
