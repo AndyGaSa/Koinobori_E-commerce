@@ -2,8 +2,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadProducts, loadUser, createCart } from '../redux/actions/actionCreator';
-import CardItem from '../components/CardItem/CardItem';
+import { loadProducts, loadUser, createCart } from '../../redux/actions/actionCreator';
+import CardItem from '../../components/CardItem/CardItem';
 import './Home.scss';
 
 export default function Home() {
@@ -30,7 +30,7 @@ export default function Home() {
       </div>
 
       <div className="home__items">
-        {beersList.slice(0, 6).map((beer) => <CardItem key={beer._id} beer={beer} />)}
+        {beersList.slice(0, 6).map((beer) => <CardItem key={`${beer.name}_home`} beer={beer} />)}
       </div>
     </main>
   );

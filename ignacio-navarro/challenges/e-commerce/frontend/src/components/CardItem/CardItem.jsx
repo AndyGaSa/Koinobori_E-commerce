@@ -22,12 +22,17 @@ export default function CardItem({ beer }) {
         <img src={beer?.image_url} alt="beer" />
         <figcaption>{beer?.name}</figcaption>
         <span>
+          stock:
+          {' '}
+          {beer?.stock}
+        </span>
+        <span>
           {Math.round(((+beer.ibu / 10) - 0.1) * 100) / 100}
           {' '}
           $
         </span>
       </Link>
-      <button className="card-item__buy" type="button" onClick={addToCart}>Add</button>
+      <button className="card-item__buy" disabled={beer?.stock > 0} type="button" onClick={addToCart}>Add</button>
     </div>
   );
 }

@@ -7,9 +7,9 @@ import { useSelector } from 'react-redux';
 
 export default function CartItem({ productId, amount }) {
   const beersList = useSelector((store) => store.products);
-  const { name, price, image_url } = beersList.find((current) => current._id === productId);
+  const { name, price, image_url } = beersList.find((current) => current?._id === productId);
   return (
-    <div className="cart-item__container">
+    <div key="cart_+'productId'" className="cart-item__container">
       <img className="cart-item__image" src={image_url} alt="beer" />
       <span>{name}</span>
       <span>{price}</span>
