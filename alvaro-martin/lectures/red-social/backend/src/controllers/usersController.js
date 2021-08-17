@@ -19,8 +19,48 @@ async function createOne({ body }, res) {
     res.send(error);
   }
 }
+async function getOneById({ params: { ObjectId } }, res) {
+  try {
+    const user = await User.findById(ObjectId)
+      .populate({
+        path: 'friends',
+        select: ['name'],
+      })
+      .populate({
+        path: 'adversaries',
+        select: ['name'],
+      });
+
+    res.json(user);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+async function deleteOneById({ params: { ObjectId } }, res) {
+  try {
+    const deletedUser = await User.findByIdAndDelete(ObjectId);
+    res.json(deletedUser);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+async function updateOneById({ params: { ObjectId }, body }, res) {
+  try {
+    const updatedUser = await User.findByIdAndUpdate(ObjectId, body, { new: true });
+    res.status(200);
+    res.json(updatedUser);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
 
 module.exports = {
   getAll,
   createOne,
+  getOneById,
+  deleteOneById,
+  updateOneById,
 };
