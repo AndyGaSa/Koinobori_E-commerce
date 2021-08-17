@@ -8,21 +8,22 @@ import ArticleList from './Index';
 jest.mock('../../redux/actions/actionCreators');
 
 describe('Given an Articleslist', () => {
-  describe('when is rendered', () => {
-    const useDispatchMock = jest.spyOn(reactRedux, 'useDispatch');
-    beforeEach(() => {
-      useDispatchMock.mockClear();
+  test('when is rendered', () => {
+    loadArticles.mockReturnValue({
+      type: actionTypes.LOAD_ARTICLES,
+      articles: [{
+        name: 'Espinacas',
+        price: 3,
+        currency: 'euros',
+        img: ' smds',
+        stock: 3
+      }
+      ]
     });
-
-    it('does something', () => {
-      // ARRANGE
-      const dispatch = jest.fn();
-      useDispatchMock.mockReturnValue(dispatch);
-      render(
-        <ArticleList />
-      );
-
-      expect(dispatch).toHaveBeenCalled();
-    });
+    render(
+      <ArticleList />
+    );
+    const articleName = screen.getByTestId('article-name-Espinacas');
+    expect(articleName.textContent).toBe('Espinacas');
   });
 });

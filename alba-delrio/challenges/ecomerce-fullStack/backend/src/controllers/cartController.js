@@ -1,36 +1,44 @@
 /* eslint-disable no-param-reassign */
+
 const Cart = require('../models/cartModel');
 const Article = require('../models/articleModel');
 
-async function updateCart({ params: { _id, quantity } }, res, findCart) {
-  const article = _id;
-  findCart.products.forEach((item) => {
-    if (item.article.equals(article)) {
-      item.amount = quantity;
-    }
-  });
-  await Article.findByIdAndUpdate(
-    _id,
-    { $inc: { stock: -quantity } }
-
-  );
-  findCart.save();
-}
-
-async function createCart(req, res) {
+async function createOrUpdateCart({ body }, res) {
   try {
-    const [findCart] = await Cart.find({ user: req.body.user })
-      .populate('user')
-      .populate('articles,article');
+    const findCart = await Cart.findOne({ user: body.user });
 
     if (findCart) {
-      return updateCart(req, res, findCart);
+      await body.articles.forEach(async (current) => {
+        const existingArticle = findCart.articles.find(
+          ({ article }) => article.toString() === current.articles
+        );
+        const isStockAvailable = await Article.findOneAndUpdate(
+          {
+            _id: current.articles,
+            stock: { $gte: current.amount }
+          },
+          {
+            $inc: { stock: -current.amount }
+          }
+        );
+        if (isStockAvailable) {
+          if (existingArticle) {
+            existingArticle.amount += current.amount;
+          } else {
+            findCart.articles.push(current);
+          }
+          await findCart.save();
+        }
+      });
+
+      res.send(findCart);
+    } else {
+      const newCart = await Cart.create(body);
+      res.json(newCart);
     }
-    const newCart = await Cart.create(req.body);
-    return res.send(newCart);
   } catch (error) {
-    res.status(404);
-    return res.send(new Error('There is no cart'));
+    res.status(500);
+    res.send(new Error('Error'));
   }
 }
 
@@ -45,5 +53,5 @@ async function deleteCart({ params: { _id } }, res) {
 }
 
 module.exports = {
-  createCart, updateCart, deleteCart
+  createOrUpdateCart, deleteCart
 };

@@ -9,6 +9,6 @@ cartRouter
 
 cartRouter
   .route('/:_id/:quantity')
-  .get(cartController.createCart)
-  .post(cartController.updateCart);
+  .post(cartController.createOrUpdateCart);
+
 module.exports = cartRouter;
