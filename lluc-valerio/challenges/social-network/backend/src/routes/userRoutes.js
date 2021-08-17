@@ -9,7 +9,8 @@ userRouter
   .post(userController.createOne);
 userRouter
   .route('/:userId')
-  .get((req, res) => res.send('get on root with Id'))
-  .post((req, res) => res.send('post on root with Id'));
+  .get(userController.getOne)
+  .delete(userController.deleteOne)
+  .put(userController.updateOne);
 
 module.exports = userRouter;
