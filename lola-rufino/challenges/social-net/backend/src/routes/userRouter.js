@@ -10,6 +10,7 @@ userRouter
 userRouter
   .route('/:userId/')
   .get(userControllers.getOneUserById)
-  .put(userControllers.updateUserById);
+  .put(userControllers.updateUserById)
+  .delete(userControllers.deleteUserById);
 
 module.exports = userRouter;

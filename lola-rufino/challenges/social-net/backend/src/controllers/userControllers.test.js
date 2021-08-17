@@ -3,10 +3,14 @@ const User = require('../models/userModel');
 
 jest.mock('../models/userModel');
 
-const req = { body: { query: jest.fn() }, params: { userId: null } };
-const res = { json: jest.fn(), status: jest.fn(), send: jest.fn() };
+let req;
+let res;
 
 describe('Given a function getAllUsers', () => {
+  beforeEach(() => {
+    req = { body: { query: jest.fn() }, params: { userId: null } };
+    res = { json: jest.fn(), status: jest.fn(), send: jest.fn() };
+  });
   describe('When is triggered', () => {
     describe('And is resolved', () => {
       test('Then should call json', async () => {
@@ -23,13 +27,17 @@ describe('Given a function getAllUsers', () => {
 
         await controller.getAllUsers(req, res);
 
-        expect(res.status).toHaveBeenCalled();
+        expect(res.status).toHaveBeenCalledWith(500);
       });
     });
   });
 });
 
 describe('Given a function createUser', () => {
+  beforeEach(() => {
+    req = { body: { query: jest.fn() }, params: { userId: null } };
+    res = { json: jest.fn(), status: jest.fn(), send: jest.fn() };
+  });
   describe('When is triggered', () => {
     describe('And is resolved', () => {
       test('Then should call json', async () => {
@@ -53,10 +61,18 @@ describe('Given a function createUser', () => {
 });
 
 describe('Given a function getOneUserById', () => {
+  beforeEach(() => {
+    req = { body: { query: jest.fn() }, params: { userId: null } };
+    res = { json: jest.fn(), status: jest.fn(), send: jest.fn() };
+  });
   describe('When is triggered', () => {
     describe('And is resolved', () => {
       test('Then should call json', async () => {
-        User.findById.mockResolvedValue({});
+        User.findById.mockReturnValue({
+          populate: jest.fn().mockReturnValue({
+            populate: jest.fn().mockResolvedValue({})
+          })
+        });
 
         await controller.getOneUserById(req, res);
 
@@ -76,6 +92,10 @@ describe('Given a function getOneUserById', () => {
 });
 
 describe('Given a function updateUserById', () => {
+  beforeEach(() => {
+    req = { body: {}, params: { userId: '' } };
+    res = { json: jest.fn(), status: jest.fn(), send: jest.fn() };
+  });
   describe('When is triggered', () => {
     describe('And is resolved', () => {
       test('Then should call json', async () => {
@@ -91,6 +111,33 @@ describe('Given a function updateUserById', () => {
         User.findByIdAndUpdate.mockRejectedValue();
 
         await controller.updateUserById(req, res);
+
+        expect(res.status).toHaveBeenCalledWith(500);
+      });
+    });
+  });
+});
+
+describe('Given a function deleteUserById', () => {
+  beforeEach(() => {
+    req = { body: { query: jest.fn() }, params: { userId: null } };
+    res = { json: jest.fn(), status: jest.fn(), send: jest.fn() };
+  });
+  describe('When is triggered', () => {
+    describe('And is resolved', () => {
+      test('Then should call json', async () => {
+        User.findByIdAndDelete.mockResolvedValue({});
+
+        await controller.deleteUserById(req, res);
+
+        expect(res.json).toHaveBeenCalled();
+      });
+    });
+    describe('And is rejected', () => {
+      test('Then should call status', async () => {
+        User.findByIdAndDelete.mockRejectedValue();
+
+        await controller.deleteUserById(req, res);
 
         expect(res.status).toHaveBeenCalledWith(500);
       });
