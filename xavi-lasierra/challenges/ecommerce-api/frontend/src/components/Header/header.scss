@@ -8,6 +8,7 @@
     font-family: $main-font;
     background-color: $main-color;
     padding: 0 5vw;
+    box-shadow: 0 0 10px $main-dark-color;
 
     .header__title {
         color: $main-light-text-color;
