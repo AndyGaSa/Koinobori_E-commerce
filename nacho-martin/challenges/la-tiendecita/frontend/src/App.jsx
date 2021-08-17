@@ -1,5 +1,6 @@
 import React from 'react';
 import Cart from './components/Cart';
+import Footer from './components/Footer';
 import FunkoList from './components/FunkoList';
 import Header from './components/Header';
 
@@ -9,8 +10,11 @@ function App() {
   return (
     <>
       <Header />
-      <FunkoList />
-      <Cart />
+      <main>
+        <FunkoList />
+        <Cart />
+      </main>
+      <Footer />
     </>
   );
 }

@@ -27,12 +27,12 @@ export default function FunkoList() {
   }
   return (
     <section className="products">
-      <h1>Funko selection:</h1>
+      <h2>Funko selection:</h2>
       <ul className="products__list">
         {availableProducts.map((product) => (
           <li key={`${product._id}`}>
             <img className="products__image" src={product.img} alt="" />
-            {`${product.model}`}
+            <p>{`${product.model}`}</p>
             <span>{`${product.price}€`}</span>
             {product.stock === 0
               ? <span className="products__sold-out">Sold Out</span>
