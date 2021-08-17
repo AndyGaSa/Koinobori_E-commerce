@@ -1,13 +1,12 @@
 const { Router } = require('express');
+const {
+  createGnome
+} = require('../controllers/gnomes.controller');
 
 const gnomesRouter = Router();
 
 gnomesRouter
   .route('/')
-  .post(
-    (req, res) => {
-      res.json('hello');
-    }
-  );
+  .post(createGnome);
 
 module.exports = gnomesRouter;
