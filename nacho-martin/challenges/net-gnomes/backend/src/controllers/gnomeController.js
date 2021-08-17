@@ -20,7 +20,40 @@ async function getAll({ query }, res) {
   }
 }
 
+async function getOne({ params: { gnomeId }, res }) {
+  try {
+    const gnomeFound = Gnome.findByIdAndDelete(gnomeId);
+    res.json(gnomeFound);
+  } catch (error) {
+    res.status(404);
+    res.send(error);
+  }
+}
+
+async function updateOne({ params: { gnomeId }, body }, res) {
+  try {
+    const gnomeToUpdate = Gnome.findByIdAndUpdate(gnomeId, body, { new: true });
+    res.json(gnomeToUpdate);
+  } catch (error) {
+    res.status(404);
+    res.send(error);
+  }
+}
+
+async function deleteOne({ params: { gnomeId }, res }) {
+  try {
+    const gnomeToDelete = Gnome.findByIdAndDelete(gnomeId);
+    res.json(gnomeToDelete);
+  } catch (error) {
+    res.status(404);
+    res.send(error);
+  }
+}
+
 module.exports = {
   createOne,
-  getAll
+  getAll,
+  getOne,
+  updateOne,
+  deleteOne
 };
