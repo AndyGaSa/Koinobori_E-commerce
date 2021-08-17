@@ -168,4 +168,38 @@
             }
         }
     }
+
+    .not-logged__title {
+        margin-top: 5rem;
+        font-weight: bold;
+    }
+
+    .not-logged__form {
+        margin-top: 0.5rem;
+
+        input {
+            height: 1.5rem;
+            border: 2px solid black;
+            padding: 0 0.5rem;
+        }
+
+        button {
+            margin-left: 0.25rem;
+            height: 1.5rem;
+            width: 3rem;
+            background-color: transparent;
+            border: 2px solid black;
+            font-weight: bold;
+
+            &:hover {
+                background-color: $main-dark-color;
+                color: white;
+            }
+
+            &:active {
+                background-color: black;
+            }
+        }
+    }
 }
+

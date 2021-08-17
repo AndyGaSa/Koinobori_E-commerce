@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux';
 import gnomes from './gnomes.reducer';
+import user from './user.reducer';
+import currentGnome from './currentGnome.reducer';
 
 export default combineReducers({
-  gnomes
+  gnomes,
+  user,
+  currentGnome
 });
