@@ -1,48 +1,48 @@
-import { element } from 'prop-types';
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import actionTypes from '../../redux/actions/actionTypes';
+/* eslint-disable no-console */
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { loadProducts, addToCart } from '../../redux/actions/actionCreators';
 import './styles.scss';
 
 export default function Products() {
-  const products = useSelector((store) => store.productList);
+  const products = useSelector((store) => store.products);
+
   const dispatch = useDispatch();
-  const reduxCartList = (product) => {
-    dispatch({
-      type: actionTypes.ADD_TO_CART,
-      data: product,
-    });
-  };
+
+  useEffect(() => {
+    dispatch(loadProducts());
+  }, []);
+  function handleAddClick(product) {
+    dispatch(addToCart(product));
+  }
   return (
-
     <div className="product-card__container">
-
-      {products.map((elements) => (
+      {products?.map((product) => (
         <div className="product-card__container-item">
           <div className="product-card-img">
-            <img src={elements.img} alt="imagen" />
+            <img src={product.img} alt="imagen" />
           </div>
           <div className="product-card-info">
             <div>
-              <li>{elements.name}</li>
+              <li>{product.name}</li>
             </div>
             <div>
               <span className="product-card-price">
                 price:
-                {elements.price}
+                {product.price}
               </span>
             </div>
             <div>
               <span className="product-card-stock">
                 stock
-                {elements.stock}
+                {product.stock}
               </span>
             </div>
             <button
               type="button"
-              onClick={() => reduxCartList(elements)}
+              onClick={() => handleAddClick(product)}
               className="add-cart"
-              disabled={element.stock < 1}
+              disabled={product.stock < 1}
             >
               ADD
 
