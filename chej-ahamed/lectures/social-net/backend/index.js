@@ -11,7 +11,10 @@ const port = process.env.PORT || 5000;
 server.use(morgan('dev'));
 server.use(express.json());
 
-server.post('/', (req, res) => res.send('api funciona'));
+const userRouter = require('./src/routers/userRouter');
+
+server.use('/api/users', userRouter);
+
 server.listen(
   port,
   () => debug(`Server is running on http:localhost:${port}`)

@@ -7,7 +7,7 @@ const userSchema = new Schema({
   name: String,
   gender: String,
   about: String,
-  register: Date,
+  register: { type: Date, default: new Date() },
   tags: [String],
   friends: [
 
