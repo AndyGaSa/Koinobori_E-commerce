@@ -1,0 +1,36 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 0px;
+    background-color: rgb(73, 47, 189);
+    font-family: 'Noto Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(198, 231, 241);
+    justify-content: center;
+    align-items: center;
+}
+.header__img-gnomos{
+    width: auto;
+    height: 7rem;
+    margin: 1rem;
+}
+
+.header__title-div{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+.header__title{
+    font-size: 5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.1rem;
+}
