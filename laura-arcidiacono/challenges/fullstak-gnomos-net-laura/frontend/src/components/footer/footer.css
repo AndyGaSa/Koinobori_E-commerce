@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(198, 231, 241);
+    justify-content: center;
+    align-items: center;
+}
+.footer__img-gnomos{
+    width: auto;
+    height: 7rem;
+    margin: 1rem;
+}
+
+.footer__title{
+    font-size: 5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.1rem;
+}

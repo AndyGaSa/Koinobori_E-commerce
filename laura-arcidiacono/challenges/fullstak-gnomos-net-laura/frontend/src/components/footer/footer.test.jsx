@@ -11,9 +11,9 @@ describe('Given a Footer component', () => {
     test('Then h2 will be in the document', () => {
       expect(screen.getByTestId('footer__title')).toBeInTheDocument();
     });
-    test('And the value will be Este es el Footer', () => {
+    test('And the value will be Gnomos', () => {
       const titleH2 = screen.getByTestId('footer__title');
-      expect(titleH2.textContent).toBe('Este es el Footer');
+      expect(titleH2.textContent).toBe('Gnomos');
     });
   });
 });
