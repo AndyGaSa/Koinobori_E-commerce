@@ -1,43 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import actionTypes from '../../redux/actions/actionTypes';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { payProducts } from '../../redux/actions/actionCreators';
 import './styles.scss';
 
 export default function Cart() {
-  const [productsToCart, setProductsToCart] = useState([]);
-  const cartRedux = useSelector((store) => store.cart);
-  useEffect(() => {
-    setProductsToCart(cartRedux);
-  }, [cartRedux]);
-  const reduxCartList=(product)=>{
-    dispatchEvent({
-      type:actionTypes.
-    })
+  const cart = useSelector((store) => store.cart);
+  const dispatch = useDispatch();
+  function handlePay() {
+    dispatch(payProducts(cart));
   }
   return (
     <div className="cart">
       <h3 className="cart__user">riki CART</h3>
       <div className="cart__products">
-        {productsToCart.map((element) => (
-          <div className="cart-item">
-            <img className="cart-img" src={element.img} alt="imagen" />
-            <div className="cart-info">
-              <span className="cart-name">{element.name}</span>
-              <span className="cart-price">{element.price}</span>
+        {cart.map((element) => (
+          <div className="cart__item" key={element?.name}>
+            <img className="cart__img" src={element?.img} alt="imagen" />
+            <div className="cart__info">
+              <span className="cart__name">{element?.name}</span>
+              <span className="cart__price">{element?.price}</span>
             </div>
-            <button
-              className="delete-button"
-              type="button"
-              onClick={() => reduxDeleteProduct(element)}
-            >
-              X
 
-            </button>
           </div>
         )) }
       </div>
-      <button className="button-cart" type="button">
-        <img className="img-button" src="https://img.icons8.com/material-outlined/24/000000/fast-cart.png" alt="cart" />
+      <p datatestid="total-price">
+        Total price:
+        {cart?.totalPrice}
+      </p>
+      <button className="button__cart" type="button" onClick={handlePay}>
+        <img className="img__button" src="https://img.icons8.com/material-outlined/24/000000/fast-cart.png" alt="cart" />
         buy
 
       </button>
