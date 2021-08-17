@@ -24,10 +24,11 @@ async function getAllSites(req, res) {
   }
 }
 
-function deleteSite({ params: { siteid } }, res) {
-  Sites.findByIdAndDelete(siteid).exec();
-  res.send('El sitio ha sido eliminado');
-}
+const deleteSiteById = async ({ params: { siteid } }, res) => {
+  const { deletedCount } = await Sites.deleteOne({ _id: siteid });
+  res.send(!deletedCount ? `No se pudo eliminar ${siteid}` : `${siteid} Eliminado correctamente`);
+};
+
 async function updateSite(req, res, next) {
   const { beerId } = req.params;
   const beer = await Sites.findOne({ id: +beerId }).exec();
@@ -41,5 +42,8 @@ async function updateSite(req, res, next) {
 }
 
 module.exports = {
-  createSite, getAllSites, deleteSite, updateSite,
+  createSite,
+  getAllSites,
+  deleteSiteById,
+  updateSite,
 };

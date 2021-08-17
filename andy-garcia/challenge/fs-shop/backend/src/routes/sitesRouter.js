@@ -11,6 +11,6 @@ sitesRouter
 sitesRouter
   .route('/:siteid')
   .put(sitesController.updateSite)
-  .delete(sitesController.deleteSite);
+  .delete(sitesController.deleteSiteById);
 
 module.exports = sitesRouter;
