@@ -22,7 +22,7 @@ async function getAll({ query }, res) {
 
 async function getOne({ params: { gnomeId }, res }) {
   try {
-    const gnomeFound = Gnome.findByIdAndDelete(gnomeId);
+    const gnomeFound = await Gnome.findByIdAndDelete(gnomeId);
     res.json(gnomeFound);
   } catch (error) {
     res.status(404);
@@ -32,7 +32,7 @@ async function getOne({ params: { gnomeId }, res }) {
 
 async function updateOne({ params: { gnomeId }, body }, res) {
   try {
-    const gnomeToUpdate = Gnome.findByIdAndUpdate(gnomeId, body, { new: true });
+    const gnomeToUpdate = await Gnome.findByIdAndUpdate(gnomeId, body, { new: true });
     res.json(gnomeToUpdate);
   } catch (error) {
     res.status(404);
@@ -42,7 +42,7 @@ async function updateOne({ params: { gnomeId }, body }, res) {
 
 async function deleteOne({ params: { gnomeId }, res }) {
   try {
-    const gnomeToDelete = Gnome.findByIdAndDelete(gnomeId);
+    const gnomeToDelete = await Gnome.findByIdAndDelete(gnomeId);
     res.json(gnomeToDelete);
   } catch (error) {
     res.status(404);
