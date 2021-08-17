@@ -16,29 +16,6 @@ async function getAll({ query }, res) {
   }
 }
 
-async function addProductToCart(req, res) {
-  try {
-    let foundCart = await Cart.findOne({ user: req.params });
-    debug(`foundCart: ${foundCart}`);
-    if (foundCart) {
-      const productAdded = req.body.product;
-      const existingProduct = await Cart.findOne({ product: req.body.product });
-      if (!existingProduct) {
-        foundCart = Cart.push(productAdded);
-      } else {
-        foundCart.products.product.amount += 1;
-      }
-    } else {
-      const newCart = await Cart.create(req.body);
-      res.json(newCart);
-    }
-    foundCart.save();
-  } catch (error) {
-    res.status(500);
-    res.send(error);
-  }
-}
-
 async function getById({ query }, res) {
   const { cartId } = query;
   try {
@@ -79,7 +56,6 @@ async function deleteOneById(req, res) {
 
 module.exports = {
   getAll,
-  addProductToCart,
   getById,
   updateOneById,
   deleteOneById
