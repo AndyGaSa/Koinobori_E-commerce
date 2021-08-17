@@ -1,0 +1,172 @@
+@import '../../styles/variables';
+@import '../../styles/reset';
+@import '../../styles/mixins';
+
+.leagues__container {
+    padding: 4rem 0;
+    min-width: 300px;
+    form{
+        width: 60%;
+        margin: 0.75rem auto;
+        display: flex;
+        justify-content: center;
+
+
+        input {
+            @extend %filter-input;
+        }
+    }
+    
+    .leagues{
+        width: 90vw;
+        min-width: 300px;
+        max-width: 800px;
+        margin: 0 auto;
+        list-style: none;
+
+
+        .leagues__block{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem;
+            color: white;
+
+            .leagues__country{
+                width: 100%;
+                height: 4rem;
+                padding: 0.5rem;
+                background-color: $body-clear-background;
+                list-style: none;
+                border-top-right-radius: 1rem;
+                border-top-left-radius: 1rem;
+                border-bottom-right-radius: .25rem;
+                border-bottom-left-radius: .25rem;
+                margin-bottom: 0.2rem;
+                position: relative;
+                display: flex;
+                align-items: center;
+                transition: .2s;
+
+                &:hover {
+                    background-color: $body-clear-background-hover;
+                }
+
+                &::after {
+                    color: black;
+                    content: "▼";
+                    position: absolute;
+                    right: 1rem;
+                    pointer-events: none;
+                }
+
+
+                button {
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    border: none;
+                    color: black;
+                    font-weight: bolder;
+                    letter-spacing: 2px;
+                }
+            }
+    
+            .leagues__all-leagues{
+                width: 80%;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                transition: 0.1s;
+
+              
+                .leagues__league{
+                    background-color: $leagues-background-color;
+                    margin-bottom: 0.3rem;
+                    padding: 0.2rem 0.5rem;
+                    border-radius: 0.5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    transition: .3s;
+
+                    &:hover{
+                        background-color: $hover-color;
+                    }
+
+                    &--top {
+                        background-color: $leagues-background-color-favourite;
+                        order: -1;
+
+                        &:hover {
+                            background-color: $leagues-background-color-favourite-hover;
+                        }
+                    }
+
+                    a {
+                        @include anchor;
+                        display: flex;
+                        align-items: center;
+                        flex-grow: 1;
+                    }
+                    
+                    .leagues__badge{
+                        @extend %small-logo;
+                    }
+
+                    .leagues__name {
+                        @extend %league-name;
+                        font-weight: 700;
+                    }
+
+                    .leagues__favourite-button {
+                        background-color: transparent;
+                        border: none;
+                        color: white;
+
+                        &:hover {
+                            color: lightgrey;
+                        }
+
+                        &--active {
+                            color: $favourite-color;
+    
+                            &:hover {
+                                color: $main-color;
+                            }
+                        }
+
+                        i {
+                            pointer-events: none;
+                        }
+                    }
+
+                }
+            }
+
+            &--closed {
+                .leagues__country {
+                    border-radius: 1rem;
+                    animation: absorb 0.4s ease;
+
+                    &::after {
+                        content: "▲";
+                    }
+                }
+
+                .leagues__all-leagues{
+                    opacity: 0;
+                    height: 0;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}
+
+@keyframes absorb {
+    15% {height: 3.7rem}
+    70%{height: 4.12rem}
+    100% {height: 4rem}
+}
