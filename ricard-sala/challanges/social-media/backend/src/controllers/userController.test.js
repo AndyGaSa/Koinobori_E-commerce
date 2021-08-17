@@ -2,21 +2,22 @@ const userController = require('./userController');
 const User = require('../model/userModel');
 
 jest.mock('../model/userModel');
-let req;
-let res;
+
 describe('given a CreateOne ', () => {
+  let req;
+  let res;
+  beforeEach(() => {
+    req = {
+      body: {},
+    };
+    res = {
+      json: jest.fn(),
+      status: jest.fn(),
+      send: jest.fn(),
+    };
+  });
   describe('when is invoked', () => {
     describe('and resolve', () => {
-      beforeEach(() => {
-        req = {
-          body: {},
-        };
-        res = {
-          json: jest.fn(),
-          status: jest.fn(),
-          send: jest.fn(),
-        };
-      });
       test('then res.json is called', async () => {
         User.create.mockResolvedValue({ name: 'pepe' });
 
@@ -47,17 +48,19 @@ describe('given a CreateOne ', () => {
 });
 
 describe('given a getAll ', () => {
+  let req;
+  let res;
+  beforeEach(() => {
+    req = {
+      query: {},
+    };
+    res = {
+      json: jest.fn(),
+      status: jest.fn(),
+      send: jest.fn(),
+    };
+  });
   describe('when is triggered', () => {
-    beforeEach(() => {
-      req = {
-        query: {},
-      };
-      res = {
-        json: jest.fn(),
-        status: jest.fn(),
-        send: jest.fn(),
-      };
-    });
     describe('and find resolved', () => {
       test('then res.json is called', async () => {
         User.find.mockResolvedValue({});
