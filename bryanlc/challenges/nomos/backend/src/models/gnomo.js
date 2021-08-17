@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const nomoSchema = Schema({
+  image: String,
   age: Number,
   eyeColor: String,
   name: String,
@@ -20,7 +21,7 @@ const nomoSchema = Schema({
     ref: 'Gnomo'
   }],
   greeting: String,
-  favoriteFruite: String
+  favoriteFruit: String
 });
 
 module.exports = model('Gnomo', nomoSchema);

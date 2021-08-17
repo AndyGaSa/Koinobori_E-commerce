@@ -17,7 +17,9 @@ async function createOne(req, res) {
 
 async function getOneById({ params: { gnomoId } }, res) {
   try {
-    const findone = await Gnomo.findById(gnomoId);
+    const findone = await Gnomo.findById(gnomoId)
+      .populate({ path: 'friends', select: 'name age about' })
+      .populate({ path: 'adversaries', select: 'name age about' });
 
     res.send(findone);
   } catch (error) {
@@ -26,22 +28,39 @@ async function getOneById({ params: { gnomoId } }, res) {
 }
 
 async function updateOneById({ params: { gnomoId }, body }, res) {
-  const newGnomo = await Gnomo.findByIdAndUpdate(
-    gnomoId,
-    body,
-    {
-      new: true,
-      useFindAndModify: false
-    }
+  try {
+    const newGnomo = await Gnomo.findByIdAndUpdate(
+      gnomoId,
+      body,
+      {
+        new: true,
+        useFindAndModify: false
+      }
 
-  );
+    );
 
-  res.send(newGnomo);
+    res.send(newGnomo);
+  } catch (error) {
+    res.send(304);
+    res.send(error);
+  }
+}
+
+async function deleteById({ params: { gnomoId } }, res) {
+  try {
+    const gnomeDelete = Gnomo.findByIdAndDelete(gnomoId);
+
+    res.status(204);
+    res.send(gnomeDelete);
+  } catch (error) {
+    res.send(error);
+  }
 }
 
 module.exports = {
   getAll,
   createOne,
   getOneById,
-  updateOneById
+  updateOneById,
+  deleteById
 };

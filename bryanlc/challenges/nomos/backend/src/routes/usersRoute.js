@@ -10,6 +10,7 @@ gnomoRouter.route('/')
 gnomoRouter
   .route('/:gnomoId')
   .get(gnomoControllers.getOneById)
-  .put(gnomoControllers.updateOneById);
+  .put(gnomoControllers.updateOneById)
+  .delete(gnomoControllers.deleteById);
 
 module.exports = gnomoRouter;

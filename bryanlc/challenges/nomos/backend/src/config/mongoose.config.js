@@ -1,6 +1,6 @@
 const { connect } = require('mongoose');
 
-const debug = require('debug')('nomosSN:ddbbConfig');
+const debug = require('debug')('gnomosSN:ddbbConfig');
 
 connect(process.env.DDBB_URL,
   {
