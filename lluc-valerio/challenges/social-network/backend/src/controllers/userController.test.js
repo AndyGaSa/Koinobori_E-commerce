@@ -19,7 +19,11 @@ describe('Given a getAll function', () => {
     });
     describe('And user.find resolves', () => {
       test('Then res.json must be called', async () => {
-        User.find.mockResolvedValue({});
+        User.find.mockReturnValue({
+          populate: jest.fn().mockReturnValue({
+            populate: jest.fn().mockResolvedValue({ name: 'Harry' })
+          })
+        });
 
         await userController.getAll(req, res);
 
@@ -73,7 +77,7 @@ describe('Given a createOne function', () => {
   });
 });
 
-describe('Given a getOne function', () => {
+describe('Given a getOneById function', () => {
   describe('When is invoked', () => {
     let req = {};
     let res = {};
@@ -91,9 +95,13 @@ describe('Given a getOne function', () => {
     });
     describe('And user.findById resolves', () => {
       test('Then res.json must be called', async () => {
-        User.findById.mockResolvedValue({});
+        User.findById.mockReturnValue({
+          populate: jest.fn().mockReturnValue({
+            populate: jest.fn().mockResolvedValue({ name: 'Harry' })
+          })
+        });
 
-        await userController.getOne(req, res);
+        await userController.getOneById(req, res);
 
         expect(res.json).toHaveBeenCalled();
       });
@@ -102,7 +110,7 @@ describe('Given a getOne function', () => {
       test('Then res.send must be called', async () => {
         User.findById.mockRejectedValue({});
 
-        await userController.getOne(req, res);
+        await userController.getOneById(req, res);
 
         expect(res.send).toHaveBeenCalled();
       });
@@ -110,7 +118,7 @@ describe('Given a getOne function', () => {
   });
 });
 
-describe('Given a deleteOne function', () => {
+describe('Given a deleteOneById function', () => {
   describe('When is invoked', () => {
     let req = {};
     let res = {};
@@ -130,7 +138,7 @@ describe('Given a deleteOne function', () => {
       test('Then res.json must be called', async () => {
         User.findByIdAndDelete.mockResolvedValue({});
 
-        await userController.deleteOne(req, res);
+        await userController.deleteOneById(req, res);
 
         expect(res.json).toHaveBeenCalled();
       });
@@ -139,7 +147,7 @@ describe('Given a deleteOne function', () => {
       test('Then res.send must be called', async () => {
         User.findByIdAndDelete.mockRejectedValue({});
 
-        await userController.deleteOne(req, res);
+        await userController.deleteOneById(req, res);
 
         expect(res.send).toHaveBeenCalled();
       });
@@ -147,7 +155,7 @@ describe('Given a deleteOne function', () => {
   });
 });
 
-describe('Given a updateOne function', () => {
+describe('Given a updateOneById function', () => {
   describe('When is invoked', () => {
     let req = {};
     let res = {};
@@ -166,9 +174,13 @@ describe('Given a updateOne function', () => {
     });
     describe('And user.findByIdAndUpdate resolves', () => {
       test('Then res.json must be called', async () => {
-        User.findByIdAndUpdate.mockResolvedValue({});
+        User.findByIdAndUpdate.mockReturnValue({
+          populate: jest.fn().mockReturnValue({
+            populate: jest.fn().mockResolvedValue({ name: 'Harry' })
+          })
+        });
 
-        await userController.updateOne(req, res);
+        await userController.updateOneById(req, res);
 
         expect(res.json).toHaveBeenCalled();
       });
@@ -177,7 +189,7 @@ describe('Given a updateOne function', () => {
       test('Then res.send must be called', async () => {
         User.findByIdAndUpdate.mockRejectedValue({});
 
-        await userController.updateOne(req, res);
+        await userController.updateOneById(req, res);
 
         expect(res.send).toHaveBeenCalled();
       });

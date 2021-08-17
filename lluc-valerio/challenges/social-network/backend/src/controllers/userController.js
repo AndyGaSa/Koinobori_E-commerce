@@ -4,7 +4,15 @@ const User = require('../models/userModel');
 async function getAll({ query }, res) {
   debug('getAll');
   try {
-    const users = await User.find(query);
+    const users = await User.find(query)
+      .populate({
+        path: 'friends',
+        select: 'name'
+      })
+      .populate({
+        path: 'adversaries',
+        select: 'name'
+      });
     res.status(200);
     res.json(users);
   } catch (error) {
@@ -25,10 +33,18 @@ async function createOne({ body }, res) {
   }
 }
 
-async function getOne({ params: { userId } }, res) {
+async function getOneById({ params: { userId } }, res) {
   try {
     debug('getOne');
-    const userFound = await User.findById(userId);
+    const userFound = await User.findById(userId, { useFindAndModify: false })
+      .populate({
+        path: 'friends',
+        select: 'name'
+      })
+      .populate({
+        path: 'adversaries',
+        select: 'name'
+      });
     res.status(200);
     res.json(userFound);
   } catch (error) {
@@ -37,22 +53,37 @@ async function getOne({ params: { userId } }, res) {
   }
 }
 
-async function deleteOne({ params: { userId } }, res) {
+async function deleteOneById({ params: { userId } }, res) {
   try {
     debug('deleteOne');
-    const userDeleted = await User.findByIdAndDelete(userId);
-    res.status(202);
-    res.json(userDeleted);
+    await User.findByIdAndDelete(userId);
+    res.status(204);
+    res.json();
   } catch (error) {
     res.status(500);
     res.send(error);
   }
 }
 
-async function updateOne({ params: { userId }, body }, res) {
+async function updateOneById({ params: { userId }, body }, res) {
   try {
     debug('updateOne');
-    const userUpdated = await User.findByIdAndUpdate(userId, body, { new: true });
+    const userUpdated = await User.findByIdAndUpdate(
+      userId,
+      body,
+      {
+        useFindAndModify: false,
+        new: true
+      }
+    )
+      .populate({
+        path: 'friends',
+        select: 'name'
+      })
+      .populate({
+        path: 'adversaries',
+        select: 'name'
+      });
     res.status(202);
     res.json(userUpdated);
   } catch (error) {
@@ -64,7 +95,7 @@ async function updateOne({ params: { userId }, body }, res) {
 module.exports = {
   getAll,
   createOne,
-  getOne,
-  deleteOne,
-  updateOne
+  getOneById,
+  deleteOneById,
+  updateOneById
 };

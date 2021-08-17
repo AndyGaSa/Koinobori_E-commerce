@@ -9,8 +9,8 @@ userRouter
   .post(userController.createOne);
 userRouter
   .route('/:userId')
-  .get(userController.getOne)
-  .delete(userController.deleteOne)
-  .put(userController.updateOne);
+  .get(userController.getOneById)
+  .delete(userController.deleteOneById)
+  .put(userController.updateOneById);
 
 module.exports = userRouter;
