@@ -1,0 +1,115 @@
+const User = require('../models/userModel');
+const userController = require('./userController');
+
+jest.mock('../models/userModel');
+
+describe('Given postOne', () => {
+  describe('When is invoked', () => {
+    describe('And resolves', () => {
+      test('Then res.json is called', async () => {
+        const req = {
+          body: {},
+        };
+        const res = {
+          json: jest.fn(),
+          status: jest.fn(),
+          send: jest.fn(),
+        };
+        User.create.mockResolvedValue({ name: 'Pablo' });
+        await userController.postOne(req, res);
+        expect(res.json).toHaveBeenCalled();
+      });
+    });
+    describe('And User.create rejects', () => {
+      test('Then res.status with 500', async () => {
+        const req = {
+          body: {},
+        };
+        const res = {
+          json: jest.fn(),
+          status: jest.fn(),
+          send: jest.fn(),
+        };
+        User.create.mockRejectedValue();
+        await userController.postOne(req, res);
+        expect(res.status).toHaveBeenCalledWith(500);
+      });
+      test('Then res.send is called with CREATE_ERROR', async () => {
+        const req = {
+          body: {},
+        };
+        const res = {
+          json: jest.fn(),
+          status: jest.fn(),
+          send: jest.fn(),
+        };
+        User.create.mockRejectedValue(new Error('CREATE_ERROR')); // No entiendo esta línea.
+        await userController.postOne(req, res);
+        expect(res.send.mock.calls[0][0].message).toBe('CREATE_ERROR'); // No entiendo esta línea.
+      });
+    });
+  });
+});
+
+describe('Given getAll', () => {
+  describe('When is invoked', () => {
+    describe('And resolves', () => {
+      test('Then res.json is called', async () => {
+        const req = {
+          query: {},
+        };
+        const res = {
+          json: jest.fn(),
+          status: jest.fn(),
+          send: jest.fn(),
+        };
+        User.find.mockResolvedValue({ name: 'Pablo' });
+        await userController.getAll(req, res);
+        expect(res.json).toHaveBeenCalled();
+      });
+    });
+    describe('And User.find rejects', () => {
+      test('Then res.status with 500', async () => {
+        const req = {
+          query: {},
+        };
+        const res = {
+          json: jest.fn(),
+          status: jest.fn(),
+          send: jest.fn(),
+        };
+        User.find.mockRejectedValue();
+        await userController.getAll(req, res);
+        expect(res.status).toHaveBeenCalledWith(500);
+      });
+      test('Then res.send is called', async () => {
+        const req = {
+          query: {},
+        };
+        const res = {
+          json: jest.fn(),
+          status: jest.fn(),
+          send: jest.fn(),
+        };
+        User.find.mockRejectedValue(new Error('CREATE_ERROR'));
+        await userController.getAll(req, res);
+        expect(res.send.mock.calls[0][0].message).toBe('CREATE_ERROR');
+      });
+    });
+  });
+});
+
+describe('Given getOne', () => {
+  describe('When is invoked', () => {
+    describe('And resolves', () => {
+      test('Then res.json is called', async () => {
+        User.findById.mockReturnValue({
+          populate: jest.fn().mockReturnValue({
+            populate: jest.fn()
+              .mockResolvedValue({ name: 'pepe' }),
+          }),
+        });
+      });
+    });
+  });
+});
