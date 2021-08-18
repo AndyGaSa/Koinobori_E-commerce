@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import axios from 'axios';
-import actionTypes from './actionTypes';
+import actionTypes from './actionsTypes';
 
 export function loadUsers() {
   return async (dispatch) => {
