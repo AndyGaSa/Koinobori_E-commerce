@@ -15,4 +15,4 @@ const userSchema = new Schema({
   favoriteFruit: String
 });
 
-module.exports = model('User', userSchema);
+module.exports = model('User', userSchema, 'Skybook');
