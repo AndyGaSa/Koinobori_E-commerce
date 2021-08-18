@@ -20,7 +20,6 @@ export default function productsReducer(products = [], action) {
       break;
 
     case actionTypes.DELETE_TO_CART:
-      console.log(action.product);
       nextProducts = products.map((product) => {
         if (product._id === action.product.product) {
           product.stock += 1;
