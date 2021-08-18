@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
+const cors = require('cors');
 const debug = require('debug')('server');
 
 
@@ -9,6 +10,7 @@ require('../backend/src/config/databaseConfig');
 const port = process.env.PORT || 5000;
 const server = express();
 
+server.use(cors());
 server.use(express.json());
 server.use(morgan('dev'));
 
