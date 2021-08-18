@@ -1,0 +1,34 @@
+@import '../../styles/variables';
+
+.friends-buttons {
+    padding: 0.5rem;
+    .friends-buttons__not-logged {
+
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+        font-size: 1.25rem;
+        width: 2rem;
+        height: 2rem;
+        transition: .2s;
+
+        &:hover {
+            font-size: 1.35rem;
+        }
+
+        &:active {
+            font-size: 1.2rem;
+            color: $main-color;
+        }
+    }
+
+    .friends-buttons__friend {
+        color: $friend-color;
+    }
+
+    .friends-buttons__adversary {
+        color: $enemy-color;
+    }
+}

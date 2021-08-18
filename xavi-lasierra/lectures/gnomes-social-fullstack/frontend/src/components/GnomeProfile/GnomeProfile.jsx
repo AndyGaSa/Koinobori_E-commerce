@@ -3,10 +3,12 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
 
+import AddTo from '../AddTo/AddTo';
+
 import icons from '../../utils/gnomesSocialIcons';
+import { getGnomeById } from '../../redux/actions/currentGnome.creator';
 
 import './gnomeProfile.scss';
-import { getGnomeById } from '../../redux/actions/currentGnome.creator';
 
 function GnomeProfile({
   gnome, currentUserId, currentUserFriends, currentUserAdversaries
@@ -27,21 +29,14 @@ function GnomeProfile({
           years
         </span>
       </article>
-      <div>
-        {currentUserId && (currentUserId === gnome?._id
-          ? <span>Your profile</span>
-          : (
-            <>
-              {currentUserFriends.some(({ _id }) => _id === gnome._id)
-                ? <button type="button">Delete from friends</button>
-                : <button type="button">Add to friends</button>}
-              {currentUserAdversaries.some(({ _id }) => _id === gnome._id)
-                ? <button type="button">Delete from adversaries</button>
-                : <button type="button">Add to adversaries</button>}
-            </>
-          )
-        )}
-      </div>
+      {currentUserId && (
+      <AddTo
+        gnome={gnome}
+        currentUserId={currentUserId}
+        currentUserFriends={currentUserFriends}
+        currentUserAdversaries={currentUserAdversaries}
+      />
+      )}
       <article className="gnome-profile__secondary-information">
         <h2 className="hide">INFORMATION</h2>
         <ul className="gnome-profile__tags">
