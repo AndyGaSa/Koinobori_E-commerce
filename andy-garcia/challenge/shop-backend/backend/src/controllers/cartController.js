@@ -1,20 +1,36 @@
+/* eslint-disable no-shadow */
 const Cart = require('../models/cartModel');
-const User = require('../models/userModel');
-const Product = require('../models/productModel');
 
 async function createCart(req, res) {
-  const newCart = await Cart.create(req.body);
-  return res.send(newCart);
+  try {
+    const findCart = await Cart.find({ user: req.body.user });
+    // const productId = findCart[0].products;
+    if (findCart) {
+      const newCart = await Cart.create(req.body);
+      return res.send(newCart);
+    }
+    findCart[0].products[0].amount = req.body.products[0].amount;
+    return res.send(findCart);
+  } catch (error) {
+    res.status(500);
+    return res.send(error);
+  }
 }
 
-function getCart(req, res) {
-  Cart.find({}, (err, carts) => {
-    User.populate(carts, { path: 'user' }, (err, carts) => {
-      Product.populate(carts, { path: 'products.product' }, (err, carts) => {
-        res.status(200).send(carts);
+async function getCart({ query }, res) {
+  try {
+    const cartItems = await Cart.find(query)
+      .populate('user')
+      .populate({
+        path: 'products.product',
+        select: ['name', 'price', 'stock'],
       });
-    });
-  });
+
+    res.json(cartItems);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 function deleteCart({ beer }, res) {

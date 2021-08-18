@@ -6,8 +6,14 @@ async function createProduct(req, res) {
   return res.send(newBeer);
 }
 
-function getProduct(req, res) {
-  res.send(Product);
+async function getProduct(req, res) {
+  try {
+    const productItems = await Product.find();
+    res.json(productItems);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 function deleteProduct({ beer }, res) {
