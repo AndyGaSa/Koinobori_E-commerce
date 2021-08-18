@@ -41,6 +41,35 @@
         }
     }
 
+    .side-menu__gnomes {
+        li {
+            padding: 0 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            button {
+                height: 2rem;
+                width: 100%;
+                color: white;
+                background-color: transparent;
+                border: none;
+                border-top: 1px solid $main-light-color;
+                border-bottom: 1px solid $main-light-color;
+                transition: .2s;
+
+                &:hover {
+                    width: 95%;
+                }
+
+                &:active {
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+
     &--closed {
         transform: translateX(-20rem);
     }

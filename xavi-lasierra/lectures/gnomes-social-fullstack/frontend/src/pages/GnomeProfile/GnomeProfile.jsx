@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
+import logUser from '../../redux/actions/user.creator';
 import icons from '../../utils/gnomesSocialIcons';
 
 import './gnomeProfile.scss';
 
 function GnomeProfile() {
+  const dispatch = useDispatch();
   const gnome = useSelector(({ currentGnome }) => currentGnome);
 
   const [userName, setUserName] = useState('');
+
+  function login(newUsername) {
+    if (newUsername.trim()) {
+      dispatch(logUser(newUsername.trim()));
+    }
+  }
 
   return (
     <section className="gnome-profile">
@@ -80,7 +88,7 @@ function GnomeProfile() {
             <span className="not-logged__title">Welcome!</span>
             <form className="not-logged__form">
               <input type="text" placeholder="Username" value={userName} onChange={({ target: { value } }) => setUserName(value)} />
-              <button type="button" onClick>Login</button>
+              <button type="button" onClick={() => login(userName)}>Login</button>
             </form>
           </>
         )}
