@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loadFriends, loadUser, loadAdversaries } from '../redux/actions/actionCreator';
 import Friend from '../components/Friend';
 import Adversarie from '../components/Adversarie';
-import './Home.css';
+import './Home.scss';
 
 export default function Home() {
   const friends = useSelector((store) => store.friends);
@@ -25,30 +25,54 @@ export default function Home() {
     <>
       <section className="Home__user-section">
         <article className="Home__user-article">
-          <img className="Home__user-picture" src={user?.picture} alt="lola" border="0" />
           <section className="Home__user-texts">
             <h2 className="Home__user-name">{user?.name}</h2>
-            <span>{user?.age}</span>
-            <p>{user?.about}</p>
+            <p>{user?.greeting}</p>
           </section>
         </article>
       </section>
-      <section>
-        <ul className="home__friends-container">
-          {(friends.length > 0) && friends.slice(0, 5).map((friend) => (
-            <Friend key={`friend_${user._id}`} friendData={friend} />
-          ))}
+      <div className="home__user-card">
 
-        </ul>
-      </section>
-      <section>
-        <ul className="home__adversaries-container">
-          {(adversaries.length > 0) && adversaries.slice(6, 10).map((adversarie) => (
-            <Adversarie key={`adversarie_${user._id}`} adversarieData={adversarie} />
-          ))}
+        <section className="home__user-details">
+          <h3>
+            Age
+            <br />
+            <span>{user?.age}</span>
+          </h3>
+          <h3>
+            Eyes
+            <br />
+            <span>{user?.eyeColor}</span>
+          </h3>
+          <h3>
+            Gender
+            <br />
+            <span>{user?.gender}</span>
+          </h3>
+          <h3>
+            Fruit
+            <br />
+            <span>{user?.favoriteFruit}</span>
+          </h3>
+        </section>
+        <section>
+          <ul className="home__friends-container">
+            {(friends.length > 0) && friends.slice(0, 5).map((friend) => (
+              <Friend key={`friend_${user._id}`} friendData={friend} />
+            ))}
 
-        </ul>
-      </section>
+          </ul>
+        </section>
+        <section>
+          <ul className="home__adversaries-container">
+            {(adversaries.length > 0) && adversaries.slice(6, 10).map((adversarie) => (
+              <Adversarie key={`adversarie_${user._id}`} adversarieData={adversarie} />
+            ))}
+
+          </ul>
+        </section>
+      </div>
+
     </>
   );
 }

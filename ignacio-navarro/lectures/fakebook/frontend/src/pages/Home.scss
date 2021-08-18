@@ -1,0 +1,68 @@
+.Home__user-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 235px;
+}
+.Home__user-article{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Home__user-texts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        margin-top: 15px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+    p{
+        margin:10px
+    }
+}
+.Home__user-name{
+    display: flex;
+}
+.home__friends-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.home__adversaries-container{
+    display: flex;
+}
+.home__user-card{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 270px;
+    filter: drop-shadow(2px 4px 6px grey);
+    background: white;
+    border-radius: 20px;
+    ul{
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
+        margin: 3px 20px;
+    }
+}
+.home__user-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    h3{
+        font-size: 1em;
+        font-weight: 600;
+    }
+    span{
+        font-size: 0.9em;
+        font-weight: 400;
+    }
+
+
+}

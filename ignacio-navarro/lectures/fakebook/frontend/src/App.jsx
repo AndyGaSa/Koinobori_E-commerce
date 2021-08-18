@@ -2,14 +2,18 @@ import React from 'react';
 import './App.css';
 import { Provider } from 'react-redux';
 import Home from './pages/Home';
+import Header from './components/Header';
 import configureStore from './redux/store';
 
 function App() {
   return (
     <Provider store={configureStore()}>
       <div className="App">
-        <h1>Fakebook</h1>
-        <Home />
+        <Header />
+        <main>
+
+          <Home />
+        </main>
       </div>
     </Provider>
   );

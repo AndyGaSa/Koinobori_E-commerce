@@ -1,0 +1,24 @@
+header{
+    position: fixed;
+    display: flex;
+    background-image: url(https://i.ibb.co/v101jvd/header-back.jpg);
+    width: 100%;
+    height: 170px;
+    background-size: cover;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    filter: drop-shadow(9px 2px 13px grey);
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+    }
+}
+
+.Header__user-image{
+    border-radius: 50%;
+    width: 160px;
+}
