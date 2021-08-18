@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import logUser from '../../redux/actions/user.creator';
+import { logUser } from '../../redux/actions/user.creator';
 
 import './login.scss';
 

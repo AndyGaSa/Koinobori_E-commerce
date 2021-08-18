@@ -44,5 +44,9 @@ export default Header;
 Header.propTypes = {
   sideMenuClass: propTypes.string.isRequired,
   setSideMenuClass: propTypes.func.isRequired,
-  currentUserId: propTypes.string.isRequired
+  currentUserId: propTypes.string
+};
+
+Header.defaultProps = {
+  currentUserId: ''
 };

@@ -5,14 +5,36 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserSlash, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import './addTo.scss';
+import { useDispatch } from 'react-redux';
+
+import { updateUser } from '../../redux/actions/user.creator';
 
 function AddTo({
   gnome, currentUserId, currentUserAdversaries, currentUserFriends
 }) {
+  const dispatch = useDispatch();
+
+  function addFriendAdversary(type, id, list) {
+    const idList = list.map(({ _id }) => _id);
+
+    const dataToUpdate = {
+      [type]: [...idList, gnome._id]
+    };
+    dispatch(updateUser(dataToUpdate, id));
+  }
+
+  function deleteFriendAdversary(type, id, list) {
+    const dataToUpdate = {
+      [type]: list.map(({ _id }) => _id).filter((gnomeId) => gnomeId !== gnome._id)
+    };
+
+    dispatch(updateUser(dataToUpdate, id));
+  }
+
   return (
     <form className="friends-buttons">
       {currentUserId === gnome?._id
-        ? <span className="friends-buttons__not-logged">Your profile</span>
+        ? <span className="friends-buttons__user">Your profile</span>
         : (
           <>
             {(currentUserFriends.some(({ _id }) => _id === gnome._id)
@@ -21,12 +43,12 @@ function AddTo({
                 <>
                   {currentUserFriends.some(({ _id }) => _id === gnome._id)
                     ? (
-                      <button className="friends-buttons__friend" type="button" alt="Delete friend">
+                      <button className="friends-buttons__friend" type="button" alt="Delete friend" onClick={() => deleteFriendAdversary('friends', currentUserId, currentUserFriends)}>
                         <FontAwesomeIcon icon={faUserSlash} />
                       </button>
                     )
                     : (
-                      <button className="friends-buttons__adversary" type="button" alt="Delete adversary">
+                      <button className="friends-buttons__adversary" type="button" alt="Delete adversary" onClick={() => deleteFriendAdversary('adversaries', currentUserId, currentUserAdversaries)}>
                         <FontAwesomeIcon icon={faUserSlash} />
                       </button>
                     )}
@@ -35,10 +57,10 @@ function AddTo({
               )
               : (
                 <>
-                  <button className="friends-buttons__friend" type="button" alt="Add friend">
+                  <button className="friends-buttons__friend" type="button" alt="Add friend" onClick={() => addFriendAdversary('friends', currentUserId, currentUserFriends)}>
                     <FontAwesomeIcon icon={faUser} />
                   </button>
-                  <button className="friends-buttons__adversary" type="button" alt="Add adversary">
+                  <button className="friends-buttons__adversary" type="button" alt="Add adversary" onClick={() => addFriendAdversary('adversaries', currentUserId, currentUserAdversaries)}>
                     <FontAwesomeIcon icon={faUser} />
                   </button>
                 </>

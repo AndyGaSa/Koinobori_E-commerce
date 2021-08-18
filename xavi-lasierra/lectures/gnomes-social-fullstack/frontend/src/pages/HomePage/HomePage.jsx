@@ -29,11 +29,17 @@ function HomePage({ currentUserId, currentUserFriends, currentUserAdversaries })
 export default HomePage;
 
 HomePage.propTypes = {
-  currentUserId: propTypes.string.isRequired,
+  currentUserId: propTypes.string,
   currentUserFriends: propTypes.arrayOf(propTypes.shape(
     { name: propTypes.string, _id: propTypes.string }
-  )).isRequired,
+  )),
   currentUserAdversaries: propTypes.arrayOf(propTypes.shape(
     { name: propTypes.string, _id: propTypes.string }
-  )).isRequired
+  ))
+};
+
+HomePage.defaultProps = {
+  currentUserId: '',
+  currentUserFriends: [],
+  currentUserAdversaries: []
 };

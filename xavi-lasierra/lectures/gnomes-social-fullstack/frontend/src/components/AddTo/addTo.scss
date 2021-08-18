@@ -2,8 +2,9 @@
 
 .friends-buttons {
     padding: 0.5rem;
-    .friends-buttons__not-logged {
-
+    .friends-buttons__user {
+        font-size: 0.9rem;
+        color: $secondary-text-color;
     }
 
     button {

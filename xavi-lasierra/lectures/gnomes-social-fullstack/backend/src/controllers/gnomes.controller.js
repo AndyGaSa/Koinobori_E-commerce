@@ -69,7 +69,9 @@ async function updateGnomeById({ params: { gnomeId }, body }, res) {
       gnomeId,
       body,
       { new: true }
-    );
+    )
+      .populate({ path: 'friends', select: 'name' })
+      .populate({ path: 'adversaries', select: 'name' });
     res.json(updatedGnome);
   } catch (error) {
     res.status(500);
