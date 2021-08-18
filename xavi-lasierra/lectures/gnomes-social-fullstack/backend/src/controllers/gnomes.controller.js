@@ -42,7 +42,9 @@ async function createGnome({ body }, res) {
 
 async function getGnomeById({ params: { gnomeId } }, res) {
   try {
-    const foundGnome = await Gnome.findById(gnomeId);
+    const foundGnome = await Gnome.findById(gnomeId)
+      .populate({ path: 'friends', select: 'name' })
+      .populate({ path: 'adversaries', select: 'name' });
     res.json(foundGnome);
   } catch (error) {
     res.status(500);
