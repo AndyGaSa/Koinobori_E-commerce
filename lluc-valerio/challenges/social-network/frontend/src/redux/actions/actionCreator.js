@@ -4,8 +4,6 @@ import actionTypes from './actionTypes';
 export function loadPerson() {
   return async (dispatch) => {
     const { data } = await axios.get('/api/user/');
-    // eslint-disable-next-line no-console
-    console.log(data);
     dispatch({
       type: actionTypes.LOAD_PERSONS,
       data
@@ -13,14 +11,13 @@ export function loadPerson() {
   };
 }
 
-export function setUser(person) {
+export function setUser(user) {
   return async (dispatch) => {
-    // const { data } = await axios.get('/api/user/');
-    // eslint-disable-next-line no-console
-    console.log(person);
-    dispatch({
-      type: actionTypes.LOAD_USER,
-      data: person
-    });
+    if (user) {
+      dispatch({
+        type: actionTypes.LOAD_USER,
+        data: user
+      });
+    }
   };
 }
