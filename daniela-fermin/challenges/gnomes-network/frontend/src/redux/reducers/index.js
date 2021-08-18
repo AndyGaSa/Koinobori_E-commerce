@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
 import gnomesReducer from './gnomesReducer';
-import friendsReducer from './friendsReducer';
-import adversariesReducer from './adversariesReducers';
+import currentGnomeReducer from './currentGnomeReducer';
 
 export default combineReducers({
   gnomes: gnomesReducer,
-  friends: friendsReducer,
-  adversaries: adversariesReducer
+  currentGnome: currentGnomeReducer
 });
