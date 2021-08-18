@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import gnomesReducer from './gnomesReducer';
+import currentGnomeReducer from './currentGnomeReducer';
 
 export default combineReducers({
-  gnomes: gnomesReducer
+  gnomes: gnomesReducer,
+  currentGnome: currentGnomeReducer
 });

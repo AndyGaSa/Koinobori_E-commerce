@@ -1,4 +1,4 @@
-import actionTypes from '../actions/types';
+import actionTypes from '../actions/gnomesTypes';
 
 export default function loadGnomes(gnomes = [], action) {
   let newGnomes = gnomes;

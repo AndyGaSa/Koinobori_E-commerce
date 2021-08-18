@@ -1,0 +1,3 @@
+export default {
+  LOAD_CURRENT_GNOME: 'LOAD_CURRENT_GNOME'
+};

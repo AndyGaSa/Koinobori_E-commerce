@@ -1,5 +1,5 @@
 import axios from 'axios';
-import actionTypes from './types';
+import actionTypes from './gnomesTypes';
 
 export default function loadGnomes() {
   return async (dispatch) => {
