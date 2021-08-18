@@ -1,0 +1,49 @@
+@import '../../styles/reset.scss';
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+.not-found-section{
+    margin: 60px 0 0 0;
+    height: 80vh;
+    width: 100%;
+    background-color: $primary-color;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.not-found-title{
+    font-family: $primary-font;
+    font-size: 40px;
+}
+.not-found-404{
+    padding-top: 120px;
+    font-size: 100px;
+    color: white;
+    font-family: $primary-font;
+    text-align: center;
+}
+
+.not-found-description{
+    font-family: $primary-font;
+    font-size: 20px;
+}
+.not-found-button{
+    margin:0 auto;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: $primary-color;
+    border: 3px $tertiary-color solid;
+    color: $tertiary-color;
+    font-size: 20px;
+    font-family: $primary-font;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+}
+.not-found-button:hover{
+    border: 3px whitesmoke solid;
+}
