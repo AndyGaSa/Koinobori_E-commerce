@@ -1,17 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
+import Navs from '../Navs/Navs';
 
 export default function Friends() {
+  const user = useSelector(((store) => store.user));
   return (
-    <section>
-      <div>Friends</div>
-      <div>Principal</div>
-      <Link to="../">
-        Main
-      </Link>
-      <Link to="../Adversaries">
-        Adversaries
-      </Link>
-    </section>
+    <>
+      <Navs />
+      <section className="friends">
+        <ul>
+          {
+            (user.friends?.length <= 0)
+              ? <span>no friends</span>
+              : user.friends?.map((friend) => (
+                <li>
+                  {friend.name}
+                </li>
+              ))
+          }
+        </ul>
+      </section>
+    </>
   );
 }
