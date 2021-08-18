@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
@@ -7,7 +8,9 @@ import icons from '../../utils/gnomesSocialIcons';
 import './gnomeProfile.scss';
 import { getGnomeById } from '../../redux/actions/currentGnome.creator';
 
-function GnomeProfile({ gnome }) {
+function GnomeProfile({
+  gnome, currentUserId, currentUserFriends, currentUserAdversaries
+}) {
   const dispatch = useDispatch();
   return (
     <section className="gnome-profile">
@@ -24,6 +27,21 @@ function GnomeProfile({ gnome }) {
           years
         </span>
       </article>
+      <div>
+        {currentUserId && (currentUserId === gnome?._id
+          ? <span>Your profile</span>
+          : (
+            <>
+              {currentUserFriends.some(({ _id }) => _id === gnome._id)
+                ? <button type="button">Delete from friends</button>
+                : <button type="button">Add to friends</button>}
+              {currentUserAdversaries.some(({ _id }) => _id === gnome._id)
+                ? <button type="button">Delete from adversaries</button>
+                : <button type="button">Add to adversaries</button>}
+            </>
+          )
+        )}
+      </div>
       <article className="gnome-profile__secondary-information">
         <h2 className="hide">INFORMATION</h2>
         <ul className="gnome-profile__tags">
@@ -52,10 +70,10 @@ function GnomeProfile({ gnome }) {
       <article className="gnome-profile__social">
         <h4 className="social__title">FRIENDS</h4>
         <ul className="social__gnomes">
-          {gnome.adversaries?.length
-            ? gnome?.friends.map(({ name }) => (
-              <li>
-                <button className="social__gnome" type="button">{name}</button>
+          {gnome.friends?.length
+            ? gnome?.friends.map((gnomeFriend) => (
+              <li key={gnomeFriend?.name}>
+                <button className="social__gnome" type="button" onClick={() => dispatch(getGnomeById(gnomeFriend._id))}>{gnomeFriend.name}</button>
                 <button className="social__delete" type="button">x</button>
               </li>
             ))
@@ -64,9 +82,9 @@ function GnomeProfile({ gnome }) {
         <h4 className="social__title">ADVERSARIES</h4>
         <ul className="social__gnomes">
           {gnome.adversaries?.length
-            ? gnome?.adversaries.map(({ name, _id }) => (
-              <li>
-                <button className="social__gnome" type="button" onClick={() => dispatch(getGnomeById(_id))}>{name}</button>
+            ? gnome?.adversaries.map((gnomeAdversary) => (
+              <li key={gnomeAdversary?.name}>
+                <button className="social__gnome" type="button" onClick={() => dispatch(getGnomeById(gnomeAdversary._id))}>{gnomeAdversary.name}</button>
                 <button className="social__delete" type="button">x</button>
               </li>
             ))
@@ -82,6 +100,7 @@ export default GnomeProfile;
 
 GnomeProfile.propTypes = {
   gnome: propTypes.shape({
+    _id: propTypes.string,
     picture: propTypes.string,
     age: propTypes.number,
     gender: propTypes.string,
@@ -97,5 +116,12 @@ GnomeProfile.propTypes = {
     tags: propTypes.arrayOf(propTypes.string),
     registered: propTypes.string,
     about: propTypes.string
-  }).isRequired
+  }).isRequired,
+  currentUserId: propTypes.string.isRequired,
+  currentUserFriends: propTypes.arrayOf(propTypes.shape(
+    { name: propTypes.string, _id: propTypes.string }
+  )).isRequired,
+  currentUserAdversaries: propTypes.arrayOf(propTypes.shape(
+    { name: propTypes.string, _id: propTypes.string }
+  )).isRequired
 };

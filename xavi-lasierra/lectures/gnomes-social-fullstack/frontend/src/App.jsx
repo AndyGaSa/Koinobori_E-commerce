@@ -8,7 +8,12 @@ import HomePage from './pages/HomePage/HomePage';
 import './app.scss';
 
 function App() {
-  const currentUserId = useSelector(({ user }) => user);
+  const currentUser = useSelector(({ user }) => user);
+  const {
+    _id: currentUserId,
+    friends: currentUserFriends,
+    adversaries: currentUserAdversaries
+  } = currentUser;
   const [sideMenuClass, setSideMenuClass] = useState('side-menu--closed');
 
   return (
@@ -22,7 +27,11 @@ function App() {
         sideMenuClass={sideMenuClass}
         setSideMenuClass={setSideMenuClass}
       />
-      <HomePage />
+      <HomePage
+        currentUserId={currentUserId}
+        currentUserFriends={currentUserFriends}
+        currentUserAdversaries={currentUserAdversaries}
+      />
     </>
   );
 }
