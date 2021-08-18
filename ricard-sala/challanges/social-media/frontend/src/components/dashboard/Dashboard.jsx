@@ -18,6 +18,15 @@ export default function Dashboard() {
       <div className="info__container">
         <span className="info__about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates odio similique doloremque vitae dolores. Dignissimos, iusto voluptates corrupti error incidunt pariatur? Adipisci molestiae deleniti eum cumque sint magni autem voluptas?</span>
       </div>
+      <div className="friends__button__container">
+        <button
+          className="friends__button"
+          data-testid="create-button"
+          type="button"
+        >
+          friends
+        </button>
+      </div>
     </>
   );
 }
