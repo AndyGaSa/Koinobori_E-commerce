@@ -2,9 +2,13 @@ import actionTypes from '../actions/actionTypes';
 
 export default function usersReducer(user = {}, action) {
   let newUser = user;
-  if (action.type === actionTypes.LOAD_USER) {
-    newUser = action.data;
-    return newUser;
+  switch (action.type) {
+    case actionTypes.LOAD_USER:
+      newUser = action.data;
+      break;
+    default:
+      newUser = user;
+      break;
   }
   return newUser;
 }

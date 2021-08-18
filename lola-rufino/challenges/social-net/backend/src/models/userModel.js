@@ -9,7 +9,7 @@ const userSchema = new Schema({
   about: String,
   registered: { type: Date, default: new Date() },
   tags: [String],
-  friends: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+  friends: [{ type: { type: Schema.Types.ObjectId, ref: 'User' } }],
   adversaries: [{ type: Schema.Types.ObjectId, ref: 'User' }],
   greeting: String,
   favoriteFruit: String

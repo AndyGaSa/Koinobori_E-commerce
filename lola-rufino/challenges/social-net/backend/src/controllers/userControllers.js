@@ -46,7 +46,15 @@ const updateUserById = async (req, res) => {
     const updatedUser = await User.findByIdAndUpdate(userId, body, {
       new: true,
       useFindAndModify: false
-    });
+    })
+      .populate({
+        path: 'friends', // la propiedad
+        select: ['name'] // la propiedad que nos interesa de esa misma propiedad
+      })
+      .populate({
+        path: 'adversaries',
+        select: ['name']
+      });
     res.json(updatedUser);
   } catch (error) {
     res.status(500);

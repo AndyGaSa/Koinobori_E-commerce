@@ -56,7 +56,7 @@ export default function Home() {
             Friends:
             {
           (users.length > 0)
-          && users.slice(0, 5).map(
+          && user.friends.map(
             (friend) => (
               <div className="name__button">
                 <Friends key={friend.name} friendProp={friend.name} />

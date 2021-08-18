@@ -1,18 +1,18 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import './App.scss';
-// import Home from './pages/Home';
+import Home from './pages/Home';
 import AllUsers from './pages/AllUsers';
-// import Header from './components/Header';
+import Header from './components/Header';
 import configureStore from './redux/store';
 
 function App() {
   return (
     <Provider store={configureStore()}>
       <main className="main">
-        {/* <Header /> */}
+        <Header />
         <div className="main__down-container">
-          {/* <Home /> */}
+          <Home />
           <AllUsers />
         </div>
       </main>
