@@ -42,7 +42,7 @@ export default function ListOfGnomes() {
         <ul>
           {
                   filteredGnomes && filteredGnomes.map((gnome) => (
-                    <li>
+                    <li key={gnome._id}>
                       <Link to={`/details/${gnome._id}`}>
                         <span>{gnome.name}</span>
                       </Link>
