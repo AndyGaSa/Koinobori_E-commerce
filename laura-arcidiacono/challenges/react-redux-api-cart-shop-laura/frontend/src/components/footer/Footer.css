@@ -1,0 +1,15 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+footer {
+    text-align: center;
+}
+
+.footer__title {
+    font-size: 2rem;
+}
+
+.footer__img {
+     width: 4rem;
+}
