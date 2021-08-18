@@ -1,5 +1,7 @@
+/* eslint-disable no-underscore-dangle */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import loadUsers from '../../redux/actions/creators/users';
 import { addFriend } from '../../redux/actions/creators/friends';
 
@@ -25,7 +27,9 @@ export default function App() {
               >
                 -
               </button>
-              {user.name}
+              <Link to={`${user._id}`}>
+                {user.name}
+              </Link>
               <button
                 type="button"
                 onClick={
