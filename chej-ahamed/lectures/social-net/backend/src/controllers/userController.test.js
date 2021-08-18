@@ -79,9 +79,7 @@ describe('Given getAll', () => {
 
         expect(res.json).toHaveBeenCalled();
       });
-    });
 
-    describe('And User.find rejects', () => {
       test('Then res.status with 500', async () => {
         const req = {
           body: {}
@@ -97,9 +95,7 @@ describe('Given getAll', () => {
 
         expect(res.status).toHaveBeenCalledWith(500);
       });
-    });
 
-    describe('And User.find rejects', () => {
       test('Then res.send is called with FIND_ERROR', async () => {
         const req = {
           body: {}

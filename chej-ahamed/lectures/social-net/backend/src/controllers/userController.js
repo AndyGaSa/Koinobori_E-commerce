@@ -1,3 +1,4 @@
+const debug = require('debug');
 const User = require('../models/userModel');
 
 async function createOne({ body }, res) {
@@ -19,18 +20,19 @@ async function getAll({ query }, res) {
     res.send(error);
   }
 }
-async function findOneUser(req, res, next) {
+async function findOneUser(req, res) {
   const { userId } = req.params;
   try {
-    const user = await User.findById(userId);
-
-    if (user) {
-      req.user = user;
-      next();
-    } else {
-      res.status(404);
-      res.send(new Error(`There is no user with id ${userId}`));
-    }
+    const user = await User.findById(userId)
+      .populate({
+        path: 'friends',
+        select: ['name']
+      })
+      .populate({
+        path: 'adversaries',
+        select: ['name']
+      });
+    res.send(user);
   } catch (error) {
     res.status(500);
     res.send(error);
@@ -41,13 +43,16 @@ async function updateOneUser(req, res) {
   const { userId } = req.params;
 
   try {
-    const updatedBeer = await User.findByIdAndUpdate(
+    const userUpdeted = await User.findByIdAndUpdate(
       userId,
       dataToUpdate,
-      { new: true }
+      {
+        new: true,
+        useFindAndModify: false
+      }
     );
 
-    res.json(updatedBeer);
+    res.json(userUpdeted);
   } catch (error) {
     res.status(500);
     res.send(error);
@@ -58,10 +63,11 @@ async function deleteOneUser(req, res) {
   const { userId } = req.params;
 
   try {
-    await User.findByIdAndDelete(userId);
+    const deleteUser = await User.findByIdAndDelete(userId);
 
     res.status(204);
-    res.json('The user was deleted');
+    res.json(deleteUser);
+    debug(deleteUser);
   } catch (error) {
     res.status(500);
     res.send(error);
