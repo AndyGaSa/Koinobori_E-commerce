@@ -1,8 +1,9 @@
 import actionTypes from '../actions/actionTypes';
 
-export default function userReducers(users = {}, action) {
+export default function userReducers(users = [], action) {
+  let newUsers = users;
   if (action.type === actionTypes.LOAD_USERS) {
-    return action.data;
+    newUsers = action.data.map((gnomo) => gnomo);
   }
-  return users;
+  return newUsers;
 }
