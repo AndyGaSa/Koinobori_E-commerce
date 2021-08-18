@@ -11,7 +11,8 @@ export default function FriendList() {
 
   return (
     <div className="friendList">
-      <h1>Hola Panitas</h1>
+      <h1>User Details</h1>
+      <h2>Friends</h2>
       <main>
         <ul>
           {friendsList.map((friend) => (

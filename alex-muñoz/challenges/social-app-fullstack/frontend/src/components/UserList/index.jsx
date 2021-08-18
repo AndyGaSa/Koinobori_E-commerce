@@ -18,13 +18,19 @@ export default function App() {
             <li key={`${user.name}`}>
               <button
                 type="button"
+                onClick={
+                  // eslint-disable-next-line no-underscore-dangle
+                  () => console.log(user._id)
+                }
               >
                 -
               </button>
               {user.name}
               <button
                 type="button"
-                onClick={dispatch(addFriend(user))}
+                onClick={
+                  () => dispatch(addFriend(user))
+                }
               >
                 +
               </button>
