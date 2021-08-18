@@ -1,8 +1,25 @@
 const Gnome = require('../models/gnome.model');
 
+function transformQuery(query) {
+  let transformedQuery = {};
+  const entries = Object.entries(query);
+  if (entries.length > 0) {
+    entries.forEach(([property, filter]) => {
+      if (property.includes('_inc')) {
+        transformedQuery = { ...transformedQuery, [property.split('_')[0]]: { $regex: filter, $options: 'i' } };
+      } else {
+        transformedQuery = { ...transformedQuery, [property]: filter };
+      }
+    });
+  }
+  return transformedQuery;
+}
+
 async function getGnomes({ query }, res) {
   try {
-    const foundGnomes = await Gnome.find(query)
+    const newQuery = transformQuery(query);
+
+    const foundGnomes = await Gnome.find(newQuery)
       .populate({ path: 'friends', select: 'name' })
       .populate({ path: 'adversaries', select: 'name' });
 
