@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import FriendList from './components/FriendList';
-import UserList from './components/UserList';
+import App from './App';
 import configureStore from './redux/store';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={configureStore()}>
-      <FriendList />
-      <UserList />
+      <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
