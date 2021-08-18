@@ -1,0 +1,25 @@
+.userlist__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .userlist__button{
+        background: linear-gradient(90deg, rgba(239,146,249,1) 0%, rgba(94,209,235,1) 100%);
+        color: white;
+        border: 1px dashed #f092f9;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-left:10px;
+        margin-right: 10px;
+    }
+    
+    .userlist__image{
+        width: 100px;
+        height: 100px;
+    }
+}

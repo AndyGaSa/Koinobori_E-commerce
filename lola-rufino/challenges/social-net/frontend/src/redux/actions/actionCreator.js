@@ -14,7 +14,7 @@ export function loadUsers() {
 
 export function loadUser() {
   return async (dispatch) => {
-    const { data } = await axios.get('http://localhost:5000/api/users/611b928dd5f7864a10e2f790');
+    const { data } = await axios.get('http://localhost:5000/api/users/611bb254dbe2a924243964a6');
 
     dispatch({
       type: actionTypes.LOAD_USER,
