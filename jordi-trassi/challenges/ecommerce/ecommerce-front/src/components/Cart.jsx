@@ -11,8 +11,8 @@ export default function Cart() {
   function handlePay() {
     dispatch(payProducts(cart));
   }
-  function handleDeleteClick(product) {
-    dispatch(deleteToCart(product));
+  function handleDeleteClick(item) {
+    dispatch(deleteToCart(item));
   }
 
   return (

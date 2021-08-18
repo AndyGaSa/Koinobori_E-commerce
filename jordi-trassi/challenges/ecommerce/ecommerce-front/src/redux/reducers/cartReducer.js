@@ -5,7 +5,7 @@ export default function cartReducer(cart = {
   totalPrice: 0,
 }, action) {
   // eslint-disable-next-line no-debugger
-  debugger;
+
   let nextCart = cart;
   switch (action.type) {
     case actionTypes.PAY_PRODUCTS:

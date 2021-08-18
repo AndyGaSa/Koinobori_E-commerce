@@ -23,7 +23,7 @@ export default function productsReducer(products = [], action) {
       console.log(action.product);
       nextProducts = products.map((product) => {
         if (product._id === action.product.product) {
-          product.stock += action.product.amount;
+          product.stock += 1;
         }
         return product;
       });

@@ -36,8 +36,8 @@ export function addToCart(product, amount = 1) {
 }
 
 export function deleteToCart(product) {
+  console.log(product);
   // eslint-disable-next-line no-debugger
-  debugger;
   return {
     type: actionTypes.DELETE_TO_CART,
     product: {
