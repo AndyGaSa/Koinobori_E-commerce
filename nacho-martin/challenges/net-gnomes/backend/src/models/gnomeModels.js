@@ -6,7 +6,7 @@ const gnomeSchema = mongoose.Schema({
   eyeColor: String,
   name: String,
   gender: String,
-  aboout: String,
+  about: String,
   registered: { type: Date, default: new Date() },
   tags: [
     String
