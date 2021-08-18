@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const debug = require('debug')('gnomosNet');
 const morgan = require('morgan');
+const cors = require('cors');
 const chalk = require('chalk');
 
 require('./src/configDDBB/configDDBB');
@@ -9,6 +10,7 @@ require('./src/configDDBB/configDDBB');
 const server = express();
 const port = process.env.PORT || 5000;
 
+server.use(cors());
 server.use(express.json());
 server.use(morgan('dev'));
 
