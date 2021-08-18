@@ -1,11 +1,10 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
-export default function Adversaries() {
+export default function Adversaries({ adversarieProp }) {
   return (
     <div>
-      <span>React</span>
-      <span>Redux</span>
-      <span>Tests</span>
+      <span>{adversarieProp}</span>
     </div>
   );
 }

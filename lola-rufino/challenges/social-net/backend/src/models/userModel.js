@@ -1,7 +1,7 @@
 const { model, Schema } = require('mongoose');
 
 const userSchema = new Schema({
-  picture: { type: String, default: 'http://placehold.it/32x32' },
+  picture: { type: String, default: 'https://i.ibb.co/7tDXYZv/original.jpg' },
   age: Number,
   eyeColor: String,
   name: String,

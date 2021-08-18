@@ -3,6 +3,8 @@ import React from 'react';
 
 export default function Friends({ friendProp }) {
   return (
-    <span>{friendProp.name}</span>
+    <div>
+      <span>{friendProp}</span>
+    </div>
   );
 }
