@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
@@ -19,5 +20,42 @@ export function buyProducts(cartData) {
       type: actionTypes.BUY_PRODUCTS,
       data,
     });
+  };
+}
+
+export function loadRandomBeer() {
+  // load random beer
+  return {
+    type: 'load random beer',
+  };
+}
+
+export function addToCart(product, amount = 1) {
+  return {
+    type: actionTypes.ADD_TO_CART,
+    product: {
+      amount,
+      product: product._id,
+      name: product.name,
+      price: product.price,
+    },
+  };
+}
+
+export function payProducts(cart) {
+  return async (dispatch) => {
+    try {
+      const { data: products } = await axios.post(process.env.REACT_APP_CART_ENDPOINT, cart);
+      dispatch({
+        type: actionTypes.PAY_PRODUCTS,
+        products,
+      });
+    } catch (error) {
+      dispatch({
+        type: actionTypes.PRODUCT_API_ERROR,
+        products: [],
+        error: error.message,
+      });
+    }
   };
 }

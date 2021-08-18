@@ -1,0 +1,48 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 0px;
+    background-color: rgb(23, 23, 23);
+    font-family: 'Noto Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.products__list {
+    list-style: none;
+}
+
+.list-items__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 3rem;
+}
+.list-items__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 3rem;
+}
+ 
+.list-item__img {
+    border: solid 0.2rem;
+    border-color: #ff982f;
+}
+.list-item__article{
+    margin: 2rem;
+}
+
+.list-item__button {
+    background-color: #237de0;
+    width: 7rem;
+    padding: 0.4rem;
+    border: solid 0.1rem;
+    border-radius: 10vh;
+}
