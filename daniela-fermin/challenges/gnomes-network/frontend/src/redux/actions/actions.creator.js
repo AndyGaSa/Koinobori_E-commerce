@@ -21,3 +21,14 @@ export function loadCurrentGnome(gnome_id) {
     });
   };
 }
+
+export function addFriend(gnome_id, id) {
+  return async (dispatch) => {
+    await axios.put(`/gnomesApi/gnomes/${gnome_id}`, id);
+    const { data } = await axios.get(`/gnomesApi/gnomes/${gnome_id}`);
+    dispatch({
+      type: actionTypes.LOAD_CURRENT_GNOME,
+      currentGnome: data
+    });
+  };
+}
