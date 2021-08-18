@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadUser, submitUser } from '../redux/actions/user.creatos';
@@ -18,17 +19,17 @@ export default function Users() {
   return (
     <>
       <h2>
-        Age:
-        {user.age}
-      </h2>
-      <input type="text" name="age" onChange={saveInputChanges} />
-      <hr />
-      <h2>
         Name:
         {' '}
         {user.name}
       </h2>
       <input type="text" name="name" onChange={saveInputChanges} />
+      <hr />
+      <h2>
+        Age:
+        {user.age}
+      </h2>
+      <input type="text" name="age" onChange={saveInputChanges} />
       <hr />
       <h2>
         EyeColor:
@@ -37,7 +38,7 @@ export default function Users() {
       </h2>
       <input type="text" name="eyeColor" onChange={saveInputChanges} />
       <hr />
-      <button type="button" onClick={() => dispatch(submitUser(userUpdated))}>Submit</button>
+      <button type="button" onClick={() => dispatch(submitUser(userUpdated, user._id))}>Submit</button>
     </>
   );
 }

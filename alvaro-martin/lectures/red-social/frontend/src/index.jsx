@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './redux/store';
 import Users from './components/Details';
+import Profiles from './components/Profiles';
 
 ReactDOM.render(
 
   <React.StrictMode>
     <Provider store={configureStore()}>
       <h1>Hola</h1>
+      <Profiles />
       <Users />
     </Provider>
   </React.StrictMode>,
