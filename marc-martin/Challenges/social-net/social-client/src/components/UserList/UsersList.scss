@@ -1,0 +1,22 @@
+
+.users {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .users__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        align-items: stretch;
+        border: 1px solid rgb(231, 230, 230);
+        border-radius: 15px;
+        width: 100%;
+        
+    }
+
+    li {
+        list-style:none
+    }
+}
