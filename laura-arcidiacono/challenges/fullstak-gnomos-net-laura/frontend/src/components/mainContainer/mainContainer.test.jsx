@@ -11,9 +11,9 @@ describe('Given a MainContainer component', () => {
     test('Then h2 will be in the document', () => {
       expect(screen.getByTestId('main__title')).toBeInTheDocument();
     });
-    test('And the value will be Este es el Main', () => {
+    test('And the value will be Nuestros Gnomo Users Destacados', () => {
       const titleH2 = screen.getByTestId('main__title');
-      expect(titleH2.textContent).toBe('Este es el Main');
+      expect(titleH2.textContent).toBe('Nuestros Gnomo Users Destacados');
     });
   });
 });
