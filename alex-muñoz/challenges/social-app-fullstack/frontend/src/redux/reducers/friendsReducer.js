@@ -2,8 +2,16 @@ import actionTypes from '../actions/types/friends';
 
 export default function friendsReducer(friends = [], action) {
   let newFriendsList = friends;
-  if (action.type === actionTypes.LOAD_FRIENDS) {
-    newFriendsList = action.friends?.map((friend) => friend);
+  switch (action.type) {
+    case actionTypes.LOAD_FRIENDS:
+      newFriendsList = action.friends?.map((friend) => friend);
+      break;
+    case actionTypes.ADD_USER_TO_FRIEND:
+      newFriendsList = [...friends, action.friends];
+      break;
+
+    default:
+      break;
   }
   return newFriendsList;
 }
