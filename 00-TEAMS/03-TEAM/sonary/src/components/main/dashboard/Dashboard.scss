@@ -1,0 +1,118 @@
+$gris5: #F2F2F2;
+$gris10:#E5E5E5;
+$gris15:#DADADA;
+$gris95:rgb(38, 38, 38);
+$gris90:#575757;
+$verde: rgb(0, 229.5, 0);
+
+* {
+    text-decoration: none;
+}
+
+.dashboard__top {
+    margin: 40px 160px 0px 160px;
+    display: flex; 
+    justify-content: space-between;
+    .dashboard__title {
+        font-size: 30px;
+    }
+    .dashboard__search {
+        width: 740px;
+        height: 40px;
+        font-size: 20px;
+        border: solid 1px $gris90;
+        background-color: $gris5;
+        border-radius: 10px;
+        margin-right: 80;
+    }
+    .dashboard__search::placeholder{
+        color: $gris90;
+        margin-left: 20px;
+    }
+}
+
+.dashboard__search:active {
+    border: solid 1px $verde;
+}
+.dashboard__bottom {
+    margin: 10px 150px 0px 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list__button {
+    position: absolute;
+    margin-left: 325px;
+    margin-top: 10px;
+    width: 25px;
+    height: 25px; 
+    border-radius: 12.5px;
+    border: solid 1px $gris95;
+    background-color: $gris5;
+}
+
+
+.list__button--fav{
+    background-color: $verde;
+}
+
+
+.list__track {
+    background-color: $gris5;
+    margin: 10px 10px 10px 10px;
+    width: 360px;
+    height: 160px;
+    border-radius: 10px; 
+    .list__aux {
+        display: flex; 
+        flex-direction: row;
+    }  
+}
+
+.list__track:hover {
+    background-color: $gris10;
+    .bottom__track {
+        color: $verde;
+    }
+}
+
+.list__track:nth-child(1){
+    width: 1120px;
+    .information__auxiliar {
+        width: 740px;
+        height: 160px;
+        background-color: $gris15;
+        border-radius: 10px;
+        margin-left: 90px;
+    }
+}
+
+.track__thumbnail {
+    width: 160px;
+    height: 160px;
+    min-width: 160px;
+    background-color: $gris15;
+    border-radius: 10px;
+}
+
+.track__information {
+    margin: 5px 10px 0px 10px;
+    height: 160px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+    .information__top {
+        font-size: 30px;
+        font-weight: bold;
+        color: $gris90;
+    }
+    .information__bottom {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}
+
+.bottom__artist {
+      color: $gris90;
+}

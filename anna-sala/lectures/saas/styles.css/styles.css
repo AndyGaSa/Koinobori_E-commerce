@@ -1,0 +1,33 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.side-menu {
+  background-color: gray;
+}
+
+.side-menu-item {
+  list-style: none;
+  margin: 20px;
+}
+
+.side-menu-item a, .side-menu-item button {
+  text-decoration: none;
+  color: pink;
+  background-color: blue;
+  padding: 5px;
+}
+
+.form {
+  color: pink;
+  background-color: blue;
+  padding: 10px;
+}
+/*# sourceMappingURL=styles.css.map */

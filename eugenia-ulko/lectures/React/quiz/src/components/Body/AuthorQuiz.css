@@ -1,0 +1,9 @@
+.container-quiz {
+    display: flex;
+    flex-direction: row;
+    margin-left: 80px;
+}
+
+.img-thumbnail {
+    width: 300px;
+}

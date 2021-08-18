@@ -1,0 +1,59 @@
+$gris5: #F2F2F2;
+$gris10:#E5E5E5;
+$gris15:#DADADA;
+$gris95:rgb(38, 38, 38);
+$gris90:#575757;
+$verde: rgb(0, 229.5, 0);
+
+.details {
+    margin: 40px 160px 0px 160px;
+    display: flex; 
+    flex-direction: row;
+}
+
+.details__title {
+    font-size: 30px;
+    left: 170px;
+    position: absolute;
+}
+
+.details__information {
+    width: 360px; 
+    height: 540px;
+    background-color: $gris5;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    .details__figure {
+        height: 360px;
+        width: 360px;
+        border-radius: 10px;
+        background-color: $gris15;
+    }
+}
+
+.details__track {
+    margin: 10px 10px 20px 15px;
+    font-size: 20px;
+    .track__artist {
+        font-weight: bold;
+    }
+    .track__artist:hover{
+        color: $verde;
+    }
+    .track__album:hover{
+        color: $verde;
+    }
+
+}
+
+.details__lyrics {
+    margin: 60px 20px 0px 0px;
+    padding: 10px 10px 20px 15px;
+    width: 740px;
+    background-color: $gris5;
+    border-radius: 10px;
+}
+
+::selection{
+    background-color: $verde;
+}

@@ -1,0 +1,16 @@
+@import '../../styles/reset.scss';
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 0;
+    background-color: $primary-color;
+    h1{
+        font-family: $primary-font;
+        padding: 90px ;
+    }
+}
