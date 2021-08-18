@@ -20,7 +20,9 @@ export default function Header() {
 
   return (
     <header className="header">
-      <h1 className="header__title">social-network</h1>
+      <div className="header__title">
+        <h1>social-network</h1>
+      </div>
       <div className="header__user-info">
         <img className="user-info__pic" src={user.picture} alt="user logo" />
         <span className="user-info__name">{user.name}</span>
