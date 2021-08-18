@@ -4,14 +4,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { loadCurrentGnome } from '../../redux/actions/actions.creator';
+import { loadGnomes, loadCurrentGnome, addFriend } from '../../redux/actions/actions.creator';
 
 export default function GnomeDetail() {
-  const foundGnome = useSelector((store) => store.currentGnome);
+  const userGnome = useSelector((store) => store.currentGnome);
+  const gnomes = useSelector((store) => store.gnomes);
   const { gnome_id } = useParams();
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (!gnomes.length) dispatch(loadGnomes());
     dispatch(loadCurrentGnome(gnome_id));
   }, [gnome_id]);
 
@@ -20,22 +22,38 @@ export default function GnomeDetail() {
 
       <div>
 
-        <span>{foundGnome.name}</span>
-        <span>{foundGnome.age}</span>
-        <span>{foundGnome.eyecolor}</span>
-        <span>{foundGnome.gender}</span>
-        <span>{foundGnome.tags}</span>
+        <h2>{userGnome.name}</h2>
+        <span>{userGnome.age}</span>
+        <span>{userGnome.eyecolor}</span>
+        <span>{userGnome.gender}</span>
+        <span>{userGnome.tags}</span>
         <span>
           Friends:
           {' '}
-          {foundGnome.friends}
+          {userGnome.friends}
         </span>
         <span>
           Adversaries:
           {' '}
-          {foundGnome.friends}
+          {userGnome.friends}
         </span>
 
+      </div>
+      <div>
+        {gnomes.map((otherGnome) => (
+          <li key={otherGnome._id}>
+            <h3>{otherGnome.name}</h3>
+            <button
+              type="button"
+              onClick={() => { addFriend(gnome_id, otherGnome._id); }}
+            >
+              Add to Friends
+
+            </button>
+            <button type="button">Add to Adversaries</button>
+          </li>
+
+        ))}
       </div>
     </main>
   );
