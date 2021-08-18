@@ -1,13 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import UsersList from './components/UsersList';
+import Header from './components/Header/Header';
+import UsersList from './components/UserList/UsersList';
 import configureStore from './redux/stores/index';
 
 function App() {
   return (
     <Provider store={configureStore()}>
       <div className="App">
-        <h1>Skybook</h1>
+        <Header />
         <UsersList />
       </div>
     </Provider>
