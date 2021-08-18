@@ -36,7 +36,7 @@ describe('UserController', () => {
     
                     await userController.createOne(req, res);
 
-                    expect(res.status).toHaveBeenCallWith(500);
+                    expect(res.status).toHaveBeenCalledWith(500);
                 });
 
                 test('Then res.send is called with CREATE_ERROR', async () => {
@@ -73,7 +73,7 @@ describe('UserController', () => {
 
                     await userController.getAll(req, res);
 
-                    expect(res.status).toHaveBeenCallWith(500);
+                    expect(res.status).toHaveBeenCalledWith(500);
                 });
 
                 test('Then res.send is called with FIND_ERROR', async () => {
@@ -126,7 +126,7 @@ describe('UserController', () => {
 
                     await userController.getOneById(req, res);
                     
-                    expect(res.status).toHaveBeenCallWith(500);
+                    expect(res.status).toHaveBeenCalledWith(500);
                 });
 
                 test('Then res.send is called with FINDBYID_ERROR', async () => {                    
@@ -157,7 +157,7 @@ describe('UserController', () => {
                 test('Then res.json is called', async () => {
                     User.findByIdAndUpdate.mockResolvedValue({ name: 'pepe' });
 
-                    await userController.updateOneById(req, res);
+                    await userController.updateUser(req, res);
 
                     expect(res.json).toHaveBeenCalled();
                 });
@@ -167,15 +167,15 @@ describe('UserController', () => {
                 test('Then res.status with 500', async () => {
                     User.findByIdAndUpdate.mockRejectedValue();
 
-                    await userController.updateOneById(req, res);
+                    await userController.updateUser(req, res);
 
-                    expect(res.status).toHaveBeenCallWith(500);
+                    expect(res.status).toHaveBeenCalledWith(500);
                 });
 
                 test('Then res.send is called with fin¡dByIdAndUpdate_ERROR', async () => {
                     User.findByIdAndUpdate.mockRejectedValue(new Error('findByIdAndUpdate_ERROR'));
 
-                    await userController.updateOneById(req, res);
+                    await userController.updateUser(req, res);
                     
                     expect(res.send.mock.calls[0][0].message).toBe('findByIdAndUpdate_ERROR');
                 });
@@ -197,7 +197,7 @@ describe('UserController', () => {
 
                     await userController.deleteOneById(req, res);
 
-                    expect(res.status).toHaveBeenCallWith(204);
+                    expect(res.status).toHaveBeenCalledWith(204);
                 });
 
                 test('Then res.json is called', async () => {
@@ -215,7 +215,7 @@ describe('UserController', () => {
 
                     await userController.deleteOneById(req, res);
 
-                    expect(res.status).toHaveBeenCallWith(500);
+                    expect(res.status).toHaveBeenCalledWith(500);
                 });
 
                 test('Then res.send is called with findByIdAndDelete_ERROR', async () => {
