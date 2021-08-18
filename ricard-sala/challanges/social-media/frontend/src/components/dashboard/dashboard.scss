@@ -3,7 +3,7 @@
     header{
         padding-top: 90px;
         color: honeydew;
-        font-size: .7em;
+        font-size: 2em;
     }
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@ width: 150px;
 transform: translate(0px, 20px);
 align-items: center;
 clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-background-color: firebrick;
+
 }
 .img{
     height: 170px;
