@@ -16,7 +16,7 @@ export default function gnomesList() {
     <>
       <h2>Gnomes</h2>
       <ul>
-        {gnomesUsers.map((gnome) => <li><Link to={`${gnome._id}`}>{gnome.name}</Link></li>)}
+        {gnomesUsers.map((gnome) => <li key={gnome._id}><Link to={`${gnome._id}`}>{gnome.name}</Link></li>)}
       </ul>
     </>
   );
