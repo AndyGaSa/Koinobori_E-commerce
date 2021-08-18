@@ -13,10 +13,10 @@ export function loadFriends() {
 
 export function addFriend(user) {
   return async (dispatch) => {
-    await axios.put('/api/friends', user);
+    await axios.post('/api/friends', user);
     const { data } = await axios.get('/api/friends');
     dispatch({
-      type: actionTypesFriends.ADD_USER_TO_FRIEND,
+      type: actionTypesFriends.LOAD_FRIENDS,
       friends: data
     });
   };
