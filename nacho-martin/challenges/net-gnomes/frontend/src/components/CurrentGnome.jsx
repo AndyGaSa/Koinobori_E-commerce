@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { loadCurrentGnome, addFriend, removeRelated } from '../redux/actions/currentGnomeCreator';
+import { loadCurrentGnome, addRelated, removeRelated } from '../redux/actions/currentGnomeCreator';
 import requestTypes from '../utils/requestTypes';
 
 export default function CurrentGnome() {
@@ -22,11 +22,11 @@ export default function CurrentGnome() {
             {gnome.name}
             {userGnome?.friends?.some((friend) => friend._id === gnome._id)
               ? <button type="button" onClick={() => dispatch(removeRelated(gnomeId, userGnome?.friends, gnome._id, requestTypes.REMOVE_FRIEND))}>Remove friend</button>
-              : <button type="button" onClick={() => dispatch(addFriend(gnomeId, userGnome?.friends, gnome._id, requestTypes.ADD_FRIEND))}>Add friend</button>}
+              : <button type="button" onClick={() => dispatch(addRelated(gnomeId, userGnome?.friends, gnome._id, requestTypes.ADD_FRIEND))}>Add friend</button>}
 
             {userGnome?.adversaries?.some((friend) => friend._id === gnome._id)
               ? <button type="button" onClick={() => dispatch(removeRelated(gnomeId, userGnome?.friends, gnome._id, requestTypes.REMOVE_ADVERSARY))}>Remove adversary</button>
-              : <button type="button" onClick={() => dispatch(addFriend(gnomeId, userGnome?.adversaries, gnome._id, requestTypes.ADD_ADVERSARY))}>Add adversary</button>}
+              : <button type="button" onClick={() => dispatch(addRelated(gnomeId, userGnome?.adversaries, gnome._id, requestTypes.ADD_ADVERSARY))}>Add adversary</button>}
           </li>
         ))}
       </ul>

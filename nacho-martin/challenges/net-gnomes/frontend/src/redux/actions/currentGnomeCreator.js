@@ -22,7 +22,7 @@ export function loadCurrentGnome(gnomeId) {
   };
 }
 
-export function addFriend(gnomeId, currentRelated, id, action) {
+export function addRelated(gnomeId, currentRelated, id, action) {
   const newRelated = [...currentRelated, id];
   let relation;
 
