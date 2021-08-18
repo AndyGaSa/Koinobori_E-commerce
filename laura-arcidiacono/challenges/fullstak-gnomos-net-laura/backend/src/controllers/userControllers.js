@@ -1,4 +1,3 @@
-const debug = require('debug')('gnomosNet');
 const User = require('../models/userModel');
 
 async function getAll({ query }, res) {
@@ -10,6 +9,7 @@ async function getAll({ query }, res) {
     res.send(error);
   }
 }
+
 async function createOne({ body }, res) {
   try {
     const newUser = await User.create(body);
