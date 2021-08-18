@@ -1,0 +1,27 @@
+.friend-button{
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+}
+.adversarie-button{
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.adversarie-div{
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+.adversarie-image{
+    width: 100px;
+    border-radius: 50%;
+    border: rgb(255, 89, 0) 4px solid;
+}
