@@ -15,7 +15,6 @@ export default function Users() {
       [event.target.name]: event.target.value,
     });
   }
-  console.log(userUpdated);
   return (
     <>
       <h2>

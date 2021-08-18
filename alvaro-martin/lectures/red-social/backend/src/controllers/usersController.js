@@ -48,10 +48,8 @@ async function deleteOneById({ params: { ObjectId } }, res) {
 }
 async function updateOneById({ params: { ObjectId }, body: { value } }, res) {
   try {
-    console.log(value);
     const updatedUser = await User.findByIdAndUpdate(ObjectId, value, { new: true });
     res.status(200);
-    console.log(updatedUser.age);
     res.json(updatedUser);
   } catch (error) {
     res.status(500);
