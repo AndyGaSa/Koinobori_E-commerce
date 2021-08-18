@@ -4,6 +4,12 @@ const usersController = require('../controllers/usersController');
 const userRouter = new Router();
 
 userRouter
+  .route('/friends')
+  .get(usersController.getFriends);
+userRouter
+  .route('/adversaries')
+  .get(usersController.getAdversaries);
+userRouter
   .route('/')
   .post(usersController.postUser)
   .get(usersController.getAllUsers);

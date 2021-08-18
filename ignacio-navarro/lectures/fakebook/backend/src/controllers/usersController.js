@@ -19,14 +19,39 @@ async function getAllUsers({ query }, res) {
     res.send(error);
   }
 }
+async function getAdversaries({ query }, res) {
+  try {
+    const adversaries = await User.find(query);
+    res.json(adversaries);
+  } catch (error) {
+    res.status(404);
+    res.send(error);
+  }
+}
+async function getFriends({ query }, res) {
+  try {
+    const friends = await User.find(query);
+    res.json(friends);
+  } catch (error) {
+    res.status(404);
+    res.send(error);
+  }
+}
 async function getOneUser({ params: { userId } }, res) {
   try {
-    const foundUser = await User.findById(userId)
-      .populate({
-        path: 'friends',
-        select: ['name'],
-      });
+    const foundUser = await User.findById(userId);
+    //   .populate({
+    //     path: 'friends',
+    //     select: ['name'],
+    //   })
+    //   .exec((err) => {
+    //     if (err) {
+    //       res.status(407);
+    //     } else {
+    //       res.status(200);
     res.json(foundUser);
+    //     }
+    //   });
   } catch (error) {
     res.status(500);
     res.send(error);
@@ -48,6 +73,7 @@ async function updateUser({ body, params: { userId } }, res) {
     res.send(error);
   }
 }
+
 async function deleteUser({ params: { userId } }, res) {
   try {
     await User.findByIdAndDelete(userId);
@@ -65,4 +91,6 @@ module.exports = {
   getOneUser,
   updateUser,
   deleteUser,
+  getFriends,
+  getAdversaries,
 };

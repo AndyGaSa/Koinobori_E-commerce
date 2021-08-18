@@ -43,7 +43,7 @@ export default function Home() {
       </section>
       <section>
         <ul className="home__adversaries-container">
-          {(adversaries.length > 0) && adversaries.slice(0, 5).map((adversarie) => (
+          {(adversaries.length > 0) && adversaries.slice(6, 10).map((adversarie) => (
             <Adversarie key={`adversarie_${user._id}`} adversarieData={adversarie} />
           ))}
 
