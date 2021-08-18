@@ -9,9 +9,8 @@ export default function App() {
   useEffect(() => {
     dispatch(loadUsers());
   }, []);
-
   return (
-    <div className="App">
+    <div className="user-list-container">
       <h1>User List</h1>
       <main>
         <ul>
@@ -25,7 +24,7 @@ export default function App() {
               {user.name}
               <button
                 type="button"
-                onChange={dispatch(addFriend(user))}
+                onClick={dispatch(addFriend(user))}
               >
                 +
               </button>
