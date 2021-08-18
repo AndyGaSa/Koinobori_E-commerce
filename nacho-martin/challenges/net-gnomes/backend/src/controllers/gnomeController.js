@@ -26,12 +26,12 @@ async function getOne({ params: { gnomeId } }, res) {
       .populate(
         {
           path: 'friends',
-          select: 'name'
+          select: ['name']
         }
       )
       .populate({
         path: 'adversaries',
-        select: 'name'
+        select: ['name']
       });
     res.json(gnomeFound);
   } catch (error) {

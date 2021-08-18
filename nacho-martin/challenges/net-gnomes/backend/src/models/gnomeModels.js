@@ -13,8 +13,7 @@ const gnomeSchema = mongoose.Schema({
   ],
   friends: [
     {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Gnome'
+      type: mongoose.Schema.Types.ObjectId, ref: 'Gnome'
     }
   ],
   adversaries: [
