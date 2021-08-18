@@ -7,10 +7,14 @@ export default function ListOfGnomes() {
   const gnomes = useSelector((store) => store.gnomes);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(loadGnomes());
-  }, []);
   const [filteredGnomes, setFilterGnomes] = useState();
+  useEffect(() => {
+    if (!gnomes.length) dispatch(loadGnomes());
+  }, []);
+
+  useEffect(() => {
+    setFilterGnomes(gnomes || []);
+  }, [gnomes]);
   function filterGnomes(searchTerm) {
     if (!searchTerm) setFilterGnomes(gnomes);
     else {
