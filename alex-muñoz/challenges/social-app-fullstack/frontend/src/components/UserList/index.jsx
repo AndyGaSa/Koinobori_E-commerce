@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import loadUsers from '../../redux/actions/creators/loadUsers';
+import loadUsers from '../../redux/actions/creators/users';
+import { addFriend } from '../../redux/actions/creators/friends';
 
 export default function App() {
   const usersList = useSelector(({ users }) => users);
@@ -24,6 +25,7 @@ export default function App() {
               {user.name}
               <button
                 type="button"
+                onChange={dispatch(addFriend(user))}
               >
                 +
               </button>
