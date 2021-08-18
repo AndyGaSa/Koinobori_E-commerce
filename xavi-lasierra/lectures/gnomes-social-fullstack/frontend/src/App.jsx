@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Header from './components/Header/Header';
 import SideMenu from './components/SideMenu/SideMenu';
-import GnomeProfile from './pages/GnomeProfile/GnomeProfile';
+import HomePage from './pages/HomePage/HomePage';
 
 import './app.scss';
 
@@ -13,7 +13,7 @@ function App() {
     <>
       <Header sideMenuClass={sideMenuClass} setSideMenuClass={setSideMenuClass} />
       <SideMenu sideMenuClass={sideMenuClass} />
-      <GnomeProfile />
+      <HomePage />
     </>
   );
 }
