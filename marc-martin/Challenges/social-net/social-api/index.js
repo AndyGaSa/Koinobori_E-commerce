@@ -3,6 +3,7 @@ const express = require('express');
 const debug = require('debug')('server');
 const chalk = require('chalk');
 const morgan = require('morgan');
+const cors = require('cors');
 
 require('./src/configs/ddbbConfig');
 
@@ -11,6 +12,7 @@ const port = process.env.PORT || 5000;
 
 server.use(morgan('dev'));
 server.use(express.json());
+server.use(cors());
 
 const userRouter = require('./src/routers/usersRouter');
 
