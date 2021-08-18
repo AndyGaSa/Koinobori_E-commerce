@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Adversaries from '../components/Adversaries';
-import Friends from '../components/Friends';
+// import Friends from '../components/Friends';
 import { loadUsers, loadUser } from '../redux/actions/actionCreator';
 
 export default function Home() {
@@ -37,8 +37,7 @@ export default function Home() {
         <span>Favorite fruit: Watermelon</span>
         <section>
           Friends:
-          { users
-          && users?.map((friend) => (<Friends friendProp={friend} />))}
+          {/* users.map((friend) => friend.name) */}
         </section>
         <section>
           Adversaries:
