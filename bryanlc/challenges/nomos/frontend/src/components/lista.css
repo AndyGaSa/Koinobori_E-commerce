@@ -1,0 +1,18 @@
+
+.reverse--container{
+    display: flex;
+    flex-direction: reverse;
+}
+.rowreverse--container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container__feature {
+    flex: 1;
+}
+
+.image__gnomo{
+    width: 20vw;
+    height: 20vh;
+}

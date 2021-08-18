@@ -2,7 +2,7 @@ const express = require('express');
 require('dotenv').config();
 require('./src/config/mongoose.config');
 
-const debug = require('debug')('nomosSN');
+const debug = require('debug')('gnomosSN');
 const morgan = require('morgan');
 
 const server = express();
