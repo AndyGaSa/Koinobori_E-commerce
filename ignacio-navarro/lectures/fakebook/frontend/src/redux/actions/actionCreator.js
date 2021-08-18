@@ -21,7 +21,7 @@ export function loadAdversaries() {
 }
 export function loadUser() {
   return async (dispatch) => {
-    const { data } = await axios.get('api/user/611c039e9a934687df7d2587');
+    const { data } = await axios.get('api/user/611d2b089a934687df7d25da');
     dispatch({
       type: actionTypes.LOAD_USER,
       data,

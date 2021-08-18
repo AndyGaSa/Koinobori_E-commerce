@@ -9,6 +9,7 @@ header{
     align-items: center;
     top: 0;
     filter: drop-shadow(9px 2px 13px grey);
+    z-index: 1;
     nav{
         display: flex;
         flex-direction: row;
