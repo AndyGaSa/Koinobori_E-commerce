@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 const User = require('../models/userModel');
 
 async function postUser({ body }, res) {
@@ -32,6 +33,25 @@ async function getFriends({ query }, res) {
   try {
     const friends = await User.find(query);
     res.json(friends);
+  } catch (error) {
+    res.status(404);
+    res.send(error);
+  }
+}
+async function putFriends(req, res) {
+  console.log(req.body);
+  try {
+    const updatedUser = await User.findByIdAndUpdate(
+      req.params.params,
+      { $push: req.body },
+      {
+        new: true,
+        useFindAndModify: false,
+      },
+    )
+      .populate({ path: 'friends', select: 'picture' });
+
+    res.json(updatedUser);
   } catch (error) {
     res.status(404);
     res.send(error);
@@ -93,4 +113,5 @@ module.exports = {
   deleteUser,
   getFriends,
   getAdversaries,
+  putFriends,
 };

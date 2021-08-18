@@ -7,6 +7,7 @@ export default function Friend({ friendData }) {
   return (
     <div className="friend-div">
       <img className="friend-image" src={friendData.picture} alt="jordi" border="0" />
+
       <button className="foe-button" type="button">-</button>
     </div>
   );

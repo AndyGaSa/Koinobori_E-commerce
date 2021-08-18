@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import { Provider } from 'react-redux';
-// import Home from './pages/Home';
+import Home from './pages/Home';
 import Header from './components/Header';
 import configureStore from './redux/store';
-import People from './pages/People';
+// import People from './pages/People';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Header />
         <main>
 
-          <People />
+          <Home />
         </main>
       </div>
     </Provider>

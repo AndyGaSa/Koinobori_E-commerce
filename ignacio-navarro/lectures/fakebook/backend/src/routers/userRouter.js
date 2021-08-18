@@ -7,6 +7,9 @@ userRouter
   .route('/friends')
   .get(usersController.getFriends);
 userRouter
+  .route('/friends/:params')
+  .put(usersController.putFriends);
+userRouter
   .route('/adversaries')
   .get(usersController.getAdversaries);
 userRouter

@@ -28,3 +28,12 @@ export function loadUser() {
     });
   };
 }
+export function addFriend(newData, id) {
+  return async (dispatch) => {
+    const { data } = await axios.put(`api/user/friends/${id}`, newData);
+    dispatch({
+      type: actionTypes.UPDATE_USER,
+      data,
+    });
+  };
+}

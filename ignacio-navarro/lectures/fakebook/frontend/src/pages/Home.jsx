@@ -7,7 +7,7 @@ import Adversarie from '../components/Adversarie';
 import './Home.scss';
 
 export default function Home() {
-  const friends = useSelector((store) => store.friends);
+  // const friends = useSelector((store) => store.friends);
   const adversaries = useSelector((store) => store.adversaries);
   const user = useSelector((store) => store.user);
 
@@ -57,8 +57,8 @@ export default function Home() {
         </section>
         <section>
           <ul className="home__friends-container">
-            {(friends.length > 0) && friends.slice(0, 5).map((friend) => (
-              <Friend key={`friend_${user._id}`} friendData={friend} />
+            {(user?.friends?.length > 0) && user.friends.slice(0, 5).map((friend) => (
+              <Friend key={`friend_${user._id}`} friendData={friend._id} />
             ))}
 
           </ul>
