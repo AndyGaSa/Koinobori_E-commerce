@@ -1,11 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
 
 import icons from '../../utils/gnomesSocialIcons';
 
 import './gnomeProfile.scss';
+import { getGnomeById } from '../../redux/actions/currentGnome.creator';
 
 function GnomeProfile({ gnome }) {
+  const dispatch = useDispatch();
   return (
     <section className="gnome-profile">
       <h2 className="hide">PROFILE</h2>
@@ -49,21 +52,25 @@ function GnomeProfile({ gnome }) {
       <article className="gnome-profile__social">
         <h4 className="social__title">FRIENDS</h4>
         <ul className="social__gnomes">
-          {gnome?.friends.map(({ name }) => (
-            <li>
-              <button className="social__gnome" type="button">{name}</button>
-              <button className="social__delete" type="button">x</button>
-            </li>
-          ))}
+          {gnome.adversaries?.length
+            ? gnome?.friends.map(({ name }) => (
+              <li>
+                <button className="social__gnome" type="button">{name}</button>
+                <button className="social__delete" type="button">x</button>
+              </li>
+            ))
+            : <span>No friends :(</span>}
         </ul>
         <h4 className="social__title">ADVERSARIES</h4>
         <ul className="social__gnomes">
-          {gnome?.adversaries.map(({ name }) => (
-            <li>
-              <button className="social__gnome" type="button">{name}</button>
-              <button className="social__delete" type="button">x</button>
-            </li>
-          ))}
+          {gnome.adversaries?.length
+            ? gnome?.adversaries.map(({ name, _id }) => (
+              <li>
+                <button className="social__gnome" type="button" onClick={() => dispatch(getGnomeById(_id))}>{name}</button>
+                <button className="social__delete" type="button">x</button>
+              </li>
+            ))
+            : <span>No adversaries :)</span>}
         </ul>
       </article>
     </section>

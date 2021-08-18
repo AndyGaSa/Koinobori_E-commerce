@@ -7,11 +7,11 @@ import propTypes from 'prop-types';
 
 import findGnomes from '../../redux/actions/gnomes.creator';
 
-import getGnomeById from '../../redux/actions/currentGnome.creator';
+import { getGnomeById } from '../../redux/actions/currentGnome.creator';
 
 import './sideMenu.scss';
 
-function SideMenu({ sideMenuClass }) {
+function SideMenu({ sideMenuClass, setSideMenuClass }) {
   const dispatch = useDispatch();
   const foundGnomes = useSelector(({ gnomes }) => gnomes);
   const [gnomeSearch, setGnomeSearch] = useState('');
@@ -24,6 +24,7 @@ function SideMenu({ sideMenuClass }) {
 
   function openGnome(id) {
     dispatch(getGnomeById(id));
+    setSideMenuClass('side-menu--closed');
   }
 
   return (
@@ -45,5 +46,6 @@ function SideMenu({ sideMenuClass }) {
 export default SideMenu;
 
 SideMenu.propTypes = {
-  sideMenuClass: propTypes.string.isRequired
+  sideMenuClass: propTypes.string.isRequired,
+  setSideMenuClass: propTypes.func.isRequired
 };
