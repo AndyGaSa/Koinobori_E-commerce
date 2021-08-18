@@ -15,7 +15,7 @@ export default function App() {
       <main>
         <ul>
           {usersList.map((user) => (
-            <li>
+            <li key={`${user.name}`}>
               <button
                 type="button"
               >

@@ -15,7 +15,7 @@ export default function FriendList() {
       <main>
         <ul>
           {friendsList.map((friend) => (
-            <li>
+            <li key={`${friend.name}`}>
               <button
                 type="button"
               >

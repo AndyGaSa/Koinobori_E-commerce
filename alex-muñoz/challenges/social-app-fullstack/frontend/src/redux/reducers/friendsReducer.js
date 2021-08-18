@@ -7,8 +7,7 @@ export default function friendsReducer(friends = [], action) {
       newFriendsList = action.friends?.map((friend) => friend);
       break;
     case actionTypes.ADD_USER_TO_FRIEND:
-      // newFriendsList = [...newFriendsList, action.friends];
-      console.log(action.friends);
+      newFriendsList = [...newFriendsList, action.friends];
       break;
 
     default:
