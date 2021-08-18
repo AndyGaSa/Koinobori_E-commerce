@@ -22,6 +22,9 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            .adversaries__image{
+                border-radius: 50%;
+            }
         }
     }
 }

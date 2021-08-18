@@ -30,12 +30,46 @@
             border: 0px;
         }
         .find-person__button{
+            color: #a0a0a0;
             padding: 3px 10px;
             background: #fff;
             border-radius: 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             border: 0px;
             margin-left: 20px;
+        }
+        .find-person__button:hover{
+            color: #000;
+            border-color: #000;
+        }
+    }
+    .people{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .people__list{
+            margin-top: 20px;
+            width: 80%;
+            .people__noFound{
+                font-weight: bolder;
+            }
+            li{
+                width: 100%;
+                background: #fff;
+                border-radius: 25px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                padding: 20px;
+                list-style: none;
+                margin:10px 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                .people__image{
+                    border-radius: 50%;
+                }
+            }
         }
     }
 }

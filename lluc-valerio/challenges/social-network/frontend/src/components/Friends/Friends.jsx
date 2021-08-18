@@ -13,7 +13,7 @@ export default function Friends() {
   function loadPicture(friendId) {
     const friend = persons?.find((person) => person._id === friendId);
     return (
-      <img src={friend.picture} alt={`${friend.name} portrait`} />
+      <img className="friends__image" src={friend.picture} alt={`${friend.name} portrait`} />
     );
   }
 
@@ -27,12 +27,14 @@ export default function Friends() {
             (user.friends?.length <= 0)
               ? (
                 <span className="friends__noFriends">
-                  I finally faced the fact that it is not a crime not having friends.
+                  <q>
+                    I finally faced the fact that it is not a crime not having friends.
+                    <br />
+                    Being alone means you have fewer problems.
+                  </q>
                   <br />
-                  Being alone means you have fewer problems.
                   <br />
-                  <br />
-                  <quote>Whitney Houston</quote>
+                  <cite> - Whitney Houston - </cite>
                 </span>
               )
               : user.friends?.map((friend) => (

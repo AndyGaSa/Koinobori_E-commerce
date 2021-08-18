@@ -13,7 +13,7 @@ export default function Adversaries() {
   function loadPicture(adversarieId) {
     const adversarie = persons?.find((person) => person._id === adversarieId);
     return (
-      <img src={adversarie.picture} alt={`${adversarie.name} portrait`} />
+      <img className="adversaries__image" src={adversarie.picture} alt={`${adversarie.name} portrait`} />
     );
   }
 
@@ -27,10 +27,10 @@ export default function Adversaries() {
             (user.adversaries?.length <= 0)
               ? (
                 <span className="adversaries__noAdversaries">
-                  Forgive your enemies, but never forget their names.
+                  <q>Forgive your enemies, but never forget their names.</q>
                   <br />
                   <br />
-                  <quote> - John F. Kennedy - </quote>
+                  <cite> - John F. Kennedy - </cite>
                 </span>
               )
               : user.adversaries?.map((adversarie) => (
