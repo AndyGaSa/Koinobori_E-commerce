@@ -55,7 +55,7 @@ export function logoutUser() {
 
 export function closeNotification() {
   return {
-    type: userTypes.CLEAR_NOTIFICATION
+    type: notificationTypes.CLEAR_NOTIFICATION
   };
 }
 
