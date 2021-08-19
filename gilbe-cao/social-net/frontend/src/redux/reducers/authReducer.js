@@ -11,6 +11,7 @@ export default function authReducer(
     case actionTypes.AUTH_LOGIN:
       nextAuthState = {
         isAuthenticated: true,
+        user: action.user,
       };
       break;
 

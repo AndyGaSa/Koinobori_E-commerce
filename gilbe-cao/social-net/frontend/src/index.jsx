@@ -7,11 +7,13 @@ import configureStore from './redux/stores';
 import Dashboard from './components/Dashboard';
 import Login from './components/Login';
 import Profile from './components/Profile';
+import Notification from './components/Notification';
 import ProtectedRoute from './components/ProtectedRoute';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={configureStore()}>
+      <Notification />
       <BrowserRouter>
         <Switch>
           <ProtectedRoute path="/" component={Dashboard} exact />
