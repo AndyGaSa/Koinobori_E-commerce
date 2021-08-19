@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -32,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Login() {
+  const loggedUser = useSelector(({ user }) => user);
   const classes = useStyles();
   const dispatch = useDispatch();
   // const userNotFound = useSelector(({ loginError }) => loginError);
@@ -40,6 +42,9 @@ export default function Login() {
 
   function handleUserLogin() {
     dispatch(logUser(username.trim()));
+  }
+  if (Object.keys(loggedUser)?.length) {
+    return <Redirect to="/" />;
   }
 
   return (

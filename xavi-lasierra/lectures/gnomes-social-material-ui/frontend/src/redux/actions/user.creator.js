@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 import userTypes from './user.actions';
-import loginErrorTypes from './loginError.actions';
 
 export function logUser(userName) {
   return async (dispatch) => {
@@ -13,9 +12,17 @@ export function logUser(userName) {
         data
       });
     } catch (error) {
-      dispatch({
-        type: loginErrorTypes.LOAD_ERROR
-      });
+      if (error?.response?.status === 401) {
+        dispatch({
+          type: userTypes.LOGIN_ERROR,
+          data: 'User not registered'
+        });
+      } else {
+        dispatch({
+          type: userTypes.ERROR_GENERIC,
+          data: 'Server error'
+        });
+      }
     }
   };
 }
@@ -38,5 +45,11 @@ export function updateUser(updateData, id) {
 export function logoutUser() {
   return {
     type: userTypes.LOGOUT_USER
+  };
+}
+
+export function closeNotification() {
+  return {
+    type: userTypes.CLEAR_NOTIFICATION
   };
 }

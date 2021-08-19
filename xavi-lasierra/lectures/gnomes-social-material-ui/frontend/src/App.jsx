@@ -7,6 +7,7 @@ import Login from './components/Login/Login';
 import SideMenu from './components/SideMenu/SideMenu';
 import GnomeProfile from './components/GnomeProfile/GnomeProfile';
 import ProtectedRoute from './pages/ProtectedRoute/ProtectedRoute';
+import Notifications from './components/Notifications/Notifications';
 
 import './app.scss';
 
@@ -32,6 +33,7 @@ function App() {
         sideMenuClass={sideMenuClass}
         setSideMenuClass={setSideMenuClass}
       />
+
       <Switch>
         <Route path="/login" component={Login} />
         <ProtectedRoute
@@ -47,6 +49,7 @@ function App() {
           gnome={gnome}
         />
       </Switch>
+      <Notifications />
 
     </>
   );
