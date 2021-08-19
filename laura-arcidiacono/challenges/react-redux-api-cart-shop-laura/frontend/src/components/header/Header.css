@@ -1,0 +1,20 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.header__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.header__img {
+    width: 7rem;
+    margin-right: 2rem;
+}

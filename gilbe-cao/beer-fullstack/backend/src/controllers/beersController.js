@@ -1,28 +1,42 @@
 const Beer = require('../models/beerModel');
 
 async function getBeers({ query }, res) {
-  const foundBeers = await Beer.find(query);
-
-  return res.send(foundBeers);
+  try {
+    const foundBeers = await Beer.find(query);
+    res.json(foundBeers);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 async function postBeer(req, res) {
-  const newBeer = await Beer.create(req.body);
+  try {
+    const newBeer = await Beer.create(req.body);
 
-  res.status(201);
-  return res.send(newBeer);
+    res.status(201);
+    res.json(newBeer);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 async function findOneBeer(req, res, next) {
   const { beerId } = req.params;
-  const beer = await Beer.findById(beerId);
+  try {
+    const beer = await Beer.findById(beerId);
 
-  if (beer) {
-    req.beer = beer;
-    next();
-  } else {
-    res.status(404);
-    res.send(new Error(`There is no beer with id ${beerId}`));
+    if (beer) {
+      req.beer = beer;
+      next();
+    } else {
+      res.status(404);
+      res.send(new Error(`There is no beer with id ${beerId}`));
+    }
+  } catch (error) {
+    res.status(500);
+    res.send(error);
   }
 }
 
@@ -34,22 +48,32 @@ async function putOneBeer(req, res) {
   const dataToUpdate = req.body;
   const { beerId } = req.params;
 
-  const updatedBeer = await Beer.findByIdAndUpdate(
-    beerId,
-    dataToUpdate,
-    { new: true },
-  );
+  try {
+    const updatedBeer = await Beer.findByIdAndUpdate(
+      beerId,
+      dataToUpdate,
+      { new: true },
+    );
 
-  return res.send(updatedBeer);
+    res.json(updatedBeer);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 async function deleteOneBeer(req, res) {
   const { beerId } = req.params;
 
-  Beer.findByIdAndDelete(beerId);
+  try {
+    await Beer.findByIdAndDelete(beerId);
 
-  res.status(204);
-  res.send();
+    res.status(204);
+    res.json();
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 module.exports = {

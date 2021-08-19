@@ -1,0 +1,20 @@
+{
+  "name": "pau-teem-player",
+  "version": "1.0.0",
+  "description": "My new package in Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "teem",
+    "friend",
+    "node",
+    "game"
+  ],
+  "author": "Laura",
+  "license": "ISC",
+  "dependencies": {
+    "pau-gallardo-pau-does-things": "^1.0.0"
+  }
+}
