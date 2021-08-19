@@ -15,22 +15,21 @@ export default function UsersList() {
 
   return (
     <main className="users">
+      <div>
+        <img src="https://definicion.de/wp-content/uploads/2019/06/perfildeusuario.jpg" alt="imagen" />
+        <h4>User</h4>
+        <p>Age</p>
+      </div>
       {users?.map((user) => (
         <ul key={user._id} className="users__list">
           <li>
             {user?.name}
           </li>
           <li>
-            Friends:
-            {user?.friends}
-            <button type="button">+</button>
-            <button type="button">-</button>
+            {user?.age}
           </li>
           <li>
-            Adversaries:
-            {user?.adversaries}
-            <button type="button">+</button>
-            <button type="button">-</button>
+            {user?.eyeColor}
           </li>
         </ul>
       ))}
