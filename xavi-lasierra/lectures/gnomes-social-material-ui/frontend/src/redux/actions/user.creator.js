@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import userTypes from './user.actions';
+import notificationTypes from './notifications.actions';
 import currentGnomeActions from './currentGnome.actions';
 
 export function logUser(userName) {
@@ -15,12 +16,12 @@ export function logUser(userName) {
     } catch (error) {
       if (error?.response?.status === 401) {
         dispatch({
-          type: userTypes.LOGIN_ERROR,
+          type: notificationTypes.LOGIN_ERROR,
           data: 'User not registered'
         });
       } else {
         dispatch({
-          type: userTypes.ERROR_GENERIC,
+          type: notificationTypes.ERROR_GENERIC,
           data: 'Server error'
         });
       }
@@ -38,7 +39,10 @@ export function updateUser(updateData, id) {
         data
       });
     } catch (error) {
-      // TODO error
+      dispatch({
+        type: notificationTypes.ERROR_GENERIC,
+        data: 'Server error'
+      });
     }
   };
 }

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import actionTypes from './gnomes.actions';
+import notificationTypes from './notifications.actions';
 
 export function findGnomes(filter) {
   return async (dispatch) => {
@@ -11,7 +12,10 @@ export function findGnomes(filter) {
         data
       });
     } catch (error) {
-      // TODO error
+      dispatch({
+        type: notificationTypes.ERROR_GENERIC,
+        data: 'Server error'
+      });
     }
   };
 }

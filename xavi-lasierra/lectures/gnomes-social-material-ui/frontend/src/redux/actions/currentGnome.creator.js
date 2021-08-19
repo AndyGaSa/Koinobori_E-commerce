@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import actionTypes from './currentGnome.actions';
+import notificationTypes from './notifications.actions';
 
 export function getGnomeById(id) {
   return async (dispatch) => {
@@ -12,7 +13,10 @@ export function getGnomeById(id) {
         data
       });
     } catch (error) {
-      // TODO error
+      dispatch({
+        type: notificationTypes.ERROR_GENERIC,
+        data: 'Server error'
+      });
     }
   };
 }
