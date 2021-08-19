@@ -151,7 +151,7 @@ export default function Header({ currentUser }) {
     <div className={classes.grow}>
       <ThemeProvider theme={theme}>
         <AppBar
-          position="fixed"
+          position="static"
           style={{ background: theme.palette.primary.mainGradient }}
           elevation={0}
         >

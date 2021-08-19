@@ -7,6 +7,7 @@ import Login from './components/Login/Login';
 import GnomeProfile from './components/GnomeProfile/GnomeProfile';
 import ProtectedRoute from './pages/ProtectedRoute/ProtectedRoute';
 import Notifications from './components/Notifications/Notifications';
+import Footer from './components/Footer/Footer';
 
 import './app.scss';
 
@@ -41,7 +42,7 @@ function App() {
         />
       </Switch>
       <Notifications />
-
+      <Footer />
     </>
   );
 }
