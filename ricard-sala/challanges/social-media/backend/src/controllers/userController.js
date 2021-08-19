@@ -23,7 +23,7 @@ async function getOneById({ params: { userId } }, res) {
     const user = await User.findById(userId)
       .populate({
         path: 'friends',
-        select: ['name'],
+        select: ['name', 'age', 'eyeColor'],
       })
       .populate({
         path: 'adversaries',
@@ -35,8 +35,31 @@ async function getOneById({ params: { userId } }, res) {
     res.send(error);
   }
 }
+async function updateOneFriendById(
+  {
+    body,
+    params: { userId },
+  },
+  res,
+) {
+  try {
+    const userToUpdate = await User.findByIdAndUpdate(
+      userId,
+      { $addToSet: body },
+      {
+        new: true,
+        useFindAndModify: false,
+      },
+    );
+    res.json(userToUpdate);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
 async function updateOneById(
   {
+
     body,
     params: { userId },
   },
@@ -73,5 +96,6 @@ module.exports = {
   getAll,
   getOneById,
   updateOneById,
+  updateOneFriendById,
   deleteOneById,
 };
