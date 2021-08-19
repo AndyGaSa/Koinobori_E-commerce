@@ -1,0 +1,19 @@
+.user-list {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 16px 0;
+}
+
+.user-container__image {
+    width: 128px;
+    
+}
+
+.user-container__figure--image {
+    border-radius: 25px;
+}
+
+.user-container__information {
+    /* Take the remaining width */
+    flex: 1;
+}

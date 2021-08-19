@@ -1,13 +1,36 @@
-/* eslint-disable no-underscore-dangle */
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
-export function loadUser() {
+export function login(name) {
   return async (dispatch) => {
-    const { data } = await axios.get('/api/products');
+    try {
+      const { data } = await axios.post('/api/login', { name });
+      return dispatch({
+        type: actionTypes.AUTH_LOGIN,
+        user: data,
+      });
+    } catch (error) {
+      if (error?.response?.status === 401) {
+        return dispatch({
+          type: actionTypes.AUTH_LOGIN_ERROR,
+          message: error.message,
+        });
+      }
+
+      return dispatch({
+        type: actionTypes.ERROR_GENERIC,
+        message: error.message,
+      });
+    }
+  };
+}
+
+export default function loadUsers() {
+  return async (dispatch) => {
+    const { data } = await axios.get('/api/users');
 
     dispatch({
-      type: actionTypes.LOAD_USER,
+      type: actionTypes.LOAD_USERS,
       data,
     });
   };

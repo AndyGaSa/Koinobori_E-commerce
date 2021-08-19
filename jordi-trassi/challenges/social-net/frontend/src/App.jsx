@@ -1,23 +1,17 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { loadUser } from './redux/actions/actionCreators';
-// import Products from './components/Products';
-// import Cart from './components/Cart';
+import React from 'react';
+import Userslist from './components/Userslist';
+
 import './App.css';
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(loadUser());
-  }, []);
   return (
     <div className="App">
       <header className="app-header" />
-      <h1 className="app-header__title">Caramelos Paco</h1>
-      <h2 className="app-header__sub-title">Están Pa Comérselos Todos!!</h2>
+      <img src="https://t3.ftcdn.net/jpg/02/97/46/82/240_F_297468224_q6xjks8YwJR6UJisN6WuW8OtPo3nRu07.jpg" alt="Social Net Paco Logo" />
+      <h1 className="app-header__title">Social Net Paco</h1>
+      <h2 className="app-header__sub-title"> Pa Conocernos Todos!!</h2>
       <div className="app-body">
-        {/* <Products />
-        <Cart /> */}
+        <Userslist />
       </div>
       <footer className="app-footer" />
     </div>

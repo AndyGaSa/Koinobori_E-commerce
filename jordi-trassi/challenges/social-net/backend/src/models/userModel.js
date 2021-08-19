@@ -7,7 +7,6 @@ const userSchema = new Schema({
     name: String,
     gender: String,
     about: String,
-    registered: { type: Date, default: new Date() },
     tags: [String],
     friends: [{ type: Schema.Types.ObjectID, ref: 'User' }],
     adversaries: [{ type: Schema.Types.ObjectID, ref: 'User' }],
