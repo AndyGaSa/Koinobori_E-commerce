@@ -66,6 +66,26 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                .people__button-friend{
+                    padding: 5px;
+                    border-radius: 35px;
+                    .true{
+
+                    }
+                    .false{
+
+                    }
+                }
+                .people__button-foe{
+                    border-radius: 35px;
+                    padding: 5px;
+                    .true{
+
+                    }
+                    .false{
+                        
+                    }
+                }
                 .people__image{
                     border-radius: 50%;
                 }

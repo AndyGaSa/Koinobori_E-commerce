@@ -13,7 +13,20 @@ export default function Principal() {
   const persons = useSelector((store) => store.persons);
   const user = useSelector((store) => store.user);
 
-  let searchDone = false;
+  // let searchDone = false;
+
+  function chekcStatus(friendOrFoe, elementId) {
+    if (friendOrFoe === 1) {
+      if (user.friends?.some((people) => people._id === elementId)) {
+        return 'people__button-friend true';
+      }
+      return 'people__button-friend false';
+    }
+    if (user.adversaries?.some((people) => people._id === elementId)) {
+      return 'people__button-friend true';
+    }
+    return 'people__button-friend false';
+  }
 
   function loadPicture(peopleId) {
     const people = persons?.find((person) => person._id === peopleId);
@@ -23,12 +36,13 @@ export default function Principal() {
   }
 
   function loadSearch(personsFound) {
-    if (searchDone) {
-      setsearchResult(
-        <section className="people">
-          <h2>People Found</h2>
-          <ul className="people__list">
-            {
+    // const caca = 4;
+    // if (searchDone) {
+    setsearchResult(
+      <section className="people">
+        <h2>People Found</h2>
+        <ul className="people__list">
+          {
               (personsFound?.length <= 0)
                 ? (
                   <span className="people__noFound">
@@ -38,15 +52,28 @@ export default function Principal() {
                 : personsFound?.map((person) => (
                   <li key={person.name}>
                     <span>{person.name}</span>
+                    <button
+                      className={chekcStatus(1, person._id)}
+                      type="button"
+                    >
+                      Friend
+                    </button>
+                    <button
+                      className={chekcStatus(2, person._id)}
+                      type="button"
+                    >
+                      Foe
+
+                    </button>
                     {loadPicture(person._id)}
                   </li>
                 ))
               }
-          </ul>
-        </section>
-      );
-    }
-    return (<></>);
+        </ul>
+      </section>
+    );
+    // }
+    // return (<></>);
   }
 
   function findUsers() {
@@ -58,7 +85,7 @@ export default function Principal() {
         person.name.toLowerCase().includes(searchText.trim().toLowerCase())
       ));
     }
-    searchDone = true;
+    // searchDone = true;
     loadSearch(personsFound);
   }
 
