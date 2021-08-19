@@ -1,0 +1,78 @@
+/* 2021 - LLuc Valério */
+
+/* Browser Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CV Lluc valério - HTML Styles */
+
+/* 2021 - LLuc Valério */
+
+.body {
+    line-height: 1;
+    color: #fff;
+    font-family: NotoSans-Regular, Arial, sans-serif;
+    background-color: #101010;
+}
+
+.header {
+    display: none;
+}
+
+.footer__info {
+    display: none;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 55px;
+    background-color: #0d0d0d;
+}
+
+.footer-nav--elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-nav__item--logo {
+    content: url(./assets/rktv-grey-eae681a197.svg);
+    /* background-image: url(./assets/rktv-grey-eae681a197.svg); */
+    /* background-image: url(https://prod1-kraken-cloudfront.rakuten.tv/images/logos/rktv-grey-eae681a197.svg) 0px 0px; */
+    background-position: 0px 0px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 122px;
+    display: inline-block;
+    margin: 3px auto 0;
+}
+
+.footer-nav__item {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 3px 0;
+    color: #ccc;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color .1s ease;
+    will-change: color;
+}
+
+.footer-nav__legal {
+    margin-top: 15px;
+    margin-left: 0;
+    display: block;
+    color: #737373;
+    text-transform: initial;
+    width: 100%;
+}
+
+.footer_mobile {}

@@ -1,0 +1,176 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+
+}
+p{
+    text-transform: uppercase ;
+}
+h1,h2,h3,h4{
+    text-transform: uppercase ;
+    font-size: 20px;
+}
+a{
+    text-transform: uppercase;
+}
+.wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: black;
+}
+
+.header{
+    background-color: black;
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__h1{
+    background-color: black;
+    width: 70%;
+    height: 80%;
+    margin: 20px auto;
+    background-image: url(https://trello-attachments.s3.amazonaws.com/60e586e74e458b25bf7141c8/60f6c137de215b37fe0a20fb/1200x442/6be8f78a6aadfee0f7a24a6d614a904c/1200px-International_Poke_CC_81mon_logo.svg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+
+.main{
+    background-color: black;
+    min-height: 75vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.main__controls{
+    display: flex;
+    flex-flow: column wrap;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+.main__controls>a{
+    color: #FFCC00;
+    width: 100%;
+    height: 20px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+}
+.main__controls>a:hover{
+    background-color: blue;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 5px #FFCC00;
+}
+
+#input-text{
+    background-color:#FFCC00;
+    border: solid 3px #3560AD;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 25px;
+    width: 100%;
+    color: #3560AD;
+}
+.main__itemspPerPage-container{
+    margin: 20px;
+    font-size: 20px;
+}
+.main__itemspPerPage-container>a{
+margin: 20px;
+}
+#card-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    height: auto;
+    width: 70%;
+}
+#card-container>a{
+    width: 190px;
+    height: 300px;
+    margin: 20px;
+    background-color: #FFCC00;
+    border: solid 10px blue;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+}
+#card-container>a>img{
+    width: 150px;
+    height: 150px;
+}
+#card-container>p{
+    font-size: 16px;
+    font-weight: bold;
+    color: yellowgreen;
+    padding: 10px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.footer{
+    height: 5vh;
+    width: 100%;
+}
+@media only screen and (min-width: 800px) {
+    .header__h1{
+        width: 35%;
+    }
+    #input-text{
+        width: 100%;
+        margin: 2vh 30%;
+        height: 5vh;
+    }
+    #card-container {
+        width: 90%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }#card-container>p {
+        text-align: center;
+    }
+    .main{
+        width: 1280px;
+        margin: 0 auto;
+        justify-content: flex-start;
+    }
+    .main__controls{
+        flex-flow: row wrap;
+        width: 90%;
+    }
+    .main__controls > a {
+        color: #FFCC00;
+        width: 19%;
+        height: 20px;
+        text-align: center;
+        margin: 10px 0;
+        padding: 30px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,30 @@
+.img-thumbnail{
+    width: 250px;
+    height: 350px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    background-color:lightgrey;
+    padding: 15px;
+}
+.books{
+    width: auto;
+    height: auto;
+    margin: 0 40px;
+}
+.books>li{
+    width: 60vw;
+    padding: 20px 0;
+    margin: 5px;
+    list-style: none;
+    display: flex;
+    background-color: rgb(181, 221, 247);
+    border-left: lightseagreen 4px solid;
+    padding-left: 20px;
+
+}
+.books>li:hover{
+    cursor: pointer;
+    background-color: lightseagreen;
+}

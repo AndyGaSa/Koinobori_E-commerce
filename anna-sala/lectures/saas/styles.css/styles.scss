@@ -1,0 +1,28 @@
+@import 'reset';
+@import 'variables';
+
+@mixin commonColors ($padding: 10px) {
+    color: $list-color;
+    background-color: $background-color;
+    padding: $padding;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.side-menu{
+    background-color: gray;
+    &-item{
+        list-style: none;
+        margin: 20px;
+        a, button{
+          text-decoration: none; 
+          @include commonColors(5px);
+        }
+    }
+}
+
+.form{
+    @include commonColors();
+}

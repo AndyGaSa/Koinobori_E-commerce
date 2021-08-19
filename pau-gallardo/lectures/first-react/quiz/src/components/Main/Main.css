@@ -1,0 +1,35 @@
+.image{
+    height: 300px;
+}
+
+.contenedor-main{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.contenedor__lista{
+    flex: 100%;
+}
+
+.list-group-item{
+    margin:20px;
+}
+
+.list-group-item:hover{
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.quiz--success{
+    background-color: green;
+}
+
+.quiz--error{
+    background-color: red;
+}
+
+
+
+
+

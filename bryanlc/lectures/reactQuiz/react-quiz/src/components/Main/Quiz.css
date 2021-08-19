@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    padding: 2em;
+}
+.img-thumbnail{
+height: 20em;
+}
+
+.quiz--acert{
+    background-color: green;
+}
+
+.quiz--error{
+    background-color: red;
+}
+

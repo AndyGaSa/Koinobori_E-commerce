@@ -1,0 +1,24 @@
+.list__users li{
+    list-style: none;
+    display: flex;
+}
+
+a{
+    margin-bottom: 30px;
+    background-color: lightsteelblue;
+    border-radius: 30px;
+    width: 30vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn__delete{
+    margin-bottom: 30px;
+    background-color: darkgrey;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

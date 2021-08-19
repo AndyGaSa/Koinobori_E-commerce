@@ -1,0 +1,33 @@
+
+.style__body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+  }
+.header{
+    background: black   
+}
+.header__logo{
+    padding-left: 20em;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    color:  #ffcb05;;
+    background: rgba(0,0,0,0.9);
+    padding: 1em;
+}
+
+.style--Imput{
+    border-radius: 20px;
+    height: 30px;
+}
+
+
+#cartas__pokemon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: black;
+}
+

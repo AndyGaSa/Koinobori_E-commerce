@@ -1,0 +1,12 @@
+.books > ul{
+    background-color: hotpink;
+    width: 400px;
+}
+
+.book ul:hover{
+    background-color: rgb(196, 63, 129);
+}
+
+ul{
+    margin-top: 2em;
+}

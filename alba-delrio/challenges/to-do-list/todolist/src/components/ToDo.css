@@ -1,0 +1,64 @@
+.title{
+    display:flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.list{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.inputList{
+    border:0px;
+}
+
+ul{
+    display:flex;
+    flex-direction: column;
+}
+li{
+    list-style: none;
+    display:flex;
+    align-items: center;
+    margin:10px;
+}
+
+.updateButton{
+    display:none;
+    border:none;
+    margin-top: 100px;
+}
+
+
+.button{
+    display:none;
+    border:none;
+    
+}
+
+.show-button{
+    display: block;
+    border:none;
+    background-color: lightcoral;
+    color:white;
+    border-radius: 5%;
+}
+.addButton{
+    background-color: rgb(101, 101, 148);
+    border-radius: 50%;
+    border:none;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    opacity:70%;
+    margin-top:30px;
+}

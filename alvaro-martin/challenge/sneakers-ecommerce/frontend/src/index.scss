@@ -1,0 +1,13 @@
+
+.sneaker-cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@media only screen and (max-width: 950px) {
+    .sneaker-cart{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+  }

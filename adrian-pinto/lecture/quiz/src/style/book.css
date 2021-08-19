@@ -1,0 +1,12 @@
+.book {
+  height: 3em;
+  margin: .5em;
+  border-left-style: groove;
+  border-left-color: aqua;
+  padding-left: .5em;
+  background-color: aqua;
+  border-left-width: 10px;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  }

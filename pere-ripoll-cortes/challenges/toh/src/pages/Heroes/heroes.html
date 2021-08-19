@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="./heroes.css">
+</head>
+<body>
+    <header>
+        <h1>Tour of Heroes</h1>
+        <nav>
+            <a href="../Dashboard/dashboard.html">Dashboard</a>
+            <a href="#">Heroes</a>
+        </nav>
+    </header>
+    <h2>My Heroes</h2>
+
+    <div>
+        <label for="new-hero">Hero name: </label>
+        <input id="new-hero" />
+
+        <button class="add-button" id="btnAdd">
+            Add hero
+        </button>
+        <button class="add-button" id="btnhero" onclick="makeRequest()">
+            Add Super Hero
+        </button>
+    </div>
+
+    <ul class="heroes" id="heroes__list">
+    </ul>
+    <script src="../../services/hero.services.js"></script>
+    <script src="../../superHeroData.json"></script>
+    <script src="../Heroes/ajax.js"></script>
+    <script src="../../heroes.const.js"></script>
+    <script src="./heroes.class.js"></script>
+    <script src="./heroes.js"></script>
+</body>
+</html>

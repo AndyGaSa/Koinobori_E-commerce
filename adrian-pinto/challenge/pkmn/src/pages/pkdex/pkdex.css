@@ -1,0 +1,20 @@
+.pkdex {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "pkdex__head pkdex__head"
+    "pkdex__info pkdex__data"; 
+}
+.pkdex__head { 
+  grid-area: pkdex__head;
+  display: flex;
+}
+.pkdex__info { grid-area: pkdex__info; }
+
+.pkdex__info img {
+  width: 10em;
+}
+
+.pkdex__data { grid-area: pkdex__data; }

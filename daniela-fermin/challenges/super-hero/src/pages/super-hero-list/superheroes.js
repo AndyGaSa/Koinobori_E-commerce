@@ -1,4 +1,7 @@
+
+let heroesPage;
+
 (function heroesPageModel() {
-  const heroesPage = new HeroesPage(superHeroes);
-  heroesPage.paintAllHeroes();
+  heroesPage = new HeroesPage(superHeroes);
+
 }());

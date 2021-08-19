@@ -1,0 +1,75 @@
+*{
+    font-family: 'Hammersmith One', sans-serif;
+    background-color: #C5AFA4;
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-container__section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-container__buttons-container{
+    display: flex;
+}
+
+.main-container__buttons{
+    font-size: 17px;
+    width: 150px;
+    height: 30px;
+    color: lightgray;
+    margin: 10px;
+    border: 2px solid #CC7E85;
+    background-color: #CF4D6F;
+}
+
+.title{
+    color: #CF4D6F;
+    font-size: 70px;
+    -webkit-text-stroke: 0.1px lightgray;
+    text-shadow: 3px 3px 1px #A36D90;
+}
+
+.input{
+    width: 300px;
+    height: 30px;
+    border: 2px dashed #CC7E85;
+    border-radius: 10%;
+    background-color: lightgray;
+}
+
+
+.input:focus-visible{
+    border: 2px dashed #CC7E85;
+    border-radius: 10%;
+    outline-offset: 0px;
+    outline: -webkit-focus-ring-color auto 0px;
+    color: #CF4D6F;
+    font-size: 17px;
+}
+
+.delete-button{
+    border-radius: 30%;
+    height: 25px;
+    width: 25px;
+}
+
+.list-button{
+    border:none;
+    color: #CF4D6F;
+    font-size: 25px;
+}

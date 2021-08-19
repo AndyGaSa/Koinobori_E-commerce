@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Header({ changePage }) {
+function Header() {
   return (
     <header>
       <h1>Tour of Heroes</h1>
       <nav>
-        <button type="button" onClick={() => changePage(0)}>Dashboard</button>
-        <button type="button" onClick={() => changePage(1)}>Heroes</button>
+        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/list">Heroes</Link>
       </nav>
     </header>
   );

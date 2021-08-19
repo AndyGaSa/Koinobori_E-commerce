@@ -1,0 +1,212 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: #2B292C;
+}
+.header-container{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+    border-bottom-left-radius: 50px ;
+    border-bottom-right-radius: 50px ;
+    margin-bottom: 30px;
+}
+.image-detail{
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height:250px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.info__properties{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.currentPokemon-name{
+    margin-bottom: 10px;
+}
+.type-pokemon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 25px;
+    border-radius: 20px;
+    font-weight: lighter;
+}
+.properties__data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+    margin: 10px;
+}
+.properties__data-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+.properties__data-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+.data__weight{
+    margin: 5px;
+    font-weight: bold;
+}
+.data__height{
+    margin: 5px;
+    font-weight: bold;
+}
+.data__weight-title{
+    font-size: small;
+    color: #767376;
+}
+.data__height-title{
+    font-size: small;
+    color: #767376;
+}
+.info__stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.stats-title{
+    margin-bottom: 20px;
+}
+.stats-graffics{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: space-between;
+}
+.graffics-hp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.graffics-atk{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.graffics-def{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.graffics-spd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+progress[value] {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+     appearance: none;
+  
+    width: 350px;
+    height: 18px;
+    margin-bottom: 10px;
+}
+progress[value]::-webkit-progress-value {
+    border-radius: 10px;
+    }
+progress[value]::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 10px;
+}
+#progress-hp-bar::-webkit-progress-value {
+    background-color: #D53A43;
+    border-radius: 10px;
+}
+#progress-atk-bar::-webkit-progress-value {
+    background-color: #FDA728;
+    border-radius: 10px;
+}
+#progress-def-bar::-webkit-progress-value {
+    background-color: #0091E9;
+    border-radius: 10px;
+}
+#progress-spd-bar::-webkit-progress-value {
+    background-color: #398C3E;
+    border-radius: 10px;
+}
+  
+
+#fire{
+    background-color: #EE8130;
+}
+#grass{
+    background-color: #7AC74C;
+}
+#water{
+    background-color:#6390F0;
+}
+#poison{
+    background-color: #A33EA1;
+}
+#bug{
+    background-color: #A6B91A;
+}
+#electric{
+    background-color: #F7D02C;
+}
+#normal{
+    background-color: #A8A77A;
+}
+#ice{
+    background-color: #96D9D6
+}
+#fighting{
+    background-color: #C22E28;
+}
+#ground{
+    background-color: #E2BF65;
+}
+#flying{
+    background-color: #A98FF3;
+}
+#psychic{
+    background-color: #F95587;
+}
+#rock{
+    background-color: #B6A136;
+}
+#ghost{
+    background-color: #735797;
+}
+#dragon{
+    background-color: #6F35FC;
+}
+#dark{
+    background-color: #705746;
+}
+#steel{
+    background-color: #B7B7CE;
+}
+#fairy {
+  background-color:  #D685AD;
+}

@@ -1,0 +1,28 @@
+body{
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+header{
+    background-color: #5f5f5f;
+    color: salmon;
+    padding: 10px 0px 50px 20px;
+}
+main{
+    padding: 20px 20px;
+}
+footer{
+        position: absolute;
+        bottom: 0;
+        height: 50px;	 
+        line-height: 50px; 
+        background-color: rgb(55, 55, 55);
+        /* display: block; */
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+}
+footer span{
+   
+    color: white;
+}
