@@ -8,6 +8,5 @@ export default function personReducer(persons = [], action) {
   } else {
     newPersons = persons;
   }
-
   return newPersons;
 }

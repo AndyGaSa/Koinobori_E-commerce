@@ -1,79 +1,108 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { updateUser } from '../../redux/actions/actionCreator';
 import Navs from '../Navs/Navs';
 
 import '../../styles/Principal.scss';
 
 export default function Principal() {
   const [searchText, setSearchText] = useState('');
-  const [searchResult, setsearchResult] = useState('');
+  const [searchResult, setSearchResult] = useState('');
+
+  const dispatch = useDispatch();
 
   const persons = useSelector((store) => store.persons);
   const user = useSelector((store) => store.user);
 
-  // let searchDone = false;
-
   function chekcStatus(friendOrFoe, elementId) {
     if (friendOrFoe === 1) {
       if (user.friends?.some((people) => people._id === elementId)) {
-        return 'people__button-friend true';
+        return 'person__button-friend-green';
       }
-      return 'people__button-friend false';
+      return 'person__button-friend-grey';
     }
     if (user.adversaries?.some((people) => people._id === elementId)) {
-      return 'people__button-friend true';
+      return 'person__button-adversaries-red';
     }
-    return 'people__button-friend false';
+    return 'person__button-adversaries-grey';
   }
 
   function loadPicture(peopleId) {
     const people = persons?.find((person) => person._id === peopleId);
     return (
-      <img className="people__image" src={people.picture} alt={`${people.name} portrait`} />
+      <img className="person__image" src={people.picture} alt={`${people.name} portrait`} />
     );
   }
 
+  function checkFriendStatus(personId) {
+    if (user?.friends?.some((person) => person._id === personId)) {
+      console.log('OUT friend');
+      const arrayOfFriends = user?.friends?.filter((friend) => friend._id !== personId);
+      dispatch(updateUser(user._id, { friends: arrayOfFriends }));
+    } else {
+      console.log('IN friend');
+      user?.friends?.push(personId);
+      dispatch(updateUser(user._id, { friends: user.friends }));
+    }
+  }
+
+  function checkFoeStatus(personId) {
+    if (user?.adversaries?.some((person) => person._id === personId)) {
+      console.log('OUT adversarie');
+      const arrayOfEnemies = user?.adversaries?.filter((foe) => foe._id !== personId);
+      dispatch(updateUser(user._id, { adversaries: arrayOfEnemies }));
+    } else {
+      console.log('IN adversarie');
+      user?.adversaries?.push(personId);
+      dispatch(updateUser(user._id, { adversaries: user.adversaries }));
+    }
+  }
+
   function loadSearch(personsFound) {
-    // const caca = 4;
-    // if (searchDone) {
-    setsearchResult(
+    setSearchResult(
       <section className="people">
         <h2>People Found</h2>
         <ul className="people__list">
           {
-              (personsFound?.length <= 0)
-                ? (
-                  <span className="people__noFound">
-                    no people found with this name...
-                  </span>
-                )
-                : personsFound?.map((person) => (
-                  <li key={person.name}>
-                    <span>{person.name}</span>
-                    <button
-                      className={chekcStatus(1, person._id)}
-                      type="button"
-                    >
-                      Friend
-                    </button>
-                    <button
-                      className={chekcStatus(2, person._id)}
-                      type="button"
-                    >
-                      Foe
-
-                    </button>
-                    {loadPicture(person._id)}
-                  </li>
-                ))
-              }
+            (personsFound?.length <= 0)
+              ? (
+                <span className="people__noFound">
+                  no people found with this name...
+                </span>
+              )
+              : personsFound?.map((person) => (
+                (person._id !== user._id)
+                  && (
+                    <li className="person" key={person.name}>
+                      <div className="person__info">
+                        <span>{person.name}</span>
+                        {loadPicture(person._id)}
+                      </div>
+                      <div className="person__actions">
+                        <button
+                          className={chekcStatus(1, person._id)}
+                          type="button"
+                          onClick={() => { checkFriendStatus(person._id); }}
+                        >
+                          Friend
+                        </button>
+                        <button
+                          className={chekcStatus(2, person._id)}
+                          type="button"
+                          onClick={() => { checkFoeStatus(person._id); }}
+                        >
+                          Foe
+                        </button>
+                      </div>
+                    </li>
+                  )
+              ))
+                }
         </ul>
       </section>
     );
-    // }
-    // return (<></>);
   }
 
   function findUsers() {
@@ -85,7 +114,6 @@ export default function Principal() {
         person.name.toLowerCase().includes(searchText.trim().toLowerCase())
       ));
     }
-    // searchDone = true;
     loadSearch(personsFound);
   }
 

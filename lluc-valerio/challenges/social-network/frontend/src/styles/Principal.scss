@@ -54,7 +54,7 @@
             .people__noFound{
                 font-weight: bolder;
             }
-            li{
+            .person{
                 width: 100%;
                 background: #fff;
                 border-radius: 25px;
@@ -62,31 +62,41 @@
                 padding: 20px;
                 list-style: none;
                 margin:10px 0;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                .people__button-friend{
-                    padding: 5px;
-                    border-radius: 35px;
-                    .true{
-
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                // align-items:center;
+                .person__info{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-content: center;
+                }
+                .person__actions{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-content: center;
+                    .person__button-friend-green {
+                        padding: 5px;
+                        border-radius: 35px;
+                        background-color: rgba($color: #64b43e, $alpha: .5);
                     }
-                    .false{
-
+                    .person__button-friend-grey {
+                        padding: 5px;
+                        border-radius: 35px;
+                    }
+                    .person__button-adversaries-red {
+                        border-radius: 35px;
+                        padding: 5px;
+                        background-color: rgba($color: #dd4f4f, $alpha: .5);
+                    }
+                    .person__button-adversaries-grey {
+                        border-radius: 35px;
+                        padding: 5px;
                     }
                 }
-                .people__button-foe{
-                    border-radius: 35px;
-                    padding: 5px;
-                    .true{
-
-                    }
-                    .false{
-                        
-                    }
-                }
-                .people__image{
+                .person__image{
                     border-radius: 50%;
                 }
             }
