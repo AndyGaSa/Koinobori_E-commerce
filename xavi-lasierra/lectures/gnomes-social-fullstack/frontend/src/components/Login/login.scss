@@ -3,9 +3,11 @@
 .not-logged__title {
     padding-top: 4rem;
     font-weight: bold;
+    font-family: $main-font;
 }
 
 .not-logged__form {
+    font-family: $main-font;
     margin-top: 0.5rem;
 
     input {
@@ -31,4 +33,17 @@
             background-color: black;
         }
     }
+}
+
+.not-logged__example {
+    font-family: $main-font;
+    font-size: 0.7rem;
+    margin-top: 0.25rem;
+}
+
+.not-logged__user-not-found {
+    margin-top: 1em;
+    font-family: $main-font;
+    font-size: 0.9rem;
+    color: $enemy-color
 }

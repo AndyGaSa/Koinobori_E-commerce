@@ -1,7 +1,7 @@
 const { model, Schema } = require('mongoose');
 
 const gnomeSchema = Schema({
-  picture: { type: String, default: 'https://cdna.artstation.com/p/assets/images/images/026/485/526/large/jill-hatzer-david-the-gnome-in-tub.jpg?1588894823' },
+  picture: { type: String, default: 'https://i.ibb.co/vd1cXLP/gnome-Logo-Black.png' },
   age: Number,
   eyeColor: String,
   name: String,

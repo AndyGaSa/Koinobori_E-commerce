@@ -70,7 +70,6 @@ function GnomeProfile({
             ? gnome?.friends.map((gnomeFriend) => (
               <li key={gnomeFriend?.name}>
                 <button className="social__gnome" type="button" onClick={() => dispatch(getGnomeById(gnomeFriend._id))}>{gnomeFriend.name}</button>
-                {currentUserId === gnome?._id && <button className="social__delete" type="button">x</button>}
               </li>
             ))
             : <span>No friends :(</span>}
@@ -81,7 +80,6 @@ function GnomeProfile({
             ? gnome?.adversaries.map((gnomeAdversary) => (
               <li key={gnomeAdversary?.name}>
                 <button className="social__gnome" type="button" onClick={() => dispatch(getGnomeById(gnomeAdversary._id))}>{gnomeAdversary.name}</button>
-                {currentUserId === gnome?._id && <button className="social__delete" type="button">x</button>}
               </li>
             ))
             : <span>No adversaries :)</span>}
