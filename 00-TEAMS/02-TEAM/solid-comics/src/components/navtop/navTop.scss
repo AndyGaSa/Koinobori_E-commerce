@@ -1,0 +1,13 @@
+.comic__row{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.nav-top {
+    position: absolute;
+    top: 22%;
+    left: 16%;
+    text-align: center;
+    line-height: 8vw;
+    font-size: 3vw;
+}
