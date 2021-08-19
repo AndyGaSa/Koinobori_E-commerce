@@ -1,5 +1,5 @@
 const debug = require('debug')('social-net:userController');
-const User = require('../models/userModel');
+const User = require('../models/UserModel');
 
 async function getAll({ query }, res) {
   debug('getAll');
