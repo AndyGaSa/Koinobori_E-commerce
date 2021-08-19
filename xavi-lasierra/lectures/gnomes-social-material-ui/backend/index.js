@@ -13,8 +13,10 @@ server.use(morgan('dev'));
 server.use(express.json());
 
 const gnomesRouter = require('./src/routes/gnomes.router');
+const loginRouter = require('./src/routes/login.router');
 
 server.use('/api/gnomes', gnomesRouter);
+server.use('/api/login', loginRouter);
 
 server.listen(
   port,

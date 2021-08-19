@@ -6,19 +6,12 @@ import loginErrorTypes from './loginError.actions';
 export function logUser(userName) {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`/api/gnomes?name=${userName}`);
-      if (data.length > 0) {
-        const [newData] = data;
+      const { data } = await axios.get(`/api/login?name=${userName}`);
 
-        dispatch({
-          type: userTypes.LOAD_USER,
-          data: newData
-        });
-      } else {
-        dispatch({
-          type: loginErrorTypes.LOAD_ERROR
-        });
-      }
+      dispatch({
+        type: userTypes.LOAD_USER,
+        data
+      });
     } catch (error) {
       dispatch({
         type: loginErrorTypes.LOAD_ERROR
