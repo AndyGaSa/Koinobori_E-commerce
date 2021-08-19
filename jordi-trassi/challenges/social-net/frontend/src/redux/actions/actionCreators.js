@@ -24,8 +24,13 @@ export function login(name) {
     }
   };
 }
+export function logout() {
+  return {
+    type: actionTypes.AUTH_LOGOUT,
+  };
+}
 
-export default function loadUsers() {
+export function loadUsers() {
   return async (dispatch) => {
     const { data } = await axios.get('/api/users');
 
