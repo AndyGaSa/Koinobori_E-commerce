@@ -1,3 +1,4 @@
 export default {
-  LOAD_USERS: 'LOAD_USERS'
+  LOAD_USERS: 'LOAD_USERS',
+  LOAD_MAIN_USER: 'LOAD_MAIN_USER'
 };
