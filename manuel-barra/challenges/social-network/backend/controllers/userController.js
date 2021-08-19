@@ -50,7 +50,7 @@ async function updateOneById(
   try {
     const updatedUser = await User.findByIdAndUpdate(
       userId,
-      body,
+      { $addToSet: body },
       {
         new: true,
         useFindAndModify: false

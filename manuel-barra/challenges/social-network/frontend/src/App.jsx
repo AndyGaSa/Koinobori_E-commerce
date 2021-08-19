@@ -1,14 +1,15 @@
 import React from 'react';
-
 import Userslist from './components/Main/UsersList';
+import Header from './components/Header/index';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hola mundo</h1>
+      <Header />
+      <main>
         <Userslist />
-      </header>
+      </main>
+
     </div>
   );
 }
