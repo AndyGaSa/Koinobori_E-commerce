@@ -99,7 +99,11 @@ describe('Given a getGnomeById function', () => {
       test('Then res.json should be called', async () => {
         req = { params: { gnomeId: '1' } };
         res = { json: jest.fn() };
-        Gnome.findById.mockResolvedValue({});
+        Gnome.findById.mockReturnValue({
+          populate: jest.fn().mockReturnValue({
+            populate: jest.fn().mockResolvedValue({})
+          })
+        });
 
         await getGnomeById(req, res);
 
@@ -114,7 +118,11 @@ describe('Given a getGnomeById function', () => {
           send: jest.fn(),
           status: jest.fn()
         };
-        Gnome.findById.mockRejectedValue(new Error('Could not find'));
+        Gnome.findById.mockReturnValue({
+          populate: jest.fn().mockReturnValue({
+            populate: jest.fn().mockRejectedValue(new Error('Could not find'))
+          })
+        });
 
         await getGnomeById(req, res);
       });
@@ -177,6 +185,11 @@ describe('Given a updateGnomeById function', () => {
         req = { params: { gnomeId: '1' } };
         res = { json: jest.fn() };
         Gnome.findByIdAndUpdate.mockResolvedValue();
+        Gnome.findByIdAndUpdate.mockReturnValue({
+          populate: jest.fn().mockReturnValue({
+            populate: jest.fn().mockResolvedValue()
+          })
+        });
 
         await updateGnomeById(req, res);
 
@@ -191,7 +204,11 @@ describe('Given a updateGnomeById function', () => {
           send: jest.fn(),
           status: jest.fn()
         };
-        Gnome.findByIdAndUpdate.mockRejectedValue(new Error('Could not update'));
+        Gnome.findByIdAndUpdate.mockReturnValue({
+          populate: jest.fn().mockReturnValue({
+            populate: jest.fn().mockRejectedValue(new Error('Could not update'))
+          })
+        });
 
         await updateGnomeById(req, res);
       });
