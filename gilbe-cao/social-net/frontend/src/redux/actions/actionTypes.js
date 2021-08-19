@@ -1,0 +1,5 @@
+export default {
+  USERS_LOAD: 'USERS_LOAD',
+  AUTH_LOGIN: 'AUTH_LOGIN',
+  AUTH_LOGOUT: 'AUTH_LOGOUT',
+};

@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
+import configureStore from './redux/stores';
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Social net</h1>
+    <Provider store={configureStore()}>
+      <h1>Social net</h1>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
