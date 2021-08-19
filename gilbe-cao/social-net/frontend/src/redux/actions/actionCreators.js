@@ -30,3 +30,13 @@ export function logout() {
     type: actionTypes.AUTH_LOGOUT,
   };
 }
+
+export function loadUsers() {
+  return async (dispatch) => {
+    const { data } = await axios('/api/users');
+    dispatch({
+      type: actionTypes.USERS_LOAD,
+      users: data,
+    });
+  };
+}
