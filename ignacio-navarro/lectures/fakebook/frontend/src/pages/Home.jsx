@@ -10,6 +10,7 @@ export default function Home() {
   // const friends = useSelector((store) => store.friends);
   const adversaries = useSelector((store) => store.adversaries);
   const user = useSelector((store) => store.user);
+  console.log(user?.friends);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -58,7 +59,7 @@ export default function Home() {
         <section>
           <ul className="home__friends-container">
             {(user?.friends?.length > 0) && user.friends.slice(0, 5).map((friend) => (
-              <Friend key={`friend_${user._id}`} friendData={friend._id} />
+              <Friend key={`friend_${friend._id._id}`} picture={friend?._id.picture} name={friend?._id.name} />
             ))}
 
           </ul>

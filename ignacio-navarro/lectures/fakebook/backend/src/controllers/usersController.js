@@ -39,7 +39,6 @@ async function getFriends({ query }, res) {
   }
 }
 async function putFriends(req, res) {
-  console.log(req.body);
   try {
     const updatedUser = await User.findByIdAndUpdate(
       req.params.params,
@@ -48,8 +47,10 @@ async function putFriends(req, res) {
         new: true,
         useFindAndModify: false,
       },
-    )
-      .populate({ path: 'friends', select: 'name', model: 'User' });
+    ).populate({
+      path: 'friends._id',
+      select: ['name', 'picture'],
+    });
 
     res.json(updatedUser);
   } catch (error) {
@@ -59,19 +60,13 @@ async function putFriends(req, res) {
 }
 async function getOneUser({ params: { userId } }, res) {
   try {
-    const foundUser = await User.findById(userId);
-    //   .populate({
-    //     path: 'friends',
-    //     select: ['name'],
-    //   })
-    //   .exec((err) => {
-    //     if (err) {
-    //       res.status(407);
-    //     } else {
-    //       res.status(200);
+    const foundUser = await User.findById(userId)
+      .populate({
+        path: 'friends._id',
+        select: ['name', 'picture'],
+      });
+    res.status(200);
     res.json(foundUser);
-    //     }
-    //   });
   } catch (error) {
     res.status(500);
     res.send(error);
