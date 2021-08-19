@@ -25,7 +25,7 @@ export default function CurrentGnome() {
               : <button type="button" onClick={() => dispatch(addRelated(gnomeId, userGnome?.friends, gnome._id, requestTypes.ADD_FRIEND))}>Add friend</button>}
 
             {userGnome?.adversaries?.some((friend) => friend._id === gnome._id)
-              ? <button type="button" onClick={() => dispatch(removeRelated(gnomeId, userGnome?.friends, gnome._id, requestTypes.REMOVE_ADVERSARY))}>Remove adversary</button>
+              ? <button type="button" onClick={() => dispatch(removeRelated(gnomeId, userGnome?.adversaries, gnome._id, requestTypes.REMOVE_ADVERSARY))}>Remove adversary</button>
               : <button type="button" onClick={() => dispatch(addRelated(gnomeId, userGnome?.adversaries, gnome._id, requestTypes.ADD_ADVERSARY))}>Add adversary</button>}
           </li>
         ))}
