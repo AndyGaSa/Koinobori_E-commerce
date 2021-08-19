@@ -1,12 +1,27 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { Provider } from 'react-redux';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+
+import configureStore from './redux/stores/index';
+import Protected from './components/login/Protected';
+import Dashboard from './components/dashboard/Dashboard';
+import Login from './components/login/Login';
+
+const ProtecedDashboard = Protected('/', Dashboard, true);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={configureStore}>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Protected />
+        </Switch>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
