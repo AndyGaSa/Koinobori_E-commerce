@@ -50,31 +50,28 @@ function Cart({ user }) {
   }
 
   function pay() {
-    if (userCart.products.length > 0) {
-      const cartData = transformCartData();
-      dispatch(submitCart(cartData));
-    }
+    const cartData = transformCartData();
+    dispatch(submitCart(cartData));
   }
 
   return (
-    <section className={`cart ${cartClass}`}>
-      {}
+    <section data-testid="cart" className={`cart ${cartClass}`}>
       <div className="cart__clear">
-        <h2 className="cart__title">Cart</h2>
+        <h2 data-testid="cart-title" className="cart__title">Cart</h2>
         {user?.name && (
         <div>
-          <button className="cart__clear-button" type="button" aria-label="Clear cart" onClick={saveCartData}>
+          <button data-testid="save-button" className="cart__save-button" type="button" aria-label="Save cart" onClick={saveCartData}>
             <FontAwesomeIcon icon={faHeart} />
           </button>
-          <button className="cart__save-button" type="button" aria-label="Clear cart" onClick={() => dispatch(clearCart())}>
+          <button data-testid="clear-cart-button" className="cart__save-button" type="button" aria-label="Clear cart" onClick={() => dispatch(clearCart())}>
             <FontAwesomeIcon icon={faTrashAlt} />
           </button>
         </div>
         )}
       </div>
       <ul className="cart__cart-products">
-        {userCart.products.map(({ product, amount }) => (
-          <li className="cart-products__product" key={`${product.name}-shoe`}>
+        {userCart.products.map(({ product, amount }, index) => (
+          <li data-testid={`cart-element-${index}`} className="cart-products__product" key={`${product.name}-shoe`}>
             <img className="product__image" src={product.img} alt={product.name} />
             <span className="product__name">{product.name}</span>
             <span className="product__price">
@@ -82,17 +79,17 @@ function Cart({ user }) {
               €
             </span>
             <div className="product__amount">
-              <button className="product__substract-button" type="button" aria-label="Substract" onClick={() => dispatch(substractProductFromCart(product._id))}>-</button>
-              <span className="product__quantity">{amount}</span>
-              <button className="product__add-button" type="button" aria-label="Add" onClick={() => dispatch(addProductToCart(product))}>+</button>
+              <button data-testid={`element-${index}-substract-button`} className="product__substract-button" type="button" aria-label="Substract" onClick={() => dispatch(substractProductFromCart(product._id))}>-</button>
+              <span data-testid={`element-${index}-amount`} className="product__quantity">{amount}</span>
+              <button data-testid={`element-${index}-add-button`} className="product__add-button" type="button" aria-label="Add" onClick={() => dispatch(addProductToCart(product))}>+</button>
             </div>
           </li>
         ))}
       </ul>
       {userCart.products.length > 0
-        ? <button type="button" className="cart__pay-button" onClick={pay}>Pay</button>
+        ? <button data-testid="pay-button" type="button" className="cart__pay-button" onClick={pay}>Pay</button>
         : <span className="cart__empty">{user?.name ? 'Cart is empty' : 'Login to add products'}</span>}
-      <button type="button" className="cart__summary" onClick={openCloseCart}>
+      <button data-testid="open-cart-button" type="button" className="cart__summary" onClick={openCloseCart}>
         <div>
           <span className="cart__open-icon" />
           <FontAwesomeIcon icon={faShoppingCart} />
