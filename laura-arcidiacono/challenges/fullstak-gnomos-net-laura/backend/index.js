@@ -14,6 +14,10 @@ server.use(cors());
 server.use(express.json());
 server.use(morgan('dev'));
 
+const authRouter = require('./src/routes/authRouter');
+
+server.use('/api/login', authRouter);
+
 const userRouter = require('./src/routes/userRouter');
 
 server.use('/api/users', userRouter);
