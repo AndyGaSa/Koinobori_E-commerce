@@ -5,6 +5,7 @@ const {
   getAll,
   getOneById,
   updateOneById,
+  updateOneFriendById,
   deleteOneById,
 } = require('../controllers/userController');
 
@@ -19,6 +20,7 @@ userRouter
   .route('/:userId')
   .get(getOneById)
   .put(updateOneById)
+  .patch(updateOneFriendById)
   .delete(deleteOneById);
 
 module.exports = userRouter;
