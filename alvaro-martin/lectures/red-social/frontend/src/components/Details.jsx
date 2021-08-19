@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -37,6 +38,16 @@ export default function Users() {
         {user.eyeColor}
       </h2>
       <input type="text" name="eyeColor" onChange={saveInputChanges} />
+      <hr />
+      <h2 className="container__friends">
+        Friends:
+        {' '}
+        {user?.friends?.map(({ name }) => <p>{name}</p>)}
+        Adversaries:
+        {' '}
+        {user?.adversaries?.map(({ name }) => <p>{name}</p>)}
+      </h2>
+
       <hr />
       <button type="button" onClick={() => dispatch(submitUser(userUpdated, user._id))}>Submit</button>
     </>

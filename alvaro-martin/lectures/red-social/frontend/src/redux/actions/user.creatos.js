@@ -37,3 +37,21 @@ export function loadProfiles() {
     });
   };
 }
+export function submitFriend(userId, friendId) {
+  return async (dispatch) => {
+    const { data } = await axios.put(`http://localhost:4300/api/users/${userId}`, { value: { friends: [friendId] } });
+    dispatch({
+      type: actionTypes.SUBMIT_USER,
+      data,
+    });
+  };
+}
+export function submitAdversarie(userId, adversaryId) {
+  return async (dispatch) => {
+    const { data } = await axios.put(`http://localhost:4300/api/users/${userId}`, { value: { adversaries: [adversaryId] } });
+    dispatch({
+      type: actionTypes.SUBMIT_USER,
+      data,
+    });
+  };
+}
