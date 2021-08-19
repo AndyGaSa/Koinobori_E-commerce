@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import propTypes from 'prop-types';
 
-import findGnomes from '../../redux/actions/gnomes.creator';
+import { findGnomes } from '../../redux/actions/gnomes.creator';
 
 import { getGnomeById } from '../../redux/actions/currentGnome.creator';
 

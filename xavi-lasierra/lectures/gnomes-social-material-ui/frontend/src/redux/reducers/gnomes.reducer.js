@@ -2,9 +2,17 @@ import actionTypes from '../actions/gnomes.actions';
 
 function gnomesReducer(gnomes = [], action) {
   let newGnomes = gnomes;
-  if (action.type === actionTypes.LOAD_GNOMES) {
-    newGnomes = action.data;
+  switch (action.type) {
+    case actionTypes.LOAD_GNOMES:
+      newGnomes = action.data;
+      break;
+    case actionTypes.CLEAR_GNOMES:
+      newGnomes = [];
+      break;
+    default:
+      break;
   }
+
   return newGnomes;
 }
 

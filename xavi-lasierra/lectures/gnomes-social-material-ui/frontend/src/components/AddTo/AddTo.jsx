@@ -5,7 +5,7 @@ import propTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserSlash, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import { logoutUser, updateUser } from '../../redux/actions/user.creator';
+import { updateUser } from '../../redux/actions/user.creator';
 
 import './addTo.scss';
 
@@ -31,23 +31,26 @@ function AddTo({
     dispatch(updateUser(dataToUpdate, id));
   }
 
+  function isFriend() {
+    return currentUserFriends.some(({ _id }) => _id === gnome._id);
+  }
+
+  function isAdversary() {
+    return currentUserAdversaries.some(({ _id }) => _id === gnome._id);
+  }
+
   return (
     <form className="friends-buttons">
       {currentUserId === gnome?._id
         ? (
-          <>
-            <span className="friends-buttons__user">Your profile</span>
-            <br />
-            <button className="friends-buttons__logout" type="button" onClick={() => dispatch(logoutUser())}>Logout</button>
-          </>
+          <span className="friends-buttons__user">Your profile</span>
         )
         : (
           <>
-            {(currentUserFriends.some(({ _id }) => _id === gnome._id)
-            || currentUserAdversaries.some(({ _id }) => _id === gnome._id))
+            {isFriend() || isAdversary()
               ? (
                 <>
-                  {currentUserFriends.some(({ _id }) => _id === gnome._id)
+                  {isFriend()
                     ? (
                       <button className="friends-buttons__friend" type="button" alt="Delete friend" onClick={() => deleteFriendAdversary('friends', currentUserId, currentUserFriends)}>
                         <FontAwesomeIcon icon={faUserSlash} />

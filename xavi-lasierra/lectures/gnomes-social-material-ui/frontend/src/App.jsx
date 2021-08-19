@@ -25,9 +25,7 @@ function App() {
   return (
     <>
       <Header
-        sideMenuClass={sideMenuClass}
-        setSideMenuClass={setSideMenuClass}
-        currentUserId={currentUserId}
+        currentUser={currentUser}
       />
       <SideMenu
         sideMenuClass={sideMenuClass}

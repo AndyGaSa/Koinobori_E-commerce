@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import userTypes from './user.actions';
+import currentGnomeActions from './currentGnome.actions';
 
 export function logUser(userName) {
   return async (dispatch) => {
@@ -51,5 +52,12 @@ export function logoutUser() {
 export function closeNotification() {
   return {
     type: userTypes.CLEAR_NOTIFICATION
+  };
+}
+
+export function goToUser(data) {
+  return {
+    type: currentGnomeActions.LOAD_GNOME,
+    data
   };
 }

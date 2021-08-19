@@ -1,15 +1,15 @@
 /* eslint-disable no-underscore-dangle */
-import userTypes from '../actions/user.actions';
+import actionTypes from '../actions/notifications.actions';
 
 function notificationsReducer(error = [], action) {
   let newError = error;
 
   switch (action.type) {
-    case userTypes.LOGIN_ERROR:
-    case userTypes.ERROR_GENERIC:
+    case actionTypes.LOGIN_ERROR:
+    case actionTypes.ERROR_GENERIC:
       newError = [action.data];
       break;
-    case userTypes.CLEAR_NOTIFICATION:
+    case actionTypes.CLEAR_NOTIFICATION:
       newError = [];
       break;
     default:

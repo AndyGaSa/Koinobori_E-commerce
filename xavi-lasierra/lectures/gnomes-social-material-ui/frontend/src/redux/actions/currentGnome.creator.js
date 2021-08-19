@@ -17,6 +17,13 @@ export function getGnomeById(id) {
   };
 }
 
+export function printGnome(gnome) {
+  return {
+    type: actionTypes.LOAD_GNOME,
+    data: gnome
+  };
+}
+
 export function clearCurrentGnome() {
   return {
     type: actionTypes.LOAD_GNOME,
