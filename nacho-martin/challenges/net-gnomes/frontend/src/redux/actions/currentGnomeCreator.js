@@ -40,7 +40,6 @@ export function addRelated(gnomeId, currentRelated, id, action) {
 export function removeRelated(gnomeId, currentRelated, id, action) {
   const newRelated = currentRelated.filter((related) => related._id !== id);
   let relation;
-
   if (action === REMOVE_FRIEND) {
     relation = { friends: newRelated };
   } else if (action === REMOVE_ADVERSARY) {
