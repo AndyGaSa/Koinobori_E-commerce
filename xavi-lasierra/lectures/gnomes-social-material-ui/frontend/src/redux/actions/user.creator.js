@@ -41,3 +41,9 @@ export function updateUser(updateData, id) {
     }
   };
 }
+
+export function logoutUser() {
+  return {
+    type: userTypes.LOGOUT_USER
+  };
+}

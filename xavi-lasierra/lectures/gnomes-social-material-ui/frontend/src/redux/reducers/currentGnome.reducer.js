@@ -9,6 +9,9 @@ function currentGnomeReducer(gnome = {}, action) {
     case userTypes.LOAD_USER:
       newGnome = action.data;
       break;
+    case userTypes.LOGOUT_USER:
+      newGnome = {};
+      break;
     default:
       break;
   }

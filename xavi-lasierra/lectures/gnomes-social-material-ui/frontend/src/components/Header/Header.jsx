@@ -28,6 +28,7 @@ function Header({ sideMenuClass, setSideMenuClass, currentUserId }) {
 
   return (
     <header>
+      <h1 className="hide">Social Gnomes</h1>
       <button type="button" onClick={openCloseNav} label="Side Menu Button"><FontAwesomeIcon icon={faBars} /></button>
       <button type="button" onClick={() => goProfile(currentUserId)}>
         <figure>

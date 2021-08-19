@@ -1,13 +1,13 @@
 /* eslint-disable no-underscore-dangle */
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserSlash, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import './addTo.scss';
-import { useDispatch } from 'react-redux';
+import { logoutUser, updateUser } from '../../redux/actions/user.creator';
 
-import { updateUser } from '../../redux/actions/user.creator';
+import './addTo.scss';
 
 function AddTo({
   gnome, currentUserId, currentUserAdversaries, currentUserFriends
@@ -34,7 +34,13 @@ function AddTo({
   return (
     <form className="friends-buttons">
       {currentUserId === gnome?._id
-        ? <span className="friends-buttons__user">Your profile</span>
+        ? (
+          <>
+            <span className="friends-buttons__user">Your profile</span>
+            <br />
+            <button className="friends-buttons__logout" type="button" onClick={() => dispatch(logoutUser())}>Logout</button>
+          </>
+        )
         : (
           <>
             {(currentUserFriends.some(({ _id }) => _id === gnome._id)

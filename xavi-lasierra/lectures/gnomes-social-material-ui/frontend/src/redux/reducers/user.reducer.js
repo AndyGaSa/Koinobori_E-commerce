@@ -8,6 +8,9 @@ function userReducer(user = {}, action) {
     case actionTypes.UPDATE_USER:
       newUser = action.data;
       break;
+    case actionTypes.LOGOUT_USER:
+      newUser = {};
+      break;
     default:
       break;
   }
