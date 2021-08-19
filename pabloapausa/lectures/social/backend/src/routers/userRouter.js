@@ -8,8 +8,6 @@ userRouter.route('/')
   .get(userController.getAll);
 
 userRouter.route('/:userId')
-  .get(userController.getOne)
-  .put(userController.putOne)
-  .delete(userController.deleteOne);
+  .get(userController.getOne);
 
 module.exports = userRouter;

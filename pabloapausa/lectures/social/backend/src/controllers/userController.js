@@ -41,34 +41,25 @@ async function getOne({ params: { userId } }, res) {
   }
 }
 
-async function putOne({ params: { userId }, body }, res) {
+/* async function putFrenemies(req, res) {
+  const { params: { userId } } = req;
   try {
-    const updatedUser = await User
-      .findByIdAndUpdate(userId, body,
-        { new: true, useFindAndModify: false });
-    res.json(updatedUser);
   } catch (error) {
     res.status(500);
     res.send(error);
   }
 }
 
-async function deleteOne({ params: { userId } }, res) {
+async function deleteFrenemies(req, res) {
   try {
-    await User
-      .findByIdAndDelete(userId);
-    res.status(200);
-    res.send();
   } catch (error) {
     res.status(500);
     res.send(error);
   }
-}
+} */
 
 module.exports = {
   postOne,
   getAll,
   getOne,
-  putOne,
-  deleteOne,
 };

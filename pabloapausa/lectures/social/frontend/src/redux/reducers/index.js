@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
-import userReducer from './userReducer';
-import authReducer from './authReducer';
+import usersReducer from './usersReducer';
+import adversariesReducer from './adversariesReducer';
+import friendsReducer from './friendsReducer';
 
-// Función que recibe un objeto.
 export default combineReducers({
-  user: userReducer,
-  auth: authReducer,
+  users: usersReducer,
+  adversaries: adversariesReducer,
+  friends: friendsReducer,
 });
