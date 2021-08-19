@@ -1,0 +1,50 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.main__user-cart {
+    width: 100%;
+    border-top: solid 0.1rem #ff982f;
+    border-left: solid 0.1rem #ff982f;
+    margin-right: 2rem;
+    padding: 2rem;
+}
+
+.user-cart__cart-items {
+    color: #237de0;
+}
+
+.cart-items__list {
+     list-style: none;
+     margin-top: 8rem;
+}
+
+.list__cart-item {
+    border: solid 0.05rem #237de0;
+}
+
+.item__button {
+    background-color: #237de0;
+    width: 2rem;
+    padding: 0.4rem;
+    border: solid 0.1rem;
+    border-radius: 10vh;
+}
+
+.totalPrice{
+    text-align: end;
+}
+
+.buttons {
+    display: flex;
+    
+    justify-content: flex-end;
+}
+.buttons_pay {
+    background-color: #237de0;
+    width: 7rem;
+    padding: 0.4rem;
+    border: solid 0.1rem;
+    border-radius: 10vh;
+}
