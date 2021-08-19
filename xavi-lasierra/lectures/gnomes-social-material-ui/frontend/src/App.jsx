@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import Header from './components/Header/Header';
 import Login from './components/Login/Login';
-import SideMenu from './components/SideMenu/SideMenu';
 import GnomeProfile from './components/GnomeProfile/GnomeProfile';
 import ProtectedRoute from './pages/ProtectedRoute/ProtectedRoute';
 import Notifications from './components/Notifications/Notifications';
@@ -20,18 +19,12 @@ function App() {
     friends: currentUserFriends,
     adversaries: currentUserAdversaries
   } = currentUser;
-  const [sideMenuClass, setSideMenuClass] = useState('side-menu--closed');
 
   return (
     <>
       <Header
         currentUser={currentUser}
       />
-      <SideMenu
-        sideMenuClass={sideMenuClass}
-        setSideMenuClass={setSideMenuClass}
-      />
-
       <Switch>
         <Route path="/login" component={Login} />
         <ProtectedRoute

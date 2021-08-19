@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import propTypes from 'prop-types';
 
-import './homePage.scss';
 import { useSelector } from 'react-redux';
 
 function ProtectedRoute({ path, component }) {
