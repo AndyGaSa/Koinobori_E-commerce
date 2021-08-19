@@ -1,0 +1,16 @@
+.buttons__container{
+    display: flex;
+    justify-content: center;
+    .buttons{
+        font-family: 'Stylish', sans-serif;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #F7B2BD;
+        color: #053225;
+        border: 1px dashed #053225;
+        padding: 10px;
+        &:hover{
+            background-color: #E34A6F;
+        }
+    }
+}
