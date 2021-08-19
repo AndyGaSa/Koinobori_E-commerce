@@ -1,4 +1,6 @@
 import React from 'react';
+import UserList from './components/UserList';
+
 // import {
 //   BrowserRouter as Router,
 //   Switch,
@@ -9,7 +11,10 @@ import React from 'react';
 
 function App() {
   return (
-    <p>HELLLO WORD</p>
+    <>
+      <p>HELLLO WORD</p>
+      <UserList />
+    </>
   );
 }
 

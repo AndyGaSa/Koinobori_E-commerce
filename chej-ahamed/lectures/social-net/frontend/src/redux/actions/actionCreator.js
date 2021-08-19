@@ -2,7 +2,7 @@
 import axios from 'axios';
 import actionTypes from './actionsTypes';
 
-export function loadUsers() {
+export default function loadUsers() {
   return async (dispatch) => {
     const { data } = await axios.get('/api/users');
     dispatch({
