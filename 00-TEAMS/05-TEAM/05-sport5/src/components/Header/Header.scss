@@ -1,0 +1,37 @@
+@import '../../styles/variables';
+
+.header{
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    background-color: $header-background-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 4rem;
+    z-index: 3;
+
+    .header__navigation-menu{
+        background-color: transparent;
+        color: white;
+        outline: inherit;
+        border: none;
+        transition: .2s;
+        font-size: 1.5rem;
+        width: 2rem;
+        height: 2rem;
+
+        &:hover{
+            color: $hover-color;
+            font-size: 1.7rem;
+        }
+    }
+    
+    .header__main-title {
+        color: white;
+        font-family: $title-font;
+        font-size: 24px;
+        text-align: right;
+    }
+}

@@ -1,0 +1,17 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.details__main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.details__image{
+    margin: 40px 100px;
+    height: 30vh;
+}
+.details__description{
+    margin: 0 60px;
+}
