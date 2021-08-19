@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Adversaries from '../components/Adversaries';
@@ -56,10 +57,10 @@ export default function Home() {
             Friends:
             {
           (users.length > 0)
-          && user.friends.map(
+          && user?.friends?.map(
             (friend) => (
               <div className="name__button">
-                <Friends key={friend.name} friendProp={friend.name} />
+                <Friends key={friend._id} friendProp={friend._id} />
                 <button className="down-user__button" type="button">-</button>
               </div>
             )
