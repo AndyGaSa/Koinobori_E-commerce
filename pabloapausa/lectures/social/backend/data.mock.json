@@ -16,28 +16,8 @@
         "ex",
         "fugiat"
       ],
-      "friends": [
-        {
-          "name": "Clark Hubbard"
-        },
-        {
-          "name": "Harding Ball"
-        },
-        {
-          "name": "Essie Bowen"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Jean Browning"
-        },
-        {
-          "name": "Carey Rodriquez"
-        },
-        {
-          "name": "Rivas Pitts"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Preston Wiley! You have 4 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -58,28 +38,8 @@
         "velit",
         "nisi"
       ],
-      "friends": [
-        {
-          "name": "Letha Gomez"
-        },
-        {
-          "name": "Hewitt Kramer"
-        },
-        {
-          "name": "Osborn Knowles"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Santos Hammond"
-        },
-        {
-          "name": "Simmons Avila"
-        },
-        {
-          "name": "Huff Calderon"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Lester Barnes! You have 2 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -100,28 +60,8 @@
         "ad",
         "ex"
       ],
-      "friends": [
-        {
-          "name": "Stephens Landry"
-        },
-        {
-          "name": "Pena Nieves"
-        },
-        {
-          "name": "Michelle Reese"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Brittney Rowland"
-        },
-        {
-          "name": "Calderon Dickson"
-        },
-        {
-          "name": "Lara Hancock"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Willis Allen! You have 1 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -142,28 +82,8 @@
         "do",
         "est"
       ],
-      "friends": [
-        {
-          "name": "Bolton Hobbs"
-        },
-        {
-          "name": "Celia Vargas"
-        },
-        {
-          "name": "Luisa Rosales"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Carmella Ware"
-        },
-        {
-          "name": "Emily Palmer"
-        },
-        {
-          "name": "Alfreda Poole"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Avis Davis! You have 7 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -184,28 +104,8 @@
         "ullamco",
         "dolor"
       ],
-      "friends": [
-        {
-          "name": "Tina Leblanc"
-        },
-        {
-          "name": "Daisy Stevens"
-        },
-        {
-          "name": "Nanette Bennett"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Sutton Lester"
-        },
-        {
-          "name": "Maria Clark"
-        },
-        {
-          "name": "Davidson Kirk"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Alexandria French! You have 8 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -226,28 +126,8 @@
         "nulla",
         "sint"
       ],
-      "friends": [
-        {
-          "name": "Booth Frye"
-        },
-        {
-          "name": "Rosa Mooney"
-        },
-        {
-          "name": "Bender Washington"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Ursula Page"
-        },
-        {
-          "name": "Bridgett Lang"
-        },
-        {
-          "name": "Mariana Berg"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Marshall Owen! You have 4 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -268,28 +148,8 @@
         "voluptate",
         "officia"
       ],
-      "friends": [
-        {
-          "name": "Lea Mckenzie"
-        },
-        {
-          "name": "Sherman Stein"
-        },
-        {
-          "name": "Terra Crane"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Doris Burch"
-        },
-        {
-          "name": "Aline Villarreal"
-        },
-        {
-          "name": "Luella Riley"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Melva Sanders! You have 9 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -310,28 +170,8 @@
         "cillum",
         "cillum"
       ],
-      "friends": [
-        {
-          "name": "Katrina Mathis"
-        },
-        {
-          "name": "Tia Velez"
-        },
-        {
-          "name": "Coffey Fernandez"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Solomon Dillard"
-        },
-        {
-          "name": "Lynch Wheeler"
-        },
-        {
-          "name": "Gilliam Warren"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Josephine Meadows! You have 10 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -352,28 +192,8 @@
         "aliquip",
         "enim"
       ],
-      "friends": [
-        {
-          "name": "Mayo Vance"
-        },
-        {
-          "name": "Armstrong Alexander"
-        },
-        {
-          "name": "Benton Simmons"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Branch Sweet"
-        },
-        {
-          "name": "Puckett Bryant"
-        },
-        {
-          "name": "Miranda Monroe"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Horn Kline! You have 5 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -394,28 +214,8 @@
         "sint",
         "elit"
       ],
-      "friends": [
-        {
-          "name": "Lena Small"
-        },
-        {
-          "name": "Robbins Bowman"
-        },
-        {
-          "name": "Nina Guerra"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Buckley Alford"
-        },
-        {
-          "name": "Stacie Salas"
-        },
-        {
-          "name": "Riggs Lancaster"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Cote Patel! You have 7 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -436,28 +236,8 @@
         "sint",
         "dolore"
       ],
-      "friends": [
-        {
-          "name": "Rogers Greene"
-        },
-        {
-          "name": "Catalina Holt"
-        },
-        {
-          "name": "Mendez Mendoza"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Melanie Burke"
-        },
-        {
-          "name": "Chang Beasley"
-        },
-        {
-          "name": "Cole Raymond"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Curry Vazquez! You have 5 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -478,28 +258,8 @@
         "consequat",
         "esse"
       ],
-      "friends": [
-        {
-          "name": "Santiago Little"
-        },
-        {
-          "name": "Lila Wooten"
-        },
-        {
-          "name": "Mcgee Mcfarland"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Christian Mills"
-        },
-        {
-          "name": "Greene Lopez"
-        },
-        {
-          "name": "Joni Franklin"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Lydia Farley! You have 6 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -520,28 +280,8 @@
         "sunt",
         "labore"
       ],
-      "friends": [
-        {
-          "name": "Erika Burks"
-        },
-        {
-          "name": "Harriet Griffith"
-        },
-        {
-          "name": "Holcomb Jenkins"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Roxanne Banks"
-        },
-        {
-          "name": "Acevedo Vasquez"
-        },
-        {
-          "name": "Bobbie Weeks"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Marlene Schmidt! You have 6 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -562,28 +302,8 @@
         "do",
         "non"
       ],
-      "friends": [
-        {
-          "name": "Rochelle Haney"
-        },
-        {
-          "name": "Shaffer Carr"
-        },
-        {
-          "name": "Frederick Castro"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Fischer Mosley"
-        },
-        {
-          "name": "Sharlene Vaughan"
-        },
-        {
-          "name": "Debora Hodges"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Nielsen Carney! You have 3 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -604,28 +324,8 @@
         "id",
         "incididunt"
       ],
-      "friends": [
-        {
-          "name": "Paula Davenport"
-        },
-        {
-          "name": "Grant Rosa"
-        },
-        {
-          "name": "Kristin Mendez"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Hawkins Walls"
-        },
-        {
-          "name": "Nadine Patrick"
-        },
-        {
-          "name": "Cherie Chen"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Hall Montgomery! You have 10 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -646,28 +346,8 @@
         "est",
         "voluptate"
       ],
-      "friends": [
-        {
-          "name": "Pearlie Goff"
-        },
-        {
-          "name": "Gaines Shepard"
-        },
-        {
-          "name": "Acosta Mcmillan"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Faulkner Lloyd"
-        },
-        {
-          "name": "Harriett Roman"
-        },
-        {
-          "name": "Webster Cochran"
-        }
-      ],
+"friends": [],
+"adversaries": [],
       "greeting": "Hello, Lucas Ryan! You have 3 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -688,28 +368,8 @@
         "labore",
         "incididunt"
       ],
-      "friends": [
-        {
-          "name": "Bobbi Rivers"
-        },
-        {
-          "name": "Jeannine Foreman"
-        },
-        {
-          "name": "Richard Parsons"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Carly Bradley"
-        },
-        {
-          "name": "Mccoy Andrews"
-        },
-        {
-          "name": "Moreno Chapman"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Sadie Olson! You have 9 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -730,28 +390,8 @@
         "nostrud",
         "non"
       ],
-      "friends": [
-        {
-          "name": "Elsa Taylor"
-        },
-        {
-          "name": "Tucker Buckley"
-        },
-        {
-          "name": "Kristina Miller"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Head Robinson"
-        },
-        {
-          "name": "Sexton Macias"
-        },
-        {
-          "name": "Myrna Wyatt"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Kelly Pearson! You have 9 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -772,28 +412,8 @@
         "deserunt",
         "eiusmod"
       ],
-      "friends": [
-        {
-          "name": "Jeanine Williamson"
-        },
-        {
-          "name": "Fleming Roach"
-        },
-        {
-          "name": "Collins Guerrero"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Katheryn Vincent"
-        },
-        {
-          "name": "Keisha Tran"
-        },
-        {
-          "name": "Beatriz Scott"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Josefa Haynes! You have 10 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -814,28 +434,8 @@
         "fugiat",
         "aute"
       ],
-      "friends": [
-        {
-          "name": "Sawyer Hale"
-        },
-        {
-          "name": "Robert Marquez"
-        },
-        {
-          "name": "Linda Golden"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Natalia Harris"
-        },
-        {
-          "name": "Ray Shelton"
-        },
-        {
-          "name": "Stark Blackwell"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Mcguire Mullins! You have 7 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -856,28 +456,8 @@
         "ad",
         "duis"
       ],
-      "friends": [
-        {
-          "name": "Bonita Pruitt"
-        },
-        {
-          "name": "Riley Hebert"
-        },
-        {
-          "name": "Sloan Horn"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Mcfarland Christian"
-        },
-        {
-          "name": "Shepard Valdez"
-        },
-        {
-          "name": "Foster Bryan"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Frank Abbott! You have 7 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -898,28 +478,8 @@
         "est",
         "elit"
       ],
-      "friends": [
-        {
-          "name": "Wolfe Stone"
-        },
-        {
-          "name": "Griffin Mercer"
-        },
-        {
-          "name": "Carol Thompson"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Bird Holland"
-        },
-        {
-          "name": "Nicole Pittman"
-        },
-        {
-          "name": "Harper Larsen"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Lily Dunlap! You have 10 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -940,28 +500,8 @@
         "deserunt",
         "sit"
       ],
-      "friends": [
-        {
-          "name": "Suzette Sherman"
-        },
-        {
-          "name": "Goldie Ochoa"
-        },
-        {
-          "name": "Wilkins Everett"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Abigail Tyson"
-        },
-        {
-          "name": "Sargent Cannon"
-        },
-        {
-          "name": "Rosanne Foley"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Phelps Callahan! You have 4 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -982,28 +522,8 @@
         "duis",
         "cillum"
       ],
-      "friends": [
-        {
-          "name": "Fran Lynn"
-        },
-        {
-          "name": "Dunn Schneider"
-        },
-        {
-          "name": "Lakeisha Richard"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Lloyd Ramirez"
-        },
-        {
-          "name": "Morales Rush"
-        },
-        {
-          "name": "Erna Thornton"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Francis White! You have 1 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -1024,28 +544,8 @@
         "excepteur",
         "sint"
       ],
-      "friends": [
-        {
-          "name": "Stephenson Phillips"
-        },
-        {
-          "name": "Taylor Burris"
-        },
-        {
-          "name": "Watkins Conway"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "June Joyner"
-        },
-        {
-          "name": "Rebekah Walton"
-        },
-        {
-          "name": "Danielle May"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Lilly Johns! You have 2 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -1066,28 +566,8 @@
         "id",
         "ullamco"
       ],
-      "friends": [
-        {
-          "name": "Terrie Estrada"
-        },
-        {
-          "name": "Buckner Rivas"
-        },
-        {
-          "name": "Frances Sargent"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Ruiz Pate"
-        },
-        {
-          "name": "Aguirre Barnett"
-        },
-        {
-          "name": "Caitlin Gentry"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Stone Ellison! You have 7 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -1108,28 +588,8 @@
         "sint",
         "duis"
       ],
-      "friends": [
-        {
-          "name": "Billie Bishop"
-        },
-        {
-          "name": "White Stephens"
-        },
-        {
-          "name": "Dorsey Gilmore"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Helga King"
-        },
-        {
-          "name": "Vega Greer"
-        },
-        {
-          "name": "Meredith Lewis"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Adeline Mckinney! You have 8 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -1150,28 +610,8 @@
         "incididunt",
         "ad"
       ],
-      "friends": [
-        {
-          "name": "Lilia Rutledge"
-        },
-        {
-          "name": "Lesa Lambert"
-        },
-        {
-          "name": "Bass Morales"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Marylou Garner"
-        },
-        {
-          "name": "Barrera Black"
-        },
-        {
-          "name": "Keith Burt"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Ashley Allison! You have 3 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -1192,28 +632,8 @@
         "voluptate",
         "nulla"
       ],
-      "friends": [
-        {
-          "name": "Adele Reed"
-        },
-        {
-          "name": "Delgado Sears"
-        },
-        {
-          "name": "Tonya Glover"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Jeannette Norris"
-        },
-        {
-          "name": "Flynn Miles"
-        },
-        {
-          "name": "Bridget Fitzpatrick"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Lindsey Mcfadden! You have 10 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -1234,28 +654,8 @@
         "sunt",
         "pariatur"
       ],
-      "friends": [
-        {
-          "name": "Le Hanson"
-        },
-        {
-          "name": "Aurora Diaz"
-        },
-        {
-          "name": "Dillard Best"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Combs Griffin"
-        },
-        {
-          "name": "Nadia Campos"
-        },
-        {
-          "name": "Margo England"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Francis Sanchez! You have 3 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -1276,28 +676,8 @@
         "est",
         "deserunt"
       ],
-      "friends": [
-        {
-          "name": "Marjorie Gilliam"
-        },
-        {
-          "name": "Greer Wood"
-        },
-        {
-          "name": "Francesca Johnson"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Deborah Frazier"
-        },
-        {
-          "name": "Estelle Hewitt"
-        },
-        {
-          "name": "Cindy Hernandez"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Rachelle Norton! You have 2 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -1318,28 +698,8 @@
         "veniam",
         "veniam"
       ],
-      "friends": [
-        {
-          "name": "Bowers Nixon"
-        },
-        {
-          "name": "Heidi Randolph"
-        },
-        {
-          "name": "Mcpherson Middleton"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Wise Herring"
-        },
-        {
-          "name": "Anita Benton"
-        },
-        {
-          "name": "Kristy Richardson"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Payne Delacruz! You have 6 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -1360,28 +720,8 @@
         "veniam",
         "sint"
       ],
-      "friends": [
-        {
-          "name": "Susie Barron"
-        },
-        {
-          "name": "Margery Albert"
-        },
-        {
-          "name": "Celina Keller"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Solis Stokes"
-        },
-        {
-          "name": "Sherry Wright"
-        },
-        {
-          "name": "Duke Woodward"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Addie Kaufman! You have 4 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -1402,28 +742,8 @@
         "aliquip",
         "dolore"
       ],
-      "friends": [
-        {
-          "name": "Terrell Navarro"
-        },
-        {
-          "name": "Campbell Peck"
-        },
-        {
-          "name": "Kline Nolan"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Casandra Acosta"
-        },
-        {
-          "name": "Shawn Houston"
-        },
-        {
-          "name": "Pansy Mclaughlin"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Ivy Patton! You have 1 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -1444,28 +764,8 @@
         "ut",
         "commodo"
       ],
-      "friends": [
-        {
-          "name": "Church Lawson"
-        },
-        {
-          "name": "Trisha Bond"
-        },
-        {
-          "name": "Christensen Blankenship"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Graham Young"
-        },
-        {
-          "name": "Debra Juarez"
-        },
-        {
-          "name": "Rita Hooper"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Evangeline Whitfield! You have 1 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -1486,28 +786,8 @@
         "ad",
         "Lorem"
       ],
-      "friends": [
-        {
-          "name": "Christie Hudson"
-        },
-        {
-          "name": "Emma Hoffman"
-        },
-        {
-          "name": "Sonja Stafford"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Pearl Mcdonald"
-        },
-        {
-          "name": "Fern Gonzales"
-        },
-        {
-          "name": "Mitchell Garrett"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Underwood Vega! You have 1 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -1528,28 +808,8 @@
         "magna",
         "pariatur"
       ],
-      "friends": [
-        {
-          "name": "Nola Franks"
-        },
-        {
-          "name": "Mcbride Dale"
-        },
-        {
-          "name": "Freeman Ayala"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Bonner Robbins"
-        },
-        {
-          "name": "Susanna Matthews"
-        },
-        {
-          "name": "Juliana Fleming"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Deloris Bush! You have 8 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -1570,28 +830,8 @@
         "Lorem",
         "deserunt"
       ],
-      "friends": [
-        {
-          "name": "Bradford Bailey"
-        },
-        {
-          "name": "Kelley Preston"
-        },
-        {
-          "name": "Berger Clay"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Angelica Briggs"
-        },
-        {
-          "name": "Lowe Santana"
-        },
-        {
-          "name": "Pat Todd"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Wade Gutierrez! You have 4 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -1612,28 +852,8 @@
         "ea",
         "et"
       ],
-      "friends": [
-        {
-          "name": "Alice Castillo"
-        },
-        {
-          "name": "Ann Stephenson"
-        },
-        {
-          "name": "Hilda Ferrell"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Sherrie Campbell"
-        },
-        {
-          "name": "Kate Schultz"
-        },
-        {
-          "name": "Vanessa Gould"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Lillian Wade! You have 8 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -1654,28 +874,8 @@
         "enim",
         "occaecat"
       ],
-      "friends": [
-        {
-          "name": "Benson Howell"
-        },
-        {
-          "name": "Collier Simpson"
-        },
-        {
-          "name": "Christa Witt"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Ramsey Carpenter"
-        },
-        {
-          "name": "Dixie Noble"
-        },
-        {
-          "name": "Martin Kemp"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Gilbert Dejesus! You have 10 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -1696,28 +896,8 @@
         "labore",
         "aliqua"
       ],
-      "friends": [
-        {
-          "name": "Ernestine Arnold"
-        },
-        {
-          "name": "Shelly Patterson"
-        },
-        {
-          "name": "Ferrell Kelley"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Lula Roberts"
-        },
-        {
-          "name": "Sherri Kinney"
-        },
-        {
-          "name": "Dianne Gillespie"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Eileen Aguilar! You have 2 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -1738,28 +918,8 @@
         "velit",
         "do"
       ],
-      "friends": [
-        {
-          "name": "Juarez Welch"
-        },
-        {
-          "name": "Faith Wolf"
-        },
-        {
-          "name": "Mckinney Foster"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Casey Bernard"
-        },
-        {
-          "name": "Weaver Salinas"
-        },
-        {
-          "name": "Tracy Wilkins"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Mcclain Lawrence! You have 5 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -1780,28 +940,8 @@
         "qui",
         "laborum"
       ],
-      "friends": [
-        {
-          "name": "Hines Mejia"
-        },
-        {
-          "name": "Patsy Crawford"
-        },
-        {
-          "name": "Chandler Graves"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Hope Rhodes"
-        },
-        {
-          "name": "Tamera Valenzuela"
-        },
-        {
-          "name": "Joann Spears"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Valenzuela Solomon! You have 3 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -1822,28 +962,8 @@
         "non",
         "nisi"
       ],
-      "friends": [
-        {
-          "name": "Flossie Marshall"
-        },
-        {
-          "name": "Belinda Franco"
-        },
-        {
-          "name": "Chase Booth"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Chavez Barton"
-        },
-        {
-          "name": "Gonzalez Clemons"
-        },
-        {
-          "name": "Hebert Mccarthy"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Maude Holcomb! You have 2 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -1864,28 +984,8 @@
         "reprehenderit",
         "excepteur"
       ],
-      "friends": [
-        {
-          "name": "Barbara Heath"
-        },
-        {
-          "name": "Bennett Farmer"
-        },
-        {
-          "name": "Guthrie Burgess"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Frankie Bean"
-        },
-        {
-          "name": "Evans Hart"
-        },
-        {
-          "name": "Maryann Huffman"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Peterson David! You have 4 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -1906,28 +1006,8 @@
         "ut",
         "sint"
       ],
-      "friends": [
-        {
-          "name": "Marisa Burns"
-        },
-        {
-          "name": "Jeanie Ingram"
-        },
-        {
-          "name": "Ethel Chan"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Kirkland Wallace"
-        },
-        {
-          "name": "Sylvia Daugherty"
-        },
-        {
-          "name": "Simon Fischer"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Stephanie Cabrera! You have 3 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -1948,28 +1028,8 @@
         "sit",
         "sunt"
       ],
-      "friends": [
-        {
-          "name": "Horton Hoover"
-        },
-        {
-          "name": "Rebecca Duffy"
-        },
-        {
-          "name": "Guy Barry"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Elva Martinez"
-        },
-        {
-          "name": "Kelley Carver"
-        },
-        {
-          "name": "Hallie Underwood"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Shelton Morton! You have 9 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -1990,28 +1050,8 @@
         "nisi",
         "do"
       ],
-      "friends": [
-        {
-          "name": "Sharon Saunders"
-        },
-        {
-          "name": "Melba Dunn"
-        },
-        {
-          "name": "Noemi Munoz"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Strong Stevenson"
-        },
-        {
-          "name": "Penny Cohen"
-        },
-        {
-          "name": "West Mercado"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Bond Carlson! You have 7 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -2032,28 +1072,8 @@
         "do",
         "in"
       ],
-      "friends": [
-        {
-          "name": "Lisa Powell"
-        },
-        {
-          "name": "Rodgers Fuller"
-        },
-        {
-          "name": "Huber Brady"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Morris Velazquez"
-        },
-        {
-          "name": "Webb Ray"
-        },
-        {
-          "name": "Julie Whitehead"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Mcfadden Donaldson! You have 10 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -2074,28 +1094,8 @@
         "ut",
         "in"
       ],
-      "friends": [
-        {
-          "name": "Shannon Wilcox"
-        },
-        {
-          "name": "Sharpe Bird"
-        },
-        {
-          "name": "Melinda Blevins"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Ayala Floyd"
-        },
-        {
-          "name": "Trevino Barber"
-        },
-        {
-          "name": "Marcia Garrison"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Ila York! You have 8 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -2116,28 +1116,8 @@
         "esse",
         "nisi"
       ],
-      "friends": [
-        {
-          "name": "Wyatt Hodge"
-        },
-        {
-          "name": "Wong Warner"
-        },
-        {
-          "name": "Katherine Ramos"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Mcmahon Wall"
-        },
-        {
-          "name": "Bentley Mccall"
-        },
-        {
-          "name": "Ball Caldwell"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Marianne Cotton! You have 3 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -2158,28 +1138,8 @@
         "sunt",
         "qui"
       ],
-      "friends": [
-        {
-          "name": "Alison Craig"
-        },
-        {
-          "name": "Dena Kelly"
-        },
-        {
-          "name": "Campos Mcintyre"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Lacy Gibbs"
-        },
-        {
-          "name": "Meadows Edwards"
-        },
-        {
-          "name": "Cotton Lynch"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Hudson Snider! You have 5 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -2200,28 +1160,8 @@
         "ad",
         "minim"
       ],
-      "friends": [
-        {
-          "name": "Chapman Cline"
-        },
-        {
-          "name": "Ronda Moran"
-        },
-        {
-          "name": "Hart Berry"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Georgia Carrillo"
-        },
-        {
-          "name": "Stafford Herrera"
-        },
-        {
-          "name": "Lucia Montoya"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Heather Elliott! You have 5 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -2242,28 +1182,8 @@
         "ut",
         "adipisicing"
       ],
-      "friends": [
-        {
-          "name": "Hendricks Chase"
-        },
-        {
-          "name": "Gertrude Reyes"
-        },
-        {
-          "name": "Robertson Austin"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Vaughn Berger"
-        },
-        {
-          "name": "York Osborne"
-        },
-        {
-          "name": "Deanna Cortez"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Francisca Jarvis! You have 5 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -2284,28 +1204,8 @@
         "ex",
         "sunt"
       ],
-      "friends": [
-        {
-          "name": "Felecia Walsh"
-        },
-        {
-          "name": "Rosetta Hopkins"
-        },
-        {
-          "name": "Moses Cardenas"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Annabelle Snow"
-        },
-        {
-          "name": "Rachel Zimmerman"
-        },
-        {
-          "name": "Chris Russo"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Buchanan Mclean! You have 1 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -2326,28 +1226,8 @@
         "mollit",
         "incididunt"
       ],
-      "friends": [
-        {
-          "name": "Blevins Hamilton"
-        },
-        {
-          "name": "Robinson Hyde"
-        },
-        {
-          "name": "Nash Cameron"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Andrews Slater"
-        },
-        {
-          "name": "Violet Luna"
-        },
-        {
-          "name": "Rios Wise"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Jessica Moon! You have 6 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -2368,28 +1248,8 @@
         "et",
         "anim"
       ],
-      "friends": [
-        {
-          "name": "Schneider Shields"
-        },
-        {
-          "name": "Cassie Joyce"
-        },
-        {
-          "name": "May Holder"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Conway Nunez"
-        },
-        {
-          "name": "Britney Holden"
-        },
-        {
-          "name": "Bullock Robles"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Luz Hickman! You have 3 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -2410,28 +1270,8 @@
         "enim",
         "nulla"
       ],
-      "friends": [
-        {
-          "name": "Marie Head"
-        },
-        {
-          "name": "Pitts Hahn"
-        },
-        {
-          "name": "Leon Compton"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Fitzpatrick Malone"
-        },
-        {
-          "name": "Carmen Lindsay"
-        },
-        {
-          "name": "Yates Salazar"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Molly Hull! You have 8 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -2452,28 +1292,8 @@
         "Lorem",
         "magna"
       ],
-      "friends": [
-        {
-          "name": "Rosemarie Conrad"
-        },
-        {
-          "name": "Wright Lee"
-        },
-        {
-          "name": "Ochoa Kirby"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Sophie Kennedy"
-        },
-        {
-          "name": "Marcie Powers"
-        },
-        {
-          "name": "Farley Hall"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Patrick Duran! You have 10 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -2494,28 +1314,8 @@
         "officia",
         "exercitation"
       ],
-      "friends": [
-        {
-          "name": "Baxter Curry"
-        },
-        {
-          "name": "Sondra Snyder"
-        },
-        {
-          "name": "Leslie Castaneda"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Jaclyn Burnett"
-        },
-        {
-          "name": "Clements Dudley"
-        },
-        {
-          "name": "Shari Conley"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Kerr Manning! You have 10 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -2536,28 +1336,8 @@
         "nulla",
         "tempor"
       ],
-      "friends": [
-        {
-          "name": "Day Brennan"
-        },
-        {
-          "name": "Donaldson Hunter"
-        },
-        {
-          "name": "Herminia Baldwin"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Blanca Newman"
-        },
-        {
-          "name": "Willa Parrish"
-        },
-        {
-          "name": "Dee Carroll"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Neva Blake! You have 10 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -2578,28 +1358,8 @@
         "deserunt",
         "quis"
       ],
-      "friends": [
-        {
-          "name": "Colon Roberson"
-        },
-        {
-          "name": "Lela Knapp"
-        },
-        {
-          "name": "Maureen Duncan"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Pope Bonner"
-        },
-        {
-          "name": "Cherry William"
-        },
-        {
-          "name": "Keller Ortiz"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Fox Yates! You have 5 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -2620,28 +1380,8 @@
         "duis",
         "dolor"
       ],
-      "friends": [
-        {
-          "name": "Ortiz Gill"
-        },
-        {
-          "name": "Nicholson Harding"
-        },
-        {
-          "name": "Ebony Atkins"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Kristie Robertson"
-        },
-        {
-          "name": "Luann Gardner"
-        },
-        {
-          "name": "Cline Case"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Josefina Justice! You have 10 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -2662,28 +1402,8 @@
         "non",
         "duis"
       ],
-      "friends": [
-        {
-          "name": "Gabriela Guy"
-        },
-        {
-          "name": "Bates Cruz"
-        },
-        {
-          "name": "Woodard Flynn"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Vivian Figueroa"
-        },
-        {
-          "name": "Munoz Branch"
-        },
-        {
-          "name": "Maldonado Hardy"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Adkins Meyers! You have 2 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -2704,28 +1424,8 @@
         "tempor",
         "eu"
       ],
-      "friends": [
-        {
-          "name": "Wooten Deleon"
-        },
-        {
-          "name": "Vang Guzman"
-        },
-        {
-          "name": "Velasquez English"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Gina Daniels"
-        },
-        {
-          "name": "Gentry Mcbride"
-        },
-        {
-          "name": "Joyce Riddle"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Finch Sparks! You have 3 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -2746,28 +1446,8 @@
         "labore",
         "cupidatat"
       ],
-      "friends": [
-        {
-          "name": "Andrea Donovan"
-        },
-        {
-          "name": "Stanley Cooper"
-        },
-        {
-          "name": "Lauri Cook"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Shelia Sykes"
-        },
-        {
-          "name": "Gould Dorsey"
-        },
-        {
-          "name": "Camacho Silva"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Guzman Rose! You have 3 unread messages.",
       "favoriteFruit": "apple"
     },
@@ -2788,28 +1468,8 @@
         "nostrud",
         "elit"
       ],
-      "friends": [
-        {
-          "name": "Whitfield Ellis"
-        },
-        {
-          "name": "Nellie Skinner"
-        },
-        {
-          "name": "Joyner Mcknight"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Crane Jacobson"
-        },
-        {
-          "name": "Alston Doyle"
-        },
-        {
-          "name": "Briana Mcclain"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Virginia Decker! You have 7 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -2830,28 +1490,8 @@
         "deserunt",
         "qui"
       ],
-      "friends": [
-        {
-          "name": "English Boyd"
-        },
-        {
-          "name": "Franklin Moss"
-        },
-        {
-          "name": "Hale Sexton"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Lauren Jones"
-        },
-        {
-          "name": "Edna Wells"
-        },
-        {
-          "name": "Petra Booker"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Jodi Holman! You have 1 unread messages.",
       "favoriteFruit": "banana"
     },
@@ -2872,28 +1512,8 @@
         "Lorem",
         "occaecat"
       ],
-      "friends": [
-        {
-          "name": "Dona Cox"
-        },
-        {
-          "name": "Selena Leonard"
-        },
-        {
-          "name": "Mcmillan Mcguire"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "French Curtis"
-        },
-        {
-          "name": "Roxie Reynolds"
-        },
-        {
-          "name": "Mcintosh Benson"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Elena Nichols! You have 5 unread messages.",
       "favoriteFruit": "strawberry"
     },
@@ -2914,28 +1534,8 @@
         "magna",
         "sit"
       ],
-      "friends": [
-        {
-          "name": "Bell James"
-        },
-        {
-          "name": "Travis Torres"
-        },
-        {
-          "name": "Dean Mays"
-        }
-      ],
-      "adversaries": [
-        {
-          "name": "Olsen Walter"
-        },
-        {
-          "name": "Gallegos Lara"
-        },
-        {
-          "name": "Cox Kane"
-        }
-      ],
+      "friends": [],
+      "adversaries": [],
       "greeting": "Hello, Leta Green! You have 1 unread messages.",
       "favoriteFruit": "apple"
     }
