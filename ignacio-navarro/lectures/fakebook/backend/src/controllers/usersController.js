@@ -49,7 +49,7 @@ async function putFriends(req, res) {
         useFindAndModify: false,
       },
     )
-      .populate({ path: 'friends', select: 'picture' });
+      .populate({ path: 'friends', select: 'name', model: 'User' });
 
     res.json(updatedUser);
   } catch (error) {

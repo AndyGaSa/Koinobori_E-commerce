@@ -7,14 +7,19 @@ import { addFriend } from '../redux/actions/actionCreator';
 
 export default function Person({ personData }) {
   const dispatch = useDispatch();
+  const [friend, setFriend] = React.useState(false);
   const { _id } = useSelector((store) => store.user);
-  function manageClick() {
+  function manageAddClick() {
+    setFriend(true);
     const newData = {
       friends: [{
         _id: personData._id,
       }],
     };
     dispatch(addFriend(newData, _id));
+  }
+  function manageRemoveClick() {
+    setFriend(false);
   }
   return (
     <div className="person__container">
@@ -24,7 +29,8 @@ export default function Person({ personData }) {
         <p>{personData?.favoriteFruit}</p>
       </div>
       <span>{personData?.age}</span>
-      <button type="button" onClick={() => manageClick()}>Add</button>
+      <button type="button" disabled={friend} onClick={() => manageAddClick()}>Add</button>
+      <button type="button" disabled={!friend} onClick={() => manageRemoveClick()}>Delete</button>
     </div>
   );
 }
