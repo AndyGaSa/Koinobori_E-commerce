@@ -12,8 +12,10 @@ server.use(express.json());
 server.use(morgan('dev'));
 
 const userRouter = require('./src/routes/userRouter');
+const authRouter = require('./src/routes/authRouter');
 
 server.use('/api/users', userRouter);
+server.use('/api/login', authRouter);
 
 server.listen(
   port,

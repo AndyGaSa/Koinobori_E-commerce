@@ -1,0 +1,28 @@
+.card-item__link{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 120px;
+    align-items: center;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 0.9em;
+    img{
+        height: 150px;
+        width: fit-content;
+    }
+    figcaption{
+        margin: 10px;
+    }
+}
+.card-item__buy{
+    margin: 5px auto;
+}
+.card-item__container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}

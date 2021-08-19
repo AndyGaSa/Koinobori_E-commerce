@@ -17,8 +17,7 @@ export default function GetDrivers() {
 
   return (
     <>
-      <h2>hola</h2>
-      <button type="button">Click</button>
+
     </>
   );
 }
