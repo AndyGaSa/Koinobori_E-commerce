@@ -38,10 +38,12 @@ export default function Principal() {
 
   function checkFriendStatus(personId) {
     if (user?.friends?.some((person) => person._id === personId)) {
+      // eslint-disable-next-line no-console
       console.log('OUT friend');
       const arrayOfFriends = user?.friends?.filter((friend) => friend._id !== personId);
       dispatch(updateUser(user._id, { friends: arrayOfFriends }));
     } else {
+      // eslint-disable-next-line no-console
       console.log('IN friend');
       user?.friends?.push(personId);
       dispatch(updateUser(user._id, { friends: user.friends }));
@@ -50,10 +52,12 @@ export default function Principal() {
 
   function checkFoeStatus(personId) {
     if (user?.adversaries?.some((person) => person._id === personId)) {
+      // eslint-disable-next-line no-console
       console.log('OUT adversarie');
       const arrayOfEnemies = user?.adversaries?.filter((foe) => foe._id !== personId);
       dispatch(updateUser(user._id, { adversaries: arrayOfEnemies }));
     } else {
+      // eslint-disable-next-line no-console
       console.log('IN adversarie');
       user?.adversaries?.push(personId);
       dispatch(updateUser(user._id, { adversaries: user.adversaries }));
