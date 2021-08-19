@@ -1,5 +1,5 @@
 import React from 'react';
-import Userslist from './components/Userslist';
+import Userslist from './Userslist';
 
 import './App.css';
 
