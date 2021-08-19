@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 import userReducer from './userReducer';
+import authReducer from './authReducer';
 
-// Estado y reducer que lo maneja.
+// Función que recibe un objeto.
 export default combineReducers({
   user: userReducer,
+  auth: authReducer,
 });
