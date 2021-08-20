@@ -12,7 +12,19 @@ const createOne = async ({ body }, res) => {
 
 const getAll = async ({ query }, res) => {
   try {
-    const users = await User.find(query);
+    const users = await User.find(query)
+      .populate(
+        {
+          path: 'friends',
+          select: ['name'],
+        },
+      )
+      .populate(
+        {
+          path: 'adversaries',
+          select: ['name'],
+        },
+      );
     res.json(users);
   } catch (error) {
     res.status(500);
@@ -54,13 +66,12 @@ const updateOneById = async (
   try {
     const updateUser = await User.findByIdAndUpdate(
       id,
-      body,
+      { $addToSet: body },
       {
         new: true,
         useFindAndModify: false,
       },
     );
-
     res.status(200);
     res.json(updateUser);
   } catch (error) {

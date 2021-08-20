@@ -1,24 +1,19 @@
 /* eslint-disable no-underscore-dangle */
-import React, { useEffect } from 'react';
-import './Dashboard.css';
-import { useDispatch, useSelector } from 'react-redux';
-import Friends from '../components/friends/Friends';
-import Enemies from '../components/enemies/Enemies';
-import { loadUsers } from '../redux/actions/actionCreators';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import Friends from '../../components/friends/Friends';
+import Enemies from '../../components/enemies/Enemies';
 
-function Dashboard() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(loadUsers);
-  }, []);
-
-  // const objId = '611bc278d099c1190e3313d6';
-  const user = useSelector(({ userData }) => userData);
+export default function Myprofile() {
+  const objId = '611cae257cfd041e79378d07';
+  const allUsers = useSelector(({ userData }) => userData);
+  const user = allUsers[0]?.filter((e) => e._id === objId);
 
   return (
     <>
-      {user.map((e) => (
+      {user?.map((e) => (
         <div className="user_data">
+          <img src={e.picture} alt="i" />
           <p>
             name:
             {' '}
@@ -48,14 +43,14 @@ function Dashboard() {
       ))}
       <div className="people_data">
         <div className="friends_data">
+          FRIENDS:
           <Friends />
         </div>
         <div className="enemy_data">
+          ENEMIES:
           <Enemies />
         </div>
       </div>
     </>
   );
 }
-
-export default Dashboard;

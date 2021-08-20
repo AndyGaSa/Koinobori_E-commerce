@@ -3,7 +3,17 @@ body{
     flex-direction: column;
 }
 
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .people_data{
     display: flex;
     flex-direction: row;
+}
+
+.user_data{
+    margin: 2em;
+    margin-bottom: 1em;
 }
