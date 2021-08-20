@@ -25,7 +25,7 @@ function Header() {
 
   return (
     <header className="header">
-      <h1 className="header__title">shoeShop</h1>
+      <h1 data-testid="page-title" className="header__title">shoeShop</h1>
       <div className="header__login-logout">
         {isAuthenticated
           ? (

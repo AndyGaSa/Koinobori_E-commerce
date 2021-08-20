@@ -1,0 +1,43 @@
+--- Front
+
+LoginButton => axios(Auth0)
+.then( Auth0.response => post.setNewUser )
+
+setnewUser{
+  name: String,
+  user_id: String,
+  
+}
+
+--- Back
+
+POST.findOrSetUser (req, res) =>{
+  const { user_id } = req.body
+  const sites = await Sites.find()
+  let favList = {}
+  const response = {}
+
+  const user = await User.find({ user_id })
+  if(!user){
+    User.create(req.body)
+    FavList.create( { 
+      user: User 
+      def   favsites: [{
+        empty
+      }] 
+    })
+
+    response.user = { userinfo }
+    response.favList = { favList }
+    response.sites = sites
+
+    res.send(response);
+  }
+
+  favlist = await FavList.find({user_id})
+
+  response.favlist = favList;
+  response.sites = sites;
+
+  res.send(response)
+}
