@@ -1,6 +1,5 @@
 import axios from 'axios';
 import actionTypes from './actionTypes';
-import '../../mocks/mainUser.mock.json';
 
 export default function loadUsers() {
   return async (dispatch) => {
