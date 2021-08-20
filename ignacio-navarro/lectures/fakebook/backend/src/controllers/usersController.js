@@ -42,7 +42,7 @@ async function putFriends(req, res) {
   try {
     const updatedUser = await User.findByIdAndUpdate(
       req.params.params,
-      { $push: req.body },
+      { $addToSet: req.body },
       {
         new: true,
         useFindAndModify: false,
@@ -50,7 +50,35 @@ async function putFriends(req, res) {
     ).populate({
       path: 'friends._id',
       select: ['name', 'picture'],
-    });
+    })
+      .populate({
+        path: 'adversaries._id',
+        select: ['name', 'picture'],
+      });
+
+    res.json(updatedUser);
+  } catch (error) {
+    res.status(404);
+    res.send(error);
+  }
+}
+async function putAdversaries(req, res) {
+  try {
+    const updatedUser = await User.findByIdAndUpdate(
+      req.params.params,
+      { $addToSet: req.body },
+      {
+        new: true,
+        useFindAndModify: false,
+      },
+    ).populate({
+      path: 'friends._id',
+      select: ['name', 'picture'],
+    })
+      .populate({
+        path: 'adversaries._id',
+        select: ['name', 'picture'],
+      });
 
     res.json(updatedUser);
   } catch (error) {
@@ -63,6 +91,10 @@ async function getOneUser({ params: { userId } }, res) {
     const foundUser = await User.findById(userId)
       .populate({
         path: 'friends._id',
+        select: ['name', 'picture'],
+      })
+      .populate({
+        path: 'adversaries._id',
         select: ['name', 'picture'],
       });
     res.status(200);
@@ -109,4 +141,5 @@ module.exports = {
   getFriends,
   getAdversaries,
   putFriends,
+  putAdversaries,
 };

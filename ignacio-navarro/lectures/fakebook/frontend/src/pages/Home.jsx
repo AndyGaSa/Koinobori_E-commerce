@@ -1,24 +1,16 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadFriends, loadUser, loadAdversaries } from '../redux/actions/actionCreator';
+import { loadUser } from '../redux/actions/actionCreator';
 import Friend from '../components/Friend';
 import Adversarie from '../components/Adversarie';
 import './Home.scss';
 
 export default function Home() {
-  // const friends = useSelector((store) => store.friends);
-  const adversaries = useSelector((store) => store.adversaries);
   const user = useSelector((store) => store.user);
   console.log(user?.friends);
 
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(loadAdversaries());
-  }, []);
-  useEffect(() => {
-    dispatch(loadFriends());
-  }, []);
   useEffect(() => {
     dispatch(loadUser());
   }, []);
@@ -66,8 +58,8 @@ export default function Home() {
         </section>
         <section>
           <ul className="home__adversaries-container">
-            {(adversaries.length > 0) && adversaries.slice(6, 10).map((adversarie) => (
-              <Adversarie key={`adversarie_${user._id}`} adversarieData={adversarie} />
+            {(user?.adversaries?.length > 0) && user.adversaries.slice(0, 5).map((adversarie) => (
+              <Adversarie key={`adversarie_${adversarie._id._id}`} picture={adversarie?._id.picture} name={adversarie?._id.name} />
             ))}
 
           </ul>

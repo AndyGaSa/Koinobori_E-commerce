@@ -3,11 +3,12 @@
 import React from 'react';
 import './Person.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { addFriend } from '../redux/actions/actionCreator';
+import { addFriend, addAdversarie } from '../redux/actions/actionCreator';
 
 export default function Person({ personData }) {
   const dispatch = useDispatch();
   const [friend, setFriend] = React.useState(false);
+  const [adversarie, setAdversarie] = React.useState(false);
   const { _id } = useSelector((store) => store.user);
   function manageAddClick() {
     setFriend(true);
@@ -19,7 +20,14 @@ export default function Person({ personData }) {
     dispatch(addFriend(newData, _id));
   }
   function manageRemoveClick() {
-    setFriend(false);
+    setAdversarie(true);
+    const newData = {
+      adversaries: [{
+        _id: personData._id,
+      },
+      ],
+    };
+    dispatch(addAdversarie(newData, _id));
   }
   return (
     <div className="person__container">
@@ -30,7 +38,7 @@ export default function Person({ personData }) {
       </div>
       <span>{personData?.age}</span>
       <button type="button" disabled={friend} onClick={() => manageAddClick()}>Add</button>
-      <button type="button" disabled={!friend} onClick={() => manageRemoveClick()}>Delete</button>
+      <button type="button" disabled={adversarie} onClick={() => manageRemoveClick()}>Delete</button>
     </div>
   );
 }

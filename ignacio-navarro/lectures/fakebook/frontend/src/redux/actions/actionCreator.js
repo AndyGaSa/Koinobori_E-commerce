@@ -37,3 +37,12 @@ export function addFriend(newData, id) {
     });
   };
 }
+export function addAdversarie(newData, id) {
+  return async (dispatch) => {
+    const { data } = await axios.put(`api/user/adversaries/${id}`, newData);
+    dispatch({
+      type: actionTypes.UPDATE_USER,
+      data,
+    });
+  };
+}

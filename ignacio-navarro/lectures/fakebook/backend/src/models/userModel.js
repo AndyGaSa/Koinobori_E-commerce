@@ -15,7 +15,12 @@ const userSchema = new Schema({
       ref: 'User',
     },
   }],
-  adversaries: [{ type: { type: Schema.Types.ObjectId, ref: 'User' } }],
+  adversaries: [{
+    type: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+    },
+  }],
   greeting: String,
   favoriteFruit: String,
 });
