@@ -1,47 +1,3 @@
-/* import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import propTypes from 'prop-types';
-
-import { getGnomeById, clearCurrentGnome } from '../../redux/actions/currentGnome.creator';
-import icons from '../../utils/gnomesSocialIcons';
-
-import './header.scss';
-
-function Header({ sideMenuClass, setSideMenuClass, currentUserId }) {
-  const dispatch = useDispatch();
-
-  function openCloseNav() {
-    return sideMenuClass.includes('closed')
-    ? setSideMenuClass('')
-    : setSideMenuClass('side-menu--closed');
-  }
-
-  function goProfile(id) {
-    if (id) {
-      dispatch(getGnomeById(id));
-    } else {
-      dispatch(clearCurrentGnome());
-    }
-  }
-
-  return (
-    <header>
-      <h1 className="hide">Social Gnomes</h1>
-      <button type="button" onClick={openCloseNav}
-      label="Side Menu Button"><FontAwesomeIcon icon={faBars} /></button>
-      <button type="button" onClick={() => goProfile(currentUserId)}>
-      <figure>
-      <figcaption>profile</figcaption>
-      <img src={icons.blackIcon} alt="SocialGnomes" />
-      </figure>
-      </button>
-      </header>
-      );
-    }
-
-    export default Header;
-    */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
@@ -101,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
     width: '100%',
