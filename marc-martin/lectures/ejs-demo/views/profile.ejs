@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="description" content="DASHBOARD">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Marc Martín">
+    <title>My website</title>
+</head>
+<body>
+    <header class="container">
+    <h1>PROFILE</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/profile">Profile</a>
+    </nav>
+    </header> 
+    <hr>  
+    <main class="container">
+        <h2>Welcome <%= user.name %></h2>
+        <p>Age: <%= user.age %></p>
+        <p>Wife: <%= user.wife %></p>
+        <p>Camper Van "Van Diesel": <%= user.camperVan_Diesel %> </p>
+    </main> 
+</body>
+</html>
