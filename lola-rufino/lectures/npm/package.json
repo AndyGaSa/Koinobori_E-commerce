@@ -1,0 +1,19 @@
+{
+  "name": "platano-de-canarias",
+  "version": "1.0.1",
+  "description": "Paquete en honor al plátano de Canarias",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "platano",
+    "canarias"
+  ],
+  "author": "Lola Rufino",
+  "license": "ISC",
+  "dependencies": {
+    "alex-mola-en-skylab": "^1.0.1",
+    "my-awful-package": "^1.0.1"
+  }
+}

@@ -1,0 +1,169 @@
+.header {
+    width: 375px;
+    height: 150px;
+    margin-bottom: 10px; 
+    border: 5px solid #000;
+        .header-nav {
+            position: relative;
+            .nav-profile{
+                position: absolute;
+                width: 91px;
+                height: 140px;
+                margin: 0;
+                clip-path: polygon(0% 0, 100% 0, 75% 100%, 0% 100%);
+                top: 0px;
+                left: 0px;
+                background-image: url('https://i.ibb.co/YLZR3hF/jarvis.png');
+                filter: grayscale(100%);
+                background-size: cover;
+                background-position: center;
+                .nav-profile__text {
+                    position: absolute;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-size: 4vw;
+                    top: 0px;
+                    left: 0px;
+                    padding: 2px;
+                    background-color: rgba(0, 0, 0, 0.4);
+                }
+            }
+            .nav-profile:hover {
+                filter:none
+            }
+            .nav-comics{
+                position: absolute;
+                width: 110px;
+                height: 140px;
+                margin: 0px 0px 0px -27px;
+                clip-path: polygon(20% 0, 100% 0, 85% 100%, 0 100%);
+                top: 0px;
+                left: 95px;
+                background-image: url('https://i.ibb.co/mh9w0nC/comics.jpg');
+                filter: grayscale(100%);
+                background-size: cover;
+                background-position: center;
+                .nav-comics__text {
+                    position: absolute;
+                    color: #fff;
+                    text-transform: uppercase;
+                    bottom: 6px;
+                    left: 10%;
+                    font-size: 4vw;
+                    padding: 2px;
+                    background-color: rgba(0, 0, 0, 0.4);
+                }
+            }
+            .nav-comics:hover {
+                filter:none
+            }
+            .nav-characters{
+                position: absolute;
+                width: 145px;
+                height: 140px;
+                margin: 0px 0px 0px -14px;
+                clip-path: polygon(11% 0, 100% 0, 58% 100%, 0 100%);
+                top: 0px;
+                left: 175px;
+                background-image: url('https://i.ibb.co/xDHnz2m/battle.jpg');
+                filter: grayscale(100%);
+                background-size: cover;
+                background-position: center;
+                .nav-characters__text {
+                    position: absolute;
+                    color: #fff;
+                    text-transform: uppercase;
+                    top: 10px;
+                    left: 6%;
+                    font-size: 4vw;
+                    padding: 2px;
+                    background-color: rgba(0, 0, 0, 0.4);
+                }
+            }    
+            .nav-characters:hover {
+                filter:none
+            }
+            .nav-logout{
+                position: absolute;
+                width: 120px;
+                height: 140px;
+                margin: 0px 0px 0px -54px;
+                clip-path: polygon(51% 0, 100% 0, 100% 100%, 0 100%);
+                top: 0px;
+                left: 299px;
+                background-image: url('https://i.ibb.co/vLGB8Sm/logOut.jpg');
+                filter: grayscale(100%);
+                background-size: cover;
+                background-position: center;
+                .nav-logout__text {
+                    position: absolute;
+                    color: #fff;
+                    font-size: 4vw;
+                    text-transform: uppercase;
+                    bottom: 0;
+                    left: 20%;
+                    padding: 2px;
+                    background-color: rgba(0, 0, 0, 0.4);
+                }
+            }   
+            .nav-logout:hover {
+                filter:none
+            }
+        }
+}
+@media only screen and (min-width: 376px) {
+    .header {
+        background-color: #000;
+        width: 100%;
+        .header-nav{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between ;
+            .nav-profile{
+                position:relative;
+                width: 25%;
+                top: 0;
+                left: 0;
+                clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+                margin: 0;
+                .nav-profile__img{
+                    width: 100%;
+                }
+            }
+            .nav-comics{
+                position: relative;
+                width: 25%;
+                top: 0;
+                left: 0;
+                clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+                margin: 0;
+                .nav-comics__img{
+                    width: 100%;
+                }
+            }
+            .nav-characters{
+                position: relative;
+                width: 25%;
+                top: 0;
+                left: 0;
+                clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+                margin: 0;
+                .nav-characters__img{
+                    width: 100%;
+                }
+            }
+            .nav-logout{
+                position: relative;
+                width: 25%;
+                top: 0;
+                left: 0;
+                clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+                margin: 0;
+                .nav-logout__img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+  

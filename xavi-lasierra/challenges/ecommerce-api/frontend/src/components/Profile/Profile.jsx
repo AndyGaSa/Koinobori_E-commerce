@@ -8,10 +8,10 @@ function Profile() {
 
   return (
     (isAuthenticated && !isLoading) && (
-      <section className="profile">
+      <div className="profile">
         <span className="profile__user-name">{user.name}</span>
         <img className="profile__user-photo" src={user.picture} alt={user.name} />
-      </section>
+      </div>
     )
   );
 }
