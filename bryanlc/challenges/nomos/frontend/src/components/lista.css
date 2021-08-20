@@ -1,4 +1,9 @@
-
+.container{
+    display: flex;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(76, 72, 72, 0.4);
+}
 .reverse--container{
     display: flex;
     flex-direction: reverse;
@@ -15,4 +20,5 @@
 .image__gnomo{
     width: 20vw;
     height: 20vh;
+    padding: 5px;
 }

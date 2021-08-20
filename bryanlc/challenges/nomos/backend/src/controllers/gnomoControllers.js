@@ -2,7 +2,9 @@ const Gnomo = require('../models/gnomo');
 
 async function getAll({ query }, res) {
   try {
-    const foundGnomos = await Gnomo.find(query);
+    const foundGnomos = await Gnomo.find(query)
+      .populate({ path: 'friends', select: ['name', 'age', 'about'] })
+      .populate({ path: 'adversaries', select: ['name', 'age', 'about'] });
     return res.send(foundGnomos);
   } catch (error) {
     return res.send(error);
@@ -18,8 +20,8 @@ async function createOne(req, res) {
 async function getOneById({ params: { gnomoId } }, res) {
   try {
     const findone = await Gnomo.findById(gnomoId)
-      .populate({ path: 'friends', select: 'name age about' })
-      .populate({ path: 'adversaries', select: 'name age about' });
+      .populate({ path: 'friends', select: ['name', 'age', 'about'] })
+      .populate({ path: 'adversaries', select: ['name', 'age', 'about'] });
 
     res.send(findone);
   } catch (error) {
@@ -32,6 +34,25 @@ async function updateOneById({ params: { gnomoId }, body }, res) {
     const newGnomo = await Gnomo.findByIdAndUpdate(
       gnomoId,
       body,
+      {
+        new: true,
+        useFindAndModify: false
+      }
+
+    );
+
+    res.send(newGnomo);
+  } catch (error) {
+    res.send(304);
+    res.send(error);
+  }
+}
+
+async function addOneElementbyId({ params: { gnomoId }, body }, res) {
+  try {
+    const newGnomo = await Gnomo.findByIdAndUpdate(
+      gnomoId,
+      { $addToSet: body },
       {
         new: true,
         useFindAndModify: false
@@ -62,5 +83,6 @@ module.exports = {
   createOne,
   getOneById,
   updateOneById,
-  deleteById
+  deleteById,
+  addOneElementbyId
 };

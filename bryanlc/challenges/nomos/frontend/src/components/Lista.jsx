@@ -1,11 +1,14 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import loadGnomos from '../redux/accions/actionCreator';
 import './lista.css';
 
 export default function Lista() {
   const gnomos = useSelector((store) => store.gnomos);
+
   const dispatch = useDispatch();
 
   const [searchGnomo, setSearchGnomo] = useState();
@@ -30,7 +33,6 @@ export default function Lista() {
   }
   return (
     <main>
-      <h1>Lista</h1>
       <form>
         <label>
           Name:
@@ -39,12 +41,13 @@ export default function Lista() {
         <input type="submit" value="Submit" />
       </form>
 
-      {searchGnomo?.map((gnomo) => (
-
-        <div className="container reverse--container">
-          <div className="container__image">
-            <img className="image__gnomo" src={gnomo.image} alt="" />
-          </div>
+      {searchGnomo?.map((gnomo, index) => ((
+        <div className={`container ${index % 2 === 0 ? 'rowreverse--container' : 'reverse--container'}`}>
+          <Link to={`/details/${gnomo._id}`}>
+            <div className="container__image">
+              <img className="image__gnomo" src={gnomo?.image} alt="" />
+            </div>
+          </Link>
 
           <div className="container__feature">
             <p>{gnomo.name}</p>
@@ -53,7 +56,9 @@ export default function Lista() {
             <p>{gnomo.about}</p>
           </div>
         </div>
-      ))}
+
+      )))}
+      :
 
     </main>
   );

@@ -11,6 +11,7 @@ gnomoRouter
   .route('/:gnomoId')
   .get(gnomoControllers.getOneById)
   .put(gnomoControllers.updateOneById)
+  .patch(gnomoControllers.addOneElementbyId)
   .delete(gnomoControllers.deleteById);
 
 module.exports = gnomoRouter;
