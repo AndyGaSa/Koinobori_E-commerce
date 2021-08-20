@@ -1,0 +1,26 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul{
+        display: flex;
+        list-style: none;
+        a{
+            text-decoration: none;
+            margin: 0 15px;
+            color: black;
+        }
+    }
+    nav{
+        margin: 0 5px;
+        input{
+            margin:15px
+        }
+        a{
+            margin: 15px;
+            text-decoration: none;
+            color: black;
+        }
+    }
+}

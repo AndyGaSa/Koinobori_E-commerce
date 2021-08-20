@@ -1,0 +1,15 @@
+{
+  "name": "bryan-welcome",
+  "version": "2.0.0",
+  "description": "this is another version of bryan welcom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["skylab","bryan's-welcome"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "riki-pakaje": "^1.0.0"
+  }
+}

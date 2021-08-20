@@ -1,18 +1,19 @@
 export default {
+  _id: '1',
   user: '1',
   products: [
     {
-      productInformation: {
+      product: {
         _id: '1',
         name: 'Product 1',
         price: 100,
-        stock: 10,
+        stock: 3,
         img: 'https://i.ibb.co/qWmJXLM/default.png'
       },
       amount: 2
     },
     {
-      productInformation: {
+      product: {
         _id: '2',
         name: 'Product 2',
         price: 80,

@@ -1,0 +1,15 @@
+{
+  "short_name": "Caramelos Paco",
+  "name": "Web for buy caramelos",
+  "icons": [
+    {
+      "src": "https://icons.iconarchive.com/icons/google/noto-emoji-food-drink/256/32426-candy-icon.png",
+      "sizes": "",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
