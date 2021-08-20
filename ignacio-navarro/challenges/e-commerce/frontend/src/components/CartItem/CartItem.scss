@@ -1,0 +1,13 @@
+.cart-item__container{
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    width: 80vw;
+}
+.cart-item__image{
+    height: inherit;
+}

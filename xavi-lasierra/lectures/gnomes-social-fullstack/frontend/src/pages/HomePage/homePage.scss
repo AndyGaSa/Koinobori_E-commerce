@@ -1,0 +1,6 @@
+@import '../../styles/variables', '../../styles/extensions';
+
+main {
+    @extend %column-center-flex;
+    width: 100%;
+}
