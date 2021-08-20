@@ -1,3 +1,4 @@
+/* eslint-disable prefer-template */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-console */
 import React, { useEffect } from 'react';
@@ -65,7 +66,7 @@ export default function MainContainer() {
                 Add to my friends
 
               </button>
-              <Link to={`/details/${neighbour._id}`}>
+              <Link to={'/details/' + neighbour._id}>
                 <button
                   type="button"
                   className="users-list__button"
