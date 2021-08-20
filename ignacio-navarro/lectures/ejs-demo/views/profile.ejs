@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My website</title>
 </head>
-<body>
+<body class="container">
+
     <header>
         <h1>Profile</h1>
     <nav>
@@ -16,9 +19,9 @@
     </header>
     <hr>
     <main>
-        <h2>Wellcome Nacho</h2>
-        <p>age: 35</p>
-        <p>married: no thanks</p>
+        <h2>Wellcome <%=user.name%></h2>
+        <p>age: <%=user.age%></p>
+        <p>married: <%=user.married?'uffff':'no Thanks!'%></p>
     </main>
     
 </body>
