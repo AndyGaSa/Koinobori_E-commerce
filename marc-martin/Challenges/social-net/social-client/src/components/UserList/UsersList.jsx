@@ -15,13 +15,13 @@ export default function UsersList() {
 
   return (
     <main className="users">
-      <div>
-        <img src="https://definicion.de/wp-content/uploads/2019/06/perfildeusuario.jpg" alt="imagen" />
-        <h4>User</h4>
-        <p>Age</p>
-      </div>
       {users?.map((user) => (
         <ul key={user._id} className="users__list">
+          <img
+            src="https://definicion.de/wp-content/uploads/2019/06/perfildeusuario.jpg"
+            alt="profile pic"
+            className="users__list__profile-picture"
+          />
           <li>
             {user?.name}
           </li>
