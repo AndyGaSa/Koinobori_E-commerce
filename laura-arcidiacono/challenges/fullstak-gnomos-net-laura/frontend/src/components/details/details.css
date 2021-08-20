@@ -1,0 +1,38 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.details-header{
+    background-color: navy;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.details-people {
+    display: flex;
+    align-items: center;
+}
+
+.people-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.people-list__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem;
+}
+
+.people-list__button {
+    background-color: #c50dad;
+    width: 7rem;
+    padding: 0.4rem;
+    border: solid 0.1rem #e07ad3;
+    border-radius: 1rem;
+}
