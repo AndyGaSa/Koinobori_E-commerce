@@ -27,14 +27,20 @@ export function addOrRemoveFriend(userId, personId, userFriends, type) {
   };
 }
 
-export function addOrRemoveAdversarie(userId, personId, userAdversiaries, type) {
+export function addOrRemoveAdversarie(userId, personId, useradversaries, type) {
   return async (dispatch) => {
-    if (type === 'ADD_ADVERSARIE') {
-      const newAdversiaries = [...userAdversiaries, personId];
-      await axios.put(`/api/users/${userId}`, { adversiaries: newAdversiaries });
-    } else {
-      const newAdversiaries = userAdversiaries.filter((friend) => friend._id !== personId);
-      await axios.put(`/api/users/${userId}`, { adversiaries: newAdversiaries });
+    let newAdversaries = useradversaries;
+    switch (type) {
+      case 'ADD_ADVERSARIE':
+        newAdversaries = [...useradversaries, personId];
+        await axios.put(`/api/users/${userId}`, { adversaries: newAdversaries });
+        break;
+      case 'REMOVE_ADVERSARIE':
+        newAdversaries = useradversaries.filter((adversarie) => adversarie._id !== personId);
+        await axios.put(`/api/users/${userId}`, { adversaries: newAdversaries });
+        break;
+      default:
+        break;
     }
     dispatch(loadCurrentUser(userId));
   };

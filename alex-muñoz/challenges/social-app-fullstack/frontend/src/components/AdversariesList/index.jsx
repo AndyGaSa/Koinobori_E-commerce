@@ -3,9 +3,9 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
-import { loadCurrentUser, addOrRemoveFriend } from '../../redux/actions/creators/currentUser';
+import { addOrRemoveAdversarie, loadCurrentUser } from '../../redux/actions/creators/currentUser';
 
-import './FriendsList.scss';
+import './AdversariesList.scss';
 
 export default function CurrentUser() {
   const user = useSelector((store) => store.currentUser);
@@ -14,14 +14,13 @@ export default function CurrentUser() {
   useEffect(() => { (dispatch(loadCurrentUser(userId))); }, []);
 
   return (
-    <div className="friends-list">
-      <h2>Friends</h2>
+    <div className="adversaries-list">
+      <h2>Adversaries</h2>
       <ul>
-        {user?.friends?.map((friend) => (
+        {user?.adversaries?.map((adversaries) => (
           <li>
-            {friend.name}
-            <RemoveCircleOutlineIcon onClick={() => dispatch(addOrRemoveFriend(userId, friend._id, user.friends, 'REMOVE_FRIEND'))} />
-
+            {adversaries.name}
+            <RemoveCircleOutlineIcon onClick={() => dispatch(addOrRemoveAdversarie(userId, adversaries._id, user.adversaries, 'REMOVE_ADVERSARIE'))} />
           </li>
         ))}
       </ul>
