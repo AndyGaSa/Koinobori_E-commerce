@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="ready to holliday"> 
+    <meta name="author" content="Laura Arcidiacono"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" defer>
+    <link rel="stylesheet" href="styles.css" defer>
+    <title>EJS - Lecture</title>
+</head>
+<body>
+   <header>
+       <h1>Dashboard</h1>
+       <nav>
+           <a href="/">Home</a>
+           <a href="/profile">Profile</a>
+       </nav>
+   </header>
+   <hr>
+   <main>
+       <h2>Welcome <%= user.name %> </h2>
+       <p>Age: <%= user.age %></p>
+       <p>Holliday: <%= user.holliday %></p>
+   </main>
+
+   <script>
+       setTimeout(() => {
+           const [title] = document.body.getElementsByTagName('h1');
+           title.innerHTML = 'Pronto vacaciones'
+       }, 3000)
+   </script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
