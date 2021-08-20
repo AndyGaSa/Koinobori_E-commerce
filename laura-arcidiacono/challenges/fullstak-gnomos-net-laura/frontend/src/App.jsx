@@ -24,7 +24,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <ProtectedRoute exact path="/" component={MainContainer} />
-          <Route path="/details/:userId" component={Details} />
+          <ProtectedRoute path="/details/:userId" component={Details} />
           <Route path="/login" component={Login} />
           <Route component={NotFound} />
         </Switch>
