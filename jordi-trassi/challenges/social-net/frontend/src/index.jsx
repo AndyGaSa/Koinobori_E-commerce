@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import configureStore from './redux/store/index';
-import App from './components/App';
+import App from './pages/App';
 import Login from './components/Login';
 import ProtectedRoute from './components/ProtectedRoute';
 

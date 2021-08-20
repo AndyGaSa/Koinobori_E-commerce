@@ -40,3 +40,14 @@ export function loadUsers() {
     });
   };
 }
+
+export function deleteFriend() {
+  return async (dispatch) => {
+    const { datat } = await axios.delete('/api/users/user');
+
+    dispatch({
+      type: actionTypes.DELETE_FRIEND,
+      data,
+    });
+  };
+}

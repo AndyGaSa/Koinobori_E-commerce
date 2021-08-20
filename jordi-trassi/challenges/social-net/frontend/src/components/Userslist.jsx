@@ -118,12 +118,15 @@ export default function Userslist() {
   function handleLogout() {
     dispatch(logout());
   }
+  function handleDeleteFriend() {
+    dispatch(deleteFriend());
+  }
 
   return (
     <Container fixed>
       <div className={classes.grow}>
         <AppBar position="static">
-          <Toolbar>
+          <Toolbar className="toolbar">
             <IconButton
               edge="start"
               className={classes.menuButton}
@@ -167,13 +170,17 @@ export default function Userslist() {
           <List key={friend.name}>
             <ListItem>
               <ListItemAvatar>
-                <Avatar alt={friend.name} src={friend.picture} />
+                <Avatar alt={friend.name} src="https://64.media.tumblr.com/2a61f02d0d3d86d25ad6fceb1d69f9ef/2e345df9a3bb840e-45/s250x400/08fcee89786ad7bace5a9803199492aa484e4bdc.png" />
               </ListItemAvatar>
               <ListItemText
                 primary={friend.name}
               />
               <ListItemSecondaryAction>
-                <IconButton edge="end" aria-label="delete">
+                <IconButton
+                  edge="end"
+                  aria-label="delete"
+                  onClick={handleDeleteFriend}
+                >
                   <Delete />
                 </IconButton>
               </ListItemSecondaryAction>
@@ -188,7 +195,7 @@ export default function Userslist() {
           <List key={adversary.name}>
             <ListItem>
               <ListItemAvatar>
-                <Avatar alt={adversary.name} src={adversary.picture} />
+                <Avatar alt={adversary.name} src="https://64.media.tumblr.com/3698efbd7091213b51d353dea9096a4c/2e345df9a3bb840e-ee/s250x400/9acf0f9d598a22d09633104811d2bcbe9c9a0461.png" />
               </ListItemAvatar>
               <ListItemText
                 primary={adversary.name}
