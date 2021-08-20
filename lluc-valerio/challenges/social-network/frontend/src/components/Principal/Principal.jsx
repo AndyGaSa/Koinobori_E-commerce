@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { updateUser } from '../../redux/actions/actionCreator';
@@ -78,30 +78,30 @@ export default function Principal() {
               )
               : personsFound?.map((person) => (
                 (person._id !== user._id)
-                  && (
-                    <li className="person" key={person.name}>
-                      <div className="person__info">
-                        <span>{person.name}</span>
-                        {loadPicture(person._id)}
-                      </div>
-                      <div className="person__actions">
-                        <button
-                          className={chekcStatus(1, person._id)}
-                          type="button"
-                          onClick={() => { checkFriendStatus(person._id); }}
-                        >
-                          Friend
-                        </button>
-                        <button
-                          className={chekcStatus(2, person._id)}
-                          type="button"
-                          onClick={() => { checkFoeStatus(person._id); }}
-                        >
-                          Foe
-                        </button>
-                      </div>
-                    </li>
-                  )
+                && (
+                  <li className="person" key={person.name}>
+                    <div className="person__info">
+                      <span>{person.name}</span>
+                      {loadPicture(person._id)}
+                    </div>
+                    <div className="person__actions">
+                      <button
+                        className={chekcStatus(1, person._id)}
+                        type="button"
+                        onClick={() => { checkFriendStatus(person._id); }}
+                      >
+                        Friend
+                      </button>
+                      <button
+                        className={chekcStatus(2, person._id)}
+                        type="button"
+                        onClick={() => { checkFoeStatus(person._id); }}
+                      >
+                        Foe
+                      </button>
+                    </div>
+                  </li>
+                )
               ))
                 }
         </ul>
@@ -120,6 +120,10 @@ export default function Principal() {
     }
     loadSearch(personsFound);
   }
+
+  useEffect(() => {
+    findUsers();
+  }, [user]);
 
   return (
     <>
