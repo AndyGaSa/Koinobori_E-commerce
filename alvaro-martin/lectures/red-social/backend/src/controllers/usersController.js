@@ -48,7 +48,7 @@ async function deleteOneById({ params: { ObjectId } }, res) {
 }
 async function updateOneById({ params: { ObjectId }, body: { value } }, res) {
   try {
-    const updatedUser = await User.findByIdAndUpdate(ObjectId, value, { new: true })
+    const updatedUser = await User.findByIdAndUpdate(ObjectId, { $addToSet: value }, { new: true })
       .populate({
         path: 'friends',
         select: ['name'],
