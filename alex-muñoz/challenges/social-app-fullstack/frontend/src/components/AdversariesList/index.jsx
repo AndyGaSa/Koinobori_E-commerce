@@ -2,7 +2,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import { red } from '@material-ui/core/colors';
+
 import { addOrRemoveAdversarie, loadCurrentUser } from '../../redux/actions/creators/currentUser';
 
 import './AdversariesList.scss';
@@ -20,7 +22,7 @@ export default function CurrentUser() {
         {user?.adversaries?.map((adversaries) => (
           <li>
             {adversaries.name}
-            <RemoveCircleOutlineIcon onClick={() => dispatch(addOrRemoveAdversarie(userId, adversaries._id, user.adversaries, 'REMOVE_ADVERSARIE'))} />
+            <HighlightOffIcon style={{ color: red[500] }} onClick={() => dispatch(addOrRemoveAdversarie(userId, adversaries._id, user.adversaries, 'REMOVE_ADVERSARIE'))} />
           </li>
         ))}
       </ul>
