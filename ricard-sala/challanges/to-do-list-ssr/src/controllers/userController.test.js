@@ -17,7 +17,7 @@ describe('Given a createUser function', () => {
   describe('When is invoked', () => {
     test('Should call res.json', async () => {
       User.create.mockResolvedValue();
-      await userController.crearteUser(req, res);
+      await userController.createUser(req, res);
 
       expect(res.json).toHaveBeenCalled();
     });
@@ -25,7 +25,7 @@ describe('Given a createUser function', () => {
   describe('When is rejected', () => {
     test('Should call res.status(500)', async () => {
       User.create.mockRejectedValue();
-      await userController.crearteUser(req, res);
+      await userController.createUser(req, res);
 
       expect(res.status).toHaveBeenCalledWith(500);
     });
@@ -33,7 +33,7 @@ describe('Given a createUser function', () => {
   describe('When is rejected', () => {
     test('Then res.send should have been called with an error "error"', async () => {
       User.create.mockRejectedValue(new Error('error'));
-      await userController.crearteUser(req, res);
+      await userController.createUser(req, res);
 
       expect(res.send.mock.calls[1][0].message).toBe('error');
     });
