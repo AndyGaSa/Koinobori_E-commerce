@@ -4,6 +4,7 @@ const express = require('express');
 const morgan = require('morgan');
 const userRouter = require('./src/routers/userRouters');
 const toDoRouter = require('./src/routers/toDoRouters');
+const { dashboardRouter } = require('./src/routers/viewRouters');
 
 require('./src/config/ddbbConfig');
 
@@ -15,6 +16,7 @@ server.use(express.json());
 server.use('/api', userRouter);
 server.use('/api', toDoRouter);
 server.set('view engine', 'ejs');
+server.use('/', dashboardRouter);
 
 server.listen(
   port,
