@@ -10,8 +10,7 @@ todosRouter
   .get(todosController.getTodos);
 
 todosRouter
-  .route('/:todoId')
-  .get(todosController.getOneTodo)
-  .delete(todosController.deleteTodo);
+  .route('/delete/:todoId')
+  .get(todosController.deleteTodo);
 
 module.exports = todosRouter;

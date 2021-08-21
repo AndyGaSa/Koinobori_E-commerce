@@ -17,7 +17,7 @@
         <li>
             <span><%= todo.todo %></span>
             <span><%= todo.completed %></span>
-            <a href="/todos/<%= todo._id %>">Remove</a>
+            <a href="/api/todos/delete/<%=todo._id%>">Remove</a>
         </li>
         <% }) %>
     </ul>
