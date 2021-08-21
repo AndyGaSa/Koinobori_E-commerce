@@ -30,4 +30,14 @@ describe('Given a createOne fn', () => {
       expect(res.status).toHaveBeenCalledWith(500);
     });
   });
+
+  describe('When is rejected', () => {
+    test('Then res.send should have been called with an error', async () => {
+      User.create.mockRejectedValue(new Error('error'));
+
+      await userController.createUser(req, res);
+
+      expect(res.send.mock.calls[1][0].message).toBe('error');
+    });
+  });
 });
