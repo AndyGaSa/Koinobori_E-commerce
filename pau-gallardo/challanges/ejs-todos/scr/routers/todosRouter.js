@@ -9,4 +9,9 @@ todosRouter
   .post(todosController.postTodo)
   .get(todosController.getTodos);
 
+todosRouter
+  .route('/:todoId')
+  .get(todosController.getOneTodo)
+  .delete(todosController.deleteTodo);
+
 module.exports = todosRouter;
