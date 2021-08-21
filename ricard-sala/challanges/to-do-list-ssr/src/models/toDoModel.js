@@ -1,7 +1,7 @@
 const { model, Schema } = require('mongoose');
 
 const toDoModel = Schema({
-  user: { type: Schema.Types.ObjectId, ref: 'User' },
+  user: { type: Schema.Types.ObjectId, ref: 'Users' },
   tasks: [
     {
       task: String,
