@@ -13,6 +13,7 @@ server.use(express.static(path.join(__dirname, '/public')));
 server.use(express.json());
 server.use(morgan('dev'));
 server.set('view engine', 'ejs');
+
 server.get('/home', (req, res) => {
   res.render('index');
 });
@@ -20,9 +21,10 @@ server.get('/profile', (req, res) => {
   res.render('profile');
 });
 const userRouter = require('./src/routes/userRoutes');
+const taskRouter = require('./src/routes/taskRouter');
 
 server.use('/api/user', userRouter);
-server.use('/api/task', userRouter);
+server.use('/api/task', taskRouter);
 
 server.listen(
   port,

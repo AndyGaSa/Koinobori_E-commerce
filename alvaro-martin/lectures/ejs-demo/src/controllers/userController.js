@@ -11,8 +11,10 @@ async function createOneUser({ body }, res) {
 }
 async function getAllUsers({ query }, res) {
   try {
-    const users = await User.find(query);
-    res.json(users);
+    const users = await User.find(query)
+      .populate('tasks');
+    const test = users[0];
+    res.render('index', { data: test });
   } catch (error) {
     res.status(500);
     res.send(error);
