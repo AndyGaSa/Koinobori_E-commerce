@@ -1,15 +1,17 @@
 const ToDo = require('../models/toDo.model');
 
 async function getToDos(userId) {
-  try {
-    const foundToDos = await ToDo.find({ user: userId });
+  const foundToDos = await ToDo.find({ user: userId });
 
-    return foundToDos;
-  } catch (error) {
-    return new Error('Can not retrieve user toDos');
-  }
+  return foundToDos;
+}
+
+async function createToDo(newToDo) {
+  const newerToDo = await ToDo.create(newToDo);
+  console.log(newerToDo);
 }
 
 module.exports = {
-  getToDos
+  getToDos,
+  createToDo
 };

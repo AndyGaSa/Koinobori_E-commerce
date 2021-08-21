@@ -1,19 +1,15 @@
 const { Router } = require('express');
 const {
   mainPage,
-  restricted
+  restricted,
+  addToDo
 } = require('../controllers/server.controller');
 
 const router = Router();
 
 router
   .route('/toDo')
-  .post(
-    (req, res) => {
-      console.log(req.body);
-      res.redirect('/');
-    }
-  );
+  .post(addToDo);
 
 router
   .route('/restricted')
