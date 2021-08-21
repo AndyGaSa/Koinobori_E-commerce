@@ -22,7 +22,6 @@ export default function CurrentUser() {
           <li>
             {friend.name}
             <HighlightOffIcon style={{ color: red[500] }} onClick={() => dispatch(addOrRemoveFriend(userId, friend._id, user.friends, 'REMOVE_FRIEND'))} />
-
           </li>
         ))}
       </ul>

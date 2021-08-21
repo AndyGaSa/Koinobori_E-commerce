@@ -44,14 +44,14 @@ export default function InteractiveList() {
   const usersList = useSelector(({ users }) => users);
   const dispatch = useDispatch();
   const { userId } = useParams();
+  function isInTheList(person, userlist) {
+    return userlist.some((someone) => someone.name === person.name);
+  }
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={2}>
+      <Grid container spacing={4}>
         <Grid item xs={12} md={16}>
-          <Typography variant="h6" className={classes.title}>
-            Avatar with text and icon
-          </Typography>
           <div className={classes.demo}>
             <List dense={dense}>
               {usersList.map((person) => (
@@ -69,12 +69,20 @@ export default function InteractiveList() {
                   />
                   <ListItemSecondaryAction>
                     <IconButton edge="end" aria-label="delete">
-                      {user?.friends?.some((friend) => friend._id === person._id)
+                      {isInTheList(person, user.friends)
                         ? <FavoriteBorderIcon style={{ color: red[500] }} onClick={() => dispatch(addOrRemoveFriend(userId, person._id, user.friends, 'REMOVE_FRIEND'))} />
-                        : <FavoriteBorderIcon onClick={() => dispatch(addOrRemoveFriend(userId, person._id, user.friends, 'ADD_FRIEND'))}>Add Friend</FavoriteBorderIcon>}
-                      {user?.adversaries?.some((adversaries) => adversaries._id === person._id)
+                        : null}
+                      {isInTheList(person, user.adversaries)
+                        ? <button type="button" onClick={() => dispatch(addOrRemoveAdversarie(userId, person._id, user.adversaries, 'REMOVE_ADVERSARIE'))}>RemoveADV</button>
+                        : null}
+                      {isInTheList(person, user.friends) || isInTheList(person, user.adversaries)
                         ? null
-                        : <button type="button" onClick={() => dispatch(addOrRemoveAdversarie(userId, person._id, user.adversaries, 'ADD_ADVERSARIE'))}>Adv</button>}
+                        : (
+                          <>
+                            <button type="button" onClick={() => dispatch(addOrRemoveAdversarie(userId, person._id, user.adversaries, 'ADD_ADVERSARIE'))}>Adv</button>
+                            <FavoriteBorderIcon onClick={() => dispatch(addOrRemoveFriend(userId, person._id, user.friends, 'ADD_FRIEND'))}>Add Friend</FavoriteBorderIcon>
+                          </>
+                        )}
                     </IconButton>
                   </ListItemSecondaryAction>
                 </ListItem>

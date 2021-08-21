@@ -27,7 +27,9 @@ export default function CurrentUser() {
         <FriendsList />
         <AdversariesList />
       </div>
-      <List />
+      <div className="user-details__people-list">
+        <List />
+      </div>
       <input type="text" placeholder="Search people" onChange={(event) => filterPersonsList(event.target.value, usersList)} name="" id="" />
       <ul className="user-details__persons-list">
         {usersList.map((person) => (
