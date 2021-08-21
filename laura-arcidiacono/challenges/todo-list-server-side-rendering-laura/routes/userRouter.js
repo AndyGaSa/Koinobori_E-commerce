@@ -1,21 +1,23 @@
 const { Router } = require('express');
+const {
+  createOne,
+  getAll,
+  getById,
+  updateOneById,
+  deleteOneById
+} = require('../controllers/userControllers');
 
-const router = Router();
+const userRouter = new Router();
 
-router
+userRouter
   .route('/')
-  .get((req, res) => {
-    res.render('index');
-  });
+  .get(getAll)
+  .post(createOne);
 
-router
-  .route('/profile')
-  .get((req, res) => {
-    const userData = {
-      name: 'Laura',
-      age: 38
-    };
-    res.render('profile', { user: userData });
-  });
+userRouter
+  .route('/:userId')
+  .get(getById)
+  .delete(deleteOneById)
+  .put(updateOneById);
 
-module.exports = router;
+module.exports = userRouter;
