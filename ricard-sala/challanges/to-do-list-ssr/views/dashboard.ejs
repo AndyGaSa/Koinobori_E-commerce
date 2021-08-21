@@ -7,6 +7,18 @@
     <title>toDo list Riki</title>
 </head>
 <body>
-    <h1>To Do list!!!!! Riki</h1>
+    <h1>To Do list!!!!!</h1>
+
+    <div><%todos.map((data) =>{ %>
+        <p><%=data.task%></p>
+     <button
+
+type="button"
+     >
+     X
+    </button>
+        <%})%></div>
+  <input type="text">
+  <input type="submit">
 </body>
 </html>
