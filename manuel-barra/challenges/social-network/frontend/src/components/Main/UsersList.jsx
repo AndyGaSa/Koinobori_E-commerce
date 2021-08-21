@@ -16,8 +16,11 @@ export default function Userslist() {
       adversaries: [...data.adversaries, { _id: adversariesId }]
     });
   }
-  function handleFriends(id) {
-    alert(id);
+  async function handleFriends(userId, friendsId) {
+    const { data } = await axios(`/api/users/${userId}`);
+    await axios.put(`/api/users/${userId}`, {
+      friends: [...data.friends, { _id: friendsId }]
+    });
   }
 
   useEffect(() => {
@@ -31,7 +34,7 @@ export default function Userslist() {
         <li key={user._id}>
           {user.name}
           <button type="button" onClick={() => handleAdversaries(mainUser, user._id)}>Adversaries</button>
-          <button type="button" onClick={() => handleFriends(user._id)}>Friend</button>
+          <button type="button" onClick={() => handleFriends(mainUser, user._id)}>Friend</button>
         </li>
       ))
       }
