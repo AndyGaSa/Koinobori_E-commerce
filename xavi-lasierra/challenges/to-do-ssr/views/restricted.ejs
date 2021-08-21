@@ -7,9 +7,10 @@
     <title>To Do</title>
 </head>
 <body>
-    <%- include('../src/components/header', {isAuthenticated, user}); %>
+    <%- include('../src/components/header', {isAuthenticated: isAuthenticated}); %>
     <main>
-
+        <span>Login to add tasks</span>
+        <a href='/login'>Login</a>
     </main>
     <%- include('../src/components/footer'); %>
 </body>

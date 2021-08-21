@@ -1,23 +1,17 @@
 const { Router } = require('express');
 const {
-  mainPage
+  mainPage,
+  restricted
 } = require('../controllers/server.controller');
 
 const router = Router();
 
 router
-  .route('/')
-  .get(mainPage);
+  .route('/restricted')
+  .get(restricted);
 
 router
-  .route('/profile')
-  .get((req, res) => {
-    const userData = {
-      name: 'Xavi',
-      age: 23,
-      boat: false
-    };
-    res.render('profile', { user: userData });
-  });
+  .route('/')
+  .get(mainPage);
 
 module.exports = router;
