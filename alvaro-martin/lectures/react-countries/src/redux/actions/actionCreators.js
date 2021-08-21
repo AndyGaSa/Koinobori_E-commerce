@@ -6,7 +6,7 @@ export default function loadCountries() {
     const { data } = await axios('https://restcountries.eu/rest/v2/all');
     dispatch({
       type: actionTypes.LOAD_COUNTRIES,
-      data,
+      countries: data,
     });
   };
 }

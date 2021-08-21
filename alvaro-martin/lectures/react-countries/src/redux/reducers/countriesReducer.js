@@ -5,9 +5,10 @@ export default function countriesReducer(countries = [], action) {
   switch (action.type) {
     case actionTypes.LOAD_COUNTRIES:
       allCountries = action.countries;
-      break;
+      return allCountries;
+
     default:
       break;
   }
-  return allCountries;
+  return countries;
 }

@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import configureStore from './redux/store';
+import Main from './components/Main/Main';
 import reportWebVitals from './reportWebVitals';
+import Countries from './pages/Countries';
 
 ReactDOM.render(
   <React.StrictMode>
-    <p>Hola Mundo</p>
+    <Provider store={configureStore()}>
+      <Countries />
+      <Main />
+      <p>Hola Mundo</p>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
