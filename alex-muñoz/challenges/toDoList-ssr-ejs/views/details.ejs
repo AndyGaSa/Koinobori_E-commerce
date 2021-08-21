@@ -9,8 +9,10 @@
 <body>
     <main>
         <h2><%= taskList.name%></h2>
+        <form action="http://localhost:5001/taskList/<%=taskList._id %>" method="POST">
+            <input type="text" class="" name="newTaskName" placeholder="Add task to list">
+            <button type="submit" name="button">Add Task</button>
         <% taskList.tasks.map((task)=> { %> <li> <%= task.name %> </li> <% }) %>
-
     </main>
 </body>
 </html>

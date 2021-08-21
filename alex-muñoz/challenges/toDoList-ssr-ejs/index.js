@@ -12,6 +12,9 @@ require('./src/config/mongooseConfig');
 server.use(morgan('dev'));
 server.use(express.json());
 
+const bodyParser = require('body-parser');
+
+server.use(bodyParser.urlencoded({ extended: true }));
 const userRouter = require('./src/routers/user');
 const taskListRouter = require('./src/routers/taskList');
 const taskRouter = require('./src/routers/task');
