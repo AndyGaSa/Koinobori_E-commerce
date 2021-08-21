@@ -18,6 +18,10 @@ server.use(
   '/js',
   express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')),
 );
+server.use(
+  '/static',
+  express.static(path.join(__dirname, '/public/stylesheets')),
+);
 server.set('view engine', 'ejs');
 
 const router = express.Router();
@@ -34,6 +38,10 @@ router.route('/profile')
       boat: false,
     };
     res.render('profile', { user: userData });
+  });
+router.route('/todo')
+  .get((req, res) => {
+    res.render('todo');
   });
 
 server.use('/', router);
