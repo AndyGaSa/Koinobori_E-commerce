@@ -10,6 +10,30 @@ const createTask = async ({ body }, res) => {
   }
 };
 
+const getAll = async ({ params }, res) => {
+  try {
+    const allTasks = await ToDo.find(params)
+      .populate({ path: 'user', select: ['name', 'email'] });
+    res.json(allTasks);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+};
+
+const getOneById = async ({ params }, res) => {
+  try {
+    const { userId } = params;
+    const user = await ToDo.findOne({ user: { _id: userId } });
+    res.json(user);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+};
+
 module.exports = {
   createTask,
+  getAll,
+  getOneById,
 };
