@@ -8,12 +8,14 @@ const debug = require('debug')('server');
 const server = express();
 const port = process.env.PORT || 5001;
 
+require('./src/config/ddbbConfig');
+
 server.use(morgan('dev'));
 
 server.set('view engine', 'ejs');
 
-const userRoutes = require('./src/routes/userRoutes');
+const userRouter = require('./src/routes/userRouter');
 
-server.use('/user', userRoutes);
+server.use('/user', userRouter);
 
 server.listen(port, () => debug(`Server running on ${chalk.magenta(`http://localhost:${port}`)}`));
