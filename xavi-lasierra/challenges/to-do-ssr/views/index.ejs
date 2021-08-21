@@ -10,14 +10,21 @@
     <%- include('../src/components/header', {isAuthenticated, user}); %>
     <main>
         <form action="/toDo" method="post">
-            <input name="newTodo" type="text" placeholder="Add a To Do">
-            <input type="submit" value="Add">
+            <input name="description" type="text" placeholder="Add a To Do">
+            <button type="submit">Add</button>
         </form>
         <ul>
-            <% toDos.map((toDo) => 
-                '<li>' + toDo.description + '</li>'
-            ) -%>
-        </section>
+            <% toDos.forEach((toDo) => { %>
+               <li>
+                    <a href="/markToDo/<%= toDo.completed %>/<%= toDo._id %>"><%= toDo.completed %></a>
+                    <form action="/updateToDo/<%= toDo._id %>" method="post">
+                       <input type="text" placeholder="Write your To Do" name="description" value=<%= toDo.description %> >
+                       <input type="submit" value="Edit">
+                    </form>
+                    <a href="/deleteToDo/<%= toDo._id %>">x</a>
+                </li>
+            <% }); %> 
+           </ul>
     </main>
     <%- include('../src/components/footer'); %>
 </body>

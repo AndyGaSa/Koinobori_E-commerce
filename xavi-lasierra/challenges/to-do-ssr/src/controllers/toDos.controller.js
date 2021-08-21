@@ -1,17 +1,34 @@
 const ToDo = require('../models/toDo.model');
 
-async function getToDos(userId) {
+async function getToDosDDBB(userId) {
   const foundToDos = await ToDo.find({ user: userId });
 
   return foundToDos;
 }
 
-async function createToDo(newToDo) {
-  const newerToDo = await ToDo.create(newToDo);
-  console.log(newerToDo);
+async function createToDoDDBB(newToDo) {
+  return ToDo.create(newToDo);
+}
+
+async function updateToDoDDBB(toDoId, dataToUpdate) {
+  console.log(toDoId, dataToUpdate);
+  return ToDo.findByIdAndUpdate(
+    toDoId,
+    dataToUpdate,
+    {
+      new: true,
+      useFindAndModify: false
+    }
+  );
+}
+
+async function deleteToDoDDBB(toDoId) {
+  return ToDo.findByIdAndDelete(toDoId);
 }
 
 module.exports = {
-  getToDos,
-  createToDo
+  getToDosDDBB,
+  createToDoDDBB,
+  updateToDoDDBB,
+  deleteToDoDDBB
 };
