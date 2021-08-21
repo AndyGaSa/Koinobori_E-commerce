@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skylab SSR lecture">
+    <title>My website</title>
+    <link rel="preload" href="css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/bootstrap.min.css"></noscript>
+    
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    
+</head>
+<body class="container">
+    <header>
+        <h1>Dashboard</h1>
+        <nav>
+            <a href="/">home</a>
+            <a href="/profile">profile</a>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <h2>Welcome <%= user.name %></h2>
+        <p>Age: <%= user.age %></p>
+        <p>Wife: <%= user.wife %></p>
+        <p>Boat: <%= user.boat ? 'tiene' : 'pendiente' %></p>
+    </main>
+
+    <script>
+        setTimeout(() => {
+            const [title] = document.body.getElementsByTagName('h1');
+            title.innerHTML = 'Skylab mola!'
+        }, 3000)
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
