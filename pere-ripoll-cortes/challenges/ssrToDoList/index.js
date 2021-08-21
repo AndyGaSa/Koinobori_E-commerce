@@ -14,6 +14,7 @@ server.use(morgan('dev'));
 server.use(express.json());
 server.use('/api', userRouter);
 server.use('/api', toDoRouter);
+server.set('view engine', 'ejs');
 
 server.listen(
   port,
