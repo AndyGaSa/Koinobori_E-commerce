@@ -1,8 +1,8 @@
-// const { getAll } = require('./toDoController');
 const axios = require('axios');
 
 const dashboard = async (req, res) => {
   const user = '6120c2e53460d03b3f9a4bd8';
+
   try {
     const { data } = await axios.get(`http://localhost:5500/api/todo/${user}`);
     const { tasks } = data;
