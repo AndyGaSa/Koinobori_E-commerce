@@ -1,0 +1,19 @@
+
+    <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header"><%= taskTitle %></div>
+        <div class="card-body">
+          <h5 class="card-title"><%= creationDate %></h5>
+          <p class="card-text"><%= taskSubtiltle %></p>
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Priority
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Urgent</a></li>
+              <li><a class="dropdown-item" href="#">Important</a></li>
+              <li><a class="dropdown-item" href="#">Some Day</a></li>
+            </ul>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>

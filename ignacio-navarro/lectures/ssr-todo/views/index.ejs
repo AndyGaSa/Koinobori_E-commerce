@@ -1,0 +1,17 @@
+<%- include("templates/head", {webTitle: 'Home'}) %>
+<body>
+    <%- include("templates/header") %>
+    <main>
+        <ul>
+            <% todoList.forEach(function(listItem){ %>
+              <%- include('templates/task-card', {
+                  taskTitle:listItem.taskTitle,
+                  creationDate:listItem.creationDate,
+                  taskSubtiltle:listItem.taskSubtiltle,
+                }); %>
+            <% }); %>
+          </ul>
+    </main>
+    <%- include("templates/footer") %>
+</body>
+</html>
