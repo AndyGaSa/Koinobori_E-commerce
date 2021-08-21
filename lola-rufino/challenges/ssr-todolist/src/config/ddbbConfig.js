@@ -1,4 +1,4 @@
-const debug = require('debug')('todolist:ddbbconfig');
+const debug = require('debug')('server:ddbbconfig');
 
 const chalk = require('chalk');
 const { connect } = require('mongoose');
