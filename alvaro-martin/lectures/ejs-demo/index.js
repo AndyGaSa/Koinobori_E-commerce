@@ -2,23 +2,19 @@ const express = require('express');
 require('dotenv').config();
 const morgan = require('morgan');
 const debug = require('debug')('server');
-const path = require('path');
 
-const server = express();
+require('./src/config/databaseConfig');
+
 const port = process.env.PORT || 5000;
-server.use(morgan('dev'));
-server.use(
-  '/css',
-  express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')),
-);
-server.set('view engine', 'ejs');
+const server = express();
 
-server.get('/', (req, res) => {
-  res.render('index');
-});
-server.get('/profile', (req, res) => {
-  res.render('profile');
-});
+server.use(express.json());
+server.use(morgan('dev'));
+
+const userRouter = require('./src/routes/userRoutes');
+
+server.use('/api/users-todo', userRouter);
+
 server.listen(
   port,
   () => debug(`Server is running in http://localhost:${port}`),
