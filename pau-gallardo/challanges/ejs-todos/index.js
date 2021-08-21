@@ -11,6 +11,7 @@ const port = process.env.PORT || 5000;
 server.use(morgan('dev'));
 server.set('view engine', 'ejs');
 server.use(express.json());
+server.use(express.urlencoded({ extended: true }));
 
 const todosRouter = require('./scr/routers/todosRouter');
 

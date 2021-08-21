@@ -2,9 +2,9 @@ const Todo = require('../models/todoModel');
 
 async function postTodo(req, res) {
   try {
-    const newTodo = await Todo.create(req.body);
-    res.send(newTodo);
+    await Todo.create({ todo: req.body.content });
     res.status(200);
+    res.redirect('/api/todos');
   } catch (error) {
     res.status(500);
   }
@@ -12,9 +12,9 @@ async function postTodo(req, res) {
 
 async function getTodos(req, res) {
   try {
-    const newTodo = await Todo.find();
-    res.send(newTodo);
+    const newTodos = await Todo.find();
     res.status(200);
+    res.render('dashboard', { todos: newTodos });
   } catch (error) {
     res.status(500);
   }
@@ -23,8 +23,8 @@ async function getTodos(req, res) {
 async function deleteTodo(req, res) {
   const { todoId } = req.params;
   try {
-    const foundTodo = await Todo.findByIdAndDelete(todoId);
-    res.send(foundTodo);
+    await Todo.findByIdAndDelete(todoId);
+    res.redirect('/api/todos');
     res.status(200);
   } catch (error) {
     res.status(500);
