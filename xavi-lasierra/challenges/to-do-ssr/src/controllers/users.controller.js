@@ -5,7 +5,10 @@ async function userCheck({ name, picture, email }) {
     let foundUser = await User.findOneAndUpdate(
       { email },
       { name, picture },
-      { new: true }
+      {
+        new: true,
+        useFindAndModify: false
+      }
     );
 
     if (!foundUser) {

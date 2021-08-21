@@ -1,4 +1,6 @@
+/* eslint-disable no-underscore-dangle */
 const { userCheck } = require('./users.controller');
+const { getToDos } = require('./toDos.controller');
 
 async function mainPage(req, res) {
   try {
@@ -8,8 +10,9 @@ async function mainPage(req, res) {
     }
 
     const user = await userCheck(req.oidc.user);
+    const toDos = await getToDos(user._id);
 
-    res.render('index', { isAuthenticated, user });
+    res.render('index', { isAuthenticated, user, toDos });
   } catch (error) {
     res.status(500);
     res.send(error);

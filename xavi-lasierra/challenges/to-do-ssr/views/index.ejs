@@ -9,7 +9,15 @@
 <body>
     <%- include('../src/components/header', {isAuthenticated, user}); %>
     <main>
-
+        <form action="/toDo" method="post">
+            <input name="new-todo" type="text" placeholder="Add a To Do">
+            <input type="submit" value="Add">
+        </form>
+        <ul>
+            <% toDos.map((toDo) => 
+                '<li>' + toDo.description + '</li>'
+            ) -%>
+        </section>
     </main>
     <%- include('../src/components/footer'); %>
 </body>
