@@ -15,8 +15,22 @@
             <button onclick="">X</button>
         </div>
         <%}) %>
+        <button onclick="createTask()">Create one task</button>
+        <input type="text" name="suneo" id="task">
     <script>
         
+        let task =  document.getElementById('task');
+
+        async function createTask(url='http://localhost:5500/api/todo/6120c2e53460d03b3f9a4bd8',
+         data = { "task": `${task.value}`, "status": false}) 
+         {
+            const response = await fetch(url, {
+                method: "PUT",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data),
+            })
+            return response.json();
+         }
     </script>
 </body>
 </html>
