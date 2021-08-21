@@ -1,20 +1,19 @@
-function getUserData(auth0User) {
-  return {
-    name: auth0User.name,
-    picture: auth0User.picture,
-    email: auth0User.email
-  };
-}
+const { userCheck } = require('./users.controller');
 
-function mainPage(req, res) {
-  const isAuthenticated = req.oidc.isAuthenticated();
-  if (!isAuthenticated) {
-    res.redirect('/restricted');
+async function mainPage(req, res) {
+  try {
+    const isAuthenticated = req.oidc.isAuthenticated();
+    if (!isAuthenticated) {
+      res.redirect('/restricted');
+    }
+
+    const user = await userCheck(req.oidc.user);
+
+    res.render('index', { isAuthenticated, user });
+  } catch (error) {
+    res.status(500);
+    res.send(error);
   }
-
-  const user = getUserData(req.oidc.user);
-
-  res.render('index', { isAuthenticated, user });
 }
 
 function restricted(req, res) {
