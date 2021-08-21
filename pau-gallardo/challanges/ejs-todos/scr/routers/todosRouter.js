@@ -13,4 +13,8 @@ todosRouter
   .route('/delete/:todoId')
   .get(todosController.deleteTodo);
 
+todosRouter
+  .route('/update/:todoId')
+  .get(todosController.updateTodo);
+
 module.exports = todosRouter;

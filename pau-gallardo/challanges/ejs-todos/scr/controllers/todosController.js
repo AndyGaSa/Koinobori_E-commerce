@@ -1,3 +1,4 @@
+const { findById } = require('../models/todoModel');
 const Todo = require('../models/todoModel');
 
 async function postTodo(req, res) {
@@ -31,11 +32,13 @@ async function deleteTodo(req, res) {
   }
 }
 
-async function getOneTodo(req, res) {
+async function updateTodo(req, res) {
   const { todoId } = req.params;
   try {
     const foundTodo = await Todo.findById(todoId);
-    res.send(foundTodo);
+    foundTodo.completed = !foundTodo.completed;
+    foundTodo.save();
+    res.redirect('/api/todos');
     res.status(200);
   } catch (error) {
     res.status(500);
@@ -46,5 +49,5 @@ module.exports = {
   postTodo,
   getTodos,
   deleteTodo,
-  getOneTodo,
+  updateTodo,
 };
