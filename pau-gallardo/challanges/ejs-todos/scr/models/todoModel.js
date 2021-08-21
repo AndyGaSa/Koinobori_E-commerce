@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const todoSchema = mongoose.Schema({
   todo: String,
-  date: Date,
+  date: { type: Date, default: Date.now },
   completed: Boolean,
 });
 

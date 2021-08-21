@@ -10,6 +10,17 @@ async function postTodo(req, res) {
   }
 }
 
+async function getTodos(req, res) {
+  try {
+    const newTodo = await Todo.find();
+    res.send(newTodo);
+    res.status(200);
+  } catch (error) {
+    res.status(500);
+  }
+}
+
 module.exports = {
   postTodo,
+  getTodos,
 };
