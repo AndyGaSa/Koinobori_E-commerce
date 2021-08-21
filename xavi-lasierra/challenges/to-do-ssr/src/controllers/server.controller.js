@@ -80,7 +80,7 @@ async function completeToDo({ params: { toDoId } }, res) {
 async function uncompleteToDo({ params: { toDoId } }, res) {
   try {
     await updateToDoDDBB(toDoId, { completed: 'ToDo' });
-    console.log('hello there');
+
     res.redirect('/');
   } catch (error) {
     res.status(500);

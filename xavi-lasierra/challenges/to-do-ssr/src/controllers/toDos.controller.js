@@ -11,7 +11,6 @@ async function createToDoDDBB(newToDo) {
 }
 
 async function updateToDoDDBB(toDoId, dataToUpdate) {
-  console.log(toDoId, dataToUpdate);
   return ToDo.findByIdAndUpdate(
     toDoId,
     dataToUpdate,
