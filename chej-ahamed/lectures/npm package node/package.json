@@ -1,0 +1,7 @@
+{
+    "name": "skylab00000",
+    "version": "1.2.0",
+    "dependencies": {
+        "my-awful-package": "^1.0.0"
+    }
+}

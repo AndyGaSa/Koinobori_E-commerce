@@ -1,0 +1,31 @@
+.user-list {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 16px 0;
+}
+
+.user-container__image {
+    width: 128px;
+    
+}
+
+.user-container__figure--image {
+    border-radius: 25px;
+}
+
+.user-container__information {
+    /* Take the remaining width */
+    flex: 1;
+}
+
+.toolbar {
+    background-color: black;
+    box-shadow: 2px 2px rgb(255, 99, 99);;
+    
+}
+
+
+.MuiAppBar-colorPrimary {
+    color: #fff;
+    background-color: white;
+}

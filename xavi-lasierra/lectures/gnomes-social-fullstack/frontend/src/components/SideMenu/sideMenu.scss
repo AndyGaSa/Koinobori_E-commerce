@@ -1,0 +1,76 @@
+@import '../../styles/variables';
+
+.side-menu {
+    transform: translateX(0);
+    position: fixed;
+    transition: .4s;
+    width: 70vw;
+    height: 100vh;
+    max-width: 20rem;
+    background-color: $side-menu-color;
+
+    .side-menu__navigator{
+        margin-top: 3rem;
+        padding: 1rem;
+
+        .side-menu__title {
+            font-family: $main-font;
+            color: white;
+            font-weight: normal;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        label{
+            position: relative;
+
+            input {
+                width: 100%;
+                height: 2rem;
+                outline: none;
+                padding: 0 1rem;
+            }
+    
+            button {
+                position: absolute;
+                right: 0.5rem;
+                top: 0.2rem;
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
+
+    .side-menu__gnomes {
+        li {
+            padding: 0 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            button {
+                height: 2rem;
+                width: 100%;
+                color: white;
+                background-color: transparent;
+                border: none;
+                border-top: 1px solid $main-light-color;
+                border-bottom: 1px solid $main-light-color;
+                transition: .2s;
+
+                &:hover {
+                    width: 95%;
+                }
+
+                &:active {
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+
+    &--closed {
+        transform: translateX(-20rem);
+    }
+}
