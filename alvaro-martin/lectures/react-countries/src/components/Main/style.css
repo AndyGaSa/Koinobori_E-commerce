@@ -1,0 +1,16 @@
+.countries{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+.country{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+}
+.countries-flag{
+    width: 200px;
+
+}
