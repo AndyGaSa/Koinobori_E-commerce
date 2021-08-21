@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SSR ToDo - Challenge">
+    <meta name="auhtor" content="Laura Arcidiacono">
+    <title>ToDo - Laura</title>
+    <link rel="preload" href="css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/bootstrap.min.css"></noscript>
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+</head>
+<body class="container">
+    <header>
+        <h1>ToDo List SSR</h1>
+    </header>
+    <hr>
+    <main>
+        <h2>Welcome <%=user.name%> </h2>
+        <%user.tasks.map((todo) => {%><div class="form-check d-flex flex-row justify-content-center mt-5 mb-5 align-items-center">
+            <input class="form-check-input fs-4 my-0 py-0" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault"><p class="fs-4 text font-monospace mx-2 my-0"><%= todo.task %></p>
+            </label>
+            <button class="btn btn-outline-info btn-sm my-0 py-0">X</button></div><%})%>
+       </main>
+
+
+    <script>
+        setTimeout(() => {
+            const [title] = document.body.getElementsByTagName('h1');
+            title.innerHTML = 'Vamos vamos! No dejes para mañana lo que puedas hacer hoy!'
+        }, 10000)
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
