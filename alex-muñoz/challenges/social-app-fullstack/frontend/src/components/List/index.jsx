@@ -42,10 +42,11 @@ export default function InteractiveList() {
   const [secondary, setSecondary] = React.useState(false);
   const user = useSelector((store) => store.currentUser);
   const usersList = useSelector(({ users }) => users);
-  const dispatch = useDispatch();
   const { userId } = useParams();
+  const newUserList = usersList?.filter((person) => person._id !== user._id);
+  const dispatch = useDispatch();
   function isInTheList(person, userlist) {
-    return userlist.some((someone) => someone.name === person.name);
+    return userlist?.some((someone) => someone.name === person.name);
   }
 
   return (
@@ -54,7 +55,7 @@ export default function InteractiveList() {
         <Grid item xs={12} md={16}>
           <div className={classes.demo}>
             <List dense={dense}>
-              {usersList.map((person) => (
+              {newUserList.map((person) => (
                 <ListItem>
                   <ListItemAvatar>
                     <Avatar
