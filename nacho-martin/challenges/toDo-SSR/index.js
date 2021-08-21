@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const debug = require('debug')('toDo');
 const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
 require('./src/config/mongooseConfig');
 
@@ -12,6 +13,7 @@ server.use(express.json());
 
 server.set('view engine', 'ejs');
 
+server.use(bodyParser.urlencoded({ extended: true }));
 const userRouter = require('./src/routers/user');
 
 server.use('/user', userRouter);
