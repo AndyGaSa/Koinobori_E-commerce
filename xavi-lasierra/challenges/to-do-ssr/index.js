@@ -6,6 +6,8 @@ const debug = require('debug')('toDo');
 const chalk = require('chalk');
 const { auth } = require('express-openid-connect');
 
+require('./src/config/ddbb.config');
+
 const port = process.env.PORT || 5000;
 
 const config = {
@@ -16,15 +18,16 @@ const config = {
   clientID: process.env.AUTH0_CLIENT_ID,
   issuerBaseURL: process.env.AUTH0_DOMAIN
 };
+
 const server = express();
 
 server.use(auth(config));
 server.use(morgan('dev'));
+server.set('view engine', 'ejs');
+
 server.use(
   express.static(path.join(__dirname, '/public'))
 );
-
-server.set('view engine', 'ejs');
 
 const router = require('./src/router/server.router');
 
