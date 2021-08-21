@@ -7,4 +7,4 @@ const toDoSchema = mongoose.Schema({
   created: { type: Date, default: new Date() }
 });
 
-module.exports = mongoose.model('ToDo', toDoSchema);
+module.exports = mongoose.model('Todo', toDoSchema);
