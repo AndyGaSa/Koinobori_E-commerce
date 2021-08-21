@@ -30,8 +30,25 @@ const getOneById = async ({ params }, res) => {
     res.send(error);
   }
 };
+
+const getNewTask = async (params, body, res) => {
+  try {
+    const { userId } = params;
+    const getNew = await ToDo.findOneAndUpdate(
+      { user: { _id: userId } },
+      { $addToSet: { task: body } },
+      { new: true, useFindAndModify: false },
+    );
+    res.json(getNew);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+};
+
 module.exports = {
   createTask,
   getAll,
+  getNewTask,
   getOneById,
 };
