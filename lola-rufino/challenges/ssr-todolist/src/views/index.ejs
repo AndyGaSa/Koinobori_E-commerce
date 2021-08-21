@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container-fluid d-flex flex-column align-items-center fs-1 bg-info bg-gradient bg-opacity-25 min-vh-100">
+    <header class="text-info fw-bold mt-5">To Do List</header>
+    <input class="fs-4 text border border border-info border border-3 rounded" />
+    <div class="form-check d-flex flex-row justify-content-center mt-5 mb-5 align-items-center">
+        <input class="form-check-input fs-4 my-0 py-0" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            <p class="fs-4 text font-monospace mx-2 my-0"><%=user.tasks%></p>
+        </label>
+        <button class="btn btn-outline-info btn-sm my-0 py-0">X</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
