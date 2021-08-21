@@ -5,7 +5,8 @@ const taskListRouter = express.Router();
 
 taskListRouter
   .route('/:taskListId')
-  .get(controller.getOne);
+  .get(controller.getOne)
+  .post(controller.updateListbyId);
 
 taskListRouter
   .route('/')
