@@ -11,8 +11,7 @@ async function getToDos(userId) {
 async function addToDo({ oidc, body: { description } }, res) {
   try {
     if (description) {
-      console.log(description);
-      const user = await userCheck(oidc.user);
+      const user = await userCheck(oidc.user, res);
       await ToDo.create({ user: user._id, description });
     }
     res.redirect('/');

@@ -9,7 +9,7 @@ async function mainPage(req, res) {
       res.redirect('/restricted');
     }
 
-    const user = await userCheck(req.oidc.user);
+    const user = await userCheck(req.oidc.user, res);
     const toDos = await getToDos(user._id);
     res.render('index', { isAuthenticated, user, toDos });
   } catch (error) {
