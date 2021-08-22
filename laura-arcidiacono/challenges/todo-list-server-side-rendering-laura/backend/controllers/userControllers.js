@@ -66,6 +66,22 @@ async function addTaskToUser(req, res) {
   }
 }
 
+async function deleteTaskToUser(req, res) {
+  const { userId } = req.params;
+  const taskToDelete = req.body;
+  try {
+    const deletedTask = await User.findByIdAndUpdate(
+      userId,
+      { $pull: taskToDelete },
+      { new: true }
+    );
+    res.json(deletedTask);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
 async function deleteOneById(req, res) {
   const { userId } = req.params;
   try {
@@ -83,5 +99,7 @@ module.exports = {
   getById,
   updateOneById,
   addTaskToUser,
+  deleteTaskToUser,
   deleteOneById
+
 };

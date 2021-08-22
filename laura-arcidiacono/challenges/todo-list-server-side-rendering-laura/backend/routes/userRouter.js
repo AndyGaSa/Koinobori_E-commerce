@@ -5,7 +5,8 @@ const {
   getById,
   updateOneById,
   addTaskToUser,
-  deleteOneById
+  deleteOneById,
+  deleteTaskToUser
 } = require('../controllers/userControllers');
 
 const userRouter = new Router();
@@ -17,7 +18,8 @@ userRouter
 
 userRouter
   .route('/tasks/:userId')
-  .put(addTaskToUser);
+  .put(addTaskToUser)
+  .delete(deleteTaskToUser);
 
 userRouter
   .route('/:userId')
