@@ -9,19 +9,19 @@
 <body>
     <%- include('../src/components/header', {isAuthenticated, user}); %>
     <main>
-        <form action="/toDo" method="post">
+        <form action="/toDo/create" method="post">
             <input name="description" type="text" placeholder="Add a To Do">
             <button type="submit">Add</button>
         </form>
         <ul>
             <% toDos.forEach((toDo) => { %>
                <li>
-                    <a href="/markToDo/<%= toDo.completed %>/<%= toDo._id %>"><%= toDo.completed %></a>
-                    <form action="/updateToDo/<%= toDo._id %>" method="post">
+                    <a href="/toDo/mark/<%= toDo.completed %>/<%= toDo._id %>"><%= toDo.completed %></a>
+                    <form action="toDo/update/<%= toDo._id %>" method="post">
                        <input type="text" placeholder="Write your To Do" name="description" value=<%= toDo.description %> >
                        <input type="submit" value="Edit">
                     </form>
-                    <a href="/deleteToDo/<%= toDo._id %>">x</a>
+                    <a href="toDo/delete/<%= toDo._id %>">x</a>
                 </li>
             <% }); %> 
            </ul>

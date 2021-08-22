@@ -1,33 +1,84 @@
+/* eslint-disable no-underscore-dangle */
 const ToDo = require('../models/toDo.model');
+const { userCheck } = require('./users.controller');
 
-async function getToDosDDBB(userId) {
+async function getToDos(userId) {
   const foundToDos = await ToDo.find({ user: userId });
 
   return foundToDos;
 }
 
-async function createToDoDDBB(newToDo) {
-  return ToDo.create(newToDo);
-}
-
-async function updateToDoDDBB(toDoId, dataToUpdate) {
-  return ToDo.findByIdAndUpdate(
-    toDoId,
-    dataToUpdate,
-    {
-      new: true,
-      useFindAndModify: false
+async function addToDo({ oidc, body: { description } }, res) {
+  try {
+    if (description) {
+      const user = await userCheck(oidc.user);
+      await ToDo.create({ user: user._id, description });
     }
-  );
+    res.redirect('/');
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
-async function deleteToDoDDBB(toDoId) {
-  return ToDo.findByIdAndDelete(toDoId);
+async function updateToDo({ params: { toDoId }, body }, res) {
+  try {
+    await ToDo.findByIdAndUpdate(
+      toDoId,
+      body
+    );
+
+    res.redirect('/');
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
+async function deleteToDo({ params: { toDoId } }, res) {
+  try {
+    await ToDo.findByIdAndDelete(toDoId);
+
+    res.redirect('/');
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
+async function completeToDo({ params: { toDoId } }, res) {
+  try {
+    await ToDo.findByIdAndUpdate(
+      toDoId,
+      { completed: 'Completed' }
+    );
+
+    res.redirect('/');
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
+async function uncompleteToDo({ params: { toDoId } }, res) {
+  try {
+    await ToDo.findByIdAndUpdate(
+      toDoId,
+      { completed: 'ToDo' }
+    );
+
+    res.redirect('/');
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
 }
 
 module.exports = {
-  getToDosDDBB,
-  createToDoDDBB,
-  updateToDoDDBB,
-  deleteToDoDDBB
+  getToDos,
+  addToDo,
+  updateToDo,
+  deleteToDo,
+  completeToDo,
+  uncompleteToDo
 };

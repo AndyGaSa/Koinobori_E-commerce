@@ -31,9 +31,11 @@ server.use(
   express.static(path.join(__dirname, '/public'))
 );
 
-const router = require('./src/router/server.router');
+const toDosRouter = require('./src/routers/toDos.router');
+const serverRouter = require('./src/routers/server.router');
 
-server.use('/', router);
+server.use('/toDo', toDosRouter);
+server.use('/', serverRouter);
 
 server.listen(
   port,
