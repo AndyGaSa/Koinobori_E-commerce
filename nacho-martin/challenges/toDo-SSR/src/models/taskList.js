@@ -1,8 +1,8 @@
 const { Schema, model } = require('mongoose');
 
 const taskListSchema = Schema({
-  name: String,
-  category: String,
+  name: { type: String, default: 'Unnamed tasklist' },
+  category: { type: String, default: 'general' },
   tasks: [{ type: Schema.Types.ObjectId, ref: 'Task' }]
 });
 
