@@ -5,6 +5,6 @@ const rootRouter = express.Router();
 
 rootRouter
   .route('/')
-  .get(rootController.getTemplate);
+  .get(rootController.getRootTemplate);
 
 module.exports = rootRouter;
