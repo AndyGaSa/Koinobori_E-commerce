@@ -12,4 +12,5 @@ async function createOne({ body }, res) {
 
 module.exports = {
   createOne
+
 };
