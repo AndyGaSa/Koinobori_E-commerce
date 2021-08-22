@@ -20,6 +20,7 @@ const config = {
 };
 
 const server = express();
+server.disable('x-powered-by');
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
