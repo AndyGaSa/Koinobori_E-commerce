@@ -15,7 +15,7 @@ app.use(
 );
 
 app.set('view engine', 'ejs');
-app.set('views', `${__dirname}/src/views`);
+app.set('views', path.join(__dirname, 'src/views'));
 
 const rootRouter = require('./src/routes/rootRouter');
 const profileRouter = require('./src/routes/profileRouter');
