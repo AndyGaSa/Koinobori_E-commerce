@@ -1,6 +1,6 @@
 const express = require('express');
 const {
-  createTask, getAll, getOneById, addNewTask,
+  createTask, getAll, getOneById, addNewTask, deleteOneTask,
 } = require('../controllers/toDoController');
 
 const toDoRouter = express.Router();
@@ -13,6 +13,7 @@ toDoRouter
 toDoRouter
   .route('/todo/:userId')
   .get(getOneById)
-  .put(addNewTask);
+  .put(addNewTask)
+  .delete(deleteOneTask);
 
 module.exports = toDoRouter;

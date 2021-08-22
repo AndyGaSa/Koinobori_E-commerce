@@ -12,13 +12,12 @@
         <div>
             <p> <%= data.date %> </p> 
             <p> <%= data.task %> </p> 
-            <button onclick="">X</button>
+            <button onclick="test()">X</button>
         </div>
         <%}) %>
         <button onclick="createTask()">Create one task</button>
         <input type="text" name="suneo" id="task">
     <script>
-        
         let task =  document.getElementById('task');
 
         async function createTask(url='http://localhost:5500/api/todo/6120c2e53460d03b3f9a4bd8',
@@ -29,6 +28,7 @@
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(data),
             })
+            location.reload();
             return response.json();
          }
     </script>

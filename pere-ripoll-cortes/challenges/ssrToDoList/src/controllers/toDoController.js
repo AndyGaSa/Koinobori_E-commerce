@@ -47,10 +47,26 @@ const addNewTask = async ({ params, body }, res) => {
   }
 };
 
+const deleteOneTask = async ({ params }, res) => {
+  try {
+    const { userId } = params;
+    const task = await ToDo.findOneAndUpdate(
+      { 'tasks._id': userId },
+      { $pop: { tasks: 1 } },
+      { new: true, useFindAndModify: false },
+    );
+
+    res.send(task);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+};
+
 module.exports = {
   createTask,
   getAll,
   getOneById,
   addNewTask,
-
+  deleteOneTask,
 };
