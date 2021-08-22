@@ -2,8 +2,11 @@
 <body>
     <%- include("templates/header") %>
     <main>
+        <h2>
+           Wellcome user <%= foundUser[0]._id %>
+        </h2>
         <ul>
-          <%- include('templates/new-task-card')%>
+          <a type="button" action="/create" href="/create" class="btn btn-primary">Create New Task</a>
             <% todoList.forEach(function(listItem){ %>
               <%- include('templates/task-card', {
                   taskTitle:listItem.taskTitle,

@@ -12,26 +12,6 @@ async function getIndex(req, res) {
   }
 }
 
-async function postTasks({ body }, res) {
-  try {
-    await Task.create(body);
-    res.redirect('/');
-  } catch (error) {
-    res.status(404);
-    res.render(error);
-  }
-}
-async function deleteTask(req, res) {
-  console.log('taskId', req);
-  try {
-    await Task.findByIdAndDelete(req);
-    res.redirect('/');
-  } catch (error) {
-    res.status(404);
-    res.render(error);
-  }
-}
-
 function get404(req, res) {
   res.render('404');
 }
@@ -39,6 +19,4 @@ function get404(req, res) {
 module.exports = {
   getIndex,
   get404,
-  postTasks,
-  deleteTask,
 };

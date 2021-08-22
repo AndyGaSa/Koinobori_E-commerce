@@ -1,11 +1,16 @@
+/** ***************************
+         REQUIREMENTS
+**************************** */
+
 require('dotenv').config();
+require('./configs/dbConfig');
 const express = require('express');
 const morgan = require('morgan');
-const debug = require('debug');
+const debug = require('debug')('server:');
 const path = require('path');
-require('./configs/dbConfig');
 
 const app = express();
+const port = process.env.PORT || 5000;
 
 app.use(morgan('dev'));
 app.use(express.json());
@@ -13,22 +18,40 @@ app.use(express.urlencoded({
   extended: true,
 }));
 
-const port = process.env.PORT || 5000;
+/** ***************************
+            VIEWS
+**************************** */
 
 app.set('view engine', 'ejs');
 app.set('views', `${__dirname}/views`);
 
+/** ***************************
+        CSS JS PUBLIC
+**************************** */
+
 app.use(
-  express.static(path.join(__dirname, '/public')),
+  express.static(
+    path.join(__dirname, '/public'),
+  ),
 );
 app.use(
   '/css',
-  express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')),
+  express.static(
+    path.join(__dirname,
+      '/node_modules/bootstrap/dist/css'),
+  ),
 );
 app.use(
   '/js',
-  express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')),
+  express.static(
+    path.join(__dirname,
+      'node_modules/bootstrap/dist/js'),
+  ),
 );
+
+/** ***************************
+            ROUTES
+**************************** */
 
 const mainRouter = require('./routers');
 

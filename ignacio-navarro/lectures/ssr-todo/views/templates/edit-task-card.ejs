@@ -1,13 +1,13 @@
 
     <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
         <div class="card-header">New Task</div>
-        <form method="post" action="/create" class="card-body">
+        <form method="put" action="/edit" class="card-body">
             <input 
               type="text"
               name="taskTitle"
               id="taskTitle"
               class="form-control"
-              placeholder="Title"
+              placeholder="New Title"
               aria-label="Title"
               >
             <input 
@@ -15,10 +15,10 @@
               class="form-control" 
               id="taskDetails"
               name="taskDetails"
-              placeholder="Details" 
+              placeholder="New Details" 
               aria-label="Details"
               >
-            <input type="submit" value="Create" class="btn btn-info"/>
+            <input type="submit" value="Edit" class="btn btn-info"/>
           </div>
         </form>
       </div>
