@@ -1,36 +1,37 @@
+require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const debug = require('debug');
 const path = require('path');
 require('./configs/dbConfig');
 
-const server = express();
+const app = express();
 
-require('dotenv').config();
+app.use(morgan('dev'));
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true,
+}));
 
-const port = process.env.port || 5000;
+const port = process.env.PORT || 5000;
 
-server.set('view engine', 'ejs');
-server.set('views', `${__dirname}/views`);
+app.set('view engine', 'ejs');
+app.set('views', `${__dirname}/views`);
 
-server.use(morgan('dev'));
-
-server.use(
+app.use(
   express.static(path.join(__dirname, '/public')),
 );
-server.use(
+app.use(
   '/css',
   express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')),
 );
-server.use(
+app.use(
   '/js',
   express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')),
 );
 
-const mainRouter = require('./routers/mainRouter');
-const taskRouter = require('./routers/taskRouter');
+const mainRouter = require('./routers');
 
-server.use('/', mainRouter);
-server.use('/task', taskRouter);
+app.use('/', mainRouter);
 
-server.listen(port, () => debug('server is running'));
+app.listen(port, () => debug('app is running'));

@@ -3,11 +3,13 @@
     <%- include("templates/header") %>
     <main>
         <ul>
+          <%- include('templates/new-task-card')%>
             <% todoList.forEach(function(listItem){ %>
               <%- include('templates/task-card', {
                   taskTitle:listItem.taskTitle,
                   creationDate:listItem.creationDate,
-                  taskSubtiltle:listItem.taskSubtiltle,
+                  taskDetails:listItem.taskDetails,
+                  id: listItem._id
                 }); %>
             <% }); %>
           </ul>

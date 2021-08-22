@@ -1,11 +1,9 @@
-const debug = require('debug')('mainController');
-// const todoList = require('../mock/todoList');
-const { getTasks } = require('./taskController');
+const Task = require('../models/taskModel');
 
-const todoList = getTasks;
-function getIndex(req, res) {
-  debug(todoList);
+// const todoList = require('../mock/todoList');
+async function getIndex(req, res) {
   try {
+    const todoList = await Task.find();
     res.render('index', { todoList });
     res.status(202);
   } catch (error) {
@@ -13,6 +11,27 @@ function getIndex(req, res) {
     res.render(error);
   }
 }
+
+async function postTasks({ body }, res) {
+  try {
+    await Task.create(body);
+    res.redirect('/');
+  } catch (error) {
+    res.status(404);
+    res.render(error);
+  }
+}
+async function deleteTask(req, res) {
+  console.log('taskId', req);
+  try {
+    await Task.findByIdAndDelete(req);
+    res.redirect('/');
+  } catch (error) {
+    res.status(404);
+    res.render(error);
+  }
+}
+
 function get404(req, res) {
   res.render('404');
 }
@@ -20,4 +39,6 @@ function get404(req, res) {
 module.exports = {
   getIndex,
   get404,
+  postTasks,
+  deleteTask,
 };
