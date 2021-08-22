@@ -12,7 +12,38 @@
         <form action="http://localhost:5001/taskList/<%=taskList._id %>" method="POST">
             <input type="text" class="" name="newTaskName" placeholder="Add task to list">
             <button type="submit" name="button">Add Task</button>
-        <% taskList.tasks.map((task)=> { %> <li> <%= task.name %> </li> <% }) %>
+        </form>
+        <hr>
+        <% taskList.tasks.map((task)=> { %> 
+            
+                <form action="http://localhost:5001/taskList/<%=taskList._id %>" method="POST">
+                    <div>
+                        <form action="http://localhost:5001/taskList/<%=taskList._id %>" method="POST"></form>
+                            <input type="text" name="updatedTaskName" placeholder="<%= task.name %>" value="<%=task.name %>">
+                            <button 
+                                type="submit" 
+                                name="save"
+                                value="<%=task._id %>"
+                                >
+                                Save
+                            </button>
+                        </form>
+                        <button 
+                            type="submit" 
+                            name="done"
+                            value="<%=task._id %>"
+                            >
+                            Done
+                        </button>
+                        <button 
+                            type="submit" 
+                            name="delete"
+                            value="<%=task._id %>">
+                            Delete
+                        </button>
+                    </div>
+                 </form>
+        <% }) %>
     </main>
 </body>
 </html>
