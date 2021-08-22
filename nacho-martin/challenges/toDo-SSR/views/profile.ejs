@@ -9,6 +9,10 @@
 <body>
     <h1><%= user.name %></h1>
     <hr>
+    <form action="http://localhost:5001/tasklist/" method="POST">
+    <input type="text" name="newListName" placeholder="New List" autocomplete="off">
+    <button type="submit" name="user" value="<%= user._id%>">Create</button>
+    </form>
  <% user.taskList.map((taskList)=> {%> <a href="http://localhost:5001/tasklist/<%= taskList._id %> "> <%= taskList.name %> </a> <%}) %>
     
 </body>

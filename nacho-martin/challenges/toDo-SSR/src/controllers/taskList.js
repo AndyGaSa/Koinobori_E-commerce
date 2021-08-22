@@ -1,12 +1,20 @@
 /* eslint-disable no-underscore-dangle */
 const TaskList = require('../models/taskList');
 const Task = require('../models/task');
+const User = require('../models/user');
 
 async function createOne({ body }, res) {
   try {
-    const newTaskList = await TaskList.create(body);
-
-    res.json(newTaskList);
+    const newTaskList = await TaskList.create({ name: body.newListName });
+    const currentUser = await User.findById(body.user);
+    currentUser.taskList.push(newTaskList);
+    await currentUser.save();
+    const userToPrint = await User.findById(body.user)
+      .populate({
+        path: 'taskList',
+        select: 'name'
+      });
+    res.render('profile', { user: userToPrint });
   } catch (error) {
     res.status(500);
     res.send(error);
@@ -71,7 +79,6 @@ async function updateListbyId({ params: { taskListId }, body }, res) {
           select: 'name'
         });
       res.render('taskList', { taskList: taskListToRender });
-      console.log(body);
     }
   } catch (error) {
     res.status(500);

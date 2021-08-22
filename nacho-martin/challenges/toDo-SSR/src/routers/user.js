@@ -4,10 +4,10 @@ const controller = require('../controllers/user');
 const userRouter = express.Router();
 userRouter
   .route('/:userId')
-  .get(controller.getOne);
+  .get(controller.getOneById);
 
 userRouter
   .route('/')
-  .post(controller.createOne);
+  .post(controller.logInOrSignUp);
 
 module.exports = userRouter;

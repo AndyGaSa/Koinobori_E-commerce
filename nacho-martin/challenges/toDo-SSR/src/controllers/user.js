@@ -1,16 +1,29 @@
 const User = require('../models/user');
 
-async function createOne({ body }, res) {
+async function logInOrSignUp({ body }, res) {
   try {
-    const newUser = await User.create(body);
-
-    res.json(newUser);
+    if (Object.keys(body).some((key) => key === 'login')) {
+      const currentUser = await User.findOne({ email: body.userEmail })
+        .populate({
+          path: 'taskList',
+          select: 'name'
+        });
+      res.render('profile', { user: currentUser });
+    } else if (Object.keys(body).some((key) => key === 'signup')) {
+      await User.create({ name: body.userName, email: body.userEmail });
+      const currentUser = await User.findOne({ email: body.userEmail })
+        .populate({
+          path: 'taskList',
+          select: 'name'
+        });
+      res.render('profile', { user: currentUser });
+    }
   } catch (error) {
     res.status(500);
     res.send(error);
   }
 }
-async function getOne({ params: { userId } }, res) {
+async function getOneById({ params: { userId } }, res) {
   try {
     const currentUser = await User.findById(userId)
       .populate({
@@ -25,6 +38,6 @@ async function getOne({ params: { userId } }, res) {
 }
 
 module.exports = {
-  createOne,
-  getOne
+  logInOrSignUp,
+  getOneById
 };

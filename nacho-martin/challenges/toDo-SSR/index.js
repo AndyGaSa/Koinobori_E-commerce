@@ -14,6 +14,11 @@ server.use(express.json());
 server.set('view engine', 'ejs');
 
 server.use(bodyParser.urlencoded({ extended: true }));
+
+const homeRouter = require('./src/routers/home');
+
+server.use('/', homeRouter);
+
 const userRouter = require('./src/routers/user');
 
 server.use('/user', userRouter);
