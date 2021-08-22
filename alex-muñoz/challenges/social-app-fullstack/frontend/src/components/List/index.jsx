@@ -18,6 +18,7 @@ import Typography from '@material-ui/core/Typography';
 import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { red } from '@material-ui/core/colors';
@@ -74,14 +75,14 @@ export default function InteractiveList() {
                         ? <FavoriteBorderIcon style={{ color: red[500] }} onClick={() => dispatch(addOrRemoveFriend(userId, person._id, user.friends, 'REMOVE_FRIEND'))} />
                         : null}
                       {isInTheList(person, user.adversaries)
-                        ? <button type="button" onClick={() => dispatch(addOrRemoveAdversarie(userId, person._id, user.adversaries, 'REMOVE_ADVERSARIE'))}>RemoveADV</button>
+                        ? <ThumbDownIcon style={{ color: red[500] }} onClick={() => dispatch(addOrRemoveAdversarie(userId, person._id, user.adversaries, 'REMOVE_ADVERSARIE'))} />
                         : null}
                       {isInTheList(person, user.friends) || isInTheList(person, user.adversaries)
                         ? null
                         : (
                           <>
-                            <button type="button" onClick={() => dispatch(addOrRemoveAdversarie(userId, person._id, user.adversaries, 'ADD_ADVERSARIE'))}>Adv</button>
-                            <FavoriteBorderIcon onClick={() => dispatch(addOrRemoveFriend(userId, person._id, user.friends, 'ADD_FRIEND'))}>Add Friend</FavoriteBorderIcon>
+                            <FavoriteBorderIcon onClick={() => dispatch(addOrRemoveFriend(userId, person._id, user.friends, 'ADD_FRIEND'))} />
+                            <ThumbDownIcon type="button" onClick={() => dispatch(addOrRemoveAdversarie(userId, person._id, user.adversaries, 'ADD_ADVERSARIE'))} />
                           </>
                         )}
                     </IconButton>

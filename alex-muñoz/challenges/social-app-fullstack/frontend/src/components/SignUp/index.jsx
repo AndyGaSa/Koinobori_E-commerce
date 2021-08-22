@@ -39,6 +39,9 @@ export default function SignIn() {
     currentUser = usersList.find((user) => user.name === inputValue);
     return console.log(currentUser);
   }
+  function linkToUser(user) {
+    return console.log(user);
+  }
 
   return (
     <Container component="main" maxWidth="xs">
@@ -61,7 +64,7 @@ export default function SignIn() {
             name="name"
             autoComplete="name"
             autoFocus
-            onSubmit={(event) => findUserToSignUp(event.target.value)}
+            onChange={(event) => findUserToSignUp(event.target.value)}
           />
           <Button
             type="button"
@@ -69,6 +72,7 @@ export default function SignIn() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={linkToUser}
           >
             Sign In
           </Button>
