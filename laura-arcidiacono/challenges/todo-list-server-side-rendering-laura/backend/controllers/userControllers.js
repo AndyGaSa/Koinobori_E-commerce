@@ -1,4 +1,6 @@
+/* eslint-disable no-underscore-dangle */
 const User = require('../models/userModel');
+const Task = require('../models/taskModel');
 
 async function getAll({ query }, res) {
   try {
@@ -52,11 +54,11 @@ async function updateOneById(req, res) {
 
 async function addTaskToUser(req, res) {
   const { userId } = req.params;
-  const newTask = req.body;
   try {
+    const newTask = await Task.create(req.body);
     const addedTask = await User.findByIdAndUpdate(
       userId,
-      { $push: newTask },
+      { $push: { tasks: newTask._id } },
       { new: true }
     );
     res.json(addedTask);
@@ -68,11 +70,11 @@ async function addTaskToUser(req, res) {
 
 async function deleteTaskToUser(req, res) {
   const { userId } = req.params;
-  const taskToDelete = req.body;
+  const { tasks } = req.body;
   try {
     const deletedTask = await User.findByIdAndUpdate(
       userId,
-      { $pull: taskToDelete },
+      { $pull: { tasks } },
       { new: true }
     );
     res.json(deletedTask);
