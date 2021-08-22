@@ -23,11 +23,10 @@ async function createOne({ body }, res) {
 async function getById({ params }, res) {
   const { userId } = params;
   try {
-    const foundUser = await User.findById(userId);
-    // .populate({
-    //   path: 'friends',
-    //   select: ['name']
-    // });
+    const foundUser = await User.findById(userId)
+      .populate({
+        path: 'tasks'
+      });
     res.json(foundUser);
   } catch (error) {
     res.status(500);
