@@ -17,4 +17,8 @@ todosRouter
   .route('/update/:todoId')
   .get(todosController.updateTodo);
 
+todosRouter
+  .route('/filter/done')
+  .get(todosController.filterByDoneTodos);
+
 module.exports = todosRouter;
