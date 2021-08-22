@@ -1,47 +1,31 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import loadGnomos from '../redux/accions/actionCreator';
 import './lista.css';
 
-export default function Lista() {
-  const gnomos = useSelector((store) => store.gnomos);
-
+export default function Lista({ searchGnomo }) {
   const dispatch = useDispatch();
-
-  const [searchGnomo, setSearchGnomo] = useState();
 
   useEffect(() => {
     dispatch(loadGnomos());
   }, []);
 
-  useEffect(() => {
-    setSearchGnomo(gnomos || []);
-  }, [gnomos]);
-
-  function filterGnomo(event) {
-    if (!event) setSearchGnomo(gnomos);
-    else {
-      const newGnomos = gnomos.filter(({ name }) => {
-        const searchValues = [name];
-        return searchValues.toString().toLowerCase().includes(event.toLowerCase());
-      });
-      setSearchGnomo(newGnomos);
-    }
-  }
   return (
-    <main>
+    <div>
       <form>
         <label>
           Name:
-          <input type="search" name="name" onChange={(event) => filterGnomo(event.target.value)} />
+          <input type="search" name="name" />
         </label>
         <input type="submit" value="Submit" />
       </form>
 
-      {searchGnomo?.map((gnomo, index) => ((
+      {
+      searchGnomo?.map((gnomo, index) => ((
         <div className={`container ${index % 2 === 0 ? 'rowreverse--container' : 'reverse--container'}`}>
           <Link to={`/details/${gnomo._id}`}>
             <div className="container__image">
@@ -56,10 +40,8 @@ export default function Lista() {
             <p>{gnomo.about}</p>
           </div>
         </div>
-
-      )))}
-      :
-
-    </main>
+      )))
+}
+    </div>
   );
 }

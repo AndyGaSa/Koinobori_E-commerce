@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+import React, { useEffect } from 'react';
 import { alpha, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -14,6 +15,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -79,7 +81,25 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Header() {
+export default function Header({ setSearchGnomo }) {
+  const gnomos = useSelector((store) => store.gnomos);
+
+  useEffect(() => {
+    setSearchGnomo(gnomos || []);
+  }, [gnomos]);
+
+  function filterGnomo(event) {
+    if (!event) setSearchGnomo(gnomos);
+
+    else {
+      const newGnomos = gnomos.filter(({ name }) => {
+        const searchValues = [name];
+        return searchValues.toString().toLowerCase().includes(event.toLowerCase());
+      });
+      setSearchGnomo(newGnomos);
+      console.log(newGnomos);
+    }
+  }
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -187,6 +207,7 @@ export default function Header() {
                 input: classes.inputInput
               }}
               inputProps={{ 'aria-label': 'search' }}
+              onChange={(event) => filterGnomo(event.target.value)}
             />
           </div>
           <div className={classes.grow} />
