@@ -18,20 +18,79 @@
     </header>
     <hr>
     <main>
-        <h2>Welcome <%=user.name%> </h2>
-        <%user.tasks.map((todo) => {%><div class="form-check d-flex flex-row justify-content-center mt-5 mb-5 align-items-center">
-            <input class="form-check-input fs-4 my-0 py-0" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault"><p class="fs-4 text font-monospace mx-2 my-0"><%= todo.task %></p>
+        <h2>Welcome <%= user.name %> </h2>
+        <label for="newTask">New Task:
+        <input type="text" name="newTask" id="newTask"></label>
+        <label for="category">Task Category
+        <select name="category" id="category">
+            <option defaultValue value="Work">Work</option>
+            <option value="Home">Home</option>
+            <option value="Family">Family</option>
+            <option value="Friends">Friends</option>
+        </select>
+    </label>
+    <button 
+        type="button" 
+        class="btn btn-success" 
+        onClick=createTask("<%=user._id%>")
+    >
+        Add to my ToDo-List
+    </button>
+        <% user.tasks.map((todo) => {
+            %><div 
+            id=<%=todo._id%> class="form-check d-flex flex-row justify-content-center mt-5 mb-5 align-items-center">
+            
+            <input 
+            class="form-check-input fs-4 my-0 py-0" 
+            type="checkbox" 
+            value="" 
+            <% if(todo.itsDone) {%> 
+            checked="true"<% } %> 
+            onclick=setStatusDone("<%=todo._id%>") id=input<%=todo._id%> >
+            
+            <label 
+            class="form-check-label" 
+            for="flexCheckDefault">
+            <p class="fs-4 text font-monospace mx-2 my-0"><%= todo.task %></p>
             </label>
-            <button class="btn btn-outline-info btn-sm my-0 py-0">X</button></div><%})%>
+            <button 
+            onClick=deleteDivTask("<%=user._id%>","<%=todo._id%>") 
+            class="btn btn-outline-info btn-sm my-0 py-0"
+            >
+            Remove task
+        </button>
+        
+        </div><%})%>
        </main>
 
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
         setTimeout(() => {
             const [title] = document.body.getElementsByTagName('h1');
             title.innerHTML = 'Vamos vamos! No dejes para mañana lo que puedas hacer hoy!'
-        }, 10000)
+        }, 10000);
+        
+        function deleteDivTask(userId,taskId) {
+            document.getElementById(taskId).className = "d-none";
+            axios.delete('/user/tasks/'+userId,{data: {"tasks": `${taskId}` }})
+            }
+        
+
+        function createTask(userId) {
+            const task = document.getElementById('newTask').value;
+            const category = document.getElementById('category').value;
+            axios.put('/user/tasks/'+userId,{"task": task, "category": category })
+            .then(
+                setTimeout(() => {
+                    location.reload()
+                }, 500)
+                );
+        }
+
+        function setStatusDone(taskId) {
+            const taskValue = document.getElementById('input'+taskId).checked
+            axios.put('/task/'+taskId,{"itsDone": taskValue})
+        }
     </script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
