@@ -9,7 +9,6 @@
 <body>
     <h1>Done todos</h1>
     <% todosDone.map((todo)=>{%>
-    <% console.log(todosDone)%>
         <li>
             <span><%= todo.todo %></span>
             <span>Completed: <a href="/api/todos/update/<%=todo._id%>"><%= todo.completed %></a></span>

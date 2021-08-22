@@ -47,7 +47,6 @@ async function updateTodo(req, res) {
 async function filterByDoneTodos(req, res) {
   try {
     const foundTodos = await Todo.find({ completed: true });
-    console.log(foundTodos);
     res.render('doneTodos', { todosDone: foundTodos });
     res.status(200);
   } catch (error) {

@@ -149,3 +149,40 @@ describe('Given a updateTodo function', () => {
     });
   });
 });
+
+describe('Given a filterByDoneTodos function', () => {
+  describe('When is invoked', () => {
+    describe('And resolves', () => {
+      test('Then res.status should have been called', async () => {
+        const req = {
+          params: { todoId: {} },
+        };
+        const res = {
+          render: jest.fn(),
+          status: jest.fn(),
+        };
+
+        Todo.find.mockResolvedValue({});
+        await controller.filterByDoneTodos(req, res);
+
+        expect(res.status).toHaveBeenCalled();
+      });
+    });
+    describe('And rejectes', () => {
+      test('Then res.status should have been called', async () => {
+        const req = {
+          params: { todoId: {} },
+        };
+        const res = {
+          status: jest.fn(),
+          render: jest.fn(),
+        };
+
+        Todo.find.mockRejectedValue({});
+        await controller.filterByDoneTodos(req, res);
+
+        expect(res.status).toHaveBeenCalled();
+      });
+    });
+  });
+});
