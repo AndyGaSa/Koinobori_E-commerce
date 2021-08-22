@@ -1,7 +1,7 @@
 const { model, Schema } = require('mongoose');
 
 const taskSchema = Schema({
-  name: String,
+  name: { type: String, default: 'Unnamed' },
   status: { type: String, default: 'pending' },
   priority: { type: Boolean, default: 'false' }
 });
