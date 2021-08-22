@@ -1,4 +1,3 @@
-const { findById } = require('../models/todoModel');
 const Todo = require('../models/todoModel');
 
 async function postTodo(req, res) {
