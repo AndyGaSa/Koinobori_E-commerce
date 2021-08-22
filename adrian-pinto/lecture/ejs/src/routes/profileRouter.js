@@ -4,7 +4,7 @@ const profileController = require('../controllers/profileController');
 const profileRouter = express.Router();
 
 profileRouter
-  .route('/profile')
+  .route('/')
   .get(profileController.getProfileTemplate);
 
 module.exports = profileRouter;
