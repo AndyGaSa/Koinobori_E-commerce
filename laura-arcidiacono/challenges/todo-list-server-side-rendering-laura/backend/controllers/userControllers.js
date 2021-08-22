@@ -23,11 +23,11 @@ async function createOne({ body }, res) {
 async function getById({ params }, res) {
   const { userId } = params;
   try {
-    const foundUser = await User.findById(userId)
-      .populate({
-        path: 'friends',
-        select: ['name']
-      });
+    const foundUser = await User.findById(userId);
+    // .populate({
+    //   path: 'friends',
+    //   select: ['name']
+    // });
     res.json(foundUser);
   } catch (error) {
     res.status(500);
@@ -51,6 +51,22 @@ async function updateOneById(req, res) {
   }
 }
 
+async function addTaskToUser(req, res) {
+  const { userId } = req.params;
+  const newTask = req.body;
+  try {
+    const addedTask = await User.findByIdAndUpdate(
+      userId,
+      { $push: newTask },
+      { new: true }
+    );
+    res.json(addedTask);
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+}
+
 async function deleteOneById(req, res) {
   const { userId } = req.params;
   try {
@@ -67,5 +83,6 @@ module.exports = {
   getAll,
   getById,
   updateOneById,
+  addTaskToUser,
   deleteOneById
 };
