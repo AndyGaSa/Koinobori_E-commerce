@@ -16,7 +16,10 @@ app.use(
 
 app.set('view engine', 'ejs');
 
-const rootRouter = require();
-const profileRouter = require();
+const rootRouter = require('./src/routes/rootRouter');
+const profileRouter = require('./src/routes/profileRouter');
+
+app.use('/', rootRouter);
+app.use('/profile', profileRouter);
 
 app.listen(port, () => log(`Server runing on localhost:${port}`));
