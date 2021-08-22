@@ -1,8 +1,12 @@
 <header>
     <h1>To Do</h1>
     <% if(isAuthenticated) { %>
-        <img src=<%= user.picture %> alt=<%= user.name %> />
-        <span><%= user.name %></span>
-        <button>Logout</button>
+        <div class="logged">
+            <div class="profile">
+                <img class="profile__image" src=<%= user.picture %> alt=<%= user.name %> />
+                <span class="profile__name"><%= user.name %></span>
+            </div>
+            <a class="logout" href="/logout">Logout</a>
+        </div>
     <% } %>
 </header>

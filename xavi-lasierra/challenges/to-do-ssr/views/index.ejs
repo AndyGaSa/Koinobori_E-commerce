@@ -5,24 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The best To Do website"/>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="footer.css">
     <title>To Do</title>
 </head>
 <body>
     <%- include('../src/components/header', {isAuthenticated, user}); %>
     <main>
-        <form action="/toDo/create" method="post">
+        <form class="create-to-do" action="/toDo/create" method="post">
             <input name="description" type="text" placeholder="Add a To Do">
             <button type="submit">Add</button>
         </form>
-        <ul>
+        <ul class="to-do">
             <% toDos.forEach((toDo) => { %>
                <li>
-                    <a href="/toDo/mark/<%= toDo.completed %>/<%= toDo._id %>"><%= toDo.completed %></a>
-                    <form action="toDo/update/<%= toDo._id %>" method="post">
-                       <input type="text" placeholder="Write your To Do" name="description" value="<%= toDo.description %>" >
-                       <input type="submit" value="Edit">
-                    </form>
-                    <a href="toDo/delete/<%= toDo._id %>">x</a>
+                   <div>
+                        <a class="marker marker--<%= toDo.completed %>" href="/toDo/mark/<%= toDo.completed %>/<%= toDo._id %>">x</a>
+                        <form action="toDo/update/<%= toDo._id %>" method="post">
+                            <input class="description description--<%= toDo.completed %>" type="text" placeholder="Write your To Do" name="description" value="<%= toDo.description %>" >
+                            <input class="edit" type="submit" value="💾">
+                        </form>
+                        <a class="delete" href="toDo/delete/<%= toDo._id %>">x</a>
+                   </div>
+                   <span>Created: <%= toDo.created.getDate() %>-<%= toDo.created.getMonth() %>-<%= toDo.created.getFullYear() %></span>
                 </li>
             <% }); %> 
            </ul>

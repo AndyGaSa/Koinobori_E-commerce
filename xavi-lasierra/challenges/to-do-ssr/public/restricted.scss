@@ -1,0 +1,40 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F4F4F4;
+    min-height: 90vh;
+
+    span {
+        margin-bottom: 1rem;
+    }
+
+    a {
+        padding: 0.25rem;
+        font-size: 0.9rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        border: 2px solid black;
+        text-decoration: none;
+        transition: .2s;
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+
+        &:active {
+            color: lightgray;
+            box-shadow: 0 0 10px lightgray;
+        }
+    }
+}

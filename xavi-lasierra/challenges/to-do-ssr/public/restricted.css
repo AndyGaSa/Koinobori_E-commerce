@@ -1,0 +1,51 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F4F4F4;
+  min-height: 90vh;
+}
+
+main span {
+  margin-bottom: 1rem;
+}
+
+main a {
+  padding: 0.25rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  border: 2px solid black;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+main a:hover {
+  background-color: black;
+  color: white;
+}
+
+main a:active {
+  color: lightgray;
+  -webkit-box-shadow: 0 0 10px lightgray;
+          box-shadow: 0 0 10px lightgray;
+}
+/*# sourceMappingURL=restricted.css.map */
