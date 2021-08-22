@@ -3,9 +3,7 @@ const ToDo = require('../models/toDo.model');
 const { userCheck } = require('./users.controller');
 
 async function getToDos(userId) {
-  const foundToDos = await ToDo.find({ user: userId });
-
-  return foundToDos;
+  return ToDo.find({ user: userId });
 }
 
 async function addToDo({ oidc, body: { description } }, res) {
