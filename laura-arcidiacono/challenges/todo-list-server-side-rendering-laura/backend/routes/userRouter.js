@@ -4,6 +4,7 @@ const {
   getAll,
   getById,
   updateOneById,
+  addTaskToUser,
   deleteOneById
 } = require('../controllers/userControllers');
 
@@ -13,6 +14,10 @@ userRouter
   .route('/')
   .get(getAll)
   .post(createOne);
+
+userRouter
+  .route('/tasks/:userId')
+  .put(addTaskToUser);
 
 userRouter
   .route('/:userId')
