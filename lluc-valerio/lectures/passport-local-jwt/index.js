@@ -4,6 +4,7 @@ const express = require('express');
 const debug = require('debug')('passportServer');
 const chalk = require('chalk');
 const morgan = require('morgan');
+const passport = require('passport');
 
 // DDBB connection
 require('./src/config/databaseConfig');
@@ -14,15 +15,24 @@ const server = express();
 const port = process.env.PORT || 5000;
 
 server.use(morgan('dev'));
-// server.use(express.json());
+server.use(express.json());
+server.use(passport.initialize());
+server.use(passport.session());
+passport.serializeUser((user, next) => {
+  next(null, user.name);
+});
+passport.deserializeUser(async (name, next) => {
+  try {
+
+  } catch (error) {
+    next(null, user);
+  }
+});
 
 // routes
-
+const authRouter = require('./src/routes/authRouter');
 // Server Main Route
-
-server.get('/', (req, res) => {
-  res.send('server root works');
-});
+server.use('/', authRouter);
 
 // start Server
 server.listen(
