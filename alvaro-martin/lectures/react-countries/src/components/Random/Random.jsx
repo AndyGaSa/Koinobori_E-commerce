@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { randomCountry } from '../../redux/actions/actionCreators';
 
+import('./style.css');
+
 export default function Random() {
   const country = useSelector((store) => store.random);
   const countries = useSelector((store) => store.countries);
@@ -15,12 +17,13 @@ export default function Random() {
   }, [countries]);
 
   return (
-    <>
-      <h2>Random</h2>
-      <img className="countries-flag" src={country?.flag} alt="" srcSet="" />
-      <p>{country?.name}</p>
+    <section className="country-container">
+      <h2>RANDOM COUNTRY</h2>
+      <picture className="countries-flag tooltip">
+        <img className="countries-flag tooltip" src={country?.flag} alt="" srcSet="" />
+        <p className="tooltiptext">{country?.name}</p>
+      </picture>
       <button type="button" onClick={() => dispatch(randomCountry(countries))}>random</button>
-      <section className="countries" />
-    </>
+    </section>
   );
 }
