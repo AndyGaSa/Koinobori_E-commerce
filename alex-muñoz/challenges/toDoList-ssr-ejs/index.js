@@ -18,7 +18,9 @@ server.use(bodyParser.urlencoded({ extended: true }));
 const userRouter = require('./src/routers/user');
 const taskListRouter = require('./src/routers/taskList');
 const taskRouter = require('./src/routers/task');
+const homeRouter = require('./src/routers/home');
 
+server.use('/home', homeRouter);
 server.use('/user', userRouter);
 server.use('/taskList', taskListRouter);
 server.use('/task', taskRouter);

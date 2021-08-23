@@ -9,6 +9,6 @@ userRouter
 
 userRouter
   .route('/')
-  .post(controller.createOne);
+  .post(controller.logInOrSignUp);
 
 module.exports = userRouter;

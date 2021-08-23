@@ -8,7 +8,18 @@
 </head>
 <body>
     <main>
-        
+        <h2>Log In:</h2>    
+        <form >
+            <input type="email" name="userEmail" placeholder="email">
+            <button type="submit" name="login" formmethod="POST" formaction="http://localhost:5001/user/">Log in</button>
+        </form>
+        <hr>
+        <form >
+            <h2>Sign Up</h2>
+            <input type="email" name="userEmail" placeholder="email">
+            <input type="text" name="userName" placeholder="name">
+            <button type="submit" name="signup" formmethod="POST" formaction="http://localhost:5001/user"> Sign up</button>
+        </form>
     </main>
 </body>
 </html>
