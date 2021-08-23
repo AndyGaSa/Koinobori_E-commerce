@@ -1,0 +1,15 @@
+<%
+try {
+  if (alert.error) { %>
+    <div class="alert alert-danger" role="alert">
+      <%= alert.message %>
+    </div>
+  <% } else { %>
+    <div class="alert alert-success" role="alert">
+      <%= alert.message %>
+    </div>
+  <% }
+}
+catch (error){
+  console.log(error)
+}%>
