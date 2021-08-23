@@ -13,13 +13,11 @@ async function getLogin(req, res) {
 }
 async function checkUser({ body: { username } }, res) {
   try {
-    const foundUser = await User.find({ username });
-    if (foundUser.length > 0) {
-      console.log(foundUser[0].username);
-      const todoList = await Task.find();
-      res.render('index', { foundUser, todoList });
-      res.status(202);
-    }
+    const [foundUser] = await User.find({ username });
+    console.log(foundUser.username);
+    const todoList = await Task.find();
+    res.render('index', { foundUser, todoList });
+    res.status(202);
   } catch (error) {
     res.status(404);
     res.send('Page not found');
