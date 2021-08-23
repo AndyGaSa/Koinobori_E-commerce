@@ -125,7 +125,7 @@ describe('Given a updateTodo function', () => {
           status: jest.fn(),
         };
 
-        Todo.findById.mockResolvedValue({});
+        Todo.findById.mockResolvedValue({ save: jest.fn() });
         await controller.updateTodo(req, res);
 
         expect(res.status).toHaveBeenCalled();
