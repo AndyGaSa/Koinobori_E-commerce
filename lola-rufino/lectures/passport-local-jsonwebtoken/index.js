@@ -18,8 +18,6 @@ const authRouter = require('./src/routes/authRouter');
 
 server.use('/', authRouter);
 server.get('/api/unprotected',
-// si queremos proteger o no estas rutas, ver si en la request
-// estan los datos de usuario
   async (req, res) => {
     res.json({
       message: 'Unprotected route works'
@@ -27,6 +25,8 @@ server.get('/api/unprotected',
   });
 
 server.get('/api/protected',
+// si queremos proteger o no estas rutas, ver si en la request
+// estan los datos de usuario
   (req, res, next) => {
     if (req.user) {
       next();
