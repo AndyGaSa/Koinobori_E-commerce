@@ -1,6 +1,6 @@
 const passport = require('passport');
 const { Strategy } = require('passport-local');
-const User = require('../models/userModel');
+const User = require('../../models/userModel');
 
 passport.use(
   'signup',
@@ -19,6 +19,7 @@ passport.use(
     },
   ),
 );
+
 passport.use(
   'login',
   new Strategy(
@@ -26,19 +27,22 @@ passport.use(
       usernameField: 'name',
       passwordField: 'password',
     },
+    async (name, password, next) => {
+      try {
+        const user = await User.findOne({ name });
+
+        if (!user) {
+          return next(null, false, { message: 'User not found' });
+        }
+
+        if (!user.isValidPassword(password)) {
+          return next(null, false, { message: 'Wrong password' });
+        }
+
+        return next(null, user, { message: 'Logged in successfully' });
+      } catch (error) {
+        return next(null, false);
+      }
+    },
   ),
-  async (name, password, next) => {
-    try {
-      const user = User.findOne({ name });
-      if (!user) {
-        return next(null, false, { message: 'No se ha encontrado al usuario' });
-      }
-      if (!user.isValidPassword(password)) {
-        return next(null, false, { message: 'password incorrecta' });
-      }
-      return next(null, user, { message: 'logged in succesfully' });
-    } catch (error) {
-      return next(null, false);
-    }
-  },
 );
