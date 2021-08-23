@@ -1,23 +1,22 @@
-/* eslint-disable no-underscore-dangle */
 require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const debug = require('debug')('server');
+const router = require('./src/routes/server.router');
 
 require('./src/config/ddbb.config');
-require('./src/config/passport-strategies/localStrategy');
+require('./src/config/passport-strategy/localStrategy');
+require('./src/config/passport-strategy/jwtStrategy');
 
 const server = express();
 const port = process.env.PORT || 5000;
 
+require('./src/config/passport.config')(server);
+
 server.use(morgan('dev'));
 server.use(express.json());
 
-require('./src/config/passport.config').passportConfig(server);
-
-const authRouter = require('./src/routes/auth.router');
-
-server.use('/', authRouter);
+server.use('/', router);
 
 server.listen(
   port,
