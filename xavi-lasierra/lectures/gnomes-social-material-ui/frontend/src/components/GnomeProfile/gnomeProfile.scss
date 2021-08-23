@@ -1,0 +1,173 @@
+@import '../../styles/variables', '../../styles/extensions';
+
+.gnome-profile {
+    font-family: $main-font;
+    @extend %column-center-flex;
+    width: 100%;
+
+    .gnome-profile__banner {
+        width: 100%;
+        height: 8rem;
+        overflow: hidden;
+        box-shadow: 0px 0px 5px $main-color;
+
+        .gnome-profile__banner-image {
+            width: 100%;
+        }
+    }
+
+    .gnome-profile__main-information {
+        @extend %column-center-flex;
+        margin-top: -3.5rem;
+
+        .gnome-profile__picture {
+            @extend %medium-img;
+            border-radius: 50%;
+        }
+
+        .gnome-profile__name {
+            margin-top: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .gnome-profile__age {
+            color: $secondary-text-color;
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+    }
+
+    .gnome-profile__secondary-information {
+        .gnome-profile__tags {
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-top: 1px solid $main-color;
+            border-bottom: 1px solid $main-color;
+
+
+            li {
+                text-align: center;
+                color: $secondary-text-color;
+                width: 4.5rem;
+                font-size: 0.75rem;
+                background-color: $main-light-color;
+                border-radius: 0.25rem;
+                padding: 0.5rem;
+                margin: 0.5rem;
+            }
+        }
+
+        .gnome-profile__prominent {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+            padding: $paddingH-1;
+            li {
+                width: 9rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                letter-spacing: 1px;
+                margin-bottom: 0.5rem;
+
+                .prominent__title {
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+
+                .prominent__information {
+                    margin-top: 0.25rem;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .gnome-profile__about {
+            margin-top: 2rem;
+            padding: $paddingH-1;
+            text-align: center;
+        }
+    }
+
+    .gnome-profile__social {
+        margin-top: 1rem;
+        padding: 1rem;
+        color: white;
+        background-color: $main-dark-color;
+        width: 100%;
+
+        .social__title {
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .social__gnomes {
+            list-style: none;
+            margin-bottom: 1rem;
+            @extend %column-center-flex;
+
+            li{
+                @extend %row-between-flex;
+                width: 50%;
+                height: 2rem;
+                border-top: 1px solid $main-light-color;
+                border-bottom: 1px solid $main-light-color;
+                transition: .2s;
+
+                & + li{
+                    border-top: none;
+                }
+
+                .social__gnome {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    color: white;
+                    font-size: 0.9rem;
+                    text-align: left;
+                    transition: .2s;
+                }
+
+                .social__delete {
+                    background-color: transparent;
+                    border: none;
+                    color: white;
+                    font-weight: bold;
+                    width: 1rem;
+                    text-align: center;
+                    transition: .2s;
+
+                    &:hover {
+                        font-size: 1rem;
+                    }
+                }
+
+                &:hover {
+                    background-color: $main-color;
+
+                    .social__gnome {
+                        color: black;
+                    }
+
+                    .social__delete {
+                        color: black;
+                    }
+                }
+
+                &:active {
+                    background-color: $main-light-color;
+                }
+            }
+        }
+    }
+}
+

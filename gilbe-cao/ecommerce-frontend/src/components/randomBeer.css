@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+
+    /* OPTIONAL: Reverse the order of image and content */
+    flex-direction: row-reverse;
+
+    /* OPTIONAL: Spacing between items */
+    margin: 16px 0;
+}
+
+.container__image img {
+    width: 128px;
+}
+
+.container__feature {
+    /* Take the remaining width */
+    flex: 1;
+}

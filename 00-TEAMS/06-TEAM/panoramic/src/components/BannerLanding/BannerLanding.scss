@@ -4,41 +4,42 @@
 @import '../../styles/mixin.scss';
 
 .section-banner{
+    padding-top: 150px;
     width: 100%;
     height: 40vh;
     background-color: $primary-color;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     &__text-item{
+        display: flex;
+        padding: 60px 0;
+        flex-direction: column;
+        justify-content: center;
         width: 70%;
         margin: 0 auto;
-        text-align: start;
-        color: white;
+        text-align: center;
+        color: $primary-font-color;
         font-family: $secondary-font;
     }
     &__logo-item{
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
-@media only screen and (min-width: 768px) {
-    .section-banner{
-        height: 60vh;
-        height: 60vh;
-        flex-flow: column nowrap;
-        &__text-item{
-            width: 40%;
-            margin: 0 auto;
-            text-align: start;
-            color: white;
-            font-family: $secondary-font;
-            font-size: 2rem;
-        }
-        &__logo-item{
-            width: 250px;
-            height: 250px;
-        }
+
+.logo-item__logo-text{
+    font-family: $primary-font;
+    color:$tertiary-color
+}
+
+@media only screen and (min-width: 800px){
+    .logo-item__logo-text{
+        font-size:40px;
     }
 }

@@ -1,6 +1,11 @@
 const Cart = require('../models/cartModel');
 const Product = require('../models/productModel');
 
+function handleError(error, status = 500) {
+  this.status(status);
+  this.send(error.message);
+}
+
 async function createOne({ body }, res) {
   try {
     const userCart = await Cart.findOne({ user: body.user });
@@ -31,14 +36,13 @@ async function createOne({ body }, res) {
         }
       });
 
-      res.send(userCart);
+      res.json(userCart);
     } else {
       const createdCartItem = await Cart.create(body);
       res.json(createdCartItem);
     }
   } catch (error) {
-    res.status(500);
-    res.send(error);
+    handleError.call(res, error);
   }
 }
 
@@ -53,8 +57,8 @@ async function getAll({ query }, res) {
 
     res.json(cartItems);
   } catch (error) {
-    res.status(500);
-    res.send(error);
+    console.log(error.message);
+    handleError.call(res, error);
   }
 }
 
@@ -62,8 +66,7 @@ async function getOneById(req, res) {
   try {
     res.send('getOneById works');
   } catch (error) {
-    res.status(500);
-    res.send(error);
+    handleError.call(res, error);
   }
 }
 
@@ -73,8 +76,7 @@ async function deleteOneById({ params: { cartId } }, res) {
     res.status(204);
     res.send();
   } catch (error) {
-    res.status(500);
-    res.send(error);
+    handleError.call(res, error);
   }
 }
 

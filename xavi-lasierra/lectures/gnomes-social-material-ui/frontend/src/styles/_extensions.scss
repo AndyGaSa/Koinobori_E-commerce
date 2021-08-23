@@ -1,0 +1,23 @@
+@import './variables';
+
+%small-logo {
+    width: 2.25rem;
+    transition: .2s;
+}
+
+%medium-img {
+    width: 7rem;
+    height: 7rem;
+}
+
+%row-between-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%column-center-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

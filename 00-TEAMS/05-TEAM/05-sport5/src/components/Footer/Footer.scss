@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.footer{
+    background-color: $main-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+   
+    
+    a, button, div{
+        background-color: transparent;
+        color: white;
+        outline: inherit;
+        border: none;
+        transition: .2s;
+        font-size: 1.5rem;
+        width: 30%;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+
+        &:hover{
+            color: $hover-color;
+            font-size: 1.7rem;
+        }
+    }
+}

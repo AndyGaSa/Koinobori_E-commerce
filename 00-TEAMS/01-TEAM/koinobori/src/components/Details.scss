@@ -1,0 +1,135 @@
+@import '../../variables';
+@import '../../reset';
+
+ul{
+margin:0;
+padding: 0;
+text-indent: 0;
+list-style: none;
+ul li {
+margin:0;
+padding: 0;
+text-indent: 0;
+list-style: none;
+}
+}
+
+.main{
+    background-color: $lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 10vh;
+    .main__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1440px;
+        .main__title{
+            @include title;
+        }
+        .main__product{
+            display: flex;
+            .product__images{
+                display: flex;
+                flex-direction: column;
+                .product__bigimage{
+                    width: 615px;
+                    height: 600px;
+                    border: 1px solid black;
+                    background-color: white;
+                }
+                .product__smallimages-container{
+                    display: flex;
+                    .product__smallimage{
+                        width: 143px;
+                        height: 140px;
+                        margin: 5px;
+                        border: 1px solid black;
+                        background-color: white;
+                    }
+                }
+            }
+            .product__info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                .info__price{
+                    width: 350px;
+                    height: 250px;
+                    background: url('https://i.ibb.co/Tbt59m0/pricetag.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    .price{
+                        display: block;
+                        transform: rotate(10deg);
+                        text-align: center;
+                        font-size: 144px;
+                        font-family: Bebas Neue, Roboto, Arial, Tahoma, sans-serif;
+                        margin-top: 6vh;
+                        margin-right: 3vh;
+                    }
+                }
+                .info__description{
+                    font-family: Roboto, Bebas Neue, Arial, Tahoma, sans-serif;
+                    font-size: 18px;
+                }
+                .info__addtocart{
+                    @include button;
+                    font-size: 36px;
+                    width: 18vw;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1065px){
+    .main{
+        .main__container{
+            .main__title{
+                font-size: 18px;
+            }
+        .main__product{
+            flex-direction: column;
+            .product__images{
+                .product__bigimage{
+                    width: 338px;
+                    height: 338px;
+                }
+                .product__smallimages-container{
+                    width: 338px;
+                    justify-content: center;
+                    .product__smallimage{
+                        width: 75px;
+                        height: auto;
+                    }
+                }
+            }
+            .product__info{
+                height: 60vh;
+                .info__price{
+                    width: 260px;
+                    height: auto;
+                    .price{
+                        font-size: 95px;
+                        margin-top: 5vh;
+                        margin-right: 7vh;
+                    }
+        }
+        .info__description{
+            font-size: 10px;
+        }
+        .info__addtocart{
+            @include button;
+            font-size: 25px;
+            width: 36vw;
+            margin-top: 20px;
+        }
+    }
+        }
+    }
+    }
+}

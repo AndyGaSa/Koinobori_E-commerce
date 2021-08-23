@@ -1,0 +1,41 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+main{
+    display: flex;
+
+}
+
+section{
+    margin: 30px;
+    padding: 20px;
+    min-width: 40%;
+}
+
+@media screen and (max-width: 1080px) {
+    div{
+        flex-direction: column;
+    }
+}
+
+%log_button{
+    margin:10px 20px 0;
+    width: 100px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: white;
+    border: none;
+    color: #ff2424;
+    font-size: 16px;
+    font-weight: 700;
+    &:hover{
+        cursor:pointer;
+        background-color:#da8484;
+        color: white;
+    }
+}

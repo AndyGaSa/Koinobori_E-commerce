@@ -1,0 +1,16 @@
+header {
+  padding: 0.5vw;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 2.5px 1px #e7e6e6;
+          box-shadow: 1px 2.5px 1px #e7e6e6;
+}
+
+header .main-title {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*# sourceMappingURL=Header.css.map */
