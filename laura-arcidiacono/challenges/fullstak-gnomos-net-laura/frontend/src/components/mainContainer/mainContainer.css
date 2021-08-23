@@ -1,0 +1,45 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.main__title {
+    text-align: center;
+}
+
+.users-list {
+    list-style: none;
+}
+
+.users-list__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 3rem;
+}
+
+.users-list__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 3rem;
+}
+
+.item__img {
+    border: solid 0.2rem;
+    border-color: #c50dad;
+}
+
+.users-list__article {
+    margin: 2rem;
+}
+
+.users-list__button {
+    background-color: #c50dad;
+    width: 7rem;
+    padding: 0.4rem;
+    border: solid 0.1rem #e07ad3;
+    border-radius: 1rem;
+}
