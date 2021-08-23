@@ -4,9 +4,7 @@ const { dashboard } = require('../controllers/viewController');
 const dashboardRouter = express.Router();
 dashboardRouter
   .route('/')
-  .get(
-    dashboard,
-  );
+  .get(dashboard);
 
 module.exports = {
   dashboardRouter,
