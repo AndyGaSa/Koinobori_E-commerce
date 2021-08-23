@@ -93,7 +93,7 @@ router.post('/refreshToken', (req, res) => {
     return res.sendStatus(403);
   }
 
-  return jwt.verify(refreshToken, process.env.JWT_SECRET, (err, user) => {
+  return jwt.verify(refreshToken, process.env.JWT_SECRET, (err, { user }) => {
     if (err) {
       return res.sendStatus(403);
     }
