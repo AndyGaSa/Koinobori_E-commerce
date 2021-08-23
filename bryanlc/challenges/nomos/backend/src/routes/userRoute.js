@@ -1,11 +1,11 @@
 const { Router } = require('express');
-const gnomoControllers = require('../controllers/gnomoControllers');
+const gnomoControllers = require('../controllers/gnomoController');
 
 const gnomoRouter = Router();
-
+/*
 gnomoRouter.route('/')
   .post(gnomoControllers.createOne)
-  .get(gnomoControllers.getAll);
+  .get(gnomoControllers.getAll); */
 
 gnomoRouter
   .route('/:gnomoId')

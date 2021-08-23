@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const nomoSchema = Schema({
+const gnomoSchema = Schema({
   image: String,
   age: Number,
   eyeColor: String,
@@ -21,7 +21,12 @@ const nomoSchema = Schema({
     ref: 'Gnomo'
   }],
   greeting: String,
-  favoriteFruit: String
+  favoriteFruit: String,
+  email: String,
+  password: String
 });
 
-module.exports = model('Gnomo', nomoSchema);
+gnomoSchema.methods.isValidPassword = function isValidPassword(password) {
+  return password === this.password;
+};
+module.exports = model('Gnomo', gnomoSchema);
