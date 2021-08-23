@@ -1,7 +1,7 @@
 const passport = require('passport');
 const localStrategy = require('passport-local');
 // const { Strategy } = require('passport-local');
-const User = require('../models/userModel');
+const User = require('../../models/userModel');
 
 // SIGN UP O REGISTER
 // invoco use con dos argumentos, un string y un objeto

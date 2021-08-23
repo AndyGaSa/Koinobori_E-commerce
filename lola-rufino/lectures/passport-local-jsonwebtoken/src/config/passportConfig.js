@@ -1,6 +1,6 @@
 const passport = require('passport');
 const session = require('express-session');
-const User = require('../../models/userModel');
+const User = require('../models/userModel');
 
 function passportConfig(server) {
   // configuración de passport
@@ -24,7 +24,7 @@ function passportConfig(server) {
     }
   });
 
-  server.use(passport.initialize);
+  server.use(passport.initialize());
   server.use(passport.session());
 }
 

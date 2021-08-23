@@ -2,10 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const debug = require('debug')('server');
-const User = require('./src/models/userModel');
 
 require('./src/config/databaseConfig');
-require('./src/passport/localStrategy');
+require('./src/config/passport-strategies/localStrategy');
 
 const server = express();
 const port = process.env.PORT || 5000;
@@ -13,14 +12,21 @@ const port = process.env.PORT || 5000;
 server.use(morgan('dev'));
 server.use(express.json());
 
-require('./src/config/passport-strategies/passportConfig')(server);
+require('./src/config/passportConfig')(server);
 
 const authRouter = require('./src/routes/authRouter');
 
 server.use('/', authRouter);
-server.get('/api/users/:userId',
+server.get('/api/unprotected',
 // si queremos proteger o no estas rutas, ver si en la request
 // estan los datos de usuario
+  async (req, res) => {
+    res.json({
+      message: 'Unprotected route works'
+    });
+  });
+
+server.get('/api/protected',
   (req, res, next) => {
     if (req.user) {
       next();
@@ -30,13 +36,9 @@ server.get('/api/users/:userId',
     }
   },
   async (req, res) => {
-    try {
-      const user = await User.findById(req.params.userId);
-      res.json({ user, message: 'Profile works' });
-    } catch (error) {
-      res.status(500);
-      res.send(error);
-    }
+    res.json({
+      message: 'Protected route works'
+    });
   });
 
 server.listen(
