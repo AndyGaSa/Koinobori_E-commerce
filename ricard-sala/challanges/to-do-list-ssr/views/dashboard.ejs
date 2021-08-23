@@ -12,13 +12,26 @@
     <div><%todos.map((data) =>{ %>
         <p><%=data.task%></p>
      <button
-
 type="button"
      >
      X
     </button>
         <%})%></div>
-  <input type="text">
-  <input type="submit">
+  <input type="text" name='newtodo' id='todo'>
+  <input type="submit" onclick="createTask()" value="Add task">
+  <script>
+      let task=document.getElementById('todo');
+      async function createTask(url='http://localhost:5013/api/todo/612126264a277d8ecaefc40f',
+      data={"task":`${task.value}`, status:false})
+      {
+          const response= await fetch(url,{
+              method:"PUT",
+              headers:{'Content-Type':'application/json'},
+              body: JSON.stringify(data),
+          }) 
+          location.reload();
+          return response.json()
+        }
+  </script>
 </body>
 </html>
