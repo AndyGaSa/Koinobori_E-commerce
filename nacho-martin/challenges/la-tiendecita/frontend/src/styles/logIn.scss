@@ -1,0 +1,5 @@
+
+@import './global.scss'; 
+.login__button{
+@extend %log_button;
+}
