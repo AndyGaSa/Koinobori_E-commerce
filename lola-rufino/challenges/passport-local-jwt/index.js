@@ -17,4 +17,4 @@ const router = require('./src/routes/router');
 
 server.use('/', router);
 
-server.listen(port, debug(`server is running on port ${port}`));
+server.listen(port, debug(`ʕ•́ᴥ•̀ʔっ Server is running on port ${port}`));
