@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>My website</title>
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <nav>
+            <a href="/">home</a>
+            <a href="/profile">profile</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome <%= user.name %></h2>
+        <p>Age <%= user.age %></p>
+        <p>Boat <%= user.boat ? 'tiene' : 'pendiente' %></p>
+    </main>
+
+    <script>
+        setTimeout(() => {
+            const [title] = document.body.getElementsByTagName('h1')
+            title.innerHTML = 'Skylab mola!'
+        }, 3000)
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
