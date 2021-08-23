@@ -4,12 +4,13 @@ import { Provider } from 'react-redux';
 import configureStore from './redux/store';
 import Main from './components/Main/Main';
 import reportWebVitals from './reportWebVitals';
-import Countries from './pages/Countries';
+// import Countries from './pages/Countries';
+import Random from './components/Random/Random';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={configureStore()}>
-      <Countries />
+      <Random />
       <Main />
       <p>Hola Mundo</p>
     </Provider>

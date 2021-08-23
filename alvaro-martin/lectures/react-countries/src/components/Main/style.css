@@ -8,9 +8,9 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 300px;
+    width: 200px;
 }
 .countries-flag{
-    width: 200px;
+    width: 150px;
 
 }

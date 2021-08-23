@@ -6,7 +6,6 @@ export default function countriesReducer(countries = [], action) {
     case actionTypes.LOAD_COUNTRIES:
       allCountries = action.countries;
       return allCountries;
-
     default:
       break;
   }
