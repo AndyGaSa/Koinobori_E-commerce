@@ -11,12 +11,11 @@ export function loadCountries() {
   };
 }
 // eslint-disable-next-line no-unused-vars
-export function randomCountry() {
-  return (dispatch) => {
-    const { data } = 'l';
-    dispatch({
-      type: actionTypes.LOAD_RANDOM,
-      country: data,
-    });
+export function randomCountry(countries) {
+  const data = countries[Math.floor(Math.random() * countries.length)];
+
+  return {
+    type: actionTypes.LOAD_RANDOM,
+    random: data,
   };
 }
