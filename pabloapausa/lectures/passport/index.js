@@ -1,20 +1,20 @@
 require('dotenv').config();
-require('./src/config/database');
-
 const express = require('express');
+const debug = require('debug')('server');
 const morgan = require('morgan');
-const debug = require('debug')('passport:ddbb');
-const router = require('./src/routes/router');
+
+require('./src/config/mongooseConfig');
 
 const server = express();
-const port = process.env.PORT || 6000;
+const port = process.env.PORT || 4000;
 
-require('./src/config/passport')(server);
+require('./src/config/passportConfig')(server);
 
-server.use(express.json());
 server.use(morgan('dev'));
+server.use(express.json());
+
+const router = require('./src/routes/router');
+
 server.use('/', router);
 
-server.listen(port, () => {
-  debug(`https://localhost:${port}`);
-});
+server.listen(port, debug(`server is running on port ${port}`));
