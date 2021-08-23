@@ -1,6 +1,7 @@
 const { updateListbyId } = require('../controllers/taskList');
+const Task = require('../models/task');
+const TaskList = require('../models/taskList');
 
-jest.mock('../controllers/taskList');
 jest.mock('../models/task');
 jest.mock('../models/taskList');
 
@@ -17,21 +18,16 @@ describe('Given an updateByList function', () => {
           status: jest.fn(),
           send: jest.fn()
         };
-        const Task = {
-          create: jest.fn()
-        };
-        const TaskList = {
-          findById: jest.fn()
-        };
-        Task.create().mockResolvedValue({ name: '' });
-        TaskList.findById().mockResolvedValue({
-          populate: jest.fn(),
-          tasks: [],
-          save: jest.fn()
+        Task.create.mockResolvedValue({ name: req.body.newTaskName });
+        TaskList.findById.mockReturnValue({
+          populate: jest.fn().mockResolvedValue({
+            tasks: [],
+            save: jest.fn()
+          })
         });
         await updateListbyId(req, res);
 
-        expect(res.render).toHaveBeenCalledWith({ taskList: {} });
+        expect(res.render).toHaveBeenCalled();
       });
     });
   });
