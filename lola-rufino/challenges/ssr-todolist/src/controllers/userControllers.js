@@ -1,4 +1,5 @@
 const User = require('../models/userModel');
+const Task = require('../models/taskModel');
 
 const getAllUsers = async ({ query }, res) => {
   try {
@@ -41,6 +42,7 @@ const getUserById = async (req, res) => {
           select: ['task']
         }
       );
+    res.render('index', { user: userData });
     res.json(userData);
   } catch (error) {
     res.status(500);

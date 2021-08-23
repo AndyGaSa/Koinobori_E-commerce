@@ -2,8 +2,7 @@ const { Router } = require('express');
 const {
   createTask,
   deleteTaskById,
-  getAllTasks,
-  updateTaskById
+  getAllTasks
 } = require('../controllers/taskControllers');
 
 const taskRouter = new Router();
@@ -15,7 +14,6 @@ taskRouter
 
 taskRouter
   .route('/:taskId')
-  .delete(deleteTaskById)
-  .put(updateTaskById);
+  .delete(deleteTaskById);
 
 module.exports = taskRouter;

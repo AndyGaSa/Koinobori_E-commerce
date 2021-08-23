@@ -13,7 +13,9 @@ const getAllTasks = async ({ query }, res) => {
 const createTask = async ({ body }, res) => {
   try {
     const taskData = await Task.create(body);
+    taskData.save();
     res.json(taskData);
+    res.redirect('/user/6120f39b024cfa5d4c36004f');
   } catch (error) {
     res.status(500);
     res.send('There was an error. Could not create a task');
@@ -23,32 +25,17 @@ const createTask = async ({ body }, res) => {
 const deleteTaskById = async ({ params: { taskId } }, res) => {
   try {
     const taskData = await Task.findByIdAndDelete(taskId);
+    taskData.save();
     res.json(taskData);
+    res.redirect('/user/6120f39b024cfa5d4c36004f');
   } catch (error) {
     res.status(500);
     res.send('There was an error. Could not delete task');
   }
 };
 
-const updateTaskById = async (req, res) => {
-  const { taskId } = req.params;
-  const { body } = req;
-  try {
-    const taskData = await Task.findByIdAndUpdate(taskId, body,
-      {
-        new: true,
-        useFindAndModify: false
-      });
-    res.json(taskData);
-  } catch (error) {
-    res.status(500);
-    res.send('There was an error. Could not update user');
-  }
-};
-
 module.exports = {
   createTask,
   deleteTaskById,
-  getAllTasks,
-  updateTaskById
+  getAllTasks
 };
