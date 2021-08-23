@@ -19,11 +19,11 @@ export default function Random() {
   return (
     <section className="country-container">
       <h2>RANDOM COUNTRY</h2>
+      <button type="button" onClick={() => dispatch(randomCountry(countries))}>random</button>
       <picture className="countries-flag tooltip">
         <img className="countries-flag tooltip" src={country?.flag} alt="" srcSet="" />
         <p className="tooltiptext">{country?.name}</p>
       </picture>
-      <button type="button" onClick={() => dispatch(randomCountry(countries))}>random</button>
     </section>
   );
 }

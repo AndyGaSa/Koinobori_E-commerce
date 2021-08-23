@@ -14,10 +14,18 @@ export default function Main() {
     <>
       <h1>COUNTRIES</h1>
       <section className="countries">
-        {countries?.map(({ name, flag }) => (
+        {countries?.map(({ name, flag, capital }) => (
           <div className="country">
-            <p>{name}</p>
-            <img className="countries-flag" src={flag} alt={name} />
+            <picture className="countries-flag tooltip">
+              <img className="countries-flag tooltip" src={flag} alt="" srcSet="" />
+              <p className="tooltiptext">{name}</p>
+              <p className="tooltiptext">
+                Capital:
+                {' '}
+                {capital}
+              </p>
+
+            </picture>
           </div>
         ))}
       </section>
