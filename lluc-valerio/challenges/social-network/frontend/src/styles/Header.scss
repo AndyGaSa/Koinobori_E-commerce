@@ -1,0 +1,33 @@
+.header{
+    width: 100%;
+    height: 250px;
+    .header__title{
+        background: linear-gradient(145deg, #ee93f9 5%, #5ed1eb 50%);
+        width: 100%;
+        height: 50%;
+        h1{
+            display: none;    
+        }
+    }
+    .header__user-info{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #f8f8f8;
+        .user-info__pic{
+            width: 125px;
+            height: 125px;
+            margin-top: -85px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .user-info__name{
+            font-weight: bolder;
+            font-size: xx-large;
+            padding-top: 15px;
+        }
+    }
+}
