@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
-const ToDo = require('../models/toDoModel');
+const ToDos = require('../models/toDoModel');
 
 const createTask = async ({ body }, res) => {
   try {
-    const newTask = await ToDo.create(body);
+    const newTask = await ToDos.create(body);
     res.json(newTask);
   } catch (error) {
     res.status(500);
@@ -12,7 +12,7 @@ const createTask = async ({ body }, res) => {
 };
 const getAll = async ({ params }, res) => {
   try {
-    const allTask = await ToDo.find(params)
+    const allTask = await ToDos.find(params)
       .populate({ path: 'user', select: ['name', 'email'] });
     res.json(allTask);
   } catch (error) {
@@ -23,7 +23,7 @@ const getAll = async ({ params }, res) => {
 const getOneById = async ({ params }, res) => {
   try {
     const { userId } = params;
-    const getOne = await ToDo.findOne({ user: { _id: userId } });
+    const getOne = await ToDos.findOne({ user: { _id: userId } });
     res.json(getOne);
   } catch (error) {
     res.status(500);
@@ -31,12 +31,24 @@ const getOneById = async ({ params }, res) => {
   }
 };
 
-const getNewTask = async (params, body, res) => {
+const deleteOneTask = async ({ params: { userId } }, res) => {
+  try {
+    await ToDos.findOneAndUpdate({ 'tasks._id': userId }, { $pop: { tasks: 1 } }, { new: true, useFindAndModify: false });
+
+    res.status(204);
+    res.send();
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+};
+
+const getNewTask = async ({ params, body }, res) => {
   try {
     const { userId } = params;
-    const getNew = await ToDo.findOneAndUpdate(
+    const getNew = await ToDos.findOneAndUpdate(
       { user: { _id: userId } },
-      { $addToSet: { task: body } },
+      { $addToSet: { tasks: body } },
       { new: true, useFindAndModify: false },
     );
     res.json(getNew);
@@ -47,6 +59,7 @@ const getNewTask = async (params, body, res) => {
 };
 
 module.exports = {
+  deleteOneTask,
   createTask,
   getAll,
   getNewTask,
