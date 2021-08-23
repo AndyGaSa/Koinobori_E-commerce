@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80vw;
+    background-color: aquamarine;
+    border-radius: 25px;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.container__friends{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
