@@ -15,7 +15,7 @@ server.use(express.json());
 
 require('./src/config/passport.config').passportConfig(server);
 
-const authRouter = require('./src/router/auth.router');
+const authRouter = require('./src/routes/auth.router');
 
 server.use('/', authRouter);
 
