@@ -16,8 +16,11 @@ const port = process.env.PORT || 5000;
 
 server.use(morgan('dev'));
 server.use(express.json());
-server.use(passport.initialize());
 server.use(passport.session());
+server.use(session({
+
+}));
+server.use(passport.initialize());
 passport.serializeUser((user, next) => {
   next(null, user.name);
 });
