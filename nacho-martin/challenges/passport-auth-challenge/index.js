@@ -1,6 +1,6 @@
 require('dotenv').config()
 const express = require('express')
-const debug = require('debug')
+const debug = require('debug')('sever')
 const morgan = require('morgan')
 
 require('./src/config/mongooseConfig')
