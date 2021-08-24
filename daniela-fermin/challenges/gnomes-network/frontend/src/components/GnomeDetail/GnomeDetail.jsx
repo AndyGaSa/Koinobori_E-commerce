@@ -10,6 +10,8 @@ import { IconButton } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
 
 import Avatar from '@material-ui/core/Avatar';
 
@@ -21,6 +23,12 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    minWidth: 275,
+    display: 'flex',
+    justifyContent: 'center',
+    '& > *': {
+      margin: theme.spacing(1)
+    },
     maxWidth: 345
   },
   media: {
@@ -38,7 +46,19 @@ const useStyles = makeStyles((theme) => ({
     transform: 'rotate(180deg)'
   },
   avatar: {
+    alignItems: 'center',
     backgroundColor: red[500]
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)'
+  },
+  title: {
+    fontSize: 16
+  },
+  pos: {
+    marginBottom: 12
   }
 }));
 
@@ -57,11 +77,33 @@ export default function GnomeDetail() {
   return (
 
     <>
-      <h2>{userGnome?.name}</h2>
-      <span>{userGnome?.age}</span>
-      <span>{userGnome?.eyecolor}</span>
-      <span>{userGnome?.gender}</span>
-      <span>{userGnome?.tags}</span>
+      <Card className={classes.root}>
+        <CardContent>
+          <Avatar alt="Avatar" src={userGnome?.picture} className={classes.large} />
+          <Typography variant="h2" component="h2">
+            {userGnome?.name}
+          </Typography>
+          <Typography className={classes.pos} color="textSecondary">
+            Eyecolor:
+            {' '}
+            {userGnome?.eyecolor}
+            <br />
+            Age:
+            {' '}
+            {userGnome?.age}
+            <br />
+            Favorite fruit:
+            {' '}
+            {userGnome?.favoriteFruit}
+          </Typography>
+          <Typography variant="body2" component="p">
+            Greeting:
+            {' '}
+            {userGnome?.greeting}
+            The gretting
+          </Typography>
+        </CardContent>
+      </Card>
       <ul>
         {gnomes?.map((gnome) => (
           <Card

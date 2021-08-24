@@ -10,6 +10,8 @@ require('./src/config/ddbb.config');
 const server = express();
 const port = process.env.PORT || 5000;
 
+require('./src/config/passportConfig')(server);
+
 server.use(cors());
 server.use(morgan('dev'));
 server.use(express.json());
