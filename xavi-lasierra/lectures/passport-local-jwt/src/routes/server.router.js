@@ -19,48 +19,30 @@ router
 
 router.post(
   '/login',
-  async (req, res, done) => {
-    passport.authenticate(
-      'login',
-      async (err, user) => {
-        try {
-          if (err || !user) {
-            const error = new Error('An error occurred.');
+  passport.authenticate('login', { session: false }),
+  ({ user }, res) => {
+    const data = { _id: user._id, email: user.email };
+    try {
+      const token = jwt.sign(
+        { user: data },
+        process.env.JWT_SECRET,
+        { expiresIn: '1m' }
+      );
+      const refreshToken = jwt.sign(
+        { user: data },
+        process.env.JWT_SECRET
+      );
 
-            return done(error);
-          }
+      refreshTokens.push(refreshToken);
 
-          return req.login(
-            user,
-            { session: false },
-            async (error) => {
-              if (error) return done(error);
-
-              const data = { _id: user._id, email: user.email };
-
-              const token = jwt.sign(
-                { user: data },
-                process.env.JWT_SECRET,
-                { expiresIn: '1m' }
-              );
-              const refreshToken = jwt.sign(
-                { user: data },
-                process.env.JWT_SECRET
-              );
-
-              refreshTokens.push(refreshToken);
-
-              return res.json({
-                token,
-                refreshToken
-              });
-            }
-          );
-        } catch (error) {
-          return done(error);
-        }
-      }
-    )(req, res, done);
+      return res.json({
+        token,
+        refreshToken
+      });
+    } catch (error) {
+      res.status(500);
+      return res.send(error);
+    }
   }
 );
 
