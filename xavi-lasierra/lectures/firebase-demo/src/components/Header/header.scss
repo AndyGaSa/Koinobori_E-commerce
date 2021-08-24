@@ -1,0 +1,29 @@
+@import '../../styles/variables', '../../styles/extensions', '../../styles/mixins';
+
+.header {
+    @extend %row-between-flex;
+    padding: 0 3rem;
+    height: 3rem;
+    background-color: $main-color;
+    font-family: $main-font;
+    box-shadow: 0 0 1rem $main-color;
+
+    .header__title {
+        color: $light-text-color;
+        letter-spacing: 1px;
+        font-weight: normal;
+        font-size: 1.5rem;
+    }
+
+    .header__button-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+
+        .header__login,
+        .header__logout {
+            @include button($light-text-color, $main-color);
+        }
+    }
+}
