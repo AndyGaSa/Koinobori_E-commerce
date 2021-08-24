@@ -1,29 +1,19 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import actionTypes from './redux/actions/actionTypes';
+import { useDispatch, useSelector } from 'react-redux';
+import { login, logout } from './redux/actions/actionCreators';
 
 function App() {
   const dispatch = useDispatch();
+  const { isAuthenticated } = useSelector((store) => store.authentication);
 
-  function handleLogin() {
-    dispatch({
-      type: actionTypes.AUTHENTICATION_LOGIN,
-      data: true
-    });
-  }
-
-  function handleLogout() {
-    dispatch({
-      type: actionTypes.AUTHENTICATION_LOGOUT,
-      data: false
-    });
-  }
+  const handleLogin = () => dispatch(logout());
+  const handleLogout = () => dispatch(login());
 
   return (
     <>
-      {isLogged
-        ? <button type="button" onClick={handleLogin}>Login</button>
-        : <button type="button" onClick={handleLogout}>Logout</button>}
+      {isAuthenticated
+        ? (<button type="button" onClick={handleLogin}>Login</button>)
+        : (<button type="button" onClick={handleLogout}>Logout</button>)}
     </>
   );
 }
