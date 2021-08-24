@@ -12,9 +12,9 @@ router.post(
   (req, res) => {
     res.send({
       user: req.user,
-      message: 'Register works',
+      message: 'Register works'
     });
-  },
+  }
 );
 
 router.post(
@@ -42,27 +42,27 @@ router.post(
               const token = jwt.sign(
                 { user: data },
                 process.env.JWT_SECRET,
-                { expiresIn: '1m' },
+                { expiresIn: '1m' }
               );
               const refreshToken = jwt.sign(
                 { user: data },
-                process.env.JWT_SECRET,
+                process.env.JWT_SECRET
               );
 
               refreshTokens.push(refreshToken);
 
               return res.json({
                 token,
-                refreshToken,
+                refreshToken
               });
-            },
+            }
           );
         } catch (error) {
           return done(error);
         }
-      },
+      }
     )(req, res, done);
-  },
+  }
 );
 
 router.get(
@@ -70,16 +70,16 @@ router.get(
   passport.authenticate('jwt', { session: false }),
   (req, res) => res.json({
     user: req.user,
-    message: 'Protected works',
-  }),
+    message: 'Protected works'
+  })
 );
 
 router.get(
   '/unprotected',
   (req, res) => res.send({
     user: req.user,
-    message: 'Unprotected works',
-  }),
+    message: 'Unprotected works'
+  })
 );
 
 router.post('/refreshToken', (req, res) => {
@@ -104,11 +104,11 @@ router.post('/refreshToken', (req, res) => {
     const token = jwt.sign(
       { user: data },
       process.env.JWT_SECRET,
-      { expiresIn: '1m' },
+      { expiresIn: '1m' }
     );
 
     return res.json({
-      token,
+      token
     });
   });
 });

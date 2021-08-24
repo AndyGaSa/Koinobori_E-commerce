@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/gilbecao/express-passport-local-jwt#readme",
   "dependencies": {
-    "debug": "^4.3.1",
+    "debug": "^4.3.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",

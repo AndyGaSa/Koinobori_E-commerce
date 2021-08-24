@@ -7,7 +7,7 @@ passport.use(
   new localStrategy.Strategy(
     {
       usernameField: 'email',
-      passwordField: 'password',
+      passwordField: 'password'
     },
     async (email, password, done) => {
       try {
@@ -17,8 +17,8 @@ passport.use(
       } catch (error) {
         return done(error);
       }
-    },
-  ),
+    }
+  )
 );
 
 passport.use(
@@ -26,7 +26,7 @@ passport.use(
   new localStrategy.Strategy(
     {
       usernameField: 'email',
-      passwordField: 'password',
+      passwordField: 'password'
     },
     async (email, password, done) => {
       try {
@@ -44,6 +44,6 @@ passport.use(
       } catch (error) {
         return done(null, false);
       }
-    },
-  ),
+    }
+  )
 );
