@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const passport = require('passport');
 const {
   getCarts,
   createCart,
@@ -15,6 +16,7 @@ cartsRouter
 
 cartsRouter
   .route('/')
+  .all(passport.authenticate('jwt', { session: false }))
   .get(getCarts)
   .post(createCart);
 
