@@ -10,11 +10,13 @@ require('./src/configs/ddbbConfig');
 const server = express();
 const port = process.env.PORT || 5000;
 
+require('./src/configs/passport.config')(server);
+
 server.use(morgan('dev'));
 server.use(express.json());
 server.use(cors());
 
-const userRouter = require('./src/routers/usersRouter');
+const userRouter = require('./src/routers/users.routes');
 
 server.use('/api/users', userRouter);
 
