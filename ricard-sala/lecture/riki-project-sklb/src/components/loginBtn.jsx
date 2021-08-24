@@ -9,7 +9,6 @@ export default function LoginBtn() {
       type: actionTypes.UPDATE_STATE,
       state: true,
     });
-    console.log('dispatch');
   }
   return (
     <button type="button" onClick={changeState}>login</button>

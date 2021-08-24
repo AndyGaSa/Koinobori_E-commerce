@@ -9,8 +9,6 @@ export default function LogoutBtn() {
       type: actionTypes.UPDATE_STATE,
       state: false,
     });
-    // eslint-disable-next-line no-console
-    console.log('dispatch');
   }
   return (
     <button type="button" onClick={changeState}>logout</button>
