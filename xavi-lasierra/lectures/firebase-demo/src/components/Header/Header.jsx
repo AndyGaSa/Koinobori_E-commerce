@@ -6,7 +6,7 @@ import './header.scss';
 
 export default function Header() {
   const dispatch = useDispatch();
-  const { isAuthenticated } = useSelector((store) => store.user);
+  const { user, isAuthenticated } = useSelector((store) => store.user);
 
   function handleLoginClick() {
     dispatch(loginUser());
@@ -15,14 +15,36 @@ export default function Header() {
     dispatch(logoutUser());
   }
 
+  const userNotLogged = (
+    <>
+      <div className="user__button-container">
+        <button className="user__login" type="button" onClick={handleLoginClick}>Login</button>
+      </div>
+    </>
+  );
+
+  const userLogged = (
+    <>
+
+      <div className="user__information">
+        <span className="user__name">{user?.displayName}</span>
+        <img className="user__photo" src={user?.photoURL} alt={user?.displayName} />
+      </div>
+      <div className="user__button-container">
+        <button className="user__logout" type="button" onClick={handleLogoutClick}>Logout</button>
+      </div>
+
+    </>
+  );
+
   return (
     <header className="header">
       <h1 className="header__title">To Do List</h1>
-      <div className="header__button-container">
+      <section className="header__user">
         {isAuthenticated
-          ? <button className="header__logout" type="button" onClick={handleLogoutClick}>Logout</button>
-          : <button className="header__login" type="button" onClick={handleLoginClick}>Login</button>}
-      </div>
+          ? userLogged
+          : userNotLogged}
+      </section>
     </header>
   );
 }

@@ -15,15 +15,36 @@
         font-size: 1.5rem;
     }
 
-    .header__button-container{
+    .header__user {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 5rem;
 
-        .header__login,
-        .header__logout {
-            @include button($light-text-color, $main-color);
+        .user__information {
+            display: flex;
+            align-items: center;
+
+            .user__name {
+                color: $light-text-color;
+                margin-right: 0.25rem;
+            }
+
+            .user__photo {
+                width: 2.25rem;
+                border-radius: 50%;
+            }
+        }
+
+        .user__button-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 5rem;
+    
+            .user__login,
+            .user__logout {
+                @include button($light-text-color, $main-color);
+            }
         }
     }
+
+
 }
