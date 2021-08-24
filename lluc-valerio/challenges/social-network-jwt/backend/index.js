@@ -9,14 +9,16 @@ require('./src/config/ddbbConfig');
 const server = express();
 const port = process.env.PORT || 5000;
 
+require('./src/config/passportConfig')(server);
+
 server.use(morgan('dev'));
 server.use(express.json());
 
-const userRouter = require('./src/routes/userRoutes');
-const authRouter = require('./src/routes/userRoutes');
+// const userRouter = require('./src/routes/userRoutes');
+const authRouter = require('./src/routes/authRoutes');
 
 server.use('/', authRouter);
-server.use('/api/user', userRouter);
+// server.use('/api/user', userRouter);
 
 server.listen(
   port,
