@@ -1,0 +1,17 @@
+
+.foe-button{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+}
+.friend-div{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(4px 3px 2px grey);
+}
+.friend-image{
+    width: 100%;
+    border-radius: 50%;
+}

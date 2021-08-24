@@ -1,0 +1,105 @@
+.principal{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    .user-info{
+        width: 80%;
+        background: #fff;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        .user-info__data{
+            padding: 50px;
+            list-style: none;
+            li{
+                margin:10px 0;
+                .data-attribute{
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+    .find-person{
+        margin: 50px 0;
+        .find-person__input{
+            padding: 3px 10px;
+            background: #fff;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border: 0px;
+        }
+        .find-person__button{
+            color: #a0a0a0;
+            padding: 3px 10px;
+            background: #fff;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border: 0px;
+            margin-left: 20px;
+        }
+        .find-person__button:hover{
+            color: #000;
+            border-color: #000;
+        }
+    }
+    .people{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .people__list{
+            margin-top: 20px;
+            width: 80%;
+            .people__noFound{
+                font-weight: bolder;
+            }
+            .person{
+                width: 100%;
+                background: #fff;
+                border-radius: 25px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                padding: 20px;
+                list-style: none;
+                margin:10px 0;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                // align-items:center;
+                .person__info{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-content: center;
+                }
+                .person__actions{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-content: center;
+                    .person__button-friend-green {
+                        padding: 5px;
+                        border-radius: 35px;
+                        background-color: rgba($color: #64b43e, $alpha: .5);
+                    }
+                    .person__button-friend-grey {
+                        padding: 5px;
+                        border-radius: 35px;
+                    }
+                    .person__button-adversaries-red {
+                        border-radius: 35px;
+                        padding: 5px;
+                        background-color: rgba($color: #dd4f4f, $alpha: .5);
+                    }
+                    .person__button-adversaries-grey {
+                        border-radius: 35px;
+                        padding: 5px;
+                    }
+                }
+                .person__image{
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
