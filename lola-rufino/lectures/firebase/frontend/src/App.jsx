@@ -14,7 +14,7 @@ function App() {
       {isAuthenticated
         ? (
           <>
-            <button type="button" onClick={handleLogin}>Login</button>
+            <button type="button" onClick={handleLogin}>Logout</button>
             <span>
               Welcome
               {' '}
@@ -23,7 +23,7 @@ function App() {
             <img src={user?.picture} alt={user?.name} />
           </>
         )
-        : (<button type="button" onClick={handleLogout}>Logout</button>)}
+        : (<button type="button" onClick={handleLogout}>Login</button>)}
     </>
   );
 }
