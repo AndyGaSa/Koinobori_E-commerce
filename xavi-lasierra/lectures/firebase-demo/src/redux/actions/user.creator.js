@@ -20,8 +20,12 @@ export function loginUser() {
 }
 
 export function logoutUser() {
-  return {
-    type: userActions.LOGOUT_USER
+  return async (dispatch) => {
+    await firebase.auth().signOut();
+
+    dispatch({
+      type: userActions.LOGOUT_USER
+    });
   };
 }
 
