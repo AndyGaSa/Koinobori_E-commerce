@@ -5,7 +5,7 @@ const debug = require('debug')('server');
 const router = require('./src/routes/router');
 
 const server = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 6000;
 
 require('./src/config/mongooseConfig');
 require('./src/config/passportConfig')(server);
