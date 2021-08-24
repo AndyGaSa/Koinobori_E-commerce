@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Done Todos</title>
+</head>
+<body>
+    <h1>Done todos</h1>
+    <% todosDone.map((todo)=>{%>
+        <li>
+            <span><%= todo.todo %></span>
+            <span>Completed: <a href="/api/todos/update/<%=todo._id%>"><%= todo.completed %></a></span>
+            <a href="/api/todos/delete/<%=todo._id%>">Remove</a>
+        </li>
+        <% }) %>
+    <a href="/api/todos/">Go back</a>
+</body>
+</html>
