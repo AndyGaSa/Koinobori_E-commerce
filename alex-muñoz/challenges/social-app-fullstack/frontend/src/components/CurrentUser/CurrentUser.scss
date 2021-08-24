@@ -1,0 +1,47 @@
+@import '../../sass/reset';
+
+.user-details{
+    display:flex;
+    flex-direction: column;
+    &__main-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url('https://media-exp1.licdn.com/dms/image/C4E1BAQFFwpItRU4XkQ/company-background_10000/0/1519796159508?e=1629525600&v=beta&t=awjti7yZEIRm_Uh3oqfqGQ9MDajI8BFQpWL9LQrF-VQ');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        padding: 20px 0;
+        height: 200px;
+        div{
+            position: relative;
+            top: 55px;
+            margin: 0 auto;
+        }
+        h1{
+            position: relative;
+            top: 110px;
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+
+    &__friends-adversaries-list{
+        display: flex;
+        margin: 0 auto;
+        margin-top: 80px;
+        justify-content: center;
+        width: 100%;
+        padding: 40px 0;
+    }
+    &__people-list{
+        margin: 0 auto;
+        width: 400px;
+    }
+    &__persons-list{
+        list-style: none;
+        margin: 0 auto;
+
+    }
+}
