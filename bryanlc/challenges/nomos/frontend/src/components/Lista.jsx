@@ -1,28 +1,25 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import loadGnomos from '../redux/accions/actionCreator';
+import Header from './Header';
 import './lista.css';
 
-export default function Lista({ searchGnomo }) {
+export default function Lista() {
   const dispatch = useDispatch();
+  const [searchGnomo, setSearchGnomo] = useState();
 
   useEffect(() => {
     dispatch(loadGnomos());
   }, []);
 
   return (
+
     <div>
-      <form>
-        <label>
-          Name:
-          <input type="search" name="name" />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+      <Header setSearchGnomo={setSearchGnomo} />
 
       {
       searchGnomo?.map((gnomo, index) => ((

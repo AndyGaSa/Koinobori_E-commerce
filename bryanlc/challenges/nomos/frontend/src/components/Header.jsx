@@ -97,9 +97,9 @@ export default function Header({ setSearchGnomo }) {
         return searchValues.toString().toLowerCase().includes(event.toLowerCase());
       });
       setSearchGnomo(newGnomos);
-      console.log(newGnomos);
     }
   }
+
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
