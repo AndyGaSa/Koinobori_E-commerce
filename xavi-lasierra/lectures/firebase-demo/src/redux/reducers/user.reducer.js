@@ -7,10 +7,10 @@ export default function userReducer(user = initialState, action) {
 
   switch (action.type) {
     case userActions.LOGIN_USER:
-      newUser = { ...newUser, isAuthenticated: true };
+      newUser = { user: action.data, isAuthenticated: true };
       break;
     case userActions.LOGOUT_USER:
-      newUser = { ...newUser, isAuthenticated: false };
+      newUser = { isAuthenticated: false };
       break;
     default:
       break;
