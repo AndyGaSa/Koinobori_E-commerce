@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Esto es el dashboard</h1>
+    <form action="" method="POST" >
+        <input type="text" name="content">
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+    <% todos.map((todo)=>{%>
+        <li>
+            <span><%= todo.todo %></span>
+            <span>Completed: <a href="/api/todos/update/<%=todo._id%>"><%= todo.completed %></a></span>
+            <a href="/api/todos/delete/<%=todo._id%>">Remove</a>
+        </li>
+        <% }) %>
+    </ul>
+    <a href="/api/todos/filter/done">Done Todos</a>
+</body>
+</html>
