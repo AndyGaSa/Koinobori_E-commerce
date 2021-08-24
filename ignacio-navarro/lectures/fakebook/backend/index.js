@@ -8,6 +8,8 @@ require('./src/configs/dbConfig');
 const server = express();
 const port = process.env.PORT || 5000;
 
+require('./src/configs/passportConfig')(server);
+
 server.use(morgan('dev'));
 server.use(express.json());
 
