@@ -4,7 +4,7 @@ import { login, logout } from './redux/actions/actionCreators';
 
 function App() {
   const dispatch = useDispatch();
-  const { isAuthenticated } = useSelector((store) => store.authentication);
+  const { isAuthenticated, user } = useSelector((store) => store.authentication);
 
   const handleLogin = () => dispatch(logout());
   const handleLogout = () => dispatch(login());
@@ -12,7 +12,17 @@ function App() {
   return (
     <>
       {isAuthenticated
-        ? (<button type="button" onClick={handleLogin}>Login</button>)
+        ? (
+          <>
+            <button type="button" onClick={handleLogin}>Login</button>
+            <span>
+              Welcome
+              {' '}
+              {user?.given_name}
+            </span>
+            <img src={user?.picture} alt={user?.name} />
+          </>
+        )
         : (<button type="button" onClick={handleLogout}>Logout</button>)}
     </>
   );

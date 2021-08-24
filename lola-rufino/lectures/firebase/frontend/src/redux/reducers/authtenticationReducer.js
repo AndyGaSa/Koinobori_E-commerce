@@ -4,7 +4,8 @@ export default function authenticationReducer(authentication = { isAuthenticated
   switch (action.type) {
     case actionTypes.LOGIN:
       return {
-        isAuthenticated: true
+        isAuthenticated: true,
+        user: action.user
       };
     case actionTypes.LOGOUT:
       return {
