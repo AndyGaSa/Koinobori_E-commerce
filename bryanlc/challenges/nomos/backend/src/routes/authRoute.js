@@ -1,7 +1,10 @@
+/* eslint-disable no-underscore-dangle */
 const { Router } = require('express');
 const passport = require('passport');
+const jwt = require('jsonwebtoken');
 
 const router = new Router();
+const refreshTokens = [];
 
 router.post(
   '/register',
@@ -16,35 +19,49 @@ router.post(
 
 router.post(
   '/login',
-  passport.authenticate('login'),
-  (req, res) => {
-    res.send({
+  passport.authenticate('login', { session: false }),
+  ({ user }, res) => {
+    /* res.send({
       user: req.user,
       message: 'Login works'
-    });
+    }); */
+    const data = { _id: user._id, email: user.email };
+    try {
+      const token = jwt.sign(
+        { user: data },
+        process.env.JWT_SECRET,
+        { expiresIn: '1m' }
+      );
+
+      const refreshToken = jwt.sign(
+        { user: data },
+        process.env.JWT_SECRET
+      );
+      refreshTokens.push(refreshToken);
+      return res.json({
+        token,
+        refreshToken
+      });
+    } catch (error) {
+      res.status(500);
+      return res.send(error);
+    }
   }
 );
 
 router.get(
   '/protected',
-  (req, res, done) => {
-    if (req.user) {
-      done();
-    } else {
-      res.status(401);
-      res.send();
-    }
-  },
-  (req, res) => res.json({
-    user: req.user,
+  passport.authenticate('jwt', { session: false }),
+  ({ user }, res) => res.json({
+    user,
     message: 'Protected works'
   })
 );
 
 router.get(
   '/unprotected',
-  (req, res) => res.send({
-    user: req.user,
+  ({ user }, res) => res.send({
+    user,
     message: 'Unprotected works'
   })
 );

@@ -11,15 +11,18 @@ passport.use(
     },
     async (email, password, done) => {
       try {
-        const users = await User.find({ email });
+        /* const users = await User.find({ email });
         if (users.length > 0) {
           throw new Error('User already registered');
         }
 
         const user = await User.create({ email, password });
-        done(null, user);
+        done(null, user); */
+        const user = await User.create({ email, password });
+
+        return done(null, user);
       } catch (error) {
-        done(error);
+        return done(error);
       }
     }
   )
@@ -37,16 +40,16 @@ passport.use(
         const user = await User.findOne({ email });
 
         if (!user) {
-          done(null, false, { message: 'User not registered' });
+          return done(null, false, { message: 'User not registered' });
         }
 
         if (!user.isValidPassword(password)) {
-          done(null, false, { message: 'Invalid password' });
+          return done(null, false, { message: 'wrong  password' });
         }
 
-        done(null, user);
+        return done(null, user, { message: 'Accer successfully' });
       } catch ({ message }) {
-        done(null, false, { message });
+        return done(null, false, { message });
       }
     }
   )
