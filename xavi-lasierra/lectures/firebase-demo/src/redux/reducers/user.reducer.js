@@ -1,14 +1,16 @@
 import userActions from '../actions/user.actions';
 
-export default function userReducer(user = false, action) {
+import initialState from '../../constants/userInitialState';
+
+export default function userReducer(user = initialState, action) {
   let newUser = user;
 
   switch (action.type) {
     case userActions.LOGIN_USER:
-      newUser = true;
+      newUser = { ...newUser, isAuthenticated: true };
       break;
     case userActions.LOGOUT_USER:
-      newUser = false;
+      newUser = { ...newUser, isAuthenticated: false };
       break;
     default:
       break;
