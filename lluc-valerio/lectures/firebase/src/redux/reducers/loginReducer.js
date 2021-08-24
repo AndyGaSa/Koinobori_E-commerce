@@ -1,17 +1,17 @@
 import actionTypes from '../actions/actionTypes';
 
-export default function loginReducer(loginState = { isAuthorized: false }, action) {
-  let newLoginState = {};
+export default function loginReducer(loginStatus = { isAuthorized: false }, action) {
+  let newloginStatus = {};
   switch (action.type) {
     case actionTypes.LOGIN:
-      newLoginState.isAuthorized = true;
+      newloginStatus.isAuthorized = true;
       break;
     case actionTypes.LOGOUT:
-      newLoginState.isAuthorized = false;
+      newloginStatus.isAuthorized = false;
       break;
     default:
-      newLoginState = loginState;
+      newloginStatus = loginStatus;
       break;
   }
-  return newLoginState;
+  return newloginStatus;
 }
