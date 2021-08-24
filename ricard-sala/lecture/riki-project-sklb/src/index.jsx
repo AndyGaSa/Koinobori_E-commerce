@@ -1,13 +1,17 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
-
+import configureStore from './redux/store';
 import Header from './components/Header';
 
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
+
   <React.StrictMode>
-    <Header />
+    <Provider store={configureStore()}>
+      <Header />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
