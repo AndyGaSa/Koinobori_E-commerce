@@ -1,0 +1,30 @@
+.friends{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    .friends__list{
+        margin-top: 20px;
+        width: 80%;
+        .friends__noFriends{
+            font-weight: bolder;
+        }
+        li{
+            width: 100%;
+            background: #fff;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding: 20px;
+            list-style: none;
+            margin:10px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .friends__image{
+                border-radius: 50%;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.main__user-image{
+    margin-top: -160px;
+    width: 250px;
+    height: 250px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+.main__upper-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .upper-user__age{
+        color: #919191;
+    }
+}
+.main__down-user{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 5px 4px 3px lightgray;
+    margin-bottom: 60px;
+    padding: 30px;
+    .down-user{
+        padding: 8px;
+    }
+    .down-user__friendsadvcontainer{
+        margin-top: 30px;
+        display: flex;
+        .name__button{
+            display: flex;
+        }
+        .down-user__button{
+            background: linear-gradient(90deg, rgba(239,146,249,1) 0%, rgba(94,209,235,1) 100%);
+            color: white;
+            border: 1px dashed #f092f9;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-left:10px;
+        }
+    }
+    .down-user__allusers{
+        background: linear-gradient(90deg, rgba(239,146,249,1) 0%, rgba(94,209,235,1) 100%);
+        color: white;
+        border: 1px dashed #f092f9;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top:20px;
+    }
+}

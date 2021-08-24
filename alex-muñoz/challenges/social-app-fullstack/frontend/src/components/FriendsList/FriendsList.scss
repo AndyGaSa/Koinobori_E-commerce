@@ -1,0 +1,27 @@
+@import '../../sass/reset';
+
+.friends-list{
+    display:flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: whitesmoke;
+    height: fit-content;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin-right: 20px;
+    width: 250px;
+    h2{
+        margin:0 auto;
+        padding: 5px;
+    }
+    ul{
+        list-style: none;
+        padding: 10px 0;
+
+        li{
+            padding: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
