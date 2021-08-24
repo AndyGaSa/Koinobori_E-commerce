@@ -25,7 +25,6 @@ export default function Header() {
 
   const userLogged = (
     <>
-
       <div className="user__information">
         <span className="user__name">{user?.displayName}</span>
         <img className="user__photo" src={user?.photoURL} alt={user?.displayName} />
@@ -33,7 +32,6 @@ export default function Header() {
       <div className="user__button-container">
         <button className="user__logout" type="button" onClick={handleLogoutClick}>Logout</button>
       </div>
-
     </>
   );
 
