@@ -1,4 +1,9 @@
+/* eslint-disable no-underscore-dangle */
+const passport = require('passport');
+const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
+
+const refreshTokens = [];
 
 async function createOne({ body }, res) {
   try {
@@ -71,10 +76,52 @@ async function deleteOneById({ params: { userId } }, res) {
   }
 }
 
+function signUp({ user }, res) {
+  res.send({
+    user,
+    message: 'Register works'
+  });
+}
+
+function logIn({ user }, res) {
+  const data = { _id: user._id, email: user.email };
+  try {
+    const token = jwt.sign(
+      { user: data },
+      process.env.JWT_SECRET,
+      { expiresIn: '1m' }
+    );
+    const refreshToken = jwt.sign(
+      { user: data },
+      process.env.JWT_SECRET
+    );
+
+    refreshTokens.push(refreshToken);
+
+    return res.json({
+      token,
+      refreshToken
+    });
+  } catch (error) {
+    res.status(500);
+    return res.send(error);
+  }
+}
+
+async function protectedProfile({ user }, res) {
+  res.json({
+    user,
+    message: 'Protected works'
+  });
+}
+
 module.exports = {
   createOne,
   getAll,
   getOneById,
   updateOneById,
-  deleteOneById
+  deleteOneById,
+  signUp,
+  logIn,
+  protectedProfile,
 };
