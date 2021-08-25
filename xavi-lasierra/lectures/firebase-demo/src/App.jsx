@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import firebase from 'firebase';
 import { useDispatch } from 'react-redux';
 
@@ -10,11 +10,13 @@ import { addUserData } from './redux/actions/user.creator';
 function App() {
   const dispatch = useDispatch();
 
-  firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      dispatch(addUserData(user));
-    }
-  });
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        dispatch(addUserData(user));
+      }
+    });
+  }, []);
 
   return (
     <Header />
