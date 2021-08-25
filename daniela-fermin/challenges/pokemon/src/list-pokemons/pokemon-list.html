@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="./pokemon-list.css">
+    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+        </style>
+                
+</head>
+<body>
+    <header>
+        <nav class="top__main-nav">
+            <img src="../International_Pokémon_logo.svg" alt="Pokemon Logo">
+            <a href="../dashboard/pokemon-dashboard.html">Dashboard</a>
+            <a href="../list-pokemons/pokemon-list.html">Pokemons' List</a>
+        </nav>
+        <h1>Pokemons' List</h1>
+    </header>
+
+    <div class="top__search search">
+        <input id="search__bar" type="text" value="Search">
+    </div>
+    <div class="top__buttons">
+        <button onclick="changeNumberOfPokemonsToFive()" id="top__buttons--5" value="5">5</button>
+        <button onclick="changeNumberOfPokemonsToTen()"  id="top__buttons--10" value="10">10</button>
+        <button onclick="changeNumberOfPokemonsToFifty()" id="top__buttons--50" value="50">50</button>
+    </div>
+    <div class="screen-frame">
+
+        <section class="screen-white" id="pokemon__list">
+
+        </section>
+        <div class="screen-frame__buttons buttons">
+            <button class="buttons__prev" onclick="previous()" value="previous">Prev</button>
+            <button class="buttons__next" onclick="next()" value="next">Next</button>
+        </div>
+        
+    </div>
+    
+<script src="../service.js"></script>
+    <script src="./pokemon-list.class.js"></script>
+    <script src="./switch-number-viewed.js"></script>
+    <script src="./pokemon-list-page.js"></script>
+</body>
+</html>
