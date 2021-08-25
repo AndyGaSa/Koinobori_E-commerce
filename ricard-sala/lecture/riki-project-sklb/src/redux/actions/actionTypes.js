@@ -1,3 +1,4 @@
 export default {
-  UPDATE_STATE: 'UPDATE_STATE',
+  LOGIN: 'LOGIN',
+  LOGOUT: 'LOGOUT',
 };
