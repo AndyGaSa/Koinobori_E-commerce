@@ -2,15 +2,11 @@ import firebase from 'firebase';
 import actionTypes from './actionTypes';
 
 export function login() {
-  return async (dispatch) => {
+  return async () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
-    const data = await firebase.auth().signInWithPopup(provider);
-    dispatch({
-      type: actionTypes.LOGIN,
-      user: data?.additionalUserInfo?.profile,
-    });
+    await firebase.auth().signInWithPopup(provider);
   };
 }
 
@@ -20,5 +16,12 @@ export function logout() {
     dispatch({
       type: actionTypes.LOGOUT,
     });
+  };
+}
+
+export function check(user) {
+  return {
+    type: actionTypes.LOGIN,
+    user,
   };
 }
