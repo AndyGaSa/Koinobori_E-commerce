@@ -1,15 +1,43 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import LoginBtn from './loginBtn';
-import LogoutBtn from './logoutBtn';
+import { useDispatch, useSelector } from 'react-redux';
+import { login, logout } from '../redux/actions/actionCreators';
 
 export default function Header() {
-  const islogged = useSelector((store) => store.user);
+  const dispatch = useDispatch();
+  const { isAuthenticated, user } = useSelector((store) => store.auth);
+
+  const handleLoginClick = () => dispatch(login());
+  const handleLogoutClick = () => dispatch(logout());
+
+  const loggedInTemplate = (
+    <>
+      <button
+        onClick={handleLogoutClick}
+        type="button"
+      >
+        Logout
+      </button>
+      <span>
+        Welcome
+        {' '}
+        {user?.given_name}
+      </span>
+      <img src={user?.picture} alt={user?.name} />
+    </>
+  );
+
   return (
     <header>
-      <h1>header</h1>
-      {islogged ? <LogoutBtn /> : <LoginBtn />}
-
+      { isAuthenticated
+        ? loggedInTemplate
+        : (
+          <button
+            onClick={handleLoginClick}
+            type="button"
+          >
+            Login
+          </button>
+        )}
     </header>
   );
 }
