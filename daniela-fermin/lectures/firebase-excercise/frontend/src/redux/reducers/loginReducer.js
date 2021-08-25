@@ -1,27 +1,18 @@
-import authInitialState from '../../constants/loginInitialState';
 import actionTypes from '../actions/actionTypes';
 
-export default function authReducer(
-  auth = authInitialState,
-  action
-) {
-  let nextAuthState = auth;
-
+export default function authReducer(state = { isAuthenticated: false }, action) {
   switch (action.type) {
     case actionTypes.AUTH_LOGIN:
-      nextAuthState = {
+      return {
         isAuthenticated: true,
         user: action.user
       };
-      break;
-
     case actionTypes.AUTH_LOGOUT:
-      nextAuthState = authInitialState;
-      break;
+      return {
+        isAuthenticated: false
+      };
 
     default:
-      break;
+      return state;
   }
-
-  return nextAuthState;
 }

@@ -1,24 +1,18 @@
+import firebase from 'firebase';
 import actionTypes from './actionTypes';
 
-export default function login(name) {
+export function logout() {
   return async (dispatch) => {
-    try {
-      return dispatch({
-        type: actionTypes.AUTH_LOGIN,
-        user: name
-      });
-    } catch (error) {
-      if (error?.response?.status === 401) {
-        return dispatch({
-          type: actionTypes.AUTH_LOGIN_ERROR,
-          message: error.message
-        });
-      }
-
-      return dispatch({
-        type: actionTypes.ERROR_GENERIC,
-        message: error.message
-      });
-    }
+    await firebase.auth().signOut();
+    dispatch({
+      type: actionTypes.AUTH_LOGOUT
+    });
   };
+}
+
+export function currentUser(user) {
+  return ({
+    type: actionTypes.AUTH_LOGIN,
+    user
+  });
 }
