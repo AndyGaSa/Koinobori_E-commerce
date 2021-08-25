@@ -1,0 +1,33 @@
+<form class="details-form" action="/addTask" method="POST">
+  <fieldset>
+    <legend>Task Details</legend>
+    <p>
+      <label for="input">Name</label>
+      <input type="text" name="name" id="name" placeholder="Name" required>
+    </p>
+    <p>
+      <label for="priority">Prority</label>
+      <select id="priority" name="priority">
+        <option value="Low">Choose...</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+    </p>
+    <p>
+      <label for="start">Start Date</label>
+      <input type="date" name="start" id="start">
+    </p>
+    <p>
+      <label for="end">End Date</label>
+      <input type="date" name="end" id="end">
+    </p>
+    <p>
+      <label for="description">Description</label>
+      <textarea name="description" id="description" rows="10"></textarea>
+    </p>
+    <p>
+      <button class="add-task btn btn-secondary" type="submit">Save Task</button>
+    </p>
+  </fieldset>
+</form>
