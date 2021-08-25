@@ -1,0 +1,184 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F4F4F4;
+  min-height: 90vh;
+}
+
+main .create-to-do {
+  width: 50rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .create-to-do input {
+  width: 92%;
+  padding: 0.25rem;
+  font-size: 0.9rem;
+  background-color: transparent;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+main .create-to-do input:hover {
+  background-color: white;
+}
+
+main .create-to-do button {
+  padding: 0.25rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  border: 2px solid black;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+main .create-to-do button:hover {
+  background-color: black;
+  color: white;
+}
+
+main .create-to-do button:active {
+  color: lightgray;
+  -webkit-box-shadow: 0 0 10px lightgray;
+          box-shadow: 0 0 10px lightgray;
+}
+
+main .to-do {
+  width: 45rem;
+  list-style: none;
+}
+
+main .to-do li {
+  margin-bottom: 0.25rem;
+  padding: 0.25rem 0;
+}
+
+main .to-do li + li {
+  border-top: 1px solid gray;
+}
+
+main .to-do li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .to-do li div .marker {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid black;
+  color: transparent;
+}
+
+main .to-do li div .marker--ToDo {
+  background-color: transparent;
+}
+
+main .to-do li div .marker--Completed {
+  background-color: black;
+}
+
+main .to-do li div form {
+  position: relative;
+}
+
+main .to-do li div form .description {
+  padding: 0.2rem;
+  width: 42rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+main .to-do li div form .description--Completed {
+  text-decoration: line-through;
+}
+
+main .to-do li div form .description--Completed:focus {
+  text-decoration: none;
+}
+
+main .to-do li div form .edit {
+  display: none;
+  position: absolute;
+  right: 0rem;
+  top: -0.2rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+}
+
+main .to-do li div form:hover .description {
+  border: 1px solid black;
+}
+
+main .to-do li div form:hover .edit {
+  display: unset;
+}
+
+main .to-do li div .delete {
+  width: 1.25rem;
+  height: 1.25rem;
+  text-align: center;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+main .to-do li div .delete:hover {
+  background-color: black;
+  color: white;
+}
+
+main .to-do li div .delete:active {
+  color: lightgray;
+  -webkit-box-shadow: 0 0 10px lightgray;
+          box-shadow: 0 0 10px lightgray;
+}
+
+main .to-do li span {
+  font-size: 0.75rem;
+  color: #212121;
+}
+/*# sourceMappingURL=index.css.map */

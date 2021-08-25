@@ -1,0 +1,71 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+  height: 3rem;
+  background-color: #212121;
+}
+
+header h1 {
+  color: white;
+  letter-spacing: 2px;
+}
+
+header .logged {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logged .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2rem;
+}
+
+header .logged .profile .profile__image {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+header .logged .profile .profile__name {
+  color: white;
+}
+
+header .logged .logout {
+  padding: 0.25rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+header .logged .logout:hover {
+  background-color: white;
+  color: #212121;
+}
+
+header .logged .logout:active {
+  color: lightgray;
+  -webkit-box-shadow: 0 0 10px lightgray;
+          box-shadow: 0 0 10px lightgray;
+}
+/*# sourceMappingURL=header.css.map */

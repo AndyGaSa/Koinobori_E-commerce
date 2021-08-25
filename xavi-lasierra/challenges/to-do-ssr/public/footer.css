@@ -1,0 +1,16 @@
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+  height: 5rem;
+  background-color: #212121;
+}
+
+footer small {
+  color: white;
+}
+/*# sourceMappingURL=footer.css.map */
