@@ -1,0 +1,4 @@
+export default {
+  LOAD_COUNTRIES: 'LOAD_COUNTRIES',
+  LOAD_RANDOM: 'LOAD_RANDOM',
+};
