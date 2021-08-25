@@ -1,8 +1,30 @@
+import firebase from 'firebase';
 import actionTypes from './actionTypes';
 
-export default function UpdateState(state) {
+export function login() {
+  return async (dispatch) => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+
+    const data = await firebase.auth().signInWithPopup(provider);
+    dispatch({
+      type: actionTypes.LOGIN,
+      user: data?.additionalUserInfo?.profile,
+    });
+  };
+}
+
+export function logout() {
+  return async (dispatch) => {
+    await firebase.auth().signOut();
+    dispatch({
+      type: actionTypes.LOGOUT,
+    });
+  };
+}
+export function addUserData(data) {
   return {
-    type: actionTypes.UPDATE_STATE,
-    state,
+    type: actionTypes.LOGIN,
+    data,
   };
 }
