@@ -1,0 +1,180 @@
+[
+    {
+      "username": "adrian",
+      "tasks": [{
+          "name": "first",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "alba",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "alex",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "alvaro",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "andy",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "bryan",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "chej",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "daniela",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "eugenia",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "ignacio",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "jordi",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "laura",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "lluc",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "lola",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "manuel",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "marc",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "nacho",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "pablo",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "pau",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "pere",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "ricard",
+      "tasks": [{
+          "name": "name",
+          "done": false, 
+          "date": "date"
+      }]
+    },
+    {
+      "username": "xavi",
+      "tasks": [
+        {
+        "name": "name",
+        "done": false, 
+        "date": "date"
+        }
+      ]
+    }
+  ] 
