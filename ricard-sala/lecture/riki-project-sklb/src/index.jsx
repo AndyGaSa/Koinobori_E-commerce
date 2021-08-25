@@ -1,13 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
-import configureStore from './redux/store';
-import Header from './components/Header';
-
 import reportWebVitals from './reportWebVitals';
+import Header from './components/Header';
+import './firebase';
+import configureStore from './redux/store';
 
 ReactDOM.render(
-
   <React.StrictMode>
     <Provider store={configureStore()}>
       <Header />
