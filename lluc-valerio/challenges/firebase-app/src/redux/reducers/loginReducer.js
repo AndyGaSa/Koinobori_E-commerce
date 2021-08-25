@@ -10,6 +10,7 @@ export default function loginReducer(loginStatus = { isAuthorized: false }, acti
     case actionTypes.LOGOUT:
       newloginStatus.isAuthorized = false;
       break;
+    case actionTypes.ERROR:
     default:
       newloginStatus = loginStatus;
       break;

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Login from './components/Login';
+import Header from './components/Header';
 
 function App() {
   return (
     <main className="main">
-      <Login />
+      <Header />
     </main>
   );
 }
