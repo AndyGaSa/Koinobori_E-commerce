@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Profile</title>
+</head>
+<body>
+    <header>
+        <h1>Profile</h1>
+    </header>  
+    <hr>
+    <form action="http://localhost:5001/tasklist/" method="POST">
+        <input type="text" name="newListName" placeholder="New List" autocomplete="off">
+        <button type="submit" name="user" value="<%= user._id%>">Create</button>
+    </form>
+    <hr>
+    <main>
+        <h2><%= user.name%></h2>
+        <% user.taskList.map((list)=> { %> <li> <a href="http://localhost:5001/taskList/<%= list._id %>"><%= list.name %> </a> </li> <% }) %>
+        
+    </main>
+</body>
+</html>

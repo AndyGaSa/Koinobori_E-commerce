@@ -1,0 +1,34 @@
+{
+  "name": "todo-list-server-side-rendering-laura",
+  "version": "1.0.0",
+  "description": "Chalenge ToDo list with Server Side Rendering",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "debug": "nodemon --inspect-brk index.js",
+    "test": "jest --watchAll --collect-coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^5.1.0",
+    "cors": "^2.8.5",
+    "debug": "^4.3.2",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-openid-connect": "^2.5.0",
+    "jest": "^27.0.6",
+    "mongoose": "^5.13.7",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.1"
+  }
+}
