@@ -10,5 +10,5 @@ firebase.initializeApp({
   appId: process.env.REACT_APP_appId
 });
 
-firebase.auth();
 // firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+firebase.auth();

@@ -8,11 +8,7 @@ export function login() {
       const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
-      // const data = firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
-      //   .then(() => firebase.auth().signInWithPopup(provider));
-
-      // const data = await firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-      //   .then(() => firebase.auth().signInWithPopup(provider));
+      await firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
 
       const data = await firebase.auth().signInWithPopup(provider);
 
