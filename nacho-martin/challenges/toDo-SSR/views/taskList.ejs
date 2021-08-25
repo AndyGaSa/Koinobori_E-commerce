@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= taskList.name %></h1>
+    <hr>
+
+    <form action="http://localhost:5001/tasklist/<%=taskList._id%>" method="POST">
+        <input type="text" name="newTaskName" placeholder="Add new chore">
+        <button type="submit" name=button> Add</button>
+    </form>
+    <ul>
+        <% taskList.tasks.map((task)=>{ %>
+        <div> 
+            <form action="http://localhost:5001/tasklist/<%=taskList._id%>" method="POST">
+                <input type="text" name="taskToUpdateName" value="<%=task.name%>">
+                <button type="submit" name="save" value="<%=task._id%>">Save</button>
+                <form action="http://localhost:5001/taskList/<%=taskList._id %>" method="POST">
+                    <button 
+                        type="submit" 
+                        name="done"
+                        value="<%=task._id %>"
+                        >
+                        Done
+                    </button>
+                    <button 
+                        type="submit" 
+                        name="delete"
+                        value="<%=task._id %>">
+                        Delete
+                    </button>
+                 </form>
+            </form>
+           
+        </div> <% } ) %>
+    </ul>
+</body>
+</html>

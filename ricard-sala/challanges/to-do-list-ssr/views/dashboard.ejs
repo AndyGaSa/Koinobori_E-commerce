@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toDo list Riki</title>
+</head>
+<body>
+    <h1>To Do list!!!!!</h1>
+
+    <div><%todos.map((data) =>{ %>
+        <p><%=data.task%></p>
+     <button
+type="button"
+     >
+     X
+    </button>
+        <%})%></div>
+  <input type="text" name='newtodo' id='todo'>
+  <input type="submit" onclick="createTask()" value="Add task">
+  <script>
+      let task=document.getElementById('todo');
+      async function createTask(url='http://localhost:5013/api/todo/612126264a277d8ecaefc40f',
+      data={"task":`${task.value}`, status:false})
+      {
+          const response= await fetch(url,{
+              method:"PUT",
+              headers:{'Content-Type':'application/json'},
+              body: JSON.stringify(data),
+          }) 
+          location.reload();
+          return response.json()
+        }
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyLab ToDoList - Register Form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" defer>
+    <link rel="stylesheet" href="login.css" defer>
+</head>
+<body class="text-center">
+  <section class="form-signin">
+    <h2 class="login__title">SkyLab ToDo</h2>
+    <h3 class="login__title">Register Form</h3>
+   <%- include('error.ejs') %>
+    <form action="/login" method="POST" >
+      <h1 class="h3 mb-3 fw-normal">Register data</h1>
+      <div class="form-floating">
+        <input type="name" class="form-control" name="name" id="name" placeholder="name surname" required>
+        <label for="name">Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+        <label for="email">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+        <label for="password">Password</label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+    <a class="w-100 btn btn-lg btn-primary register" href="/login" >Login</a>
+    </form>
+  </section>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>

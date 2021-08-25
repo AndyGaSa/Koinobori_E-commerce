@@ -1,0 +1,36 @@
+body{
+    background-color: #F6E8EA;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.country-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EF626C;
+    border-radius: 25px;
+    padding: 10px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+.tooltip .tooltiptext {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+  
+    /* Position the tooltip */
+    position:relative;
+    z-index: 0;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

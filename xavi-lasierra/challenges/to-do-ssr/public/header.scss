@@ -1,0 +1,54 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 3rem;
+    background-color: #212121;
+
+    h1 {
+        color: white;
+        letter-spacing: 2px;
+    }
+
+    .logged {
+        display: flex;
+        align-items: center;
+
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-right: 2rem;
+    
+            .profile__image {
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+            }
+
+            .profile__name {
+                color: white;
+            }
+        }
+
+        .logout {
+            padding: 0.25rem;
+            font-size: 0.9rem;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            border: 2px solid white;
+            transition: .2s;
+
+            &:hover {
+                background-color: white;
+                color: #212121;
+            }
+
+            &:active {
+                color: lightgray;
+                box-shadow: 0 0 10px lightgray;
+            }
+        }
+    }
+}

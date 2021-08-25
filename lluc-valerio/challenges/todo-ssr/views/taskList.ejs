@@ -1,0 +1,25 @@
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <% user?.tasks?.map(task=>{ %>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-open<%= task._id %>">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse<%= task._id %>" aria-expanded="true" aria-controls="panelsStayOpen-collapse<%= task._id %>">
+          <%= task.name %>
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapse<%= task._id %>" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-open<%= task._id %>">
+        <div class="accordion-body">
+        <p>description: <%= task.description %></p>
+        <p>start: <%= task.start %></p>
+        <p>end: <%= task.end %></p>
+        <p>priority: <%= task.priority %></p>
+        <p>Status: <%= (task.status? 'Finished' : 'Pending') %></p>
+        </div>
+        <div class="accordion-actions">
+            <button type="button" onclick="updateTask()" class="btn btn-warning">Update</button>
+            <button type="button" onclick="finishTask()" class="btn btn-success">Finish</button>
+            <button type="button" onclick="deleteTask()" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>

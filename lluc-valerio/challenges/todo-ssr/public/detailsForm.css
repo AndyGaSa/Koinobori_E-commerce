@@ -1,0 +1,22 @@
+.details-form{
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    position: relative;
+    padding: 1rem;
+    margin: 1rem -.75rem 0;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+    border-top-width: medium;
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-left-width: medium;
+}
+
+.task-details {
+    width: 40%;
+    margin: 0 auto;
+}

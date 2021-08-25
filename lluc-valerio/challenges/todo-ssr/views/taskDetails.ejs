@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyLab ToDoList - Details</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" defer>
+    <link rel="stylesheet" href="style.css" defer>
+    <link rel="stylesheet" href="detailsForm.css" defer>
+
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <%- include('error.ejs') %>
+    <section class="task-details">
+        <%- include('detailsForm.ejs') %>
+    </section>
+    <aside class="tasks_actions">
+        <a href="/" class="add-task btn btn-primary">Return</a>
+    </aside>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

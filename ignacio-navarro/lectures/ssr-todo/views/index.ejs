@@ -1,0 +1,22 @@
+<%- include("templates/head", {webTitle: 'Home'}) %>
+<body>
+    <%- include("templates/header") %>
+    <main>
+        <h2>
+           Wellcome <%= foundUser %>
+        </h2>
+        <ul>
+          <a type="button" action="/create" href="/create" class="btn btn-primary">Create New Task</a>
+            <% todoList.forEach(function(listItem){ %>
+              <%- include('templates/task-card', {
+                  taskTitle:listItem.taskTitle,
+                  creationDate:listItem.creationDate,
+                  taskDetails:listItem.taskDetails,
+                  id: listItem._id
+                }); %>
+            <% }); %>
+          </ul>
+    </main>
+    <%- include("templates/footer") %>
+</body>
+</html>

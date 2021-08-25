@@ -1,0 +1,22 @@
+.countries{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+.country{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 200px;
+}
+.countries-flag{
+    width: 150px;
+}
+.country-name{
+    font-weight: bold;
+}
+button{
+    margin-bottom: 20px;
+}
