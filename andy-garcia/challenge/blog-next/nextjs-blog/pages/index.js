@@ -3,7 +3,7 @@ import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 
-export async function getStaticProps() {
+export function getServerSideProps(context) {
   const allPostsData = getSortedPostsData()
   return {
     props: {
