@@ -1,0 +1,97 @@
+
+* {
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+header nav {
+    background-color: white;
+    padding-left: 5%;
+    padding-top: 5%;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.top__main-nav a{
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    padding: 1%;
+}
+h1{
+    display: inline-block;
+    margin-top: 15%;
+}
+.top__buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+button{
+    margin: 2%;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #5a5a5a;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    background-image: -webkit-linear-gradient(#d4ced0 0%, #797777 100%);
+    background-image: linear-gradient(#d4ced0 0%, #797777 100%);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+}
+
+button:active{
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    border: rgb(2, 116, 192) solid 2px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    background-image: -webkit-linear-gradient(#f7f5b0 0%, #fdf141 100%);
+    background-image: linear-gradient(#f7f5b0 0%, #fdf141 100%);
+}
+
+.screen-frame{
+    background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: visible;
+    border-radius: 5%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pokemon__detail{
+    display: flex;
+    flex-direction: column;
+    color: rgb(64, 64, 65);
+}
+
+#pokemon__detail img{
+    max-width: 200px;
+    -ms-flex-item-align: center;
+}
+
+#pokemon__detail h1{
+    font-size: 2em;
+    -ms-flex-item-align: center;
+}
+

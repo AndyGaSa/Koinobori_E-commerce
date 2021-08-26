@@ -1,0 +1,50 @@
+@import '../../styles/variables', '../../styles/extensions', '../../styles/mixins';
+
+.header {
+    @extend %row-between-flex;
+    padding: 0 3rem;
+    height: 3rem;
+    background-color: $main-color;
+    font-family: $main-font;
+    box-shadow: 0 0 1rem $main-color;
+
+    .header__title {
+        color: $light-text-color;
+        letter-spacing: 1px;
+        font-weight: normal;
+        font-size: 1.5rem;
+    }
+
+    .header__user {
+        display: flex;
+
+        .user__information {
+            display: flex;
+            align-items: center;
+
+            .user__name {
+                color: $light-text-color;
+                margin-right: 0.25rem;
+            }
+
+            .user__photo {
+                width: 2.25rem;
+                border-radius: 50%;
+            }
+        }
+
+        .user__button-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 5rem;
+    
+            .user__login,
+            .user__logout {
+                @include button($light-text-color, $main-color);
+            }
+        }
+    }
+
+
+}
