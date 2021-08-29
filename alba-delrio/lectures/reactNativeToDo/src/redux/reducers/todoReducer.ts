@@ -1,11 +1,16 @@
 import actionTypes from '../actions/actionTypes';
+import todoList from '../../../mocks/todoList';
 
  interface ActionObject {
     type:string,
     toDo:any,
     index:number
  }
-export default function todosReducer(toDoList: object[], action:ActionObject) {
+ interface ToDos{
+    title: string,
+    completed: boolean
+ }
+export default function todosReducer(toDoList = todoList, action:ActionObject):ToDos[] {
   let newToDoList = toDoList;
   switch (action.type) {
     case actionTypes.CREATE_TODO:

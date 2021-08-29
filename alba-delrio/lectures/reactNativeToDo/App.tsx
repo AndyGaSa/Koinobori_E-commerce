@@ -16,19 +16,25 @@ import {
   StatusBar,
   View
 } from 'react-native';
+import { Provider } from 'react-redux';
 import Header from './src/components/Header/Header';
+import ListToDo from './src/components/ListToDo/ListTodo';
+import configureStore from './src/redux/store';
 
 const App = () => (
-  <SafeAreaView>
-    <StatusBar />
-    <ScrollView
-      contentInsetAdjustmentBehavior="automatic"
-    >
-      <View>
-        <Header />
-      </View>
-    </ScrollView>
-  </SafeAreaView>
+  <Provider store={configureStore()}>
+    <SafeAreaView>
+      <StatusBar />
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+      >
+        <View>
+          <Header />
+          <ListToDo />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  </Provider>
 );
 
 export default App;
