@@ -1,0 +1,30 @@
+.friend__adversaries{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.friends__img-container{
+    display: flex;
+    justify-content: center;
+height: 80px;
+width: 80px;
+transform: translate(0px, 20px);
+align-items: center;
+clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+
+}
+.friend__img{
+    height: 100px;
+}
+.adversaries__button{
+    border-radius: 50%;
+    height: 46px;
+    background: radial-gradient(ellipse at center, #FF4747 0%, #CB1010 58%, #630000 100%);
+}
+.friend__button{
+    border-radius: 50%;
+    height: 46px;
+    background: radial-gradient(ellipse at center, #A9FF47 0%, #7ECB12 58%, #346304 100%);
+}
