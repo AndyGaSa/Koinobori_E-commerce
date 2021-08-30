@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser, logoutUser } from '../../redux/actions/user.creator';
+import { logoutUser } from '../../redux/actions/user.creator';
+import loginUser from '../../services/loginUser';
 
 import './header.scss';
 
@@ -9,7 +10,7 @@ export default function Header() {
   const { user, isAuthenticated } = useSelector((store) => store.user);
 
   function handleLoginClick() {
-    dispatch(loginUser());
+    loginUser();
   }
   function handleLogoutClick() {
     dispatch(logoutUser());
@@ -30,14 +31,14 @@ export default function Header() {
         <img className="user__photo" src={user?.photoURL} alt={user?.displayName} />
       </div>
       <div className="user__button-container">
-        <button className="user__logout" type="button" onClick={handleLogoutClick}>Logout</button>
+        <button data-testid="logout-button" className="user__logout" type="button" onClick={handleLogoutClick}>Logout</button>
       </div>
     </>
   );
 
   return (
     <header className="header">
-      <h1 className="header__title">To Do List</h1>
+      <h1 data-testid="main-title" className="header__title">To Do List</h1>
       <section className="header__user">
         {isAuthenticated
           ? userLogged
