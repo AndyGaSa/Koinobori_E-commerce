@@ -5,6 +5,8 @@ const userSchema = new Schema({
   age: Number,
   eyeColor: String,
   name: String,
+  email: String,
+  password: String,
   gender: String,
   about: String,
   registered: { type: Date, default: new Date() },
@@ -14,5 +16,9 @@ const userSchema = new Schema({
   greeting: String,
   favouriteFruit: String
 });
+
+userSchema.methods.isValidPassword = function isValidPassword(password) {
+  return password === this.password;
+};
 
 module.exports = model('User', userSchema);

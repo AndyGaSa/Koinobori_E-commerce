@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const morgan = require('morgan');
 
 require('./src/config/mongooseConfig');
+require('./src/config/passportConfig');
 
 const server = express();
 const port = process.env.PORT || 5000;
@@ -15,7 +16,7 @@ server.use(express.json());
 const userRouter = require('./src/routes/userRoutes');
 const friendRouter = require('./src/routes/friendRoutes');
 
-server.use('/api/users', userRouter);
+server.use('/api', userRouter);
 server.use('/api/friends', friendRouter);
 
 server.listen(
