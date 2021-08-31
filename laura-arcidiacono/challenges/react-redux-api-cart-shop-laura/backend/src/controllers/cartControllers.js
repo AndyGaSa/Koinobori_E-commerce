@@ -1,4 +1,3 @@
-const debug = require('debug')('bookShop:cartControllers');
 const Cart = require('../models/cartModel');
 
 async function getAll({ query }, res) {
