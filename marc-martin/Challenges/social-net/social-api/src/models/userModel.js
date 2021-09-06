@@ -4,7 +4,8 @@ const userSchema = new Schema({
   picture: { type: String, default: 'http://placehold.it/32x32' },
   age: Number,
   eyeColor: String,
-  name: String,
+  user: String,
+  password: String,
   gender: String,
   about: String,
   registered: { type: Date, default: new Date() },
@@ -14,5 +15,9 @@ const userSchema = new Schema({
   greeting: String,
   favoriteFruit: String
 });
+
+userSchema.methods.isValidPassword = function isValidPassword(password) {
+  return password === this.password;
+};
 
 module.exports = model('User', userSchema, 'Skybook');
