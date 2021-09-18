@@ -23,5 +23,12 @@ const userSchema = new Schema({
   }],
   greeting: String,
   favoriteFruit: String,
+  email: String,
+  password: String,
 });
+
+userSchema.methods.isValidPassword = function isValidPassword(password) {
+  return password === this.password;
+};
+
 module.exports = model('User', userSchema);
