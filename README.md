@@ -1,12 +1,16 @@
-Koinobori team.
+# 🎏 Welcome to Koinobori: The e-commerce fashion web for Japan and vaporwave lovers. 🏮
 
-App developed on react.
+This project allowed me to program with a skilful team from which I learned a lot since the very beginning.
+<a href="https://github.com/lolarufino">Lola Rufino</a> and <a href="https://github.com/ChejAhamed">Chej Ahamed</a>, I wholeheartedly appreciate your commitment and effort. Working with you is always a pleasure. 🌸
 
-Folders go in lower case
+The front-end is made with #react #html5 and #sass. For the back-end, we created an #API with Json Server and hosted it on Heroku. 🌟
 
-We sepaarate files with . like action.types
+We have attached great importance to #UXUI. Therefore we have placed our time and efforts on what happens when:
+- The cart is empty.
+- The user accesses nonexistent routes.
+- The user deletes a product.
+- Logging in and out.
 
-Components files and thier css go with an uppercase
+Is there any improvement that you would implement or any article you miss? Don't hesitate to let us know! 🤗
 
-Files use jsx
-
+#frontend #webdevelopment #coding #code #fullstackdeveloper
