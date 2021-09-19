@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
@@ -14,15 +14,12 @@ function App() {
   }, []);
 
   return (
-    <>
-      <BrowserRouter>
-        <div className="flier"><img src="https://www.pngarts.com/files/3/Rock-PNG-Transparent-Image.png" alt="rock" width="200" /></div>
-        <Header />
-        <Main />
-        <Footer />
-      </BrowserRouter>
-    </>
-
+    <Router>
+      <div className="flier"><img src="https://www.pngarts.com/files/3/Rock-PNG-Transparent-Image.png" alt="rock" width="200" /></div>
+      <Header />
+      <Main />
+      <Footer />
+    </Router>
   );
 }
 
