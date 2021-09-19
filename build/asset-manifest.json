@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/AndyGaSa/Koinobori_E-commerce/static/css/main.f0071ab1.chunk.css",
-    "main.js": "/AndyGaSa/Koinobori_E-commerce/static/js/main.e188f369.chunk.js",
-    "main.js.map": "/AndyGaSa/Koinobori_E-commerce/static/js/main.e188f369.chunk.js.map",
-    "runtime-main.js": "/AndyGaSa/Koinobori_E-commerce/static/js/runtime-main.0cb18979.js",
-    "runtime-main.js.map": "/AndyGaSa/Koinobori_E-commerce/static/js/runtime-main.0cb18979.js.map",
-    "static/js/2.e29c6db7.chunk.js": "/AndyGaSa/Koinobori_E-commerce/static/js/2.e29c6db7.chunk.js",
-    "static/js/2.e29c6db7.chunk.js.map": "/AndyGaSa/Koinobori_E-commerce/static/js/2.e29c6db7.chunk.js.map",
-    "static/js/3.8b8c7e78.chunk.js": "/AndyGaSa/Koinobori_E-commerce/static/js/3.8b8c7e78.chunk.js",
-    "static/js/3.8b8c7e78.chunk.js.map": "/AndyGaSa/Koinobori_E-commerce/static/js/3.8b8c7e78.chunk.js.map",
-    "index.html": "/AndyGaSa/Koinobori_E-commerce/index.html",
-    "static/css/main.f0071ab1.chunk.css.map": "/AndyGaSa/Koinobori_E-commerce/static/css/main.f0071ab1.chunk.css.map",
-    "static/js/2.e29c6db7.chunk.js.LICENSE.txt": "/AndyGaSa/Koinobori_E-commerce/static/js/2.e29c6db7.chunk.js.LICENSE.txt"
+    "main.css": "/Koinobori_E-commerce/static/css/main.f0071ab1.chunk.css",
+    "main.js": "/Koinobori_E-commerce/static/js/main.8cbe5a70.chunk.js",
+    "main.js.map": "/Koinobori_E-commerce/static/js/main.8cbe5a70.chunk.js.map",
+    "runtime-main.js": "/Koinobori_E-commerce/static/js/runtime-main.6f8b5720.js",
+    "runtime-main.js.map": "/Koinobori_E-commerce/static/js/runtime-main.6f8b5720.js.map",
+    "static/js/2.e29c6db7.chunk.js": "/Koinobori_E-commerce/static/js/2.e29c6db7.chunk.js",
+    "static/js/2.e29c6db7.chunk.js.map": "/Koinobori_E-commerce/static/js/2.e29c6db7.chunk.js.map",
+    "static/js/3.8b8c7e78.chunk.js": "/Koinobori_E-commerce/static/js/3.8b8c7e78.chunk.js",
+    "static/js/3.8b8c7e78.chunk.js.map": "/Koinobori_E-commerce/static/js/3.8b8c7e78.chunk.js.map",
+    "index.html": "/Koinobori_E-commerce/index.html",
+    "static/css/main.f0071ab1.chunk.css.map": "/Koinobori_E-commerce/static/css/main.f0071ab1.chunk.css.map",
+    "static/js/2.e29c6db7.chunk.js.LICENSE.txt": "/Koinobori_E-commerce/static/js/2.e29c6db7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0cb18979.js",
+    "static/js/runtime-main.6f8b5720.js",
     "static/js/2.e29c6db7.chunk.js",
     "static/css/main.f0071ab1.chunk.css",
-    "static/js/main.e188f369.chunk.js"
+    "static/js/main.8cbe5a70.chunk.js"
   ]
 }
